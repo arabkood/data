@@ -1,0 +1,27 @@
+{
+  "name": "sync",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "lint": "bun run index.ts lint",
+    "prepare": "bun run index.ts prepare",
+    "help": "bun run index.ts help",
+    "sync": "bun run index.ts sync"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/js-yaml": "^4.0.9",
+    "@types/pg": "^8.15.1",
+    "drizzle-kit": "^0.31.1",
+    "uuid": "^11.1.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.43.1",
+    "pg": "^8.16.0",
+    "yaml": "^2.7.0",
+    "zod": "^3.24.2"
+  }
+}

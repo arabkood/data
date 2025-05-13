@@ -1,0 +1,2 @@
+topics/test/track1/+track.yml
+{"title":"Thinking in Code","blurb":"learn how to think in code using javascript","logo":"s3://public/thinking-incode-js.svg","premium_only":false,"slug":"track1","id":"8c994854-b119-43ef-816c-8e5c984755b6","created_at":"2025-05-13T08:27:59.982Z","topic_id":"7d85a460-db91-4241-af1e-41352f591481","updated_at":"2025-05-13T10:29:42.010Z"}

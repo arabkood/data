@@ -1,0 +1,13 @@
+image: "runner/javascript"
+files:
+  - pos: 0
+    path: "solution.js"
+    language: "javascript"
+  - pos: -1
+    path: "solution.spec.js"
+    language: "javascript"
+  - pos: -1
+    path: "example/solution.js"
+    language: "javascript"
+flags:
+  "version.test.compatibility": "jest-27"
