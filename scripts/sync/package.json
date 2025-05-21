@@ -3,8 +3,6 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "lint": "bun run index.ts lint",
-    "prepare": "bun run index.ts prepare",
     "help": "bun run index.ts help",
     "sync": "bun run index.ts sync"
   },
@@ -20,6 +18,7 @@
   },
   "dependencies": {
     "drizzle-orm": "^0.43.1",
+    "js-yaml": "^4.1.0",
     "pg": "^8.16.0",
     "yaml": "^2.7.0",
     "zod": "^3.24.2"
