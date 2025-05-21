@@ -28,7 +28,6 @@ $AWS s3 sync ./.bundles s3://$S3_BUCKET \
   --exclude "+*" \
   --exclude "*/+*" \
   --cache-control "max-age=31536000,public" \
-  --acl bucket-owner-full-control \
   --content-type auto \
   --metadata-directive REPLACE \
   $OTHER_ARGS

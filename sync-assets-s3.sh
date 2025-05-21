@@ -27,7 +27,6 @@ $AWS s3 sync ./public-assets s3://$S3_BUCKET \
   --exclude ".*" \
   --exclude "*/.*" \
   --cache-control "max-age=31536000,public" \
-  --acl public-read \
   --content-type auto \
   --metadata-directive REPLACE \
   $OTHER_ARGS
