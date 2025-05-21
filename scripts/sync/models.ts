@@ -21,7 +21,6 @@ export const topics = classSchema.table("topics", {
   updated_at: timestamp("updated_at", { withTimezone: true })
     .defaultNow()
     .notNull(),
-  deleted_at: timestamp("deleted_at", { withTimezone: true }),
   title: text("title").notNull(),
   blurb: text("blurb"),
   logo: text("logo"),
@@ -40,7 +39,6 @@ export const tracks = classSchema.table("tracks", {
   updated_at: timestamp("updated_at", { withTimezone: true })
     .defaultNow()
     .notNull(),
-  deleted_at: timestamp("deleted_at", { withTimezone: true }),
   title: text("title").notNull(),
   blurb: text("blurb"),
   logo: text("logo"),
@@ -59,7 +57,6 @@ export const modules = classSchema.table("modules", {
   updated_at: timestamp("updated_at", { withTimezone: true })
     .defaultNow()
     .notNull(),
-  deleted_at: timestamp("deleted_at", { withTimezone: true }),
   title: text("title").notNull(),
   position: integer("position").notNull(),
   premium_only: boolean("premium_only").default(false).notNull(),
@@ -79,13 +76,13 @@ export const items = classSchema.table("items", {
   updated_at: timestamp("updated_at", { withTimezone: true })
     .defaultNow()
     .notNull(),
-  deleted_at: timestamp("deleted_at", { withTimezone: true }),
   type: text("type"),
   title: text("title").notNull(),
   blurb: text("blurb"),
   difficulty: text("difficulty"),
   premium_only: boolean("premium_only").default(false).notNull(),
   base_xp: integer("base_xp").default(1).notNull(),
+  s3_path: text("s3_path").notNull(),
 });
 
 // Types for CRUD operations

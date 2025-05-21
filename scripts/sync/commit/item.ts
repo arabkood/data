@@ -3,9 +3,14 @@ import yaml from "js-yaml";
 import { type Item, type ItemPartial } from "../models";
 import path from "node:path";
 import { change, exists } from "../utils/tracking/checker";
+import { ROOT } from "../config";
 
 export async function commitItem(moduleId: string, sourcePath: string) {
   try {
+    const relativePath = path.relative(
+      path.join(ROOT, "topics"),
+      path.dirname(sourcePath),
+    );
     const parentName = path.basename(path.dirname(sourcePath));
     const parentParts = parentName.split("_", 2);
     const position = parseInt(parentParts[0], 10) || 0;
@@ -26,6 +31,7 @@ export async function commitItem(moduleId: string, sourcePath: string) {
         key === "updated_at" ||
         key === "module_id" ||
         key === "slug" ||
+        key === "s3_path" ||
         key === "position"
       ) {
         autoFields[key] = value as any;
@@ -48,6 +54,7 @@ export async function commitItem(moduleId: string, sourcePath: string) {
     autoFields.module_id = moduleId;
     autoFields.slug = slug;
     autoFields.position = position;
+    autoFields.s3_path = relativePath;
 
     // 1. Check if file exist under .tracking
     let tracking = await exists<Item>(autoFields.id, "items");

@@ -1,0 +1,16 @@
+type: "quiz"
+question: |
+  What’s the the current answer to print a + b?
+code: |
+  let a = 10;
+  let b = 10;
+  {{input}}
+  console.log(result)
+solution: 2
+options:
+  - "let result = a - 10"
+  - "let result = a + 10"
+  - "let result = a + b"
+explanation: |
+  HTML elements need closing tags to indicate where they end.
+lang: javascript
