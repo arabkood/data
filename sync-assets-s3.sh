@@ -30,6 +30,7 @@ $AWS s3 sync ./public-assets s3://$S3_BUCKET \
   --content-type auto \
   --metadata-directive REPLACE \
   $OTHER_ARGS
+# --acl public-read \
 
 if [ $? -eq 0 ]; then
   echo "Sync to S3 completed successfully."
