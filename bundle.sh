@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#
 TOPICS_DIR="./topics"
 BUNDLE_DIR="./.bundles"
 
