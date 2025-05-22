@@ -1,0 +1,35 @@
+name: Trigger AWS CodePipeline
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  AWS_REGION: me-south-1
+  PIPELINE_NAME: DatabaseMigrationPipeline
+
+jobs:
+  trigger-pipeline:
+    runs-on: ubuntu-latest
+    # Add concurrency control to prevent multiple workflow runs for rapid pushes
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      # --- AWS Credentials ---
+      # Option 1: OIDC (Recommended for security)
+      - name: Configure AWS credentials via OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Start AWS CodePipeline
+        run: |
+          aws codepipeline start-pipeline-execution --name $PIPELINE_NAME
