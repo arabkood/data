@@ -33,111 +33,142 @@ fi
 mkdir -p "$BUNDLE_DIR"
 print_status "$BLUE" "📁 Bundle directory: $BUNDLE_DIR"
 
-# Check if zip is available
+# Check if essential commands are available
 if ! command -v zip &>/dev/null; then
   print_status "$RED" "❌ Error: 'zip' command not found. Please install zip utility."
   exit 1
 fi
+if ! command -v realpath &>/dev/null; then
+  print_status "$RED" "❌ Error: 'realpath' command not found. Please install it (usually in coreutils)."
+  exit 1
+fi
 
-# Initialize counters
-files_copied=0
-bundles_created=0
-bundles_updated=0
+# Initialize counters for the summary section (these are re-calculated later from files)
 bundles_removed=0
 files_removed=0
-errors=0
+errors=0 # For cleanup errors in this script version
 
-# Create associative arrays to track what should exist
+# Create associative arrays to track what should exist (populated from /tmp/expected_items_bundler)
 declare -A expected_bundles
 declare -A expected_files
 
-print_status "$BLUE" "🔍 Scanning source directories..."
+# Define temporary file names to avoid conflicts
+EXPECTED_ITEMS_TMP_FILE="/tmp/expected_items_bundler_$$" # $$ makes it unique per script run
+UNKNOWN_ITEMS_TMP_FILE="/tmp/unknown_items_bundler_$$"
 
-# First pass: collect what should exist and process items
+print_status "$BLUE" "🔍 Scanning source directories and processing items..."
+
+# First pass: collect what should exist and process items.
+# The while loop runs in a subshell due to the pipe `|` and redirection `>`.
 find "$TOPICS_DIR" -path "$TOPICS_DIR/*/*/*/*/*" \
   -not -path "$TOPICS_DIR/*/*/*/*/*/*" \
   -not -path "*/.*" \
   -not -path "*/+*" | while read -r path; do
 
   # Calculate relative path and target directory
-  rel_path=$(realpath --relative-to="$TOPICS_DIR" "$(dirname "$path")")
+  rel_path_parent_dir=$(realpath --relative-to="$TOPICS_DIR" "$(dirname "$path")")
   base_name=$(basename "$path")
-  target_dir="$BUNDLE_DIR/$rel_path"
+  target_dir_for_item="$BUNDLE_DIR/$rel_path_parent_dir"
 
-  # Ensure target directory exists
-  mkdir -p "$target_dir"
+  # Ensure target directory exists for the item and its tracking files
+  mkdir -p "$target_dir_for_item" || {
+    print_status "$RED" "❌ Subshell Error: Failed to create target directory $target_dir_for_item"
+    exit 1
+  }
 
   if [ -d "$path" ]; then
     # Process directory: create bundle zip
     bundle_name="$base_name.bundle.zip"
-    target_zip="$target_dir/$bundle_name"
+    target_zip_relative="$target_dir_for_item/$bundle_name" # Relative to script CWD
 
-    # Track this bundle as expected
-    echo "BUNDLE:$target_zip"
+    # Track this bundle as expected (output to temp file)
+    echo "BUNDLE:$target_zip_relative"
 
     # Check if bundle needs updating
     needs_update=false
-    if [ ! -f "$target_zip" ]; then
+    bundle_was_new=false # Flag to distinguish for messaging/tracking file
+    if [ ! -f "$target_zip_relative" ]; then
       needs_update=true
-      print_status "$YELLOW" "📦 Creating new bundle: $path"
-    elif [ "$path" -nt "$target_zip" ]; then
+      bundle_was_new=true
+      # Message moved to just before zipping
+    # Check if source dir itself is newer OR any file *inside* source dir is newer
+    elif [ "$path" -nt "$target_zip_relative" ] ||
+      (find "$path" -type f -newer "$target_zip_relative" -print -quit 2>/dev/null || true) | grep -q '.'; then
       needs_update=true
-      print_status "$YELLOW" "📦 Updating bundle: $path (source newer)"
+      # Message moved to just before zipping
     fi
 
     if [ "$needs_update" = true ]; then
-      # Remove existing bundle if it exists
-      [ -f "$target_zip" ] && rm -f "$target_zip"
+      if [ "$bundle_was_new" = true ]; then
+        print_status "$YELLOW" "📦 Creating new bundle for: $path"
+      else
+        print_status "$YELLOW" "📦 Updating bundle for: $path (source or contents newer)"
+      fi
 
-      # Create zip bundle
-      if (cd "$path" && zip -rq "$target_zip" .); then
-        if [ ! -f "$target_zip.created" ]; then
-          print_status "$GREEN" "✅ Created bundle: $target_zip"
-          echo "CREATED" >>"$target_zip.created"
+      # Remove existing bundle if it exists (for updates)
+      rm -f "$target_zip_relative" # Safe, rm -f doesn't error if file not found
+
+      # Get ABSOLUTE path for zip command's output file
+      absolute_target_zip_path=$(realpath -m "$target_zip_relative")
+
+      # Create zip bundle. `zip` failure is handled by `else`.
+      if (cd "$path" && zip -rq "$absolute_target_zip_path" .); then
+        if [ "$bundle_was_new" = true ]; then
+          print_status "$GREEN" "✅ Created bundle: $target_zip_relative"
+          echo "CREATED" >>"$target_zip_relative.created"
         else
-          print_status "$GREEN" "🔄 Updated bundle: $target_zip"
-          echo "UPDATED" >>"$target_zip.updated"
+          print_status "$GREEN" "🔄 Updated bundle: $target_zip_relative"
+          echo "UPDATED" >>"$target_zip_relative.updated"
         fi
       else
-        print_status "$RED" "❌ Failed to create bundle: $target_zip"
-        echo "ERROR" >>"$target_zip.error"
+        print_status "$RED" "❌ Failed to create bundle: $target_zip_relative (from $path)"
+        echo "ERROR" >>"$target_zip_relative.error"
       fi
     else
-      print_status "$BLUE" "⏭️  Bundle up to date: $target_zip"
+      print_status "$BLUE" "⏭️  Bundle up to date: $target_zip_relative"
     fi
 
   elif [ -f "$path" ]; then
     # Process file: copy directly
-    target_file="$target_dir/$base_name"
+    target_file_relative="$target_dir_for_item/$base_name" # Relative to script CWD
 
-    # Track this file as expected
-    echo "FILE:$target_file"
+    # Track this file as expected (output to temp file)
+    echo "FILE:$target_file_relative"
 
-    # Check if file needs updating
     needs_update=false
-    if [ ! -f "$target_file" ]; then
+    if [ ! -f "$target_file_relative" ]; then
       needs_update=true
-    elif [ "$path" -nt "$target_file" ]; then
+    elif [ "$path" -nt "$target_file_relative" ]; then
       needs_update=true
     fi
 
     if [ "$needs_update" = true ]; then
-      if cp "$path" "$target_file"; then
-        print_status "$BLUE" "📎 Copied file: $path → $target_file"
-        echo "COPIED" >>"$target_file.copied"
+      # `cp` failure is handled by `else`.
+      if cp "$path" "$target_file_relative"; then
+        print_status "$BLUE" "📎 Copied/Updated file: $path → $target_file_relative"
+        echo "COPIED" >>"$target_file_relative.copied"
       else
-        print_status "$RED" "❌ Failed to copy file: $path"
-        echo "ERROR" >>"$target_file.error"
+        print_status "$RED" "❌ Failed to copy file: $path to $target_file_relative"
+        echo "ERROR" >>"$target_file_relative.error"
       fi
     else
-      print_status "$BLUE" "⏭️  File up to date: $target_file"
+      print_status "$BLUE" "⏭️  File up to date: $target_file_relative"
     fi
-
   else
     print_status "$YELLOW" "❓ Unknown item type: $path"
-    echo "ERROR" >>"/tmp/unknown_items"
+    echo "UNKNOWN_TYPE: $path" >>"$UNKNOWN_ITEMS_TMP_FILE" || print_status "$RED" "Failed to log unknown item to $UNKNOWN_ITEMS_TMP_FILE"
   fi
-done >/tmp/expected_items
+done >"$EXPECTED_ITEMS_TMP_FILE" # End of the `find | while` subshell
+
+# Check if the primary temporary file was created and has content.
+if [ ! -s "$EXPECTED_ITEMS_TMP_FILE" ] &&
+  ! (find "$TOPICS_DIR" -path "$TOPICS_DIR/*/*/*/*/*" \
+    -not -path "$TOPICS_DIR/*/*/*/*/*/*" \
+    -not -path "*/.*" \
+    -not -path "*/+*" -print -quit | grep -q '.'); then
+  print_status "$YELLOW" "⚠️  No source items found or processing loop failed to produce $EXPECTED_ITEMS_TMP_FILE."
+  # If no source items, this might be normal. If source items exist but file is empty/missing, it's an error.
+fi
 
 # Read expected items into arrays
 while IFS= read -r line; do
@@ -148,11 +179,12 @@ while IFS= read -r line; do
     file_path="${line#FILE:}"
     expected_files["$file_path"]=1
   fi
-done </tmp/expected_items
+done <"$EXPECTED_ITEMS_TMP_FILE"
 
 print_status "$PURPLE" "🧹 Cleaning up orphaned bundles and files..."
 
 # Second pass: find and remove orphaned bundles and files
+# This loop also runs its `while` in a subshell due to the pipe.
 if [ -d "$BUNDLE_DIR" ]; then
   find "$BUNDLE_DIR" -type f | while read -r existing_item; do
     # Skip temporary files created by this script
@@ -165,59 +197,61 @@ if [ -d "$BUNDLE_DIR" ]; then
     item_type=""
 
     if [[ "$existing_item" == *.bundle.zip ]]; then
-      # Check if this bundle should exist
+      item_type="bundle"
       if [[ -n "${expected_bundles[$existing_item]:-}" ]]; then
         should_exist=true
       fi
-      item_type="bundle"
-    else
-      # Check if this regular file should exist
+    else # A non-bundle file
+      item_type="file"
       if [[ -n "${expected_files[$existing_item]:-}" ]]; then
         should_exist=true
       fi
-      item_type="file"
     fi
 
     if [ "$should_exist" = false ]; then
+      # `rm` failure handled by `else`.
       if rm -f "$existing_item"; then
         print_status "$PURPLE" "🗑️  Removed orphaned $item_type: $existing_item"
         if [ "$item_type" = "bundle" ]; then
-          ((bundles_removed++))
+          ((bundles_removed++)) # This counter is in the main shell.
         else
-          ((files_removed++))
+          ((files_removed++)) # This counter is in the main shell.
         fi
       else
         print_status "$RED" "❌ Failed to remove orphaned $item_type: $existing_item"
-        ((errors++))
+        ((errors++)) # This counter is in the main shell.
       fi
     fi
   done
+else
+  print_status "$YELLOW" "⚠️ Bundle directory $BUNDLE_DIR does not exist, skipping cleanup."
 fi
 
 # Count results from temporary tracking files
-bundles_created=$(find "$BUNDLE_DIR" -name "*.created" 2>/dev/null | wc -l)
-bundles_updated=$(find "$BUNDLE_DIR" -name "*.updated" 2>/dev/null | wc -l)
-files_copied=$(find "$BUNDLE_DIR" -name "*.copied" 2>/dev/null | wc -l)
-bundle_errors=$(find "$BUNDLE_DIR" -name "*.error" 2>/dev/null | wc -l)
-
-# Note: bundles_removed and files_removed are counted in the cleanup loop above
-# errors includes bundle creation errors but cleanup errors are counted inline
+bundles_created_count=$(find "$BUNDLE_DIR" -name "*.created" 2>/dev/null | wc -l)
+bundles_updated_count=$(find "$BUNDLE_DIR" -name "*.updated" 2>/dev/null | wc -l)
+files_copied_count=$(find "$BUNDLE_DIR" -name "*.copied" 2>/dev/null | wc -l)
+logged_item_processing_errors=$(find "$BUNDLE_DIR" -name "*.error" 2>/dev/null | wc -l)
+unknown_types_logged=$( ([ -f "$UNKNOWN_ITEMS_TMP_FILE" ] && wc -l <"$UNKNOWN_ITEMS_TMP_FILE") || echo 0)
+logged_item_processing_errors=$((logged_item_processing_errors + unknown_types_logged))
 
 # Cleanup temporary tracking files
-find "$BUNDLE_DIR" -name "*.created" -o -name "*.updated" -o -name "*.error" -o -name "*.copied" | xargs rm -f 2>/dev/null || true
-rm -f /tmp/expected_items 2>/dev/null || true
+(find "$BUNDLE_DIR" -maxdepth 10 -type f \( -name "*.created" -o -name "*.updated" -o -name "*.error" -o -name "*.copied" \) -print0 | xargs -0 --no-run-if-empty rm -f) || true
+rm -f "$EXPECTED_ITEMS_TMP_FILE" "$UNKNOWN_ITEMS_TMP_FILE" 2>/dev/null || true
 
 # Print summary
 echo
 print_status "$BLUE" "=== Summary ==="
-print_status "$GREEN" "✅ Bundles created: $bundles_created"
-print_status "$GREEN" "🔄 Bundles updated: $bundles_updated"
-print_status "$GREEN" "📎 Files copied: $files_copied"
+print_status "$GREEN" "✅ Bundles created: $bundles_created_count"
+print_status "$GREEN" "🔄 Bundles updated: $bundles_updated_count"
+print_status "$GREEN" "📎 Files copied/updated: $files_copied_count"
 print_status "$PURPLE" "🗑️  Bundles removed: $bundles_removed"
 print_status "$PURPLE" "🗑️  Files removed: $files_removed"
 
-if [ $errors -gt 0 ]; then
-  print_status "$RED" "❌ Errors encountered: $errors"
+total_errors=$((errors + logged_item_processing_errors))
+
+if [ $total_errors -gt 0 ]; then
+  print_status "$RED" "❌ Errors reported: $total_errors (Processing: $logged_item_processing_errors, Cleanup: $errors)"
   exit 1
 else
   print_status "$GREEN" "🎉 All operations completed successfully!"
