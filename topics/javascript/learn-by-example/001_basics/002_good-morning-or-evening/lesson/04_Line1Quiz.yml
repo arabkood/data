@@ -1,0 +1,16 @@
+type: "quiz"
+lang: javascript
+question: |
+  What does the following line of code do?
+
+code: |
+  const now = new Date();
+
+solution: 1
+options:
+  - "Creates a new Date object with the current time and stores it in a constant called now"
+  - "Sets the date to January 1, 1970"
+  - "Creates a timer that runs every hour"
+  - "Changes your computer's system time"
+explanation: |
+  `new Date()` creates a new Date object that represents the current date and time. The value is stored in a constant named `now`.

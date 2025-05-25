@@ -8,8 +8,20 @@ export async function commitTrack(topicId: string, sourcePath: string) {
   try {
     const parentName = path.basename(path.dirname(sourcePath));
     const parentParts = parentName.split("_", 2);
+    const grandName = path.basename(path.dirname(path.dirname(sourcePath)));
+    const grandParts = grandName.split("_", 2);
     // const position = parseInt(parentParts[0], 10) || 0;
-    const slug = parentParts.length > 1 ? parentParts[1] : parentParts[0];
+    let slug = "";
+    if (grandParts.length > 1) {
+      slug += grandParts[1] + "_";
+    } else {
+      slug += grandParts[0] + "_";
+    }
+    if (parentParts.length > 1) {
+      slug += parentParts[1];
+    } else {
+      slug += parentParts[0];
+    }
 
     // Parse the YAML content
     const yamlData = yaml.load(

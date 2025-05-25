@@ -1,0 +1,23 @@
+type: "quiz"
+lang: javascript
+question: |
+  What message will the following code print if the current time is 04:00 PM?
+
+code: |
+  const now = new Date();
+  const hour = now.getHours();
+  const yourName = "Fatima";
+
+  if (hour < 12) {
+    console.log(`Good morning, ${yourName}!`);
+  } else {
+    console.log(`Good evening, ${yourName}!`);
+  }
+
+solution: 1
+options:
+  - "Good morning, Fatima!"
+  - "Good evening, Fatima!"
+  - "Nothing will be printed"
+explanation: |
+  Since `hour` is 16 (which is 4:00 PM), the condition `hour < 12` is false. So the code inside the `else` block runs, printing: `Good evening, Fatima!`
