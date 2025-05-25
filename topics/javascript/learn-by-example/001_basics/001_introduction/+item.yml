@@ -3,7 +3,7 @@ blurb: null
 premium_only: false
 difficulty: easy
 base_xp: 30
-type: code
+type: lesson
 
 # ----- AUTO-GENERATED FIELDS (DO NOT MODIFY) -----
 id: 2e7504bd-22d0-4cff-8636-2d6234196ee1
@@ -12,4 +12,4 @@ module_id: 93721656-95fa-4bf2-abc6-86f72af7faf5
 slug: introduction
 position: 1
 s3_path: javascript/learn-by-example/001_basics/001_introduction
-updated_at: 2025-05-25T15:24:11.558Z
+updated_at: 2025-05-25T15:34:29.759Z
