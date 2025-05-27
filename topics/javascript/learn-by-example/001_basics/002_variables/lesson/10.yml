@@ -1,0 +1,15 @@
+type: "quiz"
+lang: javascript
+question: |
+  How do you print both text and a variable value together?
+code: |
+  let points = 50;
+  __@@INPUT@@__
+solution: 1
+options:
+  - "console.log(You have points points);"
+  - 'console.log("You have", points, "points");'
+  - "console.log(You have + points + points);"
+  - 'console.log("points");'
+explanation: |
+  You can pass multiple values to `console.log()` separated by commas. Each value (text in quotes and variables) will be displayed with spaces between them.

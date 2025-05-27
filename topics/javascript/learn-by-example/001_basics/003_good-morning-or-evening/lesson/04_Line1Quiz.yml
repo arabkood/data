@@ -6,7 +6,7 @@ question: |
 code: |
   const now = new Date();
 
-solution: 1
+solution: 0
 options:
   - "Creates a new Date object with the current time and stores it in a constant called now"
   - "Sets the date to January 1, 1970"

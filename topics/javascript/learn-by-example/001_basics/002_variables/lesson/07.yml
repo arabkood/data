@@ -1,0 +1,17 @@
+type: "quiz"
+lang: javascript
+question: |
+  Which of these variables is a boolean data type?
+code: |
+  let a = "true";
+  let b = 1;
+  let c = false;
+  let d = "yes";
+solution: 2
+options:
+  - "Variable a"
+  - "Variable b"
+  - "Variable c"
+  - "Variable d"
+explanation: |
+  Variable c contains `false`, which is one of the two boolean values (true or false). Variable a is a string because "true" is in quotes, b is a number, and d is also a string.

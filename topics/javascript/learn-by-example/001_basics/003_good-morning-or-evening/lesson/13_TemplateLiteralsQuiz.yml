@@ -14,6 +14,6 @@ options:
   - "Hanif is 25 years old."
   - "${name} is ${age} years old."
 
-solution: 3
+solution: 2
 explanation: |
   Template literals replace `${name}` and `${age}` with the values of those variables, so the output is: "Hanif is 25 years old."

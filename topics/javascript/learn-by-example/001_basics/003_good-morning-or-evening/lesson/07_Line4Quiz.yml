@@ -6,7 +6,7 @@ question: |
 code: |
   const yourName = Muhammad;
 
-solution: 3
+solution: 2
 options:
   - "It will store Muhammad as a string automatically"
   - "It will ask the user to enter their name"

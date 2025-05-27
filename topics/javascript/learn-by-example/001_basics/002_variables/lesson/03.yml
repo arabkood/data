@@ -1,0 +1,14 @@
+type: "quiz"
+lang: javascript
+question: |
+  What does this code do?
+code: |
+  let studentName = "Ahmed";
+solution: 1
+options:
+  - "Prints Ahmed to the console"
+  - "Creates a variable called studentName and stores Ahmed in it"
+  - "Changes an existing variable to Ahmed"
+  - "Deletes a variable called Ahmed"
+explanation: |
+  The `let` keyword creates a new variable named `studentName` and assigns the value "Ahmed" to it. The variable can now be used elsewhere in the code.

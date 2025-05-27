@@ -1,0 +1,15 @@
+type: "quiz"
+lang: javascript
+question: |
+  What will this code display in the console?
+code: |
+  let message = "Welcome";
+  console.log(message);
+solution: 0
+options:
+  - "Welcome"
+  - "message"
+  - "let message"
+  - "undefined"
+explanation: |
+  `console.log(message)` displays the value stored in the variable `message`, which is "Welcome". It prints the contents of the variable, not the variable name itself.

@@ -1,0 +1,14 @@
+type: "quiz"
+lang: javascript
+question: |
+  What data type is the value `"123"` in JavaScript?
+code: |
+  let value = "123";
+solution: 1
+options:
+  - "number - because it contains digits"
+  - "string - because it's wrapped in quotes"
+  - "boolean - because it's a simple value"
+  - "undefined - because it's not a real number"
+explanation: |
+  Even though "123" contains digits, the quotes make it a string data type. Without quotes, 123 would be a number. The quotes are the key indicator of string data type.

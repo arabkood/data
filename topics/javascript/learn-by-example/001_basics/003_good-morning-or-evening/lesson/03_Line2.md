@@ -12,6 +12,6 @@ It returns the current hour as a number from `0` and `23`, and stores that numbe
 
 So if it's 8:26 AM, you'll get:
 
-```
-const hour = 8
+```javascript
+const hour = 8;
 ```
