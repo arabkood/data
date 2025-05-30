@@ -1,7 +1,7 @@
 type: "quiz"
 lang: javascript
 question: |
-  How do you print both text and a variable value together?
+  كيف تطبع نصًا وقيمة `:variable` معًا؟
 code: |
   let points = 50;
   __@@INPUT@@__
@@ -12,4 +12,4 @@ options:
   - "console.log(You have + points + points);"
   - 'console.log("points");'
 explanation: |
-  You can pass multiple values to `console.log()` separated by commas. Each value (text in quotes and variables) will be displayed with spaces between them.
+  يمكنك تمرير قيم متعددة إلى `console.log()` مفصولة بفواصل. سيتم عرض كل قيمة (نص بين علامتي اقتباس و `:variable`) مع مسافات بينها.

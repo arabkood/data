@@ -1,14 +1,15 @@
 type: "quiz"
 lang: javascript
 question: |
-  What data type should you use to store a person's name?
+  ما هو `:type` البيانات الذي يجب أن تستخدمه لتخزين اسم شخص؟
 code: |
   let name = ?;
 solution: 0
 options:
-  - "string"
-  - "number"
-  - "boolean"
-  - "undefined"
+  - "`string`"
+  - "`number`"
+  - "`boolean`"
+  - "`undefined`"
 explanation: |
-  A person's name is text, so it should be stored as a string data type. For example: `let personName = "Sarah";`
+  اسم الشخص هو نص، لذا يجب تخزينه كـ `:type` بيانات `:string`. على سبيل المثال: 
+  `let personName = "محمد";`

@@ -1,7 +1,7 @@
 type: "quiz"
 lang: javascript
 question: |
-  Which of these variables is a boolean data type?
+  أي من هذه المتغيرات هو من `:type` `:boolean`؟
 code: |
   let a = "true";
   let b = 1;
@@ -9,9 +9,10 @@ code: |
   let d = "yes";
 solution: 2
 options:
-  - "Variable a"
-  - "Variable b"
-  - "Variable c"
-  - "Variable d"
+  - "المتغير a"
+  - "المتغير b"
+  - "المتغير c"
+  - "المتغير d"
 explanation: |
-  Variable c contains `false`, which is one of the two boolean values (true or false). Variable a is a string because "true" is in quotes, b is a number, and d is also a string.
+  المتغير `c` يحتوي على `false`، وهي إحدى القيمتين من النوع `:boolean` (`true` أو `false`).
+  المتغير `a` هو `string` لأن القيمة `true` محاطة بعلامتي اقتباس، والمتغير `b` هو من النوع `number`، والمتغير `d` هو أيضًا `:string`.

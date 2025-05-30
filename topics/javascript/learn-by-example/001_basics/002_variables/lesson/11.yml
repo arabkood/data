@@ -1,7 +1,7 @@
 type: "quiz"
 lang: javascript
 question: |
-  What will this program output?
+  ماذا سيكون ناتج هذا البرنامج؟
 code: |
   let city = "الرياض";
   let population = 7000000;
@@ -12,6 +12,6 @@ options:
   - "City: city\nPopulation: population"
   - "الرياض 7000000"
   - "City: الرياض\nPopulation: 7000000"
-  - "Error - cannot mix Arabic and numbers"
+  - "خطأ - لا يمكن مزج العربية والأرقام"
 explanation: |
-  The `+` operator combines the text with the variable values. Each `console.log()` prints on a separate line, showing "City: الرياض" then "Population: 7000000".
+  يقوم **العامل** (`operator`) `+` بدمج النص مع قيم **المتغيرات**. كل استدعاء لـ `console.log()` يطبع على سطر منفصل، حيث يُظهر "City: الرياض" ثم "Population: 7000000".

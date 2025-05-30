@@ -1,14 +1,14 @@
 type: "quiz"
 lang: javascript
 question: |
-  What data type is the value `"123"` in JavaScript?
+  ما هو `:type` البيانات للقيمة `"123"` في `JavaScript`؟
 code: |
   let value = "123";
 solution: 1
 options:
-  - "number - because it contains digits"
-  - "string - because it's wrapped in quotes"
-  - "boolean - because it's a simple value"
-  - "undefined - because it's not a real number"
+  - "`number` - لأنه يحتوي على أرقام"
+  - "`string` - لأنه محاط بعلامات اقتباس"
+  - "`boolean` - لأنها قيمة بسيطة"
+  - "`undefined` - لأنه ليس رقمًا حقيقيًا"
 explanation: |
-  Even though "123" contains digits, the quotes make it a string data type. Without quotes, 123 would be a number. The quotes are the key indicator of string data type.
+  على الرغم من أن `"123"` يحتوي على أرقام، فإن علامات الاقتباس تجعله `:type` بيانات `:string`. بدون علامات اقتباس، سيكون `123` من النوع `number`. علامات الاقتباس هي المؤشر الرئيسي لنوع البيانات `:string`.
