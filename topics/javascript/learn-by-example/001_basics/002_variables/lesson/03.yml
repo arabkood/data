@@ -1,14 +1,14 @@
 type: "quiz"
 lang: javascript
 question: |
-  What does this code do?
+  ماذا يفعل هذا الكود؟
 code: |
   let studentName = "Ahmed";
 solution: 1
 options:
-  - "Prints Ahmed to the console"
-  - "Creates a variable called studentName and stores Ahmed in it"
-  - "Changes an existing variable to Ahmed"
-  - "Deletes a variable called Ahmed"
+  - "يطبع `Ahmed` إلى `:console`"
+  - "ينشئ `:variable` يسمى `studentName` ويخزن `Ahmed` فيه"
+  - "يغير `:variable` موجود إلى `Ahmed`"
+  - "يحذف `:variable` يسمى `Ahmed`"
 explanation: |
-  The `let` keyword creates a new variable named `studentName` and assigns the value "Ahmed" to it. The variable can now be used elsewhere in the code.
+  الكلمة  `let` تنشئ `:variable` جديد باسم `studentName` وتسند إليه القيمة `"Ahmed"`. يمكن الآن استخدام هذا `:variable` في أماكن أخرى من الكود.
