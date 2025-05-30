@@ -1,74 +1,63 @@
-## 🚀 Set Up Your Local JavaScript Environment (Fast!)
+## 🚀 ابدأ مع `JavaScript` على حاسوبك (سهل جداً!)
 
-Want to run JavaScript in your PC? Here’s how to get started with Node.js in just a few minutes.
-
----
-
-## 1️⃣ Install Node.js
-
-👉 Go to [https://nodejs.org](https://nodejs.org)
-
-- Download the **LTS version** (Long-Term Support)
-- Follow the installer steps (click "Next" a few times)
-
-✅ This will install both **Node.js** and **npm** (Node package manager)
+هل تريد تشغيل `JavaScript` على حاسوبك الشخصي؟ اتبع هذه الخطوات السريعة!
 
 ---
 
-## 2️⃣ Check Installation
+## 1️⃣ تثبيت `Node.js`
 
-Open your terminal (Command Prompt, Terminal, or PowerShell) and type:
+👈 اذهب إلى [https://nodejs.org](https://nodejs.org)
+
+- قم بتنزيل **إصدار الدعم طويل الأمد (LTS)**
+- افتح الملف وانقر على **التالي** (Next) حتى ينتهي التثبيت
+
+---
+
+## 2️⃣ تحقق مما إذا كان يعمل
+
+افتح `:terminal` (قد يُسمى حسب نظامك: `Command Prompt`، أو `Terminal`، أو `PowerShell`) ثم اكتب:
 
 ```bash
 node -v
 ```
 
-You should see something like:
+يجب أن ترى رقم إصدار مشابه لـ:
 
 ```
 v22.16.0
 ```
 
+هذا يعني أنه يعمل!
+
 ---
 
-## 3️⃣ Run Your First JavaScript File
+## 3️⃣ شغّل أول برنامج `JavaScript` لك
 
-1. Create a file named `hello.js`
-2. Add this code from last lesson (Don't worry about what this code does for now):
+1. أنشئ ملفًا باسم `hello.js`
+2. انسخ هذا الكود داخل الملف:
 
 ```javascript
 const now = new Date();
 const hour = now.getHours();
 
-const yourName = "Muhammad";
+const yourName = "محمد";
 
 if (hour < 12) {
-  console.log(`Good morning, ${yourName}!`);
+  console.log(`صباح الخير، ${yourName}!`);
 } else {
-  console.log(`Good evening, ${yourName}!`);
+  console.log(`مساء الخير، ${yourName}!`);
 }
 ```
 
-3. In the terminal, run:
+3. افتح `:terminal` **وتأكد أنك داخل المجلد الذي يحتوي على الملف**، ثم اكتب:
 
 ```bash
 node hello.js
 ```
 
-You should see depending on the time of day:
+📝 **معلومة مهمة:**
+استخدم الأمر `cd` للانتقال إلى المجلد الذي يحتوي على الملف. مثلاً:
 
+```bash
+cd Desktop
 ```
-Good morning, Muhammad!
-```
-
-or
-
-```
-Good evening, Muhammad!
-```
-
----
-
-## ✅ You're Ready!
-
-Boom—you just ran JavaScript on your computer! You now have everything you need to start building.

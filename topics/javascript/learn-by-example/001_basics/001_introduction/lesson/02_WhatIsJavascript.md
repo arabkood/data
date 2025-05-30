@@ -1,37 +1,37 @@
-## Your First Lesson About JavaScript
+## درسك الأول عن `JavaScript`
 
-Most people think JavaScript only lives in web browsers, but that's just part of it.
+يعتقد معظم الناس أن `JavaScript` توجد فقط في متصفحات الويب، ولكن هذا جزء بسيط من الحقيقة.
 
-As of 2025, JavaScript is everywhere, it's the most widely used programming language among developers worldwide.
+اعتبارًا من عام 2025، أصبحت `JavaScript` موجودة في كل مكان، وهي **لغة البرمجة** الأكثر استخدامًا بين المطورين في جميع أنحاء العالم.
 
-And the reason is simple: JavaScript is a powerful language that can be used for almost anything, including:
+و السبب بسيط: `JavaScript` هي لغة قوية يمكن استخدامها في كل شيء تقريبًا، بما في ذلك:
 
-- Automating repetitive tasks with custom scripts
-- Interact with your operating system
-- Building backend servers and APIs
-- Creating interactive websites
-- Developing mobile and desktop applications
-- Simple games
-- And much more
+- إنجاز المهام المتكررة باستخدام نصوص برمجية
+- التفاعل مع نظام التشغيل الخاص بك
+- بناء `:backend` (`backend`) و `:API` (`:API`)
+- إنشاء مواقع ويب تفاعلية
+- تطوير تطبيقات الهواتف المحمولة وتطبيقات سطح المكتب
+- الألعاب البسيطة
+- وغيرها الكثير
 
-## Why JavaScript Is The Perfect First Language
+## لماذا `JavaScript` هي اللغة الأولى المثالية
 
-- Learn it once, use it everywhere
-- Features a simple, beginner-friendly syntax
-- Massive community and endless learning resources
-- Supported by all modern browsers and platforms.
+- تعلمها مرة واحدة، واستخدمها في كل مكان
+- تتميز بأن `:syntax` (`syntax`) الخاص بها بسيط وسهل للمبتدئين
+- مجتمع ضخم ومصادر تعلم لا حصر لها
+- مدعومة من قبل جميع المتصفحات والمنصات الحديثة.
 
-## JavaScript in Action: A Quick Syntax Example
+## `JavaScript` عمليًا: مثال سريع على `syntax`
 
 ```javascript
 const now = new Date();
 const hour = now.getHours();
 
-const yourName = "Muhammad";
+const yourName = "محمد";
 
 if (hour < 12) {
-  console.log(`Good morning, ${yourName}!`);
+  console.log(`صباح الخير، ${yourName}!`);
 } else {
-  console.log(`Good evening, ${yourName}!`);
+  console.log(`مساء الخير، ${yourName}!`);
 }
 ```

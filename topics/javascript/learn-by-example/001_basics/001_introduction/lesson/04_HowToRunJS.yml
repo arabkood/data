@@ -1,19 +1,19 @@
 type: "quiz"
 lang: javascript
 question: |
-  You have the following code saved in a file called `program.js`.
+  لديك الكود التالي محفوظ في ملف يسمى `program.js`.
 
-  What command should you use in the terminal to run this JavaScript file on your computer?
+  ما هو الأمر الذي يجب أن تستخدمه في `:terminal` لتشغيل ملف `JavaScript` هذا على حاسوبك؟
 code: |
   const now = new Date();
   const hour = now.getHours();
 
-  const yourName = "Muhammad";
+  const yourName = "محمد";
 
   if (hour < 12) {
-    console.log(`Good morning, ${yourName}!`);
+    console.log(`صباح الخير، ${yourName}!`);
   } else {
-    console.log(`Good evening, ${yourName}!`);
+    console.log(`مساء الخير، ${yourName}!`);
   }
 solution: 2
 options:
@@ -22,6 +22,6 @@ options:
   - "node program.js"
   - "node run program.js"
 explanation: |
-  To run a JavaScript file using Node.js, use the `node` command followed by the filename.
+  لتشغيل ملف `JavaScript` باستخدام `Node.js`، استخدم الأمر `node` متبوعًا باسم الملف.
 
-  Since the file is named `program.js`, the correct command is: `node program.js`
+  بما أن الملف يسمى `program.js`، فإن الأمر الصحيح هو: `node program.js`
