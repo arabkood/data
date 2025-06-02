@@ -2,11 +2,12 @@ type: "quiz"
 lang: javascript
 question: |
   كيف تطبع رسالة تحتوي على نص وقيمة متغير باستخدام `console.log()`؟
-  مثلًا: لديك متغير `points` يحتوي على عدد النقاط، وتريد طباعة: `لديك 50 نقطة`.
+
+  مثلًا: لديك متغير `points` يحتوي على عدد النقاط، وتريد طباعة: `لديك X نقطة`.
 code: |
   let points = 50;
   __@@INPUT@@__
-solution: 2
+solution: 1
 options:
   - "console.log('لديك points نقطة');"
   - 'console.log("لديك", points, "نقطة");'
