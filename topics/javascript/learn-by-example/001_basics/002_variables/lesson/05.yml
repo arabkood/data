@@ -1,7 +1,7 @@
 type: "quiz"
 lang: javascript
 question: |
-  ما هو `:type` البيانات الذي يجب أن تستخدمه لتخزين اسم شخص؟
+  ما هو نوع `:type` البيانات الذي يجب أن تستخدمه لتخزين اسم شخص؟
 code: |
   let name = ?;
 solution: 0
@@ -11,5 +11,7 @@ options:
   - "`boolean`"
   - "`undefined`"
 explanation: |
-  اسم الشخص هو نص، لذا يجب تخزينه كـ `:type` بيانات `:string`. على سبيل المثال: 
-  `let personName = "محمد";`
+  اسم الشخص هو نص، لذا يجب تخزينه كـ `:string`. على سبيل المثال: 
+  ```javascript
+  let personName = "محمد";
+  ```

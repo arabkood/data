@@ -3,12 +3,12 @@ lang: javascript
 question: |
   ماذا يفعل هذا الكود؟
 code: |
-  let studentName = "Ahmed";
+  let studentName = "أحمد";
 solution: 1
 options:
-  - "يطبع `Ahmed` إلى `:console`"
-  - "ينشئ `:variable` يسمى `studentName` ويخزن `Ahmed` فيه"
-  - "يغير `:variable` موجود إلى `Ahmed`"
-  - "يحذف `:variable` يسمى `Ahmed`"
+  - "يطبع أحمد"
+  - "ينشئ `:variable` يسمى `studentName` ويخزن `أحمد` فيه"
+  - "يغير `:variable` موجود إلى `أحمد`"
+  - "يحذف `:variable` يسمى `أحمد`"
 explanation: |
-  الكلمة  `let` تنشئ `:variable` جديد باسم `studentName` وتسند إليه القيمة `"Ahmed"`. يمكن الآن استخدام هذا `:variable` في أماكن أخرى من الكود.
+  الكلمة `let` تنشئ متغير (`:variable`) جديد باسم `studentName` وتسند إليه القيمة "أحمد"

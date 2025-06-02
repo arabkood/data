@@ -1,7 +1,7 @@
 type: "quiz"
 lang: javascript
 question: |
-  ماذا سيعرض هذا الكود في `:console`؟
+  ماذا سيعرض هذا الكود؟
 code: |
   let message = "Welcome";
   console.log(message);
@@ -12,4 +12,4 @@ options:
   - "let message"
   - "undefined"
 explanation: |
-  الدالة `console.log(message)` تعرض القيمة المخزنة في `:variable` `message`، وهي `"Welcome"`. إنها تطبع محتويات الـ `:variable`، وليس اسم الـ `:variable` نفسه.
+  الدالة `console.log(message)` تعرض القيمة المخزنة في المتغير `message`، وهي `"Welcome"`. إنها تطبع محتويات الـ `:variable`، وليس اسم الـ `:variable` نفسه.

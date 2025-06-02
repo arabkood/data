@@ -1,7 +1,7 @@
 type: "quiz"
 lang: javascript
 question: |
-  أي من هذه المتغيرات هو من `:type` `:boolean`؟
+  أي من هذه المتغيرات هو `:boolean`؟
 code: |
   let a = "true";
   let b = 1;
@@ -14,5 +14,6 @@ options:
   - "المتغير c"
   - "المتغير d"
 explanation: |
-  المتغير `c` يحتوي على `false`، وهي إحدى القيمتين من النوع `:boolean` (`true` أو `false`).
+  المتغير `c` يحتوي على `false`، وهي إحدى القيمتين من النوع `:boolean` (`:true` أو `:false`).
+
   المتغير `a` هو `string` لأن القيمة `true` محاطة بعلامتي اقتباس، والمتغير `b` هو من النوع `number`، والمتغير `d` هو أيضًا `:string`.

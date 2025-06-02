@@ -3,7 +3,7 @@ lang: javascript
 question: |
   لديك الكود التالي محفوظ في ملف يسمى `program.js`.
 
-  ما هو الأمر الذي يجب أن تستخدمه في `:terminal` لتشغيل ملف `JavaScript` هذا على حاسوبك؟
+  ما هو الأمر الذي يجب أن تستخدمه في `:terminal` لتشغيه باستخدام `:nodejs`؟
 code: |
   const now = new Date();
   const hour = now.getHours();
@@ -22,6 +22,10 @@ options:
   - "node program.js"
   - "node run program.js"
 explanation: |
-  لتشغيل ملف `JavaScript` باستخدام `Node.js`، استخدم الأمر `node` متبوعًا باسم الملف.
+  لتشغيل ملف جافاسكربت باستخدام `:nodejs`، استخدم الأمر `node` متبوعًا باسم الملف.
 
-  بما أن الملف يسمى `program.js`، فإن الأمر الصحيح هو: `node program.js`
+  بما أن الملف يسمى `program.js`، فإن الأمر الصحيح هو: 
+
+  ```bash
+  node program.js
+  ```
