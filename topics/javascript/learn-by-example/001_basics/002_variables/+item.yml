@@ -5,7 +5,7 @@ blurb: >
   معلومات شخصية مع إمكانية تعديلها والتجربة عليها بنفسك.
 premium_only: false
 difficulty: easy
-base_xp: 200
+base_xp: 972
 type: lesson
 
 # ----- AUTO-GENERATED FIELDS (DO NOT MODIFY) -----
@@ -15,4 +15,4 @@ module_id: 93721656-95fa-4bf2-abc6-86f72af7faf5
 slug: variables
 position: 2
 s3_path: javascript/learn-by-example/001_basics/002_variables
-updated_at: 2025-05-27T18:53:40.312Z
+updated_at: 2025-06-03T19:08:14.601Z

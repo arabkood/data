@@ -59,12 +59,12 @@ let y = 5;
 
 // أكبر من
 if (x > y) {
-  console.log("x أكبر من y");
+  console.log("x أكبر");
 }
 
 // أقل من
 if (x < y) {
-  console.log("x أقل من y");
+  console.log("x أقل");
 }
 
 // يساوي
