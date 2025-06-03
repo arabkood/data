@@ -1,24 +1,22 @@
-## Line 1: Create a Date Object
+## السطر الأول: إنشاء كائن تاريخ
 
-We want to tell the computer: "Store the current date in a `variable` called `now`."
+أول خطوة في برنامجنا هي أن نطلب من الحاسوب معرفة "ما هو الوقت الآن؟" وتخزين هذه المعلومة في `:contstant` اسمه `now`.
 
 ```javascript
 const now = new Date();
 ```
 
-This tells the computer to create a new `Date` `object` that holds the current date, time, and time zone. It saves that object in a `constant` named `now`.
+هذا السطر يعني: "أنشئ كائنًا جديدًا من النوع `Date`، واحفظه في `:constant` اسمه `now`."
 
-You can imagine `now` holding something like:
+يمكنك تخيل `now` وكأنه يحمل شيئًا مثل:
 
 ```yaml
 Mon May 25 2025 08:43:00 GMT+0000 (UTC)
 ```
 
----
+## ما الذي يحدث هنا؟
 
-## Quick Breakdown
-
-- `const` => creates a `variable` that won't change
-- `now` => the name we give the variable
-- `=` => assigns the value
-- `new Date()` => built-in time wizard that knows the current time
+- `const` → نستخدمها لإنشاء ثابت (`:constant`) لا تتغير قيمته لاحقًا.
+- `now` → اسم المتغير الذي اخترناه.
+- `=` → تُستخدم لإسناد القيمة إلى المتغير أو الثابت.
+- `new Date()` → وظيفة جاهزة في جافاسكريبت تنشئ كائنًا يحتوي على التاريخ والوقت الحاليين.

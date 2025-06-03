@@ -1,22 +1,29 @@
-## Executing Code, One Statement at a Time
+## فهم الكود... سطرًا سطر
 
-Here is the program code from last lesson again. We'll stick with it until you fully understand it:
+في هذا الدرس، سنتوقف قليلًا لنفهم كيف ينفذ الحاسوب الكود البرمجي خطوة بخطوة. لا تقلق إن بدا الأمر بسيطًا في البداية — الهدف هنا هو أن ندرّب عقولنا على التفكير مثل الحاسوب.
+
+سنستخدم نفس البرنامج الذي رأيناه في الدرس الأول. هذا التكرار مقصود، لأن البرمجة ليست فقط عن كتابة الكود، بل عن **فهم ما يحدث بداخله تمامًا**.
 
 ```javascript
+// الحصول على الوقت الحالي
 const now = new Date();
+
+// استخراج الساعة من الوقت الحالي
 const hour = now.getHours();
 
-const yourName = "Muhammad";
+// تعريف اسم المستخدم
+const yourName = "محمد";
 
+// طباعة تحية مناسبة حسب الوقت
 if (hour < 12) {
-  console.log(`Good morning, ${yourName}!`);
+  console.log(`صباح الخير، ${yourName}!`);
 } else {
-  console.log(`Good evening, ${yourName}!`);
+  console.log(`مساء الخير، ${yourName}!`);
 }
 ```
 
-## Let's Be The Computer
+## دعنا نكون الحاسوب 🤖
 
-Let's take some time to run through this code the same way the computer does, line by line, from the top of the file to the bottom.
+تخيل أنك أنت من ينفذ هذا الكود... كيف ستفهم كل سطر؟ ماذا يحدث بالضبط من الأعلى إلى الأسفل؟
 
-Are you ready? Let's do it!
+هل أنت جاهز؟ لنبدأ سويًا!

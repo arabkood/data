@@ -1,0 +1,20 @@
+type: "quiz"
+lang: javascript
+question: |
+  ماذا سيحدث إذا كتبت الكود التالي **بدون علامتي الاقتباس** حول الاسم؟
+code: |
+  const yourName = Muhammad;
+solution: 2
+options:
+  - "سيحفظ `Muhammad` كنص تلقائياً"
+  - "سيطلب من المستخدم إدخال اسمه"
+  - "سيرمي **خطأ** (`:error`) لأن `Muhammad` غير معرّف"
+  - "سيحول `Muhammad` إلى رقم"
+explanation: |
+  بدون علامتي التنصيص، يعتقد الحاسوب أن `Muhammad` هو **متغير** وليس **نص**. 
+
+  وبما أن هذا المتغير غير موجود، فإنه يرمي **خطأ** (`:error`) يقول: 
+
+  ```
+  ReferenceError: Muhammad is not defined
+  ```
