@@ -16,7 +16,8 @@ let totalCandies = 10;
 let children = 3;
 let remainder = totalCandies % children; // 10 % 3
 
-console.log("باقي الحلوى: " + remainder); // سيطبع: باقي الحلوى: 1
+console.log("باقي الحلوى: " + remainder);
+// باقي الحلوى: 1
 ```
 
 ### أمثلة أخرى:
@@ -24,34 +25,20 @@ console.log("باقي الحلوى: " + remainder); // سيطبع: باقي ال
 ```javascript
 let num1 = 17;
 let num2 = 5;
-// 17 ÷ 5 = 3 والباقي 2
-console.log(num1 % num2); // سيطبع: 2
+// 17 ÷ 5 = 3
+// والباقي 2
+console.log(num1 % num2); // 2
 
 let num3 = 20;
 let num4 = 4;
-// 20 ÷ 4 = 5 والباقي 0
-console.log(num3 % num4); // سيطبع: 0
+// 20 ÷ 4 = 5
+// والباقي 0
+console.log(num3 % num4); // 0
 ```
 
 ### استخدام شائع: التحقق من الأرقام الزوجية والفردية
 
 إذا كان باقي قسمة رقم على 2 هو `0`، فهذا يعني أن الرقم **زوجي**.
 إذا كان الباقي `1`، فهذا يعني أن الرقم **فردي**.
-
-```javascript
-let numberToCheck = 7;
-if (numberToCheck % 2 === 0) {
-  console.log(numberToCheck + " هو رقم زوجي.");
-} else {
-  console.log(numberToCheck + " هو رقم فردي."); // سيطبع: 7 هو رقم فردي.
-}
-
-let anotherNumber = 12;
-if (anotherNumber % 2 === 0) {
-  console.log(anotherNumber + " هو رقم زوجي."); // سيطبع: 12 هو رقم زوجي.
-} else {
-  console.log(anotherNumber + " هو رقم فردي.");
-}
-```
 
 عملية `%` قوية جدًا لأشياء مثل هذه!
