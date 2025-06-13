@@ -1,0 +1,39 @@
+type: "quiz"
+lang: javascript
+question: |
+  اختبار شامل على switch! ما هو الناتج المتوقع؟
+code: |
+  // نوع الطعام المفضل
+  const food = "بيتزا";
+  let result = "";
+
+  switch (food) {
+    case "برجر":
+    case "بيتزا":
+      result = "طعام سريع 🍕";
+      break;
+    case "سلطة":
+      result = "طعام صحي 🥗";
+      break;
+    case "آيس كريم":
+      result = "حلويات 🍦";
+      break;
+    default:
+      result = "طعام غير معروف";
+  }
+
+  console.log(result);
+solution: 0
+options:
+  - "طعام سريع 🍕"
+  - "طعام صحي 🥗"
+  - "حلويات 🍦"
+  - "طعام غير معروف"
+explanation: |
+  قيمة المتغير `food` هي "بيتزا". الكود يعمل كالتالي:
+  - يتخطى `case "برجر"` (لا يوجد break، لكن لا يوجد كود لتنفيذه)
+  - يجد `case "بيتزا"` ويبدأ التنفيذ
+  - ينفذ `result = "طعام سريع 🍕"`
+  - يجد `break` فيتوقف
+
+  هذا مثال على "case grouping" - عدة cases تشارك نفس الكود.

@@ -1,0 +1,17 @@
+title: 'قرارات متعددة: `else if` و `switch`'
+blurb: >
+  تعلم اتخاذ قرارات متعددة باستخدام `else if` للشروط المعقدة و `switch` للحالات
+  البسيطة،  من خلال أمثلة عملية عن نظام الدرجات وإشارات المرور.
+premium_only: false
+difficulty: easy
+base_xp: 1000
+type: lesson
+
+# ----- AUTO-GENERATED FIELDS (DO NOT MODIFY) -----
+id: 5198ec7b-5a82-4f0e-ae36-4b90ac62473c
+created_at: 2025-06-13T12:28:49.069Z
+module_id: 93721656-95fa-4bf2-abc6-86f72af7faf5
+slug: traffic-light
+position: 5
+s3_path: javascript/learn-by-example/001_basics/005_traffic-light
+updated_at: 2025-06-13T12:28:49.069Z
