@@ -1,0 +1,19 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  بالنظر إلى الطريقة الجديدة في كتابة الدوال، ما ناتج تنفيذ الكود التالي؟
+code: |
+  function getProductInfo({ name }) {
+    console.log(`اسم المنتج: ${name}`);
+  }
+
+  const product = { name: 'حاسوب محمول', price: 4500 };
+  getProductInfo(product);
+options:
+  - "`اسم المنتج: product`"
+  - "`اسم المنتج: حاسوب محمول`"
+  - "`undefined`"
+  - "سيحدث `:syntax error`"
+solution: 1
+explanation: |
+  عند استخدام `{ name }` في معاملات الدالة، يتم استخراج قيمة الخاصية `name` من الكائن المُمرر مباشرة إلى متغير بنفس الاسم. لذلك، `:variable` `name` سيحمل القيمة 'حاسوب محمول'.

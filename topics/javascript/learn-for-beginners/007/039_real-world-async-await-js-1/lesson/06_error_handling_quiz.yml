@@ -1,0 +1,24 @@
+type: "quiz"
+lang: "javascript"
+question: | 
+  بالنظر إلى الكود التالي، ماذا سيتم طباعته في الـ console إذا فشل طلب `fetch`؟
+code: | 
+  async function getUser() {
+    try {
+      const response = await fetch('https://fake-api.com/user');
+      // افترض أن هذا الطلب يفشل
+      const user = await response.json();
+      console.log(user.name);
+    } catch (error) {
+      console.log("فشل في جلب المستخدم");
+    }
+  }
+  getUser();
+options:
+  - "`undefined`"
+  - "اسم المستخدم"
+  - "فشل في جلب المستخدم"
+  - "لن تتم طباعة أي شيء"
+solution: 2
+explanation: | 
+  بما أن طلب `fetch` سيفشل، سيتم رفض :Promise. كلمة `:await` ستؤدي إلى حدوث استثناء (exception)، والذي سيتم التقاطه بواسطة كتلة `:catch`، مما يؤدي إلى طباعة الرسالة "فشل في جلب المستخدم".

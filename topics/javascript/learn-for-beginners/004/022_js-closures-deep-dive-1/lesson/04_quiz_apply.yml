@@ -1,0 +1,27 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  بناءً على الشرح السابق، ما هو ناتج تنفيذ الكود التالي؟
+code: |
+  function createCounter() {
+    let count = 0;
+    return function() {
+      count = count + 1;
+      return count;
+    };
+  }
+
+  const counterA = createCounter();
+  counterA();
+  counterA();
+
+  const counterB = createCounter();
+  console.log(counterB());
+solution: 0
+options:
+  - "`1`"
+  - "`2`"
+  - "`3`"
+  - "`0`"
+explanation: |
+  كل استدعاء للدالة `:createCounter` ينشئ بيئة جديدة ومستقلة. `counterA` له بيئته الخاصة بالمتغير `count`، و `counterB` له بيئة أخرى جديدة تمامًا. لذلك، أول استدعاء لـ `counterB` سيعيد `1`.

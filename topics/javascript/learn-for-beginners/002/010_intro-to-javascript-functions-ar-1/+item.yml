@@ -1,0 +1,17 @@
+title: 'مقدمة إلى الدوال: قوة إعادة الاستخدام'
+blurb: >-
+  تعلم كيف تكتب كودًا منظمًا وفعالاً باستخدام الدوال في جافاسكريبت. اكتشف كيفية
+  تعريف الدوال، وتمرير المعاملات، وإعادة القيم لتجنب تكرار الكود.
+premium_only: false
+difficulty: easy
+base_xp: 1200
+type: lesson
+
+# ----- AUTO-GENERATED FIELDS (DO NOT MODIFY) -----
+slug: intro-to-javascript-functions-ar-1
+id: 9da4d38a-c292-4888-aac6-8f57bb953564
+created_at: 2025-06-14T20:23:16.584Z
+module_id: 4a6bdad5-be5a-4332-936e-e8ce5c123e2f
+position: 10
+s3_path: javascript/learn-for-beginners/002/010_intro-to-javascript-functions-ar-1
+updated_at: 2025-06-14T20:23:16.584Z

@@ -1,0 +1,25 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  بناءً على الشرح السابق، ما القيمة النهائية للمتغير `treasureCount` التي سيتم طباعتها؟
+code: |
+  const map = "🌲💰💰🌲🌳💰";
+  let treasureCount = 0;
+  for (let i = 0; i < map.length; i++) {
+    if (map[i] === '💰') {
+      treasureCount++;
+    }
+  }
+  console.log(treasureCount);
+options:
+  - "`2`"
+  - "`6`"
+  - "`3`"
+  - "`0`"
+solution: 2
+explanation: |
+  الكود يمر على كل رمز في الخريطة. يجد الرمز '💰' ثلاث مرات:
+  - في الموقع `1` (تصبح `treasureCount` = 1)
+  - في الموقع `2` (تصبح `treasureCount` = 2)
+  - في الموقع `5` (تصبح `treasureCount` = 3)
+  لذلك، القيمة النهائية التي تُطبع هي `3`.

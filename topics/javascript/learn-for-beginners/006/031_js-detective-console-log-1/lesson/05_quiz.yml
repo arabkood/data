@@ -1,0 +1,20 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  الكود التالي يجمع نقاط اللاعب، لكن النتيجة النهائية تبدو غريبة. أي `:console.log` هو الأنسب لوضعه في السطر الفارغ لكشف سبب المشكلة؟
+code: |
+  let initialScore = 100;
+  let bonusPoints = "50"; // انتبه! هذه قيمة نصية
+  
+  let finalScore = initialScore + bonusPoints;
+  // __@@INPUT@@__
+  
+  console.log(finalScore); // الناتج: "10050"
+options:
+  - "`console.log('Starting calculation');`"
+  - "`console.log(typeof bonusPoints);`"
+  - "`console.log(initialScore);`"
+  - "`console.log(finalScore);`"
+solution: 1
+explanation: | 
+  المشكلة هي أن `bonusPoints` هو `:string` وليس `:number`. استخدام `console.log(typeof bonusPoints)` سيكشف نوع المتغير (`string`) وهو الدليل الذي نحتاجه لحل القضية، حيث أن جمع `:number` مع `:string` يؤدي إلى دمج النصوص.

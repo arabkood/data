@@ -1,0 +1,18 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  الكود التالي لا يعمل كما هو متوقع، حيث أن قيمة `message` تكون `:undefined`. ما هو التعديل اللازم لإصلاحه؟
+code: |
+  function createGreeting(name) {
+    let greeting = "Welcome, " + name;
+  }
+
+  let message = createGreeting("Ahmad");
+options:
+  - "إضافة `return greeting;` داخل الدالة"
+  - "تغيير `let` إلى `:const`"
+  - "استدعاء الدالة بـ `new createGreeting()`"
+  - "لا يوجد خطأ في الكود"
+solution: 0
+explanation: |
+  أي `:function` لا تحتوي على عبارة `:return` صريحة، فإنها تعيد القيمة `:undefined` بشكل افتراضي. لإصلاح هذا، يجب أن نعيد قيمة `:variable` `greeting` بشكل صريح باستخدام `:return`.

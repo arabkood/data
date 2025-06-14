@@ -1,0 +1,20 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  أكمل الكود لإنشاء `:function` `fetchFakeData` التي تُرجع `:Promise` يتم حله بعد ثانية واحدة.
+code: |
+  function fetchFakeData() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        __@@INPUT@@__({ id: 1, name: "بيانات وهمية" });
+      }, 1000);
+    });
+  }
+options:
+  - "`return`"
+  - "`resolve`"
+  - "`reject`"
+  - "`Promise.resolve`"
+solution: 1
+explanation: |
+  يجب علينا استدعاء الدالة `resolve` وتمرير البيانات إليها للإشارة إلى أن الـ`:Promise` قد اكتمل بنجاح.

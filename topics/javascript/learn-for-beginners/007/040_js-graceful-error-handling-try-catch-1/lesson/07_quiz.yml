@@ -1,0 +1,12 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  أي من الخيارات التالية يمثل الترتيب الصحيح لاستخدام هذه الكتل البرمجية؟
+solution: 0
+options:
+  - "`try` ثم `catch` ثم `finally`"
+  - "`catch` ثم `try` ثم `finally`"
+  - "`try` ثم `finally` ثم `catch`"
+  - "`finally` ثم `try` ثم `catch`"
+explanation: |
+  الترتيب في `:javascript` إلزامي: يجب أن تبدأ بكتلة `:try`، تليها إما `:catch` أو `:finally` (أو كلاهما بالترتيب). الترتيب الأكثر شيوعاً هو `:try`، ثم `:catch` لمعالجة الأخطاء، ثم `:finally` للتنظيف.

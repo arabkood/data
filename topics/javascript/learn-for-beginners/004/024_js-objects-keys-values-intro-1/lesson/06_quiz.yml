@@ -1,0 +1,19 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  ما ناتج تنفيذ الكود التالي؟
+code: |
+  let student = {
+    id: 101,
+    major: "Computer Science",
+    isActive: true
+  };
+  console.log(student.major);
+options:
+  - "`101`"
+  - "`"Computer Science"`"
+  - "`true`"
+  - "`major`"
+solution: 1
+explanation: |
+  باستخدام `student.major`، نحن نطلب قيمة المفتاح (`:key`) الذي اسمه `major`، وهي النص `"Computer Science"`.

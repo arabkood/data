@@ -1,0 +1,18 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  الآن لنجمع كل شيء معًا. لدينا `:function` جيدة التسمية مع معامل افتراضي. ما الذي سيتم طباعته في الـconsole عند تنفيذ هذا الكود؟
+code: |
+  function createBooking(customerName, seats = 1) {
+    console.log(`New booking for ${customerName} with ${seats} seat(s).`);
+  }
+
+  createBooking("سارة");
+options:
+  - "`New booking for سارة with undefined seat(s).`"
+  - "`New booking for سارة with 1 seat(s).`"
+  - "`SyntaxError`"
+  - "`New booking for undefined with 1 seat(s).`"
+solution: 1
+explanation: |
+  بما أننا استدعينا الـ`:function` بمعامل واحد فقط، فقد استخدمت القيمة الافتراضية للمعامل الثاني `seats`، وهي `1`، كما هو محدد في تعريف الـ`:function`.

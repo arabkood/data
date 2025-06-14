@@ -1,0 +1,15 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  يظهر الكود التالي رسالة خطأ عند تشغيله. ما هو نوع الخطأ الأكثر احتمالاً؟
+code: |
+  let message = "مرحباً بالعالم;
+  console.log(message);
+options:
+  - ":ReferenceError"
+  - ":TypeError"
+  - ":SyntaxError"
+  - "لا يوجد خطأ"
+solution: 2
+explanation: |
+  الكود يفتقد لعلامة التنصيص الختامية `"` لإكمال الـ `:string`. هذا خطأ في بناء الجملة الأساسية للغة، ويُعرف بـ `:SyntaxError`.

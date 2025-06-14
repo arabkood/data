@@ -1,0 +1,19 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  ما ناتج تنفيذ هذا الكود؟
+code: |
+  function calculatePrice(price, tax) {
+    let totalPrice = price + tax;
+    console.log(totalPrice);
+  }
+
+  calculatePrice(100, 15);
+options:
+  - "`100`"
+  - "`15`"
+  - "`115`"
+  - "`:undefined`"
+solution: 2
+explanation: |
+  تم استدعاء الـ `:function` بالقيمتين `100` و `15`. داخل الـ `:function`، تم تعيين `price` إلى `100` و `tax` إلى `15`. عملية الجمع `100 + 15` تساوي `115`، وهو ما يتم طباعته.

@@ -1,0 +1,25 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  ما الخطأ في جملة `:switch` التالية الذي سيؤدي إلى طباعة "مستوى غير معروف" دائمًا حتى لو كانت القيمة 'A'؟
+code: |
+  let level = 'A';
+  let description;
+
+  switch (level) {
+    case 'A':
+      description = "ممتاز";
+    case 'B':
+      description = "جيد";
+    default:
+      description = "مستوى غير معروف";
+  }
+  console.log(description);
+options:
+  - "استخدام علامات تنصيص فردية"
+  - "عدم وجود `:break` بعد كل `:case`"
+  - "اسم المتغير `level`"
+  - "يجب أن تكون `:default` أولاً"
+solution: 1
+explanation: |
+  بدون `:break`، يستمر تنفيذ الكود عبر الحالات التالية. في هذا المثال، بعد أن يجد `'A'`، سيستمر في تنفيذ `:case 'B'` ثم `:default`، مما يجعل القيمة النهائية لـ `:description` هي "مستوى غير معروف".

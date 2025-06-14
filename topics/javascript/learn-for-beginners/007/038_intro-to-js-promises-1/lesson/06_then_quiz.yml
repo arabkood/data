@@ -1,0 +1,20 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  أكمل الكود التالي لطباعة رسالة النجاح من الـ `:Promise`.
+code: |
+  let dataPromise = new Promise((resolve, reject) => {
+    resolve("تم تحميل البيانات بنجاح");
+  });
+
+  dataPromise.__@@INPUT@@__((result) => {
+    console.log(result);
+  });
+solution: 0
+options:
+  - ".then"
+  - ".success"
+  - ".catch"
+  - ".done"
+explanation: |
+  نستخدم الدالة `.then()` لتحديد ما يجب فعله عند نجاح الـ `:Promise` واستلام القيمة التي تم تمريرها إلى `:resolve`.

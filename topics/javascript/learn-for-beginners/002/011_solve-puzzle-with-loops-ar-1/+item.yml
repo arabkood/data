@@ -1,0 +1,17 @@
+title: حل الألغاز بحلقات التكرار
+blurb: >-
+  تعلم كيف تستخدم حلقات التكرار لأتمتة المهام المتكررة وحل لغز البحث عن الكنز في
+  الخريطة!
+premium_only: false
+difficulty: easy
+base_xp: 1200
+type: lesson
+
+# ----- AUTO-GENERATED FIELDS (DO NOT MODIFY) -----
+slug: solve-puzzle-with-loops-ar-1
+id: deb01c15-8e42-4252-bb84-ea7c8e71653e
+created_at: 2025-06-14T20:23:16.584Z
+module_id: 4a6bdad5-be5a-4332-936e-e8ce5c123e2f
+position: 11
+s3_path: javascript/learn-for-beginners/002/011_solve-puzzle-with-loops-ar-1
+updated_at: 2025-06-14T20:23:16.584Z

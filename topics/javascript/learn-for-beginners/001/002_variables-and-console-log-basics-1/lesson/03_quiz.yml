@@ -1,0 +1,16 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  لدينا `:variable` باسم `message` يحتوي على "مرحباً بالعالم".
+
+  ما هو الأمر الذي نستخدمه لعرض هذه الرسالة في الطرفية (console)؟
+code: |
+  let message = "مرحباً بالعالم";
+options:
+  - "`display(message);`"
+  - "`print(message);`"
+  - "`console.log(message);`"
+  - "`show.console(message);`"
+solution: 2
+explanation: |
+  الأمر `:console.log()` هو الأداة الأساسية في `:javascript` لعرض قيم `:variable` أو أي معلومات أخرى للمبرمج أثناء تشغيل الكود.

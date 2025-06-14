@@ -1,0 +1,16 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  لدينا `:function` للترحيب. ما الذي يجب وضعه بين القوسين `()` لتتمكن من استقبال اسم معين؟
+code: |
+  function greet(__@@INPUT@@__) {
+    console.log("مرحباً, " + name);
+  }
+options:
+  - "`name`"
+  - "`'علي'`"
+  - "` `"
+  - "`let name`"
+solution: 0
+explanation: |
+  نضع اسم الـ `:parameter` (هنا `name`) بين القوسين لتعريف أن الـ `:function` تتوقع استقبال قيمة. هذا الـ `:parameter` يعمل كـ `:variable` داخل الـ `:function`.

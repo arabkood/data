@@ -1,0 +1,18 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  لنفترض أن لدينا `:variable` يمثل حالة الطقس. ما هو الناتج المتوقع من الكود التالي؟
+code: |
+  let isRaining = true;
+
+  if (isRaining) {
+    console.log("لا تنس المظلة!");
+  }
+options:
+  - "سيتم طباعة `isRaining`"
+  - "لن يتم طباعة أي شيء"
+  - "سيحدث خطأ"
+  - "'لا تنس المظلة!'"
+solution: 3
+explanation: | 
+  بما أن قيمة `:variable` المسمى `isRaining` هي `true`، فإن الشرط داخل `:if` يتحقق، ويتم تنفيذ الكود الموجود داخل القوسين `{}`.

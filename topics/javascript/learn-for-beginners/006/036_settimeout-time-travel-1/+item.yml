@@ -1,0 +1,17 @@
+title: السفر عبر الزمن مع setTimeout
+blurb: >-
+  تعلم كيف تنفذ الكود بعد فترة زمنية محددة باستخدام الدالة setTimeout، وهي أداة
+  أساسية للبرمجة غير المتزامنة في جافاسكريبت.
+premium_only: false
+difficulty: easy
+base_xp: 750
+type: lesson
+
+# ----- AUTO-GENERATED FIELDS (DO NOT MODIFY) -----
+slug: settimeout-time-travel-1
+id: 2239b702-e459-4fb0-b76e-271adae30d4d
+created_at: 2025-06-14T20:23:16.585Z
+module_id: 7c6b466c-add6-4f45-930f-1985cb0c1bd8
+position: 36
+s3_path: javascript/learn-for-beginners/006/036_settimeout-time-travel-1
+updated_at: 2025-06-14T20:23:16.585Z

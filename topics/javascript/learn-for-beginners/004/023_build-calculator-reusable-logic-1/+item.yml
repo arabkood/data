@@ -1,0 +1,17 @@
+title: 'بناء الآلة الحاسبة: قوة المنطق القابل لإعادة الاستخدام'
+blurb: >-
+  تعلم كيفية بناء منطق برمجي يمكن إعادة استخدامه مرارًا وتكرارًا عن طريق إنشاء
+  دوال بسيطة لآلة حاسبة، مما يجعل كودك أكثر نظافة وكفاءة.
+premium_only: false
+difficulty: easy
+base_xp: 1200
+type: lesson
+
+# ----- AUTO-GENERATED FIELDS (DO NOT MODIFY) -----
+slug: build-calculator-reusable-logic-1
+id: f38ecda8-c94a-4d03-85d5-8d41bc901db6
+created_at: 2025-06-14T20:23:16.583Z
+module_id: a80669d4-c561-4d4b-acb6-c23f3d71b76d
+position: 23
+s3_path: javascript/learn-for-beginners/004/023_build-calculator-reusable-logic-1
+updated_at: 2025-06-14T20:23:16.583Z

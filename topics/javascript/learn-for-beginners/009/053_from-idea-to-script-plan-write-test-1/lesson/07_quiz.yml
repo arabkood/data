@@ -1,0 +1,21 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  لاحظ المبرمج أن الكود التالي يعطي نتيجة خاطئة عند الاختبار. ما هو الخطأ المنطقي في تعريف الدالة؟
+code: |
+  function calculateArea(length, width) {
+    // خطأ منطقي هنا
+    return length + width;
+  }
+
+  // الاختبار
+  let result = calculateArea(10, 5); // الناتج الفعلي: 15, المتوقع: 50
+  console.log(result);
+options:
+  - "يجب استخدام `:const` بدلاً من `let`."
+  - "تم استخدام عملية الجمع `+` بدلاً من الضرب `*`."
+  - "أسماء المعاملات (`:parameters`) غير صحيحة."
+  - "لا يمكن استخدام `:return` داخل `:function`."
+solution: 1
+explanation: |
+  الاختبار كشف خطأ في مرحلة الكتابة. الكود يعمل دون `:syntax error`، ولكنه يعطي نتيجة غير صحيحة. الخطأ هو خطأ منطقي (`:logic error`) حيث تم استخدام الجمع بدلاً من الضرب. هذا يوضح أهمية الاختبار.

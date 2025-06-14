@@ -1,0 +1,16 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  الكود أدناه ينشئ رسالة ترحيبية. أي الخيارات التالية هو أفضل إعادة تسمية للـ`:function` ومعاملاتها؟
+code: |
+  function create(p1, p2) {
+    return p1 + ", " + p2 + "!";
+  }
+options:
+  - "`function makeString(string1, string2)`"
+  - "`function buildGreeting(greeting, name)`"
+  - "`function doThing(x, y)`"
+  - "`function data(val1, val2)`"
+solution: 1
+explanation: |
+  `buildGreeting` يصف بوضوح ما تفعله الـ`:function`. `greeting` و `:name` يصفان بوضوح ما هي المدخلات المتوقعة، مما يجعل الكود سهل الفهم.

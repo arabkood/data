@@ -1,0 +1,16 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  ما الذي سيتم طباعته في الـ console عند تشغيل هذا الكود؟
+code: |
+  let playerName = "Falcon9";
+  let score = 150;
+  console.log(score);
+options:
+  - "`playerName`"
+  - "`150`"
+  - "`score`"
+  - "`Falcon9`"
+solution: 1
+explanation: |
+  يقوم `:console.log(score)` بطباعة القيمة الحالية للمتغير `:score`، وهي `150`.

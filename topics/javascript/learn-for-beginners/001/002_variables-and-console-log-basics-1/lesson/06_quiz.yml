@@ -1,0 +1,17 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  ما ناتج تنفيذ الكود التالي في الطرفية؟
+code: |
+  let x = 10;
+  let y = 20;
+  let z = x;
+  console.log(z);
+options:
+  - "`20`"
+  - "`x`"
+  - "`10`"
+  - "`:undefined`"
+solution: 2
+explanation: |
+  السطر `let z = x;` يقوم بنسخ القيمة الموجودة في `:variable` المسمى `x` (وهي `10`) ويضعها في `:variable` الجديد `z`. لذلك، عند طباعة `z`، نحصل على `10`.

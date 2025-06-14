@@ -1,0 +1,17 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  باستخدام طريقة دمج النصوص التقليدية، ما هو ناتج الكود التالي؟
+code: |
+  const name = "سارة";
+  const age = 25;
+  const message = "اسم المستخدم: " + name + "، والعمر: " + age;
+  console.log(message);
+options:
+  - "`اسم المستخدم: name، والعمر: age`"
+  - "`اسم المستخدم: سارة، والعمر: 25`"
+  - "`اسم المستخدم: ، والعمر: `"
+  - "`SyntaxError`"
+solution: 1
+explanation: |
+  يتم دمج قيمة الـ `:variable` `name` وقيمة الـ `:variable` `age` مع النصوص باستخدام علامة `+` لتكوين `:string` واحد.

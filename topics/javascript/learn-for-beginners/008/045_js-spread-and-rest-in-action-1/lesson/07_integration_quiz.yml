@@ -1,0 +1,26 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  في عملية تفكيك الكائن (`:destructuring`)، كيف يمكننا استخراج خاصية `name` ووضع كل الخصائص المتبقية في `:object` جديد اسمه `details`؟
+code: |
+  const person = {
+    name: 'سارة',
+    age: 30,
+    city: 'الرياض',
+    job: 'مهندسة'
+  };
+
+  const { name, ...details } = person;
+
+  console.log(name);
+  console.log(details);
+
+  // ما هي قيمة `details`؟
+options:
+  - "`{ age: 30, city: 'الرياض', job: 'مهندسة' }`"
+  - "`['سارة', 30, 'الرياض', 'مهندسة']`"
+  - "`{ name: 'سارة' }`"
+  - "`:undefined`"
+solution: 0
+explanation: |
+  هنا، `...details` يعمل كخاصية الراحة (`:rest property`). بعد استخراج `name`، يقوم بجمع كل الخصائص المتبقية من الـ`:object` الأصلي (`person`) ويضعها في `:object` جديد اسمه `details`.

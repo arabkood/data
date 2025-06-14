@@ -1,0 +1,18 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  قبل أن نبدأ، دعنا نتأكد من فهمك للأساسيات. ما ناتج الكود التالي الذي يصل إلى خاصية في `:object`؟
+code: |
+  const user = {
+    id: 42,
+    username: "sami"
+  };
+  console.log(user.username);
+options:
+  - "`42`"
+  - "`sami`"
+  - "`user`"
+  - "`:undefined`"
+solution: 1
+explanation: |
+  للوصول إلى قيمة خاصية داخل `:object`، نستخدم اسم المتغير ثم نقطة (`.`) ثم اسم الخاصية. هنا، `user.username` تعطينا القيمة "sami".

@@ -1,0 +1,16 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  أول خطوة في تنظيف النص هي إزالة المسافات البيضاء الزائدة. ما هو ناتج الكود التالي؟
+code: |
+  let messyText = "   مرحباً بالعالم   ";
+  let cleanText = messyText.trim();
+  console.log(cleanText);
+options:
+  - "`'   مرحباً بالعالم   '`"
+  - "`'مرحباً بالعالم'`"
+  - "`'مرحباً بالعالم   '`"
+  - "سيحدث خطأ"
+solution: 1
+explanation: |
+  الدالة المدمجة `:trim()` في `:javascript` تُستخدم لإزالة المسافات البيضاء من بداية ونهاية أي `:string`، مما يترك النص الأساسي فقط.

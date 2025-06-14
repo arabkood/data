@@ -1,0 +1,17 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  نريد المرور على كل حرف في الخريطة. أكمل الكود التالي لتحقيق ذلك.
+code: |
+  const map = "🌲💰🌲";
+  for (let i = 0; i < __@@INPUT@@__; i++) {
+    console.log(map[i]);
+  }
+options:
+  - "`3`"
+  - "`map.length`"
+  - "`map.size`"
+  - "`2`"
+solution: 1
+explanation: |
+  للمرور على كل عنصر في `:string`، نستخدم الخاصية `.length` التي تعطينا طول النص. تبدأ `:for loop` من `0` وتستمر حتى تصل إلى أقل من طول النص، مما يضمن المرور على كل حرف.

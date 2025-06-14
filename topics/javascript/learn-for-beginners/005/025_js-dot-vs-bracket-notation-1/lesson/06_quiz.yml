@@ -1,0 +1,19 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  نريد إنشاء `:function` تأخذ `:object` واسم `:property` كـ`:string`، وتعيد قيمة تلك الـ`:property`. أكمل الكود لتحقيق ذلك.
+code: |
+  function getProperty(obj, propName) {
+    return obj[__@@INPUT@@__];
+  }
+
+  const product = { price: 200, inStock: true };
+  getProperty(product, "price");
+solution: 1
+options:
+  - "`.propName`"
+  - "`propName`"
+  - "`"propName"`"
+  - "`obj.propName`"
+explanation: |
+  للوصول إلى `:property` بشكل ديناميكي باستخدام قيمة `:variable` (وهو `propName` هنا)، يجب استخدام تدوين الأقواس `[]` مع اسم الـ`:variable` مباشرةً. الخيار `obj.propName` سيبحث عن خاصية اسمها `propName` وليس عن قيمة المتغير.

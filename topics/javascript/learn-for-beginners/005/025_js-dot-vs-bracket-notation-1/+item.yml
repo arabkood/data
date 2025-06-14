@@ -1,0 +1,17 @@
+title: 'الوصول للبيانات: تدوين النقطة مقابل الأقواس'
+blurb: >-
+  تعلم متى وكيف تستخدم تدوين النقطة (.) وتدوين الأقواس [] للوصول إلى خصائص
+  الكائنات في جافاسكريبت بفعالية.
+premium_only: false
+difficulty: easy
+base_xp: 1200
+type: lesson
+
+# ----- AUTO-GENERATED FIELDS (DO NOT MODIFY) -----
+slug: js-dot-vs-bracket-notation-1
+id: e14ce5fe-9822-4d64-9b51-e8b4feb281d5
+created_at: 2025-06-14T20:23:16.584Z
+module_id: 669ca71e-0375-4010-bd09-96abc76963ce
+position: 25
+s3_path: javascript/learn-for-beginners/005/025_js-dot-vs-bracket-notation-1
+updated_at: 2025-06-14T20:23:16.584Z

@@ -1,0 +1,12 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  أي من أسماء الـ`:function` التالية هو الأكثر وضوحًا لوظيفة تقوم بحساب إجمالي الفاتورة شاملة الضريبة؟
+options:
+  - "`calc()`"
+  - "`processData()`"
+  - "`calculateInvoiceTotal()`"
+  - "`amount()`"
+solution: 2
+explanation: |
+  الاسم الجيد للـ`:function` يجب أن يصف بدقة ما تفعله. `calculateInvoiceTotal` هو الأوضح لأنه يصف كلاً من الإجراء (الحساب) والنتيجة (إجمالي الفاتورة).

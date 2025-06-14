@@ -1,0 +1,20 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  ماذا سيطبع هذا الكود في الشاشة؟
+code: |
+  let tool = "مطرقة"; // أداة عامة
+
+  function buildHouse() {
+    console.log("أنا أستخدم: " + tool);
+  }
+
+  buildHouse();
+solution: 1
+options:
+  - "سيحدث خطأ"
+  - "`أنا أستخدم: مطرقة`"
+  - "`أنا أستخدم: undefined`"
+  - "`tool`"
+explanation: |
+  المتغير `:tool` مُعرَّف في النطاق العام (`:global scope`)، لذا يمكن الوصول إليه من داخل الدالة `:buildHouse`.

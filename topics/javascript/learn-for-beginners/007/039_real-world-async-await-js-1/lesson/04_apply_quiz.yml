@@ -1,0 +1,18 @@
+type: "quiz"
+lang: "javascript"
+question: | 
+  الكود التالي يهدف لجلب بيانات من :API ولكنه لا يعمل. ما الكلمتان المفتاحيتان الناقصتان لتصحيحه؟
+code: | 
+  function fetchAndShowUser() {
+    const response = fetch('https://api.example.com/users/1');
+    const user = response.json();
+    console.log(user.name);
+  }
+options:
+  - "`try` و `catch`"
+  - "`function` و `return`"
+  - "`async` و `await`"
+  - "`const` و `let`"
+solution: 2
+explanation: | 
+  نحتاج إلى تعريف الدالة كـ `:async function` حتى نتمكن من استخدام `:await` لإيقاف التنفيذ مؤقتًا وانتظار استجابة :Promise من `fetch()` و `response.json()`.

@@ -1,0 +1,12 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  في المثال السابق، ما هي وظيفة `.push()`؟
+options:
+  - "حذف عنصر من `:array`"
+  - "إضافة عنصر جديد إلى نهاية `:array`"
+  - "تغيير عنصر موجود في `:array`"
+  - "إنشاء `:array` جديدة"
+solution: 1
+explanation: |
+  الدالة `.push()` تُستخدم دائمًا لإضافة عنصر جديد إلى نهاية أي `:array`.

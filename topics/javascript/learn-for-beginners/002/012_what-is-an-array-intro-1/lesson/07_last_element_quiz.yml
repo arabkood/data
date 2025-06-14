@@ -1,0 +1,16 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  نريد طباعة آخر `:element` في قائمة اللاعبين. أي كود سيقوم بالمهمة بشكل صحيح دائمًا؟
+code: |
+  let players = ["Player 1", "Player 2", "Player 3", "Player 4"];
+  // ما هو الكود الصحيح هنا؟
+  console.log(__@@INPUT@@__);
+options:
+  - "`players[4]`"
+  - "`players[players.length]`"
+  - "`players[players.length - 1]`"
+  - "`players.last`"
+solution: 2
+explanation: |
+  طول الـ `:array` هو `4`، ولكن أعلى `:index` هو `3` (لأننا نبدأ العد من 0). لذا، للحصول على آخر عنصر دائمًا، نستخدم `array.length - 1`.

@@ -1,0 +1,23 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  الكود التالي يبحث عن اسم في قائمة الحضور. ما الخطأ الذي يمنعه من العمل بشكل صحيح؟
+code: |
+  const attendees = ["علي", "سارة", "خالد"];
+  const student = "سارة";
+  let isPresent = false;
+
+  for (let i = 0; i < attendees.length; i++) {
+    if (attendees[i] === student) {
+      isPresent = true;
+    }
+    // لا يوجد break هنا!
+  }
+options:
+  - "الحلقة التكرارية تستمر بالعمل حتى بعد العثور على الاسم"
+  - "يجب استخدام `:while` loop بدلاً من `:for`"
+  - "المتغير `:isPresent` يجب أن يكون `:const`"
+  - "شرط `:if` غير صحيح"
+solution: 0
+explanation: |
+  الكود صحيح وظيفيًا، لكنه غير فعال. بدون استخدام `:break`، ستستمر الحلقة في العمل حتى النهاية، حتى لو تم العثور على الطالب في أول عنصر. إضافة `:break` بعد `isPresent = true;` يجعله أكثر كفاءة.

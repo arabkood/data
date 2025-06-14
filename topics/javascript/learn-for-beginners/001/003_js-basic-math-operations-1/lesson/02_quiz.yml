@@ -1,0 +1,16 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  ما ناتج تنفيذ الكود التالي في الـ:terminal:؟
+code: |
+  let price1 = 20;
+  let price2 = 30;
+  console.log(price1 + price2);
+options:
+  - "`price1 + price2`"
+  - "`2030`"
+  - "`50`"
+  - ":undefined"
+solution: 2
+explanation: |
+  عامل الجمع `+` يقوم بجمع قيم الـ:variable: `price1` و `price2` معًا، والناتج هو `50`.

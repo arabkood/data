@@ -1,0 +1,26 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  ما ناتج تنفيذ هذه الـ`:function` الكاملة؟
+code: |
+  function toArabicDigits(str) {
+    const arabicDigitsMap = {
+      '0': '٠', '1': '١', '2': '٢', '3': '٣', '4': '٤',
+      '5': '٥', '6': '٦', '7': '٧', '8': '٨', '9': '٩'
+    };
+    let output = '';
+    for (let char of str) {
+      output += arabicDigitsMap[char] || char;
+    }
+    return output;
+  }
+
+  console.log(toArabicDigits("Order #507 is ready"));
+options:
+  - "Order #٥٠٧ is ready"
+  - "٥٠٧"
+  - "Order #507 is ready"
+  - "سيحدث خطأ لأن النص يحتوي على حروف"
+solution: 0
+explanation: |
+  الـ`:function` مصممة بذكاء لتتجاهل أي حرف غير موجود في `arabicDigitsMap`. تمر على النص حرفًا حرفًا، وعندما تجد الأرقام '5'، '0'، '7'، تستبدلها بـ '٥'، '٠'، '٧' بينما تترك باقي الحروف والرموز كما هي.

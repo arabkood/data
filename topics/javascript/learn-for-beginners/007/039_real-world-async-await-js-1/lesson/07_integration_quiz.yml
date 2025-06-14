@@ -1,0 +1,23 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  أكمل الكود لجلب بيانات المستخدم أولاً، ثم استخدام `id` الخاص به لجلب منشوراته.
+code: | 
+  async function fetchUserAndPosts() {
+    const userResponse = await fetch('https://api.example.com/users/1');
+    const user = await userResponse.json();
+    console.log('User:', user.name);
+
+    // الآن، استخدم user.id لجلب منشوراته
+    const postsResponse = __@@INPUT@@__;
+    const posts = await postsResponse.json();
+    console.log('Posts:', posts.length);
+  }
+options:
+  - "`fetch('https://api.example.com/posts/' + user.id)`"
+  - "`await fetch('https://api.example.com/posts?userId=' + user.id)`"
+  - "`await fetchPosts(user.id)`"
+  - "`fetch('/posts')`"
+solution: 1
+explanation: | 
+  نحن بحاجة إلى استخدام `:await` مرة أخرى لانتظار اكتمال طلب `fetch` الثاني، والذي يستخدم `user.id` الذي حصلنا عليه من الطلب الأول لبناء عنوان :URL الصحيح لجلب المنشورات.

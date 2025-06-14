@@ -1,0 +1,19 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  الكود التالي سيتسبب في خطأ ويوقف البرنامج إذا كانت الدالة `getUserProfile` غير قادرة على إيجاد المستخدم. ما هو سبب الخطأ الرئيسي؟
+code: |
+  function getUsername(userId) {
+    const user = getUserProfile(userId); // قد تُرجع null
+    return user.name;
+  }
+  
+  console.log(getUsername(123));
+solution: 2
+options:
+  - "استدعاء `:function` غير موجودة"
+  - "تعريف `:variable` باستخدام `:const`"
+  - "محاولة الوصول إلى خاصية `:name` على قيمة `:null`"
+  - "استخدام `console.log` بشكل غير صحيح"
+explanation: |
+  إذا أعادت `getUserProfile` القيمة `:null`، فإن محاولة الوصول إلى `user.name` ستؤدي إلى `:TypeError` لأن `:null` لا يحتوي على خصائص. هذا يوقف تنفيذ البرنامج بالكامل.
