@@ -1,0 +1,16 @@
+title: 'الآلية الأساسية: تطبيق منطق العمل'
+blurb: >-
+  تعلم كيف تترجم قواعد العالم الحقيقي إلى كود. ستكتب دوالاً تتخذ القرارات،
+  محوّلاً خطط تطبيقاتك إلى واقع ملموس.
+difficulty: easy
+base_xp: 150
+type: lesson
+
+# ----- AUTO-GENERATED FIELDS (DO NOT MODIFY) -----
+slug: implementing-business-logic
+id: 0efd5f05-e7d0-4bea-94d6-472f037161ea
+created_at: 2025-06-16T11:49:22.217Z
+module_id: 3f957d57-3ac4-4ae1-aeef-3ceabba4706a
+position: 4
+s3_path: javascript/General-JavaScript-For-Beginners/008/04_implementing-business-logic
+updated_at: 2025-06-16T12:19:24.706Z

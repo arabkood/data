@@ -1,0 +1,16 @@
+title: 'مركز القيادة: ربط التفاعل مع المستخدم'
+blurb: >-
+  تعلَّم كيف تجعل برامجك تتواصل مع المستخدمين عبر استقبال البيانات وعرض رسائل
+  واضحة ومنسّقة.
+difficulty: easy
+base_xp: 150
+type: lesson
+
+# ----- AUTO-GENERATED FIELDS (DO NOT MODIFY) -----
+slug: wiring-user-interaction
+id: 787d59ca-58b2-4ca8-891e-6b61282f9c52
+created_at: 2025-06-16T11:49:22.217Z
+module_id: 3f957d57-3ac4-4ae1-aeef-3ceabba4706a
+position: 5
+s3_path: javascript/General-JavaScript-For-Beginners/008/05_wiring-user-interaction
+updated_at: 2025-06-16T12:19:24.706Z
