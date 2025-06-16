@@ -1,4 +1,4 @@
-title: "نظام العنونة: الوصول إلى عناصر القائمة"
+title: 'نظام العنونة: الوصول إلى عناصر القائمة'
 blurb: >-
   تعلّم كيفية استرجاع عناصر معينة من مصفوفة باستخدام "عنوانها" الفريد أو ما يسمى
   بالفهرس. أتقن فن تحديد البيانات بدقة في مجموعاتك.
@@ -14,5 +14,4 @@ module_id: 084d62f5-f8e6-40f5-bb12-0c02fd959dce
 position: 2
 s3_path: >-
   javascript/General_JavaScript_For_Beginners/005/02_accessing-list-items-with-indexes
-updated_at: 2025-06-16T11:49:22.217Z
-
+updated_at: 2025-06-16T12:05:58.101Z
