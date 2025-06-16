@@ -7,10 +7,10 @@ base_xp: 350
 type: lesson
 
 # ----- AUTO-GENERATED FIELDS (DO NOT MODIFY) -----
+id: 109cdbf7-0718-46ed-ab02-fbe033faf8a0
+created_at: 2025-06-16T12:29:20.909Z
+module_id: 5bcda1e6-07d0-4eff-9297-66bb00feed16
 slug: structuring-nested-data
-id: 59af5944-ba16-41f2-8acf-a5c08c9404fb
-created_at: 2025-06-16T11:49:22.219Z
-module_id: 064be20d-b15c-4bc8-9b98-7fe79adc1efc
 position: 2
 s3_path: javascript/General-JavaScript-For-Beginners/007/02_structuring-nested-data
-updated_at: 2025-06-16T12:19:24.705Z
+updated_at: 2025-06-16T12:29:20.909Z

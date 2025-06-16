@@ -7,11 +7,11 @@ base_xp: 250
 type: lesson
 
 # ----- AUTO-GENERATED FIELDS (DO NOT MODIFY) -----
+id: 9258cd38-e886-471e-8889-ed920c931fe3
+created_at: 2025-06-16T12:29:20.910Z
+module_id: 2a063c26-e245-4c73-9c49-4745494f5485
 slug: taking-measure-string-properties
-id: 247ec811-cf11-405c-82c7-f8f16171ae97
-created_at: 2025-06-16T11:49:22.216Z
-module_id: 74b10bd6-6553-4b2d-8137-9610457bb0aa
 position: 4
 s3_path: >-
   javascript/General-JavaScript-For-Beginners/003/04_taking-measure-string-properties
-updated_at: 2025-06-16T12:19:24.706Z
+updated_at: 2025-06-16T12:29:20.910Z

@@ -7,11 +7,11 @@ base_xp: 300
 type: lesson
 
 # ----- AUTO-GENERATED FIELDS (DO NOT MODIFY) -----
+id: e6a09c24-5bf3-4d1c-a416-d75c57b79305
+created_at: 2025-06-16T12:29:20.910Z
+module_id: 0e8436ad-c3a3-4e5e-91dc-b62d96ded8aa
 slug: getting-data-back-from-functions
-id: 023fe6c5-6da4-4d21-a739-17df40139c49
-created_at: 2025-06-16T11:49:22.217Z
-module_id: 3656cdbe-53bb-4045-8b56-a8f6991f7ea0
 position: 3
 s3_path: >-
   javascript/General-JavaScript-For-Beginners/004/03_getting-data-back-from-functions
-updated_at: 2025-06-16T12:19:24.705Z
+updated_at: 2025-06-16T12:29:20.910Z

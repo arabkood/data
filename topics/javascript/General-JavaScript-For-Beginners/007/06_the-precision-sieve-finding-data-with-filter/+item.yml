@@ -7,11 +7,11 @@ base_xp: 350
 type: lesson
 
 # ----- AUTO-GENERATED FIELDS (DO NOT MODIFY) -----
+id: 3344663a-995f-4558-8ab3-674fb826e451
+created_at: 2025-06-16T12:29:20.909Z
+module_id: 5bcda1e6-07d0-4eff-9297-66bb00feed16
 slug: the-precision-sieve-finding-data-with-filter
-id: df63c0cc-6305-445f-9d4d-a45c20cb7b2a
-created_at: 2025-06-16T11:49:22.219Z
-module_id: 064be20d-b15c-4bc8-9b98-7fe79adc1efc
 position: 6
 s3_path: >-
   javascript/General-JavaScript-For-Beginners/007/06_the-precision-sieve-finding-data-with-filter
-updated_at: 2025-06-16T12:19:24.705Z
+updated_at: 2025-06-16T12:29:20.909Z

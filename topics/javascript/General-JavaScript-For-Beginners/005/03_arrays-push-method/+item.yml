@@ -7,10 +7,10 @@ base_xp: 150
 type: lesson
 
 # ----- AUTO-GENERATED FIELDS (DO NOT MODIFY) -----
+id: 24cb8724-0ec8-459d-b63a-2d930c86f929
+created_at: 2025-06-16T12:29:20.910Z
+module_id: 054032fb-a0c0-4b6c-b979-d309c993efee
 slug: arrays-push-method
-id: e47ec68c-9889-45ff-b1a8-ea12fce5ef30
-created_at: 2025-06-16T11:49:22.217Z
-module_id: 084d62f5-f8e6-40f5-bb12-0c02fd959dce
 position: 3
 s3_path: javascript/General-JavaScript-For-Beginners/005/03_arrays-push-method
-updated_at: 2025-06-16T12:19:24.707Z
+updated_at: 2025-06-16T12:29:20.910Z

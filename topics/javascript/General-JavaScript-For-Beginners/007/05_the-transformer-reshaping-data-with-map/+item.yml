@@ -7,11 +7,11 @@ base_xp: 350
 type: lesson
 
 # ----- AUTO-GENERATED FIELDS (DO NOT MODIFY) -----
+id: df9fbf1a-a36f-4691-8cce-dc64c716b9bf
+created_at: 2025-06-16T12:29:20.909Z
+module_id: 5bcda1e6-07d0-4eff-9297-66bb00feed16
 slug: the-transformer-reshaping-data-with-map
-id: e503bee3-665a-48b1-8ddc-08332df240ee
-created_at: 2025-06-16T11:49:22.219Z
-module_id: 064be20d-b15c-4bc8-9b98-7fe79adc1efc
 position: 5
 s3_path: >-
   javascript/General-JavaScript-For-Beginners/007/05_the-transformer-reshaping-data-with-map
-updated_at: 2025-06-16T12:19:24.705Z
+updated_at: 2025-06-16T12:29:20.909Z

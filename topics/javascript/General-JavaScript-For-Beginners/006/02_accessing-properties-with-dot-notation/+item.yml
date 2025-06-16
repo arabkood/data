@@ -7,11 +7,11 @@ base_xp: 150
 type: lesson
 
 # ----- AUTO-GENERATED FIELDS (DO NOT MODIFY) -----
+id: e4a9ada4-aa0e-4f4b-bbaa-64a515cd708b
+created_at: 2025-06-16T12:29:20.910Z
+module_id: 353e076c-0b88-4642-a479-e7c2c28036a0
 slug: accessing-properties-with-dot-notation
-id: c0f9ace7-0791-4ea0-a778-71e25dae5660
-created_at: 2025-06-16T11:49:22.217Z
-module_id: 63d60b22-f4d3-4ccc-a270-5befd34bc1f0
 position: 2
 s3_path: >-
   javascript/General-JavaScript-For-Beginners/006/02_accessing-properties-with-dot-notation
-updated_at: 2025-06-16T12:19:24.706Z
+updated_at: 2025-06-16T12:29:20.910Z

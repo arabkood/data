@@ -7,11 +7,11 @@ base_xp: 250
 type: lesson
 
 # ----- AUTO-GENERATED FIELDS (DO NOT MODIFY) -----
+id: 1aaf9d4f-7669-448a-8002-c10cf4e77273
+created_at: 2025-06-16T12:29:20.910Z
+module_id: 054032fb-a0c0-4b6c-b979-d309c993efee
 slug: accessing-list-items-with-indexes
-id: 87ede216-3f36-410b-8871-ccc3977f60bf
-created_at: 2025-06-16T11:49:22.217Z
-module_id: 084d62f5-f8e6-40f5-bb12-0c02fd959dce
 position: 2
 s3_path: >-
   javascript/General-JavaScript-For-Beginners/005/02_accessing-list-items-with-indexes
-updated_at: 2025-06-16T12:19:24.707Z
+updated_at: 2025-06-16T12:29:20.910Z
