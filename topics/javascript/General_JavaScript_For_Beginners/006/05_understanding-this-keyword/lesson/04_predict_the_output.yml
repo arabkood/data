@@ -1,0 +1,25 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  لنضع هذه المعرفة قيد الاختبار.
+
+  يستخدم كائن `product` لمزرعة تمور دالة لإنشاء وصف. **ما الذي سيتم طباعته في الطرفية (`console`)؟**
+code: |
+  const product = {
+    name: "Sukkari Dates",
+    origin: "Al-Qassim",
+    weight_kg: 1,
+    getDescription: function() {
+      return `${this.weight_kg} كجم من ${this.name} من ${this.origin}`;
+    }
+  };
+
+  console.log(product.getDescription());
+solution: 3
+options:
+  - "1 كجم من Sukkari Dates من undefined"
+  - "Error: weight_kg is not defined"
+  - "weight_kg كجم من name من origin"
+  - "1 كجم من Sukkari Dates من Al-Qassim"
+explanation: |
+  عمل ممتاز! الدالة `getDescription` تستخدم `this.weight_kg` و `this.name` و `this.origin` بشكل صحيح للوصول إلى خصائص كائن `product` وبناء السلسلة النصية النهائية.

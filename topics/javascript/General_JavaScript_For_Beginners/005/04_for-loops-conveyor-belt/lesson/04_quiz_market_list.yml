@@ -1,0 +1,18 @@
+question: |
+  أنت تبني تطبيقًا لقائمة تسوق لمتجر بقالة صغير.
+
+  **ماذا سيكون ناتج** هذا الكود؟
+code: |
+  let marketList = ["Tamer", "Laban", "Khubz"];
+
+  for (let i = 0; i < marketList.length; i++) {
+    console.log("عنصر: " + marketList[i]);
+  }
+solution: 2
+options:
+  - "`عنصر: Tamer`"
+  - "`عنصر: Tamer`\n`عنصر: Laban`"
+  - "`عنصر: Tamer`\n`عنصر: Laban`\n`عنصر: Khubz`"
+  - "سيؤدي الكود إلى خطأ."
+explanation: |
+  تعمل الحلقة ثلاث مرات. في كل مرة، تطبع "عنصر: " متبوعًا بالعنصر الموجود في الفهرس الحالي `i` (`marketList[0]`، `marketList[1]`، `marketList[2]`).

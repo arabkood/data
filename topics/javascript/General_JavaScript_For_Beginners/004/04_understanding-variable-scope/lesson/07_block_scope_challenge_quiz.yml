@@ -1,0 +1,25 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  ما هو ناتج هذه الشيفرة؟
+---
+code: |
+  function getGrade(score) {
+    let grade;
+    if (score > 90) {
+      // ممتاز
+      grade = "Mumtaz";
+    }
+    return grade;
+  }
+
+  console.log(getGrade(85));
+---
+solution: 3
+options:
+  - "`Mumtaz`"
+  - "`ReferenceError: grade is not defined`"
+  - "`undefined`"
+  - "`null`"
+explanation: |
+  تم التصريح عن المتغير `grade` في نطاق الدالة. لكن شرط كتلة `if` وهو `(85 > 90)` غير صحيح، لذا فإن السطر `grade = "Mumtaz"` لا يُنفّذ أبدًا. تعيد الدالة القيمة الأولية للمتغير `grade`، وهي `undefined`.

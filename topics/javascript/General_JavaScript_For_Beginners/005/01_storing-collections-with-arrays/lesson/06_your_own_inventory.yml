@@ -1,0 +1,17 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  حان الوقت لبناء قائمة جرد حقيقية! بائع في سوق محلي يبيع التمور.
+  
+  **أنشئ `مصفوفة`** باسم `dateTypes` تخزّن الأنواع الثلاثة التالية: "Sukkari" و "Medjool" و "Ajwa".
+code: |
+  // أنشئ مصفوفتك في السطر التالي
+  @@INPUT@@
+
+  // هذا السطر سيتأكد من عملك
+  console.log(dateTypes);
+---  
+solution:
+  - "let dateTypes = [\"Sukkari\", \"Medjool\", \"Ajwa\"];"
+explanation: |
+  ممتاز! لقد أنشأت بنجاح متغيّرًا باسم `dateTypes` وخصصت له `مصفوفة` تحتوي على النصوص الثلاثة.

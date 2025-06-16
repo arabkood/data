@@ -1,0 +1,22 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  لنساعد مدرسة في إنشاء هوية طالب.
+
+  **اِدمج المتغيرين `firstName` و `studentId`** لإنشاء هوية الطالب الكاملة.
+code: |
+  let firstName = "عمر-";
+  let studentId = "105";
+
+  let fullId = firstName + studentId;
+
+  console.log(fullId);
+---
+solution: 0
+options:
+  - "`عمر-105`"
+  - "`عمر- 105`"
+  - "`عمر105`"
+  - "`خطأ`"
+explanation: |
+  صحيح! ✨ العامل `+` يربط السلسلة النصية `"عمر-"` والسلسلة النصية `"105"` مباشرة، مما ينتج عنه `"عمر-105"`.

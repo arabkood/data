@@ -1,0 +1,24 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  تم إنشاء دالة للترحيب بزوار المكتبة.
+
+  **استدعِ الدالة** لكي تطبع رسالة الترحيب.
+
+  ---
+code: |
+  function showWelcomeMessage() {
+    console.log("مرحباً بك في مكتبة المعرفة");
+  }
+
+  // نفّذ الأمر في السطر التالي
+  ___;
+  ---
+solution: 0
+options:
+  - "`showWelcomeMessage()`"
+  - "`function()`"
+  - "`console.log(showWelcomeMessage)`"
+  - "`run showWelcomeMessage`"
+explanation: |
+  صحيح! لتنفيذ أو 'استدعاء' `الدالة`، يجب أن تكتب اسمها متبوعًا بزوج من الأقواس `()`.

@@ -1,0 +1,22 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  كنت أواجه صعوبة في هذا الأمر دائمًا! لنلقِ نظرة عن كثب.
+
+  كتبت "فاطمة" هذه الشيفرة، لكنها ليست قيمة منطقية (`boolean`). ماذا سيُطبع في الطرفية (`console`)؟
+
+  **اختر المخرجات الصحيحة**.
+---
+code: |
+  let hasPremiumAccess = "false";
+
+  console.log(hasPremiumAccess);
+---
+solution: 1
+options:
+  - false
+  - "false"
+  - سيؤدي إلى خطأ.
+  - undefined
+explanation: |
+  لأن `"false"` محاطة بعلامات اقتباس، فإن جافاسكريبت (`JavaScript`) تعتبرها من نوع البيانات النصي (`string`)، وليس قيمة منطقية (`boolean`). تطبع الطرفية (`console`) القيمة النصية تمامًا كما هي.

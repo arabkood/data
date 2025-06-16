@@ -1,0 +1,27 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  يقوم فارس بالعد التنازلي للأيام المتبقية على العيد.
+
+  ما هو الشرط الذي يجب وضعه في الفراغ لجعل الحلقة تتوقف عندما تصبح قيمة `daysUntilEid` تساوي 0؟
+---
+code: |
+  let daysUntilEid = 5;
+
+  while ( @@INPUT@@ ) {
+    console.log(daysUntilEid + " أيام متبقية!");
+    daysUntilEid = daysUntilEid - 1;
+  }
+
+  console.log("عيد مبارك!");
+---
+solution: 1
+options:
+  - "`daysUntilEid < 5`"
+  - "`daysUntilEid > 0`"
+  - "`daysUntilEid == 0`"
+  - "`daysUntilEid = 0`"
+explanation: |
+  الشرط `daysUntilEid > 0` يجعل الحلقة تعمل طالما أن عدد الأيام موجب.
+
+  بمجرد أن تصبح `daysUntilEid` صفرًا، يصبح الشرط `خطأ` (`false`) وتتوقف الحلقة.

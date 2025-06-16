@@ -1,0 +1,25 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  هذا ملف شخصي لمستخدم اسمه عمر. نريد عرض معلومة محددة من بياناته.
+
+  ما هو ناتج هذه الشفرة البرمجية؟
+code: |
+  const userProfile = {
+    username: "OmarK",
+  city: "Cairo",
+    hobby: "Reading"
+  };
+
+  let infoNeeded = "city";
+
+  console.log(userProfile[infoNeeded]);
+--- 
+solution: 2
+options:
+  - "infoNeeded"
+  - "username"
+  - "Cairo"
+  - "undefined"
+explanation: |
+  ممتاز! تستخدم الشفرة القيمة الموجودة داخل متغيّر `infoNeeded`، وهي `"city"`، كمفتاح. وبالتالي، `userProfile["city"]` تعيد القيمة `"Cairo"` بشكل صحيح.

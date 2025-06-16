@@ -1,0 +1,22 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  ما الذي سيُطبع في الطرفية (console) عند تشغيل هذه الشيفرة؟
+---
+code: |
+  const city = "الرياض";
+
+  function announceCity() {
+    console.log(`الفعالية في ${city}.`);
+  }
+
+  announceCity();
+---
+solution: 1
+options:
+  - "`الفعالية في الرياض.`"
+  - "`الفعالية في undefined.`"
+  - "`ReferenceError: city is not defined`"
+  - "`الفعالية في city.`"
+explanation: |
+  المتغير `city` موجود في `النطاق العام`، لذا يمكن للدالة `announceCity` الوصول إلى قيمته دون أي مشاكل.

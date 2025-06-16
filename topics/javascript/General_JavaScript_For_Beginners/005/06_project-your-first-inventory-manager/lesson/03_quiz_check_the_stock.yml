@@ -1,0 +1,22 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  تدير نورة مخزون مكتبتها. لقد باعت للتو آخر كتاب استلمته.
+
+  ماذا ستعرض `console.log` لعدد الكتب **المتبقية** على الرف؟
+---
+code: |
+  let bookShelf = ['ديوان المتنبي', 'مقدمة ابن خلدون', 'كليلة ودمنة'];
+  let soldBook = bookShelf.pop();
+  console.log(bookShelf.length);
+---
+solution: 1
+options:
+  - "3"
+  - "2"
+  - "'كليلة ودمنة'"
+  - "0"
+explanation: |
+  الدالة `pop()` تزيل عنصرًا واحدًا من نهاية `المصفوفة`.
+
+  بدأت `المصفوفة` `bookShelf` بثلاثة عناصر. بعد استخدام `pop()`، يتبقى فيها عنصران فقط.

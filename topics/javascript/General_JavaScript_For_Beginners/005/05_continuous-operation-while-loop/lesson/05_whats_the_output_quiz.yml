@@ -1,0 +1,32 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  يقوم أحمد بتعبئة صناديق من التمر. كل صندوق يتسع لـ 25 تمرة. بدأ بـ 80 تمرة.
+
+  ما هو الناتج النهائي لهذا الكود؟
+---
+code: |
+  let datesAvailable = 80;
+  let boxesPacked = 0;
+
+  while (datesAvailable >= 25) {
+    datesAvailable = datesAvailable - 25;
+    boxesPacked = boxesPacked + 1;
+  }
+
+  console.log(boxesPacked);
+---
+solution: 2
+options:
+  - "`2`"
+  - "`80`"
+  - "`3`"
+  - "`4`"
+explanation: |
+  لنتتبع سير الحلقة:
+  - **الدورة الأولى:** `80 >= 25` نتيجته `true`. تصبح `datesAvailable` قيمتها 55، و `boxesPacked` قيمتها 1.
+  - **الدورة الثانية:** `55 >= 25` نتيجته `true`. تصبح `datesAvailable` قيمتها 30، و `boxesPacked` قيمتها 2.
+  - **الدورة الثالثة:** `30 >= 25` نتيجته `true`. تصبح `datesAvailable` قيمتها 5، و `boxesPacked` قيمتها 3.
+  - **الدورة الرابعة:** `5 >= 25` نتيجته `false`. تتوقف الحلقة.
+  
+  القيمة النهائية للمتغير `boxesPacked` هي 3.

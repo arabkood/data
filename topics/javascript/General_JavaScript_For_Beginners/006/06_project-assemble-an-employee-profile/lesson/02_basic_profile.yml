@@ -1,0 +1,29 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  لنبدأ بإنشاء الهيكل الأساسي لملف عمر.
+  
+  املأ الفراغ لإنشاء `كائن` باسم `employee` يحتوي على خاصيتين: `name` بقيمة "Omar" و `employeeId` بقيمة 451.
+
+  --- 
+code: |
+  const employee = {
+    // اكتب الكود هنا
+  };
+
+  console.log(employee.name);
+  ---
+solution: |
+  const employee = {
+    name: "Omar",
+    employeeId: 451
+  };
+
+  console.log(employee.name);
+options:
+  - "name: \"Omar\",\n  employeeId: 451"
+  - "name = \"Omar\";\n  employeeId = 451;"
+  - "\"name\": \"Omar\"\n  \"employeeId\": 451"
+  - "name: Omar,\n  employeeId: 451"
+explanation: |
+  صحيح! داخل `الكائن`، نعرّف `الخصائص` على شكل أزواج `key: value` (مفتاح: قيمة)، ويفصل بينها بفاصلة. القيم النصية مثل "Omar" يجب أن تكون محاطة بعلامات اقتباس.
