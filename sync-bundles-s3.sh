@@ -1,6 +1,6 @@
 #!/bin/bash
 
-S3_BUCKET=${S3_TOPICS_BUCKET:-"hellotopics"}
+S3_BUCKET=${S3_TOPICS_BUCKET:-"localaws-topics-bucket"}
 
 PUBLISH=${1:-false}
 ENVR=${2:-local}

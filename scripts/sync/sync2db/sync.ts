@@ -11,9 +11,6 @@ import { tracks } from "../models";
 import { eq } from "drizzle-orm";
 
 export async function sync(type: TrackingType) {
-  await db
-    .delete(tracks)
-    .where(eq(tracks.slug, "javascript_General-JavaScript-For-Beginners"));
   await syncDeleted(type);
   await syncChanged(type);
 }

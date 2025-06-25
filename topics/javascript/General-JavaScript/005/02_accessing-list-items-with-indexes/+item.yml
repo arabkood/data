@@ -1,0 +1,14 @@
+id: 1aaf9d4f-7669-448a-8002-c10cf4e77273
+module_id: 054032fb-a0c0-4b6c-b979-d309c993efee
+slug: accessing-list-items-with-indexes
+position: 2
+created_at: 2025-06-16T12:29:20.910Z
+updated_at: 2025-06-25T16:02:51.720Z
+type: lesson
+title: 'نظام العنونة: الوصول إلى عناصر القائمة'
+blurb: >-
+  تعلّم كيفية استرجاع عناصر معينة من مصفوفة باستخدام "عنوانها" الفريد أو ما يسمى
+  بالفهرس. أتقن فن تحديد البيانات بدقة في مجموعاتك.
+difficulty: easy
+base_xp: 250
+s3_path: javascript/General-JavaScript/005/02_accessing-list-items-with-indexes

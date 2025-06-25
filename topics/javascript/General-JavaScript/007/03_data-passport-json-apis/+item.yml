@@ -1,0 +1,14 @@
+id: cd2cff2c-07a7-4bd6-ad65-fd8a5471fbea
+module_id: 5bcda1e6-07d0-4eff-9297-66bb00feed16
+slug: data-passport-json-apis
+position: 3
+created_at: 2025-06-16T12:29:20.909Z
+updated_at: 2025-06-25T16:02:51.717Z
+type: lesson
+title: 'جواز سفر البيانات: التحدث بلغة واجهات برمجة التطبيقات'
+blurb: >-
+  تعلَّم كيفية حزم بياناتك المعقدة في صيغة JSON، الصيغة العالمية لتبادل
+  المعلومات والتفاعل مع واجهات برمجة التطبيقات على الويب.
+difficulty: medium
+base_xp: 150
+s3_path: javascript/General-JavaScript/007/03_data-passport-json-apis

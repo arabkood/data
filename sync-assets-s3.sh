@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # S3_BUCKET="arabkood-public-assets-bucket"
-S3_BUCKET=${S3_ASSETS_BUCKET:-"helloassets"}
+S3_BUCKET=${S3_ASSETS_BUCKET:-"localaws-assets-bucket"}
 
 PUBLISH=${1:-false}
 ENVR=${2:-local}

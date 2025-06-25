@@ -8,4 +8,5 @@ export DB_NAME="arabkood_3"
 export DB_SSLMODE="disable"
 export DATABASE_URL="postgres://$DB_USER:$DB_PASSWORD@$DB_HOST:$DB_PORT/$DB_NAME?sslmode=$DB_SSLMODE"
 
-bun run ./scripts/sync/index.ts sync
+cd ./scripts/syncV2
+pnpm run sync
