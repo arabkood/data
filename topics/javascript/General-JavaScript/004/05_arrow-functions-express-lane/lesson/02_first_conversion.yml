@@ -4,7 +4,6 @@ question: |
   لنجرّب تحويل دالة عادية معًا.
 
   لدينا هنا دالة لحساب التكلفة الإجمالية لشطائر فلافل لذيذة. **املأ الفراغ** لإنشاء الدالة السهمية المعادلة.
----
 code: |
   function calculateCost(quantity) {
     // 5 جنيهات لكل شطيرة
@@ -13,7 +12,6 @@ code: |
 
   // الآن، نسخة الدالة السهمية:
   const calculateCost = @@INPUT@@ => quantity * 5;
----
 solution: 0
 options:
   - "(quantity)"

@@ -4,7 +4,6 @@ question: |
   لدينا هنا كائن `falafelStand` (كشك فلافل). لنضف `طريقة` باسم `openForBusiness` تطبع "كشك الفلافل مفتوح الآن!" عند استدعائها.
 
   **املأ الفراغ** لإكمال الـ`طريقة`.
----
 code: |
   let falafelStand = {
     name: "Nour's Falafel",
@@ -18,7 +17,6 @@ code: |
 
   // سنقوم باستدعائها لاختبارها
   falafelStand.openForBusiness();
----
 solution: 0
 options:
   - "`console.log`"

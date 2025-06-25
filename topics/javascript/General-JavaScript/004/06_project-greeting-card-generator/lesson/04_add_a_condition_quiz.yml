@@ -4,7 +4,6 @@ question: |
   لنُضِف شرطًا لـ 'التخرج'.
 
   أيُّ رمز يضيف كتلة `else if` جديدة بشكل صحيح للتعامل مع مناسبة 'التخرج' برسالة 'مبارك تخرجك!'؟
----
 code: |
   const createGreeting = (name, occasion) => {
     let message;
@@ -18,7 +17,6 @@ code: |
 
     return `مرحباً ${name}, ${message}`;
   };
----
 solution: 1
 options:
   - |

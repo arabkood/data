@@ -4,13 +4,11 @@ question: |
   لنستخدم دالة سهمية في مهمة من الواقع.
 
   تطبيق سفر لمدينة دبي يحتاج لتحويل درجات الحرارة بسرعة من مئوية إلى فهرنهايت. ما الذي سيقوم هذا الكود **بإخراجه**؟
----
 code: |
   const convertToFahrenheit = (celsius) => celsius * 1.8 + 32;
 
   const tempInDubai = 30; // يوم دافئ في دبي
   console.log(convertToFahrenheit(tempInDubai));
----
 solution: 1
 options:
   - "30"

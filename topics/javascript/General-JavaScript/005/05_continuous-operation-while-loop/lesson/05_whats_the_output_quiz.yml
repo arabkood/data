@@ -4,7 +4,6 @@ question: |
   يقوم أحمد بتعبئة صناديق من التمر. كل صندوق يتسع لـ 25 تمرة. بدأ بـ 80 تمرة.
 
   ما هو الناتج النهائي لهذا الكود؟
----
 code: |
   let datesAvailable = 80;
   let boxesPacked = 0;
@@ -15,7 +14,6 @@ code: |
   }
 
   console.log(boxesPacked);
----
 solution: 2
 options:
   - "`2`"

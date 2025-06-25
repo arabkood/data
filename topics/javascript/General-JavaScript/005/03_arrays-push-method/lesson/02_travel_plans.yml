@@ -4,14 +4,12 @@ question: |
   لدينا قائمة بالمدن التي نريد زيارتها. لنضف 'بيروت' إلى خطط سفرنا.
 
   **املأ الفراغ** لإضافة المدينة الجديدة إلى نهاية المصفوفة.
----
 code: |
   let citiesToVisit = ["Cairo", "Amman"];
   
   citiesToVisit.@@INPUT@@("Beirut");
   
   console.log(citiesToVisit);
----
 solution: 0
 options:
   - "push"

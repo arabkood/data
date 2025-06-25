@@ -4,7 +4,6 @@ question: |
   الآن حان دورك. لدينا قائمة بالمدن.
 
   **أي سطر من الكود سينشئ بشكل صحيح مصفوفة جديدة تحتوي فقط على المدن من 'UAE'؟**
----
 code: |
   const cities = [
     { name: 'Riyadh', country: 'KSA' },
@@ -15,7 +14,6 @@ code: |
 
   // أي كود يوضع هنا؟
   const uaeCities = @@INPUT@@
----
 solution: 1
 options:
   - "`cities.map(city => city.country === 'UAE')`"

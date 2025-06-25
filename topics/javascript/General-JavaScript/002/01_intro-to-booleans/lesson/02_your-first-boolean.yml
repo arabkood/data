@@ -6,12 +6,10 @@ question: |
   تخيّل أننا نبني نظامًا لمدرسة. نحتاج إلى تتبّع ما إذا كان الطالب "عمر" حاضرًا اليوم.
 
   **صرّح عن متغير** `isOmarPresent` واضبط قيمته على `true`.
----
 code: |
   // اكتب شيفرتك هنا
 
   console.log(isOmarPresent);
----
 solution: 0
 options:
   - let isOmarPresent = true;

@@ -4,11 +4,9 @@ question: |
   إليك كود من تطبيق لتوصيل الطعام لا يعمل.
 
   **ما هو الخطأ** في هذا الكود؟
----
 code: |
   let orderItem = Hummus;
   console.log("New order:", orderItem);
----
 solution: 2
 options:
   - 'اسم المتغيّر `orderItem` غير صالح.'

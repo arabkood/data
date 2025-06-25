@@ -13,7 +13,6 @@ code: |
   console.log("الاسم:", fullName);
   console.log("العمر:", age);
   consle.log("المدينة:", city);
----
 solution: 2
 options:
   - "التعليق مكتوب بشكل غير صحيح."

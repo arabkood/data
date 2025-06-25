@@ -4,7 +4,6 @@ question: |
   هذا كائن لسيارة جديدة. الكود أدناه يحتوي على خطأ.
 
   **ما هو سبب المشكلة؟**
----
 code: |
   let car = {
     make: "Toyota",
@@ -13,7 +12,6 @@ code: |
   };
 
   console.log(car.color);
----
 solution: 0
 options:
   - "خاصية `color` غير موجودة في الكائن `car`."

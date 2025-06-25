@@ -4,13 +4,11 @@ question: |
   أنت تساعد في تطبيق لتحويل التاريخ الهجري. يخزن التطبيق نتائج التحويل في `مصفوفة`. تحتاج إلى الحصول على أحدث تحويل.
 
   املأ الفراغ للحصول على آخر تاريخ من `مصفوفة` `conversions`.
----
 code: |
   let conversions = ['1445-01-01', '1445-01-02', '1445-01-03'];
   let latestConversion = conversions.@@INPUT@@;
 
   // ما هي قيمة latestConversion؟
----
 solution: 2
 options:
   - "`push()`"

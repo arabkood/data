@@ -4,14 +4,12 @@ question: |
   جاء دورك! نحن نبني نظام جرد لمحل تمور أردني.
   
   **املأ الفراغ** لإكمال `كائن` المنتج لتمور 'المجدول'.
----
 code: |
   let product = {
     @@INPUT@@: "Medjool",
     pricePerKilo: 12,
     origin: "Jordan"
   };
----
 solution: 1
 options:
   - "`'name'`"

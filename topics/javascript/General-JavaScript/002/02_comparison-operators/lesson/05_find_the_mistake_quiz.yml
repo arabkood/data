@@ -4,13 +4,11 @@ question: |
   أوه لا. كتب زميل مبرمج هذه الشيفرة للتحقق من كلمة مرور، لكنها لا تعمل بشكل صحيح. إنها تطبع دائمًا قيمة كلمة المرور المُدخلة بدلاً من `true` أو `false`!
 
   ما هو الخطأ هنا؟
----
 code: |
   let correctPassword = "SeSAME";
   let enteredPassword = "open up";
 
   console.log(correctPassword = enteredPassword);
----
 solution: 0
 options:
   - "استخدام `=` (الإسناد) بدلاً من `===` (المقارنة)."

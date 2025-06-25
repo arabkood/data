@@ -4,14 +4,12 @@ question: |
   لنساعد عمر في تحية صديقه.
 
   **املأ الفراغ** لجعل الدالة تطبع `Welcome, Khalid!`
----
 code: |
   function welcome(friendName) {
     console.log("Welcome, " + friendName + "!");
   }
 
   welcome(@@INPUT@@);
----
 solution: 1
 options:
   - friendName

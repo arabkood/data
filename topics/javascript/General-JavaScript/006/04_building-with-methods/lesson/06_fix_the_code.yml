@@ -4,7 +4,6 @@ question: |
   لدينا هنا كائن محوّل `hijriDate` (تاريخ هجري). تحاول الشفرة استدعاء الـ`طريقة` `displayDate`، ولكن هناك خطأ.
 
   **ابحث عن الخطأ** واختر الطريقة الصحيحة لاستدعاء الـ`طريقة`.
----
 code: |
   let hijriDate = {
     day: 1,
@@ -17,7 +16,6 @@ code: |
 
   // هذا السطر به خطأ!
   hijriDate.displayDate;
----
 solution: 1
 options:
   - "`displayDate(hijriDate);`"

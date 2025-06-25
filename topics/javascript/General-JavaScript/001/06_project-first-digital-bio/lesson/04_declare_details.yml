@@ -16,7 +16,6 @@ code: |
   // Option C
   let age: 32;
   let job: "محاسبة";
----
 solution: 1
 options:
   - "الخيار A"

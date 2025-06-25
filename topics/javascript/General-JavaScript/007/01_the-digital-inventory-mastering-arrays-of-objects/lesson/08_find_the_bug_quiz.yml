@@ -2,7 +2,6 @@ type: "quiz"
 lang: "javascript"
 question: |
   هذا الكود به خطأ ولا يعمل كما هو مقصود. ما هو الخطأ؟
----
 code: |
   let cities = [
     { name: "Riyadh", population: 7.6 },
@@ -11,7 +10,6 @@ code: |
 
   // محاولة جلب اسم المدينة الأولى
   console.log(cities.name[0]);
----
 solution: 2
 options:
   - "الخاصية `name` غير موجودة."

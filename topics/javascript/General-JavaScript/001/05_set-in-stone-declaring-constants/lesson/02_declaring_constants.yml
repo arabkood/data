@@ -4,11 +4,9 @@ question: |
   لننشئ ثابتًا لعدد الإمارات في دولة الإمارات العربية المتحدة. العدد هو 7.
 
   **املأ الفراغ** لتعريف ثابت باسم `numberOfEmirates`.
----
 code: |
   @@INPUT@@ numberOfEmirates = 7;
   console.log(numberOfEmirates);
----
 solution: 0
 options:
   - "`const`"

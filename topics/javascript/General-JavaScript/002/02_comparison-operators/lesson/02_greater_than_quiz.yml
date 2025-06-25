@@ -4,13 +4,11 @@ question: |
   ماذا سيكون ناتج هذه الشيفرة؟
 
   **ركّز على اتجاه** العامل `>`.
----
 code: |
   let teamAScore = 150;
   let teamBScore = 200;
 
   console.log(teamAScore > teamBScore);
----
 solution: 1
 options:
   - "`true`"

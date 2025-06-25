@@ -11,7 +11,6 @@ code: |
   let fullId = firstName + studentId;
 
   console.log(fullId);
----
 solution: 0
 options:
   - "`عمر-105`"

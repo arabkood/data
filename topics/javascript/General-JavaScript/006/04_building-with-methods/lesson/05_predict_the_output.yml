@@ -4,7 +4,6 @@ question: |
   لنتدرب على استدعاء `طريقة`.
 
   بناءً على الشفرة البرمجية، **ما الذي سيُطبع في الطرفية**؟
----
 code: |
   let student = {
     name: "Fatima",
@@ -15,7 +14,6 @@ code: |
   };
 
   student.checkStatus();
----
 solution: 2
 options:
   - "`Fatima`"

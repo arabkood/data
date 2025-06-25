@@ -2,7 +2,6 @@ type: "quiz"
 lang: "javascript"
 question: |
   بالنظر إلى مصفوفة `products`، ما الذي سيطبعه هذا الكود؟
----
 code: |
   let products = [
     { name: "Tea", price: 15 },
@@ -11,7 +10,6 @@ code: |
   ];
 
   console.log(products[0].name);
----
 solution: 1
 options:
   - "Coffee"

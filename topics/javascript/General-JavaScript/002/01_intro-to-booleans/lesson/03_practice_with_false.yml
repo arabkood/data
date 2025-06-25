@@ -6,12 +6,10 @@ question: |
   نحن ننشئ نظام جرد لسوق إلكتروني، وهناك سلعة نفدت من المخزون حاليًا.
 
   **أكمل الشيفرة** لضبط قيمة المتغير `isInStock` إلى `false`.
----
 code: |
   let isInStock = // املأ الفراغ
 
   console.log(isInStock);
----
 solution: 2
 options:
   - "false"

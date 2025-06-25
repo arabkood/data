@@ -4,7 +4,6 @@ question: |
   هيا نجرب هذا! لدينا دالة `processNumber` تحتاج إلى `operation` (عملية) لتشتغل.
 
   **املأ الفراغ** لجعل الشفرة تحسب `10 + 5`.
----
 code: |
   function addFive(num) {
     return num + 5;
@@ -20,7 +19,6 @@ code: |
   }
 
   processNumber(10, @@INPUT@@);
----
 solution: 2
 options:
   - "multiplyByTwo()"

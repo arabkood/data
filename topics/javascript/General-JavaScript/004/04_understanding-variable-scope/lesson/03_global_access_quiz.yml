@@ -2,7 +2,6 @@ type: "quiz"
 lang: "javascript"
 question: |
   ما الذي سيُطبع في الطرفية (console) عند تشغيل هذه الشيفرة؟
----
 code: |
   const city = "الرياض";
 
@@ -11,7 +10,6 @@ code: |
   }
 
   announceCity();
----
 solution: 1
 options:
   - "`الفعالية في الرياض.`"

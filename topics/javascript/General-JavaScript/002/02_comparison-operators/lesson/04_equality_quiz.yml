@@ -6,13 +6,11 @@ question: |
   لذلك، نستخدم **عامل المساواة الصارم (`strict equality operator`)**، وهو `===`.
 
   املأ الفراغ أدناه للتحقق مما إذا كانت المدينة المُدخلة تطابق "Dubai".
----
 code: |
   let destinationCity = "Dubai";
   let enteredCity = "Dubai";
 
   console.log(destinationCity @@INPUT@@ enteredCity);
----
 solution: 2
 options:
   - "`=`"

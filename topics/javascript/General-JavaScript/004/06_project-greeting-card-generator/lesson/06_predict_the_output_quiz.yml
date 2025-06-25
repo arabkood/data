@@ -4,7 +4,6 @@ question: |
   ممتاز! الـ `دالة` شبه مكتملة.
 
   ما هو ناتج استدعاء الـ `دالة` بهذه الوسائط: `createGreeting('عمر', 'Eid')`؟
----
 code: |
   const createGreeting = (name, occasion) => {
     let message;
@@ -19,7 +18,6 @@ code: |
   };
 
   console.log(createGreeting('عمر', 'Eid'));
----
 solution: 2
 options:
   - "مرحباً عمر, Ramadan Kareem!"

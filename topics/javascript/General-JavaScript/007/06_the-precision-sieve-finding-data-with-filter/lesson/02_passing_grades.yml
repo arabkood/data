@@ -4,7 +4,6 @@ question: |
   لنساعد الأستاذ خالد في العثور على جميع الدرجات الناجحة من القائمة. درجة النجاح هي 50 أو أعلى.
 
   **أكمل الشرط** لفرز مصفوفة `scores`.
----
 code: |
   const scores = [88, 45, 92, 60, 30];
 
@@ -12,7 +11,6 @@ code: |
 
   console.log(passingScores);
   // Expected Output: [88, 92, 60]
----
 solution: 0
 options:
   - "`score >= 50`"

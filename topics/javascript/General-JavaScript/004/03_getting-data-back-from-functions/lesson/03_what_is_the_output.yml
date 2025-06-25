@@ -2,7 +2,6 @@ type: "quiz"
 lang: "javascript"
 question: |
   لنتأكد من فهمنا. ما الذي سيُطبع في الطرفية (console) عند تشغيل هذا الكود؟
----
 code: |
   function getAgeInMonths(years) {
     return years * 12;
@@ -11,7 +10,6 @@ code: |
   let laylasAgeInMonths = getAgeInMonths(5);
 
   console.log(laylasAgeInMonths);
----
 solution: 2
 options:
   - "`5`"

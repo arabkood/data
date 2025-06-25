@@ -4,7 +4,6 @@ question: |
   إليك الـ `دالة` الكاملة. ولكن هناك خطأ صغير سيسبب مشكلة. هل يمكنك اكتشافه؟
 
   **تلميح**: انظر إلى كيفية تعريف المتغير `message`.
----
 code: |
   const createGreeting = (name, occasion) => {
     const message; // <-- هل هذا صحيح؟
@@ -19,7 +18,6 @@ code: |
 
     return `مرحباً ${name}, ${message}`;
   };
----
 solution: 0
 options:
   - "يجب تعريف `message` باستخدام `let`، وليس `const`."

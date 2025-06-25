@@ -4,7 +4,6 @@ question: |
   تحاول فاطمة العثور على جميع الأطباق النباتية في قائمة مطعمها. الكود الخاص بها لا يعمل ويعيد مصفوفة فارغة `[]`.
 
   **ما هو الخطأ في الكود الخاص بها؟**
----
 code: |
   const menu = [
     { name: 'Kebab', isVegetarian: false },
@@ -15,7 +14,6 @@ code: |
   const vegetarianDishes = menu.filter(dish => dish.isVegetarian = false);
 
   console.log(vegetarianDishes);
----
 solution: 2
 options:
   - "لا يمكنك استخدام `.filter()` على مصفوفة من الكائنات."

@@ -2,7 +2,6 @@ type: "quiz"
 lang: "javascript"
 question: |
   أي من أسطر الكود التالية سيطبع `رقم` بشكل صحيح؟
----
 code: |
   // الخيار 0
   console.log("2024");
@@ -15,7 +14,6 @@ code: |
 
   // الخيار 3
   console.log(Year 2024);
----
 solution: 1
 options:
   - "Option 0"

@@ -2,7 +2,6 @@ type: "quiz"
 lang: "javascript"
 question: |
   من المفترض أن تنشئ هذه الدالة رسالة ترحيب، ولكن `console.log` تطبع `undefined`. لماذا؟
----
 code: |
   function createGreeting(name) {
     let message = "أهلاً، " + name;
@@ -12,7 +11,6 @@ code: |
   let greetingForFatima = createGreeting("فاطمة");
 
   console.log(greetingForFatima);
----
 solution: 1
 options:
   - "لم يتم إنشاء المتغير `message` بشكل صحيح."

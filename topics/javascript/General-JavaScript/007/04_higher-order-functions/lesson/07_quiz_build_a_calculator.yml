@@ -4,7 +4,6 @@ question: |
   إليك مصنع لإنشاء آلة حاسبة بسيطة للأسعار في سوق محلي.
 
   **ماذا ستكون مُخرجات** هذه الشفرة؟
----
 code: |
   function createCalculator(operation) {
     if (operation === "add") {
@@ -17,7 +16,6 @@ code: |
 
   let finalPrice = createCalculator("add");
   console.log(finalPrice(150, 25));
----
 solution: 3
 options:
   - "125"

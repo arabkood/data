@@ -6,13 +6,11 @@ question: |
   نستخدم **عامل عدم المساواة الصارم (`strict inequality operator`)**، وهو `!==`.
 
   ماذا ستكون نتيجة هذه الشيفرة؟
----
 code: |
   let currentMonth = "Ramadan";
   let previousMonth = "Sha'ban";
 
   console.log(currentMonth !== previousMonth);
----
 solution: 0
 options:
   - "`true`"

@@ -4,7 +4,6 @@ question: |
   يقوم فارس بالعد التنازلي للأيام المتبقية على العيد.
 
   ما هو الشرط الذي يجب وضعه في الفراغ لجعل الحلقة تتوقف عندما تصبح قيمة `daysUntilEid` تساوي 0؟
----
 code: |
   let daysUntilEid = 5;
 
@@ -14,7 +13,6 @@ code: |
   }
 
   console.log("عيد مبارك!");
----
 solution: 1
 options:
   - "`daysUntilEid < 5`"

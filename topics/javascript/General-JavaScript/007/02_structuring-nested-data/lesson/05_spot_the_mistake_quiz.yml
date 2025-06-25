@@ -4,7 +4,6 @@ question: |
   أوه، حاولت الحصول على `mainCourse` من قائمة طعام هذا المطعم، لكن الكود لا يعمل.
   
   هل يمكنك **اكتشاف الخطأ** في الكود الخاص بي؟ 🤔
----
 code: |
   const restaurant = {
     name: "بيت الكرم",
@@ -18,7 +17,6 @@ code: |
   };
   
   console.log(restaurant.name.mainCourse);
----
 solution: 2
 options:
   - "يجب أن تكون `mainCourse` نصًا (`string`) وليس كائنًا."

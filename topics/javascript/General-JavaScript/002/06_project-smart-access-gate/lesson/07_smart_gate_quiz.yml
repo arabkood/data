@@ -4,7 +4,6 @@ question: |
   أدناه نفس المنطق، ولكن تم تبسيطه باستخدام القيم `الصائبة`.
 
   ما هو ناتج هذا الكود المحسّن؟
----
 code: |
   let hasCard = true;
   let isMember = true;
@@ -15,7 +14,6 @@ code: |
   } else {
     console.log("تم رفض الدخول.");
   }
----
 solution: 0
 options:
   - "`تم منح الدخول.`"

@@ -4,14 +4,12 @@ question: |
   أرسلت لنا واجهة برمجة تطبيقات (API) بيانات عن طالبة اسمها فاطمة. لقد قمنا بتحليل سلسلة `JSON` النصية إلى كائن.
 
   ما هو ناتج هذا الكود؟
----
 code: |
   const studentJSON = '{"name":"Fatima","grades":{"math":95,"arabic":98}}';
 
   const studentObject = JSON.parse(studentJSON);
 
   console.log(studentObject.grades.arabic);
----
 solution: 2
 options:
   - "`95`"

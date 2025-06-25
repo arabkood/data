@@ -8,7 +8,6 @@ code: |
   ___ fullName = "ليلى حداد";
 
   console.log(fullName);
----
 solution: 0
 options:
   - "`const`"

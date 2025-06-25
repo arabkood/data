@@ -13,7 +13,6 @@ code: |
       console.log("راسب");
     }
   }
----
 solution: 1
 options:
   - "`ناجح` `راسب` `راسب`"

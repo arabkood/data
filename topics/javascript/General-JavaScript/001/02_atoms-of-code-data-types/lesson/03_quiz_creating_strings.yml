@@ -2,11 +2,9 @@ type: "quiz"
 lang: "javascript"
 question: |
   حان وقت التطبيق! كيف يمكنك طباعة اسم مدينة "الرياض" بشكل صحيح في الطرفية (console)؟
----
 code: |
   // اكتب الكود الخاص بك هنا
   console.log(@@INPUT@@);
----
 solution: 1
 options:
   - Riyadh

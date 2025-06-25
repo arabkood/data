@@ -4,7 +4,6 @@ question: |
   أنت تبني تطبيقًا لطلب الطعام. تحتاج إلى إرسال طلب الفلافل الخاص بليلى إلى نظام المطبخ كسلسلة نصية بصيغة `JSON`.
 
   **املأ الفراغ** لتحويل كائن `order` بشكل صحيح.
----
 code: |
   const order = {
     customer: "Layla",
@@ -13,7 +12,6 @@ code: |
   };
 
   const orderForKitchen = JSON.______(order);
----
 solution: 0
 options:
   - "`stringify`"

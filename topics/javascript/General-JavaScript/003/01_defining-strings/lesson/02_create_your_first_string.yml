@@ -4,12 +4,10 @@ question: |
   حان وقت التطبيق! لنُنشئ متغيّرًا لحفظ اسم طالبة.
 
   **املأ الفراغ** لتخزين الاسم `Fatima` في المتغيّر `studentName`.
----
 code: |
   let studentName = @@INPUT@@;
 
   console.log(studentName);
----
 solution: 0
 options:
   - '"Fatima"'

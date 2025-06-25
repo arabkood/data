@@ -4,7 +4,6 @@ question: |
   إليك تحدٍ! لنقم بإنشاء رسالة تعرض التاريخ الهجري الحالي.
 
   **ما هي الرسالة التي ستعرضها هذه الشفرة؟**
----
 code: |
   let day = 1;
   let month = "محرم";
@@ -13,7 +12,6 @@ code: |
   const hijriDate = `اليوم هو ${day} ${month}، ${year} هـ.`;
 
   console.log(hijriDate);
----
 solution: 0
 options:
   - "اليوم هو 1 محرم، 1446 هـ."

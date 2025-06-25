@@ -4,14 +4,12 @@ question: |
   أوه، يبدو أنه تم نسيان شيء ما عند استدعاء الدالة.
 
   **ما الذي سيُطبع في الطرفية (console)** عند تشغيل هذا الكود؟
----
 code: |
   function announceCity(cityName) {
     console.log("I live in " + cityName);
   }
 
   announceCity(); // لقد نسينا تمرير الوسيط!
----
 solution: 3
 options:
   - "I live in"

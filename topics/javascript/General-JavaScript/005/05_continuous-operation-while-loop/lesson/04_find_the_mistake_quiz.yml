@@ -2,7 +2,6 @@ type: "quiz"
 lang: "javascript"
 question: |
   يا إلهي! الكود الذي كتبته ليلى لشحن هاتفها يعمل إلى ما لا نهاية. لماذا هذه حلقة لا نهائية؟
----
 code: |
   let batteryLevel = 10;
 
@@ -11,7 +10,6 @@ code: |
   }
 
   console.log("اكتمل الشحن!");
----
 solution: 0
 options:
   - "قيمة المتغير `batteryLevel` لا يتم تحديثها أبدًا داخل الحلقة."

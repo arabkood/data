@@ -4,7 +4,6 @@ question: |
   أوه، حاولت إضافة 'تمر' إلى قائمة التسوق، لكن الأمر لم ينجح. أعتقد أنني استخدمت الأمر الخطأ.
 
   **ما هو الخطأ** في هذا الكود؟
----
 code: |
   let shoppingList = ["حليب", "خبز"];
   
@@ -12,7 +11,6 @@ code: |
   shoppingList.add("تمر");
   
   console.log(shoppingList);
----
 solution: 2
 options:
   - "اسم المصفوفة `shoppingList` غير صالح."

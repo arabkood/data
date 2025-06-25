@@ -2,7 +2,6 @@ type: "quiz"
 lang: "javascript"
 question: |
   املأ الفراغ للوصول إلى سعر 'Baklava' بشكل صحيح.
----
 code: |
   let sweets = [
     { name: "Kunafa", price: 30 },
@@ -13,7 +12,6 @@ code: |
   let baklavaPrice = sweets[@@INPUT@@].price;
 
   console.log(baklavaPrice);
----
 solution: 0
 options:
   - "1"

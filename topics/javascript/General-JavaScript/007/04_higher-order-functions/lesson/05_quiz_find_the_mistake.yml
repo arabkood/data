@@ -4,7 +4,6 @@ question: |
   أوه، يبدو أن هذه الشفرة تحاول تحضير طبق، ولكن هناك خطأ ما.
 
   **ما هو الخطأ** في طريقة استدعاء `prepareDish`؟
----
 code: |
   function bake(item) {
     console.log("يتم خبز " + item);
@@ -20,7 +19,6 @@ code: |
 
   // السطر الذي به الخطأ
   prepareDish("الكنافة", bake());
----
 solution: 1
 options:
   - "يجب أن تكون الدالة bake سلسلة نصية: `\"bake\"`"

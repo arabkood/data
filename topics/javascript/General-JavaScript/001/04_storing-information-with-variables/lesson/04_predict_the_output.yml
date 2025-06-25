@@ -4,14 +4,12 @@ question: |
   كنت أحتار في هذا الأمر، لكن السر يكمن في إيجاد القيمة *النهائية*.
 
   **ما الذي سيطبعه هذا الكود في الطرفيّة (`console`)؟**
----
 code: |
   // تخزين درجة الحرارة الحالية في القاهرة
   let temperature = 25;
   temperature = 28;
 
   console.log(temperature);
----
 solution: 2
 options:
   - "`25`"

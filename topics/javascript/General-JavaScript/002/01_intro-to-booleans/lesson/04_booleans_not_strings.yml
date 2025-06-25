@@ -6,12 +6,10 @@ question: |
   كتبت "فاطمة" هذه الشيفرة، لكنها ليست قيمة منطقية (`boolean`). ماذا سيُطبع في الطرفية (`console`)؟
 
   **اختر المخرجات الصحيحة**.
----
 code: |
   let hasPremiumAccess = "false";
 
   console.log(hasPremiumAccess);
----
 solution: 1
 options:
   - false

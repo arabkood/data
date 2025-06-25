@@ -15,7 +15,6 @@ code: |
   }
 
   console.log(message);
----
 solution: 0
 options:
   - "`يقوم الشيف بتحضير طلبك!`"

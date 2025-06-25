@@ -4,7 +4,6 @@ question: |
   لنقم ببناء ملف شخصي لمستخدمة اسمها فاطمة.
 
   املأ الفراغ لطباعة `major` (التخصص) الخاص بفاطمة في الطرفية.
----
 code: |
   let fatima = {
     id: "21B-404",
@@ -13,7 +12,6 @@ code: |
   };
 
   console.log(fatima.@@INPUT@@);
----
 solution: 2
 options:
   - "'major'"

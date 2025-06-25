@@ -4,7 +4,6 @@ question: |
   أوه، يبدو أن هناك خطأ صغيرًا في هذا الكود. يحاول مبرمج جديد إزالة آخر مدينة من خطة سفر.
 
   كيف يمكننا إصلاح هذا الكود لاستخدام الدالة `pop` بشكل صحيح؟
----
 code: |
   let travelPlan = ['القاهرة', 'دبي', 'بيروت'];
 
@@ -12,7 +11,6 @@ code: |
   let lastStop = pop(travelPlan);
 
   console.log(lastStop);
----
 solution: 0
 options:
   - "`let lastStop = travelPlan.pop();`"

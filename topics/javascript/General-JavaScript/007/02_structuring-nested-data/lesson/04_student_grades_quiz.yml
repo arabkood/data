@@ -4,7 +4,6 @@ question: |
   لدينا هنا كائن الطالبة `أمل`.
   
   **هدفك** هو الحصول على درجتها في مادة `العلوم`.
----
 code: |
   const studentAmal = {
     id: 451,
@@ -18,7 +17,6 @@ code: |
   
   // اكتب الكود هنا
   console.log(@@INPUT@@);
----
 solution: 0
 options:
   - "`studentAmal.subjects.science`"

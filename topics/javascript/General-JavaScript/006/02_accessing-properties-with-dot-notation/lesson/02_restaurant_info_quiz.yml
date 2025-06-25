@@ -4,7 +4,6 @@ question: |
   لنتدرب قليلًا! لدينا كائن يمثّل مطعمًا في القاهرة.
 
   ما هو ناتج هذا الكود؟
----
 code: |
   let restaurant = {
     name: "Gad Restaurants",
@@ -13,7 +12,6 @@ code: |
   };
 
   console.log(restaurant.city);
----
 solution: 1
 options:
   - "name"

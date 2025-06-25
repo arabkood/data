@@ -12,7 +12,6 @@ code: |
 
   let finalMessage = getOrderStatusMessage("Preparing");
   console.log(finalMessage);
----
 solution: 2
 options:
   - "تحتاج الدالة إلى `console.log` بداخلها."
