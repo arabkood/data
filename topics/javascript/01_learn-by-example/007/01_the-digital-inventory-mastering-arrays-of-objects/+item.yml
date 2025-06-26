@@ -1,0 +1,15 @@
+id: 9bdc238c-0f4c-476a-a68c-b8d5fab4bd98
+module_id: 5bcda1e6-07d0-4eff-9297-66bb00feed16
+slug: the-digital-inventory-mastering-arrays-of-objects
+position: 1
+created_at: 2025-06-16T12:29:20.909Z
+updated_at: 2025-06-26T08:41:51.358Z
+type: lesson
+title: 'المخزون الرقمي: إتقان مصفوفات الكائنات'
+blurb: >-
+  تجاوز القوائم البسيطة نحو مخزونات قوية. سنتعلم معًا كيفية تخزين وإدارة العناصر
+  المعقدة بدمج المصفوفات والكائنات، وهي مهارة أساسية لا غنى عنها لأي مطور.
+difficulty: easy
+base_xp: 150
+s3_path: >-
+  javascript/01_learn-by-example/007/01_the-digital-inventory-mastering-arrays-of-objects

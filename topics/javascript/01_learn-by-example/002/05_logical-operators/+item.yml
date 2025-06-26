@@ -1,0 +1,14 @@
+id: a6fcc076-bbae-4599-b34d-db98c73fe8a7
+module_id: e8b689ae-2507-4219-b0fd-c6d1bc498c9e
+slug: logical-operators
+position: 5
+created_at: 2025-06-16T12:29:20.909Z
+updated_at: 2025-06-26T08:41:51.361Z
+type: lesson
+title: 'المنطق المركّب: كيف ندمج الشروط'
+blurb: >-
+  لا تكتفِ بشرط واحد! تعلّم معنا كيف تدمج الشروط باستخدام AND، OR، و NOT، لتكتب
+  برامجًا تتخذ قرارات أكثر ذكاءً ومرونة.
+difficulty: easy
+base_xp: 150
+s3_path: javascript/01_learn-by-example/002/05_logical-operators

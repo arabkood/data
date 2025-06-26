@@ -1,0 +1,14 @@
+id: f480c4f7-816f-456c-90ff-c51caaf8f36a
+module_id: 353e076c-0b88-4642-a479-e7c2c28036a0
+slug: building-with-methods
+position: 4
+created_at: 2025-06-16T12:29:20.910Z
+updated_at: 2025-06-26T08:41:51.363Z
+type: lesson
+title: 'من البيانات إلى الإجراءات: البناء باستخدام الطُرق'
+blurb: >-
+  تجاوز مرحلة تخزين البيانات. تعلّم كيف تمنح كائناتك القدرة على تنفيذ إجراءات
+  بإضافة دوال إليها، لتحوّلها إلى أدوات قوية وتفاعلية.
+difficulty: easy
+base_xp: 150
+s3_path: javascript/01_learn-by-example/006/04_building-with-methods

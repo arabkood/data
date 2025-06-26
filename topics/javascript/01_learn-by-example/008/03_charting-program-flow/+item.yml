@@ -1,0 +1,14 @@
+id: 72212156-8184-460c-b39e-901173e2767a
+module_id: 276d3271-2d4e-444b-b518-c785c17d1c71
+slug: charting-program-flow
+position: 3
+created_at: 2025-06-16T12:29:20.909Z
+updated_at: 2025-06-26T08:41:51.360Z
+type: lesson
+title: 'الخطة الرئيسية: تنظيم تدفق البرنامج'
+blurb: >-
+  تعلّم كيفية التحكم في تنفيذ شفرتك البرمجية خطوة بخطوة باستخدام المنطق، الدوال،
+  والحلقات التكرارية، لتحويل نموذج بياناتك إلى تطبيق ديناميكي.
+difficulty: easy
+base_xp: 150
+s3_path: javascript/01_learn-by-example/008/03_charting-program-flow

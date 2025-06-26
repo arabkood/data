@@ -1,0 +1,14 @@
+id: df9fbf1a-a36f-4691-8cce-dc64c716b9bf
+module_id: 5bcda1e6-07d0-4eff-9297-66bb00feed16
+slug: the-transformer-reshaping-data-with-map
+position: 5
+created_at: 2025-06-16T12:29:20.909Z
+updated_at: 2025-06-26T08:41:51.358Z
+type: lesson
+title: 'المُحوِّل: إعادة تشكيل البيانات باستخدام `.map()`'
+blurb: >-
+  تعلَّم كيفية استخدام دالة `.map()` القوية لتحويل مصفوفات كاملة من البيانات في
+  خطوة واحدة أنيقة، دون الحاجة إلى الحلقات التكرارية اليدوية.
+difficulty: medium
+base_xp: 350
+s3_path: javascript/01_learn-by-example/007/05_the-transformer-reshaping-data-with-map

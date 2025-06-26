@@ -6,7 +6,10 @@ import { createInsertSchema } from "drizzle-zod";
 
 const schema = createInsertSchema(tracks);
 
-function extractTrackSlug(trackDir: string): string {
+function extractTrackInfo(trackDir: string): {
+  slug: string;
+  position: number | null;
+} {
   const topicDir = path.dirname(trackDir);
   const trackName = path.basename(trackDir);
   const topicName = path.basename(topicDir);
@@ -18,15 +21,31 @@ function extractTrackSlug(trackDir: string): string {
     throw `Character '@' not allowed in track name: ${trackDir}`;
   }
 
-  const getNamePart = (name: string): string => {
-    const parts = name.split("_", 2);
-    return parts.length > 1 ? parts[1] : parts[0];
+  const parseNameAndPosition = (
+    name: string,
+  ): { name: string; position: number | null } => {
+    const parts = name.split("_");
+    if (parts.length > 1) {
+      const position = parseInt(parts[0], 10);
+      if (!isNaN(position)) {
+        return {
+          name: parts.slice(1).join("_"),
+          position: position,
+        };
+      }
+    }
+    return { name: name, position: 0 };
   };
 
-  const topicSlug = getNamePart(topicName);
-  const trackSlug = getNamePart(trackName);
+  const topicInfo = parseNameAndPosition(topicName);
+  const trackInfo = parseNameAndPosition(trackName);
 
-  return `${trackSlug}@${topicSlug}`;
+  const slug = `${trackInfo.name}@${topicInfo.name}`;
+
+  return {
+    slug,
+    position: trackInfo.position,
+  };
 }
 
 // we'll need this later
@@ -40,7 +59,7 @@ export async function enrichTrack(
   const enriched = { ...fields };
   let changed = false;
 
-  const slug = extractTrackSlug(path.dirname(yamlPath));
+  const { slug, position } = extractTrackInfo(path.dirname(yamlPath));
 
   if (!enriched.id) {
     enriched.id = uuidv4();
@@ -56,6 +75,10 @@ export async function enrichTrack(
   }
   if (enriched.slug !== slug) {
     enriched.slug = slug;
+    changed = true;
+  }
+  if (enriched.position !== position) {
+    enriched.position = position;
     changed = true;
   }
   if (!enriched.updated_at) {

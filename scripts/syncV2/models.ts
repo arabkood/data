@@ -44,6 +44,8 @@ export const tracks = classSchema.table("tracks", {
   blurb: text("blurb"),
   logo: text("logo"),
   premium_only: boolean("premium_only").default(false).notNull(),
+  coming_soon: boolean("coming_soon").default(false),
+  position: integer("position").default(0),
 });
 
 // Modules table definition
