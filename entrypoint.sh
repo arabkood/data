@@ -18,10 +18,6 @@ bucket_location = $S3_REGION
 use_https = True
 EOF
 
-cat ~/.s3cfg
-
-exit 0
-
 # Save the current directory
 ORIGINAL_DIR=$(pwd)
 
