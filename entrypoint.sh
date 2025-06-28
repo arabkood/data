@@ -30,9 +30,14 @@ echo "✅ Database sync successful."
 # Return to the original directory
 cd "$ORIGINAL_DIR"
 
-# Step 2: Run the S3 sync
-echo "--- Step 2: Syncing to S3 ---"
+# Step 2: Run the S3 Topics sync
+echo "--- Step 2: Syncing topics to S3 ---"
 ./sync-bundles-s3.sh
-echo "✅ S3 sync successful."
+echo "✅ S3 topics sync successful."
+
+# Step 3: Run the S3 Public Assets sync
+echo "--- Step 3: Syncing public-assets to S3 ---"
+./sync-assets-s3.sh
+echo "✅ S3 sync public-assets successful."
 
 echo "--- Unified Sync Process Complete ---"
