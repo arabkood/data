@@ -12,11 +12,11 @@ code: |
   let shouldReorder = foulStock < 10 && (isWeekend || isHoliday);
 
   console.log(shouldReorder);
---- 
 solution: 0
 options:
   - "`true`"
   - "`false`"
   - "`Error`"
 explanation: |
-  صحيح! الشرط `foulStock < 10` نتيجته `true`. وداخل القوسين، `isWeekend || isHoliday` نتيجته `true` أيضًا (لأن `isHoliday` قيمتها `true`). وبما أن كلا جانبي المُعامِل `&&` صحيحان، فالنتيجة النهائية هي `true`.
+  الشرط `foulStock < 10` نتيجته `true`. وداخل القوسين، `isWeekend || isHoliday` نتيجته `true` أيضًا (لأن `isHoliday` قيمتها `true`). وبما أن كلا جانبي المُعامِل `&&` صحيحان، فالنتيجة النهائية هي `true`.
+

@@ -9,7 +9,6 @@ code: |
   let freeCoffee = (customerName === "Omar") || (isBirthday === true);
 
   console.log(freeCoffee);
---- 
 solution: 2
 options:
   - "`false`"
@@ -17,4 +16,5 @@ options:
   - "`true`"
   - "`undefined`"
 explanation: |
-  الناتج هو `true`. على الرغم من أن `customerName === "Omar"` نتيجته `false`، إلا أن الشرط الثاني `isBirthday === true` نتيجته `true`. المُعامِل `||` (`OR`) يحتاج فقط إلى شرط واحد صحيح لتكون النتيجة النهائية `true`.
+  على الرغم من أن `customerName === "Omar"` نتيجته `false`، إلا أن الشرط الثاني `isBirthday === true` نتيجته `true`. المُعامِل `||` (`OR`) يحتاج فقط إلى شرط واحد صحيح لتكون النتيجة النهائية `true`.
+

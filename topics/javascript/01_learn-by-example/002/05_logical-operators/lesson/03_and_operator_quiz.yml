@@ -7,16 +7,16 @@ question: |
 code: |
   let laylaGrade = 92;
   let laylaAttendance = 98;
-  
+
   let isQualified = laylaGrade > 90 @@INPUT@@ laylaAttendance > 95;
-  
+
   console.log(isQualified);
---- 
 solution: 0
 options:
-  - "`&&`"
-  - "`||`"
-  - "`&`"
-  - "`AND`"
+  - "&&"
+  - "||"
+  - "&"
+  - "AND"
 explanation: |
-  صحيح! يُستخدم المُعامِل `&&` للتأكد من أن **كلا** الشرطين (`laylaGrade > 90` و `laylaAttendance > 95`) صحيحان (`true`) لتكون النتيجة النهائية `true`.
+  يُستخدم المُعامِل `&&` للتأكد من أن **كلا** الشرطين (`laylaGrade > 90` و `laylaAttendance > 95`) صحيحان (`true`) لتكون النتيجة النهائية `true`.
+

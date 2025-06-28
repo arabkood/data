@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+echo "Running pre commit script"
+
+../enrich-topics.sh
+../bundle.sh
+
+# Re-add any changed files to staging area
+git add -A
+
+# Allow the commit to proceed
+exit 0
