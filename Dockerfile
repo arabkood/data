@@ -28,5 +28,6 @@ RUN pnpm install --frozen-lockfile
 # Copy the rest of the application source code
 WORKDIR /app
 COPY . .
+RUN chmod +x /app/entrypoint.sh
 
-CMD ["/app/entrypoint.sh"]
+CMD ["sh", "/app/entrypoint.sh"]
