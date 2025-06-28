@@ -1,10 +1,13 @@
 #!/bin/bash
 
 set -e
+
 echo "Running pre commit script"
 
-../enrich-topics.sh
-../bundle.sh
+cd "$(git rev-parse --show-toplevel)"
+
+./enrich-topics.sh
+./bundle.sh
 
 # Re-add any changed files to staging area
 git add -A
