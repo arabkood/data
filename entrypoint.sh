@@ -10,7 +10,7 @@ S3_ENDPOINT="${S3_ENDPOINT:-}"
 S3_BUCKET="${S3_PV_BUCKET_NAME:-}"
 S3_REGION="${S3_REGION:-us-east-1}"
 if [ -z "$S3_ACCESS_KEY" ] || [ -z "$S3_SECRET_KEY" ] || [ -z "$S3_BUCKET" ]; then
-  echo "❌ ERROR: S3 credentials (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, S3_BUCKET_NAME) must be set."
+  echo "❌ ERROR: S3 credentials must be set."
   exit 1
 fi
 cat >~/.s3cfg <<EOF
