@@ -5,19 +5,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     unzip \
     s3cmd \
+    bash \
   # Enable corepack for pnpm
   && corepack enable && corepack prepare pnpm@latest --activate \
   # Install bun
   && curl -fsSL https://bun.sh/install | bash \
-  # Make bun available immediately
-  && ln -s /root/.bun/bin/bun /usr/local/bin/bun \
-  && ln -s /root/.bun/bin/bunx /usr/local/bin/bunx \
   # Clean up apt cache
   && apt-get purge -y curl && apt-get autoremove -y && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-# Add bun to PATH for subsequent layers
-ENV PATH="/root/.bun/bin:$PATH"
+# Add bun's bin directory to the PATH
+ENV PATH="/.bun/bin:$PATH"
 
 # Set the main working directory
 WORKDIR /app
