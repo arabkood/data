@@ -1,0 +1,24 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  حاولت وضع منطقنا البرمجي في دالة، لكن هناك خطأ ما. هل يمكنك اكتشافه؟
+code: |
+  function getOrderStatusMessage(status) {
+    if (status = "Delivered") {
+      return "تم توصيل طلبك. بالهناء والشفاء!";
+    }
+    return "طلبك لا يزال قيد التجهيز.";
+  }
+
+  let finalMessage = getOrderStatusMessage("Preparing");
+  console.log(finalMessage);
+solution: 2
+options:
+  - "تحتاج الدالة إلى `console.log` بداخلها."
+  - "لا توجد جملة `else`."
+  - "يستخدم شرط `if` علامة `=` واحدة بدلاً من `===`."
+  - "الدالة ينقصها فاصلة منقوطة في نهايتها."
+explanation: |
+  علامة المساواة الواحدة (`=`) تُستخدم **للإسناد**، وليس للمقارنة. إنها تُسند القيمة `"Delivered"` إلى `status` ثم تُقيّم كـ `true`، مما يتسبب في إرجاع الرسالة الخاطئة.
+
+  للتحقق من المساواة، يجب أن نستخدم `==` أو `===`.
