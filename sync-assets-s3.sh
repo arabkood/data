@@ -14,7 +14,6 @@ echo ">> Syncing public-assets directory to s3://${S3_PV_BUCKET_NAME}..."
 s3cmd sync /app/public-assets/ s3://${S3_PV_BUCKET_NAME}/public/ \
   --delete-removed \
   --add-header="Cache-Control:max-age=31536000,public" \
-  --content-type auto \
-  --metadata-directive REPLACE
+  --content-type auto
 
 echo "✅ S3 Public Assets Sync completed successfully."
