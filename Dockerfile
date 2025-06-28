@@ -1,18 +1,22 @@
 FROM node:20-slim
 
-# Install system dependencies in a single layer for efficiency
+# Install system dependencies and bun in a single layer
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     unzip \
     s3cmd \
-  # Install bun and enable pnpm
+  # Enable corepack for pnpm
   && corepack enable && corepack prepare pnpm@latest --activate \
+  # Install bun
   && curl -fsSL https://bun.sh/install | bash \
-  # Clean up apt cache to keep the image small
+  # Make bun available immediately
+  && ln -s /root/.bun/bin/bun /usr/local/bin/bun \
+  && ln -s /root/.bun/bin/bunx /usr/local/bin/bunx \
+  # Clean up apt cache
   && apt-get purge -y curl && apt-get autoremove -y && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-# Add bun to the system's PATH
+# Add bun to PATH for subsequent layers
 ENV PATH="/root/.bun/bin:$PATH"
 
 # Set the main working directory
