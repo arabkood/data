@@ -1,7 +1,7 @@
 FROM node:20-slim
 
 # Install core dependencies: curl, bun, and enable pnpm
-RUN apt-get update && apt-get install -y curl \
+RUN apt-get update && apt-get install -y curl unzip \
   && corepack enable && corepack prepare pnpm@latest --activate \
   && curl -fsSL https://bun.sh/install | bash \
   && apt-get purge -y curl && apt-get autoremove -y && apt-get clean \
