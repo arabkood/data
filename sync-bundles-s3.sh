@@ -3,10 +3,15 @@ set -e
 
 echo ">> Starting S3 bundles sync..."
 
-echo ">> Syncing .bundles directory to s3://${S3_BUCKET}..."
+if [ -z "$S3_PV_BUCKET_NAME" ]; then
+  echo "❌ ERROR: S3 credentials must be set."
+  exit 1
+fi
+
+echo ">> Syncing .bundles directory to s3://${S3_PV_BUCKET_NAME}..."
 
 # --- Run the s3cmd sync command ---
-s3cmd sync /app/.bundles/ s3://${S3_BUCKET}/ \
+s3cmd sync /app/.bundles/ s3://${S3_PV_BUCKET_NAME}/ \
   --dry-run \
   --delete-removed \
   --add-header="Cache-Control:max-age=31536000,public" \
