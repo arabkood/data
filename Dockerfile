@@ -1,21 +1,22 @@
 FROM node:20-slim
 
-# Install system dependencies and bun in a single layer
+
+# Install system dependencies, bash, and bun in a single layer
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     unzip \
     s3cmd \
     bash \
+    ca-certificates \
   # Enable corepack for pnpm
   && corepack enable && corepack prepare pnpm@latest --activate \
-  # Install bun
+  # Install bun using the explicitly set BUN_INSTALL path
   && curl -fsSL https://bun.sh/install | bash \
-  # Clean up apt cache
+  # Clean up apt cache (it's safe to purge curl now)
   && apt-get purge -y curl && apt-get autoremove -y && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-# Add bun's bin directory to the PATH
-ENV PATH="/.bun/bin:$PATH"
+ENV PATH="~/.bun/bin:$PATH"
 
 # Set the main working directory
 WORKDIR /app
