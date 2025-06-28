@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   && apt-get purge -y curl && apt-get autoremove -y && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-ENV PATH="~/.bun/bin:$PATH"
+ENV PATH="/root/.bun/bin:$PATH"
 
 # Set the main working directory
 WORKDIR /app
