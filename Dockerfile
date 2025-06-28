@@ -1,29 +1,33 @@
 FROM node:20-slim
 
-# Install core dependencies: curl, bun, and enable pnpm
-RUN apt-get update && apt-get install -y curl unzip \
+# Install system dependencies in a single layer for efficiency
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    unzip \
+    s3cmd \
+    python3-magic \
+  # Install bun and enable pnpm
   && corepack enable && corepack prepare pnpm@latest --activate \
   && curl -fsSL https://bun.sh/install | bash \
+  # Clean up apt cache to keep the image small
   && apt-get purge -y curl && apt-get autoremove -y && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-# Add bun to PATH
+# Add bun to the system's PATH
 ENV PATH="/root/.bun/bin:$PATH"
 
-# Set working directory
+# Set the main working directory
 WORKDIR /app
 
-# Pre-copy lock and package files for caching install
+# Copy dependency manifests first to leverage Docker's layer caching
 COPY ./scripts/syncV2/package.json ./scripts/syncV2/pnpm-lock.yaml ./scripts/syncV2/
 
-# Install dependencies using pnpm
+# Set the working directory for installation
 WORKDIR /app/scripts/syncV2
 RUN pnpm install --frozen-lockfile
 
-# Copy full project (including the rest of scripts and data)
+# Copy the rest of the application source code
 WORKDIR /app
 COPY . .
 
-# Final working dir and command
-WORKDIR /app/scripts/syncV2
-CMD ["pnpm", "run", "sync"]
+CMD ["/app/entrypoint.sh"]

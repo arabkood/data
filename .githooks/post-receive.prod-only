@@ -46,6 +46,11 @@ echo ">> Running the sync container..."
 docker run --rm \
   --network "$DOCKER_NETWORK" \
   -e "DATABASE_URL=${DATABASE_URL}" \
+  -e "S3_ENDPOINT=${S3_ENDPOINT}" \
+  -e "S3_SECRET_ACCESS_KEY=${S3_SECRET_ACCESS_KEY}" \
+  -e "S3_ACCESS_KEY_ID=${S3_ACCESS_KEY_ID}" \
+  -e "S3_PV_BUCKET_NAME=${S3_PV_BUCKET_NAME}" \
+  -e "S3_REGION=${S3_REGION}" \
   "$SYNC_IMAGE_NAME"
 
 # The CMD ["pnpm", "run", "sync"] in your Dockerfile will be executed automatically.
