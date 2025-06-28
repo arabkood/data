@@ -5,7 +5,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     unzip \
     s3cmd \
-    python3-magic \
   # Install bun and enable pnpm
   && corepack enable && corepack prepare pnpm@latest --activate \
   && curl -fsSL https://bun.sh/install | bash \
