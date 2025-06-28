@@ -11,7 +11,7 @@ fi
 echo ">> Syncing .bundles directory to s3://${S3_PV_BUCKET_NAME}..."
 
 # --- Run the s3cmd sync command ---
-s3cmd sync /app/.bundles/ s3://${S3_PV_BUCKET_NAME}/ \
+s3cmd sync /app/.bundles/ s3://${S3_PV_BUCKET_NAME}/topics/ \
   --delete-removed \
   --add-header="Cache-Control:max-age=31536000,public" \
   --exclude '*' \
