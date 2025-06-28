@@ -1,0 +1,53 @@
+#!/bin/bash
+set -euo pipefail
+
+# --- CONFIGURATION ---
+# The bare repository where pushes are received
+GIT_DIR="$HOME/data.git"
+
+# The temporary directory where we will check out the files to build from
+BUILD_CONTEXT_DIR="/tmp/data-repo-build"
+
+# The name we will give our temporary sync image
+SYNC_IMAGE_NAME="data-sync-image:latest"
+
+# The path to the .env file for your main application
+ENV_FILE_PATH="$HOME/deploy/.env"
+
+# The name of the Docker network your main app uses
+DOCKER_NETWORK="akood-mvp_default"
+
+# --- SCRIPT LOGIC ---
+echo ">> Git push received. Preparing to sync data..."
+
+# 1. Check out the latest code into a clean build directory
+echo ">> Checking out latest code to $BUILD_CONTEXT_DIR..."
+# Create the directory if it doesn't exist and ensure it's empty
+rm -rf "$BUILD_CONTEXT_DIR"
+mkdir -p "$BUILD_CONTEXT_DIR"
+# Tell Git where its database is (--git-dir) and where to place the files (--work-tree)
+git --work-tree="$BUILD_CONTEXT_DIR" --git-dir="$GIT_DIR" checkout -f
+
+# 2. Build the dedicated sync image from the new code
+echo ">> Building the sync image: $SYNC_IMAGE_NAME..."
+# We run the build command with the build context set to our temporary directory
+docker build -t "$SYNC_IMAGE_NAME" "$BUILD_CONTEXT_DIR"
+
+# 3. Source the environment variables from your main app's .env file
+echo ">> Loading database credentials..."
+set -a
+source "$ENV_FILE_PATH"
+set +a
+
+# 4. Run the newly built container
+echo ">> Running the sync container..."
+# This container is temporary (--rm), connected to the correct network,
+# and receives the DATABASE_URL securely from the sourced environment.
+docker run --rm \
+  --network "$DOCKER_NETWORK" \
+  -e "DATABASE_URL=${DATABASE_URL}" \
+  "$SYNC_IMAGE_NAME"
+
+# The CMD ["pnpm", "run", "sync"] in your Dockerfile will be executed automatically.
+
+echo "✅ Sync complete!"
