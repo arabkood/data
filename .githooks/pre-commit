@@ -10,7 +10,8 @@ cd "$(git rev-parse --show-toplevel)"
 ./bundle.sh
 
 # Re-add any changed files to staging area
-git add -A
+git add topics
+git add .bundles
 
 # Allow the commit to proceed
 exit 0
