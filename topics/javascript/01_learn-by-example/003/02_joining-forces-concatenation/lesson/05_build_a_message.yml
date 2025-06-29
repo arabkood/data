@@ -13,10 +13,9 @@ code: |
   console.log(notification);
 solution: 1
 options:
-  - "`label, bookTitle`"
-  - "`label + bookTitle`"
-  - '`label + " " + bookTitle`'
-  - "`add(label, bookTitle)`"
+  - "label, bookTitle"
+  - "label + bookTitle"
+  - 'label + " " + bookTitle'
+  - "add(label, bookTitle)"
 explanation: |
-  ممتاز! ✨ التعبير `label + bookTitle` يدمج السلسلتين النصيتين بشكل صحيح لتكوين الرسالة المطلوبة. بما أن `label` يحتوي بالفعل على مسافة في نهايته، لسنا بحاجة لإضافة واحدة أخرى.
-
+  التعبير `label + bookTitle` يدمج السلسلتين النصيتين بشكل صحيح لتكوين الرسالة المطلوبة. بما أن `label` يحتوي بالفعل على مسافة في نهايته، لسنا بحاجة لإضافة واحدة أخرى.
