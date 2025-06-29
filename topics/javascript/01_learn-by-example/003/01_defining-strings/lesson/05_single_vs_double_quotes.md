@@ -4,7 +4,7 @@
 
 ```javascript
 let friendName = "Amir";
-let favoriteDish = "Mansaf";
+let favoriteDish = \'Mansaf\';
 ```
 
 القاعدة الأهم هي أن **تكون متّسقًا في أسلوب كتابتك للكود**.
@@ -22,4 +22,3 @@ console.log(bookTitle);
 ```
 Layla's book
 ```
-
