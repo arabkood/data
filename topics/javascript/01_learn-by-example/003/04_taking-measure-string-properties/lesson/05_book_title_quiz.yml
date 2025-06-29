@@ -6,7 +6,6 @@ question: |
   **املأ الفراغ** للحصول على طول السلسلة النصية.
 code: |
   let bookTitle = "كليلة ودمنة"; 
-  // هو عنوان كتاب عربي شهير
   let titleSize = bookTitle.@@INPUT@@;
   console.log(titleSize);
 solution: 0
@@ -16,4 +15,5 @@ options:
   - "count()"
   - "Length"
 explanation: |
-  بالضبط! الخاصية الصحيحة هي `length`. تذكر أن جافاسكريبت حساسة لحالة الأحرف، لذا `Length` بحرف 'L' كبير لن تعمل.
+  الخاصية الصحيحة هي `length`. تذكر أن جافاسكريبت حساسة لحالة الأحرف، لذا `Length` بحرف 'L' كبير لن تعمل.
+

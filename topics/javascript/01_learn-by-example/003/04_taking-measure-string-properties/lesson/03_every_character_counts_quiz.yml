@@ -7,7 +7,7 @@ question: |
 code: |
   let cityName = "Riyadh SA";
   console.log(cityName.length);
-solution: 1
+solution: 0
 options:
   - "9"
   - "8"
@@ -15,3 +15,4 @@ options:
   - "'Riyadh SA'"
 explanation: |
   صحيح! الخاصية `.length` تحسب كل حرف داخل علامتي التنصيص، بما في ذلك المسافة. 'R.i.y.a.d.h. .S.A' هي 9 حروف في المجموع.
+
