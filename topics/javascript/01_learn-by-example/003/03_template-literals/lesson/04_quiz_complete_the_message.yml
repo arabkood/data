@@ -8,14 +8,15 @@ code: |
   let customerName = "عمر";
   let dish = "كنافة";
 
-  const greeting = `أهلاً بك، ${customerName}! طبق اليوم المميز هو ${dish}.`;
+  const greeting = `أهلاً بك، ${customerName}! طبق اليوم المميز هو @@INPUT@@.`;
 
   // ما الذي يجب وضعه في الفراغ لعرض اسم الطبق؟
-solution: 2
+solution: 1
 options:
   - "dish"
   - "${dish}"
   - "`dish`"
   - "[dish]"
 explanation: |
-  صحيح! لدمج متغير داخل `قالب حرفي`، يجب عليك وضعه بين علامة الدولار والأقواس المتعرجة: `${variableName}`.
+  لدمج متغير داخل `قالب حرفي`، يجب عليك وضعه بين علامة الدولار والأقواس المتعرجة: `${variableName}`.
+
