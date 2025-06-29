@@ -14,7 +14,7 @@ code: |
 
   // كيف يمكننا جعل هذه المقارنة صحيحة؟
   console.log(savedUser === enteredUser);
-solution: 2
+solution: 1
 options:
   - "savedUser = savedUser.trim();"
   - "enteredUser = enteredUser.trim();"
