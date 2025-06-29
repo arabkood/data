@@ -15,8 +15,9 @@ solution: 1
 options:
   - "dish"
   - "${dish}"
-  - "`dish`"
-  - "[dish]"
+  - |
+    `dish`
+  - "{dish}"
 explanation: |
   لدمج متغير داخل `قالب حرفي`، يجب عليك وضعه بين علامة الدولار والأقواس المتعرجة: `${variableName}`.
 
