@@ -8,7 +8,7 @@
 let hasCard = true;
 let isMember = true;
 
-// الطريقة 'الأطول'
+// الطريقة الأطول
 if (hasCard === true && isMember === true) {
   console.log("تم منح الدخول.");
 } else {
@@ -17,3 +17,4 @@ if (hasCard === true && isMember === true) {
 ```
 
 الآن، لنستخدم معرفتنا الجديدة بالقيم `الصائبة` لجعل هذا الكود أكثر تنظيمًا واحترافية. ✨
+
