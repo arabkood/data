@@ -6,12 +6,13 @@ question: |
   **ما هي الطريقة الصحيحة** لحساب عمرها بعد 10 سنوات؟
 code: |
   let ageString = "30";
-  // ما هي الشيفرة الصحيحة؟
+  let futureAge = @@INPUT@@
 solution: 2
 options:
-  - "let futureAge = ageString + 10;"
-  - "let futureAge = ageString.add(10);"
-  - "let futureAge = parseInt(ageString) + 10;"
-  - "let futureAge = convertToNumber(ageString) + 10;"
+  - "ageString + 10;"
+  - "ageString.add(10);"
+  - "parseInt(ageString) + 10;"
+  - "convertToNumber(ageString) + 10;"
 explanation: |
   بالضبط! تُستخدم `parseInt()` لتحويل النص `"30"` إلى الرقم `30`، مما يسمح بعملية الجمع الصحيحة.
+
