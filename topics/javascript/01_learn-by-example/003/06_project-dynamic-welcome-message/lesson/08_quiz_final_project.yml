@@ -21,4 +21,5 @@ options:
   - "Welcome,   ahmed   from    riyadh  ! In 10 years, you will be 30."
   - "The code will produce an error."
 explanation: |
-  ممتاز! الشيفرة تنظف الاسم والمدينة بشكل صحيح باستخدام `.trim()` و `.toUpperCase()`، وتحول العمر إلى رقم باستخدام `parseInt()` قبل إضافة 10، ثم تجمع كل شيء باستخدام `القوالب النصية`.
+  الشيفرة تنظف الاسم والمدينة بشكل صحيح باستخدام `.trim()` و `.toUpperCase()`، وتحول العمر إلى رقم باستخدام `parseInt()` قبل إضافة 10، ثم تجمع كل شيء باستخدام `القوالب النصية`.
+
