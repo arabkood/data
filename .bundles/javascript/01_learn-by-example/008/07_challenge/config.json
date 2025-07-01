@@ -1,5 +1,5 @@
 {
-  "image": "runner/javascript",
+  "image": "hello-world",
   "files": [
     {
       "idx": 0,
