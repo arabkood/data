@@ -1,9 +1,9 @@
 id: ba16f93a-2610-43a8-82c9-bda76cdb33e8
 module_id: 0e8436ad-c3a3-4e5e-91dc-b62d96ded8aa
-slug: 02-function-parameters
-position: 0
+slug: function-parameters
+position: 2
 created_at: 2025-06-16T12:29:20.910Z
-updated_at: 2025-06-26T08:41:51.362Z
+updated_at: 2025-07-01T08:56:50.785Z
 type: lesson
 title: 'صمام الإدخال: لنجعل دوالّنا أكثر مرونة'
 blurb: >-
@@ -11,4 +11,4 @@ blurb: >-
   بتشغيلها.
 difficulty: easy
 base_xp: 250
-s3_path: javascript/01_learn-by-example/004/02-function-parameters
+s3_path: javascript/01_learn-by-example/004/02_function-parameters

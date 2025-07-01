@@ -19,5 +19,4 @@ options:
   - "`true`"
   - "لن يتم طباعة أي شيء."
 explanation: |
-  ممتاز! بما أن قيمة المتغير `isDriverNearby` هي `true`، فإن الشرط `isDriverNearby === true` يُقيَّم إلى `true`، ويتم تنفيذ الكود الموجود داخل كتلة `if`.
-
+  بما أن قيمة المتغير `isDriverNearby` هي `true`، فإن الشرط `isDriverNearby === true` يُقيَّم إلى `true`، ويتم تنفيذ الكود الموجود داخل كتلة `if`.
