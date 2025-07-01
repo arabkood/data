@@ -3,22 +3,22 @@ lang: "javascript"
 question: |
   تم إنشاء دالة للترحيب بزوار المكتبة.
 
-  **استدعِ الدالة** لكي تطبع رسالة الترحيب.
+  استدعِ الدالة `showWelcome` لكي تطبع رسالة الترحيب.
 
-  ---
 code: |
-  function showWelcomeMessage() {
+  function showWelcome() {
     console.log("مرحباً بك في مكتبة المعرفة");
   }
 
   // نفّذ الأمر في السطر التالي
-  ___;
-  ---
+  @@INPUT@@;
+
 solution: 0
 options:
-  - "`showWelcomeMessage()`"
-  - "`function()`"
-  - "`console.log(showWelcomeMessage)`"
-  - "`run showWelcomeMessage`"
+  - "showWelcome()"
+  - "function()"
+  - "console.log(showWelcome)"
+  - "run showWelcome"
 explanation: |
-  صحيح! لتنفيذ أو 'استدعاء' `الدالة`، يجب أن تكتب اسمها متبوعًا بزوج من الأقواس `()`.
+  لتنفيذ أو استدعاء `الدالة`، يجب أن تكتب اسمها متبوعًا بزوج من الأقواس `()`.
+
