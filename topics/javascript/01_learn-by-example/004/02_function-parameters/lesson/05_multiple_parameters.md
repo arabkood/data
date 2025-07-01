@@ -4,16 +4,17 @@
 
 ```javascript
 function describeStudent(name, grade) {
-  console.log(name + " is in grade " + grade + ".");
+  console.log(name + " في الصف " + grade + ".");
 }
 ```
 
 **يجب أن يتطابق ترتيب تمرير الوسائط مع ترتيب المُعامِلات.**
 
 ```javascript
-// "زيد" يطابق 'name'، و 9 تطابق 'grade'
-describeStudent("Zayd", 9);
+// زيد هو الاسم، و 9 هي الصف الدراسي
+describeStudent("زيد", 9);
 
 // --- المخرجات ---
-// Zayd is in grade 9.
+// زيد في الصف 9.
 ```
+

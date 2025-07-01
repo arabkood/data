@@ -4,20 +4,20 @@ question: |
   ما هو ناتج هذه الشيفرة؟
 code: |
   function getGrade(score) {
-    let grade;
+    let grade; // undefined
     if (score > 90) {
-      // ممتاز
-      grade = "Mumtaz";
+      grade = "ممتاز";
     }
     return grade;
   }
 
   console.log(getGrade(85));
-solution: 3
+solution: 2
 options:
-  - "`Mumtaz`"
-  - "`ReferenceError: grade is not defined`"
-  - "`undefined`"
-  - "`null`"
+  - "ممتاز"
+  - "ReferenceError: grade is not defined"
+  - "undefined"
+  - "null"
 explanation: |
-  تم التصريح عن المتغير `grade` في نطاق الدالة. لكن شرط كتلة `if` وهو `(85 > 90)` غير صحيح، لذا فإن السطر `grade = "Mumtaz"` لا يُنفّذ أبدًا. تعيد الدالة القيمة الأولية للمتغير `grade`، وهي `undefined`.
+  تم التصريح عن المتغير `grade` في نطاق الدالة. لكن شرط كتلة `if` وهو `(85 > 90)` غير صحيح، لذا فإن السطر `grade = "ممتاز"` لا يُنفّذ أبدًا. تعيد الدالة القيمة الأولية للمتغير `grade`، وهي `undefined`.
+

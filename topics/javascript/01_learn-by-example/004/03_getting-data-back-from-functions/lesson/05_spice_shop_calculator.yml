@@ -13,9 +13,10 @@ code: |
   console.log(omarsTotal);
 solution: 0
 options:
-  - "`return total;`"
-  - "`console.log(total);`"
-  - "`total;`"
-  - "`let total;`"
+  - "return total;"
+  - "console.log(total);"
+  - "total;"
+  - "let total;"
 explanation: |
   لإرسال قيمة خارج الدالة، يجب استخدام الكلمة المفتاحية `return`. استخدام `console.log` سيعرض القيمة فقط أثناء تنفيذ الدالة، ولكنه لن يرجعها ليتم تخزينها في المتغير `omarsTotal`.
+

@@ -7,18 +7,20 @@ function checkStudentStatus(name) {
   let pass = true;
 
   if (pass) {
-    // المتغير 'message' موجود فقط داخل كتلة 'if' هذه
+    // المتغير 'الرسالة' موجود فقط داخل هذه الكتلة
     const message = "!تهانينا، " + name;
     console.log(message);
   }
 
-  // محاولة الوصول إلى 'message' هنا ستسبب خطأ!
+  // محاولة الوصول إلى 'الرسالة' هنا ستسبب خطأ!
 }
 
 checkStudentStatus("ليلى");
 ```
 
 **الناتج:**
+
 ```
 !تهانينا، ليلى
 ```
+

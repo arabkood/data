@@ -10,11 +10,12 @@ code: |
   }
 
   announceCity();
-solution: 1
+solution: 0
 options:
-  - "`الفعالية في الرياض.`"
-  - "`الفعالية في undefined.`"
-  - "`ReferenceError: city is not defined`"
-  - "`الفعالية في city.`"
+  - "الفعالية في الرياض."
+  - "الفعالية في undefined."
+  - "ReferenceError: city is not defined"
+  - "الفعالية في city."
 explanation: |
   المتغير `city` موجود في `النطاق العام`، لذا يمكن للدالة `announceCity` الوصول إلى قيمته دون أي مشاكل.
+

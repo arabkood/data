@@ -1,20 +1,23 @@
 type: "quiz"
 lang: "javascript"
 question: |
-  لنتأكد من فهمنا. ما الذي سيُطبع في الطرفية (console) عند تشغيل هذا الكود؟
+  لنتأكد من فهمنا. ما الذي سيُطبع في الطرفية عند تشغيل هذا الكود؟
 code: |
   function getAgeInMonths(years) {
     return years * 12;
   }
 
-  let laylasAgeInMonths = getAgeInMonths(5);
+  let result = getAgeInMonths(5);
 
-  console.log(laylasAgeInMonths);
+  console.log(result);
 solution: 2
 options:
-  - "`5`"
-  - "`12`"
-  - "`60`"
-  - "`getAgeInMonths`"
+  - "5"
+  - "12"
+  - "60"
+  - "getAgeInMonths"
 explanation: |
-  يتم استدعاء الدالة `getAgeInMonths` مع **المُعطى (`argument`)** `5`. داخل الدالة، يتم حساب `5 * 12`، وهو `60`. الكلمة المفتاحية `return` تُرجع هذه القيمة `60`، والتي يتم تخزينها في المتغير `laylasAgeInMonths` ثم طباعتها.
+  1. يتم استدعاء الدالة `getAgeInMonths` مع المُعطى `5`. 
+  2. داخل الدالة، يتم حساب `5 * 12`، وهو `60`. 
+  3. الكلمة المفتاحية `return` تُرجع هذه القيمة `60`، والتي يتم تخزينها في المتغير `result` ثم طباعتها.
+

@@ -3,20 +3,21 @@ lang: "javascript"
 question: |
   أوه، يبدو أنه تم نسيان شيء ما عند استدعاء الدالة.
 
-  **ما الذي سيُطبع في الطرفية (console)** عند تشغيل هذا الكود؟
+  **ما الذي سيُطبع في الطرفية ** عند تشغيل هذا الكود؟
 code: |
   function announceCity(cityName) {
-    console.log("I live in " + cityName);
+    console.log("انا اعيش في " + cityName);
   }
 
   announceCity(); // لقد نسينا تمرير الوسيط!
 solution: 3
 options:
-  - "I live in"
+  - "انا اعيش في"
   - Error
-  - "I live in cityName"
-  - "I live in undefined"
+  - "انا اعيش في cityName"
+  - "انا اعيش في undefined"
 explanation: |
   بالضبط. عندما تتوقع دالةٌ وسيطًا ولكنها لا تستلمه، يصبح `المُعامِل` الخاص بها `undefined`.
 
   الكود سيعمل، لكن النتيجة لن تكون كما أردنا!
+
