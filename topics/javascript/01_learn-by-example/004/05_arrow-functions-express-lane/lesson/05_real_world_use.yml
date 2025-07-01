@@ -7,7 +7,7 @@ question: |
 code: |
   const convertToFahrenheit = (celsius) => celsius * 1.8 + 32;
 
-  const tempInDubai = 30; // يوم دافئ في دبي
+  const tempInDubai = 30;
   console.log(convertToFahrenheit(tempInDubai));
 solution: 1
 options:
@@ -16,4 +16,5 @@ options:
   - "undefined"
   - "52.8"
 explanation: |
-  هذا صحيح! تأخذ الدالة السهمية القيمة `30` **كوسيطة (`argument`)** لـ `celsius`، وتحسب `30 * 1.8 + 32`، ثم تُرجع النتيجة `86` بشكل ضمني.
+  تأخذ الدالة السهمية القيمة `30` **كوسيطة (`argument`)** لـ `celsius`، وتحسب `30 * 1.8 + 32`، ثم تُرجع النتيجة `86` بشكل ضمني.
+

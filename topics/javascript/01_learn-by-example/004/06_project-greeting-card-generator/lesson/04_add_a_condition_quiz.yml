@@ -13,7 +13,7 @@ code: |
     } else if (occasion === 'Eid') {
       message = 'Eid Mubarak!';
     }
-    // أضف الشرط الجديد هنا
+    @@INPUT@@
 
     return `مرحباً ${name}, ${message}`;
   };
@@ -43,4 +43,5 @@ options:
       message = 'مبارك تخرجك!';
     ```
 explanation: |
-  صحيح! لإضافة تحقق آخر بعد `if` أو `else if`، نستخدم الصيغة `else if (condition)`. هذا يُبقي جميع عمليات التحقق مترابطة في كتلة منطقية واحدة.
+  لإضافة تحقق آخر بعد `if` أو `else if`، نستخدم الصيغة `else if (condition)`. هذا يُبقي جميع عمليات التحقق مترابطة في كتلة منطقية واحدة.
+
