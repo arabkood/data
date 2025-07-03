@@ -10,13 +10,15 @@ function createGreeting() {
 
 createGreeting();
 
-// ...لنجرب الوصول إلى 'greeting' هنا في الخارج
+// ...لنجرب الوصول إلى 'greeting'
 console.log(greeting);
 ```
 
 **الناتج:**
+
 ```
 ReferenceError: greeting is not defined
 ```
 
 مدهش! يتعطل البرنامج لأن المتغير `greeting` محبوس داخل جدران الدالة. وهذا أمر جيد، فهو يمنع متغيراتنا من التسبب بمشاكل عرضية في أماكن أخرى.
+
