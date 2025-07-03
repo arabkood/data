@@ -11,7 +11,7 @@ code: |
     
     // أضف الطريقة هنا
     openForBusiness: function() {
-      /*---*/("كشك الفلافل مفتوح الآن!");
+      @@INPUT@@("كشك الفلافل مفتوح الآن!");
     }
   };
 
@@ -19,9 +19,10 @@ code: |
   falafelStand.openForBusiness();
 solution: 0
 options:
-  - "`console.log`"
-  - "`print`"
-  - "`function`"
-  - "`return`"
+  - "console.log"
+  - "print"
+  - "function"
+  - "return"
 explanation: |
-  صحيح! تُستخدم الدالة `console.log()` لطباعة الرسائل في الطرفية. نضعها داخل الـ`طريقة` الخاصة بنا لتحديد الإجراء الذي يجب أن تؤديه.
+  تُستخدم الدالة `console.log()` لطباعة الرسائل في الطرفية. نضعها داخل الـ`طريقة` الخاصة بنا لتحديد الإجراء الذي يجب أن تؤديه.
+

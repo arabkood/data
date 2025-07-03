@@ -1,3 +1,4 @@
+type: "quiz"
 lang: javascript
 question: |
   تتكون حلقة `for` من ثلاثة أجزاء داخل القوسين `()`، مفصولة بفاصلة منقوطة.
@@ -17,4 +18,3 @@ options:
   - "`console.log(studentNames[i])`"
 explanation: |
   يخبر `الشرط` `i < studentNames.length` الحلقة بالاستمرار في العمل طالما أن العداد `i` أصغر من العدد الإجمالي للعناصر في المصفوفة.
-

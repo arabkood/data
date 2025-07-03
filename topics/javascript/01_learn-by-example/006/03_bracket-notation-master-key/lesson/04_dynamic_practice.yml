@@ -7,7 +7,7 @@ question: |
 code: |
   const userProfile = {
     username: "OmarK",
-  city: "Cairo",
+    city: "Cairo",
     hobby: "Reading"
   };
 
@@ -21,5 +21,4 @@ options:
   - "Cairo"
   - "undefined"
 explanation: |
-  ممتاز! تستخدم الشفرة القيمة الموجودة داخل متغيّر `infoNeeded`، وهي `"city"`، كمفتاح. وبالتالي، `userProfile["city"]` تعيد القيمة `"Cairo"` بشكل صحيح.
-
+  تستخدم الشفرة القيمة الموجودة داخل متغيّر `infoNeeded`، وهي `"city"`، كمفتاح. وبالتالي، `userProfile["city"]` تعيد القيمة `"Cairo"` بشكل صحيح.

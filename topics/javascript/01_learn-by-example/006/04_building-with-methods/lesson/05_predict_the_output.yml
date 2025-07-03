@@ -16,9 +16,10 @@ code: |
   student.checkStatus();
 solution: 2
 options:
-  - "`Fatima`"
-  - "`[Function: checkStatus]`"
-  - "`تم التحقق من الحالة.`"
-  - "`student.checkStatus()`"
+  - "Fatima"
+  - "[Function: checkStatus]"
+  - "تم التحقق من الحالة."
+  - "student.checkStatus()"
 explanation: |
-  ممتاز! السطر `student.checkStatus()` ينفذ الدالة المخزنة في خاصية `checkStatus`، والتي بدورها تشغل `console.log("تم التحقق من الحالة.")`.
+  السطر `student.checkStatus()` ينفذ الدالة المخزنة في خاصية `checkStatus`، والتي بدورها تشغل `console.log("تم التحقق من الحالة.")`.
+

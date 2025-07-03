@@ -18,9 +18,10 @@ code: |
   hijriDate.displayDate;
 solution: 1
 options:
-  - "`displayDate(hijriDate);`"
-  - "`hijriDate.displayDate();`"
-  - "`hijriDate[displayDate];`"
-  - "`console.log(displayDate);`"
+  - "displayDate(hijriDate);"
+  - "hijriDate.displayDate();"
+  - "hijriDate[displayDate];"
+  - "console.log(displayDate);"
 explanation: |
-  رائع! لتنفيذ أو 'استدعاء' `طريقة`، يجب عليك استخدام `ترميز النقطة` متبوعًا بالأقواس `()`. السطر `hijriDate.displayDate;` يشير فقط إلى الـ`طريقة` دون تشغيلها.
+  لتنفيذ أو 'استدعاء' `طريقة`، يجب عليك استخدام `ترميز النقطة` متبوعًا بالأقواس `()`. السطر `hijriDate.displayDate;` يشير فقط إلى الـ`طريقة` دون تشغيلها.
+

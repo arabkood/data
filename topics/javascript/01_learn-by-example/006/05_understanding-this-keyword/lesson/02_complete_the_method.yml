@@ -9,18 +9,19 @@ code: |
     name: "Adel",
     grade: 88,
     getReport: function() {
-      return "تقرير لـ: " + @@INPUT@@.name;
+      return `تقرير لـ: ${@@INPUT@@}`;
     }
   };
 
   console.log(student.getReport());
 solution: 2
 options:
-  - "student"
   - "name"
+  - "this.name"
   - "this"
-  - "getReport"
+  - "student.name"
 explanation: |
-  صحيح! داخل الدالة، `this` هي الكلمة المفتاحية المستخدمة للإشارة إلى الكائن نفسه.
-  
+  داخل الدالة، `this` هي الكلمة المفتاحية المستخدمة للإشارة إلى الكائن نفسه.
+
   لذا، `this.name` تصل بشكل صحيح إلى خاصية `name` في كائن `student`.
+
