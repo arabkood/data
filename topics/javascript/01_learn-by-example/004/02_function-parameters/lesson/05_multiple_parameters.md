@@ -4,7 +4,7 @@
 
 ```javascript
 function describeStudent(name, grade) {
-  console.log(name + " في الصف " + grade + ".");
+  console.log(name + " in grade " + grade + ".");
 }
 ```
 
@@ -15,5 +15,5 @@ function describeStudent(name, grade) {
 describeStudent("zayd", 9);
 
 // --- المخرجات ---
-// zayd في الصف 9.
+// zayd in grade 9.
 ```
