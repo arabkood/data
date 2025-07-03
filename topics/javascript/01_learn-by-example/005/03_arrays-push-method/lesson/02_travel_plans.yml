@@ -6,9 +6,9 @@ question: |
   **املأ الفراغ** لإضافة المدينة الجديدة إلى نهاية المصفوفة.
 code: |
   let citiesToVisit = ["Cairo", "Amman"];
-  
+
   citiesToVisit.@@INPUT@@("Beirut");
-  
+
   console.log(citiesToVisit);
 solution: 0
 options:
@@ -17,4 +17,5 @@ options:
   - "insert"
   - "append"
 explanation: |
-  صحيح! الطريقة `push` هي الأمر المخصص في جافاسكريبت لإضافة عنصر إلى نهاية المصفوفة.
+  الطريقة `push` هي الأمر المخصص في جافاسكريبت لإضافة عنصر إلى نهاية المصفوفة.
+
