@@ -7,11 +7,11 @@ code: |
     name: "Foul w Hummus",
     rating: 4.5
   };
-solution: 2
+solution: 1
 options:
-  - "`'Foul w Hummus'`"
-  - "`rating`"
-  - "`restaurant`"
-  - "`4.5`"
+  - '"Foul w Hummus" و 4.5'
+  - "rating و 4.5"
+  - "restaurant"
 explanation: |
-  إجابة رائعة! ✨ `rating` هو العنوان (الـ `مفتاح`) للقيمة `4.5`. تكون المفاتيح دائمًا على الجانب الأيسر من النقطتين `:`.
+  تكون المفاتيح دائمًا على الجانب الأيسر من النقطتين `:`.
+

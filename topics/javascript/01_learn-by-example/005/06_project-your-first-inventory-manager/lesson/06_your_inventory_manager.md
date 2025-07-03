@@ -11,8 +11,8 @@ falafelQueue.push("طلب فلافل دبل");
 console.log("الطابور الحالي:", falafelQueue);
 
 // الطلب التالي جاهز للتقديم
-// لكن بما أننا نستخدم
-// pop فإننا نخدم آخر من وصل
+// لكن بما أننا نستخدم pop
+// فإننا نخدم آخر من وصل
 let servingNow = falafelQueue.pop();
 console.log("يتم تقديم:", servingNow);
 console.log("الطلبات المتبقية:", falafelQueue);

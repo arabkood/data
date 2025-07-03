@@ -19,4 +19,5 @@ options:
   - "4.5"
   - "city"
 explanation: |
-  إجابة صحيحة! الكود `restaurant.city` يستخدم `ترميز النقطة` للوصول إلى قيمة خاصية `city`، وهي "Cairo".
+  الكود `restaurant.city` يستخدم `ترميز النقطة` للوصول إلى قيمة خاصية `city`، وهي "Cairo".
+

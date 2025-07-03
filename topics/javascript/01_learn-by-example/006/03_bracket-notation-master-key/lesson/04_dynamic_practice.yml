@@ -14,7 +14,6 @@ code: |
   let infoNeeded = "city";
 
   console.log(userProfile[infoNeeded]);
---- 
 solution: 2
 options:
   - "infoNeeded"
@@ -23,3 +22,4 @@ options:
   - "undefined"
 explanation: |
   ممتاز! تستخدم الشفرة القيمة الموجودة داخل متغيّر `infoNeeded`، وهي `"city"`، كمفتاح. وبالتالي، `userProfile["city"]` تعيد القيمة `"Cairo"` بشكل صحيح.
+
