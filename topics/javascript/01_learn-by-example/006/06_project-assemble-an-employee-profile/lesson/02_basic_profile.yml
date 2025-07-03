@@ -10,13 +10,7 @@ code: |
   };
 
   console.log(employee.name);
-solution: |
-  const employee = {
-    name: "Omar",
-    employeeId: 451
-  };
-
-  console.log(employee.name);
+solution: 0
 options:
   - "name: \"Omar\",\nemployeeId: 451"
   - "name = \"Omar\";\nemployeeId = 451;"
