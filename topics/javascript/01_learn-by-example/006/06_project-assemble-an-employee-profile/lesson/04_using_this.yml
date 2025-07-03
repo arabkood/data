@@ -14,7 +14,6 @@ code: |
   };
 
   console.log(employee.getDetails());
-  ---
 solution: 0
 options:
   - "this.name;"
