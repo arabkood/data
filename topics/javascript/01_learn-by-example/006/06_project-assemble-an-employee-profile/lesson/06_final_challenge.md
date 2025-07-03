@@ -1,11 +1,10 @@
-حان الوقت لإكمال الملف الشخصي! لنبني نظامًا لمطعم محلي.
-
 **مهمتك**:
-أضف `دالة` (`method`) اسمها `updateStock` إلى `كائن` الـ `menuItem`. يجب أن تأخذ **مُعامِلًا (`argument`)** واحدًا، وهو `quantitySold`، وتطرحه من `خاصية` الـ `stock`.
+
+أضف دالة اسمها `updateStock` إلى كائن الـ `menuItem`. يجب أن تأخذ **مُعامِلًا** واحدًا، وهو `quantitySold`، وتطرحه من خاصية الـ `stock`.
 
 ```javascript
 let menuItem = {
-  name: "شطيرة فلافل",
+  name: ,
   price: 15,
   stock: 100,
   // أضف دالة updateStock هنا

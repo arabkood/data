@@ -3,10 +3,9 @@ lang: "javascript"
 question: |
   إليك الـ `دالة` الكاملة. ولكن هناك خطأ صغير سيسبب مشكلة. هل يمكنك اكتشافه؟
 
-  **تلميح**: انظر إلى كيفية تعريف المتغير `message`.
 code: |
   const createGreeting = (name, occasion) => {
-    const message; // <-- هل هذا صحيح؟
+    const message;
 
     if (occasion === 'Ramadan') {
       message = 'Ramadan Kareem!';
@@ -26,4 +25,3 @@ options:
   - "`القالب النصي` يستخدم صيغة خاطئة."
 explanation: |
   `const` تُعرّف ثابتًا لا يمكن تغييره أو إعادة تعيين قيمته. بما أننا نحتاج إلى تعيين قيمة للمتغير `message` داخل كتلة `if/else`، يجب أن نُعرّفه باستخدام `let`.
-
