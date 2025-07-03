@@ -9,12 +9,12 @@ code: |
     name: "Adel",
     grade: 88,
     getReport: function() {
-      return `تقرير لـ: ${@@INPUT@@}`;
+      return `Report for: ${@@INPUT@@}`;
     }
   };
 
   console.log(student.getReport());
-solution: 2
+solution: 1
 options:
   - "name"
   - "this.name"
