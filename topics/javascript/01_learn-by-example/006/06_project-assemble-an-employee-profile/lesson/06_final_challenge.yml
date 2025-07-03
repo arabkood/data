@@ -9,7 +9,7 @@ code: |
     name: "شطيرة فلافل",
     price: 15,
     stock: 100,
-    // أضف دالة updateStock هنا
+    @@INPUT@@
   };
 
   menuItem.updateStock(10);
