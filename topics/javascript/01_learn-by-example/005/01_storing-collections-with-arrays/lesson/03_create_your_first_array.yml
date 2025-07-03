@@ -5,15 +5,15 @@ question: |
 
   **املأ الفراغات** لإنشاء `مصفوفة` باسم `genres` تحتوي على "Fiction" و "History" و "Science".
 code: |
-  let genres = ["Fiction"@@INPUT@@ "History"@@INPUT@@ "Science"];
+  let genres = @@INPUT@@
 
   // هذا السطر سيتأكد من إجابتك!
   console.log(genres);
 solution: 3
 options:
-  - "."
-  - " "
-  - "-"
-  - ","
+  - "[Fiction, History, Science]"
+  - '{"Fiction", "History", "Science"}'
+  - '["Fiction"-"History"-"Science"]'
+  - '["Fiction", "History", "Science"]'
 explanation: |
   رائع! في `المصفوفة`، يجب فصل كل عنصر عن الآخر بفاصلة. هذه هي القاعدة التي تحافظ على تنظيم القائمة.
