@@ -15,7 +15,7 @@ code: |
   };
 
   // هذا الاستدعاء سينتج خطأ من نوع ReferenceError
-  // console.log(book.getDetails());
+  console.log(book.getDetails());
 solution: 0
 options:
   - "يجب أن تستخدم الدالة `this.title` و `this.author` للوصول إلى خصائص الكائن."
@@ -23,6 +23,7 @@ options:
   - "لا يُسمح للدوال بإرجاع قيم."
   - "كائن `book` يفتقد فاصلة منقوطة في النهاية."
 explanation: |
-  بالضبط! المتغيران `title` و `author` غير موجودين في نطاق الدالة بمفردهما.
-  
+  المتغيران `title` و `author` غير موجودين في نطاق الدالة بمفردهما.
+
   يجب عليك استخدام `this` لإخبار جافاسكريبت بأنك تبحث عن خصائص **ضمن الكائن** الذي تنتمي إليه الدالة: `this.title` و `this.author`.
+

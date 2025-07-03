@@ -10,16 +10,17 @@ code: |
     origin: "Al-Qassim",
     weight_kg: 1,
     getDescription: function() {
-      return `${this.weight_kg} كجم من ${this.name} من ${this.origin}`;
+      return `${this.weight_kg} KG from ${this.name} from ${this.origin}`;
     }
   };
 
   console.log(product.getDescription());
 solution: 3
 options:
-  - "1 كجم من Sukkari Dates من undefined"
+  - "1 KG from Sukkari Dates from undefined"
   - "Error: weight_kg is not defined"
-  - "weight_kg كجم من name من origin"
-  - "1 كجم من Sukkari Dates من Al-Qassim"
+  - "weight_kg KG from name from origin"
+  - "1 KG from Sukkari Dates from Al-Qassim"
 explanation: |
-  عمل ممتاز! الدالة `getDescription` تستخدم `this.weight_kg` و `this.name` و `this.origin` بشكل صحيح للوصول إلى خصائص كائن `product` وبناء السلسلة النصية النهائية.
+  الدالة `getDescription` تستخدم `this.weight_kg` و `this.name` و `this.origin` بشكل صحيح للوصول إلى خصائص كائن `product` وبناء السلسلة النصية النهائية.
+
