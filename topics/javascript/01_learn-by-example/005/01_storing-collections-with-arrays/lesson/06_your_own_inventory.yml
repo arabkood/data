@@ -10,8 +10,8 @@ code: |
 
   // هذا السطر سيتأكد من عملك
   console.log(dateTypes);
-solution:
+solution: 0
+options:
   - 'let dateTypes = ["Sukkari", "Medjool", "Ajwa"];'
 explanation: |
   ممتاز! لقد أنشأت بنجاح متغيّرًا باسم `dateTypes` وخصصت له `مصفوفة` تحتوي على النصوص الثلاثة.
-
