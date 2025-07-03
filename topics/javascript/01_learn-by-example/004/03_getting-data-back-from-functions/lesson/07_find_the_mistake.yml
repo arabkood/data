@@ -5,7 +5,6 @@ question: |
 code: |
   function createGreeting(name) {
     let message = "أهلاً، " + name;
-    // هناك شيء مفقود هنا!
   }
 
   let greetingForFatima = createGreeting("فاطمة");
@@ -15,7 +14,8 @@ solution: 1
 options:
   - "لم يتم إنشاء المتغير `message` بشكل صحيح."
   - "الدالة لم تُرجع (`return`) قيمة `message` أبدًا."
-  - "الـ**مُعامِل (`parameter`)** `name` فارغ."
+  - "الـ**مُعامِل ** `name` فارغ."
   - "`console.log` لا يمكنه طباعة المتغيرات."
 explanation: |
   إذا لم تحتوِ الدالة على جملة `return`، فإنها تُرجع تلقائيًا قيمة خاصة هي: `undefined`. تم إسناد هذه القيمة `undefined` إلى المتغير `greetingForFatima` لأن الدالة لم تُرجع بشكل صريح نص `message`.
+
