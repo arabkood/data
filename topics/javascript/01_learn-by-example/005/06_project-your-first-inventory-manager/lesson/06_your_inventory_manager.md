@@ -6,20 +6,23 @@
 let falafelQueue = [];
 
 // وصول الزبائن
-falafelQueue.push('طلب فلافل عادي');
-falafelQueue.push('طلب فلافل دبل');
-console.log('الطابور الحالي:', falafelQueue);
+falafelQueue.push("طلب فلافل عادي");
+falafelQueue.push("طلب فلافل دبل");
+console.log("الطابور الحالي:", falafelQueue);
 
 // الطلب التالي جاهز للتقديم
-// لكن بما أننا نستخدم pop، فإننا نخدم آخر من وصل
+// لكن بما أننا نستخدم
+// pop فإننا نخدم آخر من وصل
 let servingNow = falafelQueue.pop();
-console.log('يتم تقديم:', servingNow);
-console.log('الطلبات المتبقية:', falafelQueue);
+console.log("يتم تقديم:", servingNow);
+console.log("الطلبات المتبقية:", falafelQueue);
 ```
 
 ### المخرجات
+
 ```
-> الطابور الحالي: [ 'طلب فلافل عادي', 'طلب فلافل دبل' ]
-> يتم تقديم: طلب فلافل دبل
-> الطلبات المتبقية: [ 'طلب فلافل عادي' ]
+الطابور الحالي: [ 'طلب فلافل عادي', 'طلب فلافل دبل' ]
+يتم تقديم: طلب فلافل دبل
+الطلبات المتبقية: [ 'طلب فلافل عادي' ]
 ```
+

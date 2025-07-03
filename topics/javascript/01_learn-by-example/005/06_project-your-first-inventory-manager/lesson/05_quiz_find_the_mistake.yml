@@ -13,11 +13,12 @@ code: |
   console.log(lastStop);
 solution: 0
 options:
-  - "`let lastStop = travelPlan.pop();`"
-  - "`let lastStop = travelPlan.removeLast();`"
-  - "`let lastStop = travelPlan[2].pop();`"
-  - "`let lastStop = travelPlan(pop);`"
+  - "let lastStop = travelPlan.pop();"
+  - "let lastStop = travelPlan.removeLast();"
+  - "let lastStop = travelPlan[2].pop();"
+  - "let lastStop = travelPlan(pop);"
 explanation: |
   `pop()` هي `دالة` تنتمي إلى `المصفوفة` نفسها.
 
   الصيغة الصحيحة هي استدعاؤها على `متغير` `المصفوفة`، مثل `arrayName.pop()`.
+
