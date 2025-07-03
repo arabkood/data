@@ -12,9 +12,8 @@ function describeStudent(name, grade) {
 
 ```javascript
 // زيد هو الاسم، و 9 هي الصف الدراسي
-describeStudent("زيد", 9);
+describeStudent("zayd", 9);
 
 // --- المخرجات ---
-// زيد في الصف 9.
+// zayd في الصف 9.
 ```
-
