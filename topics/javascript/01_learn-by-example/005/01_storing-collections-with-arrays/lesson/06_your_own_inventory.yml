@@ -13,5 +13,8 @@ code: |
 solution: 0
 options:
   - 'let dateTypes = ["Sukkari", "Medjool", "Ajwa"];'
+  - 'let dateTypes = "Sukkari", "Medjool", "Ajwa";'
+  - 'let dateTypes = {"Sukkari", "Medjool", "Ajwa"};'
+  - 'let dateTypes = ("Sukkari", "Medjool", "Ajwa");'
 explanation: |
-  ممتاز! لقد أنشأت بنجاح متغيّرًا باسم `dateTypes` وخصصت له `مصفوفة` تحتوي على النصوص الثلاثة.
+  لقد أنشأت بنجاح متغيّرًا باسم `dateTypes` وخصصت له `مصفوفة` تحتوي على النصوص الثلاثة.
