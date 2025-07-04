@@ -1,0 +1,10 @@
+type: "order"
+lang: "javascript"
+question: |
+  رتّب الأسطر التالية لإنشاء دالة تطبع "hello name" في وحدة الإخراج.
+code: |
+  function sayHello(name) {
+    let message = "hello " + name;
+    console.log(message);
+  }
+

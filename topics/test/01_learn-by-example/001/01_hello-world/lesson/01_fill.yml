@@ -1,0 +1,12 @@
+type: "fill"
+lang: "javascript"
+question: |
+  أكمل الفراغات لإنشاء دالة تُرجع "hello {name}".
+code: |
+  function @@INPUT@@(@@INPUT@@) {
+    @@INPUT@@ "hello " + name;
+  }
+solution:
+  - sayHello
+  - name
+  - return
