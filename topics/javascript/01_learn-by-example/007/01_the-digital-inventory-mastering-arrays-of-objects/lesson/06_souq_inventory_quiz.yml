@@ -9,16 +9,17 @@ code: |
     { name: "Basbousa", price: 25 }
   ];
 
-  let baklavaPrice = sweets[@@INPUT@@].price;
+  let baklavaPrice = @@INPUT@@;
 
   console.log(baklavaPrice);
 solution: 0
 options:
-  - "1"
-  - "2"
-  - "'Baklava'"
-  - "0"
+  - "sweets[1].price"
+  - "sweets[2].price"
+  - "'Baklava'.price"
+  - "sweets[1]"
 explanation: |
   `المصفوفات` تبدأ من `الفهرس` صفر، مما يعني أن أول عنصر يقع في `الفهرس` `0`.
 
   'Baklava' هي العنصر الثاني في `المصفوفة`، لذا فهي تقع في `الفهرس` `1`.
+

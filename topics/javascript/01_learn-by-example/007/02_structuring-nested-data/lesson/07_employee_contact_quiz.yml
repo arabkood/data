@@ -20,7 +20,7 @@ code: |
       }
     }
   ];
-  
+
   console.log(employees[1].contact.phone.personal);
 solution: 1
 options:
@@ -29,8 +29,9 @@ options:
   - "`undefined`"
   - "An error will occur."
 explanation: |
-  ممتاز! لقد تصفحت الهيكل بشكل صحيح:
+  لقد تصفحت الهيكل بشكل صحيح:
   1. `employees[1]` للحصول على كائن الموظفة نورة.
   2. `.contact` للحصول على `الكائن المتداخل` الخاص بمعلومات الاتصال.
   3. `.phone` للحصول على كائن الهاتف المتداخل بشكل أعمق.
   4. `.personal` للحصول على القيمة النهائية.
+
