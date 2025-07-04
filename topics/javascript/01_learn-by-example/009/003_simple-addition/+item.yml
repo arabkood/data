@@ -1,0 +1,13 @@
+id: 4e8dd722-8b1b-449e-9b04-bdf6f0a91bd4
+module_id: 14533644-c356-457f-a87d-35593c50638b
+slug: simple-addition
+position: 3
+created_at: 2025-05-23T18:19:06.333Z
+updated_at: 2025-07-04T12:19:23.166Z
+type: code
+title: الجمع البسيط
+blurb: null
+difficulty: easy
+premium_only: false
+base_xp: 50
+s3_path: javascript/01_learn-by-example/009/003_simple-addition

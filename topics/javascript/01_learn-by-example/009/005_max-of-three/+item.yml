@@ -1,0 +1,13 @@
+id: 1ff577d7-b1a8-4ba0-9a10-f58629ca4179
+module_id: 14533644-c356-457f-a87d-35593c50638b
+slug: max-of-three
+position: 5
+created_at: 2025-05-23T18:19:06.333Z
+updated_at: 2025-07-04T12:19:23.167Z
+type: code
+title: إيجاد الأكبر من ثلاثة أرقام
+blurb: null
+difficulty: medium
+premium_only: false
+base_xp: 140
+s3_path: javascript/01_learn-by-example/009/005_max-of-three

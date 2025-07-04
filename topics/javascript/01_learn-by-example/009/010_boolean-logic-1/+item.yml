@@ -1,0 +1,13 @@
+id: ab8271d6-ce35-4e08-8018-362339757524
+module_id: 14533644-c356-457f-a87d-35593c50638b
+slug: boolean-logic-1
+position: 10
+created_at: 2025-05-24T08:55:00.018Z
+updated_at: 2025-07-04T12:19:23.172Z
+type: code
+title: 'المنطق البوليني: دوال AND، OR، NOT'
+blurb: null
+difficulty: medium
+premium_only: false
+base_xp: 100
+s3_path: javascript/01_learn-by-example/009/010_boolean-logic-1

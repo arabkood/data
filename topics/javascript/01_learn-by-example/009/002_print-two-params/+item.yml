@@ -1,0 +1,13 @@
+id: 72f4fb51-200e-4fae-a857-fef3e67c0f17
+module_id: 14533644-c356-457f-a87d-35593c50638b
+slug: print-two-params
+position: 2
+created_at: 2025-05-23T18:19:06.333Z
+updated_at: 2025-07-04T12:19:23.166Z
+type: code
+title: طباعة معاملين
+blurb: null
+difficulty: easy
+premium_only: false
+base_xp: 40
+s3_path: javascript/01_learn-by-example/009/002_print-two-params

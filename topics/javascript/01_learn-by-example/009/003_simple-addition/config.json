@@ -1,0 +1,21 @@
+{
+  "image": "runner/javascript",
+  "files": [
+    {
+      "idx": 0,
+      "path": "add.js",
+      "lang": "javascript"
+    },
+    {
+      "idx": -1,
+      "path": "add.spec.js",
+      "lang": "javascript",
+      "ro": true
+    },
+    {
+      "idx": -1,
+      "path": "package.json",
+      "lang": "json"
+    }
+  ]
+}

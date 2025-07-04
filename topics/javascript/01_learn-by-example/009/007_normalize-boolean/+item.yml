@@ -1,0 +1,13 @@
+id: ad41fc64-48a2-46e2-a717-aab7e0893b8e
+module_id: 14533644-c356-457f-a87d-35593c50638b
+slug: normalize-boolean
+position: 7
+created_at: 2025-05-24T08:55:00.018Z
+updated_at: 2025-07-04T12:19:23.167Z
+type: code
+title: منطقي من إدخال نص (نعم/لا)
+blurb: null
+difficulty: medium
+premium_only: false
+base_xp: 150
+s3_path: javascript/01_learn-by-example/009/007_normalize-boolean

@@ -1,0 +1,13 @@
+id: 99a861b9-2869-49b5-ac42-bbe7ddda586f
+module_id: 14533644-c356-457f-a87d-35593c50638b
+slug: hello-world
+position: 1
+created_at: 2025-05-23T18:19:06.333Z
+updated_at: 2025-07-04T12:19:23.164Z
+type: code
+title: مرحبًا أيها العالم!
+blurb: null
+difficulty: easy
+premium_only: false
+base_xp: 30
+s3_path: javascript/01_learn-by-example/009/001_hello-world

@@ -1,0 +1,21 @@
+{
+  "image": "runner/javascript",
+  "files": [
+    {
+      "idx": 0,
+      "path": "age-calculator.js",
+      "lang": "javascript"
+    },
+    {
+      "idx": -1,
+      "path": "age-calculator.spec.js",
+      "lang": "javascript",
+      "ro": true
+    },
+    {
+      "idx": -1,
+      "path": "package.json",
+      "lang": "json"
+    }
+  ]
+}
