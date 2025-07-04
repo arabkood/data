@@ -14,9 +14,10 @@ code: |
   const orderForKitchen = JSON.______(order);
 solution: 0
 options:
-  - "`stringify`"
-  - "`parse`"
-  - "`toString`"
-  - "`convert`"
+  - "stringify"
+  - "parse"
+  - "toString"
+  - "convert"
 explanation: |
-  صحيح! `JSON.stringify()` هي الدالة التي نستخدمها 'لحزم' كائن جافاسكريبت في سلسلة نصية بصيغة `JSON`، لتكون جاهزة للإرسال إلى أي مكان آخر.
+  `JSON.stringify()` هي الدالة التي نستخدمها 'لحزم' كائن جافاسكريبت في سلسلة نصية بصيغة `JSON`، لتكون جاهزة للإرسال إلى أي مكان آخر.
+

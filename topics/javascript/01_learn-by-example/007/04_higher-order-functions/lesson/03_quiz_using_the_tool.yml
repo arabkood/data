@@ -26,6 +26,7 @@ options:
   - "addFive"
   - "multiplyByTwo"
 explanation: |
-  صحيح! نمرر اسم الدالة `addFive` مباشرة كوسيط.
+  نمرر اسم الدالة `addFive` مباشرة كوسيط.
 
   استخدام `addFive()` سيستدعي الدالة فورًا ويمرر قيمتها المُرجعة، وهذا ليس ما تتوقعه الدالة `processNumber`.
+

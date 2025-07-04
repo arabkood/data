@@ -23,8 +23,9 @@ options:
   - "Error"
   - "175"
 explanation: |
-  ممتاز! `createCalculator("add")` تُرجع دالة تجمع رقمين.
+  `createCalculator("add")` تُرجع دالة تجمع رقمين.
 
   نخزن تلك الدالة الجديدة في `finalPrice`.
 
   ثم، `finalPrice(150, 25)` تنفذ عملية الجمع، مما ينتج عنه `175`.
+

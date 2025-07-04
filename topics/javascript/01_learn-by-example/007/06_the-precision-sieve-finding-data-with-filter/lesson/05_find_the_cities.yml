@@ -16,9 +16,10 @@ code: |
   const uaeCities = @@INPUT@@
 solution: 1
 options:
-  - "`cities.map(city => city.country === 'UAE')`"
-  - "`cities.filter(city => city.country === 'UAE')`"
-  - "`cities.filter('UAE')`"
-  - "`cities.filter(city => city.name === 'UAE')`"
+  - "cities.map(city => city.country === 'UAE')"
+  - "cities.filter(city => city.country === 'UAE')"
+  - "cities.filter('UAE')"
+  - "cities.filter(city => city.name === 'UAE')"
 explanation: |
-  ممتاز! ✨ هذا هو الاستخدام الأمثل للتابِع `.filter()`. الدالة `city => city.country === 'UAE'` توفر الاختبار، ويقوم `.filter()` ببناء المصفوفة الجديدة بالعناصر التي نجحت في هذا الاختبار فقط.
+  هذا هو الاستخدام الأمثل للتابِع `.filter()`. الدالة `city => city.country === 'UAE'` توفر الاختبار، ويقوم `.filter()` ببناء المصفوفة الجديدة بالعناصر التي نجحت في هذا الاختبار فقط.
+
