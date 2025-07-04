@@ -8,19 +8,20 @@ code: |
   for (let i = 0; i < studentGrades.length; i++) {
     let grade = studentGrades[i];
     if (grade >= 50) {
-      console.log("ناجح");
+      console.log("pass");
     } else {
-      console.log("راسب");
+      console.log("fail");
     }
   }
 solution: 1
 options:
-  - "`ناجح` `راسب` `راسب`"
-  - "`ناجح` `ناجح` `راسب`"
-  - "`ناجح` `ناجح` `ناجح`"
+  - "pass\nfail\nfail"
+  - "pass\npass\nfail"
+  - "pass\npass\npass"
   - "الشفرة ستسبب خطأ."
 explanation: |
   تعمل الحلقة التكرارية ثلاث مرات:
-  1. قيمة `grade` هي 95. `95 >= 50` صحيحة (true)، لذا تطبع "ناجح".
-  2. قيمة `grade` هي 88. `88 >= 50` صحيحة (true)، لذا تطبع "ناجح".
-  3. قيمة `grade` هي 45. `45 >= 50` خاطئة (false)، لذا تطبع "راسب".
+  1. قيمة `grade` هي 95. `95 >= 50` صحيحة (true)، لذا تطبع "pass".
+  2. قيمة `grade` هي 88. `88 >= 50` صحيحة (true)، لذا تطبع "pass".
+  3. قيمة `grade` هي 45. `45 >= 50` خاطئة (false)، لذا تطبع "fail".
+

@@ -8,18 +8,20 @@
 let guestList = [
   {
     name: "ليلى",
-    city: "القاهرة"
+    city: "القاهرة",
   },
   {
     name: "خالد",
-    city: "عمّان"
-  }
+    city: "عمّان",
+  },
 ];
 
 console.log(guestList);
 ```
 
 **OUTPUT**
+
 ```
 [ { name: 'ليلى', city: 'القاهرة' }, { name: 'خالد', city: 'عمّان' } ]
 ```
+
