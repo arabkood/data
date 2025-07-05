@@ -1,49 +1,31 @@
-type: "match"
-
-question: |
-  صِل بين كل عنصر في العمود الأول وما يناسبه في العمود الثاني.
-  (Match each item in the first column with its corresponding item in the second.)
-
-columns:
-  a:
-    header: "المصطلح أو الصورة" # Header for the left column
-  b:
-    header: "المثال أو التعريف" # Header for the right column
-
-# The `pairs` array contains the correct matches. Each object is one pair.
-# Your UI will take this data, display items from 'a' in one column,
-# and display items from 'b' in a SHUFFLED order in the other column.
-pairs:
-  - # --- Pair 1: Text to Code ---
-    a:
-      type: "text"
-      content: "متغير (Variable)"
-    b:
-      type: "code"
-      lang: "javascript"
-      content: 'let name = "Ali";'
-
-  - # --- Pair 2: Text to Formatted Text (Markdown) ---
-    a:
-      type: "text"
-      content: "مصفوفة (Array)"
-    b:
-      type: "markdown"
-      content: "مجموعة من العناصر المُرتبة، يمكن الوصول إليها عن طريق **فهرس**."
-
-  - # --- Pair 3: Image to Text ---
-    a:
-      type: "image"
-      content: "/images/icons/loop.png"
-      alt: "رمز يمثل حلقة تكرارية" # Alt text for accessibility
-    b:
-      type: "text"
-      content: "حلقة تكرارية (Loop)"
-
-  - # --- Pair 4: Text to Text ---
-    a:
-      type: "text"
-      content: "HTML"
-    b:
-      type: "text"
-      content: "لغة توصيف النص الفائق (HyperText Markup Language)"
+type: match
+question: "قم بمطابقة كل متغير بنوع البيانات الصحيح الخاص به في JavaScript."
+prompts:
+  - type: code
+    lang: javascript
+    content: 'const name = "Alice";'
+  - type: code
+    lang: javascript
+    content: "const age = 30;"
+  - type: code
+    lang: javascript
+    content: "const isStudent = true;"
+  - type: code
+    lang: javascript
+    content: "const user = { id: 1 };"
+options:
+  - type: text
+    content: "Number"
+  - type: text
+    content: "Boolean"
+  - type: text
+    content: "Object"
+  - type: text
+    content: "String"
+solution: [3, 0, 1, 2]
+explanation: |
+  في JavaScript، يتم تحديد أنواع البيانات ديناميكيًا بناءً على القيمة المعينة:
+  - `"Alice"` هي سلسلة نصية (`String`).
+  - `30` هو رقم (`Number`).
+  - `true` هي قيمة منطقية (`Boolean`).
+  - `{ id: 1 }` هو كائن (`Object`).
