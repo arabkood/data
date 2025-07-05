@@ -1,10 +1,13 @@
 type: "bug"
 lang: "javascript"
-question: |
-  Which line have mistake?
+question: "Which line contains the mistake?"
 code: |
   let a = 1;
   let b = 2;
-  let message = "a + b = " + a + b;
+  let message = "a + b = " + a * b;
   console.log(message);
-solution: 0
+solution: 2
+explanation: "String concatenation vs addition operator precedence issue"
+hint: "hint"
+expectedOutput: "a + b = 3"
+actualOutput: "a + b = 12"
