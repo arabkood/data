@@ -3,10 +3,12 @@ lang: "javascript"
 question: |
   أكمل الفراغات لإنشاء دالة تُرجع "hello {name}".
 code: |
+  @@INPUT@@ message = "hello";
   function @@INPUT@@(@@INPUT@@) {
-    @@INPUT@@ "hello " + name;
+    @@INPUT@@ message + " " + name;
   }
 solution:
+  - "/^(let|var|const)$/"
   - sayHello
   - name
   - return
