@@ -1,0 +1,49 @@
+type: "match"
+
+question: |
+  صِل بين كل عنصر في العمود الأول وما يناسبه في العمود الثاني.
+  (Match each item in the first column with its corresponding item in the second.)
+
+columns:
+  a:
+    header: "المصطلح أو الصورة" # Header for the left column
+  b:
+    header: "المثال أو التعريف" # Header for the right column
+
+# The `pairs` array contains the correct matches. Each object is one pair.
+# Your UI will take this data, display items from 'a' in one column,
+# and display items from 'b' in a SHUFFLED order in the other column.
+pairs:
+  - # --- Pair 1: Text to Code ---
+    a:
+      type: "text"
+      content: "متغير (Variable)"
+    b:
+      type: "code"
+      lang: "javascript"
+      content: 'let name = "Ali";'
+
+  - # --- Pair 2: Text to Formatted Text (Markdown) ---
+    a:
+      type: "text"
+      content: "مصفوفة (Array)"
+    b:
+      type: "markdown"
+      content: "مجموعة من العناصر المُرتبة، يمكن الوصول إليها عن طريق **فهرس**."
+
+  - # --- Pair 3: Image to Text ---
+    a:
+      type: "image"
+      content: "/images/icons/loop.png"
+      alt: "رمز يمثل حلقة تكرارية" # Alt text for accessibility
+    b:
+      type: "text"
+      content: "حلقة تكرارية (Loop)"
+
+  - # --- Pair 4: Text to Text ---
+    a:
+      type: "text"
+      content: "HTML"
+    b:
+      type: "text"
+      content: "لغة توصيف النص الفائق (HyperText Markup Language)"
