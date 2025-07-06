@@ -1,0 +1,14 @@
+id: 864483c5-f0b7-4905-acf3-4279ebbf4fd4
+module_id: 06e8de77-5ecd-4b88-b697-1d82f5757843
+slug: code-home
+position: 4
+created_at: 2025-07-06T18:20:38.902Z
+updated_at: 2025-07-06T18:20:38.902Z
+type: lesson
+title: 'حفظ عملك: ربط ملفات HTML مع ملفات جافاسكريبت'
+blurb: >-
+  نتجاوز وحدة التحكم المؤقتة. ستتعلم الطريقة الصحيحة لإنشاء ملف `index.html`
+  وملف `script.js` وربطهما معًا باستخدام وسم `<script>` والخاصية `src`.
+difficulty: easy
+base_xp: 250
+s3_path: javascript/01_beginner-track/001/04_code-home

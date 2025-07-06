@@ -1,0 +1,14 @@
+id: 7543fdeb-f0ec-4e27-afb6-7cf63882c4bf
+module_id: 06e8de77-5ecd-4b88-b697-1d82f5757843
+slug: javascript-home
+position: 2
+created_at: 2025-07-06T18:20:38.902Z
+updated_at: 2025-07-06T18:20:38.902Z
+type: lesson
+title: أين يعمل كود جافاسكريبت؟ المتصفح مقابل الخادم
+blurb: >-
+  نتعمق في البيئتين الرئيسيتين لتشغيل جافاسكريبت. ستفهم الفرق بين الكود الذي
+  يعمل على جهازك (في المتصفح) والكود الذي يعمل على خادم بعيد (باستخدام Node.js).
+difficulty: easy
+base_xp: 150
+s3_path: javascript/01_beginner-track/001/02_javascript-home

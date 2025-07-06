@@ -1,0 +1,14 @@
+id: 8f0f9fa0-8710-44db-afd9-b57b1b00e24d
+module_id: 06e8de77-5ecd-4b88-b697-1d82f5757843
+slug: browser
+position: 3
+created_at: 2025-07-06T18:20:38.902Z
+updated_at: 2025-07-06T18:20:38.902Z
+type: lesson
+title: 'تجربتك الأولى: كتابة الكود مباشرة في وحدة تحكم المتصفح (Console)'
+blurb: >-
+  دليل عملي لفتح "أدوات المطور" في متصفحك. ستكتب أمرك الأول `console.log` وتفهم
+  لماذا تعتبر وحدة التحكم مكاناً رائعاً للتجارب السريعة والمؤقتة.
+difficulty: easy
+base_xp: 200
+s3_path: javascript/01_beginner-track/001/03_browser

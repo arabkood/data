@@ -1,0 +1,13 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  Paste the following code into your browser console and press enter. 
+  What is the correct output?
+code: |
+  console.log("Hello, World!");
+solution: 0
+options:
+  - Hello, World!
+  - undefined
+  - error
+  - Something else

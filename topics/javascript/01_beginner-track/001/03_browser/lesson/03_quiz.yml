@@ -1,0 +1,11 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  What happens to the code you wrote in the console after you refresh the webpage?
+solution: 1
+options:
+  - "It is saved automatically."
+  - "It disappears."
+  - "It runs again."
+explanation: |
+  The console is temporary. It's a "playground," not a permanent home. When you refresh the page, the environment is reset, and any code you typed is gone. In the next lesson, we'll learn how to save our code permanently.

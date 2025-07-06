@@ -1,0 +1,10 @@
+type: "order"
+lang: "html"
+question: |
+  The browser needs HTML to be in the correct order. Drag and drop these lines to create a valid HTML file that links to a JavaScript file.
+code:
+  - "<html>"
+  - "<body>"
+  - '<script src="script.js"></script>'
+  - "</body>"
+  - "</html>"

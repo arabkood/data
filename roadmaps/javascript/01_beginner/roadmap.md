@@ -1,0 +1,62 @@
+### **Roadmap 1: JavaScript for Beginners**
+
+This roadmap focuses on the core fundamentals required to start writing interactive and useful JavaScript. It prioritizes practical application over deep theory, building a strong foundation step-by-step.
+
+- **Introduction to JavaScript**
+
+  - What is JavaScript? (A brief, motivating overview)
+  - Where Can JavaScript Run? The Two Main Homes (Browser vs. Server/Node.js)
+  - Your First Playground: The Browser Developer Console
+  - Creating a Permanent Home: The HTML + JavaScript File Method
+  - Choosing Your Super-Powered Editor: Intro to VS Code
+  - The Magic Trick for Easy Practice: Using the "Live Server" Extension
+  - Summary & The Path Forward (Recap of the environments and our focus)
+
+- **Variables & Basic Data**
+  - Variable Declarations with `let` and `const`
+  - Variable Naming Rules
+  - Primitive Types
+    - string
+    - number
+    - boolean
+    - null
+    - undefined
+  - `typeof` operator
+- **Basic Operators**
+  - Assignment Operators (`=`, `+=`, etc.)
+  - Arithmetic Operators (`+`, `-`, `*`, `/`, `%`)
+  - String Operators (Concatenation)
+  - Comparison Operators (`===`, `!==`, `>`, `<`)
+  - Logical Operators (`&&`, `||`, `!`)
+- **Control Flow**
+  - Conditional Statements
+    - if...else
+    - switch
+    - Conditional (Ternary) Operator
+- **Data Structures: The Essentials**
+  - Arrays (Indexed Collections)
+  - Objects (Keyed Collections)
+  - Accessing Array & Object data
+- **Loops and Iterations**
+  - `for` loop
+  - `while` loop
+  - `break / continue`
+  - `for...of` loop (for Arrays)
+- **Functions**
+  - Defining and Calling Functions
+  - Function Parameters
+  - The `return` Statement
+  - Arrow Functions
+- **DOM APIs (Making Pages Interactive)**
+  - Selecting Elements (`getElementById`, `querySelector`)
+  - Changing Content (`textContent`, `innerHTML`)
+  - Changing Styles (`element.style`)
+  - Handling Events (`addEventListener`)
+- **Introduction to Asynchronous JavaScript**
+  - The Concept of Asynchronicity
+  - Callbacks (the basic idea)
+  - Promises (how to use `.then()` and `.catch()`)
+  - `async/await`
+- **Working with APIs**
+  - JSON
+  - Fetch API

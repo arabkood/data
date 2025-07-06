@@ -1,0 +1,11 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  If you write code to automatically send a welcome email when a user signs up on a website, where would that code most likely run?
+solution: 1
+options:
+  - "In the user's browser."
+  - "On the server."
+  - "In both places."
+explanation: |
+  This is a classic server-side task. You wouldn't want the user's browser to be responsible for sending an email. The server handles secure and reliable operations like this after receiving the user's signup information.
