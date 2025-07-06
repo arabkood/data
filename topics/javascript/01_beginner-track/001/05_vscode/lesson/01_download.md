@@ -4,4 +4,4 @@ The most popular code editor in the world is **Visual Studio Code (VS Code)**. I
 
 **Your task:** Download and install VS Code now. It will be the main tool we use for the rest of the course.
 
-[**Download Visual Studio Code Here**](https://code.visualstudio.com/)
+[**🌐 Download Visual Studio Code Here**](https://code.visualstudio.com/Download)

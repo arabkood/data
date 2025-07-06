@@ -18,7 +18,7 @@ Here is the basic code. Create a folder on your computer, and inside it, create 
   <body>
     <h1>Welcome to my website!</h1>
 
-    <!-- This line connects our JavaScript file -->
+    <!-- The line below connects our JavaScript file -->
     <script src="script.js"></script>
   </body>
 </html>
