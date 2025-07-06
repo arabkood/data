@@ -9,7 +9,7 @@ Here is the basic code. Create a folder on your computer, and inside it, create 
 
 **File: `index.html`**
 
-```html title:index.html
+```html copy title=index.html
 <!DOCTYPE html>
 <html>
   <head>
@@ -26,7 +26,7 @@ Here is the basic code. Create a folder on your computer, and inside it, create 
 
 **File: `script.js`**
 
-```javascript title:script.js
+```javascript copy title=script.js
 console.log("Hello from my file!");
 ```
 
