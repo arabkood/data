@@ -1,0 +1,20 @@
+type: bug
+lang: javascript
+question: " الدالة التالية مصممة لجمع أرقام مصفوفة، لكنها تعطي ناتجاً خاطئاً. أي سطر يحتوي على الخطأ الذي يسبب هذه المشكلة؟"
+code: |
+  function calculateSum(arr) {
+    let sum = 0;
+    for (let i = 0; i <= arr.length; i++) {
+      sum += arr[i];
+    }
+    return sum;
+  }
+
+  const numbers = [10, 20, 30, 40, 50];
+  console.log(calculateSum(numbers));
+solution: 2
+explanation: |
+  شرط الحلقة `i <= arr.length` يتسبب في تنفيذ الحلقة مرة إضافية. فهارس المصفوفة تبدأ من `0` وتنتهي عند `arr.length - 1`. في الدورة الأخيرة، تصبح قيمة `i` مساوية لطول المصفوفة، ومحاولة الوصول إلى `arr[arr.length]` تُرجع القيمة `undefined`. إضافة `undefined` إلى المجموع ينتج عنه `NaN`. يجب أن يكون الشرط الصحيح هو `i < arr.length`.
+hint: "ركّز على شرط دوران الحلقة. كم عدد المرات التي يجب أن تدور فيها الحلقة لتشمل جميع عناصر المصفوفة؟"
+expectedOutput: "150"
+actualOutput: "NaN"
