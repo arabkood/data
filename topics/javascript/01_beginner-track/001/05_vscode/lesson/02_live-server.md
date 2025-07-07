@@ -9,4 +9,4 @@
 3.  اكتب "Live Server" في شريط البحث.
 4.  ابحث عن الإضافة وانقر على "Install".
 
-TODO: (سيتم تضمين صورة متحركة GIF أو فيديو قصير هنا يوضح عملية التثبيت من متجر `VS Code`.)\_
+![كيفية تثبيت "Live Server" في VS Code](public://images/gif/guides/how-to-install-live-server-in-vscode.gif)
