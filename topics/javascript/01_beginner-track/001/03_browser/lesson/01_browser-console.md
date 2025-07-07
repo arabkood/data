@@ -10,4 +10,4 @@
 
 إليك مقطع متحرك قصير يوضح كيفية القيام بذلك:
 
-_TODO: (A GIF/short video would be embedded here showing the process in a browser like Chrome or Firefox)_
+![كيفية فتح وحدة تحكم المتصفح](public://images/gif/guides/how-to-open-browser-console.gif)
