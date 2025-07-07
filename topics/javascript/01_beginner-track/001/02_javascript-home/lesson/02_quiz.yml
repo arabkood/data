@@ -1,11 +1,11 @@
 type: "quiz"
 lang: "javascript"
 question: |
-  If you write code to automatically send a welcome email when a user signs up on a website, where would that code most likely run?
+  إذا كتبت كوداً لإرسال بريد إلكتروني ترحيبي تلقائياً عند تسجيل مستخدم جديد في موقع ويب، فأين سيعمل هذا الكود على الأرجح؟
 solution: 1
 options:
-  - "In the user's browser."
-  - "On the server."
-  - "In both places."
+  - "في متصفح المستخدم."
+  - "على الخادم."
+  - "في كلا المكانين."
 explanation: |
-  This is a classic server-side task. You wouldn't want the user's browser to be responsible for sending an email. The server handles secure and reliable operations like this after receiving the user's signup information.
+  هذه مهمة كلاسيكية من مهام `الخادم`. لا تريد أن يكون متصفح المستخدم مسؤولاً عن إرسال بريد إلكتروني. الخادم هو الذي يتولى العمليات الآمنة والموثوقة مثل هذه بعد استلام معلومات تسجيل المستخدم.

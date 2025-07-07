@@ -1,7 +1,9 @@
-While you can write code in a simple text editor, a specialized **code editor** is a developer's best friend. It provides features like syntax highlighting (coloring your code to make it readable), auto-completion, and error-checking.
+بينما يمكنك كتابة الكود في محرر نصوص بسيط، فإن **محرر الأكواد** المتخصص هو أفضل صديق للمطور. فهو يوفر ميزات مثل تلوين الكود لجعله قابلاً للقراءة، و الإكمال التلقائي، و التحقق من الأخطاء.
 
-The most popular code editor in the world is **Visual Studio Code (VS Code)**. It's free, powerful, and used by millions of developers.
+أشهر محرر أكواد في العالم هو **`Visual Studio Code` (أو "VS Code" اختصاراً)**. إنه مجاني، قوي، ويستخدمه ملايين المطورين.
 
-**Your task:** Download and install VS Code now. It will be the main tool we use for the rest of the course.
+### **مهمتك:**
 
-[**🌐 Download Visual Studio Code Here**](https://code.visualstudio.com/Download)
+قم بتنزيل وتثبيت `VS Code` الآن. سيكون الأداة الرئيسية التي سنستخدمها لتطبيق الأمثلة.
+
+[**🌐 تنزيل Visual Studio Code من هنا**](https://code.visualstudio.com/Download)

@@ -1,11 +1,11 @@
 type: "quiz"
 lang: "javascript"
 question: |
-  What is the primary role of JavaScript on a webpage?
+  ما هو الدور الأساسي للغة `جافاسكريبت` في صفحات الويب؟
 solution: 2
 options:
-  - "To structure the content."
-  - "To style the page with colors and fonts."
-  - "To add interactivity and behavior."
+  - "بناء هيكل المحتوى."
+  - "تنسيق الصفحة بالألوان والخطوط."
+  - "إضافة التفاعلية والسلوك."
 explanation: |
-  While HTML structures the content and CSS styles it, JavaScript's main job is to add behavior, like responding to user clicks, validating forms, and creating dynamic effects.
+  بينما تهتم `HTML` بهيكلة المحتوى و `CSS` بتنسيقه، فإن الوظيفة الرئيسية لـ `جافاسكريبت` هي إضافة السلوك، مثل الاستجابة لنقرات المستخدم، والتحقق من صحة النماذج، وإنشاء تأثيرات تفاعلية.

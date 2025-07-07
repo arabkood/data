@@ -5,10 +5,11 @@ position: 5
 created_at: 2025-07-06T18:20:38.902Z
 updated_at: 2025-07-06T18:20:38.902Z
 type: lesson
-title: 'تسريع وتيرة العمل: إعداد بيئة تطوير احترافية (VS Code)'
+title: "تسريع وتيرة العمل: إعداد بيئة تطوير احترافية (VS Code)"
 blurb: >-
   وداعًا للتحديث اليدوي للصفحة! في هذا الدرس، ستقوم بتثبيت محرر الأكواد VS Code
   وإضافة "Live Server" لتشاهد تغييراتك في المتصفح تلقائيًا بمجرد حفظ الملف.
 difficulty: easy
-base_xp: 300
+base_xp: 200
 s3_path: javascript/01_beginner-track/001/05_vscode
+

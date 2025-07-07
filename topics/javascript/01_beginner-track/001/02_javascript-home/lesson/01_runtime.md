@@ -1,7 +1,7 @@
-Your JavaScript code needs a place to run, an "environment." There are two main homes for JavaScript:
+كود `جافاسكريبت` الخاص بك يحتاج إلى مكان ليعمل فيه، وهو ما نسميه `بيئة التشغيل`. هناك بيئتان رئيسيتان لـ `جافاسكريبت`:
 
-1.  **The Browser (Client-Side):** This is the most common home. Every modern web browser (like Chrome, Firefox, Safari) has a built-in JavaScript engine. This code runs directly on the _user's_ computer. It's used to manipulate the webpage the user is currently looking at, creating interactive experiences.
+1.  **`المتصفح`:** هذا هو المكان الأكثر شيوعًا. كل متصفح ويب حديث (مثل Chrome، Firefox، Safari) يحتوي على محرك `جافاسكريبت` مدمج. يعمل هذا الكود مباشرة على جهاز _المستخدم_. يُستخدم للتلاعب بصفحة الويب التي يتصفحها المستخدم حاليًا، مما يخلق تجارب تفاعلية.
 
-2.  **The Server (Node.js):** This is a more advanced environment. With a tool called **Node.js**, you can run JavaScript code on a server—a powerful computer that sends websites to users. This is used for tasks that shouldn't happen on a user's machine, like accessing a database, handling user logins, or sending automated emails.
+2.  **`الخادم`:** هذه بيئة أكثر تقدماً. باستخدام أداة تسمى **`Node.js`**، يمكنك تشغيل كود `جافاسكريبت` على خادم — وهو جهاز كمبيوتر قوي يرسل مواقع الويب للمستخدمين. يُستخدم هذا لمهام لا ينبغي أن تحدث على جهاز المستخدم، مثل الوصول إلى قاعدة بيانات، أو التعامل مع عمليات تسجيل الدخول، أو إرسال رسائل بريد إلكتروني آلية.
 
-For this course, we will focus almost entirely on JavaScript that runs in **the browser**, as it's the foundation for all web development.
+في هذه الدورة، سنركز بشكل شبه كامل على `جافاسكريبت` التي تعمل في **المتصفح**، لأنها الأساس لكل تطوير الويب.

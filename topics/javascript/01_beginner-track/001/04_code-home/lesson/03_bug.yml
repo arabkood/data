@@ -1,14 +1,14 @@
 type: "bug"
 lang: "html"
-question: "There is a mistake in this HTML file that prevents the JavaScript from loading. Find the line with the bug."
+question: "يوجد خطأ في ملف `HTML` هذا يمنع تحميل ملف `جافاسكريبت`. ابحث عن السطر الذي يحتوي على الخطأ."
 code: |
   <html>
     <body>
-      <h1>My First App</h1>
+      <h1>تطبيقي الأول</h1>
       <script scc="script.js"></script>
     </body>
   </html>
 solution: 3
 explanation: |
-  The attribute to specify the source of a script file is `src`, not `scc`. The browser doesn't understand `scc`, so it fails to load the `script.js` file.
-hint: "Look closely at the attributes inside the `<script>` tag. Is the attribute name spelled correctly?"
+  الخاصية المستخدمة لتحديد مصدر ملف السكريبت هي `src`، وليس `scc`. المتصفح لا يفهم `scc`، وبالتالي يفشل في تحميل ملف `script.js`.
+hint: "انظر جيداً إلى الخصائص داخل وسم `<script>`. هل اسم الخاصية مكتوب بشكل صحيح؟"

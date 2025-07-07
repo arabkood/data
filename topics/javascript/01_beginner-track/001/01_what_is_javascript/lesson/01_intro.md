@@ -1,11 +1,11 @@
-Welcome to the world of JavaScript! You're about to learn one of the most powerful and in-demand programming languages on the planet.
+أهلاً بك في عالم `جافاسكريبت`! أنت على وشك تعلم واحدة من أقوى لغات البرمجة وأكثرها طلباً في العالم.
 
-So, what does it do? Simply put, **JavaScript makes websites come alive.**
+إذًا، ما الذي تفعله هذه اللغة؟ ببساطة، **`جافاسكريبت` هي التي تبث الحياة في المواقع الإلكترونية.**
 
-Think of a website like building a person:
+تخيل أن بناء موقع إلكتروني يشبه بناء إنسان:
 
-- **HTML** is the **skeleton** that gives the page its structure.
-- **CSS** is the **skin**, clothes, and appearance—the colors, fonts, and layout.
-- **JavaScript** is the **brain and muscles**. It handles the thinking, actions, and interactivity. When you click a button, see a pop-up, or watch an animation, that's JavaScript at work.
+- **`HTML`** هي **الهيكل العظمي** الذي يعطي الصفحة بنيتها الأساسية.
+- **`CSS`** هي **الجلد والملابس والمظهر العام** — الألوان، الخطوط، والتصميم.
+- **`JavaScript`** هي **العقل والعضلات**. هي المسؤولة عن التفكير، الأفعال، والتفاعل. عندما تضغط على زر، أو ترى نافذة منبثقة، أو تشاهد رسماً متحركاً، فكل هذا من عمل `جافاسكريبت`.
 
-Learning JavaScript opens the door to building dynamic web applications, mobile apps, server-side applications, and much more. Let's get started!
+تعلم `جافاسكريبت` يفتح لك الباب لبناء تطبيقات ويب تفاعلية، تطبيقات جوال، تطبيقات تعمل على الخوادم (`backend`)، وأكثر من ذلك بكثير. هيا بنا نبدأ

@@ -1,33 +1,34 @@
-The console is great for quick tests, but for real projects, we need to save our code in files. The standard setup involves two files:
+الكونسول رائع للاختبارات السريعة، لكن للمشاريع الحقيقية، نحتاج إلى حفظ الكود الخاص بنا في ملفات. نحتاج على اأقل ملفين:
 
-1.  **`index.html`**: The HTML file that structures our webpage.
-2.  **`script.js`**: The JavaScript file where we write our code.
+1.  **`index.html`**: ملف `HTML` الذي يهيكل صفحة الويب الخاصة بنا.
+2.  **`script.js`**: ملف `جافاسكريبت` الذي نكتب فيه الكود الخاص بنا.
 
-How do they connect? We use a special HTML tag, `&lt;script&gt;`, inside our HTML file to tell the browser: "Hey, please load and run the code from this JavaScript file!"
+كيف يتصلان ببعضهما؟ نستخدم وسماً خاصاً في `HTML`، وهو `&lt;script&gt;`، داخل ملف `HTML` لنخبر المتصفح:
+"مرحباً، رجاءً قم بتحميل وتشغيل الكود من ملف `جافاسكريبت` هذا!"
 
-Here is the basic code. Create a folder on your computer, and inside it, create these two files with this exact content.
+إليك الكود الأساسي. أنشئ مجلداً على جهاز الكمبيوتر الخاص بك، وبداخله، أنشئ هذين الملفين بنفس المحتوى تماماً.
 
-**File: `index.html`**
+**ملف 1: `index.html`**
 
 ```html copy title=index.html
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My First App</title>
+    <title>تطبيقي الأول</title>
   </head>
   <body>
-    <h1>Welcome to my website!</h1>
+    <h1>أهلاً بك في موقعي!</h1>
 
-    <!-- The line below connects our JavaScript file -->
+    <!-- السطر التالي يربط ملف جافاسكريبت الخاص بنا -->
     <script src="script.js"></script>
   </body>
 </html>
 ```
 
-**File: `script.js`**
+**ملف 2: `script.js`**
 
 ```javascript copy title=script.js
-console.log("Hello from my file!");
+console.log("مرحباً من ملفي!");
 ```
 
-Now, if you open the `index.html` file in your browser and check the console, you'll see the message!
+الآن، إذا فتحت ملف `index.html` في متصفحك وتفقدت الكونسول، سترى الرسالة

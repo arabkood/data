@@ -1,10 +1,12 @@
-Congratulations! You now have a professional, efficient development setup.
+تهانينا! أصبح لديك الآن بيئة تطوير احترافية وفعالة.
 
-From this point forward, this is how you should work on all lessons and projects:
+من الآن فصاعداً، هكذا يجب أن تعمل على جميع الدروس والمشاريع:
 
-1.  Open your project folder in **VS Code**.
-2.  Click **"Go Live"** to start the server.
-3.  Write your code.
-4.  Save your file to see the changes instantly in the browser.
+1.  افتح مجلد مشروعك في **`VS Code`**.
+2.  انقر على **"Go Live"** لبدء الخادم.
+3.  اكتب الكود الخاص بك.
+4.  احفظ ملفك لترى التغييرات فوراً في المتصفح.
 
-This **VS Code + Live Server** method is the best way to practice what you learn in this course. Use it always
+طريقة **`VS Code` + `Live Server`** هذه هي أفضل وسيلة لتطبيق ما تتعلمه في هذه الدورة. استخدمها دائماً!
+
+> يمكنك دائماً العودة إلى هنا، إذا نسيت شيئاً ما.

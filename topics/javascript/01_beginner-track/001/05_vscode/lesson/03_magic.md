@@ -1,16 +1,16 @@
-Now for the fun part!
+الآن جاء الجزء الممتع!
 
-1.  Open the folder containing your `index.html` and `script.js` files in VS Code (`File > Open Folder...`).
-2.  Look at the bottom-right corner of your VS Code window. You should see a new button that says **"Go Live"**.
-3.  Click it!
+1.  افتح المجلد الذي يحتوي على ملفي `index.html` و`script.js` في `VS Code` (عبر "File > Open Folder...").
+2.  انظر إلى الزاوية اليمنى السفلية من نافذة `VS Code`. من المفترض أن ترى زراً جديداً مكتوباً عليه **"Go Live"**.
+3.  انقر عليه!
 
-This will automatically open your `index.html` file in your default browser.
+سيؤدي هذا إلى فتح ملف `index.html` تلقائياً في متصفحك الافتراضي.
 
-Now, try this:
+الآن، جرب هذا:
 
-- Arrange your VS Code and browser windows side-by-side.
-- Change the `console.log` message in your `script.js` file.
-- **Just save the file (Ctrl+S or Cmd+S).**
-- Watch your browser. It will refresh by itself, and the new message will appear in the console instantly!
+- رتب نافذة `VS Code` ونافذة المتصفح جنباً إلى جنب.
+- غير رسالة `console.log` في ملف `script.js` الخاص بك.
+- **فقط احفظ الملف (Ctrl+S أو Cmd+S).**
+- راقب متصفحك. سيقوم بالتحديث من تلقاء نفسه، وستظهر الرسالة الجديدة في الكونسول على الفور!
 
-_(A GIF/short video would be embedded here showing a user opening a project, clicking "Go Live", then editing and saving the .js file, with the browser automatically refreshing.)_
+TODO: _(سيتم تضمين صورة متحركة GIF أو فيديو قصير هنا يوضح مستخدماً يفتح مشروعاً، وينقر على "Go Live"، ثم يعدل ويحفظ ملف .js، مع تحديث المتصفح تلقائياً.)_

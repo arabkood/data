@@ -1,7 +1,8 @@
 type: "order"
 lang: "html"
 question: |
-  The browser needs HTML to be in the correct order. Drag and drop these lines to create a valid HTML file that links to a JavaScript file.
+  يحتاج المتصفح إلى ترتيب كود `HTML` بشكل صحيح. 
+  **قم ترتيب هذه الأسطر** لإنشاء ملف `HTML` صحيح يربط بملف `جافاسكريبت`.
 code:
   - "<html>"
   - "<body>"

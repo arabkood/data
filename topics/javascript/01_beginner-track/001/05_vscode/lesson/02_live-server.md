@@ -1,12 +1,12 @@
-VS Code has a massive library of "extensions"—add-ons that give it new powers. The first and most important one we'll install is called **Live Server**.
+يمتلك **`VS Code`** مكتبة ضخمة من الإضافات التي تمنحه قدرات جديدة. أول وأهم إضافة سنقوم بتثبيتها تسمى **"Live Server"**.
 
-Live Server creates a small local development server and, most importantly, **automatically refreshes your browser** whenever you save a file. No more manual refreshing!
+تقوم إضافة "Live Server" بإنشاء خادم تطوير محلي صغير، والأهم من ذلك، **تقوم بتحديث المتصفح تلقائياً** كلما قمت بحفظ ملف. لا مزيد من التحديث اليدوي!
 
-**How to install it:**
+**كيفية تثبيتها:**
 
-1. Open VS Code.
-2. Click the Extensions icon on the sidebar (it looks like four squares).
-3. Type "Live Server" in the search bar.
-4. Find the one by Ritwick Dey and click "Install".
+1.  افتح `VS Code`.
+2.  انقر على أيقونة الإضافات (Extensions) في الشريط الجانبي (تبدو مثل أربعة مربعات).
+3.  اكتب "Live Server" في شريط البحث.
+4.  ابحث عن الإضافة وانقر على "Install".
 
-_(A GIF/short video would be embedded here showing the installation process from the VS Code marketplace.)_
+TODO: (سيتم تضمين صورة متحركة GIF أو فيديو قصير هنا يوضح عملية التثبيت من متجر `VS Code`.)\_
