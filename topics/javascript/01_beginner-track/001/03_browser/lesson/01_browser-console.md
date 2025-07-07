@@ -10,4 +10,4 @@
 
 إليك مقطع متحرك قصير يوضح كيفية القيام بذلك:
 
-![كيفية فتح وحدة تحكم المتصفح](public://images/gif/guides/how-to-open-browser-console.gif)
+![كيفية فتح وحدة تحكم المتصفح](public://images/gif/guides/how-to-open-browser-console.gif?ph=640x480)

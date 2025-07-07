@@ -13,4 +13,4 @@
 - **فقط احفظ الملف (Ctrl+S أو Cmd+S).**
 - راقب متصفحك. سيقوم بالتحديث من تلقاء نفسه، وستظهر الرسالة الجديدة في الكونسول على الفور!
 
-![كيفية تشغيل "Live Server" في VS Code](public://images/gif/guides/how-to-start-live-server-in-vscode.gif)
+![كيفية تشغيل "Live Server" في VS Code](public://images/gif/guides/how-to-start-live-server-in-vscode.gif?ph=640x480)
