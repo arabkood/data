@@ -1,0 +1,15 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  ممتاز! الآن، قبل الإطلاق، يجب أن نتأكد من أن الطقس مناسب. أي من الخيارات التالية هو الطريقة الصحيحة للتحقق مما إذا كان `:variable` المسمى `isWeatherGood` قيمته `true`؟
+code: |
+  let isWeatherGood = true;
+  // ما هو الكود الصحيح هنا؟
+options:
+  - "check(isWeatherGood) {}"
+  - "if (isWeatherGood === true) {}"
+  - "when (isWeatherGood) {}"
+  - "case (isWeatherGood) {}"
+solution: 1
+explanation: |
+  في `:javascript`، نستخدم عبارة `:if` متبوعة بشرط بين قوسين `()` للتحقق من صحة حالة معينة. هذا يسمح لنا بتنفيذ كود فقط عند تحقق الشرط.

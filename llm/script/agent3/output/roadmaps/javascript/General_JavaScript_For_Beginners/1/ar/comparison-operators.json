@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "موازين الحقيقة: استخدام عوامل المقارنة",
+    "blurb": "تعلّم كيف تطرح الأسئلة في شيفرتك البرمجية باستخدام عوامل المقارنة مثل >، <، و ===. هذا هو مفتاح جعل برامجك تتخذ القرارات.",
+    "difficulty": "easy",
+    "base_xp": 150,
+    "type": "lesson",
+    "slug": "comparison-operators"
+  },
+  "files": [
+    {
+      "name": "01_the_question.md",
+      "content": "في درسنا السابق، اكتشفنا **القيم المنطقية (`booleans`)** - وهي القيم البسيطة `true` و `false` التي تمثل الإجابات في شيفرتنا.\n\nلكن، كيف تطرح شيفرتنا الأسئلة في المقام الأول؟ 🤔\n\nتخيّل الأمر كميزان ذي كفتين. نحتاج طريقة لوضع شيئين على الميزان ورؤية كيفية مقارنتهما. لهذا الغرض، نستخدم **عوامل المقارنة (`comparison operators`)**.\n\nلنرى أحدها قيد التنفيذ. العامل `>` يتحقق مما إذا كانت القيمة على اليسار **أكبر من** القيمة على اليمين.\n\n```javascript\nlet omarApples = 10;\nlet laylaApples = 7;\n\nconsole.log(omarApples > laylaApples);\n```\n\n**الناتج:**\n```text\n> true\n```\n\nلأن 10 أكبر من 7، فإن التعبير البرمجي يعطينا نتيجة `true`. بسيط، أليس كذلك؟ لنجرّب الآن."
+    },
+    {
+      "name": "02_greater_than_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  ماذا سيكون ناتج هذه الشيفرة؟\n\n  **ركّز على اتجاه** العامل `>`.\n---\ncode: |\n  let teamAScore = 150;\n  let teamBScore = 200;\n\n  console.log(teamAScore > teamBScore);\n---\nsolution: 1\noptions:\n  - \"`true`\"\n  - \"`false`\"\n  - \"`150`\"\n  - \"`خطأ برمجي`\"\nexplanation: |\n  التعبير `teamAScore > teamBScore` يسأل: \"هل 150 أكبر من 200؟\".\n\n  الإجابة هي `false`، وهذا ما ستعرضه الدالة `console.log`."
+    },
+    {
+      "name": "03_more_scales.md",
+      "content": "عمل رائع! السؤال عن \"أكبر من\" هو مجرد البداية.\n\nلدينا مجموعة كاملة من الأدوات لأنواع مختلفة من المقارنات.\n\n- `<` : أصغر من\n- `>=` : أكبر من أو يساوي\n- `<=` : أصغر من أو يساوي\n\nلنتخيل سيناريو. لاجتياز امتحان، يحتاج الطالب إلى درجة 50 أو أكثر.\n\n```javascript\nlet studentScore = 65;\nlet passingScore = 50;\n\nconsole.log(studentScore >= passingScore);\n```\n\n**الناتج:**\n```text\n> true\n```\n\nدرجة الطالب `studentScore` هي 65، وهي أكبر من أو تساوي 50. لقد نجح الطالب! ✅"
+    },
+    {
+      "name": "04_equality_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  ماذا لو أردنا التحقق مما إذا كان شيئان **متطابقين تمامًا**؟\n\n  لذلك، نستخدم **عامل المساواة الصارم (`strict equality operator`)**، وهو `===`.\n\n  املأ الفراغ أدناه للتحقق مما إذا كانت المدينة المُدخلة تطابق \"Dubai\".\n---\ncode: |\n  let destinationCity = \"Dubai\";\n  let enteredCity = \"Dubai\";\n\n  console.log(destinationCity @@INPUT@@ enteredCity);\n---\nsolution: 2\noptions:\n  - \"`=`\"\n  - \"`==`\"\n  - \"`===`\"\n  - \"`>`\"\nexplanation: |\n  صحيح! `===` هو `عامل المساواة الصارم`. إنه يتحقق مما إذا كانت قيمتان متساويتين في القيمة والنوع، دون تغيير أي منهما.\n\n  استخدام علامة `=` واحدة سيكون عملية إسناد قيمة، وهو خطأ شائع!"
+    },
+    {
+      "name": "05_find_the_mistake_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  أوه لا. كتب زميل مبرمج هذه الشيفرة للتحقق من كلمة مرور، لكنها لا تعمل بشكل صحيح. إنها تطبع دائمًا قيمة كلمة المرور المُدخلة بدلاً من `true` أو `false`!\n\n  ما هو الخطأ هنا؟\n---\ncode: |\n  let correctPassword = \"SeSAME\";\n  let enteredPassword = \"open up\";\n\n  console.log(correctPassword = enteredPassword);\n---\nsolution: 0\noptions:\n  - \"استخدام `=` (الإسناد) بدلاً من `===` (المقارنة).\"\n  - \"كلمتا المرور غير متطابقتين.\"\n  - \"لا يمكن مقارنة النصوص.\"\n  - \"أسماء المتغيرات طويلة جدًا.\"\nexplanation: |\n  هذا خطأ برمجي كلاسيكي! علامة المساواة الواحدة `=` تُستخدم **لإسناد قيمة**.\n\n  لقد قامت بتعيين قيمة `enteredPassword` للمتغير `correctPassword` ثم طبعت تلك القيمة الجديدة. **لمقارنة** قيمتين، يجب أن نستخدم `===`."
+    },
+    {
+      "name": "06_not_equal_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  ماذا لو أردنا التحقق من أن قيمتين **ليستا** متطابقتين؟\n\n  نستخدم **عامل عدم المساواة الصارم (`strict inequality operator`)**، وهو `!==`.\n\n  ماذا ستكون نتيجة هذه الشيفرة؟\n---\ncode: |\n  let currentMonth = \"Ramadan\";\n  let previousMonth = \"Sha'ban\";\n\n  console.log(currentMonth !== previousMonth);\n---\nsolution: 0\noptions:\n  - \"`true`\"\n  - \"`false`\"\n  - \"`Ramadan`\"\n  - \"`Sha'ban`\"\nexplanation: |\n  التعبير `currentMonth !== previousMonth` يسأل: \"هل النص 'Ramadan' لا يساوي النص 'Sha'ban'؟\"\n\n  بما أنهما مختلفان، فإن العبارة `true`."
+    },
+    {
+      "name": "07_reflection.md",
+      "content": "مذهل! لقد تعلمنا للتو كيف نجعل شيفرتنا تطرح الأسئلة. هذه خطوة كبيرة جدًا.\n\nلقد رأينا كيف أن `عوامل المقارنة` مثل `>` و `===` تأخذ قيمتين وتنتج دائمًا نتيجة `منطقية` (`boolean`): إما `true` أو `false`.\n\nهذا هو جوهر كل عمليات اتخاذ القرار في البرمجة. لكن الإجابة `true` أو `false` ليست مفيدة جدًا بمفردها.\n\nإذًا، ما هي الخطوة التالية؟ سنتعلم كيف نجعل شيفرتنا **تتخذ إجراءات مختلفة** بناءً على هذه الإجابات. حان الوقت لاختيار مسارنا! 🚀"
+    }
+  ]
+}

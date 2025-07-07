@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "title": "The Master Key: Unlocking Higher-Order Functions",
+    "blurb": "Discover how to use functions as arguments for other functions, creating flexible and powerful code. This is a fundamental concept for modern programming.",
+    "difficulty": "medium",
+    "base_xp": 500,
+    "type": "lesson",
+    "slug": "higher-order-functions"
+  },
+  "files": [
+    {
+      "name": "01_a_new_kind_of_tool.md",
+      "content": "### 1. The Master Key\n\nWe've learned how to package data with JSON, like creating a digital passport for information.\n\nNow, how do we *act* on that data? We use functions! But what if a function could use **another function as its tool**? 🤔\n\n\nImagine a chef. The chef has a recipe (a function), but uses different tools (a whisk, a slicer) for different tasks.\n\nToday, we learn to build functions that can take other functions as tools. This is a `higher-order function`."
+    },
+    {
+      "name": "02_functions_as_arguments.md",
+      "content": "### 2. See It: The Action Taker\n\nLet's start simple. Here's a function that takes a name and an action to perform.\n\nThe `performAction` function is a **higher-order function** because it accepts `sayMarhaba` as an argument.\n\n```javascript\nfunction sayMarhaba(name) {\n  console.log(\"Marhaba, \" + name + \"!\");\n}\n\nfunction performAction(name, action) {\n  // The 'action' parameter is now a function!\n  action(name);\n}\n\n// We pass the sayMarhaba function itself as the tool\nperformAction(\"Noor\", sayMarhaba);\n```\n\n**Output:**\n```\nMarhaba, Noor!\n```\n\nNotice we passed `sayMarhaba` without parentheses `()`. We are passing the function recipe, not the result of cooking it."
+    },
+    {
+      "name": "03_quiz_using_the_tool.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's try this! We have a function `processNumber` that needs an `operation` to run.\n\n  **Fill in the blank** to make the code calculate `10 + 5`.\n---\ncode: |\n  function addFive(num) {\n    return num + 5;\n  }\n\n  function multiplyByTwo(num) {\n    return num * 2;\n  }\n\n  function processNumber(number, operation) {\n    let result = operation(number);\n    console.log(\"The result is: \" + result);\n  }\n\n  processNumber(10, ______);\n---\nsolution: 2\noptions:\n  - \"multiplyByTwo()\"\n  - \"addFive()\"\n  - \"addFive\"\n  - \"multiplyByTwo\"\nexplanation: |\n  Correct! We pass the function name `addFive` directly as an argument.\n\n  Using `addFive()` would call the function immediately and pass its *return value*, which is not what `processNumber` expects."
+    },
+    {
+      "name": "04_a_common_mistake.md",
+      "content": "### 3. Error-First Learning\n\nGreat attempt on that last one! A common point of confusion is when to use parentheses `()`.\n\nWhat happens if we add them by mistake?\n\n```javascript\n// This is the same function from before\nfunction sayMarhaba(name) {\n  console.log(\"Marhaba, \" + name + \"!\");\n}\n\nfunction performAction(name, action) {\n  action(name);\n}\n\n// Oops! We called sayMarhaba() inside the arguments.\nperformAction(\"Yara\", sayMarhaba());\n```\n\nThis will cause an error! 💥\n\n`sayMarhaba()` runs immediately and doesn't return anything. The `performAction` function then receives `undefined` instead of a function, and the code breaks.\n\n**Always pass the function name as the reference**, not the result of calling it."
+    },
+    {
+      "name": "05_quiz_find_the_mistake.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Oh, it looks like this code is trying to prepare a dish, but something is wrong.\n\n  **What is the mistake** in how `prepareDish` is being called?\n---\ncode: |\n  function bake(item) {\n    console.log(\"Baking the \" + item);\n  }\n\n  function fry(item) {\n    console.log(\"Frying the \" + item);\n  }\n\n  function prepareDish(dish, method) {\n    method(dish);\n  }\n\n  // Line with the mistake\n  prepareDish(\"Knafeh\", bake());\n---\nsolution: 1\noptions:\n  - \"The `bake` function should be a string: `\"bake\"`\"\n  - \"The `bake` function is being called with `()` instead of passed as a reference.\"\n  - \"The `prepareDish` function is missing a `return` statement.\"\n  - \"The dish name `Knafeh` is not a valid food.\"\nexplanation: |\n  Exactly! The line should be `prepareDish(\"Knafeh\", bake);`.\n\n  We need to pass the `bake` function itself as the 'method' tool, not the result of calling it."
+    },
+    {
+      "name": "06_the_function_factory.md",
+      "content": "### 4. The Function Factory\n\nHigher-order functions can also **return a new function**. Think of it like a factory.\n\nYou ask the factory for a specific tool, and it builds and gives it to you.\n\n```javascript\n// This is our 'factory' function\nfunction createGreeting(greetingWord) {\n  // It returns a brand new function\n  return function(name) {\n    console.log(greetingWord + \", \" + name);\n  };\n}\n\n// Let's create two different greeter tools\nconst sayAhlan = createGreeting(\"Ahlan\");\nconst saySalam = createGreeting(\"Salam\");\n\n// Now, let's use our new tools!\nsayAhlan(\"Khalid\");\nsaySalam(\"Fatima\");\n```\n\n**Output:**\n```\nAhlan, Khalid\nSalam, Fatima\n```"
+    },
+    {
+      "name": "07_quiz_build_a_calculator.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Here's a factory for creating a simple price calculator for a local souq (market).\n\n  **What will be the output** of this code?\n---\ncode: |\n  function createCalculator(operation) {\n    if (operation === \"add\") {\n      return function(a, b) { return a + b; };\n    }\n    if (operation === \"subtract\") {\n      return function(a, b) { return a - b; };\n    }\n  }\n\n  let finalPrice = createCalculator(\"add\");\n  console.log(finalPrice(150, 25));\n---\nsolution: 3\noptions:\n  - \"125\"\n  - \"NaN\"\n  - \"Error\"\n  - \"175\"\nexplanation: |\n  Excellent! `createCalculator(\"add\")` returns a function that adds two numbers.\n\n  We store that new function in `finalPrice`.\n\n  Then, `finalPrice(150, 25)` runs the addition, resulting in `175`."
+    },
+    {
+      "name": "08_reflection.md",
+      "content": "### 5. Reflect: The Master Key\n\nThis was a huge step! We've just learned one of the most powerful ideas in programming.\n\nHigher-order functions are a `master key` because they let us write incredibly flexible and reusable code.\n\nInstead of writing ten slightly different functions, we can write one powerful function that takes other functions as tools.\n\nThis exact idea is the secret behind amazing array methods you'll see next, like `.map()` and `.filter()`. Let's go! ✨"
+    }
+  ]
+}

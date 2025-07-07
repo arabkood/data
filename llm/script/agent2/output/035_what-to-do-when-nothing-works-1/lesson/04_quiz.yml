@@ -1,0 +1,16 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  رسالة الخطأ هي `ReferenceError: message is not defined at line 2`. بناءً على هذا الدليل، ما هو التصحيح المطلوب؟
+code: |
+  let user = "سارة";
+  console.log(message);
+  let message = "مرحباً, " + user;
+options:
+  - "يجب تعريف `:variable` `message` قبل استخدامه"
+  - "يجب استخدام `:const` بدلاً من `let` للمتغير `user`"
+  - "يجب دمج السطرين الثاني والثالث"
+  - "الخطأ في اسم الـ `:variable` `user`"
+solution: 0
+explanation: |
+  الخطأ `ReferenceError` ورقم السطر يخبراننا أننا نحاول استخدام `:variable` اسمه `message` قبل تعريفه. في `:javascript`، يجب أن تعرّف المتغيرات قبل أن تتمكن من استخدامها. الحل هو نقل `let message = ...` إلى ما قبل `console.log(message)`.

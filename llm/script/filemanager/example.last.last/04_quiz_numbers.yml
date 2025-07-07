@@ -1,0 +1,18 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  Great attempt! Now for a number.
+
+  A developer wants to log the price of a book, which is 50 riyals. **What is the mistake** in their code?
+---
+code: |
+  console.log("50");
+---
+solution: 2
+options:
+  - "There is no mistake."
+  - "`console.log` cannot print numbers."
+  - "The value `\"50\"` is a `string`, not a `number`, because of the quotes."
+  - "The number should be written in Arabic digits."
+explanation: |
+  Exactly! By wrapping `50` in quotes, it becomes a `string` (text). To make it a `number` that you can use for calculations later, you must remove the quotes: `console.log(50);`.

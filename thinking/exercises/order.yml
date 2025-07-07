@@ -1,0 +1,15 @@
+# Frontend auto scrambles the order
+type: "order"
+lang: "javascript"
+question: |
+  order to create a valid function that prints "hello name"
+code: |
+  function sayHello(name) {
+    let message = "hello " + name;
+    console.log(message);
+  }
+ex: |
+  }
+  console.log(message);
+  let message = "hello " + name;
+  function sayHello(name) {

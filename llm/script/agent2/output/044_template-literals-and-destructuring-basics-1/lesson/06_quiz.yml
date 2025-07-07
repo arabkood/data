@@ -1,0 +1,19 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  أي خيار يقوم باستخراج خاصية `title` من الـ `:object` `book` بشكل صحيح باستخدام التفكيك؟
+code: |
+  const book = {
+    title: "أساسيات البرمجة",
+    pages: 200
+  };
+  
+  // أي سطر يجب وضعه هنا؟
+options:
+  - "`const title = book.title;`"
+  - "`const { title } = book;`"
+  - "`const [title] = book;`"
+  - "`let title = { book };`"
+solution: 1
+explanation: |
+  نستخدم الأقواس المعقوفة `{}` في عملية الـ `:destructuring` من `:object`. يجب أن يتطابق اسم الـ `:variable` داخل الأقواس مع اسم الخاصية في الـ `:object`.

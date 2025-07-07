@@ -1,0 +1,7 @@
+title: "المتغيرات الحديثة: let و const ووداعاً لـ var"
+blurb: "تعلم كيف تعلن عن المتغيرات في جافاسكريبت بالطريقة الحديثة باستخدام let و const. افهم لماذا أصبحت var قديمة وتجنب الأخطاء الشائعة."
+premium_only: false
+difficulty: "easy"
+base_xp: 650
+type: "lesson"
+slug: "js-let-const-vs-var"

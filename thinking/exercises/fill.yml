@@ -1,0 +1,12 @@
+type: "fill"
+lang: "javascript"
+question: |
+  fill the blanks to create a function `sayHello` that returns "hello {name}"
+code: |
+  function @@INPUT@@(@@INPUT@@) {
+    @@INPUT@@ "hello " + name;    
+  }
+solution:
+  - sayHello
+  - name
+  - return

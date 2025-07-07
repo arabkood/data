@@ -1,0 +1,77 @@
+### **Roadmap 2: Advanced JavaScript**
+
+This roadmap is for users who have completed the beginner track. It dives deep into the "why" behind the language, advanced patterns, performance, and professional practices.
+
+- **Deep Dive into JavaScript Core**
+  - History of JavaScript & Versions (ECMAScript)
+  - Strict Mode
+  - Variable Declarations (`var` vs `let`/`const`)
+  - Hoisting
+  - Variable Scopes (revisited)
+    - Block Scope
+    - Function Scope
+    - Global Scope
+- **Advanced Data Types & Structures**
+  - Primitive Types (revisited)
+    - bigint
+    - Symbol
+  - Keyed Collections
+    - Map
+    - Set
+    - WeakMap
+    - WeakSet
+  - Indexed Collections
+    - Typed Arrays
+- **Type Casting & Equality**
+  - Type Conversion vs Coercion
+  - Implicit & Explicit Type Casting
+  - Equality Comparisons
+    - `==` vs `===` vs `Object.is`
+  - Equality Algorithms (The Theory)
+    - isLooselyEqual, isStrictlyEqual, SameValueZero, SameValue
+- **Advanced Functions & Scope**
+  - Function Parameters
+    - Default Params
+    - Rest Parameters
+  - `arguments` object
+  - IIFEs (Immediately Invoked Function Expressions)
+  - Scope & The Function Stack
+    - Lexical Scoping
+    - Closures
+    - Recursion
+- **The `this` Keyword**
+  - Global Context (`this`)
+  - `this` in a Method
+  - `this` in a Function
+  - `this` in Arrow Functions
+  - Explicit Binding (`call`, `apply`, `bind`)
+- **Prototypes and Classes**
+  - Object Prototype
+  - Prototypal Inheritance
+  - Classes (syntactic sugar)
+    - `constructor`, `super`, `extends`
+    - Static Methods & Properties
+- **Asynchronous JavaScript (Deep Dive)**
+  - The Event Loop
+  - Callback Hell (The Problem)
+  - Promise Chaining & Combinators (`Promise.all`, `Promise.race`)
+  - `setTimeout` and `setInterval`
+  - `XMLHTTPRequest` (Legacy)
+- **Modern JavaScript Features**
+  - Iterators and Generators
+  - `for...in` loop (for Objects)
+  - Modules in JavaScript
+    - CommonJS (for context, e.g., Node.js)
+    - ESM (ES Modules: `import`/`export`)
+- **Professional Practices & Tooling**
+  - Exceptional Handling
+    - `throw` statement
+    - `try/catch/finally`
+    - Error Objects
+  - Memory Management
+    - Memory Lifecycle
+    - Garbage Collection
+  - Using Browser DevTools
+    - Advanced Debugging (Breakpoints, Scopes)
+    - Debugging Memory Leaks
+    - Debugging Performance (Profiler)

@@ -1,0 +1,7 @@
+title: "رحلة صيد الأخطاء: تحدي المبرمج المحقق"
+blurb: "تعلم كيف تكتشف وتصلح الأخطاء الشائعة في كود `:javascript` مثل المحترفين. اصقل مهاراتك في تصحيح الأخطاء من خلال تحديات واقعية."
+premium_only: false
+difficulty: "medium"
+base_xp: 1200
+type: "lesson"
+slug: "js-real-world-bug-hunt"

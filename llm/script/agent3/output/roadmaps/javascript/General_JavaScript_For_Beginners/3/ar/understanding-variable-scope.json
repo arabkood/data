@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "title": "جدران المخطط: فهم نطاق المتغيرات",
+    "blurb": "تعلَّم كيف تُحفظ المتغيرات داخل 'النطاقات' مثل الدوال والكتل البرمجية، مما يمنع التعارض في برامجك.",
+    "difficulty": "متوسط",
+    "base_xp": 150,
+    "type": "lesson",
+    "slug": "understanding-variable-scope"
+  },
+  "files": [
+    {
+      "name": "01_the_blueprint_walls.md",
+      "content": "لقد أنشأنا دوالاً تأخذ مُدخلات، وهي **المُعامِلات (`parameters`)**، وتعطينا نتائج، وهي **القيمة المُعادة (`return`)**. ولكن ماذا يحدث للمتغيرات التي نُنشئها *داخل* تلك الدوال؟\n\nتخيّل أن شيفرتك البرمجية مبنى ضخم، والدالة هي غرفة خاصة بداخله. بعض الأشياء متاحة في كل مكان، ولكن بعضها الآخر يُحفظ فقط داخل تلك الغرفة.\n\nهذه الفكرة حول المكان الذي يعيش فيه المتغير ويمكن الوصول إليه تُسمى **النطاق (`scope`)**. هيا نستكشف هذه 'الجدران' معًا! ✨"
+    },
+    {
+      "name": "02_the_global_space.md",
+      "content": "المتغير الذي يُصرَّح عنه خارج أي دالة يكون في **النطاق العام (`global scope`)**. إنه بمثابة إعلان عام في القاعة الرئيسية لمبناها، فكل الغرف يمكنها سماعه.\n\nانظر إلى هذا المثال. المتغير `restaurantName` موجود في `النطاق العام`، لذا يمكن لدالتنا الوصول إليه بسهولة.\n\n```javascript\n// نطاق عام\nconst restaurantName = \"بيت ستي\";\n\nfunction printWelcome() {\n  // هذه الدالة يمكنها 'رؤية' المتغير العام\n  console.log(`!أهلاً بك في ${restaurantName}`);\n}\n\nprintWelcome();\n```\n\n**الناتج:**\n```\n!أهلاً بك في بيت ستي\n```"
+    },
+    {
+      "name": "03_global_access_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  ما الذي سيُطبع في الطرفية (console) عند تشغيل هذه الشيفرة؟\n---\ncode: |\n  const city = \"الرياض\";\n\n  function announceCity() {\n    console.log(`الفعالية في ${city}.`);\n  }\n\n  announceCity();\n---\nsolution: 1\noptions:\n  - \"`الفعالية في الرياض.`\"\n  - \"`الفعالية في undefined.`\"\n  - \"`ReferenceError: city is not defined`\"\n  - \"`الفعالية في city.`\"\nexplanation: |\n  المتغير `city` موجود في `النطاق العام`، لذا يمكن للدالة `announceCity` الوصول إلى قيمته دون أي مشاكل."
+    },
+    {
+      "name": "04_the_private_room.md",
+      "content": "الآن، ماذا لو صرّحنا عن متغير **داخل** دالة؟ هذا يُنشئ **نطاقًا محليًا (`local scope`)**. الأمر أشبه برسالة سرية تُمرَّر داخل غرفة خاصة، فلا أحد في الخارج يستطيع قراءتها.\n\nلنجرب الوصول إلى متغير محلي من الخارج. برأيك ماذا سيحدث؟\n\n```javascript\nfunction createGreeting() {\n  // نطاق محلي\n  const greeting = \"أهلاً وسهلاً!\";\n}\n\ncreateGreeting();\n\n// ...لنجرب الوصول إلى 'greeting' هنا في الخارج\nconsole.log(greeting);\n```\n\n**الناتج:**\n```\nReferenceError: greeting is not defined\n```\n\nمدهش! يتعطل البرنامج لأن المتغير `greeting` محبوس داخل جدران الدالة. وهذا أمر جيد، فهو يمنع متغيراتنا من التسبب بمشاكل عرضية في أماكن أخرى."
+    },
+    {
+      "name": "05_find_the_error_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  هذه الشيفرة لا تعمل. لماذا تفشل؟\n---\ncode: |\n  function calculateTotal() {\n    const price = 50;\n    const tax = 5;\n    const total = price + tax;\n  }\n\n  calculateTotal();\n  console.log(total);\n---\nsolution: 2\noptions:\n  - \"لم يتم استدعاء الدالة `calculateTotal` أبدًا.\"\n  - \"المتغير `total` خارج `النطاق`؛ فهو موجود فقط داخل الدالة.\"\n  - \"لا يمكنك استخدام `const` داخل دالة.\"\n  - \"`console.log` لا يمكنها الوصول إلى الأرقام.\"\nexplanation: |\n  تم التصريح عن المتغير `total` داخل الدالة `calculateTotal`، لذا فإنه يمتلك `نطاقًا محليًا` (نطاق الدالة). لا يمكن الوصول إليه من `النطاق العام` خارج الدالة."
+    },
+    {
+      "name": "06_even_smaller_rooms.md",
+      "content": "باستخدام `let` و `const`، نحصل على نوع أكثر تحديدًا من النطاق: **نطاق الكتلة البرمجية (`block scope`)**. هذا يعني أن المتغير يمكن أن يكون محصورًا في أي كتلة برمجية محاطة بقوسين معقوفين `{}`.\n\nهذا شائع في جمل `if` أو الحلقات التكرارية. المتغير الذي يُنشأ داخل كتلة برمجية يبقى داخلها.\n\n```javascript\nfunction checkStudentStatus(name) {\n  let pass = true;\n\n  if (pass) {\n    // المتغير 'message' موجود فقط داخل كتلة 'if' هذه\n    const message = \"!تهانينا، \" + name;\n    console.log(message);\n  }\n\n  // محاولة الوصول إلى 'message' هنا ستسبب خطأ!\n}\n\ncheckStudentStatus(\"ليلى\");\n```\n\n**الناتج:**\n```\n!تهانينا، ليلى\n```"
+    },
+    {
+      "name": "07_block_scope_challenge_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  ما هو ناتج هذه الشيفرة؟\n---\ncode: |\n  function getGrade(score) {\n    let grade;\n    if (score > 90) {\n      // ممتاز\n      grade = \"Mumtaz\";\n    }\n    return grade;\n  }\n\n  console.log(getGrade(85));\n---\nsolution: 3\noptions:\n  - \"`Mumtaz`\"\n  - \"`ReferenceError: grade is not defined`\"\n  - \"`undefined`\"\n  - \"`null`\"\nexplanation: |\n  تم التصريح عن المتغير `grade` في نطاق الدالة. لكن شرط كتلة `if` وهو `(85 > 90)` غير صحيح، لذا فإن السطر `grade = \"Mumtaz\"` لا يُنفّذ أبدًا. تعيد الدالة القيمة الأولية للمتغير `grade`، وهي `undefined`."
+    },
+    {
+      "name": "08_why_it_matters.md",
+      "content": "إذًا، لماذا نهتم بهذه 'الجدران'؟ **`النطاق` يحمي متغيراتنا** من التداخل مع بعضها البعض. إنه يحافظ على شيفرتنا نظيفة، قابلة للتنبؤ، وأسهل في تصحيح الأخطاء.\n\nبفهمك لـ `النطاق`، فإنك تمنع الأخطاء التي يقوم فيها جزء من برنامجك بتغيير متغير يستخدمه جزء آخر عن طريق الخطأ. إنها قاعدة أساسية لبناء برمجيات معقدة.\n\nالآن بعد أن أصبحت دوالنا آمنة، لنتعلم طريقة عصرية وأسرع لكتابتها. الدرس التالي: الدوال السهمية! ⬅️"
+    }
+  ]
+}

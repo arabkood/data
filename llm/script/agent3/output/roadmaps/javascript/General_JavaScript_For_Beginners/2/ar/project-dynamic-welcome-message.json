@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "title": "مشروع: بناء رسالة ترحيب ديناميكية",
+    "blurb": "اِدمج مهاراتك في معالجة النصوص مع مفهوم جديد، وهو تحويل الأنواع، لبناء رسالة ترحيب مخصصة للمستخدم.",
+    "difficulty": "medium",
+    "base_xp": 1500,
+    "type": "lesson",
+    "slug": "project-dynamic-welcome-message"
+  },
+  "files": [
+    {
+      "name": "01_project_intro.md",
+      "content": "لقد تعلمنا الكثير عن التعامل مع النصوص! حان الوقت لدمج كل هذه المهارات في مشروع حقيقي.\n\nتخيل تطبيقًا يرحب بالمستخدم باسمه. لنبني الشيفرة البرمجية لرسالة ترحيب مخصصة. إنه تحدٍ رائع لاختبار معرفتنا!\n\nها هي بيانات مستخدمنا. سنستخدمها لبناء رسالتنا.\n\n```javascript\nlet userName = \"  omar  \";\nlet city = \"cairo   \";\nlet age = \"22\";\n```\n"
+    },
+    {
+      "name": "02_cleaning_the_data.md",
+      "content": "بالنظر إلى البيانات، تبدو فوضوية بعض الشيء. الاسم يحتوي على مسافات إضافية وهو بأحرف صغيرة.\n\nهذا أمر شائع جدًا في تطبيقات العالم الحقيقي! يمكننا استخدام دوال النصوص (`string methods`) التي تعلمناها لتنظيفها قبل عرضها.\n\nلنستخدم الدالة `trim()` لإزالة المسافات البيضاء والدالة `toUpperCase()` لتنسيق الاسم من أجل ترحيب جميل ونظيف. هل ترى كيف يمكننا ربطهما معًا؟\n\n```javascript\nlet messyText = \"  some data  \";\nlet cleanText = messyText.trim().toUpperCase();\n\nconsole.log(cleanText);\n// المخرجات: SOME DATA\n```\n"
+    },
+    {
+      "name": "03_quiz_fix_the_city.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  المتغير `city` يحتوي على مسافات إضافية.\n\n  **املأ الفراغ** لإزالتها وطباعة النتيجة.\ncode: |\n  let city = \"   dubai  \";\n  let cleanCity = city.@@INPUT@@;\n\n  console.log(cleanCity);\n  // المخرجات المتوقعة: dubai\nsolution: 0\noptions:\n  - \"trim()\"\n  - \"toUpperCase()\"\n  - \"fix()\"\n  - \"removeSpaces()\"\nexplanation: |\n  صحيح! الدالة `.trim()` هي الأداة المثالية لإزالة المسافات البيضاء من بداية ونهاية النص (`string`)."
+    },
+    {
+      "name": "04_a_surprise_bug.md",
+      "content": "رائع! الآن بعد أن أصبح لدينا بيانات نظيفة، لنبني رسالة تخبر المستخدم بعمره بعد 5 سنوات.\n\nلنجرب إضافة `5` إلى المتغير `age`.\n\n```javascript\nlet age = \"22\";\nlet message = \"In 5 years, you will be: \" + age + 5;\n\nconsole.log(message);\n```\n\nانظر إلى المخرجات: `In 5 years, you will be: 225`. ياه، هذا ليس صحيحًا! لماذا حدث هذا؟"
+    },
+    {
+      "name": "05_text_vs_numbers.md",
+      "content": "يبدو أن الحاسوب قد ارتبك! لأن `age` تم تخزينه بين علامتي اقتباس، فقد تم التعامل معه كنص (`text`)، وليس كرقم (`number`).\n\nعندما استخدمنا `+`، قامت جافاسكريبت بدمج النصوص معًا فقط. هذا أمر شائع جدًا في البرمجة.\n\nلإصلاح هذا، نحتاج إلى تحويل النص إلى رقم قبل إجراء العمليات الحسابية. يمكننا استخدام دالة خاصة تسمى `parseInt()` للقيام بذلك.\n\n```javascript\nlet ageAsString = \"22\";\nlet ageAsNumber = parseInt(ageAsString);\n\nconsole.log(ageAsNumber + 5);\n// المخرجات: 27\n```\nهذا أفضل بكثير! الآن يتم إجراء عملية حسابية."
+    },
+    {
+      "name": "06_quiz_calculate_age.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  مستخدمة اسمها ليلى عمرها `\"30\"` عامًا.\n\n  **ما هي الطريقة الصحيحة** لحساب عمرها بعد 10 سنوات؟\ncode: |\n  let ageString = \"30\";\n  // ما هي الشيفرة الصحيحة؟\nsolution: 2\noptions:\n  - \"let futureAge = ageString + 10;\"\n  - \"let futureAge = ageString.add(10);\"\n  - \"let futureAge = parseInt(ageString) + 10;\"\n  - \"let futureAge = convertToNumber(ageString) + 10;\"\nexplanation: |\n  بالضبط! تُستخدم `parseInt()` لتحويل النص `\"30\"` إلى الرقم `30`، مما يسمح بعملية الجمع الصحيحة."
+    },
+    {
+      "name": "07_build_the_message.md",
+      "content": "لقد أصلحنا كل الأجزاء. حان الوقت الآن لتجميع كل شيء في خطوة أخيرة واحدة.\n\nها هي بيانات المستخدم مرة أخرى:\n```javascript\nlet userName = \"  fatima  \";\nlet city = \"   jeddah  \";\nlet age = \"25\";\n```\n\n**مهمتك** هي كتابة الشيفرة التي تنتج هذه الرسالة بالضبط:\n`Welcome, FATIMA from JEDDAH! In 5 years, you will be 30.`\n\nفكر في استخدام القوالب النصية (`template literals`)، و`دوال النصوص` التي تدربنا عليها، و `parseInt()`."
+    },
+    {
+      "name": "08_quiz_final_project.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  ما هي المخرجات النهائية لهذه الشيفرة؟\ncode: |\n  let userName = \"  ahmed  \";\n  let city = \"   riyadh  \";\n  let age = \"20\";\n\n  let cleanName = userName.trim().toUpperCase();\n  let cleanCity = city.trim().toUpperCase();\n  let futureAge = parseInt(age) + 10;\n\n  let message = `Welcome, ${cleanName} from ${cleanCity}! In 10 years, you will be ${futureAge}.`;\n\n  console.log(message);\nsolution: 1\noptions:\n  - \"Welcome, ahmed from riyadh! In 10 years, you will be 2010.\"\n  - \"Welcome, AHMED from RIYADH! In 10 years, you will be 30.\"\n  - \"Welcome,   ahmed   from    riyadh  ! In 10 years, you will be 30.\"\n  - \"The code will produce an error.\"\nexplanation: |\n  ممتاز! الشيفرة تنظف الاسم والمدينة بشكل صحيح باستخدام `.trim()` و `.toUpperCase()`، وتحول العمر إلى رقم باستخدام `parseInt()` قبل إضافة 10، ثم تجمع كل شيء باستخدام `القوالب النصية`."
+    },
+    {
+      "name": "09_project_complete.md",
+      "content": "عمل مذهل! لقد بنينا للتو سكربتًا ديناميكيًا كاملًا من بيانات أولية. هذه خطوة كبيرة. ✨\n\nلقد دمجنا بين `القوالب النصية`، و`دوال النصوص` مثل `.trim()` و `.toUpperCase()`، وتعلمنا كيفية التعامل مع تحويل الأنواع (`type conversion`) باستخدام `parseInt()`.\n\nعملية تنظيف البيانات وتقديمها بطريقة منسقة هي شيء يفعله المطورون كل يوم.\n\nالآن بعد أن أصبحنا قادرين على إدارة البيانات، دعنا نستكشف كيف نجعل برامجنا تبدأ في اتخاذ القرارات بنفسها."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "builds_on": [],
+    "narrative_hook": "Your first task as a future software engineer is to give the computer an instruction and see the result.",
+    "new_concept": [
+      "console.log"
+    ],
+    "title": "Hello, World!: Your First Command"
+  },
+  {
+    "builds_on": [
+      "console.log"
+    ],
+    "narrative_hook": "Now that you can send commands, learn to work with the raw materials of programming: the different types of data.",
+    "new_concept": [
+      "data types"
+    ],
+    "title": "The Atoms of Code: Understanding Data"
+  },
+  {
+    "builds_on": [
+      "console.log",
+      "data types"
+    ],
+    "narrative_hook": "Great engineers write code not just for computers, but for other humans to understand; learn to leave helpful notes in your code.",
+    "new_concept": [
+      "comments"
+    ],
+    "title": "Digital Footnotes: Leaving Code Comments"
+  },
+  {
+    "builds_on": [
+      "console.log",
+      "data types"
+    ],
+    "narrative_hook": "To build dynamic programs, you need to create labeled containers that can hold and manage your data as it changes.",
+    "new_concept": [
+      "let"
+    ],
+    "title": "Memory Boxes: Storing Information with Variables"
+  },
+  {
+    "builds_on": [
+      "let",
+      "data types"
+    ],
+    "narrative_hook": "Learn how to protect important information that should never change throughout your program's execution.",
+    "new_concept": [
+      "const"
+    ],
+    "title": "Set in Stone: Declaring Constants"
+  },
+  {
+    "builds_on": [
+      "console.log",
+      "data types",
+      "comments",
+      "let",
+      "const"
+    ],
+    "narrative_hook": "Combine all your new skills to build your first complete program: a digital summary of your professional details.",
+    "new_concept": [
+      "Program Structure"
+    ],
+    "title": "Project: Your First Digital Bio"
+  }
+]

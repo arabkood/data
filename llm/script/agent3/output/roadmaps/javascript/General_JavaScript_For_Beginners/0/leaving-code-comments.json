@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "title": "Digital Footnotes: Leaving Code Comments",
+    "blurb": "Learn to leave helpful notes in your code for yourself and others. Master single-line and multi-line comments to make your code more readable.",
+    "difficulty": "easy",
+    "base_xp": 150,
+    "type": "lesson",
+    "slug": "leaving-code-comments"
+  },
+  "files": [
+    {
+      "name": "01_why_comment.md",
+      "content": "You've learned to give the computer instructions using `console.log`. But what about leaving notes for people?\n\nImagine you're following a complex recipe. Notes in the margin like \"whisk gently!\" are a huge help. That's what `comments` are for in code. ✍️\n\nThey are notes for humans that the computer completely ignores. **Let's learn how to write them**."
+    },
+    {
+      "name": "02_single_line_comments.md",
+      "content": "The most common type of comment is a single-line comment. It starts with two forward slashes `//`.\n\nAnything on the line after the `//` is a comment and will not be run by the computer. \n\n**See it in action:**\n```javascript\n// This line prints a welcome message to Khalid\nconsole.log(\"Ahlan, Khalid!\");\n\nconsole.log(25); // This shows Khalid's age\n```\n\nNotice how the computer only runs the `console.log` parts."
+    },
+    {
+      "name": "03_fix_the_note.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Oh, it looks like a note was added without the correct syntax, causing an error.\n\n  **Fix the code** so that only the welcome message for Layla is printed.\n---\ncode: |\n  This code should greet Layla\n  console.log(\"Marhaba, Layla!\");\n---\nsolution: 0\noptions:\n  - \"```javascript\n    // This code should greet Layla\n    console.log(\\\"Marhaba, Layla!\\\");\n    ```\"\n  - \"```javascript\n    /* This code should greet Layla */\n    console.log(\\\"Marhaba, Layla!\\\");\n    ```\"\n  - \"```javascript\n    console.log(\\\"This code should greet Layla\\\");\n    console.log(\\\"Marhaba, Layla!\\\");\n    ```\"\nexplanation: |\n  Correct! By adding `//` at the beginning, you turn the note into a comment. The computer now ignores that line and correctly runs the code."
+    },
+    {
+      "name": "04_multi_line_comments.md",
+      "content": "What if your note is too long for one line? Using `//` for every line can be a bit tedious.\n\nFor longer notes, you can use a multi-line comment. It starts with `/*` and ends with `*/`.\n\n**Everything between them is ignored**, no matter how many lines it takes up.\n```javascript\n/*\n  User Profile Plan:\n  - Display the user's name: Omar\n  - Show his city: Riyadh\n  - Confirm he is a registered user\n*/\nconsole.log(\"Omar\");\nconsole.log(\"Riyadh\");\nconsole.log(true);\n```"
+    },
+    {
+      "name": "05_what_is_the_output.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's see if you can spot the comments!\n\n  What will be the final output of this code?\n---\ncode: |\n  // This program tracks inventory for a small shop\n  console.log(\"Available Products:\");\n\n  /*\n  console.log(\"Dates\");\n  console.log(\"Coffee Beans\");\n  */\n\n  console.log(\"Spices\");\n---\nsolution: 1\noptions:\n  - \"`Available Products:`\"\n  - \"`Available Products:`\n    `Spices`\"\n  - \"`Available Products:`\n    `Dates`\n    `Coffee Beans`\n    `Spices`\"\n  - \"`Spices`\"\nexplanation: |\n  Excellent! The block containing \"Dates\" and \"Coffee Beans\" is inside a multi-line comment (`/* ... */`), so the computer skips it. It only prints the lines that are not comments."
+    },
+    {
+      "name": "06_reflect_and_next.md",
+      "content": "Look at how comments can outline a plan for a program. Here, we're planning a Hijri date converter.\n\n```javascript\n// Author: Fatima\n// Goal: Convert a Gregorian date to Hijri.\n\n/*\n  Next steps:\n  1. Get today's date.\n  2. Find a formula for conversion.\n  3. Display the new Hijri date.\n*/\n\nconsole.log(\"Starting date conversion...\");\n```\n\n**Good comments make your code's purpose clear.** This is a key skill for any developer!\n\nNow that you can leave notes in your code, you're ready to learn how to store information that can change. Next up: `variables`!"
+    }
+  ]
+}

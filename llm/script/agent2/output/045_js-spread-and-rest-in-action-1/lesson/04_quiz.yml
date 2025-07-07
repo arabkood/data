@@ -1,0 +1,15 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  لديك `:object` يمثل مستخدمًا، وتريد إنشاء `:object` جديد بنفس الخصائص مع تغيير البريد الإلكتروني. أكمل الكود لتحقيق ذلك.
+code: |
+  const user = { id: 101, name: 'أحمد' };
+  const updatedUser = { ...user, email: __@@INPUT@@__ };
+options:
+  - "`'ahmad@example.com'`"
+  - "`newUserEmail`"
+  - "`user.email`"
+  - "`email: 'ahmad@example.com'`"
+solution: 0
+explanation: |
+  نستخدم عامل التفريق (`:spread syntax`) `...user` لنسخ كل خصائص الـ `:object` الأصلي، ثم نضيف أو نعدّل خاصية `email` بالقيمة الجديدة.

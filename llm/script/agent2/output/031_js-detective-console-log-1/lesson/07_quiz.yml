@@ -1,0 +1,24 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  اللاعب لا يحصل على القوة الخارقة (superPower) مع أن نقاطه تتجاوز 500. استخدم `:console.log()` داخل جملة `:if` لتتأكد من قيمة `totalScore` قبل التحقق من الشرط.
+
+  أكمل الكود لوضع الأداة في المكان الصحيح.
+code: |
+  let score1 = 400;
+  let score2 = "150"; // خطأ مخفي
+  let totalScore = score1 + score2;
+  let superPower = false;
+
+  if (totalScore > 500) {
+    __@@INPUT@@__
+    superPower = true;
+  }
+options:
+  - "`console.log(superPower)`"
+  - "`console.log('Checking score...')`"
+  - "`console.log('Total score is:', totalScore)`"
+  - "`console.log(score1)`"
+solution: 2
+explanation: |
+  بوضع `console.log('Total score is:', totalScore)`، سترى في لوحة التحكم الرسالة `Total score is: 400150`. هذا يكشف فورًا أن عملية الجمع لم تتم بشكل صحيح (لأن `score2` هو `:string`)، ولهذا السبب لم يتم استيفاء شرط `:if`.

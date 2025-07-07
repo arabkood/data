@@ -1,0 +1,29 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  لدينا هنا كائن الطالبة `أمل`.
+  
+  **هدفك** هو الحصول على درجتها في مادة `العلوم`.
+---
+code: |
+  const studentAmal = {
+    id: 451,
+    name: "أمل",
+    subjects: {
+      math: 92,
+      science: 95,
+      arabic: 88
+    }
+  };
+  
+  // اكتب الكود هنا
+  console.log(@@INPUT@@);
+---
+solution: 0
+options:
+  - "`studentAmal.subjects.science`"
+  - "`studentAmal.science`"
+  - "`studentAmal.subjects`"
+  - "`subjects.science`"
+explanation: |
+  صحيح! نصل أولاً إلى كائن `subjects` باستخدام `studentAmal.subjects`، ثم نصل إلى خاصية `science` الموجودة بداخله.

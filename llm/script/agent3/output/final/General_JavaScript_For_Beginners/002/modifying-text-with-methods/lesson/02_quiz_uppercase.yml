@@ -1,0 +1,19 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  يريد مطعم طباعة أسماء جميع الأصناف بأحرف كبيرة على تذاكر المطبخ لتسهيل القراءة.
+
+  **املأ الفراغ** لجعل المتغيّر `dish` بأحرف كبيرة.
+code: |
+  let dish = "Shawarma";
+  let kitchenTicket = dish.@@INPUT@@;
+
+  console.log(kitchenTicket);
+solution: 0
+options:
+  - "toUpperCase()"
+  - "upperCase()"
+  - "makeUpper"
+  - "toUpperCase"
+explanation: |
+  الدالة الصحيحة هي `toUpperCase()`. تذكّر، تحتاج `الدوال` إلى الأقواس `()` ليتم استدعاؤها وتنفيذها!

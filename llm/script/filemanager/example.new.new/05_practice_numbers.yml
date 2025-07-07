@@ -1,0 +1,20 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  Imagine you're building a simple inventory system for a local falafel shop.
+  
+  **Your task**: The shop has 50 shawarmas in stock. Print this number to the console.
+---
+code: |
+  // Print the stock number
+---
+solution: 1
+options:
+  - console.log("50");
+  - console.log(50);
+  - print(50);
+  - console.log("shawarma: 50");
+explanation: |
+  That's it! `50` is a number. 
+  
+  If we used `"50"`, the computer would see it as text, not a value we can count.

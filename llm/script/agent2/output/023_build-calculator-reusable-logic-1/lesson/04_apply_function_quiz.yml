@@ -1,0 +1,19 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  باستخدام الـ `:function` السابقة، ما ناتج تنفيذ الكود التالي؟
+code: |
+  function add(number1, number2) {
+    return number1 + number2;
+  }
+
+  let result = add(15, 5);
+  console.log(result);
+options:
+  - "`15`"
+  - "`5`"
+  - "`20`"
+  - "`:undefined`"
+solution: 2
+explanation: |
+  لقد قمنا باستدعاء الـ `:function` `add` مع القيم `15` و `5`. تقوم الـ `:function` بجمعها وإعادة القيمة `20`، والتي يتم تخزينها في الـ `:variable` `result` ثم طباعتها.

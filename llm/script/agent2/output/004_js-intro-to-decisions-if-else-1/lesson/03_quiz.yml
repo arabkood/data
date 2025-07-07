@@ -1,0 +1,20 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  الآن، ماذا لو لم يكن الجو ماطرًا؟ أكمل الكود لإظهار رسالة بديلة.
+code: |
+  let isRaining = false;
+
+  if (isRaining) {
+    console.log("لا تنس المظلة!");
+  } __@@INPUT@@__ {
+    console.log("استمتع بيومك المشمس!");
+  }
+options:
+  - "`then`"
+  - "`or`"
+  - "`else`"
+  - "`otherwise`"
+solution: 2
+explanation: |
+  نستخدم الكلمة المفتاحية `:else` لتحديد كتلة من الكود يتم تنفيذها عندما يكون الشرط في جملة `:if` غير صحيح (`false`).

@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "Project: Assemble an Employee Profile",
+    "blurb": "Combine your knowledge of objects, properties, and methods to build a complete, interactive employee profile from scratch.",
+    "difficulty": "medium",
+    "base_xp": 1500,
+    "type": "lesson",
+    "slug": "project-assemble-an-employee-profile"
+  },
+  "files": [
+    {
+      "name": "01_introduction.md",
+      "content": "We've learned how objects can hold data (`properties`) and perform actions (`methods`). We even gave them self-awareness with the `this` keyword!\n\nNow, let's put it all together. Think of an employee ID card. It has data (name, ID number) and implies actions (granting access).\n\n**Our mission** is to build a digital employee profile for a new hire, Omar, combining all these skills into one powerful object. Let's get building!"
+    },
+    {
+      "name": "02_basic_profile.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's start by creating the basic structure for Omar's profile. \n  \n  Fill in the blank to create an `employee` object with two properties: `name` set to \"Omar\" and `employeeId` set to 451.\n\n  --- \ncode: |\n  const employee = {\n    // your code here\n  };\n\n  console.log(employee.name);\n  ---\nsolution: |\n  const employee = {\n    name: \"Omar\",\n    employeeId: 451\n  };\n\n  console.log(employee.name);\noptions:\n  - \"name: \\\"Omar\\\",\\n  employeeId: 451\"\n  - \"name = \\\"Omar\\\";\\n  employeeId = 451;\"\n  - \"\\\"name\\\": \\\"Omar\\\"\\n  \\\"employeeId\\\": 451\"\n  - \"name: Omar,\\n  employeeId: 451\"\nexplanation: |\n  Correct! Inside an object, we define `properties` as `key: value` pairs, separated by commas. String values like \"Omar\" must be enclosed in quotes."
+    },
+    {
+      "name": "03_adding_an_action.md",
+      "content": "Great start! Our `employee` object now holds Omar's basic data. But objects aren't just for storing information; they're for *doing* things.\n\nLet's add a `method`. A method is a function that lives inside an object, giving it a specific capability.\n\nWe'll add a `greet` method that prints a welcome message. This makes our object more interactive."
+    },
+    {
+      "name": "04_using_this.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  A good start, but the previous greeting was generic. Let's make it personal by using the object's own data.\n\n  Complete the `getDetails` method so it returns a string including the employee's name, using the `this` keyword to access the `name` property.\n  --- \ncode: |\n  const employee = {\n    name: \"Layla\",\n    employeeId: 882,\n    getDetails: function() {\n      return \"Employee ID: \" + this.employeeId + \", Name: \" + // your code here\n    }\n  };\n\n  console.log(employee.getDetails());\n  ---\nsolution: 0\noptions:\n  - \"this.name;\"\n  - \"name;\"\n  - \"employee.name;\"\n  - \"getDetails.name;\"\nexplanation: |\n  Exactly! The `this` keyword is a special reference that allows a method to access other properties within the **same object**. It makes our methods smart and self-contained."
+    },
+    {
+      "name": "05_find_the_bug.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Oh, it looks like there's a small bug in this code. When we run `employee.promote()`, it doesn't seem to work as expected.\n\n  What is the mistake in the `promote` method?\n  --- \ncode: |\n  let employee = {\n    name: \"Fatima\",\n    jobTitle: \"Junior Developer\",\n    promote: function() {\n      jobTitle = \"Senior Developer\";\n    }\n  };\n\n  employee.promote();\n  console.log(employee.jobTitle);\n  // Output: Junior Developer\n  ---\nsolution: 2\noptions:\n  - \"The `=` sign should be a `==`.\"\n  - \"Methods cannot change property values.\"\n  - \"It should be `this.jobTitle`, not just `jobTitle`.\"\n  - \"The property `jobTitle` should be declared with `let`.\"\nexplanation: |\n  You found it! Without `this`, the code tries to change a global variable named `jobTitle` that doesn't exist. We must use `this.jobTitle` to specify that we are changing the property **of this specific object**."
+    },
+    {
+      "name": "06_final_challenge.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Time to complete the profile! Let's build a system for a local restaurant.\n\n  **Your task**: Add a `method` named `updateStock` to the `menuItem` object. It should take one argument, `quantitySold`, and subtract it from the `stock` property.\n  --- \ncode: |\n  let menuItem = {\n    name: \"Falafel Wrap\",\n    price: 15,\n    stock: 100,\n    // Add the updateStock method here\n  };\n\n  menuItem.updateStock(10);\n  console.log(menuItem.stock);\n  // Expected Output: 90\n  ---\nsolution: 0\noptions:\n  - \"`updateStock: function(quantitySold) { this.stock = this.stock - quantitySold; }`\"\n  - \"`updateStock: function(quantitySold) { stock = stock - quantitySold; }`\"\n  - \"`updateStock(quantitySold) { this.stock - quantitySold; }`\"\n  - \"`function updateStock(quantitySold) { this.stock -= quantitySold; }`\"\nexplanation: |\n  Perfect! You created a method that takes an argument and correctly uses `this.stock` to modify the object's own `stock` property. This is how objects manage their own state."
+    },
+    {
+      "name": "07_reflection.md",
+      "content": "Amazing work! You just built a complete, interactive object that models a real-world concept.\n\nYou combined `properties` for data, `methods` for actions, and `this` for self-reference. This is a fundamental skill in programming.\n\nThese 'digital models' are the building blocks for almost every application, from games to complex business software. You're ready for what's next! ✨"
+    }
+  ]
+}

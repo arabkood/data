@@ -1,0 +1,7 @@
+title: "التعامل الآمن مع المصفوفات: القيم الافتراضية"
+blurb: "تعلم كيف تتجنب الأخطاء الشائعة عند التعامل مع البيانات المفقودة في المصفوفات باستخدام القيم الافتراضية."
+premium_only: false
+difficulty: "easy"
+base_xp: 800
+type: "lesson"
+slug: "safe-array-defaults-ar"

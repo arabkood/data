@@ -1,0 +1,6 @@
+title: "مفترق الطرق: المسارات الشرطية باستخدام if/else"
+blurb: "تعلّم كيف تجعل الكود الخاص بك ينفّذ إجراءات مختلفة بناءً على ما إذا كان الشرط صحيحًا أم خاطئًا باستخدام جملة if/else الأساسية."
+difficulty: "easy"
+base_xp: 250
+type: "lesson"
+slug: "conditional-paths-with-if-else"

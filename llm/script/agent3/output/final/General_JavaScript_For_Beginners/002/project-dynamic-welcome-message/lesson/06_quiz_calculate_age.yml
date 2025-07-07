@@ -1,0 +1,17 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  مستخدمة اسمها ليلى عمرها `"30"` عامًا.
+
+  **ما هي الطريقة الصحيحة** لحساب عمرها بعد 10 سنوات؟
+code: |
+  let ageString = "30";
+  // ما هي الشيفرة الصحيحة؟
+solution: 2
+options:
+  - "let futureAge = ageString + 10;"
+  - "let futureAge = ageString.add(10);"
+  - "let futureAge = parseInt(ageString) + 10;"
+  - "let futureAge = convertToNumber(ageString) + 10;"
+explanation: |
+  بالضبط! تُستخدم `parseInt()` لتحويل النص `"30"` إلى الرقم `30`، مما يسمح بعملية الجمع الصحيحة.

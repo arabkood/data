@@ -1,0 +1,30 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  ممتاز! الـ `دالة` شبه مكتملة.
+
+  ما هو ناتج استدعاء الـ `دالة` بهذه الوسائط: `createGreeting('عمر', 'Eid')`؟
+---
+code: |
+  const createGreeting = (name, occasion) => {
+    let message;
+
+    if (occasion === 'Ramadan') {
+      message = 'Ramadan Kareem!';
+    } else if (occasion === 'Eid') {
+      message = 'Eid Mubarak!';
+    }
+
+    return `مرحباً ${name}, ${message}`;
+  };
+
+  console.log(createGreeting('عمر', 'Eid'));
+---
+solution: 2
+options:
+  - "مرحباً عمر, Ramadan Kareem!"
+  - "مرحباً name, Eid Mubarak!"
+  - "مرحباً عمر, Eid Mubarak!"
+  - "مرحباً ${name}, ${message}"
+explanation: |
+  تستقبل الـ `دالة` 'عمر' كقيمة للـ `name` و 'Eid' للـ `occasion`. يتم تلبية شرط `else if` الخاص بـ 'Eid'، مما يضبط قيمة `message` إلى 'Eid Mubarak!'. ثم يقوم `القالب النصي` بدمج هذه القيم في النص النهائي.

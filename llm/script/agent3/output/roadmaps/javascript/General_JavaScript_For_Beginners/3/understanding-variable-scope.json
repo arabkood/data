@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "title": "The Walls of a Blueprint: Understanding Variable Scope",
+    "blurb": "Learn how variables are contained within 'scopes' like functions and code blocks, preventing conflicts in your programs.",
+    "difficulty": "medium",
+    "base_xp": 150,
+    "type": "lesson",
+    "slug": "understanding-variable-scope"
+  },
+  "files": [
+    {
+      "name": "01_the_blueprint_walls.md",
+      "content": "We've built functions that take inputs (`parameters`) and give back results (`return`). But what happens to variables created *inside* those functions?\n\nThink of your code as a large building, and a function is like a private room inside. Some things are available everywhere, but some are kept only within that room.\n\nThis idea of where a variable lives and can be accessed is called `scope`. Let's explore these 'walls' together! 🧐"
+    },
+    {
+      "name": "02_the_global_space.md",
+      "content": "A variable declared outside of any function is in the **global scope**. It's like a public announcement in the main hall of our building—every room can hear it.\n\nLook at this example. The `restaurantName` is global, so our function can easily access it.\n\n```javascript\nconst restaurantName = \"Beit Sitti\"; // Global Scope\n\nfunction printWelcome() {\n  // This function can 'see' the global variable\n  console.log(`Welcome to ${restaurantName}!`);\n}\n\nprintWelcome();\n```\n\n**Output:**\n```\nWelcome to Beit Sitti!\n```"
+    },
+    {
+      "name": "03_global_access_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  What will be logged to the console when this code runs?\n---\ncode: |\n  const city = \"Riyadh\";\n\n  function announceCity() {\n    console.log(`The event is in ${city}.`);\n  }\n\n  announceCity();\n---\nsolution: 1\noptions:\n  - \"`The event is in undefined.`\"\n  - \"`The event is in Riyadh.`\"\n  - \"`ReferenceError: city is not defined`\"\n  - \"`The event is in city.`\"\nexplanation: |\n  The `city` variable is in the global scope, so the `announceCity` function can access its value without any issues."
+    },
+    {
+      "name": "04_the_private_room.md",
+      "content": "Now, what if we declare a variable **inside** a function? That creates a **local scope**. It's like a secret note passed inside a private room—no one outside can read it.\n\nLet's try to access a local variable from the outside. What do you think will happen?\n\n```javascript\nfunction createGreeting() {\n  const greeting = \"Ahlan wa sahlan!\"; // Local Scope\n}\n\ncreateGreeting();\n\n// Let's try to access 'greeting' out here...\nconsole.log(greeting);\n```\n\n**Output:**\n```\nReferenceError: greeting is not defined\n```\n\nFascinating! The program crashes because `greeting` is trapped inside the function's walls. This is a good thing—it prevents our variables from causing accidental trouble elsewhere."
+    },
+    {
+      "name": "05_find_the_error_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  This code is broken. Why does it fail?\n---\ncode: |\n  function calculateTotal() {\n    const price = 50;\n    const tax = 5;\n    const total = price + tax;\n  }\n\n  console.log(total);\n---\nsolution: 2\noptions:\n  - \"The `calculateTotal` function was never called.\"\n  - \"You cannot use `const` inside a function.\"\n  - \"The `total` variable is out of scope; it only exists inside the function.\"\n  - \"`console.log` cannot access numbers.\"\nexplanation: |\n  The `total` variable was declared inside `calculateTotal`, so it has local (function) scope. It cannot be accessed from the global scope outside the function."
+    },
+    {
+      "name": "06_even_smaller_rooms.md",
+      "content": "With `let` and `const`, we get an even more specific type of scope: **block scope**. This means a variable can be confined to any code block surrounded by curly braces `{}`.\n\nThis is common in `if` statements or loops. A variable created inside a block stays inside that block.\n\n```javascript\nfunction checkStudentStatus(name) {\n  let pass = true;\n\n  if (pass) {\n    // 'message' only exists inside this if-block\n    const message = \"Congratulations, \" + name + \"!\";\n    console.log(message);\n  }\n\n  // Trying to access 'message' here would cause an error!\n}\n\ncheckStudentStatus(\"Layla\");\n```\n\n**Output:**\n```\nCongratulations, Layla!\n```"
+    },
+    {
+      "name": "07_block_scope_challenge_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  What is the output of this code?\n---\ncode: |\n  function getGrade(score) {\n    let grade;\n    if (score > 90) {\n      grade = \"Mumtaz\"; // Excellent\n    }\n    return grade;\n  }\n\n  console.log(getGrade(85));\n---\nsolution: 3\noptions:\n  - \"`Mumtaz`\"\n  - \"`ReferenceError: grade is not defined`\"\n  - \"`null`\"\n  - \"`undefined`\"\nexplanation: |\n  The `grade` variable is declared in the function's scope. However, the `if` block condition `(85 > 90)` is false, so the line `grade = \"Mumtaz\"` is never executed. The function returns the initial value of `grade`, which is `undefined`."
+    },
+    {
+      "name": "08_why_it_matters.md",
+      "content": "So why care about these 'walls'? **Scope protects our variables** from interfering with each other. It keeps our code clean, predictable, and easier to debug.\n\nBy understanding scope, you prevent bugs where one part of your program accidentally changes a variable used by another part. It's a fundamental rule for building complex software.\n\nNow that our functions are secure, let's learn a modern, faster way to write them. Next up: Arrow Functions! ➡️"
+    }
+  ]
+}

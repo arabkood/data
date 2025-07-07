@@ -1,0 +1,24 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  أمامك كود يكرر حساب مساحة مستطيلين. أي خيار هو أفضل تطبيق لمبدأ `:DRY` لحساب المساحة؟
+code: |
+  // المستطيل الأول
+  let width1 = 10;
+  let height1 = 5;
+  let area1 = width1 * height1;
+  console.log(area1);
+
+  // المستطيل الثاني
+  let width2 = 7;
+  let height2 = 3;
+  let area2 = width2 * height2;
+  console.log(area2);
+options:
+  - "`function calculateArea(width, height) { console.log(width * height); }`"
+  - "`function calculateArea() { console.log(10 * 5); }`"
+  - "`let calculateArea = (width, height) => width + height;`"
+  - "`function calculateArea(width1, height1) { console.log(width2 * height2); }`"
+solution: 0
+explanation: |
+  الخيار الأول هو الحل الأمثل. فهو ينشئ `:function` عامة تقبل أي طول وعرض كـ`:parameters`، وتحسب المساحة وتطبعها. هذا يزيل التكرار تماماً ويجعل الكود قابلاً لإعادة الاستخدام لأي مستطيل.

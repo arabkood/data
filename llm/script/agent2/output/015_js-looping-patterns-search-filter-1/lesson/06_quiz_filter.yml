@@ -1,0 +1,25 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  أكمل الكود لتصفية قائمة المنتجات وإرجاع المنتجات التي سعرها أقل من 100 فقط.
+code: |
+  const products = [
+    { name: "لعبة", price: 50 },
+    { name: "كتاب", price: 120 },
+    { name: "قلم", price: 20 }
+  ];
+  const affordableProducts = [];
+
+  for (let i = 0; i < products.length; i++) {
+    if (products[i].price < 100) {
+      __@@INPUT@@__
+    }
+  }
+options:
+  - "`affordableProducts.push(products[i]);`"
+  - "`affordableProducts.push(products[i].price);`"
+  - "`break;`"
+  - "`return affordableProducts;`"
+solution: 0
+explanation: |
+  نحتاج إلى إضافة كائن المنتج بالكامل (`products[i]`) إلى مصفوفة `affordableProducts` باستخدام الدالة `:push` عندما يكون سعره أقل من 100.

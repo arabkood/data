@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "title": "Project: Building a Dynamic Welcome Message",
+    "blurb": "Combine your string manipulation skills with a new concept, type conversion, to build a personalized welcome message for a user.",
+    "difficulty": "medium",
+    "base_xp": 1500,
+    "type": "lesson",
+    "slug": "project-dynamic-welcome-message"
+  },
+  "files": [
+    {
+      "name": "01_project_intro.md",
+      "content": "We've learned so much about working with text! It's time to combine all those skills into a real project.\n\nImagine an app that greets a user by name. Let's build the code for a personalized welcome message. It's a great challenge to put our knowledge to the test!\n\nHere's our user's data. We'll use this to build our message.\n\n```javascript\nlet userName = \"  omar  \";\nlet city = \"cairo   \";\nlet age = \"22\";\n```\n"
+    },
+    {
+      "name": "02_cleaning_the_data.md",
+      "content": "Looking at the data, it seems a bit messy. The name has extra spaces and is in lowercase.\n\nThis is very common in real-world applications! We can use the string methods we learned to clean it up before displaying it.\n\nLet's use `trim()` to remove whitespace and `toUpperCase()` to format the name for a nice, clean welcome. See how we can chain them together?\n\n```javascript\nlet messyText = \"  some data  \";\nlet cleanText = messyText.trim().toUpperCase();\n\nconsole.log(cleanText);\n// Output: SOME DATA\n```\n"
+    },
+    {
+      "name": "03_quiz_fix_the_city.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  The `city` variable has extra spaces. \n\n  **Fill in the blank** to remove them and log the result.\ncode: |\n  let city = \"   dubai  \";\n  let cleanCity = city._______;\n\n  console.log(cleanCity);\n  // Expected output: dubai\nsolution: 0\noptions:\n  - \"trim()\"\n  - \"toUpperCase()\"\n  - \"fix()\"\n  - \"removeSpaces()\"\nexplanation: |\n  Correct! The `.trim()` method is the perfect tool for removing whitespace from the beginning and end of a string."
+    },
+    {
+      "name": "04_a_surprise_bug.md",
+      "content": "Great! Now that we have clean data, let's build a message that tells the user their age in 5 years.\n\nLet's try adding `5` to the `age` variable.\n\n```javascript\nlet age = \"22\";\nlet message = \"In 5 years, you will be: \" + age + 5;\n\nconsole.log(message);\n```\n\nLook at the output: `In 5 years, you will be: 225`. Whoa, that's not right! Why did this happen?"
+    },
+    {
+      "name": "05_text_vs_numbers.md",
+      "content": "It seems the computer got confused! Because `age` was stored in quotes, it was treated as `text`, not a `number`.\n\nWhen we used `+`, JavaScript just joined the text together. This is a super common thing to encounter in programming.\n\nTo fix this, we need to convert the string to a number before doing math. We can use a special function called `parseInt()` to do this.\n\n```javascript\nlet ageAsString = \"22\";\nlet ageAsNumber = parseInt(ageAsString);\n\nconsole.log(ageAsNumber + 5);\n// Output: 27\n```\nThat's much better! Now it performs a mathematical calculation."
+    },
+    {
+      "name": "06_quiz_calculate_age.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  A user, Layla, is `\"30\"` years old. \n\n  **What is the correct way** to calculate her age in 10 years?\ncode: |\n  let ageString = \"30\";\n  // What's the right code?\nsolution: 2\noptions:\n  - \"let futureAge = ageString + 10;\"\n  - \"let futureAge = ageString.add(10);\"\n  - \"let futureAge = parseInt(ageString) + 10;\"\n  - \"let futureAge = convertToNumber(ageString) + 10;\"\nexplanation: |\n  Exactly! `parseInt()` is used to convert the string `\"30\"` into the number `30`, allowing for correct addition."
+    },
+    {
+      "name": "07_build_the_message.md",
+      "content": "We've fixed all the pieces. Now it's time to put everything together in one final step.\n\nHere is the user's data again:\n```javascript\nlet userName = \"  fatima  \";\nlet city = \"   jeddah  \";\nlet age = \"25\";\n```\n\n**Your task** is to write the code that produces this exact message:\n`Welcome, FATIMA from JEDDAH! In 5 years, you will be 30.`\n\nThink about using `template literals`, the string methods we practiced, and `parseInt()`."
+    },
+    {
+      "name": "08_quiz_final_project.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  What is the final output of this code?\ncode: |\n  let userName = \"  ahmed  \";\n  let city = \"   riyadh  \";\n  let age = \"20\";\n\n  let cleanName = userName.trim().toUpperCase();\n  let cleanCity = city.trim().toUpperCase();\n  let futureAge = parseInt(age) + 10;\n\n  let message = `Welcome, ${cleanName} from ${cleanCity}! In 10 years, you will be ${futureAge}.`;\n\n  console.log(message);\nsolution: 1\noptions:\n  - \"Welcome, ahmed from riyadh! In 10 years, you will be 2010.\"\n  - \"Welcome, AHMED from RIYADH! In 10 years, you will be 30.\"\n  - \"Welcome,   ahmed   from    riyadh  ! In 10 years, you will be 30.\"\n  - \"The code will produce an error.\"\nexplanation: |\n  Perfect! The code correctly cleans the name and city with `.trim()` and `.toUpperCase()`, converts the age to a number with `parseInt()` before adding 10, and then assembles everything with a template literal."
+    },
+    {
+      "name": "09_project_complete.md",
+      "content": "Amazing work! We just built a complete, dynamic script from raw data. That's a huge step. 🎉\n\nWe combined `template literals`, string `methods` like `.trim()` and `.toUpperCase()`, and learned how to handle `type conversion` with `parseInt()`.\n\nThis process of cleaning data and presenting it in a formatted way is something developers do every single day.\n\nNow that we can manage data, let's explore how to make our programs start making decisions on their own."
+    }
+  ]
+}

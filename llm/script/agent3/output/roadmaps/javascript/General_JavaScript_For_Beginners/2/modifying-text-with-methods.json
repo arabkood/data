@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "The Transformer: Modifying Text with Methods",
+    "blurb": "Learn to clean and format text like a pro! Master essential string methods like toUpperCase, toLowerCase, and trim to standardize user input.",
+    "difficulty": "easy",
+    "base_xp": 350,
+    "type": "lesson",
+    "slug": "modifying-text-with-methods"
+  },
+  "files": [
+    {
+      "name": "01_what_are_methods.md",
+      "content": "We've seen how to find a string's `length` using a property. But what if we want to *change* the string itself?\n\nFor that, we use `methods`. Think of methods as special actions or commands we can run on our text.\n\nLet's start with a common one. Imagine you want to make a username shout. We can use the `toUpperCase()` method.\n\n```javascript\nlet studentName = \"farah\";\nlet loudName = studentName.toUpperCase();\n\nconsole.log(loudName);\n```\n\n**OUTPUT**\n```\nFARAH\n```\n\nNotice the parentheses `()` at the end. That's how we know it's an **action (a method)**, not just a description (a property like `.length`)."
+    },
+    {
+      "name": "02_quiz_uppercase.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  A restaurant wants to print all item names in uppercase on kitchen tickets for better readability.\n\n  **Fill in the blank** to make the `dish` variable uppercase.\ncode: |\n  let dish = \"Shawarma\";\n  let kitchenTicket = dish._______;\n\n  console.log(kitchenTicket);\nsolution: 0\noptions:\n  - \"toUpperCase()\"\n  - \"upperCase()\"\n  - \"makeUpper\"\n  - \"toUpperCase\"\nexplanation: |\n  The correct method is `toUpperCase()`. Remember, methods need the parentheses `()` to be called into action!"
+    },
+    {
+      "name": "03_standardizing_text.md",
+      "content": "Great work! Now for the opposite. Often, we need to make text lowercase to compare things consistently.\n\nFor example, if a user types \"Cairo\" and our database has \"cairo\", they should match. The `toLowerCase()` method helps here.\n\n```javascript\nlet userInput = \"Jeddah\";\nlet savedCity = userInput.toLowerCase();\n\nconsole.log(savedCity);\n```\n\n**OUTPUT**\n```\njeddah\n```\n\nThis is a super common task for **making data uniform** before saving or checking it."
+    },
+    {
+      "name": "04_quiz_lowercase.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  What will be logged to the console?\ncode: |\n  let greeting = \"Ahlan Wa Sahlan\";\n  let quietGreeting = greeting.toLowerCase();\n\n  console.log(quietGreeting);\nsolution: 2\noptions:\n  - \"AHLAN WA SAHLAN\"\n  - \"Ahlan Wa Sahlan\"\n  - \"ahlan wa sahlan\"\n  - \"Error\"\nexplanation: |\n  The `toLowerCase()` method converts every character in the string to its lowercase equivalent, resulting in `\"ahlan wa sahlan\"`."
+    },
+    {
+      "name": "05_cleaning_whitespace.md",
+      "content": "Let's discover how to fix a sneaky, invisible problem: extra spaces!\n\nSometimes users accidentally add spaces before or after their input. This can cause problems.\n\n```javascript\nlet correctCode = \"1991\";\nlet userEntry = \" 1991 \";\n\nconsole.log(correctCode === userEntry);\n```\n\n**OUTPUT**\n```\nfalse\n```\n\nOh, that's tricky! The spaces make the computer see them as different. We can use the `trim()` method to **remove whitespace from both ends** of a string. ✂️\n\n```javascript\nlet userEntry = \" 1991 \";\nlet cleanedEntry = userEntry.trim();\n\nconsole.log(cleanedEntry);\n```\n\n**OUTPUT**\n```\n1991\n```"
+    },
+    {
+      "name": "06_quiz_trim.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  A user, `yasmin`, is trying to log in. Her username is stored as `\"yasmin\"` but she typed `\"  yasmin  \"`.\n\n  The code isn't working. **Which option fixes the code** so the comparison is `true`?\ncode: |\n  let savedUser = \"yasmin\";\n  let enteredUser = \"  yasmin  \"; // This is the problem line\n\n  // How can we make this true?\n  console.log(savedUser === enteredUser);\nsolution: 1\noptions:\n  - \"let savedUser = savedUser.trim();\"\n  - \"let enteredUser = enteredUser.trim();\"\n  - \"let enteredUser = enteredUser.toUpperCase();\"\n  - \"It cannot be fixed.\"\nexplanation: |\n  The problem is with the `enteredUser` variable having extra spaces. Applying `trim()` to it removes the leading and trailing whitespace, allowing the comparison `savedUser === enteredUser` to evaluate to `true`."
+    },
+    {
+      "name": "07_reflection.md",
+      "content": "Amazing! We now have powerful tools to transform text.\n\nWe've learned to use `toUpperCase()`, `toLowerCase()`, and `trim()`. These are our first string `methods`!\n\nA key thing to remember is that these methods **return a new, modified string**. They don't change the original one.\n\nThis skill is essential for cleaning user input and preparing data. Next up, let's combine all our string skills to build a dynamic message!"
+    }
+  ]
+}

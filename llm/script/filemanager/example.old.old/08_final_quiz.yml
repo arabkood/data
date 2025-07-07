@@ -1,0 +1,26 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  Which line of code correctly prints a `boolean` value?
+---
+code: |
+  // Option 0
+  console.log("true");
+
+  // Option 1
+  console.log(True);
+
+  // Option 2
+  console.log(false);
+---
+solution: 2
+options:
+  - Option 0
+  - Option 1
+  - Option 2
+explanation: |
+  `"true"` is a `string` because of the quotes.
+
+  `True` (with a capital T) will cause an error, as JavaScript is case-sensitive and requires `true` to be lowercase.
+
+  `false` is a correct `boolean` value.

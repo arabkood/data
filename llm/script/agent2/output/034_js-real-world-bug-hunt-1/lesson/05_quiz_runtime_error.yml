@@ -1,0 +1,23 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  هذه `:function` مصممة لجمع أسعار المنتجات في عربة التسوق. لكنها تعيد `NaN` (ليس رقمًا). ما هو الإصلاح الصحيح لهذا الخطأ؟
+code: |
+  function getCartTotal(prices) {
+    let total;
+    for (let i = 0; i < prices.length; i++) {
+      total += prices[i];
+    }
+    return total;
+  }
+  
+  const cart = [10, 20, 30];
+  // console.log(getCartTotal(cart)) -> NaN
+options:
+  - "تغيير الحلقة إلى `while`"
+  - "استخدام `total = total + prices[i];`"
+  - "إعطاء `:variable` `total` قيمة ابتدائية `0`"
+  - "تغيير `let` إلى `:const`"
+solution: 2
+explanation: |
+  الخطأ هنا هو `:runtime error` كلاسيكي. تم تعريف `:variable` `total` ولكن لم يتم إعطاؤه قيمة ابتدائية (`undefined`). عندما تحاول الحلقة إضافة `prices[0]` إلى `total`، فإنها تحاول فعليًا حساب `undefined + 10`، والنتيجة هي `NaN`. الحل هو دائمًا إعطاء قيمة ابتدائية للمجمّعات (accumulators)، وهي `0` لعمليات الجمع.

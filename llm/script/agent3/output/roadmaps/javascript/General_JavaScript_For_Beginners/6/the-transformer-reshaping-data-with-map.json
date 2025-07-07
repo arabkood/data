@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "The Transformer: Reshaping Data with .map()",
+    "blurb": "Learn to use the powerful .map() method to transform entire arrays of data in one clean step, without needing manual loops.",
+    "difficulty": "medium",
+    "base_xp": 350,
+    "type": "lesson",
+    "slug": "the-transformer-reshaping-data-with-map"
+  },
+  "files": [
+    {
+      "name": "01_the_transformer_intro.md",
+      "content": "Remember how we unlocked `higher-order functions`? Those special functions that can take *other functions* as arguments.\n\nNow, let's meet one of the most famous higher-order functions for arrays: `.map()`.\n\nImagine you have a list of prices and you need to give everyone a 10% discount. Doing it one-by-one is slow. `.map()` is like a magic wand that transforms every item in your list, all at once! ✨"
+    },
+    {
+      "name": "02_map_in_action.md",
+      "content": "The `.map()` method creates a **new array** by calling a function on every single element in the original array.\n\nLet's see it in action. We have an array of numbers, and we want to double each one.\n\n```javascript\nconst numbers = [2, 5, 10];\n\n// The function here tells .map() what to do with each 'num'\nconst doubledNumbers = numbers.map(num => num * 2);\n\nconsole.log(doubledNumbers);\n```\n\n**Output:**\n```\n[4, 10, 20]\n```\n\nNotice how the original `numbers` array is unchanged. `.map()` always gives back a brand new array."
+    },
+    {
+      "name": "03_guided_price_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's help a local shop owner, Fatima, calculate the final prices for her products after adding a 15% value-added tax (VAT).\n\n  **Fill in the blank** to correctly calculate the new prices.\ncode: |\n  const initialPrices = [100, 200, 50];\n\n  // To add 15%, we multiply by 1.15\n  const finalPrices = initialPrices.map(price => ______);\n\n  console.log(finalPrices);\n  // Expected output: [115, 230, 57.5]\nsolution: 0\noptions:\n  - \"price * 1.15\"\n  - \"price + 1.15\"\n  - \"price * 0.15\"\n  - \"price.add(1.15)\"\nexplanation: |\n  To increase a number by a percentage, we multiply it by `1 + (percentage / 100)`. \n\n  So for a 15% increase, we multiply by `1.15`. The `.map()` method applies this calculation to every `price` in the array."
+    },
+    {
+      "name": "04_student_names_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Great! Now let's work with objects. We have an array of student objects from a school in Cairo.\n\n  **What code will create a new array containing only the students' names?**\ncode: |\n  const students = [\n    { name: \"Layla\", grade: 85 },\n    { name: \"Omar\", grade: 92 },\n    { name: \"Nadia\", grade: 78 }\n  ];\n\n  const studentNames = students.map(student => ________ );\n\n  console.log(studentNames);\n  // Expected output: [\"Layla\", \"Omar\", \"Nadia\"]\nsolution: 2\noptions:\n  - \"name\"\n  - \"students.name\"\n  - \"student.name\"\n  - \"student['name']\"\nexplanation: |\n  Inside the `.map()` function, the parameter `student` represents one object from the `students` array on each iteration (e.g., `{ name: \"Layla\", grade: 85 }`).\n\n  To access the `name` property of that object, we use **dot notation**: `student.name`."
+    },
+    {
+      "name": "05_find_the_bug_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Oh, it looks like this code has a small mistake! It's supposed to convert an array of numbers into an array of strings announcing each number.\n\n  **Why is the output `[undefined, undefined, undefined]` instead of the expected result?** 🤔\ncode: |\n  const scores = [10, 20, 30];\n\n  const announcements = scores.map(score => {\n    `Score is: ${score}`;\n  });\n\n  console.log(announcements);\nsolution: 1\noptions:\n  - \"The backticks `` are incorrect.\"\n  - \"The function is missing the `return` keyword.\"\n  - \"You cannot use template literals inside `.map()`.\"\n  - \"The variable `score` is not defined.\"\nexplanation: |\n  When an arrow function uses curly braces `{}` to define its body, it's a block body. You must explicitly use the `return` keyword to send a value back.\n\n  Without `return`, the function returns `undefined` by default for each item."
+    },
+    {
+      "name": "06_souk_inventory_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Time for a real-world challenge! You are building an e-commerce site for a Moroccan souk.\n\n  The prices are stored in USD. **Create a new array of formatted strings** showing the product name and its price in Moroccan Dirham (MAD). (Assume 1 USD = 9.95 MAD).\ncode: |\n  const products = [\n    { name: \"Lantern\", priceUSD: 15 },\n    { name: \"Spices\", priceUSD: 5 },\n    { name: \"Leather Bag\", priceUSD: 40 }\n  ];\n\n  const productsInMAD = products.map(product => {\n    const priceInMAD = product.priceUSD * 9.95;\n    return `${product.name}: ${priceInMAD.toFixed(2)} MAD`;\n  });\n\n  // What will be the second element (at index 1) in the `productsInMAD` array?\nsolution: 3\noptions:\n  - \"`Spices: 5 MAD`\"\n  - \"`{ name: 'Spices', priceUSD: 49.75 }`\"\n  - \"`Spices: 49.750 MAD`\"\n  - \"`Spices: 49.75 MAD`\"\nexplanation: |\n  The `.map()` function processes each product. For the second element, `Spices`:\n  1. `product.priceUSD` is `5`.\n  2. `5 * 9.95` equals `49.75`.\n  3. The `toFixed(2)` method formats the number to two decimal places.\n  4. The template literal creates the final string: `Spices: 49.75 MAD`."
+    },
+    {
+      "name": "07_recap_and_next.md",
+      "content": "Amazing work! We've just learned one of the most powerful tools for working with arrays.\n\nWe used `.map()` to **transform every item** in an array into something new, creating a completely new array without changing the original.\n\nThis is much cleaner than writing a `for` loop every time. So, we can reshape data. But what if we want to *select* only certain items from a list? That's up next! 🚀"
+    }
+  ]
+}

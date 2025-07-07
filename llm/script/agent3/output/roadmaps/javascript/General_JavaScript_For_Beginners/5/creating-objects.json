@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "title": "The Digital Filing Cabinet: Creating Objects",
+    "blurb": "Go beyond simple variables. Learn to group related information like a student's name, age, and grade into a single, organized container called an object.",
+    "difficulty": "easy",
+    "base_xp": 150,
+    "type": "lesson",
+    "slug": "creating-objects"
+  },
+  "files": [
+    {
+      "name": "01_a_new_container.md",
+      "content": "We've used variables to store single pieces of info, like `let studentName = 'Omar';`.\n\nBut what about Omar's age and grade? Using separate variables for everything can get messy fast.\n\nImagine having a single, tidy container for all of Omar's details. Let's learn how to build one with a JavaScript `object`! 🗃️"
+    },
+    {
+      "name": "02_see_the_structure.md",
+      "content": "An `object` is a collection of `key: value` pairs, wrapped in curly braces `{}`.\n\nThink of the **`key` as a label** (like 'Name'), and the **`value` as the information** itself (like 'Layla').\n\n```javascript\n// This object describes a student\nlet student = {\n  name: \"Layla\",\n  age: 15,\n  isEnrolled: true\n};\n\n// Let's see our new object!\nconsole.log(student);\n```\n\n```\n// Output:\n{ name: 'Layla', age: 15, isEnrolled: true }\n```\nNotice how we can store different data types (String, Number, Boolean) all in one place."
+    },
+    {
+      "name": "03_key_or_value_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  In the `restaurant` object below, which of these is a `key`?\n---\ncode: |\n  let restaurant = {\n    name: \"Foul w Hummus\",\n    rating: 4.5\n  };\n---\nsolution: 1\noptions:\n  - \"`'Foul w Hummus'`\"\n  - \"`rating`\"\n  - \"`restaurant`\"\n  - \"`4.5`\"\nexplanation: |\n  Correct! `rating` is the label (the `key`) for the value `4.5`. Keys are always on the left side of the colon `:`."
+    },
+    {
+      "name": "04_find_the_mistake_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Uh oh, something isn't right here. I used to make this mistake too!\n  \n  **What's causing the syntax error** in this object?\n---\ncode: |\n  let book = {\n    title: \"Kalila wa Dimna\"\n    pages: 320\n  }\n---\nsolution: 2\noptions:\n  - \"The values should not be in quotes.\"\n  - \"The object should use `()` instead of `{}`.\"\n  - \"A comma is missing between properties.\"\n  - \"The `key` `pages` is invalid.\"\nexplanation: |\n  Exactly! Each `key: value` pair must be separated by a comma. It's a common typo, and spotting it is a great skill!"
+    },
+    {
+      "name": "05_build_your_own_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Your turn! We're building an inventory system for a Jordanian dates shop.\n  \n  **Fill in the blank** to complete the `product` object for 'Medjool' dates.\n---\ncode: |\n  let product = {\n    ___: \"Medjool\",\n    pricePerKilo: 12,\n    origin: \"Jordan\"\n  };\n---\nsolution: 1\noptions:\n  - \"`'name'`\"\n  - \"`name:`\"\n  - \"`name =`\"\n  - \"`name`\"\nexplanation: |\n  Excellent! You correctly created the `name` key for the value `'Medjool'`. Now this `product` object neatly holds all its information."
+    },
+    {
+      "name": "06_what_comes_next.md",
+      "content": "Amazing work! We've just learned how to organize related data into a single, clean `object`.\n\nThis is a huge step. `Objects` are the foundation for building almost everything in programming, from user profiles to game characters.\n\nBut now that our data is organized, how do we get just one piece of info out, like the product's price? That's exactly what we'll discover next!"
+    }
+  ]
+}

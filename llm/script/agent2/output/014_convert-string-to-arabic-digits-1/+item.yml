@@ -1,0 +1,7 @@
+title: "تحويل النصوص إلى أرقام عربية"
+blurb: "تعلم كيفية بناء دالة تقوم بتحويل الأرقام الإنجليزية '123' إلى صيغتها العربية '١٢٣' في جافاسكريبت، وهي مهارة أساسية لواجهات المستخدم العربية."
+premium_only: false
+difficulty: "medium"
+base_xp: 1500
+type: "lesson"
+slug: "convert-string-to-arabic-digits"

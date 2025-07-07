@@ -1,0 +1,73 @@
+[
+  {
+    "builds_on": [
+      "variables",
+      "data types",
+      "console.log"
+    ],
+    "narrative_hook": "Learn the fundamental skill of storing and displaying textual information, the primary way programs communicate.",
+    "new_concept": [
+      "strings"
+    ],
+    "title": "The Written Word: Defining Strings"
+  },
+  {
+    "builds_on": [
+      "strings",
+      "variables"
+    ],
+    "narrative_hook": "Combine separate pieces of text to construct complete, dynamic messages from smaller parts.",
+    "new_concept": [
+      "concatenation"
+    ],
+    "title": "Joining Forces: Combining Strings with Concatenation"
+  },
+  {
+    "builds_on": [
+      "strings",
+      "variables",
+      "concatenation"
+    ],
+    "narrative_hook": "Discover a professional and more readable way to embed expressions and variables directly into your strings.",
+    "new_concept": [
+      "template literals"
+    ],
+    "title": "The Modern Blueprint: Using Template Literals"
+  },
+  {
+    "builds_on": [
+      "strings",
+      "variables"
+    ],
+    "narrative_hook": "Before you can process data, you must be able to measure it; learn how to check the size of your text.",
+    "new_concept": [
+      "string properties"
+    ],
+    "title": "Taking Measure: String Properties"
+  },
+  {
+    "builds_on": [
+      "strings",
+      "variables",
+      "string properties"
+    ],
+    "narrative_hook": "Go beyond just reading text and learn how to programmatically clean, format, and standardize it using built-in tools.",
+    "new_concept": [
+      "string methods"
+    ],
+    "title": "The Transformer: Modifying Text with Methods"
+  },
+  {
+    "builds_on": [
+      "template literals",
+      "string methods",
+      "variables",
+      "data types"
+    ],
+    "narrative_hook": "Combine all your text manipulation skills to build a script that generates a formatted user summary, a common feature in many applications.",
+    "new_concept": [
+      "type conversion"
+    ],
+    "title": "Project: Building a Dynamic Welcome Message"
+  }
+]

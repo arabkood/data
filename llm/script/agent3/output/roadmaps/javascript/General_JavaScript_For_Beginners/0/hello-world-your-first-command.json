@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "title": "Hello, World!: Your First Command",
+    "blurb": "Learn to give your very first instruction to the computer and see the output. This is the first step every programmer takes!",
+    "difficulty": "easy",
+    "base_xp": 100,
+    "type": "lesson",
+    "slug": "hello-world-your-first-command"
+  },
+  "files": [
+    {
+      "name": "01_your_first_command.md",
+      "content": "Welcome to Akood! Ready to start our coding journey together? Let's do this.\n\nThink of the computer as a very obedient assistant. It does exactly what you tell it to do, and our first task is to have it say something back to us.\n\nTo display a message, we use a special command: `console.log()`.\n\nAnything we put inside the parentheses `()` and wrap in quotes `\"\"` will be displayed on the screen. Let's see it in action.\n\n```javascript\n// This line tells the computer to display a message\nconsole.log(\"Hello from Akood!\");\n```\n\n**Output**\n```\nHello from Akood!\n```\n\nSee? The computer printed our message. Now, **it's your turn to give a command!**"
+    },
+    {
+      "name": "02_say_marhaba_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's make the computer greet us in Arabic! 💬\n\n  Fill in the blank to print the word 'مرحباً'.\n---\ncode: |\n  console.log(_____);\n---\nsolution: 0\noptions:\n  - '\"مرحباً\"'\n  - 'مرحباً'\n  - '\"console.log\"'\n  - '()'\nexplanation: |\n  Correct! Text data, also known as a `string`, must be wrapped in quotation marks `\"\"` so the computer knows exactly what to print."
+    },
+    {
+      "name": "03_predict_the_output_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  I wonder what this code will display. Can you figure it out?\n---\ncode: |\n  console.log(\"Coding is an adventure!\");\n---\nsolution: 1\noptions:\n  - '\"Coding is an adventure!\"'\n  - 'Coding is an adventure!'\n  - 'Error'\n  - 'console.log'\nexplanation: |\n  Excellent! The `console.log()` command prints the content *inside* the quotes, but not the quotes themselves."
+    },
+    {
+      "name": "04_find_the_mistake_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's greet our friend, **Fatima**.\n\n  Uh oh, it looks like this code has a small error. What's the problem?\n---\ncode: |\n  console.log(\"Ahlan, Fatima!);\n---\nsolution: 2\noptions:\n  - \"The command should be `print()`\"\n  - \"There is an extra parenthesis\"\n  - \"The text is missing a closing quotation mark `\\\"`\"\n  - \"The name Fatima should not be in quotes\"\nexplanation: |\n  Great catch! The computer needs both an opening `\"` and a closing `\"` to understand where the text begins and ends. A small detail makes a big difference!"
+    },
+    {
+      "name": "05_recap_and_next_steps.md",
+      "content": "That was fantastic! You've successfully used `console.log()` to communicate with the computer. 🎉\n\nThis command is a programmer's best friend. We use it all the time to check our work and see what the code is doing behind the scenes.\n\nYou've taken your **first and most important step** into the world of programming.\n\nNow that we can display information, let's learn about the different *types* of information we can use. Up next, we'll explore the building blocks of code: data!"
+    }
+  ]
+}

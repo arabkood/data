@@ -1,0 +1,7 @@
+title: "البحث الاحترافي: العثور على بيانات داخل الكائنات المعقدة"
+blurb: "تعلم كيف تستخدم دالة `:find` في `:javascript` للعثور بسرعة على عناصر محددة داخل مصفوفات من الكائنات، وهي مهارة لا غنى عنها للتعامل مع البيانات الديناميكية."
+premium_only: false
+difficulty: "medium"
+base_xp: 1200
+type: "lesson"
+slug: "js-searching-in-complex-data"

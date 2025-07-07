@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "title": "The Precision Sieve: Finding Data with .filter()",
+    "blurb": "Learn to use the powerful .filter() method to sift through arrays and create new lists containing only the elements that match your criteria.",
+    "difficulty": "medium",
+    "base_xp": 350,
+    "type": "lesson",
+    "slug": "the-precision-sieve-finding-data-with-filter"
+  },
+  "files": [
+    {
+      "name": "01_the_sieve.md",
+      "type": "markdown",
+      "content": "In our last lesson, we used `.map()` to transform every item in a list, like giving every student a new grade.\n\nBut what if you don't want to change the items, but instead select only *some* of them? Like picking only the ripe dates from a basket.\n\nThis is where the `filter` method comes in. It acts like a sieve, letting you keep only the elements that pass a specific test.\n\nLet's see it in action. Here, we'll keep only the numbers greater than 10.\n```javascript\nconst allAges = [5, 12, 18, 7, 25];\n\nconst adultAges = allAges.filter(age => age > 10);\n\nconsole.log(adultAges);\n// Output: [12, 18, 25]\n```\nThe key is the function inside `filter`. It must return `true` to keep an item, or `false` to discard it. **Your condition determines what stays**."
+    },
+    {
+      "name": "02_passing_grades.yml",
+      "type": "quiz",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's help a teacher, Mr. Khalid, find all the passing scores from a list. A passing score is 50 or higher.\n\n  **Complete the condition** to filter the `scores` array.\n---\ncode: |\n  const scores = [88, 45, 92, 60, 30];\n\n  const passingScores = scores.filter(score => ______ );\n\n  console.log(passingScores);\n  // Expected Output: [88, 92, 60]\n---\nsolution: 0\noptions:\n  - \"`score >= 50`\"\n  - \"`score = 50`\"\n  - \"`score < 50`\"\n  - \"`scores.length > 4`\"\nexplanation: |\n  Correct! The condition `score >= 50` checks each number. It returns `true` for 88, 92, and 60, so they are included in the new `passingScores` array."
+    },
+    {
+      "name": "03_souq_inventory.md",
+      "type": "markdown",
+      "content": "Filtering numbers is useful, but the real power comes when we filter arrays of objects. This is something you'll do all the time!\n\nImagine we have an inventory for an online spice shop. We want to show a customer only the items that are currently in stock.\n\nLet's look at how `filter` handles this with objects.\n```javascript\nconst souqInventory = [\n  { name: 'Saffron', inStock: true },\n  { name: 'Cardamom', inStock: false },\n  { name: 'Rose Water', inStock: true }\n];\n\nconst availableItems = souqInventory.filter(item => item.inStock === true);\n\nconsole.log(availableItems);\n// Output:\n// [\n//   { name: 'Saffron', inStock: true },\n//   { name: 'Rose Water', inStock: true }\n// ]\n```\nSee? We just told `filter` to **check the `inStock` property** of each object. It's that straightforward."
+    },
+    {
+      "name": "04_menu_mistake.yml",
+      "type": "quiz",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Fatima is trying to find all dishes on her restaurant's menu that are vegetarian. Her code isn't working and is returning an empty `[]` array.\n\n  **What is the mistake in her code?**\n---\ncode: |\n  const menu = [\n    { name: 'Kebab', isVegetarian: false },\n    { name: 'Hummus', isVegetarian: true },\n    { name: 'Tabbouleh', isVegetarian: true }\n  ];\n\n  const vegetarianDishes = menu.filter(dish => dish.isVegetarian = false);\n\n  console.log(vegetarianDishes);\n---\nsolution: 2\noptions:\n  - \"You cannot use `.filter()` on an array of objects.\"\n  - \"The property `isVegetarian` does not exist.\"\n  - \"It uses an assignment `=` instead of a comparison `===`.\"\n  - \"The function should be `() => { return dish.isVegetarian; }`\"\nexplanation: |\n  The single equals sign `=` is for *assignment*, not comparison. The code was accidentally setting `isVegetarian` to `false` for every item, so the filter condition always evaluated to `false` and returned an empty array. To compare, we need `==` or `===`."
+    },
+    {
+      "name": "05_find_the_cities.yml",
+      "type": "quiz",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Now it's your turn. We have a list of cities.\n\n  **Which line of code will correctly create a new array containing only the cities from 'UAE'?**\n---\ncode: |\n  const cities = [\n    { name: 'Riyadh', country: 'KSA' },\n    { name: 'Dubai', country: 'UAE' },\n    { name: 'Cairo', country: 'Egypt' },\n    { name: 'Abu Dhabi', country: 'UAE' }\n  ];\n\n  const uaeCities = /* Which code goes here? */\n---\nsolution: 1\noptions:\n  - \"`cities.map(city => city.country === 'UAE')`\"\n  - \"`cities.filter(city => city.country === 'UAE')`\"\n  - \"`cities.filter('UAE')`\"\n  - \"`cities.filter(city => city.name === 'UAE')`\"\nexplanation: |\n  This is the perfect use for `.filter()`. The function `city => city.country === 'UAE'` provides the test, and `.filter()` builds the new array with only the items that pass the test."
+    },
+    {
+      "name": "06_reflect_and_next.md",
+      "type": "markdown",
+      "content": "Fantastic! You've just mastered one of the most useful tools for handling data.\n\nYou now know the difference between `.map()` and `.filter()`:\n- `map` **transforms** each item.\n- `filter` **selects** a subset of items.\n\nLet's think... we can transform data and we can select data. What if we wanted to combine data, like calculating the total price of a shopping cart?\n\nThat's exactly where we're headed next! 🚀"
+    }
+  ]
+}

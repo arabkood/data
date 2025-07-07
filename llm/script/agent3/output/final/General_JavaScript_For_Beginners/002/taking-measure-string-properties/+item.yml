@@ -1,0 +1,6 @@
+title: "لنأخذ المقاس: خصائص السلاسل النصية"
+blurb: "تعلَّم كيفية قياس حجم نصوصك. استخدم الخاصية .length لعدّ الحروف، وهي مهارة أساسية للتحقق من مُدخلات المستخدم مثل أسماء المستخدمين."
+difficulty: "easy"
+base_xp: 250
+type: "lesson"
+slug: "taking-measure-string-properties"

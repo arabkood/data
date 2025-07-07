@@ -1,0 +1,647 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction: what is JavaScript",
+    "keywords": [
+      "javascript",
+      "programming",
+      "web development",
+      "scripting language",
+      "introduction"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Variables and console.log",
+    "keywords": [
+      "variables",
+      "console.log",
+      "var",
+      "let",
+      "const",
+      "debugging",
+      "output"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Math operations",
+    "keywords": [
+      "math",
+      "arithmetic",
+      "operators",
+      "addition",
+      "subtraction",
+      "multiplication",
+      "division"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Making decisions intro: if, else, template literals",
+    "keywords": [
+      "if",
+      "else",
+      "conditional",
+      "boolean",
+      "template literals",
+      "string interpolation",
+      "decisions"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Making more decisions: else if, switch",
+    "keywords": [
+      "else if",
+      "switch",
+      "case",
+      "conditional logic",
+      "multiple conditions",
+      "control flow"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Let's launch a rocket!",
+    "keywords": [
+      "loops",
+      "conditionals",
+      "practice",
+      "rocket",
+      "simulation",
+      "real world example"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Print a triangle",
+    "keywords": [
+      "loops",
+      "patterns",
+      "nested loops",
+      "triangle",
+      "printing",
+      "iteration"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Don't Repeat Yourself",
+    "keywords": [
+      "DRY",
+      "code reuse",
+      "repetition",
+      "best practices",
+      "clean code",
+      "efficiency"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "while loop",
+    "keywords": [
+      "while",
+      "loop",
+      "iteration",
+      "condition",
+      "control flow",
+      "repetition"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Intro to functions",
+    "keywords": [
+      "functions",
+      "function declaration",
+      "parameters",
+      "return",
+      "code organization",
+      "reusability"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Let's solve a puzzle with loops",
+    "keywords": [
+      "loops",
+      "problem solving",
+      "puzzle",
+      "iteration",
+      "practice",
+      "algorithms"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "What even is an Array?",
+    "keywords": [
+      "array",
+      "data structure",
+      "list",
+      "collection",
+      "index",
+      "elements"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Modify that data: push, pop, length, etc",
+    "keywords": [
+      "array methods",
+      "push",
+      "pop",
+      "length",
+      "shift",
+      "unshift",
+      "data manipulation"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Convert String to Arabic Digits",
+    "keywords": [
+      "string manipulation",
+      "arabic digits",
+      "conversion",
+      "replace",
+      "localization",
+      "unicode"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Looping patterns: searching, filtering",
+    "keywords": [
+      "loops",
+      "searching",
+      "filtering",
+      "find",
+      "patterns",
+      "iteration",
+      "algorithms"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Transform Arrays: Intro to map",
+    "keywords": [
+      "map",
+      "array transformation",
+      "functional programming",
+      "iteration",
+      "callback",
+      "higher order functions"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Error-proofing with arrays (handling missing data, defaults)",
+    "keywords": [
+      "error handling",
+      "default values",
+      "null",
+      "undefined",
+      "defensive programming",
+      "data validation"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Reuse with functions",
+    "keywords": [
+      "functions",
+      "reusability",
+      "modular code",
+      "organization",
+      "DRY principle",
+      "abstraction"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Return values and parameters",
+    "keywords": [
+      "return",
+      "parameters",
+      "arguments",
+      "function input",
+      "function output",
+      "data flow"
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Clean interfaces: naming and defaults",
+    "keywords": [
+      "naming conventions",
+      "default parameters",
+      "clean code",
+      "function design",
+      "interface design",
+      "readability"
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Scope: who sees what",
+    "keywords": [
+      "scope",
+      "global scope",
+      "local scope",
+      "block scope",
+      "variable visibility",
+      "lexical scope"
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Closures (with real examples)",
+    "keywords": [
+      "closures",
+      "lexical scope",
+      "inner functions",
+      "data privacy",
+      "function factories",
+      "advanced concepts"
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Build a calculator with reusable logic",
+    "keywords": [
+      "calculator",
+      "project",
+      "functions",
+      "reusable logic",
+      "math operations",
+      "user interface"
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Meet the object: keys and values",
+    "keywords": [
+      "objects",
+      "key value pairs",
+      "properties",
+      "object literal",
+      "data structure",
+      "hash map"
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Dot vs bracket notation",
+    "keywords": [
+      "dot notation",
+      "bracket notation",
+      "object access",
+      "property access",
+      "dynamic keys",
+      "syntax"
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Nesting objects and arrays",
+    "keywords": [
+      "nested objects",
+      "nested arrays",
+      "complex data",
+      "data structures",
+      "object composition",
+      "array of objects"
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Searching in complex data",
+    "keywords": [
+      "data search",
+      "nested data",
+      "filtering",
+      "find",
+      "complex queries",
+      "data traversal"
+    ]
+  },
+  {
+    "id": 28,
+    "title": "When to use array vs object",
+    "keywords": [
+      "data structures",
+      "array vs object",
+      "data modeling",
+      "best practices",
+      "performance",
+      "use cases"
+    ]
+  },
+  {
+    "id": 29,
+    "title": "Build a contact book with tags",
+    "keywords": [
+      "contact book",
+      "project",
+      "objects",
+      "arrays",
+      "tags",
+      "data organization",
+      "CRUD operations"
+    ]
+  },
+  {
+    "id": 30,
+    "title": "Reading errors like a human",
+    "keywords": [
+      "error messages",
+      "debugging",
+      "error types",
+      "stack trace",
+      "troubleshooting",
+      "problem solving"
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Use console.log like a detective",
+    "keywords": [
+      "console.log",
+      "debugging",
+      "detective work",
+      "logging",
+      "troubleshooting",
+      "development tools"
+    ]
+  },
+  {
+    "id": 32,
+    "title": "Naming and structure that helps you debug",
+    "keywords": [
+      "naming conventions",
+      "code structure",
+      "debugging",
+      "readable code",
+      "maintainable code",
+      "best practices"
+    ]
+  },
+  {
+    "id": 33,
+    "title": "Common beginner bugs and how to spot them",
+    "keywords": [
+      "common bugs",
+      "beginner mistakes",
+      "debugging",
+      "error prevention",
+      "code review",
+      "best practices"
+    ]
+  },
+  {
+    "id": 34,
+    "title": "Real-world bug hunt challenge",
+    "keywords": [
+      "bug hunting",
+      "debugging challenge",
+      "real world",
+      "problem solving",
+      "troubleshooting",
+      "practice"
+    ]
+  },
+  {
+    "id": 35,
+    "title": "What to do when nothing works 😅",
+    "keywords": [
+      "debugging strategies",
+      "problem solving",
+      "stuck situations",
+      "help resources",
+      "systematic debugging",
+      "persistence"
+    ]
+  },
+  {
+    "id": 36,
+    "title": "Time travel with setTimeout",
+    "keywords": [
+      "setTimeout",
+      "asynchronous",
+      "timing",
+      "delays",
+      "callback",
+      "event loop",
+      "non-blocking"
+    ]
+  },
+  {
+    "id": 37,
+    "title": "Simulate a delayed task",
+    "keywords": [
+      "delayed execution",
+      "simulation",
+      "setTimeout",
+      "asynchronous programming",
+      "timing",
+      "real world example"
+    ]
+  },
+  {
+    "id": 38,
+    "title": "Intro to Promises and why they exist",
+    "keywords": [
+      "promises",
+      "asynchronous",
+      "callback hell",
+      "promise chain",
+      "then",
+      "catch",
+      "async patterns"
+    ]
+  },
+  {
+    "id": 39,
+    "title": "async/await in real life",
+    "keywords": [
+      "async",
+      "await",
+      "asynchronous programming",
+      "promises",
+      "modern javascript",
+      "real world examples"
+    ]
+  },
+  {
+    "id": 40,
+    "title": "Handle errors with grace (try/catch)",
+    "keywords": [
+      "try catch",
+      "error handling",
+      "exception handling",
+      "graceful degradation",
+      "robust code",
+      "fault tolerance"
+    ]
+  },
+  {
+    "id": 41,
+    "title": "Build a fake API loader",
+    "keywords": [
+      "API",
+      "fake data",
+      "loader",
+      "async",
+      "promises",
+      "project",
+      "simulation",
+      "web requests"
+    ]
+  },
+  {
+    "id": 42,
+    "title": "let, const, and why var is dead",
+    "keywords": [
+      "let",
+      "const",
+      "var",
+      "variable declaration",
+      "block scope",
+      "hoisting",
+      "modern javascript",
+      "ES6"
+    ]
+  },
+  {
+    "id": 43,
+    "title": "Arrow functions",
+    "keywords": [
+      "arrow functions",
+      "function syntax",
+      "this binding",
+      "concise functions",
+      "ES6",
+      "modern javascript"
+    ]
+  },
+  {
+    "id": 44,
+    "title": "Template literals, destructuring (light)",
+    "keywords": [
+      "template literals",
+      "destructuring",
+      "string interpolation",
+      "object destructuring",
+      "array destructuring",
+      "ES6"
+    ]
+  },
+  {
+    "id": 45,
+    "title": "Spread/rest in action",
+    "keywords": [
+      "spread operator",
+      "rest parameters",
+      "array spread",
+      "object spread",
+      "ES6",
+      "modern syntax"
+    ]
+  },
+  {
+    "id": 46,
+    "title": "Parameter destructuring",
+    "keywords": [
+      "parameter destructuring",
+      "function parameters",
+      "object destructuring",
+      "default parameters",
+      "clean syntax"
+    ]
+  },
+  {
+    "id": 47,
+    "title": "Build a clean formatter function",
+    "keywords": [
+      "formatter",
+      "string formatting",
+      "function design",
+      "clean code",
+      "utility functions",
+      "project"
+    ]
+  },
+  {
+    "id": 48,
+    "title": "What developers actually do",
+    "keywords": [
+      "developer workflow",
+      "programming career",
+      "software development",
+      "real world programming",
+      "professional development"
+    ]
+  },
+  {
+    "id": 49,
+    "title": "Small patterns that save big time",
+    "keywords": [
+      "programming patterns",
+      "code patterns",
+      "efficiency",
+      "best practices",
+      "productivity",
+      "shortcuts"
+    ]
+  },
+  {
+    "id": 50,
+    "title": "Think like a builder, not just a coder",
+    "keywords": [
+      "mindset",
+      "problem solving",
+      "software architecture",
+      "builder mentality",
+      "system thinking",
+      "programming philosophy"
+    ]
+  },
+  {
+    "id": 51,
+    "title": "Better naming and structure",
+    "keywords": [
+      "naming conventions",
+      "code structure",
+      "readable code",
+      "maintainable code",
+      "clean code",
+      "organization"
+    ]
+  },
+  {
+    "id": 52,
+    "title": "Reusable utilities with function factories",
+    "keywords": [
+      "function factories",
+      "utility functions",
+      "reusable code",
+      "higher order functions",
+      "code generation",
+      "advanced patterns"
+    ]
+  },
+  {
+    "id": 53,
+    "title": "From idea to script: plan, write, test",
+    "keywords": [
+      "development process",
+      "planning",
+      "testing",
+      "workflow",
+      "project management",
+      "software lifecycle"
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  لدينا هنا كائن محوّل `hijriDate` (تاريخ هجري). تحاول الشفرة استدعاء الـ`طريقة` `displayDate`، ولكن هناك خطأ.
+
+  **ابحث عن الخطأ** واختر الطريقة الصحيحة لاستدعاء الـ`طريقة`.
+---
+code: |
+  let hijriDate = {
+    day: 1,
+    month: "Muharram",
+    year: 1446,
+    displayDate: function() {
+      console.log("عرض التاريخ الهجري");
+    }
+  };
+
+  // هذا السطر به خطأ!
+  hijriDate.displayDate;
+---
+solution: 1
+options:
+  - "`displayDate(hijriDate);`"
+  - "`hijriDate.displayDate();`"
+  - "`hijriDate[displayDate];`"
+  - "`console.log(displayDate);`"
+explanation: |
+  رائع! لتنفيذ أو 'استدعاء' `طريقة`، يجب عليك استخدام `ترميز النقطة` متبوعًا بالأقواس `()`. السطر `hijriDate.displayDate;` يشير فقط إلى الـ`طريقة` دون تشغيلها.

@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "title": "Memory Boxes: Storing Information with Variables",
+    "blurb": "Learn how to create 'memory boxes' called variables to store and manage data in your programs, a core skill for any developer.",
+    "difficulty": "easy",
+    "base_xp": 150,
+    "type": "lesson",
+    "slug": "storing-information-with-variables"
+  },
+  "files": [
+    {
+      "name": "01_intro_to_variables.md",
+      "content": "In the last lessons, we saw different `data types` like strings and numbers.\n\nBut just seeing them isn't enough. We need a way to **store and label our data** so we can use it later.\n\nThink of a variable as a labeled box where you can keep information. We can put data inside, and then find it again by looking for the label.\n\nLet's see how to create one of these 'memory boxes' in JavaScript using the `let` keyword. 📦\n\n```javascript\n// SYNTAX: let variableName = value;\n\nlet studentName = \"Layla\";\n\nconsole.log(studentName);\n```\n\n**OUTPUT**\n```\nLayla\n```\n\nHere, we created a variable named `studentName` and stored the string `\"Layla\"` inside it. Easy, right? Let's try it."
+    },
+    {
+      "name": "02_create_a_variable.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Time for our first variable!\n\n  **Fill in the blank** to create a variable named `city` that holds the name of a city in the Arab world.\n---\ncode: |\n  ___ city = \"Beirut\";\n\n  console.log(city);\n---\nsolution: 0\noptions:\n  - \"`let`\"\n  - \"`var`\"\n  - \"`variable`\"\n  - \"`is`\"\nexplanation: |\n  That's it! In modern JavaScript, `let` is the keyword we use to declare a variable whose value we might want to change later."
+    },
+    {
+      "name": "03_updating_variables.md",
+      "content": "Great! The real power of `let` variables is that their contents can be changed.\n\nImagine a score in a game. It starts at 0 and increases. A variable is perfect for this.\n\nTo **update a variable's value**, we just refer to it by its name and assign a new value. We don't need to use `let` again.\n\n```javascript\n// Let's track the number of goals scored by a player named Ziyad\nlet goalsScored = 1;\nconsole.log(goalsScored);\n\n// Ziyad scores another goal!\n// We update the value.\ngoalsScored = 2;\nconsole.log(goalsScored);\n```\n\n**OUTPUT**\n```\n1\n2\n```\n\nSee how the value changed? The 'box' now holds a new number. Let's see if you've got this."
+    },
+    {
+      "name": "04_predict_the_output.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  I used to get confused by this, but it's all about finding the *final* value.\n\n  **What will this code print to the console?**\n---\ncode: |\n  // Storing the current temperature in Cairo\n  let temperature = 25;\n  temperature = 28;\n\n  console.log(temperature);\n---\nsolution: 2\noptions:\n  - \"`25`\"\n  - \"`temperature`\"\n  - \"`28`\"\n  - \"`Error`\"\nexplanation: |\n  Perfect! The variable `temperature` was first set to `25`, but then updated to `28`. The `console.log` always shows the most recent value."
+    },
+    {
+      "name": "05_avoiding_mistakes.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Making mistakes is part of learning. Let's look at a common one together.\n\n  You can't declare the same variable twice in the same scope with `let`. **Which line causes an error?**\n---\ncode: |\n  // 1: let itemCount = 3;\n  // 2: \n  // 3: let itemCount = 5;\n  // 4: console.log(itemCount);\n---\nsolution: 1\noptions:\n  - \"`Line 1`\"\n  - \"`Line 3`\"\n  - \"`Line 4`\"\nexplanation: |\n  Exactly right! The error is on `Line 3` because `itemCount` has already been declared.\n\n  To fix it, you would just write `itemCount = 5;` without the `let` keyword."
+    },
+    {
+      "name": "06_real_world_use_and_reflect.md",
+      "content": "You're doing great! Let's put this all together in a simple, real-world scenario.\n\nImagine we're building a small part of a student grading system for a school.\n\n```javascript\n// We can use comments to explain our code\nlet studentName = \"Noura\";\nlet subject = \"Math\";\nlet grade = 85;\n\n// Now we can display this information\nconsole.log(\"Student Report\");\nconsole.log(studentName);\nconsole.log(grade);\n\n// Later, the grade is updated after a re-test\ngrade = 92;\nconsole.log(\"Updated Grade:\");\nconsole.log(grade);\n```\n\n**OUTPUT**\n```\nStudent Report\nNoura\n85\nUpdated Grade:\n92\n```\n\nLook at that! You've just used `comments`, `data types`, and `variables` to create a small, dynamic piece of a program. ✨\n\nNow we know how to store information that can change. But what about data that should **never change**, like a person's date of birth? Let's find out next."
+    }
+  ]
+}

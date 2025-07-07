@@ -1,0 +1,19 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  في `كائن` المطعم أدناه، أي من الخيارات التالية هو `مفتاح` (`key`)؟
+---
+code: |
+  let restaurant = {
+    name: "Foul w Hummus",
+    rating: 4.5
+  };
+---
+solution: 2
+options:
+  - "`'Foul w Hummus'`"
+  - "`rating`"
+  - "`restaurant`"
+  - "`4.5`"
+explanation: |
+  إجابة رائعة! ✨ `rating` هو العنوان (الـ `مفتاح`) للقيمة `4.5`. تكون المفاتيح دائمًا على الجانب الأيسر من النقطتين `:`.

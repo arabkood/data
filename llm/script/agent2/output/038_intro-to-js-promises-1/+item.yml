@@ -1,0 +1,7 @@
+title: "مقدمة إلى الوعود (Promises): تنظيم الكود غير المتزامن"
+blurb: "تعلم كيف تعمل الوعود (Promises) في جافاسكريبت لحل مشكلة 'جحيم الاستدعاءات' وكتابة كود غير متزامن أكثر نظافة وفعالية."
+premium_only: false
+difficulty: "medium"
+base_xp: 1800
+type: "lesson"
+slug: "intro-to-js-promises"

@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "title": "The Address System: Accessing List Items",
+    "blurb": "Learn how to retrieve specific items from an array using their unique 'address' or index. Master the art of pinpointing data in your collections.",
+    "difficulty": "easy",
+    "base_xp": 250,
+    "type": "lesson",
+    "slug": "accessing-list-items-with-indexes"
+  },
+  "files": [
+    {
+      "name": "01_the_address_system.md",
+      "content": "In our last lesson, we learned to store items in a collection, like putting dates into a crate. But how do we get just *one* specific date out?\n\nEvery item in an array gets a unique address, called an `index`. Think of it like a numbered shelf. This lets us grab exactly what we need.\n\nHere's the one tricky part: **computers start counting from 0**, not 1. So the first item is always at `index` 0.\n\nLet's see it in action. Here is an array of popular names in the Arab world. We can access the first name, 'Omar', by using its index `[0]`.\n```javascript\nlet names = [\"Omar\", \"Fatima\", \"Youssef\"];\nconsole.log(names[0]);\n```\n**Output:**\n```\nOmar\n```\nIt's a common trip-up that counting starts from 0, but we'll get the hang of it together! 🎯"
+    },
+    {
+      "name": "02_find_the_city.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's practice! What `index` do we need to get the city \"Beirut\" from our list?\n---\ncode: |\n  let cities = [\"Riyadh\", \"Cairo\", \"Beirut\"];\n  console.log(cities[...]);\n---\nsolution: 2\noptions:\n  - \"0\"\n  - \"1\"\n  - \"2\"\n  - \"3\"\nexplanation: |\n  Correct! Since counting starts at 0:\n  - `\"Riyadh\"` is at index `0`.\n  - `\"Cairo\"` is at index `1`.\n  - `\"Beirut\"` is at index `2`."
+    },
+    {
+      "name": "03_what_happens_here.md",
+      "content": "Great attempt on that last one! You're getting the hang of this.\n\nThis `index` system is very predictable. The second item is always at `index` 1, the third at `index` 2, and so on.\n\nBut what happens if we ask for an address that doesn't exist? Imagine asking for the 5th item in a list of only 3 spices.\n\nLet's see what the computer does. It doesn't crash, but it tells us it found nothing. In JavaScript, 'nothing' is represented by `undefined`."
+    },
+    {
+      "name": "04_find_the_mistake.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  This code is trying to get an item from a list of spices for a restaurant, but the output is `undefined`. **Why did this happen?**\n---\ncode: |\n  let spices = [\"Saffron\", \"Cardamom\", \"Cinnamon\"];\n  console.log(spices[3]);\n  // Output: undefined\n---\nsolution: 1\noptions:\n  - \"The `spices` array is empty.\"\n  - \"The index `3` does not exist. The last valid index is `2`.\"\n  - \"You cannot use `console.log` with arrays.\"\n  - \"The computer made a random error.\"\nexplanation: |\n  Exactly! The array `spices` has 3 items, so its valid indexes are `0`, `1`, and `2`. Asking for index `3` is like looking for a fourth shelf when there are only three."
+    },
+    {
+      "name": "05_why_it_matters.md",
+      "content": "You've now mastered one of the most fundamental skills in coding: retrieving specific data from a collection. This is a huge step!\n\nThink about building a Hijri to Gregorian date converter. You could store the Hijri month names in an array and use an `index` to pull the correct one for a conversion.\n\nNow that we can get items from our list, what's next? Soon, we'll learn how to add new items to the end of our list. 🚀"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  Let's check our understanding of strings.
+
+  **What will be the output** of this code?
+---
+code: |
+  console.log("مكتبة جرير");
+---
+solution: 0
+options:
+  - "مكتبة جرير"
+  - "`مكتبة جرير`"
+  - "Error"
+  - "console.log"
+explanation: |
+  Correct! The `console.log` command prints the value *inside* the quotes, not the quotes themselves. The text `مكتبة جرير` is a `string`.

@@ -1,0 +1,18 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  You are building a feature for a delivery app.
+  
+  **Your task**: A restaurant in Jeddah is currently open. How would you log its status as `true`?
+---
+code: |
+  // Log the 'open' status
+---
+solution: 0
+options:
+  - console.log(true);
+  - console.log("true");
+  - console.log(open);
+  - console.log(True);
+explanation: |
+  Perfect! `true` is a special keyword, just like `false`. It is not a string, so it doesn't need quotes.

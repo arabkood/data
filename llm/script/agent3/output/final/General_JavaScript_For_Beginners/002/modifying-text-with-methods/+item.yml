@@ -1,0 +1,6 @@
+title: "المُحوِّل: تعديل النصوص باستخدام الدوال"
+blurb: "تعلّم تنظيف النصوص وتنسيقها كالمحترفين! أتقن دوال النصوص الأساسية مثل toUpperCase و toLowerCase و trim لتوحيد مدخلات المستخدم."
+difficulty: "easy"
+base_xp: 350
+type: "lesson"
+slug: "modifying-text-with-methods"

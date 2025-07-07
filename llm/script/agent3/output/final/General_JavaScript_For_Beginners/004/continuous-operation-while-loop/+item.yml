@@ -1,0 +1,6 @@
+title: "التشغيل المستمر: حلقة `while`"
+blurb: "تعلّم كيفية إنشاء حلقات تكرارية تعمل حتى يتحقق شرط معين، وهي مثالية للمهام التي لا يكون فيها عدد التكرارات معروفًا مسبقًا."
+difficulty: "easy"
+base_xp: 150
+type: "lesson"
+slug: "continuous-operation-while-loop"

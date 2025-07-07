@@ -1,0 +1,6 @@
+title: "أهلاً بالعالم!: أمرك الأول"
+blurb: "تعلّم كيف تعطي أول أمر لك للحاسوب وشاهد النتيجة. هذه هي الخطوة الأولى التي يخطوها كل مبرمج!"
+difficulty: "easy"
+base_xp: 100
+type: "lesson"
+slug: "hello-world-your-first-command"

@@ -1,0 +1,12 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  أي من الخيارات التالية هي الطريقة الصحيحة لتعريف وحدة كود قابلة لإعادة الاستخدام تسمى `:function` في `:javascript`؟
+options:
+  - "`create greeter() {}`"
+  - "`def greeter() {}`"
+  - "`function greeter() {}`"
+  - "`new function greeter() {}`"
+solution: 2
+explanation: |
+  في `:javascript`، نستخدم الكلمة المفتاحية `function` لإنشاء أو تعريف `:function` جديدة. هذا هو حجر الأساس لكتابة كود معياري.

@@ -1,0 +1,6 @@
+title: "المنطق المركّب: كيف ندمج الشروط"
+blurb: "لا تكتفِ بشرط واحد! تعلّم معنا كيف تدمج الشروط باستخدام AND، OR، و NOT، لتكتب برامجًا تتخذ قرارات أكثر ذكاءً ومرونة."
+difficulty: "easy"
+base_xp: 150
+type: "lesson"
+slug: "logical-operators"

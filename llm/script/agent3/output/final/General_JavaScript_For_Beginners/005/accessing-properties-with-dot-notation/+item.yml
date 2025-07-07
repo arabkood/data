@@ -1,0 +1,6 @@
+title: "الخط المباشر: الوصول إلى الخصائص"
+blurb: "بياناتك منظّمة داخل الكائنات. حان الوقت لتعلُّم أسرع طريقة للوصول إلى معلومة محددة وقراءتها باستخدام ترميز النقطة."
+difficulty: "easy"
+base_xp: 150
+type: "lesson"
+slug: "accessing-properties-with-dot-notation"

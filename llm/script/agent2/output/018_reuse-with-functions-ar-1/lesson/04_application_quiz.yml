@@ -1,0 +1,19 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  باستخدام الـ`:function` المعرفة `greet`، أكمل الكود لإرسال تحية إلى "علي".
+code: |
+  function greet(name) {
+    return "مرحباً، " + name + "!";
+  }
+
+  let message = __@@INPUT@@__;
+  console.log(message);
+options:
+  - "greet(\"علي\")"
+  - "greet(name)"
+  - "greet()"
+  - "\"مرحباً، علي!\""
+solution: 0
+explanation: |
+  لإعادة استخدام الـ`:function`، نستدعيها باسمها ونمرر القيمة التي نريد استخدامها كوسيط (`:argument`). في هذه الحالة، نمرر النص `"علي"` ليحل محل الـ`:parameter` المسمى `name`.

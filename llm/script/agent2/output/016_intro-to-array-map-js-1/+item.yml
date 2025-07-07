@@ -1,0 +1,7 @@
+title: "تحويل المصفوفات: مقدمة إلى دالة map"
+blurb: "تعلم كيف تحول كل عنصر في مصفوفة بكفاءة باستخدام دالة map القوية. وداعاً للحلقات التكرارية المعقدة!"
+premium_only: false
+difficulty: "easy"
+base_xp: 1000
+type: "lesson"
+slug: "intro-to-array-map-js"

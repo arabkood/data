@@ -1,0 +1,6 @@
+title: "الغربال الدقيق: العثور على البيانات باستخدام .filter()"
+blurb: "تعلَّم كيفية استخدام التابِع .filter() القوي لفرز المصفوفات وإنشاء قوائم جديدة تحتوي فقط على العناصر التي تطابق معاييرك."
+difficulty: "medium"
+base_xp: 350
+type: "lesson"
+slug: "the-precision-sieve-finding-data-with-filter"

@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "title": "المخزون الرقمي: إتقان مصفوفات الكائنات",
+    "blurb": "تجاوز القوائم البسيطة نحو مخزونات قوية. سنتعلم معًا كيفية تخزين وإدارة العناصر المعقدة بدمج المصفوفات والكائنات، وهي مهارة أساسية لا غنى عنها لأي مطور.",
+    "difficulty": "easy",
+    "base_xp": 150,
+    "type": "lesson",
+    "slug": "the-digital-inventory-mastering-arrays-of-objects"
+  },
+  "files": [
+    {
+      "name": "01_from_lists_to_inventories.md",
+      "content": "### المخزون الرقمي\n\nهل تتذكر كيف استخدمنا **المصفوفات (`arrays`)** لإنشاء قوائم بسيطة، مثل قائمة المشتريات؟ وكيف استخدمنا **الكائنات (`objects`)** لتخزين تفاصيل حول عنصر واحد، مثل مستخدم واحد؟\n\nالآن، لندمج قوتهما معًا! ماذا لو احتجنا إلى قائمة من المستخدمين، حيث يمتلك **كل مستخدم تفاصيله الخاصة**؟ هذا ما يُعرف بـ **مصفوفة الكائنات (`array of objects`)**."
+    },
+    {
+      "name": "02_see_the_structure.md",
+      "content": "### لنرَ المثال: قائمة من العناصر المعقدة\n\nتخيّل أننا ندير قائمة طلاب لأحد الفصول. كل طالب هو عبارة عن `كائن` له خصائصه الخاصة.\n\nتبدو `مصفوفة الكائنات` هكذا. هي `مصفوفة` `[ ]` يكون كل عنصر بداخلها عبارة عن `كائن` `{ }`.\n\n```javascript\nlet students = [\n  { name: \"Laila\", grade: 85 },\n  { name: \"Karim\", grade: 92 },\n  { name: \"Fatima\", grade: 78 }\n];\n```"
+    },
+    {
+      "name": "03_accessing_data.md",
+      "content": "### لنجرّب معًا: الوصول لبيانات محددة\n\nكيف يمكننا الحصول على درجة كريم؟ إنها عملية من خطوتين.\n\nأولاً، استخدم **الفهرس (`index`) لاختيار `الكائن`**. ثم، استخدم **ترميز النقطة (`dot notation`) للحصول على الخاصية (`property`)**.\n\n```javascript\n// students[1] تصل إلى الكائن الثاني\n// { name: \"Karim\", grade: 92 }\n\n// .grade تجلب قيمة الدرجة من ذلك الكائن\nlet karimsGrade = students[1].grade;\n\nconsole.log(karimsGrade);\n```\n\n```\n> 92\n```"
+    },
+    {
+      "name": "04_accessing_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  بالنظر إلى مصفوفة `products`، ما الذي سيطبعه هذا الكود؟\n---\ncode: |\n  let products = [\n    { name: \"Tea\", price: 15 },\n    { name: \"Coffee\", price: 25 },\n    { name: \"Dates\", price: 50 }\n  ];\n\n  console.log(products[0].name);\n---\nsolution: 1\noptions:\n  - \"Coffee\"\n  - \"Tea\"\n  - \"15\"\n  - \"undefined\"\nexplanation: |\n  الكود يصل أولاً إلى العنصر الموجود في `الفهرس` رقم `0`، وهو `الكائن` `{ name: \"Tea\", price: 15 }`.\n\n  ثم، `.name` تختار قيمة `خاصية` `name` من ذلك `الكائن`، وهي \"Tea\"."
+    },
+    {
+      "name": "05_cultural_application.md",
+      "content": "### طبّق بنفسك: مخزون لبسطة في السوق\n\nلنبنِ مخزونًا عمليًا لبسطة تبيع الحلويات التقليدية في السوق.\n\n**مهمتك هي إنشاء `مصفوفة`** باسم `sweets` تحتوي على ثلاثة منتجات. يجب أن يكون كل منتج عبارة عن `كائن` له `خاصية` `name` و `price`.\n\nهكذا نبني هياكل البيانات في المشاريع الحقيقية! 🛍️"
+    },
+    {
+      "name": "06_souq_inventory_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  املأ الفراغ للوصول إلى سعر 'Baklava' بشكل صحيح.\n---\ncode: |\n  let sweets = [\n    { name: \"Kunafa\", price: 30 },\n    { name: \"Baklava\", price: 45 },\n    { name: \"Basbousa\", price: 25 }\n  ];\n\n  let baklavaPrice = sweets[@@INPUT@@].price;\n\n  console.log(baklavaPrice);\n---\nsolution: 0\noptions:\n  - \"1\"\n  - \"2\"\n  - \"'Baklava'\"\n  - \"0\"\nexplanation: |\n  `المصفوفات` تبدأ من `الفهرس` صفر، مما يعني أن أول عنصر يقع في `الفهرس` `0`.\n\n  'Baklava' هي العنصر الثاني في `المصفوفة`، لذا فهي تقع في `الفهرس` `1`."
+    },
+    {
+      "name": "07_error_first_learning.md",
+      "content": "### تأمّل: لماذا فشل هذا الكود؟\n\nلنلقِ نظرة على خطأ شائع. ما المشكلة في هذا الكود؟\n\n```javascript\nlet sweets = [\n  { name: \"Kunafa\", price: 30 },\n  { name: \"Baklava\", price: 45 }\n];\n\nconsole.log(sweets.price);\n```\n\n```\n> undefined\n```\n\nيعيد الكود القيمة `undefined` لأن **`المصفوفة` نفسها لا تملك `خاصية` `price`**. يجب علينا أولاً اختيار `كائن` *من* `المصفوفة` قبل أن نتمكن من الوصول إلى خصائصه."
+    },
+    {
+      "name": "08_find_the_bug_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  هذا الكود به خطأ ولا يعمل كما هو مقصود. ما هو الخطأ؟\n---\ncode: |\n  let cities = [\n    { name: \"Riyadh\", population: 7.6 },\n    { name: \"Cairo\", population: 9.5 }\n  ];\n\n  // محاولة جلب اسم المدينة الأولى\n  console.log(cities.name[0]);\n---\nsolution: 2\noptions:\n  - \"الخاصية `name` غير موجودة.\"\n  - \"الفهرس `0` خارج النطاق.\"\n  - \"ترميز النقطة والأقواس بترتيب خاطئ.\"\n  - \"الدالة `console.log` مكتوبة بشكل غير صحيح.\"\nexplanation: |\n  للوصول إلى `خاصية` `كائن` داخل `مصفوفة`، يجب عليك استخدام `الفهرس` `[0]` أولاً للحصول على `الكائن`، ثم استخدام `ترميز النقطة` `.name` للحصول على `الخاصية`.\n\n  الكود الصحيح هو `cities[0].name`."
+    },
+    {
+      "name": "09_recap.md",
+      "content": "### لحظة تأكيد\n\nعمل رائع! لقد فتحنا للتو قدرة جديدة: تنظيم البيانات المعقدة في قوائم.\n\nلقد دمجنا `المصفوفات` و`الكائنات` لإنشاء مخزونات منظمة وواضحة. هذا نمط أساسي يُستخدم في كل تطبيق تقريبًا.\n\nفي الدرس التالي، سنكتشف كيفية التعامل مع بيانات أكثر تعقيدًا. ✨"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "title": "Continuous Operation: The 'while' Loop",
+    "blurb": "Learn to create loops that run until a specific condition is met, perfect for tasks where the number of repetitions isn't known beforehand.",
+    "difficulty": "easy",
+    "base_xp": 150,
+    "type": "lesson",
+    "slug": "continuous-operation-while-loop"
+  },
+  "files": [
+    {
+      "name": "01_a-different-kind-of-loop.md",
+      "content": "Remember our conveyor belt, the `for` loop? It's perfect when you know exactly how many items to process, like all the boxes in a crate.\n\nBut what if you need to run a task until a **specific goal is met**? Imagine a ticket booth that stays open *while* there are still tickets available. This is what the `while` loop is for!\n\nThe `while` loop checks a condition. If it's `true`, the code inside runs. It keeps checking and running until the condition becomes `false`."
+    },
+    {
+      "name": "02_the_while_loop_structure.md",
+      "content": "Let's see its basic structure. It's like a guard at a gate who only lets people in *while* a condition is met.\n\n```javascript\nlet ticketsLeft = 3;\n\nwhile (ticketsLeft > 0) {\n  console.log(\"Ticket sold! Welcome.\");\n  ticketsLeft = ticketsLeft - 1; // This part is crucial!\n}\n\nconsole.log(\"Sorry, we are sold out!\");\n```\n\n**Here's the key**: The value of `ticketsLeft` must change inside the loop. If it doesn't, the loop will run forever! ♾️"
+    },
+    {
+      "name": "03_countdown_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Faris is counting down the days to Eid. \n\n  What condition should go in the blank to make the loop stop when `daysUntilEid` is 0?\n---\ncode: |\n  let daysUntilEid = 5;\n\n  while ( _____ ) {\n    console.log(daysUntilEid + \" days left!\");\n    daysUntilEid = daysUntilEid - 1;\n  }\n\n  console.log(\"Eid Mubarak!\");\n---\nsolution: 1\noptions:\n  - \"`daysUntilEid < 5`\"\n  - \"`daysUntilEid > 0`\"\n  - \"`daysUntilEid == 0`\"\n  - \"`daysUntilEid = 0`\"\nexplanation: |\n  The condition `daysUntilEid > 0` makes the loop run as long as the number of days is positive. \n\n  Once `daysUntilEid` becomes 0, the condition is `false` and the loop stops."
+    },
+    {
+      "name": "04_find_the_mistake_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Oh no! Layla's code to charge her phone is running forever. Why is this an infinite loop?\n---\ncode: |\n  let batteryLevel = 10;\n\n  while (batteryLevel < 100) {\n    console.log(\"Charging...\");\n  }\n\n  console.log(\"Fully charged!\");\n---\nsolution: 0\noptions:\n  - \"The `batteryLevel` variable is never updated inside the loop.\"\n  - \"The condition should be `batteryLevel > 100`.\"\n  - \"`console.log` cannot be used inside a loop.\"\n  - \"The variable was declared with `let` instead of `const`.\"\nexplanation: |\n  The loop is infinite because the condition `batteryLevel < 100` will always be `true`. \n\n  The value of `batteryLevel` starts at 10 and never changes, so it never reaches 100 to stop the loop."
+    },
+    {
+      "name": "05_whats_the_output_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Ahmad is packing boxes of dates. Each box holds 25 dates. He starts with 80 dates.\n\n  What is the final output of this code?\n---\ncode: |\n  let datesAvailable = 80;\n  let boxesPacked = 0;\n\n  while (datesAvailable >= 25) {\n    datesAvailable = datesAvailable - 25;\n    boxesPacked = boxesPacked + 1;\n  }\n\n  console.log(boxesPacked);\n---\nsolution: 2\noptions:\n  - \"`2`\"\n  - \"`80`\"\n  - \"`3`\"\n  - \"`4`\"\nexplanation: |\n  Let's trace the loop:\n  - **1st Pass:** `80 >= 25` is true. `datesAvailable` becomes 55, `boxesPacked` becomes 1.\n  - **2nd Pass:** `55 >= 25` is true. `datesAvailable` becomes 30, `boxesPacked` becomes 2.\n  - **3rd Pass:** `30 >= 25` is true. `datesAvailable` becomes 5, `boxesPacked` becomes 3.\n  - **4th Pass:** `5 >= 25` is false. The loop stops.\n  \n  The final value of `boxesPacked` is 3."
+    },
+    {
+      "name": "06_when_to_use_while.md",
+      "content": "Fantastic job! You've mastered a new kind of loop. 🚀\n\nHere's a simple way to remember: use a `for` loop for a known number of repetitions (like items in an array) and a `while` loop to repeat **until a goal is reached**.\n\nNow that you can add items with `push` and process them with loops, let's learn how to complete our inventory manager by removing items as they are sold."
+    }
+  ]
+}

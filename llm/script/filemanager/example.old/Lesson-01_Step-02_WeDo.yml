@@ -1,0 +1,12 @@
+type: "fill-in-the-blank"
+lang: "javascript"
+# This is the 'We Do' step. It lowers the barrier to entry.
+prompt: "Let's send our own message. Fill in the blank to make the console display the message `JavaScript is awesome!`"
+
+starter_code: "console.log(\"_______\");"
+
+solution: "JavaScript is awesome!"
+
+success_message: "YES! You just sent your first message. You're officially talking to the computer! You've earned 20 XP 🔥"
+
+failure_hint: "Almost! Make sure your text exactly matches `JavaScript is awesome!` inside the quotes."

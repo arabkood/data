@@ -1,0 +1,23 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  لدينا `:variable` باسم `score`. ما هو الناتج الذي سيتم طباعته على الشاشة؟
+code: |
+  let score = 85;
+  let message = "";
+
+  if (score > 50) {
+    message = "ناجح";
+  } else {
+    message = "راسب";
+  }
+
+  console.log(message);
+options:
+  - "`راسب`"
+  - "لا شيء"
+  - "`ناجح`"
+  - "`85`"
+solution: 2
+explanation: |
+  الشرط `score > 50` هو `true` لأن `85` أكبر من `50`. لذلك، يتم تعيين القيمة "ناجح" للمتغير `:message` وطباعتها.

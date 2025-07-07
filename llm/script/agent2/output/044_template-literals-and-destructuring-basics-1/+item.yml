@@ -1,0 +1,7 @@
+title: "قوالب النصوص والتفكيك: بناء نصوص ديناميكية"
+blurb: "تعلم كيفية إنشاء نصوص معقدة بسهولة باستخدام قوالب النصوص، واستخراج البيانات من الكائنات بكفاءة عبر التفكيك."
+premium_only: false
+difficulty: "easy"
+base_xp: 1200
+type: "lesson"
+slug: "template-literals-and-destructuring-basics"

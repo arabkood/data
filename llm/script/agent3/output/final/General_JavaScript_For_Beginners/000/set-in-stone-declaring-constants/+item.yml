@@ -1,0 +1,6 @@
+title: "محفور في الصخر: تعريف الثوابت"
+blurb: "اكتشف كيف تستخدم `const` لإنشاء متغيرات لا يمكن تغييرها، مما يجعل شفرتك البرمجية أكثر أمانًا وموثوقية. تعلّم الفرق بين `let` و `const` بأمثلة من واقع العالم العربي."
+difficulty: "easy"
+base_xp: 150
+type: "lesson"
+slug: "set-in-stone-declaring-constants"

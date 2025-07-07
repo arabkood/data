@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "title": "The Crossroads: Handling Multiple Scenarios",
+    "blurb": "Go beyond simple yes/no choices. Learn to handle multiple outcomes using `else if` to create more sophisticated decision-making in your code.",
+    "difficulty": "easy",
+    "base_xp": 300,
+    "type": "lesson",
+    "slug": "handling-multiple-scenarios-with-else-if"
+  },
+  "files": [
+    {
+      "name": "01_the_crossroads.md",
+      "content": "Remember how `if/else` gave us a choice between two roads? That's great for simple yes or no decisions.\n\nBut what if you're at a crossroads with more than two paths? For that, we need `else if`.\n\n`else if` lets you add **more checks** between your `if` and your `else`. It's like adding more options to your program's choices.\n\nLet's see it in action with a school grading system for a student named Layla.\n\n```javascript\nlet laylasGrade = 85;\n\nif (laylasGrade > 90) {\n  console.log(\"ممتاز - Excellent!\");\n} else if (laylasGrade > 80) {\n  console.log(\"جيد جدًا - Very Good!\");\n} else {\n  console.log(\"تحتاج إلى تحسين - Needs Improvement\");\n}\n\n// Output:\n// جيد جدًا - Very Good!\n```\n\nThe code first checks if the grade is > 90 (it's not). Then, it moves to the `else if` and checks if the grade is > 80 (it is!). It runs that block and stops."
+    },
+    {
+      "name": "02_student_grader_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's expand the grading system for another student, Ahmed. \n  \n  **Fill in the blank** to create the correct decision-making structure.\n---\ncode: |\n  let ahmedsGrade = 75;\n  \n  if (ahmedsGrade >= 90) {\n    console.log(\"Excellent\");\n  } ______ (ahmedsGrade >= 70) { \n    console.log(\"Good\");\n  } else {\n    console.log(\"Pass\");\n  }\n---\nsolution: 1\noptions:\n  - \"if\"\n  - \"else if\"\n  - \"else\"\n  - \"otherwise\"\nexplanation: |\n  Correct! `else if` is used to introduce a new condition to check *only if* the preceding `if` (or `else if`) conditions were false."
+    },
+    {
+      "name": "03_order_matters.md",
+      "content": "Great work! You're getting the hang of creating more complex paths for your code.\n\nHere's a critical tip: with `else if`, the **order of your conditions is very important**. JavaScript checks them from top to bottom and stops at the *first* one that is `true`.\n\nLook what happens if we check for a lower grade first.\n\n```javascript\nlet score = 95; // This score should be \"Excellent\"\n\n// Incorrect Order\nif (score > 70) { // This is true, so the code stops here!\n  console.log(\"Good\");\n} else if (score > 90) { // This line is never even checked.\n  console.log(\"Excellent\");\n}\n\n// Output:\n// Good\n```\n\nTo fix this, always check for the **most specific condition first** (like `> 90`) and then move to more general ones (like `> 70`)."
+    },
+    {
+      "name": "04_restaurant_discount_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  A restaurant in Riyadh offers discounts based on the total bill. \n  \n  What message will be printed for Omar's bill?\n---\ncode: |\n  let omarsBill = 160; // Bill in Riyals\n  let finalMessage = \"Thank you for dining with us!\";\n  \n  if (omarsBill > 200) {\n    finalMessage = \"You get a 15% discount!\";\n  } else if (omarsBill > 100) {\n    finalMessage = \"You get a 10% discount!\";\n  } else {\n    finalMessage = \"No discount this time.\";\n  }\n  \n  console.log(finalMessage);\n---\nsolution: 1\noptions:\n  - \"You get a 15% discount!\"\n  - \"You get a 10% discount!\"\n  - \"No discount this time.\"\n  - \"Thank you for dining with us!\"\nexplanation: |\n  The first condition `omarsBill > 200` is false. The code proceeds to the `else if`. The condition `omarsBill > 100` is true (since 160 is greater than 100), so its message is assigned and the chain stops."
+    },
+    {
+      "name": "05_find_the_mistake_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  This code tries to categorize a shipment based on its weight. It should output \"Medium\" for a weight of 8, but it's printing two lines instead.\n  \n  **Find the mistake** in the logic.\n---\ncode: |\n  let packageWeight = 8;\n  \n  if (packageWeight > 5) {\n    console.log(\"Medium\");\n  }\n  if (packageWeight < 10) {\n    console.log(\"Not Heavy\");\n  } else {\n    console.log(\"Heavy\");\n  }\n---\nsolution: 0\noptions:\n  - \"The second `if` should be an `else if` to link the decisions.\"\n  - \"The `console.log` messages are wrong.\"\n  - \"The comparison operators `>` and `<` should be switched.\"\n  - \"The code is correct, the output is expected.\"\nexplanation: |\n  Using two separate `if` statements creates two independent decision blocks. To link them into a single choice, the second `if` must be changed to an `else if`."
+    },
+    {
+      "name": "06_wrapping_up.md",
+      "content": "You've successfully navigated the crossroads! We've turned a simple two-way street into a multi-lane highway for our code's decisions. 🛣️\n\nI used to get confused about the order, too. Thinking of it like a waterfall helped me—the code flows down and exits at the first true condition it finds.\n\nSo far, we've made decisions based on one condition at a time.\n\nBut what if you need to check multiple things at once? For example, is a user logged in *AND* are they a premium member? Let's find out next!"
+    }
+  ]
+}

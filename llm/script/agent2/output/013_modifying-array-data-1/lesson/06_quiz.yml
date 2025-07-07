@@ -1,0 +1,23 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  بعد سلسلة من عمليات الإضافة والحذف، ما هو الطول النهائي لسلة التسوق؟
+code: |
+  let cart = ["حليب"];
+  cart.push("خبز");
+  cart.push("جبن");
+  cart.pop();
+  cart.push("عصير");
+  console.log(cart.length);
+solution: 2
+options:
+  - "`2`"
+  - "`5`"
+  - "`3`"
+  - "`4`"
+explanation: |
+  - تبدأ بـ 1 (`["حليب"]`)
+  - `push` خبز: الطول 2
+  - `push` جبن: الطول 3
+  - `pop` يحذف "جبن": الطول يرجع 2
+  - `push` عصير: الطول يصبح 3 في النهاية.

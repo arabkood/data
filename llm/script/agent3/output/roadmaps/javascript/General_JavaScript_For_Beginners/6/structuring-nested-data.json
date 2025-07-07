@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "title": "The Organizer's Desk: Structuring Nested Data",
+    "blurb": "Learn to organize complex data by nesting objects within other objects, just like putting a box inside a drawer.",
+    "difficulty": "easy",
+    "base_xp": 350,
+    "type": "lesson",
+    "slug": "structuring-nested-data"
+  },
+  "files": [
+    {
+      "name": "01_a_desk_with_drawers.md",
+      "content": "In our last lesson, we built an inventory using an `array of objects`. Each object was a separate item, like products on a shelf.\n\nBut what if one item is more complex? Imagine a product like a phone. It has its own set of details, like `screen` specs and `battery` info.\n\nThis is where `nested objects` come in. It's like having a small organizer box **inside** a drawer on your desk. 🗄️\n\nLet's see how this works. We can place an object inside another object."
+    },
+    {
+      "name": "02_a_user_profile.md",
+      "content": "Here is a common example: a user profile. A user has a name, but their address is its own collection of details.\n\n**See It:**\n```javascript\nconst user = {\n  name: \"خالد\",\n  email: \"khaled@example.com\",\n  address: {\n    city: \"Riyadh\",\n    country: \"Saudi Arabia\"\n  }\n};\n```\n\nNotice how the `address` property holds another object `{}` as its value. This is a `nested object`!\n\nNow, how do we get to the city?"
+    },
+    {
+      "name": "03_reaching_inside.md",
+      "content": "To access properties in a nested object, we just chain together `dot notation`.\n\nIt's like giving directions: first go to the `user`, then to the `address`, then get the `city`.\n\n**See It:**\n```javascript\nconsole.log(user.address.city);\n```\n\n**Output:**\n```text\n\"Riyadh\"\n```\n\nThis makes our code clean and easy to read. Let's try it together."
+    },
+    {
+      "name": "04_student_grades_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Here we have a student object for `Amal`. \n  \n  **Your goal** is to get her grade in `science`.\n---\ncode: |\n  const studentAmal = {\n    id: 451,\n    name: \"أمل\",\n    subjects: {\n      math: 92,\n      science: 95,\n      arabic: 88\n    }\n  };\n  \n  console.log(/* Your code here */);\n---\nsolution: 0\noptions:\n  - \"`studentAmal.subjects.science`\"\n  - \"`studentAmal.science`\"\n  - \"`studentAmal.subjects`\"\n  - \"`subjects.science`\"\nexplanation: |\n  Correct! We first access the `subjects` object with `studentAmal.subjects`, and then we access the `science` property inside it."
+    },
+    {
+      "name": "05_spot_the_mistake_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Oh, I tried to get the `mainCourse` from this restaurant menu, but it's not working. \n  \n  Can you **spot the mistake** in my code? 🤔\n---\ncode: |\n  const restaurant = {\n    name: \"بيت الكرم\",\n    menu: {\n      appetizers: [\"Hummus\", \"Tabbouleh\"],\n      mainCourse: {\n        name: \"Mansaf\",\n        price: 15\n      }\n    }\n  };\n  \n  console.log(restaurant.name.mainCourse);\n---\nsolution: 2\noptions:\n  - \"`mainCourse` should be a string, not an object.\"\n  - \"The property `name` does not exist.\"\n  - \"The path is wrong. It should be `restaurant.menu.mainCourse`.\"\n  - \"You cannot use `console.log` on an object.\"\nexplanation: |\n  Exactly! The `mainCourse` object is nested inside the `menu` object, not the `name` string. The correct path is `restaurant.menu.mainCourse`."
+    },
+    {
+      "name": "06_deeper_organization.md",
+      "content": "We can nest objects as deep as we need to. This is incredibly powerful for modeling real-world data.\n\nLet's combine what we've learned: an **array of objects**, where one object has a **nested object**.\n\n**Do It Yourself:**\nImagine a list of employees. One employee, `Noura`, has detailed contact info."
+    },
+    {
+      "name": "07_employee_contact_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  What will be the output of this code?\n---\ncode: |\n  const employees = [\n    {\n      name: \"طارق\",\n      role: \"Developer\"\n    },\n    {\n      name: \"نورة\",\n      role: \"Manager\",\n      contact: {\n        email: \"noura@akood.com\",\n        phone: {\n          work: \"111-222-333\",\n          personal: \"555-666-777\"\n        }\n      }\n    }\n  ];\n  \n  console.log(employees[1].contact.phone.personal);\n---\nsolution: 1\noptions:\n  - \"`noura@akood.com`\"\n  - \"`555-666-777`\"\n  - \"`undefined`\"\n  - \"An error will occur.\"\nexplanation: |\n  Excellent! You correctly navigated the structure: \n  1. `employees[1]` to get Noura's object.\n  2. `.contact` to get the nested contact object.\n  3. `.phone` to get the even deeper nested phone object.\n  4. `.personal` to get the final value."
+    },
+    {
+      "name": "08_what_we_learned.md",
+      "content": "Amazing work! You've just unlocked a new level of data organization.\n\nBy nesting objects, you can now create structures that perfectly match complex, real-world information.\n\nThis is a huge step. Now that we can structure data so well, we need a way to send and receive it. Next up, we'll learn about `JSON`, the universal data passport for the web. ✨"
+    }
+  ]
+}

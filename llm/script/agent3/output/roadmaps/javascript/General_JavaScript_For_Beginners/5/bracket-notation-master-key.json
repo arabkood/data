@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "title": "The Master Key: Dynamic Property Access",
+    "blurb": "Learn to access object properties dynamically using variables and bracket notation, a key skill for flexible code.",
+    "difficulty": "easy",
+    "base_xp": 250,
+    "type": "lesson",
+    "slug": "bracket-notation-master-key"
+  },
+  "files": [
+    {
+      "name": "01_the_master_key.md",
+      "content": "Remember how we used `dot notation` to get specific info from an object? It's like having a direct address to a house.\n\nBut what if you only have the street name written on a separate note? You need a more flexible way to find the house.\n\nThat's where `bracket notation` comes in! It's like a master key that can open a lock using a name stored elsewhere.\n\nLet's discover how this powerful tool works together. It feels a bit like magic at first! ✨"
+    },
+    {
+      "name": "02_basic_access.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's start with the basics. Look at this `cafe` object.\n\n  How would we access the `location` property using **bracket notation**?\ncode: |\n  const cafe = {\n    name: \"Ahlan Cafe\",\n    location: \"Jeddah\",\n    open: true\n  };\n\n  // Access the location using bracket notation\n  console.log(cafe[___]);\n--- \nsolution: 0\noptions:\n  - \"'location'\"\n  - \".location\"\n  - \"location\"\n  - \"(location)\"\nexplanation: |\n  Correct! When using bracket notation with a specific property name, the name **must be a string**, so we wrap it in quotes `''`."
+    },
+    {
+      "name": "03_dynamic_power.md",
+      "content": "Using bracket notation with a string like `'location'` works, but it does the same thing as `dot notation`.\n\nThe real power is using a **variable** inside the brackets.\n\nImagine you have a variable that holds the property name you want. You can use that variable to look up the value dynamically!\n\n```javascript\nconst student = {\n  name: \"Layla\",\n  grade: \"A+\"\n};\n\nlet propertyToGet = \"grade\";\n\n// This looks at the VALUE inside propertyToGet\nconsole.log(student[propertyToGet]);\n```\n\n**Output:**\n```\nA+\n```"
+    },
+    {
+      "name": "04_dynamic_practice.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Here's a profile for a user named Omar. We want to display a specific piece of his information.\n\n  What will be the output of this code?\ncode: |\n  const userProfile = {\n    username: \"OmarK\",\n    city: \"Cairo\",\n    hobby: \"Reading\"\n  };\n\n  let infoNeeded = \"city\";\n\n  console.log(userProfile[infoNeeded]);\n--- \nsolution: 2\noptions:\n  - \"infoNeeded\"\n  - \"username\"\n  - \"Cairo\"\n  - \"undefined\"\nexplanation: |\n  Excellent! The code uses the value inside the `infoNeeded` variable, which is `\"city\"`, as the key. So `userProfile[\"city\"]` correctly returns `\"Cairo\"`."
+    },
+    {
+      "name": "05_common_mistakes.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  I tried to do the same thing with dot notation, but it didn't work. I wonder why...\n\n  Why does this code output `undefined`?\ncode: |\n  const restaurant = {\n    name: \"Beit Sitti\",\n    specialty: \"Mansaf\"\n  };\n\n  let propertyKey = \"specialty\";\n\n  // This code has a mistake!\n  console.log(restaurant.propertyKey);\n--- \nsolution: 1\noptions:\n  - \"The variable `propertyKey` is empty.\"\n  - \"Dot notation looks for a property literally named `propertyKey`, which doesn't exist.\"\n  - \"You cannot use variables with objects.\"\nexplanation: |\n  Exactly! `dot notation` looks for a property with the literal name `propertyKey`. To use the *value* stored in the variable (`\"specialty\"`), we **must use bracket notation**: `restaurant[propertyKey]`."
+    },
+    {
+      "name": "06_a_practical_challenge.md",
+      "content": "Let's try a real-world scenario. Imagine we're building a system to manage inventory for a local `souq` (market).\n\nWe have an object that stores the quantity of different types of dates.\n\nOur task is to check the stock of a specific date type, which is given to us as a variable.\n\n**Your challenge** is to use bracket notation to complete the code and find the stock quantity."
+    },
+    {
+      "name": "07_souq_inventory_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Fill in the blank to find the stock for the `dateType` requested.\ncode: |\n  const dateInventory = {\n    ajwa: 150,\n    medjool: 200,\n    sukkari: 320\n  };\n\n  let dateType = \"sukkari\";\n  let stockCount = dateInventory[___];\n\n  console.log(stockCount);\n--- \nsolution: 3\noptions:\n  - \"'dateType'\"\n  - \".dateType\"\n  - \"sukkari\"\n  - \"dateType\"\nexplanation: |\n  Perfect! By using the `dateType` variable inside the brackets, the code dynamically looks up the property `sukkari` and finds its value, `320`."
+    },
+    {
+      "name": "08_reflection.md",
+      "content": "Amazing work! You've just learned how to write more flexible and powerful code.\n\nWe saw that `bracket notation` is our **master key** for when a property name is stored in a variable.\n\nThis is a skill you will use all the time in programming. I used to get it mixed up with dot notation, but practicing helped it click!\n\nNow that our objects can hold data, what if we could make them *do* things? Let's find out next! 🚀"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+title: "إضافة عنصر في آخر الصف: الطريقة 'push'"
+blurb: "تعلَّم كيف تضيف عناصر جديدة إلى مجموعاتك بشكل ديناميكي باستخدام طريقة `push` الأساسية."
+difficulty: "easy"
+base_xp: 150
+type: "lesson"
+slug: "arrays-push-method"

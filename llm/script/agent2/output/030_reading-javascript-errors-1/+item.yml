@@ -1,0 +1,7 @@
+title: "قراءة الأخطاء البرمجية كالمحترفين"
+blurb: "تعلم كيف تفهم رسائل الأخطاء في جافاسكريبت، وتحديد أنواعها مثل SyntaxError وReferenceError، وإصلاحها بثقة."
+premium_only: false
+difficulty: "easy"
+base_xp: 1200
+type: "lesson"
+slug: "reading-javascript-errors"

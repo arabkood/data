@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "title": "The Two States: Introducing Booleans",
+    "blurb": "Learn about the simplest yet most powerful data type in programming: booleans. Discover how `true` and `false` values form the basis of all decisions in your code.",
+    "difficulty": "easy",
+    "base_xp": 100,
+    "type": "lesson",
+    "slug": "intro-to-booleans"
+  },
+  "files": [
+    {
+      "name": "01_the-two-states.md",
+      "content": "In the real world, many things have only two states. A light switch is either on or off. A door is either open or closed.\n\nIn programming, we have a special data type for this: the `boolean`. It can only have two values: `true` or `false`.\n\nLet's see it in action. We'll store the status of a smart light in a variable named `isLightOn`.\n\n```javascript\nlet isLightOn = true;\n\nconsole.log(isLightOn);\n```\n\n**Output:**\n```\n> true\n```\n\nNotice there are no quotes around `true`. It's not a string; it's a special `boolean` value. **This is a key difference**."
+    },
+    {
+      "name": "02_your-first-boolean.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's practice together!\n\n  Imagine we're building a system for a school. We need to track if a student, Omar, is present today.\n\n  **Declare a variable** `isOmarPresent` and set its value to `true`.\n---\ncode: |\n  // Your code here\n\n  console.log(isOmarPresent);\n---\nsolution: 0\noptions:\n  - let isOmarPresent = true;\n  - let isOmarPresent = \"true\";\n  - isOmarPresent = true;\n  - let isOmarPresent: true;\nexplanation: |\n  Excellent! `let isOmarPresent = true;` correctly creates a variable and assigns it the boolean value `true`."
+    },
+    {
+      "name": "03_practice_with_false.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Great attempt! Now let's try the other boolean value.\n\n  We are creating an inventory system for an online souq (market). An item is currently out of stock.\n\n  **Complete the code** to set the `isInStock` variable to `false`.\n---\ncode: |\n  let isInStock = // Fill in the blank\n\n  console.log(isInStock);\n---\nsolution: 2\noptions:\n  - \"false\"\n  - 0\n  - false\n  - null\nexplanation: |\n  Perfect! The boolean value for a negative or 'off' state is `false`. Remember, no quotes are needed."
+    },
+    {
+      "name": "04_booleans_not_strings.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  I used to get stuck on this all the time! Let's look closely.\n\n  Fatima wrote this code, but it's not a boolean. What will be printed to the console?\n\n  **Choose the correct output**.\n---\ncode: |\n  let hasPremiumAccess = \"false\";\n\n  console.log(hasPremiumAccess);\n---\nsolution: 1\noptions:\n  - false\n  - \"false\"\n  - It will cause an error.\n  - undefined\nexplanation: |\n  Because `\"false\"` is wrapped in quotes, JavaScript sees it as a `string` data type, not a `boolean`. The console prints the string value exactly as it is."
+    },
+    {
+      "name": "05_why_booleans_matter.md",
+      "content": "This might seem simple, but `booleans` are the absolute foundation of making decisions in code.\n\nThey are the answers to the questions our programs will ask. Is the user logged in? Is the password correct? Is the cart empty?\n\nSoon, we'll learn how to make the computer generate these `true` or `false` values by comparing things.\n\nLet's discover how to ask those questions next! 🤔"
+    }
+  ]
+}

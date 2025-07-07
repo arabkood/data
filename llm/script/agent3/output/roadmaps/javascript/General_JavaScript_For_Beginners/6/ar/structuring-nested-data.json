@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "title": "مكتب المنظِّم: هيكلة البيانات المتداخلة",
+    "blurb": "تعلّم تنظيم البيانات المعقدة عبر وضع الكائنات داخل كائنات أخرى، تمامًا مثل وضع صندوق داخل درج.",
+    "difficulty": "easy",
+    "base_xp": 350,
+    "type": "lesson",
+    "slug": "structuring-nested-data"
+  },
+  "files": [
+    {
+      "name": "01_a_desk_with_drawers.md",
+      "content": "في درسنا السابق، أنشأنا قائمة جرد باستخدام **`مصفوفة من الكائنات (`array of objects`)`**. كان كل كائن عنصرًا منفصلاً، مثل المنتجات على رف.\n\nلكن ماذا لو كان أحد العناصر أكثر تعقيدًا؟ تخيل منتجًا مثل الهاتف، له تفاصيله الخاصة، مثل مواصفات `الشاشة` ومعلومات `البطارية`.\n\nهنا يأتي دور **`الكائنات المتداخلة (`nested objects`)`**. الأمر أشبه بوجود صندوق تنظيم صغير **داخل** درج مكتبك. 🗄️\n\nدعنا نرى كيف يعمل هذا. يمكننا وضع كائن داخل كائن آخر."
+    },
+    {
+      "name": "02_a_user_profile.md",
+      "content": "إليك مثال شائع: ملف تعريف المستخدم. المستخدم لديه اسم، لكن عنوانه عبارة عن مجموعة تفاصيل خاصة به.\n\n**شاهد المثال:**\n```javascript\nconst user = {\n  name: \"خالد\",\n  email: \"khaled@example.com\",\n  address: {\n    city: \"الرياض\",\n    country: \"المملكة العربية السعودية\"\n  }\n};\n```\n\nلاحظ كيف أن خاصية `address` تحتوي على كائن آخر `{}` كقيمة لها. هذا هو `الكائن المتداخل`!\n\nالآن، كيف نصل إلى المدينة؟"
+    },
+    {
+      "name": "03_reaching_inside.md",
+      "content": "للوصول إلى الخصائص في `كائن متداخل`، نقوم ببساطة بربط **`ترميز النقطة (`dot notation`)`** معًا.\n\nالأمر يشبه إعطاء التوجيهات: أولاً اذهب إلى `user`، ثم إلى `address`، ثم احصل على `city`.\n\n**شاهد المثال:**\n```javascript\nconsole.log(user.address.city);\n```\n\n**الناتج:**\n```text\n\"الرياض\"\n```\n\nهذا يجعل الكود الخاص بنا نظيفًا وسهل القراءة. لنجرّب ذلك معًا."
+    },
+    {
+      "name": "04_student_grades_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  لدينا هنا كائن الطالبة `أمل`.\n  \n  **هدفك** هو الحصول على درجتها في مادة `العلوم`.\n---\ncode: |\n  const studentAmal = {\n    id: 451,\n    name: \"أمل\",\n    subjects: {\n      math: 92,\n      science: 95,\n      arabic: 88\n    }\n  };\n  \n  // اكتب الكود هنا\n  console.log(@@INPUT@@);\n---\nsolution: 0\noptions:\n  - \"`studentAmal.subjects.science`\"\n  - \"`studentAmal.science`\"\n  - \"`studentAmal.subjects`\"\n  - \"`subjects.science`\"\nexplanation: |\n  صحيح! نصل أولاً إلى كائن `subjects` باستخدام `studentAmal.subjects`، ثم نصل إلى خاصية `science` الموجودة بداخله."
+    },
+    {
+      "name": "05_spot_the_mistake_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  أوه، حاولت الحصول على `mainCourse` من قائمة طعام هذا المطعم، لكن الكود لا يعمل.\n  \n  هل يمكنك **اكتشاف الخطأ** في الكود الخاص بي؟ 🤔\n---\ncode: |\n  const restaurant = {\n    name: \"بيت الكرم\",\n    menu: {\n      appetizers: [\"Hummus\", \"Tabbouleh\"],\n      mainCourse: {\n        name: \"Mansaf\",\n        price: 15\n      }\n    }\n  };\n  \n  console.log(restaurant.name.mainCourse);\n---\nsolution: 2\noptions:\n  - \"يجب أن تكون `mainCourse` نصًا (`string`) وليس كائنًا.\"\n  - \"خاصية `name` غير موجودة.\"\n  - \"المسار خاطئ. يجب أن يكون `restaurant.menu.mainCourse`.\"\n  - \"لا يمكنك استخدام `console.log` على كائن.\"\nexplanation: |\n  بالضبط! `الكائن المتداخل` `mainCourse` موجود داخل كائن `menu`، وليس داخل النص `name`. المسار الصحيح هو `restaurant.menu.mainCourse`."
+    },
+    {
+      "name": "06_deeper_organization.md",
+      "content": "يمكننا تداخل الكائنات بالعمق الذي نحتاجه. هذه ميزة قوية جدًا لنمذجة بيانات من العالم الحقيقي.\n\nلنجمع ما تعلمناه: **`مصفوفة من الكائنات`**، حيث يحتوي أحد الكائنات على **`كائن متداخل`**.\n\n**جرّب بنفسك:**\nتخيل قائمة بالموظفين. إحدى الموظفات، `نورة`، لديها معلومات اتصال مفصلة."
+    },
+    {
+      "name": "07_employee_contact_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  ماذا سيكون ناتج هذا الكود؟\n---\ncode: |\n  const employees = [\n    {\n      name: \"طارق\",\n      role: \"Developer\"\n    },\n    {\n      name: \"نورة\",\n      role: \"Manager\",\n      contact: {\n        email: \"noura@akood.com\",\n        phone: {\n          work: \"111-222-333\",\n          personal: \"555-666-777\"\n        }\n      }\n    }\n  ];\n  \n  console.log(employees[1].contact.phone.personal);\n---\nsolution: 1\noptions:\n  - \"`noura@akood.com`\"\n  - \"`555-666-777`\"\n  - \"`undefined`\"\n  - \"An error will occur.\"\nexplanation: |\n  ممتاز! لقد تصفحت الهيكل بشكل صحيح:\n  1. `employees[1]` للحصول على كائن الموظفة نورة.\n  2. `.contact` للحصول على `الكائن المتداخل` الخاص بمعلومات الاتصال.\n  3. `.phone` للحصول على كائن الهاتف المتداخل بشكل أعمق.\n  4. `.personal` للحصول على القيمة النهائية."
+    },
+    {
+      "name": "08_what_we_learned.md",
+      "content": "عمل رائع! لقد فتحت للتو مستوى جديدًا في تنظيم البيانات.\n\nباستخدام `الكائنات المتداخلة`، يمكنك الآن إنشاء هياكل بيانات تطابق تمامًا المعلومات المعقدة في العالم الحقيقي.\n\nهذه خطوة كبيرة. الآن بعد أن أصبحنا قادرين على هيكلة البيانات بشكل جيد، نحتاج إلى طريقة لإرسالها واستقبالها. في الدرس القادم، سنتعرف على **`JSON`**، جواز السفر العالمي للبيانات على الويب. ✨"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  تم تعريف `:variable` باسم `fruit`.
+  أكمل الكود الناقص لعرض قيمته في الطرفية.
+code: |
+  let fruit = "تفاح";
+  __@@INPUT@@__(fruit);
+options:
+  - "`console.log`"
+  - "`print`"
+  - "`log.console`"
+  - "`variable.show`"
+solution: 0
+explanation: |
+  نضع اسم `:variable` الذي نريد عرض قيمته داخل قوسي الأمر `:console.log()`.

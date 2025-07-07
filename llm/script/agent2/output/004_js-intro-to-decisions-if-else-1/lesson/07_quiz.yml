@@ -1,0 +1,14 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  أي من الخيارات التالية يستخدم `:template literals` بشكل صحيح لدمج `:variable` `name` داخل النص؟
+code: |
+  let name = "علي";
+options:
+  - "`'مرحباً, ${name}!'`"
+  - "`"مرحباً, ${name}!"`"
+  - "``مرحباً, ${name}!``"
+  - "`"مرحباً, " + name + "!"`"
+solution: 2
+explanation: |
+  تستخدم `:template literals` علامات الاقتباس المائلة (backticks) `` ` ``، ويتم وضع المتغيرات داخل `${...}`.

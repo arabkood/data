@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "title": "The Command Center: Wiring User Interaction",
+    "blurb": "Learn how to make your programs communicate with users by taking in data and displaying clear, formatted messages.",
+    "difficulty": "easy",
+    "base_xp": 150,
+    "type": "lesson",
+    "slug": "wiring-user-interaction"
+  },
+  "files": [
+    {
+      "name": "01_a_voice_for_our_code.md",
+      "content": "In our last mission, we built the 'brain' of our program—the core logic. But a brain is quiet without a voice and ears!\n\nLet's give our program the ability to communicate. This is called `user interaction logic`.\n\n---\n\nThink of it like a friendly shopkeeper. A customer (the user) gives an order (input), and the shopkeeper responds with a greeting and the items (output).\n\nWe can do this with functions and `console.log`.\n\n---\n\n**See how it works:** This function takes a name and greets them. It's the simplest way for a program to 'speak'.\n\n```javascript\nfunction greet(name) {\n  console.log(\"Ahlan, \" + name + \"!\");\n}\n\ngreet(\"Fatima\");\n```\n\n**Output:**\n```\nAhlan, Fatima!\n```\n\nNotice how the function uses the `name` provided to create a custom message. Let's try this together."
+    },
+    {
+      "name": "02_a_custom_welcome.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's expand on that idea.\n\n  **Complete the code** to greet a user and also mention their city. The program should greet Khalid, who is from Riyadh.\ncode: |\n  function welcomeCity(name, city) {\n    const message = \"Welcome, \" + name + \" from \" + ___ + \"!\";\n    console.log(message);\n  }\n\n  welcomeCity(\"Khalid\", \"Riyadh\");\nsolution: 1\noptions:\n  - \"'Riyadh'\"\n  - \"city\"\n  - \"name\"\n  - \"message\"\nexplanation: |\n  Excellent! The variable `city` holds the city's name.\n\n  Using the `city` variable instead of the text \"Riyadh\" makes our function **reusable for any person from any city**."
+    },
+    {
+      "name": "03_building_a_receipt.md",
+      "content": "Great work! Our program can now create personalized messages. This is a powerful tool.\n\nLet's apply this to a real-world scenario. Layla runs a small online spice shop and needs to generate a message for her customers.\n\n---\n\nWe can build a more complex message string before printing it. This keeps the code clean and easy to read.\n\n**Focus on how we create the `message`** before using `console.log`.\n\n```javascript\nfunction createReceipt(itemName, price, quantity) {\n  const total = price * quantity;\n  const message = \"Your total for \" + quantity + \" \" + itemName + \"(s) is \" + total + \" riyals.\";\n\n  console.log(message);\n}\n\ncreateReceipt(\"Saffron\", 50, 2);\n```\n\n**Output:**\n```\nYour total for 2 Saffron(s) is 100 riyals.\n```"
+    },
+    {
+      "name": "04_finding_the_bug.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Making mistakes is part of learning! Let's become bug detectives.\n\n  Omar wrote a function for a library, but it prints `undefined`. **Find the mistake in the code**.\ncode: |\n  function checkoutBook(bookTitle, author) {\n    let message = \"You have checked out '\" + bookTitle + \"' by \" + author;\n\n    // Something is wrong on the next line!\n    console.log(checkoutMessage);\n  }\n\n  checkoutBook(\"The Prophet\", \"Kahlil Gibran\");\nsolution: 2\noptions:\n  - \"The function needs a `return` statement.\"\n  - \"You cannot use `+` to combine strings and variables.\"\n  - \"The variable `checkoutMessage` was never defined. It's a typo for `message`.\"\n  - \"`console.log` cannot print variables.\"\nexplanation: |\n  Exactly! The computer was told to print a variable named `checkoutMessage`, but we created one named `message`.\n\n  This kind of typo is a very common bug. Paying close attention to variable names is a key skill."
+    },
+    {
+      "name": "05_reflection.md",
+      "content": "Fantastic! We have successfully built a bridge between our program's logic and a user.\n\nWe used functions to receive information and `console.log` to display clear, helpful responses. This is the foundation of `user interaction logic`.\n\n---\n\nBy creating dynamic messages, we make our programs feel more alive and useful.\n\nNow that our program can communicate, we're ready to make it even smarter. What's next? Let's find out! 🤔"
+    }
+  ]
+}

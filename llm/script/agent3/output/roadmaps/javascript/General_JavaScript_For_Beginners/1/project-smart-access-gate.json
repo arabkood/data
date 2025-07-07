@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "title": "Project: The Smart Access Gate",
+    "blurb": "Discover a powerful shortcut for writing conditions by learning about 'truthy' and 'falsy' values. Apply your skills to build a smart access gate.",
+    "difficulty": "medium",
+    "base_xp": 450,
+    "type": "lesson",
+    "slug": "project-smart-access-gate"
+  },
+  "files": [
+    {
+      "name": "01_a_new_shortcut.md",
+      "content": "You've become great at making decisions with `if`, `else if`, and logical operators. We've built some complex rules together!\n\nNow, let's discover a powerful shortcut that developers use to write cleaner and faster conditional logic. 🚀\n\nImagine a smart access gate. It needs to check if a person, let's call her Layla, has an access code. Her code could be a `string` of text, or it could be `null` if she doesn't have one.\n\nWe could write `if (accessCode !== null)`, but there's a much simpler way. Let's explore it!"
+    },
+    {
+      "name": "02_the_truthy_concept.md",
+      "content": "In JavaScript, a condition doesn't strictly need a `boolean` (`true` or `false`). It can evaluate other values *as if* they were true.\n\nThis is the concept of `truthy`. A value is `truthy` if it behaves like `true` when used in a condition.\n\n**See It in action:**\n\n```javascript\nlet userName = \"Fatima\";\n\nif (userName) {\n  console.log(\"Welcome, \" + userName);\n}\n```\n\n**Output:**\n```\nWelcome, Fatima\n```\n\nNotice we didn't use a comparison like `userName !== \"\"`. Because the `userName` variable contains a non-empty string, JavaScript treats it as **a `truthy` value** and runs the code inside the `if` block."
+    },
+    {
+      "name": "03_checkout_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's apply this idea. The code below checks if there are items in a shopping cart.\n\n  What will be printed to the console? 🤔\n---\ncode: |\n  let itemsInCart = 3;\n\n  if (itemsInCart) {\n    console.log(\"Proceed to checkout\");\n  } else {\n    console.log(\"Your cart is empty\");\n  }\n---\nsolution: 0\noptions:\n  - \"`Proceed to checkout`\"\n  - \"`Your cart is empty`\"\n  - \"`Error`\"\n  - \"`Nothing will be printed`\"\nexplanation: |\n  Correct! The number `3` is not `0`, so JavaScript considers it a `truthy` value. This makes the condition true, and the first block of code is executed."
+    },
+    {
+      "name": "04_the_falsy_concept.md",
+      "content": "If some values are `truthy`, it makes sense that others are `falsy`. A value is `falsy` if it behaves like `false` in a condition.\n\nLuckily, there are only a few `falsy` values to remember!\n\nThe main `falsy` values are: `false`, `0`, `\"\"` (an empty string), `null`, and `undefined`.\n\n**See It in action:**\n\n```javascript\nlet userMessage = \"\";\n\nif (userMessage) {\n  console.log(\"New message received!\");\n} else {\n  console.log(\"No new messages.\");\n}\n```\n\n**Output:**\n```\nNo new messages.\n```\n\nBecause `userMessage` is an empty string, it's `falsy`. This makes the `else` block run. This is a very common and useful pattern!"
+    },
+    {
+      "name": "05_homework_check_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's check if a student named Omar has submitted his homework. The variable is `null` if the homework is missing.\n\n  What message will be displayed? 🧑‍💻\n---\ncode: |\n  let omarHomework = null;\n\n  if (omarHomework) {\n    console.log(\"Homework received. Well done!\");\n  } else {\n    console.log(\"Reminder: Please submit your homework.\");\n  }\n---\nsolution: 1\noptions:\n  - \"`Homework received. Well done!`\"\n  - \"`Reminder: Please submit your homework.`\"\n  - \"`null`\"\n  - \"`An error will occur`\"\nexplanation: |\n  Exactly. The value `null` is one of the main `falsy` values in JavaScript. Therefore, the condition evaluates to false and the code inside the `else` block is executed."
+    },
+    {
+      "name": "06_the_smart_gate.md",
+      "content": "Let's get back to our **Smart Access Gate** project.\n\nWe need to grant access only if a user has an access card AND is an active member.\n\nHere is one way to write the code, using the comparison operators we already know.\n\n```javascript\nlet hasCard = true;\nlet isMember = true;\n\n// The 'longer' way\nif (hasCard === true && isMember === true) {\n  console.log(\"Access Granted.\");\n} else {\n  console.log(\"Access Denied.\");\n}\n```\n\nNow, let's use our new knowledge of `truthy` values to make this code much cleaner and more professional. ✨"
+    },
+    {
+      "name": "07_smart_gate_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Below is the same logic, but simplified using `truthy` values. \n\n  What will the output of this improved code be?\n---\ncode: |\n  let hasCard = true;\n  let isMember = true;\n\n  // The 'shorter' professional way\n  if (hasCard && isMember) {\n    console.log(\"Access Granted.\");\n  } else {\n    console.log(\"Access Denied.\");\n  }\n---\nsolution: 0\noptions:\n  - \"`Access Granted.`\"\n  - \"`Access Denied.`\"\n  - \"`true`\"\n  - \"`An error will occur`\"\nexplanation: |\n  Perfect! Since both `hasCard` and `isMember` are `true` (which is inherently `truthy`), the condition `(truthy && truthy)` evaluates to true. This is the preferred way to write this kind of check."
+    },
+    {
+      "name": "08_project_reflection.md",
+      "content": "Amazing work! You just learned a technique that professional developers use every single day to write more efficient code.\n\nBy understanding `truthy` and `falsy` values, you can simplify your conditions and make your logic easier to read.\n\n**This is a huge step forward!** You've now mastered the core decision-making tools in programming.\n\nNext up, we'll learn how to make our programs repeat actions, so we don't have to write the same code over and over again."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+type: "write-from-scratch"
+lang: "javascript"
+# This is the 'You Do' step. It solidifies the learning.
+prompt: "Excellent. Now, write the entire command from scratch. Make it print the message `I'm ready for what's next.`"
+
+solution: |
+  console.log("I'm ready for what's next.");
+
+success_message: "Perfect! You've mastered the console.log command. Let's learn how to make our messages more dynamic. You earned another 30 XP ✨"
+
+failure_hint: "Remember the structure: `console.log(\"your message\");`. Don't forget the parentheses and semicolon!"

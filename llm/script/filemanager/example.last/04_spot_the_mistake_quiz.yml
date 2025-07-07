@@ -1,0 +1,19 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  Oh, it looks like this code has a small typo! It's a very common one, even for experienced developers.
+
+  Why will this code **fail to run** correctly? 🤔
+---
+code: |
+  // Greet a user named Faisal
+  console.log("Ahlan, Faisal);
+---
+solution: 2
+options:
+  - "The semicolon `;` should be a comma `,`."
+  - "The command should be `console.write()`."
+  - "The text is missing its closing quotation mark `"`."
+  - "The name Faisal should not be inside parentheses."
+explanation: |
+  Exactly! The computer needs to know where the text, or `string`, ends. Every opening quotation mark `"` must have a matching closing one `"`.

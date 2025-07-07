@@ -1,0 +1,17 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  أكمل الكود لطباعة "تكلفة المنتج هي 50 ريال" باستخدام `:template literal`.
+code: |
+  const item = "منتج";
+  const price = 50;
+  const report = `تكلفة الـ${item} هي __@@INPUT@@__ ريال`;
+  console.log(report);
+options:
+  - "`price`"
+  - "`'price'`"
+  - "`${price}`"
+  - "`+ price +`"
+solution: 2
+explanation: |
+  لإدراج قيمة `:variable` داخل `:template literal`، يجب أن نضعه داخل `${}`.

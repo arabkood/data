@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "The Input Valve: Making Functions Adaptable",
+    "blurb": "Learn how to make your functions flexible by giving them specific instructions (arguments) each time you run them.",
+    "difficulty": "easy",
+    "base_xp": 250,
+    "type": "lesson",
+    "slug": "02-function-parameters"
+  },
+  "files": [
+    {
+      "name": "01_intro-to-parameters.md",
+      "content": "In our last mission, we built functions that did the same thing every time. Super useful, but what if we want some variety?\n\nThink of ordering shawarma. You don't just say \"give me food.\" You specify instructions: `chicken`, `extra garlic sauce`, `no pickles`.\n\nWe can give our functions specific instructions, too. We do this by defining placeholders called `parameters`.\n\n### See It\n\nHere, we create a function `greet` with a placeholder called `name`. This placeholder is a `parameter`.\n\n```javascript\n// The placeholder 'name' is a parameter\nfunction greet(name) {\n  console.log(\"Ahlan, \" + name + \"!\");\n}\n```\n\nWhen we call the function, we give it a real value like `\"Lina\"`. This value is called an `argument`.\n\n```javascript\n// We pass the argument \"Lina\" to the function\ngreet(\"Lina\");\n\n// --- Output ---\n// Ahlan, Lina!\n```\n\nJust like that, our function is now adaptable! Let's try it. ✨"
+    },
+    {
+      "name": "02_first_argument_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's help Omar greet his friend.\n\n  **Fill in the blank** to make the function print `Welcome, Khalid!`\n---\ncode: |\n  function welcome(friendName) {\n    console.log(\"Welcome, \" + friendName + \"!\");\n  }\n\n  welcome(______);\n---\nsolution: 1\noptions:\n  - friendName\n  - \"Khalid\"\n  - welcome\n  - \"friendName\"\nexplanation: |\n  Correct! The `parameter` is `friendName`, which acts as a placeholder.\n\n  To make the function work, we need to pass a real data value—an `argument`—like the string `\"Khalid\"`."
+    },
+    {
+      "name": "03_parameters_vs_arguments.md",
+      "content": "Great attempt! Getting the terms right helps a lot.\n\n- The `parameter` is the variable in the function's definition. It's the **placeholder**. (`friendName`)\n\n- The `argument` is the actual value passed to the function when it's called. It's the **real data**. (`\"Khalid\"`)\n\nThink of it this way: A recipe asks for a `parameter` called `spice`. The `argument` is the actual `\"zaatar\"` you add when cooking."
+    },
+    {
+      "name": "04_error_first_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Uh oh, it seems something was forgotten when calling the function.\n\n  **What will be logged to the console** when this code runs?\n---\ncode: |\n  function announceCity(cityName) {\n    console.log(\"I live in \" + cityName);\n  }\n\n  announceCity(); // We forgot the argument!\n---\nsolution: 3\noptions:\n  - \"I live in\"\n  - Error\n  - \"I live in cityName\"\n  - \"I live in undefined\"\nexplanation: |\n  Exactly. When a function expects an argument but doesn't receive one, its parameter becomes `undefined`.\n\n  The code still runs, but the result isn't what we wanted!"
+    },
+    {
+      "name": "05_multiple_parameters.md",
+      "content": "One instruction is good, but often we need to provide more.\n\nLet's create a function for a student registry that needs a name and a grade. We can add multiple `parameters` by separating them with a comma.\n\n```javascript\nfunction describeStudent(name, grade) {\n  console.log(name + \" is in grade \" + grade + \".\");\n}\n```\n\n**The order you pass the arguments in must match the order of the parameters.**\n\n```javascript\n// \"Zayd\" matches 'name', and 9 matches 'grade'\ndescribeStudent(\"Zayd\", 9);\n\n// --- Output ---\n// Zayd is in grade 9.\n```"
+    },
+    {
+      "name": "06_inventory_system_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  You're building an inventory system for a local dates shop.\n\n  **Which line of code** correctly logs the message: `We have 50 boxes of Ajwa dates.`?\n---\ncode: |\n  function updateInventory(type, quantity) {\n    console.log(\"We have \" + quantity + \" boxes of \" + type + \" dates.\");\n  }\n---\nsolution: 1\noptions:\n  - updateInventory(50, \"Ajwa\");\n  - updateInventory(\"Ajwa\", 50);\n  - updateInventory(type, quantity);\n  - updateInventory(\"50\", \"Ajwa\");\nexplanation: |\n  Correct! The arguments must be passed in the same order as the parameters are defined.\n\n  The first parameter is `type` (`\"Ajwa\"`), and the second is `quantity` (`50`). The other option reverses them, which would print the wrong message."
+    },
+    {
+      "name": "07_putting_it_together.md",
+      "content": "Fantastic work! Our functions are no longer rigid, single-purpose commands.\n\nThey are now adaptable tools that can handle different data each time we use them. We've officially installed an 'input valve' using `parameters` and `arguments`.\n\nBut what if we want our function to give something *back* to us, like a calculation result? That's our next mission! 🚀"
+    }
+  ]
+}

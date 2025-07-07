@@ -1,0 +1,22 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  حان وقت التطبيق! لنُنشئ متغيّرًا لحفظ اسم طالبة.
+
+  **املأ الفراغ** لتخزين الاسم `Fatima` في المتغيّر `studentName`.
+---
+code: |
+  let studentName = @@INPUT@@;
+
+  console.log(studentName);
+---
+solution: 0
+options:
+  - '"Fatima"'
+  - 'Fatima'
+  - '(Fatima)'
+  - '`Fatima`'
+explanation: |
+  ممتاز! يجب وضع النصوص في جافاسكريبت بين علامتي اقتباس، إما مفردة (`' '`) أو مزدوجة (`" "`)، ليتم التعرّف عليها كـ`سلسلة نصية`.
+
+  بدون علامات الاقتباس، كان الحاسوب سيبحث عن متغيّر باسم `Fatima` عن طريق الخطأ.

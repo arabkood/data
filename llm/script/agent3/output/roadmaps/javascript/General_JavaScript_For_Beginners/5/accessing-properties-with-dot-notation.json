@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "title": "The Direct Line: Accessing Properties",
+    "blurb": "Your data is organized in objects. Now, learn the most direct way to pinpoint and read a specific piece of information using dot notation.",
+    "difficulty": "easy",
+    "base_xp": 150,
+    "type": "lesson",
+    "slug": "accessing-properties-with-dot-notation"
+  },
+  "files": [
+    {
+      "name": "01_the_direct_line.md",
+      "content": "In our last lesson, we organized data into an `object`, like a digital filing cabinet. But how do we open a specific drawer to get the information we need?\n\nThat's where `dot notation` comes in. It's a direct line to a specific piece of data.\n\nLet's see it in action. Here's an object for a student named Zayd.\n\n```javascript\nlet student = {\n  name: \"Zayd\",\n  field: \"Computer Science\"\n};\n\n// To get the name, we use the object's name, a dot, and the property name.\nconsole.log(student.name);\n```\n\n**Output:**\n```\nZayd\n```\n\nIt looks like that single `.` is the key! **Your turn to try** this in the next step. 🔑"
+    },
+    {
+      "name": "02_restaurant_info_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's practice! We have an object representing a restaurant in Cairo.\n\n  What will be the output of this code?\n---\ncode: |\n  let restaurant = {\n    name: \"Gad Restaurants\",\n    city: \"Cairo\",\n    rating: 4.5\n  };\n\n  console.log(restaurant.city);\n---\nsolution: 1\noptions:\n  - \"name\"\n  - \"Cairo\"\n  - \"4.5\"\n  - \"city\"\nexplanation: |\n  Correct! The code `restaurant.city` uses dot notation to access the value of the `city` property, which is \"Cairo\"."
+    },
+    {
+      "name": "03_handling_the_unknown.md",
+      "content": "Great attempt on that last one! But what happens if we ask for a drawer that doesn't exist?\n\nLet's try to access the `age` of our student Zayd, which we never defined.\n\n```javascript\nlet student = {\n  name: \"Zayd\",\n  field: \"Computer Science\"\n};\n\nconsole.log(student.age);\n```\n\n**Output:**\n```\nundefined\n```\n\nOops! It seems we asked for something that isn't there. When a property doesn't exist, JavaScript returns `undefined` instead of an error. This is important to remember! 🤔"
+    },
+    {
+      "name": "04_find_the_mistake_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Here is an object for a new car. The code below has a mistake.\n\n  **Find the line** that causes the problem.\n---\ncode: |\n  let car = {\n    make: \"Toyota\",\n    model: \"Camry\",\n    year: 2023\n  };\n\n  console.log(car.color);\n---\nsolution: 0\noptions:\n  - \"The property `color` does not exist on the `car` object.\"\n  - \"The `year` should be a string, not a number.\"\n  - \"You can't use `console.log` with objects.\"\n  - \"The object `car` is not defined correctly.\"\nexplanation: |\n  Exactly! The `car` object has `make`, `model`, and `year` properties, but no `color` property. Trying to access it results in `undefined`."
+    },
+    {
+      "name": "05_complete_the_profile_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's build a profile for a user named Fatima.\n\n  Fill in the blank to print Fatima's `major` to the console.\n---\ncode: |\n  let fatima = {\n    id: \"21B-404\",\n    major: \"Architecture\",\n    university: \"Ain Shams University\"\n  };\n\n  console.log(fatima._____);\n---\nsolution: 2\noptions:\n  - \"'major'\"\n  - \"university\"\n  - \"major\"\n  - \"id\"\nexplanation: |\n  Perfect! To access the value of the `major` property, you simply use `fatima.major`. No quotes are needed for the property name in dot notation."
+    },
+    {
+      "name": "06_wrapping_up.md",
+      "content": "Excellent work! Using the `.` is the most direct way to get data from an object. You've just mastered a fundamental skill for reading and using structured data.\n\nThis is how websites show your username, or how a game keeps track of your score.\n\nBut what if the property name we need is stored in a `variable`? There's another tool for that, and we'll discover it together next! ✨"
+    }
+  ]
+}

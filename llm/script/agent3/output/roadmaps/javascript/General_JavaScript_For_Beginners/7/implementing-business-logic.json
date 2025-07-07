@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "title": "Core Machinery: Implementing the Business Logic",
+    "blurb": "Learn to translate real-world rules into code. You'll write functions that make decisions, turning your application plans into a working reality.",
+    "difficulty": "easy",
+    "base_xp": 150,
+    "type": "lesson",
+    "slug": "implementing-business-logic"
+  },
+  "files": [
+    {
+      "name": "01_the_thinking_heart.md",
+      "content": "We have our blueprint (`program flow`) and our materials (`data modeling`). Now it's time to build the engine that makes it all work!\n\nThis is where we translate our plans into the active, thinking heart of our program. This is called `logic implementation`.\n\nLet's start with a simple rule for a school's grading system. **If a student's score is 90 or more, their grade is 'ممتاز' (Excellent).**\n\nHere’s how that rule looks as code. Let's discover this together!\n\n```javascript\nfunction calculateGrade(score) {\n  if (score >= 90) {\n    return \"ممتاز\";\n  }\n}\n\n// Let's test it with a student named Omar\nlet omarScore = 95;\nlet omarGrade = calculateGrade(omarScore);\n\nconsole.log(omarGrade);\n```\n\n**Output:**\n```\nممتاز\n```\n\nSee? The `if` statement is the part that *thinks* and makes the decision. It's the core of our logic. 🧠"
+    },
+    {
+      "name": "02_add_a_rule.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Great start! Now, let's expand our logic.\n\n  **Add the condition to check if a score is 80 or more** to assign the grade 'جيد جدا' (Very Good).\ncode: |\n  function calculateGrade(score) {\n    if (score >= 90) {\n      return \"ممتاز\";\n    } else if (______) { // Complete this line\n      return \"جيد جدا\";\n    }\n  }\n\n  let fatimaScore = 85;\n  console.log(calculateGrade(fatimaScore));\nsolution: 1\noptions:\n  - \"score = 80\"\n  - \"score >= 80\"\n  - \"score > 85\"\n  - \"score < 90\"\nexplanation: |\n  Correct! `score >= 80` checks if the score is greater than or equal to 80. \n\n  Since Fatima's score (85) is not `>= 90`, the code checks the next condition, which is now true."
+    },
+    {
+      "name": "03_full_grading_system.md",
+      "content": "Excellent! Handling one or two rules is a great first step. But a real grading system needs to handle all possibilities.\n\nWe can chain `if`, `else if`, and a final `else` to create a complete decision-making machine.\n\n**This function now covers all the main grades.**\n\n```javascript\nfunction getStudentGrade(student) {\n  let score = student.score;\n\n  if (score >= 90) {\n    return \"ممتاز\"; // Excellent\n  } else if (score >= 80) {\n    return \"جيد جدا\"; // Very Good\n  } else if (score >= 70) {\n    return \"جيد\"; // Good\n  } else if (score >= 60) {\n    return \"مقبول\"; // Pass\n  } else {\n    return \"راسب\"; // Fail\n  }\n}\n\n// Let's try it with a student named Khalid\nlet khalid = { name: \"خالد\", score: 76 };\nconsole.log(getStudentGrade(khalid));\n```\n\n**Output:**\n```\nجيد\n```"
+    },
+    {
+      "name": "04_logical_error.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  I used to struggle with this! The order of checks is very important. Look at the code below.\n\n  Layla's score is 95, but the output is `مقبول`. **Why did the code produce the wrong grade?**\ncode: |\n  function getStudentGrade(student) {\n    let score = student.score;\n\n    if (score >= 60) { // Check 1\n      return \"مقبول\";\n    } else if (score >= 90) { // Check 2\n      return \"ممتاز\";\n    } else {\n      return \"راسب\";\n    }\n  }\n\n  let layla = { name: \"ليلى\", score: 95 };\n  console.log(getStudentGrade(layla)); // Output: مقبول\nsolution: 0\noptions:\n  - \"The first `if` condition (`score >= 60`) was true, so the code returned `مقبول` and stopped.\"\n  - \"The variable `layla` has a typo.\"\n  - \"You cannot use `else if` after an `if` statement.\"\n  - \"The score 95 is not a valid number.\"\nexplanation: |\n  Exactly! Since 95 is greater than 60, the first condition was met, and the function immediately returned `مقبول` without ever checking for `score >= 90`.\n\n  **Always check for the most specific cases first** (like `score >= 90`) before moving to more general ones (like `score >= 60`)."
+    },
+    {
+      "name": "05_restaurant_inventory.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's apply this to a new problem: a restaurant's inventory.\n\n  The rule is simple: If the `stock` of a dish is greater than 0, its `status` is 'متوفر' (Available). Otherwise, it's 'نفذت الكمية' (Sold Out).\n\n  **What will be the output of this code?**\ncode: |\n  function checkDishStatus(dish) {\n    if (dish.stock > 0) {\n      return \"متوفر\";\n    } else {\n      return \"نفذت الكمية\";\n    }\n  }\n\n  let kunafa = { name: \"كنافة\", stock: 0 };\n  console.log(checkDishStatus(kunafa));\nsolution: 2\noptions:\n  - \"متوفر\"\n  - \"Error\"\n  - \"نفذت الكمية\"\n  - \"undefined\"\nexplanation: |\n  Perfect! The `stock` for Kunafa is 0. The `if (dish.stock > 0)` condition is false, so the code inside the `else` block is executed, returning `نفذت الكمية`."
+    },
+    {
+      "name": "06_reflection.md",
+      "content": "And there we have it! We've successfully implemented business logic.\n\n`Logic implementation` is just a fancy term for teaching the computer how to make decisions based on rules we give it.\n\nThis is the core machinery that brings the `data models` and `program flow` we designed to life. It's what makes an app feel smart.\n\nNow that our program can think about one thing at a time, **what happens when we need it to process a whole list of students or menu items?**\n\nThat's exactly what we'll tackle next!"
+    }
+  ]
+}

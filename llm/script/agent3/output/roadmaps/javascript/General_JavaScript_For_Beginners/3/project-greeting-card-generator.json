@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "title": "Project: The Greeting Card Generator",
+    "blurb": "Combine your knowledge of functions, parameters, and conditional logic to build a practical tool that generates personalized greeting cards for different occasions.",
+    "difficulty": "medium",
+    "base_xp": 500,
+    "type": "lesson",
+    "slug": "project-greeting-card-generator"
+  },
+  "files": [
+    {
+      "name": "01_the_mission.md",
+      "content": "We've learned about `functions`, `parameters`, and even `arrow functions`. Now, let's combine these skills to build something truly useful! 🛠️\n\nImagine sending personalized greetings for holidays. Instead of writing each one, we can create a smart 'template' that does the work for us.\n\nOur goal is to build a **greeting card generator**. It will take a name and an occasion, then create a custom message. Let's get started!"
+    },
+    {
+      "name": "02_the_blueprint.md",
+      "content": "First, we need a blueprint for our generator. A function is the perfect tool for this repeatable task.\n\nThis function will need two pieces of information: the person's name and the specific occasion. These will be our `parameters`.\n\nHere’s how the basic structure looks. Notice the `name` and `occasion` parameters. They act as placeholders for the real data we'll provide later.\n\n```javascript\nconst createGreeting = (name, occasion) => {\n  // Logic to create the message will go here\n};\n```"
+    },
+    {
+      "name": "03_occasion_logic.md",
+      "content": "A greeting for 'Eid' is different from one for 'Graduation'. This is where conditional logic comes in handy.\n\nWe can use `if` and `else if` statements to check the `occasion` and prepare the right message.\n\nLet's set up the logic for two occasions: 'Ramadan' and 'Eid'. We'll store the specific message in a variable called `message`.\n\n```javascript\nconst createGreeting = (name, occasion) => {\n  let message;\n\n  if (occasion === 'Ramadan') {\n    message = 'Ramadan Kareem!';\n  } else if (occasion === 'Eid') {\n    message = 'Eid Mubarak!';\n  }\n\n  // We will return the final greeting next\n};\n```"
+    },
+    {
+      "name": "04_add_a_condition_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Let's add a condition for 'Graduation'.\n\n  Which code correctly adds a new `else if` block to handle a 'Graduation' occasion with the message 'Congratulations on your graduation!'?\n---\ncode: |\n  const createGreeting = (name, occasion) => {\n    let message;\n\n    if (occasion === 'Ramadan') {\n      message = 'Ramadan Kareem!';\n    } else if (occasion === 'Eid') {\n      message = 'Eid Mubarak!';\n    }\n    // Add the new condition here\n\n    return `Hello ${name}, ${message}`;\n  };\n---\nsolution: 1\noptions:\n  - |\n    ```javascript\n    else (occasion === 'Graduation') {\n      message = 'Congratulations on your graduation!';\n    }\n    ```\n  - |\n    ```javascript\n    else if (occasion === 'Graduation') {\n      message = 'Congratulations on your graduation!';\n    }\n    ```\n  - |\n    ```javascript\n    if (occasion === 'Graduation') {\n      message = 'Congratulations on your graduation!';\n    }\n    ```\n  - |\n    ```javascript\n    else if {occasion === 'Graduation'}\n      message = 'Congratulations on your graduation!';\n    ```\nexplanation: |\n  Correct! To add another check after an `if` or `else if`, we use the `else if (condition)` syntax. This keeps all the checks connected in one logical block."
+    },
+    {
+      "name": "05_crafting_the_output.md",
+      "content": "Now that we have the right `message` for the occasion, let's put it all together with the person's `name`.\n\nRemember `template literals`? They are perfect for creating clean, readable strings with variables inside.\n\nWe'll use the `return` keyword to send the final, combined greeting back from our function. This is the **main output** of our generator.\n\n```javascript\nconst createGreeting = (name, occasion) => {\n  let message;\n\n  if (occasion === 'Ramadan') {\n    message = 'Ramadan Kareem!';\n  } else if (occasion === 'Eid') {\n    message = 'Eid Mubarak!';\n  }\n\n  return `Hello ${name}, ${message}`;\n};\n```"
+    },
+    {
+      "name": "06_predict_the_output_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Excellent! The function is almost complete.\n\n  What will be the output of calling the function with these arguments: `createGreeting('Omar', 'Eid')`?\n---\ncode: |\n  const createGreeting = (name, occasion) => {\n    let message;\n\n    if (occasion === 'Ramadan') {\n      message = 'Ramadan Kareem!';\n    } else if (occasion === 'Eid') {\n      message = 'Eid Mubarak!';\n    }\n\n    return `Hello ${name}, ${message}`;\n  };\n\n  console.log(createGreeting('Omar', 'Eid'));\n---\nsolution: 2\noptions:\n  - \"Hello Omar, Ramadan Kareem!\"\n  - \"Hello name, Eid Mubarak!\"\n  - \"Hello Omar, Eid Mubarak!\"\n  - \"Hello ${name}, ${message}\"\nexplanation: |\n  The function receives 'Omar' for `name` and 'Eid' for `occasion`. The `else if` condition for 'Eid' is met, setting `message` to 'Eid Mubarak!'. The template literal then combines these values into the final string."
+    },
+    {
+      "name": "07_a_default_case.md",
+      "content": "What happens if we provide an occasion the function doesn't know, like 'Birthday'? Right now, the `message` variable would be `undefined`!\n\nLet's fix this by adding a **default message**. A final `else` block runs when none of the `if` or `else if` conditions are true.\n\nThis makes our function more robust and prevents unexpected behavior. It's always good to plan for unknown inputs!\n\n```javascript\n// ... (if/else if blocks) ...\n} else {\n  message = 'Warm wishes on this special day!';\n}\n```"
+    },
+    {
+      "name": "08_find_the_mistake_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Here is the complete function. But there's a small mistake that will cause an error. Can you spot it?\n\n  **Hint**: Look at how the `message` variable is declared.\n---\ncode: |\n  const createGreeting = (name, occasion) => {\n    const message; // <-- Is this right?\n\n    if (occasion === 'Ramadan') {\n      message = 'Ramadan Kareem!';\n    } else if (occasion === 'Eid') {\n      message = 'Eid Mubarak!';\n    } else {\n      message = 'Warm wishes!';\n    }\n\n    return `Hello ${name}, ${message}`;\n  };\n---\nsolution: 0\noptions:\n  - \"`message` should be declared with `let`, not `const`.\"\n  - \"The `else` statement is missing a condition.\"\n  - \"The function should not have a `return` statement.\"\n  - \"The template literal is using the wrong syntax.\"\nexplanation: |\n  Exactly! `const` declares a constant, which cannot be changed or reassigned. Since we need to assign a value to `message` inside the `if/else` block, we must declare it with `let`."
+    },
+    {
+      "name": "09_project_complete.md",
+      "content": "Amazing work! We just built a flexible, reusable tool by combining everything we've learned about functions. 🏆\n\nThis is the core of programming: breaking a problem down and using simple building blocks to create a powerful solution.\n\nWhat if we wanted to send greetings to a whole list of friends? Next up, let's discover how to work with collections of data!"
+    }
+  ]
+}

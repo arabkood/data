@@ -1,0 +1,14 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  أكمل الكود التالي لطباعة جملة "أول كود لي" في الـ`:console`.
+code: |
+  console.log(__@@INPUT@@__);
+options:
+  - "`'أول كود لي'`"
+  - "`أول كود لي`"
+  - "`message`"
+  - "`:console`"
+solution: 0
+explanation: |
+  عندما نريد طباعة نص، والذي يسمى `:string` في البرمجة، يجب أن نضعه دائمًا داخل علامتي اقتباس (مفردة `'` أو مزدوجة `"`).

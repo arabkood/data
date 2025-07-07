@@ -1,0 +1,23 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  باستخدام مصنع الدوال `createLogger`، أكمل الكود لإنشاء `:function` جديدة تسمى `logSuccess` تقوم بطباعة رسائل النجاح مسبوقة بكلمة `[SUCCESS]`.
+code: |
+  function createLogger(prefix) {
+    return function(message) {
+      console.log(`[${prefix}] ${message}`);
+    };
+  }
+
+  const logSuccess = __@@INPUT@@__;
+
+  logSuccess("تمت العملية بنجاح");
+  // المخرجات المتوقعة: [SUCCESS] تمت العملية بنجاح
+options:
+  - "`createLogger`"
+  - "`createLogger('SUCCESS')`"
+  - "`createLogger(message)`"
+  - "`new createLogger('SUCCESS')`"
+solution: 1
+explanation: | 
+  نحن نستدعي المصنع `createLogger` ونمرر له الـ`:string` وهو `'SUCCESS'` كـ `prefix`. المصنع يعيد لنا `:function` جديدة ومخصصة، نقوم بتخزينها في المتغير `logSuccess`.

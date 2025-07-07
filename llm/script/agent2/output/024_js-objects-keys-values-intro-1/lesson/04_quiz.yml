@@ -1,0 +1,17 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  أكمل الكود لإضافة خاصية لسيارة. يجب أن يكون المفتاح (`:key`) هو `color` والقيمة (`:value`) هي `"red"`.
+code: |
+  let car = {
+    type: "SUV",
+    __@@INPUT@@__
+  };
+options:
+  - "`color = 'red'`"
+  - "`'color': red,`"
+  - "`color: 'red'`"
+  - "`'red': color`"
+solution: 2
+explanation: |
+  الصيغة الصحيحة لإضافة خاصية هي `key: value`. في هذه الحالة، `:key` هو `color` و `:value` هي النص `'red'`.

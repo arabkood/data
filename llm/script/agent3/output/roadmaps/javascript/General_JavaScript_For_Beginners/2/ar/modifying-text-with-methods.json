@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "المُحوِّل: تعديل النصوص باستخدام الدوال",
+    "blurb": "تعلّم تنظيف النصوص وتنسيقها كالمحترفين! أتقن دوال النصوص الأساسية مثل toUpperCase و toLowerCase و trim لتوحيد مدخلات المستخدم.",
+    "difficulty": "easy",
+    "base_xp": 350,
+    "type": "lesson",
+    "slug": "modifying-text-with-methods"
+  },
+  "files": [
+    {
+      "name": "01_what_are_methods.md",
+      "content": "لقد رأينا كيف نجد `طول` النص باستخدام **خاصيّة (`property`)**.\n\nولكن ماذا لو أردنا *تغيير* النص نفسه؟\n\nلهذا الغرض، نستخدم **الدوال (`methods`)**. فكّر في `الدوال` كإجراءات أو أوامر خاصة يمكننا تنفيذها على نصوصنا.\n\nلنبدأ بواحدة شائعة. تخيّل أنك تريد أن تجعل اسم مستخدم يبدو كصيحة. يمكننا استخدام دالة `toUpperCase()`.\n\n```javascript\nlet studentName = \"farah\";\nlet loudName = studentName.toUpperCase();\n\nconsole.log(loudName);\n```\n\n**الناتج**\n```\nFARAH\n```\n\nلاحظ الأقواس `()` في النهاية. هكذا نعرف أنها **إجراء (دالة)**، وليست مجرد وصف (`خاصيّة` مثل `.length`)."
+    },
+    {
+      "name": "02_quiz_uppercase.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  يريد مطعم طباعة أسماء جميع الأصناف بأحرف كبيرة على تذاكر المطبخ لتسهيل القراءة.\n\n  **املأ الفراغ** لجعل المتغيّر `dish` بأحرف كبيرة.\ncode: |\n  let dish = \"Shawarma\";\n  let kitchenTicket = dish.@@INPUT@@;\n\n  console.log(kitchenTicket);\nsolution: 0\noptions:\n  - \"toUpperCase()\"\n  - \"upperCase()\"\n  - \"makeUpper\"\n  - \"toUpperCase\"\nexplanation: |\n  الدالة الصحيحة هي `toUpperCase()`. تذكّر، تحتاج `الدوال` إلى الأقواس `()` ليتم استدعاؤها وتنفيذها!"
+    },
+    {
+      "name": "03_standardizing_text.md",
+      "content": "عمل رائع! والآن لنجرّب العكس. غالبًا ما نحتاج إلى تحويل النص إلى أحرف صغيرة لمقارنة الأشياء بشكل متسق.\n\nعلى سبيل المثال، إذا كتب المستخدم \"Cairo\" وكانت قاعدة بياناتنا تحتوي على \"cairo\"، فيجب أن يتطابقا. تساعدنا دالة `toLowerCase()` هنا.\n\n```javascript\nlet userInput = \"Jeddah\";\nlet savedCity = userInput.toLowerCase();\n\nconsole.log(savedCity);\n```\n\n**الناتج**\n```\njeddah\n```\n\nهذه مهمة شائعة جدًا **لجعل البيانات موحّدة** قبل حفظها أو التحقق منها."
+    },
+    {
+      "name": "04_quiz_lowercase.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  ما الذي سيتم طباعته في الطرفيّة (`console`)؟\ncode: |\n  let greeting = \"Ahlan Wa Sahlan\";\n  let quietGreeting = greeting.toLowerCase();\n\n  console.log(quietGreeting);\nsolution: 2\noptions:\n  - \"AHLAN WA SAHLAN\"\n  - \"Ahlan Wa Sahlan\"\n  - \"ahlan wa sahlan\"\n  - \"Error\"\nexplanation: |\n  تقوم دالة `toLowerCase()` بتحويل كل حرف في النص إلى ما يعادله من الأحرف الصغيرة، مما ينتج عنه `\"ahlan wa sahlan\"`."
+    },
+    {
+      "name": "05_cleaning_whitespace.md",
+      "content": "لنكتشف كيفية إصلاح مشكلة خفيّة وغير مرئية: المسافات الزائدة!\n\nأحيانًا يضيف المستخدمون مسافات عن طريق الخطأ قبل أو بعد مدخلاتهم. هذا يمكن أن يسبب مشاكل.\n\n```javascript\nlet correctCode = \"1991\";\nlet userEntry = \" 1991 \";\n\nconsole.log(correctCode === userEntry);\n```\n\n**الناتج**\n```\nfalse\n```\n\nيا لهذه الخدعة! المسافات تجعل الحاسوب يراهما مختلفتين. يمكننا استخدام دالة `trim()` **لإزالة المسافات البيضاء من كلا طرفي** النص. ✨\n\n```javascript\nlet userEntry = \" 1991 \";\nlet cleanedEntry = userEntry.trim();\n\nconsole.log(cleanedEntry);\n```\n\n**الناتج**\n```\n1991\n```"
+    },
+    {
+      "name": "06_quiz_trim.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  تحاول مستخدمة اسمها `yasmin` تسجيل الدخول. اسم المستخدم الخاص بها مُخزّن كـ `\"yasmin\"` لكنها كتبته هكذا `\"  yasmin  \"`.\n\n  الكود لا يعمل. **أي خيار يصلح الكود** بحيث تكون المقارنة `true`؟\ncode: |\n  let savedUser = \"yasmin\";\n  let enteredUser = \"  yasmin  \";\n  // هذا هو السطر الذي به المشكلة\n\n  // كيف يمكننا جعل هذه المقارنة صحيحة؟\n  console.log(savedUser === enteredUser);\nsolution: 1\noptions:\n  - \"let savedUser = savedUser.trim();\"\n  - \"let enteredUser = enteredUser.trim();\"\n  - \"let enteredUser = enteredUser.toUpperCase();\"\n  - \"لا يمكن إصلاحه.\"\nexplanation: |\n  المشكلة في المتغيّر `enteredUser` الذي يحتوي على مسافات زائدة. تطبيق دالة `trim()` عليه يزيل المسافات البيضاء البادئة واللاحقة، مما يسمح للمقارنة `savedUser === enteredUser` أن تُقيّم إلى `true`."
+    },
+    {
+      "name": "07_reflection.md",
+      "content": "مذهل! لدينا الآن أدوات قوية لتحويل النصوص.\n\nلقد تعلمنا استخدام `toUpperCase()` و `toLowerCase()` و `trim()`. هذه هي أول `دوال` نصيّة نتعلمها!\n\nأمر أساسي يجب تذكره هو أن هذه `الدوال` **تُرجع نصًا جديدًا ومعدّلاً**. هي لا تغيّر النص الأصلي.\n\nهذه المهارة ضرورية لتنظيف مدخلات المستخدم وإعداد البيانات. في الدرس التالي، سندمج كل مهاراتنا النصية لبناء رسالة ديناميكية!"
+    }
+  ]
+}

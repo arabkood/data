@@ -1,0 +1,7 @@
+title: "لا تكرر نفسك (DRY)"
+blurb: "تعلم المبدأ الأساسي في البرمجة لكتابة كود نظيف وفعال. اكتشف كيف تحول الكود المكرر إلى دوال قابلة لإعادة الاستخدام."
+premium_only: false
+difficulty: "easy"
+base_xp: 1200
+type: "lesson"
+slug: "dont-repeat-yourself-dry"

@@ -1,0 +1,99 @@
+[
+  {
+    "concepts_covered": [
+      "console.log",
+      "values",
+      "data types",
+      "comments",
+      "variables",
+      "let",
+      "const"
+    ],
+    "goal": "Write your very first lines of code and understand how to store and display basic information.",
+    "title": "The First Spark: Laying the Foundation"
+  },
+  {
+    "concepts_covered": [
+      "booleans",
+      "comparison operators",
+      "if/else",
+      "else if",
+      "logical operators",
+      "truthy and falsy"
+    ],
+    "goal": "Build scripts that can make logical decisions and follow different paths based on conditions.",
+    "title": "The Logic Engine: Making Decisions with Code"
+  },
+  {
+    "concepts_covered": [
+      "strings",
+      "concatenation",
+      "template literals",
+      "string properties",
+      "string methods",
+      "type conversion"
+    ],
+    "goal": "Manipulate and combine text to create dynamic messages and process textual information.",
+    "title": "The Art of Communication: Working with Text"
+  },
+  {
+    "concepts_covered": [
+      "functions",
+      "parameters",
+      "arguments",
+      "return",
+      "scope",
+      "arrow functions"
+    ],
+    "goal": "Create reusable blocks of code with functions to build more organized and efficient scripts.",
+    "title": "The Blueprint: Building Reusable Functions"
+  },
+  {
+    "concepts_covered": [
+      "arrays",
+      "indexes",
+      "array methods",
+      "push",
+      "pop",
+      "for loop",
+      "while loop"
+    ],
+    "goal": "Automate repetitive tasks and manage lists of data using loops and arrays.",
+    "title": "The Assembly Line: Mastering Loops and Lists"
+  },
+  {
+    "concepts_covered": [
+      "objects",
+      "properties",
+      "methods",
+      "dot notation",
+      "bracket notation",
+      "this keyword"
+    ],
+    "goal": "Model real-world concepts by grouping related variables and functions into single, structured entities.",
+    "title": "The Data Architect: Structuring Information with Objects"
+  },
+  {
+    "concepts_covered": [
+      "arrays of objects",
+      "nested objects",
+      "json",
+      "map",
+      "filter",
+      "higher-order functions"
+    ],
+    "goal": "Master complex data by combining arrays and objects to represent professional, real-world information systems.",
+    "title": "Advanced Systems: High-Level Data Manipulation"
+  },
+  {
+    "concepts_covered": [
+      "problem decomposition",
+      "program flow",
+      "data modeling",
+      "logic implementation",
+      "user interaction logic"
+    ],
+    "goal": "Integrate all learned concepts to design and build a complete command-line application from start to finish.",
+    "title": "Capstone Project: Building a Functional Script"
+  }
+]

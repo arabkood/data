@@ -1,0 +1,24 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  لنبدأ بالأساسيات. انظر إلى كائن `cafe` هذا.
+
+  كيف يمكننا الوصول إلى خاصية `location` باستخدام **الترميز بالأقواس**؟
+code: |
+  const cafe = {
+    name: "Ahlan Cafe",
+    location: "Jeddah",
+    open: true
+  };
+
+  // الوصول إلى الموقع باستخدام الترميز بالأقواس
+  console.log(cafe[@@INPUT@@]);
+--- 
+solution: 0
+options:
+  - "'location'"
+  - ".location"
+  - "location"
+  - "(location)"
+explanation: |
+  صحيح! عند استخدام `الترميز بالأقواس` مع اسم خاصية محدد، **يجب أن يكون الاسم نصًا برمجيًا (string)**، لذلك نضعه بين علامتي اقتباس `''`.

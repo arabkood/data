@@ -1,0 +1,26 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  لنتدرب على استدعاء `طريقة`.
+
+  بناءً على الشفرة البرمجية، **ما الذي سيُطبع في الطرفية**؟
+---
+code: |
+  let student = {
+    name: "Fatima",
+    grade: 85,
+    checkStatus: function() {
+      console.log("تم التحقق من الحالة.");
+    }
+  };
+
+  student.checkStatus();
+---
+solution: 2
+options:
+  - "`Fatima`"
+  - "`[Function: checkStatus]`"
+  - "`تم التحقق من الحالة.`"
+  - "`student.checkStatus()`"
+explanation: |
+  ممتاز! السطر `student.checkStatus()` ينفذ الدالة المخزنة في خاصية `checkStatus`، والتي بدورها تشغل `console.log("تم التحقق من الحالة.")`.

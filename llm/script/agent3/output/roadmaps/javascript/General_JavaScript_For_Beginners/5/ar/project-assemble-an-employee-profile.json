@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "مشروع: تجميع ملف موظف",
+    "blurb": "اجمع معرفتك بالكائنات والخصائص والدوال لبناء ملف تعريف موظف تفاعلي وكامل من الصفر.",
+    "difficulty": "medium",
+    "base_xp": 1500,
+    "type": "lesson",
+    "slug": "project-assemble-an-employee-profile"
+  },
+  "files": [
+    {
+      "name": "01_introduction.md",
+      "content": "لقد تعلمنا كيف يمكن **للكائنات (`objects`)** أن تحتفظ بالبيانات (عبر **الخصائص (`properties`)**) وتؤدي إجراءات (عبر **الدوال (`methods`)**).\n\nحتى أننا منحناها وعيًا ذاتيًا باستخدام الكلمة المفتاحية `this`!\n\nالآن، لنجمع كل ذلك معًا. فكّر في بطاقة هوية الموظف. فهي تحتوي على بيانات (الاسم، رقم الهوية) وتتضمن إجراءات (مثل منح صلاحية الدخول).\n\n**مهمتنا** هي بناء ملف تعريف رقمي للموظف الجديد، عمر، يجمع كل هذه المهارات في `كائن` واحد قوي. لنبدأ البناء!"
+    },
+    {
+      "name": "02_basic_profile.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  لنبدأ بإنشاء الهيكل الأساسي لملف عمر.\n  \n  املأ الفراغ لإنشاء `كائن` باسم `employee` يحتوي على خاصيتين: `name` بقيمة \"Omar\" و `employeeId` بقيمة 451.\n\n  --- \ncode: |\n  const employee = {\n    // اكتب الكود هنا\n  };\n\n  console.log(employee.name);\n  ---\nsolution: |\n  const employee = {\n    name: \"Omar\",\n    employeeId: 451\n  };\n\n  console.log(employee.name);\noptions:\n  - \"name: \\\"Omar\\\",\\n  employeeId: 451\"\n  - \"name = \\\"Omar\\\";\\n  employeeId = 451;\"\n  - \"\\\"name\\\": \\\"Omar\\\"\\n  \\\"employeeId\\\": 451\"\n  - \"name: Omar,\\n  employeeId: 451\"\nexplanation: |\n  صحيح! داخل `الكائن`، نعرّف `الخصائص` على شكل أزواج `key: value` (مفتاح: قيمة)، ويفصل بينها بفاصلة. القيم النصية مثل \"Omar\" يجب أن تكون محاطة بعلامات اقتباس."
+    },
+    {
+      "name": "03_adding_an_action.md",
+      "content": "بداية رائعة! `كائن` الـ `employee` الخاص بنا يحتوي الآن على بيانات عمر الأساسية.\n\nلكن `الكائنات` ليست فقط لتخزين المعلومات، بل هي أيضًا لتنفيذ المهام.\n\nلِنُضِف `دالة`. `الدالة` هي وظيفة (`function`) تعيش داخل `كائن`، مما يمنحه قدرة محددة.\n\nسنضيف `دالة` باسم `greet` تطبع رسالة ترحيب. هذا يجعل `الكائن` الخاص بنا أكثر تفاعلية."
+    },
+    {
+      "name": "04_using_this.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  بداية جيدة، لكن الترحيب السابق كان عامًا. لنجعله شخصيًا أكثر باستخدام بيانات `الكائن` نفسه.\n\n  أكمل `دالة` الـ `getDetails` بحيث تُرجع نصًا يحتوي على اسم الموظف، مستخدمًا الكلمة المفتاحية `this` للوصول إلى `خاصية` الـ `name`.\n  --- \ncode: |\n  const employee = {\n    name: \"ليلى\",\n    employeeId: 882,\n    getDetails: function() {\n      return \"Employee ID: \" + this.employeeId + \", Name: \" + // اكتب الكود هنا\n    }\n  };\n\n  console.log(employee.getDetails());\n  ---\nsolution: 0\noptions:\n  - \"this.name;\"\n  - \"name;\"\n  - \"employee.name;\"\n  - \"getDetails.name;\"\nexplanation: |\n  بالضبط! الكلمة المفتاحية `this` هي إشارة خاصة تسمح لـ`الدالة` بالوصول إلى `خصائص` أخرى داخل **نفس `الكائن`**. هذا يجعل دوالنا ذكية ومكتفية ذاتيًا."
+    },
+    {
+      "name": "05_find_the_bug.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  أوه، يبدو أن هناك خطأً صغيرًا في هذا الكود. عندما نشغّل `employee.promote()`، لا يعمل كما هو متوقع.\n\n  ما هو الخطأ في `دالة` الـ `promote`؟\n  --- \ncode: |\n  let employee = {\n    name: \"فاطمة\",\n    jobTitle: \"Junior Developer\",\n    promote: function() {\n      jobTitle = \"Senior Developer\";\n    }\n  };\n\n  employee.promote();\n  console.log(employee.jobTitle);\n  // المخرجات: Junior Developer\n  ---\nsolution: 2\noptions:\n  - \"يجب أن تكون علامة `=` هي `==`.\"\n  - \"لا يمكن للدوال تغيير قيم الخصائص.\"\n  - \"يجب أن تكون `this.jobTitle` وليس `jobTitle` فقط.\"\n  - \"يجب تعريف الخاصية `jobTitle` باستخدام `let`.\"\nexplanation: |\n  لقد وجدتها! بدون `this`، يحاول الكود تغيير متغير عام (`global variable`) اسمه `jobTitle` وهو غير موجود. يجب أن نستخدم `this.jobTitle` لتحديد أننا نغير `خاصية` **هذا `الكائن` تحديدًا**."
+    },
+    {
+      "name": "06_final_challenge.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  حان الوقت لإكمال الملف الشخصي! لنبني نظامًا لمطعم محلي.\n\n  **مهمتك**: أضف `دالة` (`method`) اسمها `updateStock` إلى `كائن` الـ `menuItem`. يجب أن تأخذ **مُعامِلًا (`argument`)** واحدًا، وهو `quantitySold`، وتطرحه من `خاصية` الـ `stock`.\n  --- \ncode: |\n  let menuItem = {\n    name: \"شطيرة فلافل\",\n    price: 15,\n    stock: 100,\n    // أضف دالة updateStock هنا\n  };\n\n  menuItem.updateStock(10);\n  console.log(menuItem.stock);\n  // المخرجات المتوقعة: 90\n  ---\nsolution: 0\noptions:\n  - \"`updateStock: function(quantitySold) { this.stock = this.stock - quantitySold; }`\"\n  - \"`updateStock: function(quantitySold) { stock = stock - quantitySold; }`\"\n  - \"`updateStock(quantitySold) { this.stock - quantitySold; }`\"\n  - \"`function updateStock(quantitySold) { this.stock -= quantitySold; }`\"\nexplanation: |\n  ممتاز! لقد أنشأت `دالة` تأخذ `مُعامِلًا` وتستخدم `this.stock` بشكل صحيح لتعديل `خاصية` الـ `stock` الخاصة بالكائن نفسه. هكذا تدير `الكائنات` حالتها الخاصة."
+    },
+    {
+      "name": "07_reflection.md",
+      "content": "عمل مذهل! لقد بنيت للتو `كائنًا` تفاعليًا ومتكاملًا يمثل مفهومًا من العالم الحقيقي.\n\nلقد دمجت بين `الخصائص` للبيانات، و`الدوال` للإجراءات، و`this` للإشارة الذاتية. هذه مهارة أساسية في البرمجة.\n\nهذه 'النماذج الرقمية' هي لبنات البناء لكل تطبيق تقريبًا، من الألعاب إلى برامج الأعمال المعقدة. أنت مستعد لما هو قادم! ✨"
+    }
+  ]
+}

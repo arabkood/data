@@ -1,0 +1,7 @@
+title: "تعديل المصفوفات: الإضافة والحذف"
+blurb: "تعلم كيفية إضافة عناصر إلى مصفوفة باستخدام `push`، وحذفها باستخدام `pop`، والتحقق من حجمها باستخدام `length`. مهارات أساسية لكل مبرمج!"
+premium_only: false
+difficulty: "easy"
+base_xp: 1200
+type: "lesson"
+slug: "modifying-array-data"

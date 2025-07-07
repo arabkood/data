@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "Taking Measure: String Properties",
+    "blurb": "Learn how to measure the size of your text. Use the .length property to count characters, a key skill for validating user input like usernames.",
+    "difficulty": "easy",
+    "base_xp": 250,
+    "type": "lesson",
+    "slug": "taking-measure-string-properties"
+  },
+  "files": [
+    {
+      "name": "01_the_text_ruler.md",
+      "content": "We've learned to build messages with template literals. But what if a message is too long for a username field?\n\nBefore we can manage our text, we first need to measure it. Let's find out how!\n\nThink of a string as a sentence written on paper. The `length` property is like a ruler that tells you exactly how many characters are in that sentence.\n\n`length` is a **property**, which is a characteristic of our string data."
+    },
+    {
+      "name": "02_see_it_in_action.md",
+      "content": "Let's see this 'ruler' in action. We can access the `length` property by adding a dot `.` after our string variable, followed by the word `length`.\n\n```javascript\nlet driverName = \"Amal\";\nconsole.log(driverName.length);\n```\n\n**Output:**\n```\n4\n```\n\nIt's that simple! The code tells us the string \"Amal\" has 4 characters. This seems like a handy tool for our coding toolbox. ✨"
+    },
+    {
+      "name": "03_every_character_counts_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  Spaces and punctuation also count as characters. \n\n  What will be the output of **this code**?\ncode: |\n  let cityName = \"Riyadh SA\";\n  console.log(cityName.length);\nsolution: 1\noptions:\n  - \"9\"\n  - \"8\"\n  - \"7\"\n  - \"'Riyadh SA'\"\nexplanation: |\n  Correct! The `.length` property counts every single character inside the quotes, including the space. 'R.i.y.a.d.h. .S.A' is 9 characters total."
+    },
+    {
+      "name": "04_a_practical_use.md",
+      "content": "This is useful for more than just counting. Imagine a website where usernames must be between 5 and 15 characters long.\n\nWe can use `.length` to check if a username like 'Nour_123' meets the requirements. This is a real-world use case for **data validation**.\n\nLet's try to do something similar in the next step."
+    },
+    {
+      "name": "05_book_title_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  We want to find the number of characters in a famous Arabic book title.\n\n  **Fill in the blank** to get the string's length.\ncode: |\n  let bookTitle = \"كليلة ودمنة\"; // Kalīla wa-Dimna\n  let titleSize = bookTitle.___;\n  console.log(titleSize);\nsolution: 0\noptions:\n  - \"length\"\n  - \"size\"\n  - \"count()\"\n  - \"Length\"\nexplanation: |\n  Exactly! The correct property is `length`. Remember that JavaScript is case-sensitive, so `Length` with a capital 'L' would not work."
+    },
+    {
+      "name": "06_find_the_mistake_quiz.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  I tried to get the length here, but it caused an error. Oh, I think I see what happened... \n\n  Can you **spot the mistake** in the code?\ncode: |\n  let welcomeMessage = \"أهلاً بك\";\n  console.log(welcomeMessage.length());\nsolution: 2\noptions:\n  - \"You cannot use `.length` on an Arabic string.\"\n  - \"The variable `welcomeMessage` is not defined correctly.\"\n  - \"`.length` is a property, not a function, so it shouldn't have `()`.\"\n  - \"`console.log` cannot print a number.\"\nexplanation: |\n  That's the one! `.length` is a property, like a label that holds a value. We access it directly. We don't 'call' it with `()` like we would a function or method."
+    },
+    {
+      "name": "07_reflect_and_next_steps.md",
+      "content": "Amazing! We've learned a fundamental skill: measuring our strings. This is the first step to managing and validating text.\n\nNow you can check the size of any text, from a short username to a long review for a restaurant.\n\nKnowing the length is great, but what about actually changing the text? Next, we'll discover how to transform our strings with `string methods`."
+    }
+  ]
+}

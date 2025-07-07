@@ -1,0 +1,24 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  الكود التالي يحتوي على `:Promise` يتم رفضه. ما الذي سيتم طباعته في الطرفية؟
+code: |
+  const filePromise = new Promise((resolve, reject) => {
+    reject("الملف غير موجود");
+  });
+
+  filePromise
+    .then((data) => {
+      console.log("تم العثور على الملف!");
+    })
+    .catch((err) => {
+      console.log("خطأ: " + err);
+    });
+solution: 1
+options:
+  - "`تم العثور على الملف!`"
+  - "`خطأ: الملف غير موجود`"
+  - "`undefined`"
+  - "لن يتم طباعة أي شيء"
+explanation: |
+  بما أن الـ `:Promise` تم رفضه باستخدام `:reject`، سيتجاوز `:javascript` كتلة `.then()` وينتقل مباشرة إلى كتلة `.catch()` لتنفيذ الكود المخصص لمعالجة الأخطاء.

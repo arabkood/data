@@ -1,0 +1,33 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  هيا نجرب هذا! لدينا دالة `processNumber` تحتاج إلى `operation` (عملية) لتشتغل.
+
+  **املأ الفراغ** لجعل الشفرة تحسب `10 + 5`.
+---
+code: |
+  function addFive(num) {
+    return num + 5;
+  }
+
+  function multiplyByTwo(num) {
+    return num * 2;
+  }
+
+  function processNumber(number, operation) {
+    let result = operation(number);
+    console.log("النتيجة هي: " + result);
+  }
+
+  processNumber(10, @@INPUT@@);
+---
+solution: 2
+options:
+  - "multiplyByTwo()"
+  - "addFive()"
+  - "addFive"
+  - "multiplyByTwo"
+explanation: |
+  صحيح! نمرر اسم الدالة `addFive` مباشرة كوسيط.
+
+  استخدام `addFive()` سيستدعي الدالة فورًا ويمرر قيمتها المُرجعة، وهذا ليس ما تتوقعه الدالة `processNumber`.

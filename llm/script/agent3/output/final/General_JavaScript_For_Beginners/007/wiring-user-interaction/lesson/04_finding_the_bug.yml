@@ -1,0 +1,25 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  ارتكاب الأخطاء جزء من التعلّم! لنصبح محققي أخطاء برمجية.
+
+  كتب عمر دالة لمكتبة، لكنها تطبع `undefined`. **ابحث عن الخطأ في الشيفرة**.
+code: |
+  function checkoutBook(bookTitle, author) {
+    let message = "لقد استعرت كتاب '" + bookTitle + "' للمؤلف " + author;
+
+    // هناك خطأ ما في السطر التالي!
+    console.log(checkoutMessage);
+  }
+
+  checkoutBook("The Prophet", "Kahlil Gibran");
+solution: 2
+options:
+  - "الدالة تحتاج إلى عبارة `return`."
+  - "لا يمكنك استخدام `+` لدمج النصوص والمتغيّرات."
+  - "المتغيّر `checkoutMessage` لم يتم تعريفه أبدًا. إنه خطأ إملائي والمقصود `message`."
+  - "`console.log` لا يمكنها طباعة المتغيّرات."
+explanation: |
+  بالضبط! طُلب من الحاسوب طباعة متغيّر اسمه `checkoutMessage`، لكننا أنشأنا متغيرًا باسم `message`.
+
+  هذا النوع من الأخطاء الإملائية هو **'خطأ برمجي' (`bug`)** شائع جدًا. الانتباه الشديد لأسماء المتغيّرات مهارة أساسية.

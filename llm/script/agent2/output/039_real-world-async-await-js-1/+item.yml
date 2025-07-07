@@ -1,0 +1,7 @@
+title: "البرمجة غير المتزامنة الواقعية مع async/await"
+blurb: "تعلم كيف تكتب كودًا غير متزامن أنيق وواضح باستخدام async/await لجلب البيانات من الإنترنت والتعامل مع العمليات التي تستغرق وقتًا."
+premium_only: false
+difficulty: "medium"
+base_xp: 1800
+type: "lesson"
+slug: "real-world-async-await-js"

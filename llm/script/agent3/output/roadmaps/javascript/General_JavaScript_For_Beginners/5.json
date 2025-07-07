@@ -1,0 +1,71 @@
+[
+  {
+    "builds_on": [
+      "variables",
+      "data types"
+    ],
+    "narrative_hook": "Move beyond simple variables by learning to group related information into a single, structured container.",
+    "new_concept": [
+      "objects"
+    ],
+    "title": "The Digital Filing Cabinet: Creating Objects"
+  },
+  {
+    "builds_on": [
+      "objects"
+    ],
+    "narrative_hook": "With your data neatly organized, learn the most direct way to pinpoint and read a specific piece of information inside your objects.",
+    "new_concept": [
+      "dot notation"
+    ],
+    "title": "The Direct Line: Accessing Properties"
+  },
+  {
+    "builds_on": [
+      "objects",
+      "variables",
+      "strings"
+    ],
+    "narrative_hook": "Unlock a more flexible way to access properties using variables, preparing you for more dynamic programming challenges.",
+    "new_concept": [
+      "bracket notation"
+    ],
+    "title": "The Master Key: Dynamic Property Access"
+  },
+  {
+    "builds_on": [
+      "objects",
+      "functions",
+      "dot notation"
+    ],
+    "narrative_hook": "Elevate your data structures from static containers to active components by giving them their own built-in functions.",
+    "new_concept": [
+      "methods"
+    ],
+    "title": "From Data to Doer: Building with Methods"
+  },
+  {
+    "builds_on": [
+      "objects",
+      "methods"
+    ],
+    "narrative_hook": "Grant your methods the power of self-awareness, allowing them to intelligently access their own object's data from within.",
+    "new_concept": [
+      "this keyword"
+    ],
+    "title": "Internal Reference: Understanding 'this'"
+  },
+  {
+    "builds_on": [
+      "objects",
+      "dot notation",
+      "methods",
+      "this keyword"
+    ],
+    "narrative_hook": "Combine all your new skills to model a complete, real-world entity with both detailed data and interactive behaviors.",
+    "new_concept": [
+      "properties"
+    ],
+    "title": "Project: Assemble an Employee Profile"
+  }
+]

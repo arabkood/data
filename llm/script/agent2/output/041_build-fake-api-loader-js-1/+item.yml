@@ -1,0 +1,7 @@
+title: "بناء محاكي تحميل بيانات وهمي (Fake API Loader)"
+blurb: "تعلم كيفية محاكاة طلبات الشبكة باستخدام `Promise` و `setTimeout` لعرض رسائل التحميل والتعامل مع العمليات غير المتزامنة في JavaScript."
+premium_only: false
+difficulty: "medium"
+base_xp: 1200
+type: "lesson"
+slug: "build-fake-api-loader-js"

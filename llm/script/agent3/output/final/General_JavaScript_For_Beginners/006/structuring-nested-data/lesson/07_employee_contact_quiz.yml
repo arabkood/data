@@ -1,0 +1,38 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  ماذا سيكون ناتج هذا الكود؟
+---
+code: |
+  const employees = [
+    {
+      name: "طارق",
+      role: "Developer"
+    },
+    {
+      name: "نورة",
+      role: "Manager",
+      contact: {
+        email: "noura@akood.com",
+        phone: {
+          work: "111-222-333",
+          personal: "555-666-777"
+        }
+      }
+    }
+  ];
+  
+  console.log(employees[1].contact.phone.personal);
+---
+solution: 1
+options:
+  - "`noura@akood.com`"
+  - "`555-666-777`"
+  - "`undefined`"
+  - "An error will occur."
+explanation: |
+  ممتاز! لقد تصفحت الهيكل بشكل صحيح:
+  1. `employees[1]` للحصول على كائن الموظفة نورة.
+  2. `.contact` للحصول على `الكائن المتداخل` الخاص بمعلومات الاتصال.
+  3. `.phone` للحصول على كائن الهاتف المتداخل بشكل أعمق.
+  4. `.personal` للحصول على القيمة النهائية.

@@ -1,0 +1,67 @@
+[
+  {
+    "builds_on": [
+      "objects",
+      "arrays",
+      "functions"
+    ],
+    "narrative_hook": "Before laying a single brick, every great builder starts with a detailed blueprint.",
+    "new_concept": [
+      "problem decomposition"
+    ],
+    "title": "The Architect's Briefing: Deconstructing the Problem"
+  },
+  {
+    "builds_on": [
+      "problem decomposition",
+      "objects",
+      "arrays",
+      "json"
+    ],
+    "narrative_hook": "Your application's strength depends on the structure of the data that flows through it.",
+    "new_concept": [
+      "data modeling"
+    ],
+    "title": "Data Scaffolding: Modeling Your Information"
+  },
+  {
+    "builds_on": [
+      "problem decomposition",
+      "if/else",
+      "loops",
+      "functions"
+    ],
+    "narrative_hook": "Define the step-by-step journey a user will take through your application from start to finish.",
+    "new_concept": [
+      "program flow"
+    ],
+    "title": "The Master Plan: Charting the Program's Flow"
+  },
+  {
+    "builds_on": [
+      "data modeling",
+      "program flow",
+      "functions",
+      "methods",
+      "higher-order functions"
+    ],
+    "narrative_hook": "Now you'll translate your plans and data structures into the active, thinking heart of your program.",
+    "new_concept": [
+      "logic implementation"
+    ],
+    "title": "Core Machinery: Implementing the Business Logic"
+  },
+  {
+    "builds_on": [
+      "logic implementation",
+      "console.log",
+      "loops",
+      "strings"
+    ],
+    "narrative_hook": "Bring your application to life by building the bridge that allows users to communicate with it.",
+    "new_concept": [
+      "user interaction logic"
+    ],
+    "title": "The Command Center: Wiring User Interaction"
+  }
+]

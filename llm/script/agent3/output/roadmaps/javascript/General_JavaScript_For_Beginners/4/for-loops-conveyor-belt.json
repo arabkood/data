@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "title": "The Conveyor Belt: Automating Tasks with 'for' Loops",
+    "blurb": "Learn to automate repetitive tasks by creating 'for' loops. Process every item in an array without writing the same code over and over.",
+    "difficulty": "easy",
+    "base_xp": 350,
+    "type": "lesson",
+    "slug": "for-loops-conveyor-belt"
+  },
+  "files": [
+    {
+      "name": "01_the_conveyor_belt.md",
+      "content": "Previously, we added items to our lists. But checking each item one-by-one is slow, like inspecting products in a crate by hand.\n\nLet's build a machine to do it for us! This is where the `for` loop, our automated conveyor belt, comes in. 🤖\n\nIt tells the computer to repeat an action for every single item in an array. **This is how we automate tasks.**\n\nHere is what the basic structure looks like. It might seem a bit strange, but we'll discover it together.\n\n```javascript\nlet cities = [\"Riyadh\", \"Cairo\", \"Beirut\"];\n\nfor (let i = 0; i < cities.length; i++) {\n  // Action to repeat goes here\n  console.log(cities[i]);\n}\n```\n\n**Output:**\n```\n\"Riyadh\"\n\"Cairo\"\n\"Beirut\"\n```"
+    },
+    {
+      "name": "02_loop_controls.yml",
+      "type": "quiz",
+      "lang": "javascript",
+      "question": "The `for` loop has three parts inside its parentheses `()`, separated by semicolons.\n\nThe second part is the **condition**. It's checked before each loop run. If it's true, the loop continues.\n\nWhich part of this code is the **condition**?",
+      "code": "for (let i = 0; i < studentNames.length; i++) {\n  console.log(studentNames[i]);\n}",
+      "solution": 1,
+      "options": [
+        "`let i = 0`",
+        "`i < studentNames.length`",
+        "`i++`",
+        "`console.log(studentNames[i])`"
+      ],
+      "explanation": "The condition `i < studentNames.length` tells the loop to keep running as long as the counter `i` is less than the total number of items in the array."
+    },
+    {
+      "name": "03_greet_the_class.md",
+      "content": "Great! Let's put this into practice. Imagine we have a list of students and we want to greet each one.\n\nInstead of writing `console.log` three times, we can use a `for` loop to do the work for us.\n\n```javascript\nlet students = [\"Fatima\", \"Omar\", \"Layla\"];\n\nfor (let i = 0; i < students.length; i++) {\n  console.log(\"Ahlan, \" + students[i] + \"!\");\n}\n```\n\n**Output:**\n```\n\"Ahlan, Fatima!\"\n\"Ahlan, Omar!\"\n\"Ahlan, Layla!\"\n```\n\nNotice how `students[i]` accesses each student's name as the loop runs. The counter `i` changes from `0`, to `1`, then to `2` automatically."
+    },
+    {
+      "name": "04_quiz_market_list.yml",
+      "type": "quiz",
+      "lang": "javascript",
+      "question": "You are building a shopping list app for a small grocery store.\n\n**What will be the output** of this code?",
+      "code": "let marketList = [\"Tamer\", \"Laban\", \"Khubz\"];\n\nfor (let i = 0; i < marketList.length; i++) {\n  console.log(\"Item: \" + marketList[i]);\n}",
+      "solution": 2,
+      "options": [
+        "`Item: Tamer`",
+        "`Item: Tamer`\n`Item: Laban`",
+        "`Item: Tamer`\n`Item: Laban`\n`Item: Khubz`",
+        "The code will cause an error."
+      ],
+      "explanation": "The loop runs three times. Each time, it prints \"Item: \" followed by the element at the current index `i` (`marketList[0]`, `marketList[1]`, `marketList[2]`)."
+    },
+    {
+      "name": "05_quiz_find_the_mistake.yml",
+      "type": "quiz",
+      "lang": "javascript",
+      "question": "This code is meant to print a list of cities, but it produces an extra `undefined` at the end.\n\nGreat attempt! But there's a small mistake in the loop's condition. **Where is the error?**",
+      "code": "let cities = [\"Amman\", \"Doha\", \"Muscat\"];\n\n// There is a mistake in the next line\nfor (let i = 0; i <= cities.length; i++) {\n  console.log(cities[i]);\n}",
+      "solution": 0,
+      "options": [
+        "The condition should be `i < cities.length`.",
+        "The counter should start with `let i = 1`.",
+        "The array `cities` is empty.",
+        "The increment should be `i = i + 1` instead of `i++`."
+      ],
+      "explanation": "Array indexes go from `0` to `length - 1`. For an array of 3 items, the valid indexes are 0, 1, and 2. Using `<=` makes the loop try to access `cities[3]`, which doesn't exist and returns `undefined`."
+    },
+    {
+      "name": "06_quiz_inventory_count.yml",
+      "type": "quiz",
+      "lang": "javascript",
+      "question": "Let's manage an inventory for a restaurant. We have an array showing the number of plates in different stacks.\n\nFill in the blank to **complete the loop's condition** so it correctly calculates the total.",
+      "code": "let plateStacks = [24, 12, 30];\nlet totalPlates = 0;\n\nfor (let i = 0; i < ______; i++) {\n  totalPlates = totalPlates + plateStacks[i];\n}\n\nconsole.log(totalPlates); // Expected output: 66",
+      "solution": 3,
+      "options": [
+        "`3`",
+        "`plateStacks`",
+        "`totalPlates`",
+        "`plateStacks.length`"
+      ],
+      "explanation": "Using `plateStacks.length` makes the loop dynamic. It will always run for the exact number of items in the array, even if we add or remove stacks later."
+    },
+    {
+      "name": "07_your_new_superpower.md",
+      "content": "Fantastic work! You've just mastered one of the most powerful concepts in programming. ⚙️\n\nLoops are a true superpower. They save you from endless typing and allow your code to handle thousands or even millions of items with just a few lines.\n\n**You can now process entire collections of data automatically.**\n\nNow that our conveyor belt is running, what happens when we need to take an item off the end of the line? Let's find out next."
+    }
+  ]
+}

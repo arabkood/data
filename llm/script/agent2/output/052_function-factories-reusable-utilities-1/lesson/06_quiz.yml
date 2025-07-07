@@ -1,0 +1,24 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  حان دورك لبناء مصنع! أكمل مصنع الدوال `createMultiplier` الذي يأخذ معامل `factor` ويعيد `:function` جديدة. هذه الـ`:function` الجديدة يجب أن تأخذ رقمًا وتضربه في الـ `factor` الأصلي.
+code: |
+  function createMultiplier(factor) {
+    return function(number) {
+      return number * __@@INPUT@@__;
+    };
+  }
+
+  const double = createMultiplier(2);
+  const triple = createMultiplier(3);
+
+  console.log(double(10)); // يجب أن يطبع 20
+  console.log(triple(10)); // يجب أن يطبع 30
+options:
+  - "`number`"
+  - "`double`"
+  - "`factor`"
+  - "`createMultiplier`"
+solution: 2
+explanation: | 
+  بفضل مفهوم الإغلاق (`:closure`)، تتذكر الـ`:function` الداخلية قيمة `factor` التي تم تمريرها عند إنشائها. لذلك، عندما نستدعي `double(10)`، فإنها تتذكر أن `factor` هو `2`.

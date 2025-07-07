@@ -1,0 +1,18 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  لدينا `:object` يمثل مستخدم. ما ناتج الكود التالي الذي يحاول طباعة اسم المستخدم؟
+code: |
+  const user = {
+    name: "علي",
+    age: 30
+  };
+  console.log(user.name);
+options:
+  - "`30`"
+  - "`user.name`"
+  - "`علي`"
+  - "`:undefined`"
+solution: 2
+explanation: |
+  استخدام النقطة (`.`) بعد اسم الـ`:object` متبوعة باسم الـ`:property` (الخاصية) هي الطريقة المباشرة للوصول إلى قيمتها. هنا، `user.name` تصل مباشرة إلى القيمة `"علي"`.

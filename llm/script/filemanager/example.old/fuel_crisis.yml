@@ -1,0 +1,36 @@
+type: "simulation"
+lang: "javascript"
+scenario: |
+  🚀 ENGINE CRISIS!
+  Our fuel is leaking! 
+  
+  OBJECTIVES:
+  1. Create container 'currentFuel' with value 63.7
+  2. Create constant 'WARNING_LEVEL' at 25
+  3. Transmit status using console.log
+
+visualization: |
+  [Fuel Gauge Animation]
+  Start: 63.7% | Warning: 25%
+
+code_editor:
+  live_preview: true
+  error_glow: "quantum"
+placeholder: |
+  // Declare containers
+  
+  // Send status report
+  console.log("Fuel:", currentFuel, "% | Alert at:", WARNING_LEVEL, "%");
+validation:
+  - test: "output_match"
+    pattern: "Fuel: 63.7% \| Alert at: 25%"
+  - test: "container_exists"
+    name: "currentFuel"
+    mutable: true
+  - test: "container_exists"
+    name: "WARNING_LEVEL"
+    constant: true
+reward:
+  achievement: "Containment Specialist"
+  xp: 1500
+  unlock: "Plasma Reactor Blueprints"

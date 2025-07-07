@@ -1,0 +1,7 @@
+title: "تفكيك معاملات الدوال (Parameter Destructuring)"
+blurb: "تعلم كيف تستخرج الخصائص من الكائنات مباشرة في معاملات الدالة لكتابة كود أكثر نظافة وفعالية في جافاسكريبت."
+premium_only: false
+difficulty: "medium"
+base_xp: 1200
+type: "lesson"
+slug: "js-parameter-destructuring-in-arabic"

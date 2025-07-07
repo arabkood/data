@@ -1,0 +1,16 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  لدينا قائمة فواكه. بعد إضافة فاكهة جديدة، ما هو الطول الجديد للـ `:array`؟
+code: |
+  let fruits = ["تفاح", "موز"];
+  fruits.push("برتقال");
+  console.log(fruits.length);
+options:
+  - "`2`"
+  - "`3`"
+  - "`برتقال`"
+  - "`:undefined`"
+solution: 1
+explanation: |
+  كان طول الـ `:array` الأولي 2. الـ `:method` المسمى `:push` يضيف عنصرًا جديدًا إلى نهاية الـ `:array`، لذا يصبح الطول الجديد 3.

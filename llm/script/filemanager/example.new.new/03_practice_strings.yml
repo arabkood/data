@@ -1,0 +1,20 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  Time for you to try! 
+  
+  **Your task**: Use `console.log` to print the filename of the city "Riyadh".
+---
+code: |
+  // Print the city name here
+---
+solution: 0
+options:
+  - console.log("Riyadh");
+  - console.log(Riyadh);
+  - log("Riyadh");
+  - console.log("riyadh");
+explanation: |
+  Excellent! To print text, we must wrap it in quotes `""`. 
+  
+  `console.log(Riyadh);` without quotes would make the computer look for a command named `Riyadh`, which doesn't exist.

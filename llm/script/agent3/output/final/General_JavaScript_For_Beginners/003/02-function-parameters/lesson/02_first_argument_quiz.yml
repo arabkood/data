@@ -1,0 +1,24 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  لنساعد عمر في تحية صديقه.
+
+  **املأ الفراغ** لجعل الدالة تطبع `Welcome, Khalid!`
+---
+code: |
+  function welcome(friendName) {
+    console.log("Welcome, " + friendName + "!");
+  }
+
+  welcome(@@INPUT@@);
+---
+solution: 1
+options:
+  - friendName
+  - "Khalid"
+  - welcome
+  - "friendName"
+explanation: |
+  إجابة صحيحة! `المُعامِل` هو `friendName`، والذي يعمل كمكان مخصص.
+
+  لكي تعمل الدالة، نحتاج إلى تمرير قيمة بيانات حقيقية - أي `وسيط` - مثل النص `"Khalid"`.

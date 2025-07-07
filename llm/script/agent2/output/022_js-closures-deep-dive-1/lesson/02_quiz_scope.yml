@@ -1,0 +1,19 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  قبل أن نتعمق في الكلوجر، لنتأكد من فهمنا لنطاق المتغيرات (`:variable scope`). ماذا سيطبع الكود التالي في الطرفية (`:console`)؟
+code: |
+  function sayHello() {
+    const message = "مرحباً بالعالم";
+  }
+
+  sayHello();
+  console.log(message);
+solution: 2
+options:
+  - "`مرحباً بالعالم`"
+  - "``"
+  - "`:ReferenceError: message is not defined`"
+  - "`undefined`"
+explanation: |
+  المتغير `message` تم تعريفه داخل نطاق الدالة `:sayHello`. لا يمكن الوصول إليه من خارج هذا النطاق. هذا المبدأ أساسي لفهم الكلوجر.

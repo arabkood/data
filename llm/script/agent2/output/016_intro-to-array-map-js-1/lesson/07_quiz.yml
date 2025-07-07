@@ -1,0 +1,18 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  الكود التالي يستخدم `:map` لكنه لا يعمل كما هو متوقع. ما هو التعديل الصحيح للحصول على مصفوفة من الأرقام المضاعفة؟
+code: |
+  const data = [1, 2, 3];
+  const result = data.map(function(n) {
+    n * 2;
+  });
+  // result is [undefined, undefined, undefined]
+options:
+  - "تغيير `const` إلى `let`"
+  - "إضافة كلمة `return` قبل `n * 2`"
+  - "حذف الفاصلة المنقوطة"
+  - "استخدام حلقة `:for` بدلاً من `:map`"
+solution: 1
+explanation: |
+  الدالة التي يتم تمريرها إلى `:map` يجب أن تستخدم `return` لتحديد القيمة الجديدة لكل عنصر. بدون `return`، تكون القيمة الافتراضية لكل عنصر جديد هي `:undefined`.

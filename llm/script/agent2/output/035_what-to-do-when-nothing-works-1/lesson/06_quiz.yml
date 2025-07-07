@@ -1,0 +1,16 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  الكود التالي يطبع `'55'` بدلاً من `10`. ما هو التعديل الصحيح للحصول على الناتج العددي؟
+code: |
+  let numStr = "5";
+  let total = numStr + 5;
+  console.log(total);
+options:
+  - "تحويل `numStr` إلى `:number` باستخدام `Number()`"
+  - "تغيير `let` إلى `:const`"
+  - "حذف `console.log`"
+  - "استبدال `+` بـ `*`"
+solution: 0
+explanation: |
+  المشكلة هي أن الـ `:variable` `numStr` هو `:string` وليس `:number`. عند استخدام `+` بين `:string` و `:number`، يقوم `:javascript` بدمج النصوص. الحل هو تحويل النص إلى رقم باستخدام `Number(numStr)` قبل عملية الجمع.

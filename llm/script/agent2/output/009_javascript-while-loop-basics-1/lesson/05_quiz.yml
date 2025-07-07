@@ -1,0 +1,18 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  الكود التالي يقع في `:infinite loop` (حلقة لا نهائية). ما هو السطر الذي يجب إضافته داخل الحلقة لإصلاح المشكلة؟
+code: |
+  let tickets = 10;
+  while (tickets > 0) {
+    console.log("تذكرة مباعة!");
+    // أين السطر المفقود؟
+  }
+options:
+  - "`tickets = 10;`"
+  - "`tickets--;`"
+  - "`let tickets = 0;`"
+  - "`tickets++;`"
+solution: 1
+explanation: |
+  بدون إنقاص قيمة `:variable` `tickets` في كل دورة، سيظل الشرط `tickets > 0` صحيحاً إلى الأبد. استخدام `:decrement` (`tickets--`) يضمن أننا نقترب من إنهاء الحلقة مع كل تذكرة "تُباع".

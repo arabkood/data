@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "title": "The Architect's Briefing: Deconstructing the Problem",
+    "blurb": "Learn how to break down large, complex programming problems into small, manageable steps, just like an architect designs a blueprint before building.",
+    "difficulty": "easy",
+    "base_xp": 150,
+    "type": "lesson",
+    "slug": "the-architects-briefing-deconstructing-the-problem"
+  },
+  "files": [
+    {
+      "name": "01_the_blueprint.md",
+      "content": "### The Architect's Briefing\n\nBefore laying a single brick, every great builder starts with a detailed blueprint. 🏗️\n\nWe've gathered some powerful tools like `objects`, `arrays`, and `functions`. Now, it's time to learn how to plan what we'll build with them.\n\nThis planning process is called `problem decomposition`. It's a fancy term for a simple idea: **break a big problem into smaller, manageable pieces**.\n\nImagine planning a large family dinner. You wouldn't just 'cook dinner'. You'd break it down:\n\n1. Decide on the main dish and sides.\n2. Write a shopping list for ingredients.\n3. Prepare the vegetables.\n4. Cook the main dish.\n5. Set the table.\n\nCoding is exactly the same. Let's see how."
+    },
+    {
+      "name": "02_planning_the_program.md",
+      "content": "Let's say our big goal is to **build a program to manage a student's grades**.\n\nThat sounds complicated! But what if we break it down?\n\n- **Step 1:** We need a way to store a student's information, like their name. An `object` would be perfect for this.\n\n- **Step 2:** We need to keep a list of their grades for different subjects. An `array` is the right tool for a list.\n\n- **Step 3:** We need to perform an action, like calculating the average grade. A `function` is designed for exactly this kind of task.\n\nSee? The big problem becomes a simple checklist. Each item on the list points to a tool we already know how to use."
+    },
+    {
+      "name": "03_quiz_first_step.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  You are asked to build a simple app to convert a price from US Dollars to Saudi Riyals.\n\n  Following the idea of `problem decomposition`, what is the **most logical first piece** of the problem to define?\n---\ncode: |\n  // Big Problem: Convert USD to SAR\n  \n  // What's our first, smallest step?\n---\nsolution: 1\noptions:\n  - \"Design the final look and color scheme of the app.\"\n  - \"Get the price in USD from the user.\"\n  - \"Write the entire conversion code in one go.\"\n  - \"Calculate the final price in SAR.\"\nexplanation: |\n  Breaking the problem down means starting at the beginning. Before any calculation or display, the program first needs the input data, which is the price in USD."
+    },
+    {
+      "name": "04_a_real_world_plan.md",
+      "content": "Let's try this together with a new scenario.\n\nA man named Omar runs a small shop selling dates. He needs a program to help him manage his inventory.\n\nLet's be the architects and create a blueprint for his program.\n\n**1. What information do we need for each type of date?**\nWe need its name (e.g., 'Sukkari'), its price, and the quantity in stock. This sounds like a job for an `object`.\n\n**2. How do we store all the different types of dates?**\nWe need a list that can hold all the date objects. An `array` is perfect.\n\n**3. What actions does Omar need to perform?**\nHe'll need to `add a new date type`, `sell some dates` (which reduces quantity), and `display his full inventory`. These actions are perfect for `functions`.\n\nBy breaking it down, we've created a clear plan that connects directly to our coding tools."
+    },
+    {
+      "name": "05_quiz_find_the_mistake.yml",
+      "content": "type: \"quiz\"\nlang: \"javascript\"\nquestion: |\n  A junior developer, Khalid, tried to decompose the problem of creating a restaurant bill. He made a mistake in his thinking.\n\n  Which step is in the **wrong place**?\n---\ncode: |\n  // Problem: Calculate a restaurant bill for a customer.\n\n  // Khalid's Plan:\n  // 1. Calculate the total price.\n  // 2. Get the list of items the customer ordered.\n  // 3. Add tax to the total price.\n  // 4. Display the final bill.\n---\nsolution: 0\noptions:\n  - \"Step 1: You can't calculate the total before you know what was ordered.\"\n  - \"Step 2: This seems like a good starting point.\"\n  - \"Step 3: This step seems logical.\"\n  - \"Step 4: This is the correct final step.\"\nexplanation: |\n  The order of operations is critical. It's impossible to calculate a total (Step 1) without first having the list of items ordered (Step 2). The correct first step is to get the necessary input."
+    },
+    {
+      "name": "06_your_turn_to_architect.md",
+      "content": "Now it's your turn to think like an architect.\n\nA teacher, Mrs. Fatima, wants a simple program to check if a student passed or failed. A student passes if their score is 50 or more.\n\n**Your challenge:** Think about the blueprint for this program.\n\nWhat are the small, logical steps? You don't need to write code. Just plan it out.\n\n- What is the one piece of **data** you need to start?\n- What is the **action** you need to perform on that data?\n- What is the **final result** you need to show?\n\nThis planning skill is the key to solving any coding challenge, no matter how big.\n\nIn our next lessons, we'll take these blueprints and learn how to turn them into the solid data structures our programs will use. ✨"
+    }
+  ]
+}

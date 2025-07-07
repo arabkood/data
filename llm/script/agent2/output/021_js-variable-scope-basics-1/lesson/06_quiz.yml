@@ -1,0 +1,19 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  أكمل الكود التالي لتعريف المتغير `:message` في المكان الصحيح ليعمل الكود بدون أخطاء.
+code: |
+  function showSecret() {
+    __@@INPUT@@__
+    console.log(message);
+  }
+
+  showSecret();
+solution: 0
+options:
+  - "`const message = 'سري للغاية';`"
+  - "`console.log('سري للغاية');`"
+  - "`return 'سري للغاية';`"
+  - "`let message;`"
+explanation: |
+  لجعل المتغير `:message` متاحًا لـ `:console.log` داخل الدالة، يجب تعريفه داخل نفس `:scope` (نطاق الدالة) قبل استخدامه.

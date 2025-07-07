@@ -1,0 +1,20 @@
+type: "quiz"
+lang: "javascript"
+question: |
+  أكمل الكود التالي للعثور على المنتج الذي يحمل اسم "لابتوب" من قائمة المنتجات.
+code: |
+  const products = [
+    { id: 10, name: "شاشة" },
+    { id: 25, name: "لابتوب" },
+    { id: 30, name: "فأرة" }
+  ];
+
+  const targetProduct = products.find(p => __@@INPUT@@__);
+options:
+  - "`p.name === 'لابتوب'`"
+  - "`products.name === 'لابتوب'`"
+  - "`p === 'لابتوب'`"
+  - "`p.id === 'لابتوب'`"
+solution: 0
+explanation: |
+  يجب أن نمرر دالة شرطية إلى `:find`. في كل دورة، يمثل المتغير `p` عنصرًا (كائن منتج) من المصفوفة. الشرط الصحيح للتحقق من خاصية الاسم هو `p.name === 'لابتوب'`.
