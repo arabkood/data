@@ -1,0 +1,11 @@
+id: e3c0faaf-6c01-451f-a051-caf9bc393980
+module_id: 999eae36-c2e8-44b5-8c02-16c5cef72c89
+slug: https
+position: 2
+created_at: 2025-07-09T18:45:45.077Z
+updated_at: 2025-07-09T18:45:45.077Z
+type: lesson
+title: المصافحة الآمنة (HTTPS)
+difficulty: easy
+base_xp: 100
+s3_path: web/internet/004/02_https

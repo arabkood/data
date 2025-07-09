@@ -1,0 +1,11 @@
+id: 9bc7a441-b542-4a3b-bef1-46a68fe5398f
+module_id: 4e829c75-40ce-492f-b864-834d6d27e01c
+slug: ip
+position: 1
+created_at: 2025-07-09T18:45:45.076Z
+updated_at: 2025-07-09T18:45:45.076Z
+type: lesson
+title: عنوان الحاسوب (عنوان IP)
+difficulty: easy
+base_xp: 100
+s3_path: web/internet/002/01_ip

@@ -1,0 +1,8 @@
+type: "fill"
+lang: "text"
+question: "أكمل بنية `اسم النطاق` هذه:"
+code: |
+  www.@@INPUT@@.@@INPUT@@
+solution:
+  - "/^[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]$|^[a-zA-Z0-9]$/"
+  - "/^(com|org|net|edu|io|me|co|tv|ae|eg|sa|qa|kw|om|bh|jo|lb|sy|iq|ye|ps|ma|dz|tn|sd|ly)$/"

@@ -1,0 +1,7 @@
+type: "quiz"
+question: "إذا أردت تغيير لون خلفية صفحة ويب، أي تقنية ستستخدم؟"
+options:
+  - "`HTML`"
+  - "`CSS`"
+  - "`DNS`"
+solution: 1
