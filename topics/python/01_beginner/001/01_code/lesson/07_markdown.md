@@ -1,12 +1,12 @@
-Great! Now let's try something different. You can also use `print()` to display numbers.
+رائع! الآن لنجرب شيئًا مختلفًا. يمكنك أيضًا استخدام `print()` لعرض الأرقام.
 
-Here's the key difference: numbers don't need quotation marks.
+الاختلاف الرئيسي هنا: الأرقام لا تحتاج إلى علامات اقتباس.
 
 ```python
-print("hello")
+print("مرحباً")
 print(42)
 print(100)
 ```
 
-Notice how the numbers `42` and `100` are not wrapped in quotes? That's because they are actual numbers, not text.
+لاحظ كيف أن الأرقام `42` و `100` ليست محاطة بعلامات اقتباس؟ هذا لأنها أرقام فعلية، وليست نصوصًا.
 

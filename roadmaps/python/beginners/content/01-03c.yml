@@ -1,0 +1,265 @@
+---
+item_id: "module-1-item-3"
+item_type: "lesson"
+title: "Strings in Python"
+
+steps:
+  # --- STEP 1: What are strings? ---
+  - type: "markdown"
+    content: |
+      You've been using text in your code, but let's give it its proper name: in programming, any piece of text is called a `string`.
+
+      Why "string"? Think of it like a string of characters - letters, numbers, spaces, and symbols - all connected together in a sequence.
+
+      ```python
+      "Hello, world!"
+      "Python is awesome"
+      "123 Main Street"
+      ```
+
+      Each of these is a string. Notice they all have one thing in common: quotation marks around them.
+
+  # --- STEP 2: Strings need quotation marks ---
+  - type: "markdown"
+    content: |
+      The quotation marks are not just decoration - they're essential! They tell Python "this is text, not a command."
+
+      Without quotes, Python thinks you're trying to use a variable or command:
+
+      ```python
+      print(Hello)  # Python looks for a variable named "Hello"
+      print("Hello")  # Python knows this is text
+      ```
+
+      The quotes are like saying "I literally mean this text exactly as written."
+
+  # --- STEP 3: Quiz about strings ---
+  - type: "quiz"
+    question: "Which of these is a string?"
+    options:
+      - "Hello"
+      - '"114"'
+      - "print"
+    solution: 1
+    explanation: "A string is any text surrounded by quotation marks. Even numbers can be strings if they're in quotes!"
+
+  # --- STEP 4: Single vs double quotes ---
+  - type: "markdown"
+    content: |
+      Python accepts both single quotes `'` and double quotes `"` for strings. These are all valid:
+
+      ```python
+      message1 = "Hello there"
+      message2 = 'Hello there'
+      message3 = "It's a beautiful day"
+      message4 = 'Python is "awesome"'
+      ```
+
+      Both work exactly the same way. Many programmers prefer double quotes, but you can use whichever you like.
+
+  # --- STEP 5: Practice with different quotes ---
+  - type: "fill"
+    lang: "python"
+    question: "Create a string variable using single quotes for the text 'Salam'"
+    code: |
+      greeting = @@INPUT@@
+    solution:
+      - "'Salam'"
+    explanation: "Single quotes work just like double quotes for creating strings. The important thing is to have matching quotes at the beginning and end."
+
+  # --- STEP 6: Strings in variables ---
+  - type: "markdown"
+    content: |
+      Remember variables from the last lesson? They work perfectly with strings. You can store any text in a variable and use it later:
+
+      ```python
+      first_name = "Omar"
+      last_name = "Ahmed"
+      city = "Cairo"
+
+      print(first_name)
+      print(last_name)
+      print(city)
+      ```
+
+      This creates three string variables, each containing different text.
+
+  # --- STEP 7: Creating string variables ---
+  - type: "fill"
+    lang: "python"
+    question: |
+      Create three string variables: 
+      - 'book_title' with 'القانون في الطب'.
+      - 'author' with 'Ibn Sina'.
+      - 'year_hijri' with '416'
+    code: |
+      @@INPUT@@ = @@INPUT@@
+      @@INPUT@@ = @@INPUT@@
+      @@INPUT@@ = @@INPUT@@
+    solution:
+      - "book_title"
+      - |
+        /^['"]القانون في الطب['"]$/
+      - "author"
+      - |
+        /^['"]Ibn Sina['"]$/
+      - "year_hijri"
+      - |
+        /^['"]416['"]$/
+    explanation: "Notice that '416' is in quotes, making it a string (text) rather than a number. Sometimes we store numbers as strings when we don't need to do math with them."
+
+  # --- STEP 9: Printing practice ---
+  - type: "fill"
+    lang: "python"
+    question: "Write the code to print the variable `favorite_food`."
+    code: |
+      favorite_food = "pizza"
+      @@INPUT@@
+    solution:
+      - "print(favorite_food)"
+    explanation: "Always use the print function with the variable name (without quotations marks) to display its value."
+
+  # --- STEP 10: Statements in programming ---
+  - type: "markdown"
+    content: |
+      Let's talk about **`statements`**. In programming, a statement is a complete instruction that tells the computer to do something.
+
+      Each line of code you've written is a statement:
+      ```python
+      name = "Alex"        # This is a statement
+      print(name)          # This is also a statement
+      age = 25             # Another statement
+      ```
+
+      Think of statements like sentences in English - each one expresses a complete thought or action.
+
+  # --- STEP 11: Identifying statements ---
+  - type: "quiz"
+    question: "How many statements are in this code?"
+    code: |
+      username = "coder123"
+      password = "secret"
+      print(username)
+      print("Login successful")
+    lang: "python"
+    options:
+      - "2 statements"
+      - "3 statements"
+      - "4 statements"
+    solution: 2
+    explanation: "Each line that tells the computer to do something is a statement. This code has 4 statements: two assignments and two print statements."
+
+  # --- STEP 12: Order of statements ---
+  - type: "order"
+    lang: "python"
+    question: "Put these statements in the correct order to create and display a person's information."
+    code:
+      - full_name = "Ahmed Zewail"
+      - occupation = "scientist"
+      - print(full_name)
+      - print(occupation)
+    alternate:
+      - [1, 0, 2, 3]
+      - [0, 1, 3, 2]
+      - [1, 0, 3, 2]
+    explanation: "You must create variables before you can use them. The assignment statements come first, then the print statements."
+
+  # --- STEP 13: Common string mistakes ---
+  - type: "bug"
+    lang: "python"
+    question: "Find the line with the mistake"
+    code: |
+      first_name = "Hayat"
+      last_name = "Sindi'
+      print(first_name)
+      print(last_name)
+    solution: 1
+    explanation: "Every string must have matching opening and closing quotes."
+    hint: "Look for mismatched quotation marks."
+
+  # --- STEP 14: Mixing strings and variables ---
+  - type: "fill"
+    lang: "python"
+    question: "Complete this code to show a person's hobby information."
+    code: |
+      hobby = "coding"
+      skill_level = "beginner"
+      print("My hobby is:")
+      print(@@INPUT@@)
+      print("I am a:")
+      print(@@INPUT@@)
+    solution:
+      - "hobby"
+      - "skill_level"
+
+  # --- STEP 15: String content variety ---
+  - type: "fill"
+    lang: "python"
+    question: "Create string variables for different types of content: 'email' with an email address, 'phone' with a phone number, and 'website' with a website URL."
+    code: |
+      @@INPUT@@ = @@INPUT@@
+      @@INPUT@@ = @@INPUT@@
+      @@INPUT@@ = @@INPUT@@
+      print(email)
+      print(phone)
+      print(website)
+    solution:
+      - "email"
+      - "/^\"[^\"@]+@[^\"@]+\\.[^\"@]+\"$/"
+      - "phone"
+      - '/^"[^"]+"$/'
+      - "website"
+      - '/^"[^"]+"$/'
+    explanation: "Strings can contain any text - email addresses, phone numbers, URLs, or any other information. They're all just text to Python."
+
+  # --- STEP 16: Empty strings ---
+  - type: "markdown"
+    content: |
+      Sometimes you need an empty string - a string with no content. This is perfectly valid in Python:
+
+      ```python
+      empty_message = ""
+      another_empty = ''
+      print(empty_message)  # This prints nothing (blank line)
+      ```
+
+      Empty strings are useful when you want to start with no text and add content later.
+
+  # --- STEP 17: Final comprehensive practice ---
+  - type: "fill"
+    lang: "python"
+    question: "Create a mini profile: store your favorite movie, favorite color, and hometown in variables, then print them with labels."
+    code: |
+      favorite_movie = @@INPUT@@
+      favorite_color = @@INPUT@@
+      hometown = @@INPUT@@
+
+      print("Favorite movie:")
+      print(@@INPUT@@)
+      print("Favorite color:")
+      print(@@INPUT@@)
+      print("Hometown:")
+      print(@@INPUT@@)
+    solution:
+      - '/^"[^"]+"$/'
+      - '/^"[^"]+"$/'
+      - '/^"[^"]+"$/'
+      - "favorite_movie"
+      - "favorite_color"
+      - "hometown"
+    explanation: "This pattern - store information in variables, then print with descriptive labels - is very common in programming."
+
+  # --- STEP 18: Congratulations ---
+  - type: "markdown"
+    content: |
+      Fantastic! You now understand strings much better. 
+
+      **What you learned:**
+      - A piece of text is called a **string**
+      - Strings require quotation marks (single `'` or double `"`)
+      - Each line of code that does something is called a **statement**
+
+      Strings are everywhere in programming - user messages, file names, web addresses, and much more. You'll use them constantly, so getting comfortable with them now will serve you well.
+
+      > [!NEXT]
+      > In the next lesson, we'll explore numbers in depth and learn how to do calculations with them!

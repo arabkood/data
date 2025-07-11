@@ -1,13 +1,13 @@
 # --- STEP 10: Practice with multiple prints ---
 type: "fill"
 lang: "python"
-question: "Complete this code to display three lines: 'Hello', then the number 7, then 'Goodbye'"
+question: "أكمل هذا الكود لعرض ثلاثة أسطر: 'مرحباً'، ثم الرقم 7، ثم 'وداعاً'"
 code: |
   @@INPUT@@
   @@INPUT@@
   @@INPUT@@
 solution:
-  - 'print("Hello")'
+  - 'print("مرحباً")'
   - "print(7)"
-  - 'print("Goodbye")'
-explanation: "Each print() statement creates a new line. Text needs quotes, numbers don't."
+  - 'print("وداعاً")'
+explanation: "كل أمر print() ينشئ سطرًا جديدًا. النص يحتاج إلى علامات اقتباس، والأرقام لا تحتاج."

@@ -1,0 +1,206 @@
+item_id: "module-1-item-1"
+item_type: "lesson"
+title: "Writing Code"
+
+steps:
+  # --- STEP 1: Welcome and motivation ---
+  - type: "markdown"
+    content: |
+      Welcome to your first coding lesson! In just a few minutes, you'll write your first line of Python code and see it come to life.
+
+      Here's the exciting part: you don't need to understand everything about programming to start coding. We're going to jump straight in and learn by doing.
+
+      Ready? Let's write some code!
+
+  # --- STEP 2: The print statement introduction ---
+  - type: "markdown"
+    content: |
+      Your first tool as a programmer is the `print()` statement. Think of it as your computer's voice - it lets your program speak to you by displaying text on the screen.
+
+      Here's how it works:
+
+      ```python
+      print("Hello, world!")
+      ```
+
+      When you run this code, your computer will display: `Hello, world!`
+
+  # --- STEP 2b: The print statement introduction 2 ---
+  - type: "markdown"
+    content: |
+      The word `print` is followed by parentheses `()`, and inside those parentheses, you put the text you want to display. The text is wrapped in quotation marks `"`.
+
+      <!-- media_idea: Simple diagram showing print("text") with arrows pointing to each part: print, parentheses, quotation marks, and the output -->
+
+  # --- STEP 3: First practice - fill in the blank ---
+  - type: "fill"
+    lang: "python"
+    question: "Complete this code to display the message 'Welcome to Python!'"
+    code: |
+      @@INPUT@@("Welcome to Python!")
+    solution:
+      - "print"
+    explanation: "You write 'print' followed by parentheses containing your message."
+
+  # --- STEP 4: Quiz about print syntax ---
+  - type: "quiz"
+    question: "What do you need to put around text when using print()?"
+    code: |
+      print("This is text")
+    lang: "python"
+    options:
+      - "Square brackets []"
+      - 'Quotation marks " "'
+      - "Curly braces {}"
+    solution: 1
+    explanation: "Text (in programming we call it `string`) must be wrapped in quotation marks so Python knows it's text, not a command."
+
+  # --- STEP 5: Practice with different text ---
+  - type: "fill"
+    lang: "python"
+    question: "Write code to display your name. Replace 'Your Name' with your actual name."
+    code: |
+      print(@@INPUT@@)
+    solution:
+      - '/^"[^"]+"$/'
+    explanation: "Any text inside quotation marks will be displayed exactly as written. This is a 'string'."
+
+  # --- STEP 6: Introducing numbers ---
+  - type: "markdown"
+    content: |
+      Great! Now let's try something different. You can also use `print()` to display numbers.
+
+      Here's the key difference: numbers don't need quotation marks.
+
+      ```python
+      print("hello")
+      print(42)
+      print(100)
+      ```
+
+      Notice how the numbers `42` and `100` are not wrapped in quotes? That's because they are actual numbers, not text.
+
+  # --- STEP 7: Practice with numbers ---
+  - type: "fill"
+    lang: "python"
+    question: "Display the number 632 on the screen."
+    code: |
+      print(@@INPUT@@)
+    solution:
+      - "632"
+    explanation: "Numbers don't need quotation marks. Python recognizes 632 as a number, not text."
+
+  # --- STEP 8: Quiz about numbers vs text ---
+  - type: "quiz"
+    question: "Which of these will display the number 7 (not the text '7')?"
+    options:
+      - "print('7')"
+      - "print(7)"
+      - "print[7]"
+    solution: 1
+    explanation: "Numbers without quotes are treated as actual numbers."
+
+  # --- STEP 8a: Quiz about numbers vs text ---
+  - type: "quiz"
+    question: "Which of these will display the text '19' (not the number 19)?"
+    options:
+      - "print[19]"
+      - "print(19)"
+      - "print('19')"
+    solution: 2
+    explanation: "Numbers with quotes, are a text (`string`) that contain a number."
+
+  # --- STEP 9: Multiple print statements ---
+  - type: "markdown"
+    content: |
+      You can write multiple `print()` statements in your code. Each one will display its message on a new line.
+
+      ```python
+      print("First line")
+      print("Second line")
+      print(123)
+      ```
+
+      This will output:
+      ```
+      First line
+      Second line
+      123
+      ```
+
+  # --- STEP 10: Practice with multiple prints ---
+  - type: "fill"
+    lang: "python"
+    question: "Complete this code to display three lines: 'Hello', then the number 7, then 'Goodbye'"
+    code: |
+      @@INPUT@@
+      @@INPUT@@
+      @@INPUT@@
+    solution:
+      - 'print("Hello")'
+      - "print(7)"
+      - 'print("Goodbye")'
+    explanation: "Each print() statement creates a new line. Text needs quotes, numbers don't."
+
+  # --- STEP 11: Code ordering challenge ---
+  - type: "order"
+    lang: "python"
+    question: "Put these print statements in order to display: 'Welcome', then 6342, then 'Points'"
+    code:
+      - print("Welcome")
+      - print(6342)
+      - print("Points")
+    explanation: "The code executes from top to bottom, so the order of your print statements determines the order of the output."
+
+  # --- STEP 12: Spot the bug ---
+  - type: "bug"
+    lang: "python"
+    question: "Find the line with the mistake"
+    code: |
+      print("Hello")
+      print(42)
+      print(Good luck)
+      print("See you later")
+    solution: 2
+    explanation: "The text 'Good luck' is missing quotation marks. All text must be wrapped in quotes."
+    hint: "Look for text that should be in quotes but isn't."
+
+  # --- STEP 13: Final practice ---
+  - type: "fill"
+    lang: "python"
+    question: "Create a program that displays your favorite number, then the text 'is my favorite number'"
+    code: |
+      print(@@INPUT@@)
+      print(@@INPUT@@)
+    solution:
+      - "/^\\d+$/"
+      - '"is my favorite number"'
+
+  # --- STEP 13b: Final practice ---
+  - type: "fill"
+    lang: "python"
+    question: "Your last exercise, complete this program!"
+    code: |
+      print@@INPUT@@Great Job!@@INPUT@@
+    solution:
+      - "("
+      - ")"
+
+  # --- STEP 14: Congratulations ---
+  - type: "markdown"
+    content: |
+      Congratulations! You've just written your first Python code! 
+
+      Let's recap what you learned:
+
+      - The `print()` function displays information on the screen
+      - Text (`string`) must be wrapped in quotation marks: `"like this"`
+      - Numbers don't need quotation marks: `42`
+      - You can have multiple print statements, each creates a new line
+      - Code runs from top to bottom, line by line
+
+      > [!TIP]
+      > This is a great chance to write down these key points as notes. Don’t worry about memorizing everything right now - focus on understanding, and your notes will be a handy reference later!
+
+      > [!NEXT]
+      > You're off to a great start! Next, we’ll explore **variables** - which let your programs remember information.

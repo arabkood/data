@@ -1,16 +1,16 @@
-Congratulations! You've just written your first Python code! 
+تهانينا! لقد كتبت للتو أول كود بايثون لك!
 
-Let's recap what you learned:
+لنرَ ما تعلمته:
 
-- The `print()` function displays information on the screen
-- Text (`string`) must be wrapped in quotation marks: `"like this"`
-- Numbers don't need quotation marks: `42`
-- You can have multiple print statements, each creates a new line
-- Code runs from top to bottom, line by line
+- الدالة `print()` تعرض المعلومات على الشاشة
+- النص (`نص`) يجب أن يكون محاطًا بعلامات اقتباس: `"هكذا"`
+- الأرقام لا تحتاج لعلامات اقتباس: `42`
+- يمكنك كتابة عدة أوامر print، كل منها ينشئ سطرًا جديدًا
+- الكود يعمل من الأعلى إلى الأسفل، سطرًا بسطر
 
 > [!TIP]
-> This is a great chance to write down these key points as notes. Don’t worry about memorizing everything right now - focus on understanding, and your notes will be a handy reference later!
+> هذه فرصة رائعة لكتابة هذه النقاط الرئيسية كملاحظات. لا تقلق بشأن حفظ كل شيء الآن - ركز على الفهم، وستكون ملاحظاتك مرجعًا مفيدًا لاحقًا!
 
 > [!NEXT]
-> You're off to a great start! Next, we’ll explore **variables** - which let your programs remember information.
+> أنت في بداية ممتازة! في المرة القادمة، سنتناول **المتغيرات** - التي تسمح لبرامجك بتذكر المعلومات.
 

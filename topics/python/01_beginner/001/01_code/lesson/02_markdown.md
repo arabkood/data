@@ -1,10 +1,10 @@
-Your first tool as a programmer is the `print()` statement. Think of it as your computer's voice - it lets your program speak to you by displaying text on the screen.
+أول أداة لك كمبرمج هي أمر الطباعة `print()`. فكر فيه كصوت حاسوبك - فهو يسمح لبرنامجك بالتحدث إليك عن طريق عرض نص على الشاشة.
 
-Here's how it works:
+إليك طريقة عمله:
 
 ```python
-print("Hello, world!")
+print("مرحباً بالعالم!")
 ```
 
-When you run this code, your computer will display: `Hello, world!`
+عند تشغيل هذا الكود، سيعرض حاسوبك: `مرحباً بالعالم!`
 

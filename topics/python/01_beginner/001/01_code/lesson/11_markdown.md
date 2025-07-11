@@ -1,15 +1,15 @@
-You can write multiple `print()` statements in your code. Each one will display its message on a new line.
+يمكنك كتابة عدة أوامر `print()` في الكود الخاص بك. كل أمر سيعرض رسالته في سطر جديد.
 
 ```python
-print("First line")
-print("Second line")
+print("السطر الأول")
+print("السطر الثاني")
 print(123)
 ```
 
-This will output:
+هذا سيؤدي إلى عرض المخرجات التالية:
 ```
-First line
-Second line
+السطر الأول
+السطر الثاني
 123
 ```
 

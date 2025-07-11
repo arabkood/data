@@ -1,9 +1,9 @@
 # --- STEP 13b: Final practice ---
 type: "fill"
 lang: "python"
-question: "Your last exercise, complete this program!"
+question: "تمرينك الأخير، أكمل هذا البرنامج!"
 code: |
-  print@@INPUT@@Great Job!@@INPUT@@
+  print@@INPUT@@عمل رائع!@@INPUT@@
 solution:
   - "("
   - ")"

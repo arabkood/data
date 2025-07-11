@@ -1,0 +1,249 @@
+---
+item_id: "module-1-item-2"
+item_type: "lesson"
+title: "Memory & Variables"
+
+steps:
+  # --- STEP 1: The problem we need to solve ---
+  - type: "markdown"
+    content: |
+      Imagine you're writing a program that mentions your name 10 times. You'd have to type it out every single time:
+
+      ```python
+      print("Hello, Faisal!")
+      print("Welcome back, Faisal!")
+      print("Faisal, you have 5 messages")
+      ```
+
+      This is exhausting! What if you wanted to change the name later? You'd have to find and replace it everywhere. There has to be a better way...
+
+  # --- STEP 2: Variables as labeled boxes ---
+  - type: "markdown"
+    content: |
+      The solution is **variables**. Think of a variable as a labeled box in your computer's memory.
+
+      Just like you might have a box labeled "Winter Clothes" that contains your sweaters and coats, a variable is a box with a name that contains some information.
+
+      For example:
+      - A box labeled `name` might contain the text "Faisal"
+      - A box labeled `age` might contain the number 25
+      - A box labeled `score` might contain the number 100
+
+      Once you put something in the box, you can use it over and over again just by referring to the box's name.
+
+  # --- STEP 2b: Variables as labeled boxes 2 ---
+  - type: "markdown"
+    content: |
+      Creating a variable in Python is simple.
+
+      ```python
+      city = "Riyadh"
+      ```
+      <!-- media_idea: Simple illustration showing the code "city = 'Riyadh'" and a box with the text "city" and the word "Riyadh" with an arrow pointing inside the box. -->
+
+  # --- STEP 3: Creating your first variable ---
+  - type: "markdown"
+    content: |
+      You use the equal sign `=` to connect a name with a value:
+
+      ```python
+      name = "Reem"
+      ```
+
+      This creates a variable called `name` and stores the text "Reem" inside it.
+
+      The pattern is always: `variable_name = value`
+
+      - The name goes on the left
+      - The equal sign `=` goes in the middle (we call this `assignment`)
+      - The value goes on the right
+
+  # --- STEP 4: First variable practice ---
+  - type: "fill"
+    lang: "python"
+    question: "Create a variable called 'city' and store the text 'Baghdad' in it."
+    code: |
+      @@INPUT@@ = @@INPUT@@
+    solution:
+      - "city"
+      - '"Baghdad"'
+    explanation: "Variable names go on the left, the equal sign connects them, and the value goes on the right. Text values need quotation marks."
+
+  # --- STEP 5: Variables with numbers ---
+  - type: "markdown"
+    content: |
+      Variables can also store numbers. Remember, numbers don't need quotation marks:
+
+      ```python
+      age = 25
+      score = 100
+      ```
+
+      Now you have two variables:
+      - `age` contains the number 25
+      - `score` contains the number 100
+
+  # --- STEP 6: Practice with number variables ---
+  - type: "fill"
+    lang: "python"
+    question: "Create a variable called 'temperature' and store the number 29 in it."
+    code: |
+      @@INPUT@@ = @@INPUT@@
+    solution:
+      - "temperature"
+      - "29"
+    explanation: "Numbers don't need quotation marks when stored in variables, just like when we used them with print()."
+
+  # --- STEP 6b: Practice with number variables ---
+  - type: "fill"
+    lang: "python"
+    question: "Complete this code"
+    code: |
+      website @@INPUT@@ "akood.com"
+    solution:
+      - "temperature"
+      - "29"
+    explanation: "We use the equal sign to assign values to variables."
+
+  # --- STEP 7: Using variables with print ---
+  - type: "markdown"
+    content: |
+      Here's where variables become powerful! Once you've created a variable, you can use it with `print()` by writing its name **without quotes**:
+
+      ```python
+      name = "Asem"
+      print(name)
+      ```
+
+      This will display: `Asem`
+
+      Notice how we don't put quotes around `name` in the print statement? That's because we want to print the value stored in the variable, not the word "name" itself.
+
+  # --- STEP 8: Quiz about using variables ---
+  - type: "quiz"
+    question: "What will this code display?"
+    code: |
+      favorite_website = "akood.com"
+      print(favorite_website)
+    lang: "python"
+    options:
+      - "favorite_website"
+      - "akood.com"
+      - '"akood.com"'
+    solution: 1
+    explanation: "When you use a variable name in print() without quotes, it displays the value stored in that variable."
+
+  # --- STEP 9: Practice using variables ---
+  - type: "fill"
+    lang: "python"
+    question: "Create a variable called 'hobby' with the value 'coding', then print it."
+    code: |
+      @@INPUT@@ = @@INPUT@@
+      print(@@INPUT@@)
+    solution:
+      - "hobby"
+      - '"coding"'
+      - "hobby"
+    explanation: "First you create the variable with a quoted string, then you print the variable name without quotes."
+
+  # --- STEP 10: Multiple variables example ---
+  - type: "markdown"
+    content: |
+      You can create as many variables as you need and use them together:
+
+      ```python
+      first_name = "Muhammad"
+      last_name = "Mahmud"
+      age = 21
+
+      print(first_name)
+      print(last_name)
+      print(age)
+      ```
+
+      This creates three separate "boxes" in memory, each with its own name and value.
+
+  # --- STEP 11: Creating multiple variables ---
+  - type: "fill"
+    lang: "python"
+    question: "Create variables for a person's information: 'name' with 'Abeer', 'age' with 23, then print both."
+    code: |
+      @@INPUT@@ = @@INPUT@@
+      @@INPUT@@ = @@INPUT@@
+      print(@@INPUT@@)
+      print(@@INPUT@@)
+    solution:
+      - "name"
+      - '"Abeer"'
+      - "age"
+      - "23"
+      - "name"
+      - "age"
+    explanation: "Each variable needs its own line with the pattern: name = value. Then you can print each variable by name."
+
+  # --- STEP 12: Common mistake - quotes around variable names ---
+  - type: "bug"
+    lang: "python"
+    question: "We are trying to print the username, find the line with the mistake"
+    code: |
+      username = "coder123"
+      print("username")
+    solution: 1
+    explanation: "When you put quotes around a variable name, it prints the name itself, not the value stored in the variable."
+    expectedOutput: "coder123"
+    actualOutput: "username"
+
+  # --- STEP 13: Order matters ---
+  - type: "order"
+    lang: "python"
+    question: "Put these lines in the correct order to create a variable and then use it."
+    code:
+      - score = 95
+      - print("Your score is:")
+      - print(score)
+    explanation: "You must create a variable before you can use it. The variable assignment comes first, then you can print its value."
+
+  # --- STEP 14: Text vs variable names ---
+  - type: "quiz"
+    question: "What's the difference between these two lines?"
+    code: |
+      print("message")
+      print(message)
+    lang: "python"
+    options:
+      - "There's no difference - they do the same thing"
+      - "The first prints the word 'message', the second prints the value stored in a variable called message"
+    solution: 1
+    explanation: "With quotes, Python directly know the string. Without quotes, Python looks for a variable with that name."
+
+  # --- STEP 15: Final practice ---
+  - type: "fill"
+    lang: "python"
+    question: "Complete this code to store your favorite movie in a variable and display it twice."
+    code: |
+      favorite_movie = @@INPUT@@
+      print("My favorite movie is:")
+      print(@@INPUT@@)
+      print("I really love:")
+      print(@@INPUT@@)
+    solution:
+      - '/^"[^"]+"$/'
+      - "favorite_movie"
+      - "favorite_movie"
+    explanation: "Once you store a value in a variable, you can use it as many times as you want by referring to its name."
+
+  # --- STEP 16: Congratulations ---
+  - type: "markdown"
+    content: |
+      Excellent work! You've just learned one of the most important concepts in programming: `variables`.
+
+      **What you learned:**
+      - Computer programs use variables to remember important information
+      - A variable has a name and a value
+      - You create a variable by connecting the name and value with an equal sign `=`
+      - Text values need quotation marks: `name = "Muhammad"`
+      - Number values don't need quotation marks: `age = 30`
+      - You use a variable by writing its name without quotes: `print(name)`
+
+      > [!NEXT]
+      > In the next lesson, we'll dive deeper into working with text (strings) and see even more ways to use variables!

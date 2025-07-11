@@ -1,6 +1,6 @@
-Welcome to your first coding lesson! In just a few minutes, you'll write your first line of Python code and see it come to life.
+أهلاً بك في درس البرمجة الأول! في غضون دقائق قليلة، ستكتب أول سطر من كود بايثون وسترى كيف يعمل.
 
-Here's the exciting part: you don't need to understand everything about programming to start coding. We're going to jump straight in and learn by doing.
+الجزء المثير هو أنك لست بحاجة لفهم كل شيء عن البرمجة لتبدأ. سنبدأ مباشرة ونتعلم بالممارسة.
 
-Ready? Let's write some code!
+هل أنت مستعد؟ هيا نكتب بعض الكود!
 

@@ -1,12 +1,12 @@
 # --- STEP 12: Spot the bug ---
 type: "bug"
 lang: "python"
-question: "Find the line with the mistake"
+question: "ابحث عن السطر الذي يحتوي على الخطأ"
 code: |
-  print("Hello")
+  print("مرحباً")
   print(42)
-  print(Good luck)
-  print("See you later")
+  print(حظاً موفقاً)
+  print("أراك لاحقًا")
 solution: 2
-explanation: "The text 'Good luck' is missing quotation marks. All text must be wrapped in quotes."
-hint: "Look for text that should be in quotes but isn't."
+explanation: "النص 'حظاً موفقاً' يفتقد لعلامات الاقتباس. يجب أن يكون كل نص محاطًا بعلامات اقتباس."
+hint: "ابحث عن نص يجب أن يكون داخل علامات اقتباس ولكنه ليس كذلك."

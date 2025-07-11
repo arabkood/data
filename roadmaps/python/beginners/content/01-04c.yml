@@ -1,0 +1,351 @@
+---
+item_id: "module-1-item-4"
+item_type: "lesson"
+title: "Numbers in Python"
+
+steps:
+  # --- STEP 1: Numbers are everywhere ---
+  - type: "markdown"
+    content: |
+      Numbers are just as important as strings in programming. Think about it - ages, prices, scores, temperatures, distances - numbers are everywhere in the programs we use daily.
+
+      The great news? Working with numbers in Python is intuitive and powerful. You can store them in variables, display them with `print()`, and even do math with them!
+
+      Let's dive into the world of numbers in Python.
+
+  # --- STEP 2: Numbers don't need quotes ---
+  - type: "markdown"
+    content: |
+      Remember the key difference from strings: numbers don't need quotation marks.
+
+      ```python
+      age = 25          # This is a number
+      price = 19.99     # This is also a number
+      pi = 3.14159   # Another number
+      ```
+
+      Compare this to strings:
+      ```python
+      name = "Omar"    # This is a string
+      year = "2026"    # This is a string that looks like a number
+      ```
+
+      When you put quotes around numbers, they become strings (text), not actual numbers you can do math with.
+
+  # --- STEP 3: Quiz about numbers vs strings ---
+  - type: "quiz"
+    question: "Which of these creates a number variable (not a string)?"
+    options:
+      - 'temperature = "72"'
+      - "temperature = 72"
+      - "temperature = '72'"
+    solution: 1
+
+  # --- STEP 4: Creating number variables ---
+  - type: "fill"
+    lang: "python"
+    question: "Create three number variables: 'height' with 175, 'weight' with 68, and 'age' with 30."
+    code: |
+      @@INPUT@@
+      @@INPUT@@
+      @@INPUT@@
+    solution:
+      - "height = 175"
+      - "weight = 68"
+      - "age = 30"
+    explanation: "Numbers don't need quotation marks when stored in variables."
+
+  # --- STEP 5: Using number variables ---
+  - type: "markdown"
+    content: |
+      Just like with strings, you can access the value stored in a number variable by calling its name:
+
+      ```python
+      score = 85
+      print(score)      # This displays: 85
+      print("score")    # This displays: score
+      ```
+
+      Remember: no quotes around the variable name when you want to use its value!
+
+  # --- STEP 6: Practice printing number variables ---
+  - type: "fill"
+    lang: "python"
+    question: "Create a variable called 'points' with the value 250, then print it."
+    code: |
+      points @@INPUT@@ 250
+      print(@@INPUT@@)
+    solution:
+      - "="
+      - "points"
+    explanation: "You can assign values to variables with the equal sign. You can access the value stored in a variable by calling its name without quotes."
+
+  # --- STEP 7: Simple math operations ---
+  - type: "markdown"
+    content: |
+      Here's where numbers get exciting! You can do math with them using these symbols:
+
+      - `+` for addition
+      - `-` for subtraction
+      - `*` for multiplication
+      - `/` for division
+
+      ```python
+      result = 10 + 5    # result = 15
+      difference = 20 - 8  # difference = 12
+      product = 6 * 7    # product = 42
+      quotient = 15 / 3  # quotient = 5.0
+      ```
+
+  # --- STEP 8: Math operations quiz ---
+  - type: "quiz"
+    question: "What will this code display?"
+    code: |
+      answer = 12 + 8
+      print(answer)
+    lang: "python"
+    options:
+      - "12 + 8"
+      - "20"
+      - "answer"
+    solution: 1
+    explanation: "Python calculates 12 + 8 to get 20, stores it in the variable 'answer', then prints that value."
+
+  # --- STEP 9: Practice with math operations ---
+  - type: "fill"
+    lang: "python"
+    question: "Calculate the area of a rectangle: create variables for length (12) and width (8), then calculate and print the area."
+    code: |
+      length = @@INPUT@@
+      width = @@INPUT@@
+      area = length @@INPUT@@ width
+      print(area)
+    solution:
+      - "12"
+      - "8"
+      - "*"
+    explanation: "Area of a rectangle is length × width. The multiplication symbol in Python is *."
+
+  # --- STEP 10: Math with variables ---
+  - type: "markdown"
+    content: |
+      You can use variables in math operations just like direct numbers:
+
+      ```python
+      price = 25
+      tax = 3
+      total = price + tax
+      print(total)  # This displays: 28
+      ```
+
+      This is incredibly useful - you can store values in variables and then perform calculations with them.
+
+  # --- STEP 11: More math practice ---
+  - type: "fill"
+    lang: "python"
+    question: "Calculate a student's average: create variables for three test scores (85, 92, 78), then calculate and print the average."
+    code: |
+      test1 = 85
+      test2 = 92
+      test3 = 78
+      total = test1 @@INPUT@@ test2 @@INPUT@@ test3
+      average = total @@INPUT@@ 3
+      print(average)
+    solution:
+      - "+"
+      - "+"
+      - "/"
+    explanation: "To find an average, you add all the numbers together and divide by how many numbers there are."
+
+  # --- STEP 12: Mixed strings and numbers ---
+  - type: "markdown"
+    content: |
+      You can combine strings and numbers in your programs by printing them separately:
+
+      ```python
+      name = "Reem"
+      age = 25
+      score = 95
+
+      print("Player name:")
+      print(name)
+      print("Age:")
+      print(age)
+      print("Score:")
+      print(score)
+      ```
+
+      This creates a nice formatted output showing both text labels and numerical values.
+
+  # --- STEP 13: Practice mixing strings and numbers ---
+  - type: "fill"
+    lang: "python"
+    question: |
+      Create a simple product listing: 
+
+      - product: Laptop
+      - price: 899`
+      - quantity: 5
+
+      Then display all information with labels."
+    code: |
+      product = @@INPUT@@
+      price = @@INPUT@@
+      quantity = @@INPUT@@
+
+      print("Product:")
+      print(@@INPUT@@)
+      print("Price:")
+      print(@@INPUT@@)
+      print("Quantity:")
+      print(@@INPUT@@)
+    solution:
+      - '"Laptop"'
+      - "899"
+      - "5"
+      - "product"
+      - "price"
+      - "quantity"
+
+  # --- STEP 14: Order of operations ---
+  - type: "markdown"
+    content: |
+      Python follows standard math rules for order of operations:
+
+      ```python
+      result = 2 + 3 * 4    # result is 14, not 20
+      result = (2 + 3) * 4  # result is 20
+      ```
+
+      Multiplication and division happen before addition and subtraction, just like in regular math. Use parentheses to change the order when needed.
+
+  # --- STEP 15: Order of operations practice ---
+  - type: "quiz"
+    question: "What will this code display?"
+    code: |
+      calculation = 10 + 5 * 2
+      print(calculation)
+    lang: "python"
+    options:
+      - "30"
+      - "20"
+      - "17"
+    solution: 2
+    explanation: "Following order of operations: 5 * 2 = 10, then 10 + 10 = 20. Multiplication happens before addition."
+
+  # --- STEP 16: Spot the bug ---
+  - type: "bug"
+    lang: "python"
+    question: "Find the line with the mistake"
+    code: |
+      temperature = 72
+      humidity = "65"
+      feels_like = temperature + humidity
+      print(feels_like)
+    solution: 1
+    explanation: "You can't do math with a string. The humidity should be 65 (without quotes) to be treated as a number."
+    hint: "Look for a number that's stored as a string instead of a number."
+
+  # --- STEP 17: Variable updating ---
+  - type: "markdown"
+    content: |
+      You can update number variables by assigning new values to them:
+
+      ```python
+      score = 100
+      print(score)    # Displays: 100
+
+      score = 150
+      print(score)    # Displays: 150
+      ```
+
+      You can even use the variable's current value to calculate its new value:
+      ```python
+      score = 100
+      score = score + 50  # Now score is 150
+      print(score)
+      ```
+
+  # --- STEP 18: Practice updating variables ---
+  - type: "fill"
+    lang: "python"
+    question: "Start with a bank balance of 1000, add a deposit of 250, then subtract a withdrawal of 75. Print the final balance."
+    code: |
+      balance = @@INPUT@@
+      balance = balance + @@INPUT@@
+      balance = balance - @@INPUT@@
+      print(balance)
+    solution:
+      - "1000"
+      - "250"
+      - "75"
+    explanation: "You can update a variable by using its current value in a calculation and assigning the result back to the same variable."
+
+  # --- STEP 19: Order challenge ---
+  - type: "order"
+    lang: "python"
+    question: "Put these statements in order to calculate the total cost of items with tax."
+    code:
+      - item_price = 50
+      - tax_rate = 5
+      - total_cost = item_price + tax_rate
+      - print("Total cost:")
+      - print(total_cost)
+    alternate:
+      - [0, 1, 2, 3, 4]
+      - [1, 0, 2, 3, 4]
+    explanation: "Variables must be created before they can be used in calculations. The calculation comes before printing the result."
+
+  # --- STEP 20: Final comprehensive practice ---
+  - type: "fill"
+    lang: "python"
+    question: "Create a simple calculator: store two numbers (15 and 8), calculate their sum, difference, and product, then display all results with labels."
+    code: |
+      number1 = @@INPUT@@
+      number2 = @@INPUT@@
+
+      sum_result = number1 @@INPUT@@ number2
+      difference = number1 @@INPUT@@ number2
+      product = number1 @@INPUT@@ number2
+
+      print("First number:")
+      print(@@INPUT@@)
+      print("Second number:")
+      print(@@INPUT@@)
+      print("Sum:")
+      print(@@INPUT@@)
+      print("Difference:")
+      print(@@INPUT@@)
+      print("Product:")
+      print(@@INPUT@@)
+    solution:
+      - "15"
+      - "8"
+      - "+"
+      - "-"
+      - "*"
+      - "number1"
+      - "number2"
+      - "sum_result"
+      - "difference"
+      - "product"
+    explanation: "This demonstrates storing numbers in variables, performing calculations, and displaying results with descriptive labels."
+
+  # --- STEP 21: Congratulations ---
+  - type: "markdown"
+    content: |
+      Excellent! You've mastered working with numbers in Python.
+
+      **What you learned:**
+      - Numerical values can be stored in variables
+      - You can access the value stored in a variable by calling its name
+      - Numerical data should not be surrounded by quotation marks
+      - You can perform math operations: `+`, `-`, `*`, `/`
+      - You can use variables in calculations
+      - You can update variables with new values
+      - You can combine strings and numbers in your programs
+
+      Numbers are fundamental to programming - from simple counting to complex calculations. You now have the tools to work with numerical data confidently.
+
+      > [!NEXT]
+      > In the next lesson, we'll put everything together with some hands-on practice!

@@ -1,10 +1,10 @@
 # --- STEP 13: Final practice ---
 type: "fill"
 lang: "python"
-question: "Create a program that displays your favorite number, then the text 'is my favorite number'"
+question: "أنشئ برنامجًا يعرض رقمك المفضل، ثم النص 'هو رقمي المفضل'"
 code: |
   print(@@INPUT@@)
   print(@@INPUT@@)
 solution:
   - "/^\\d+$/"
-  - '"is my favorite number"'
+  - '"هو رقمي المفضل"'

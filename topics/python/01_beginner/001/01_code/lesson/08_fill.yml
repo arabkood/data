@@ -1,9 +1,9 @@
 # --- STEP 7: Practice with numbers ---
 type: "fill"
 lang: "python"
-question: "Display the number 632 on the screen."
+question: "اعرض الرقم 632 على الشاشة."
 code: |
   print(@@INPUT@@)
 solution:
   - "632"
-explanation: "Numbers don't need quotation marks. Python recognizes 632 as a number, not text."
+explanation: "الأرقام لا تحتاج إلى علامات اقتباس. بايثون تتعرف على 632 كرقم، وليس كنص."

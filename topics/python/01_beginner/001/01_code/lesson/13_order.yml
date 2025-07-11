@@ -1,9 +1,9 @@
 # --- STEP 11: Code ordering challenge ---
 type: "order"
 lang: "python"
-question: "Put these print statements in order to display: 'Welcome', then 6342, then 'Points'"
+question: "رتب أوامر الطباعة هذه لعرض: 'أهلاً'، ثم 6342، ثم 'نقاط'"
 code:
-  - print("Welcome")
+  - print("أهلاً")
   - print(6342)
-  - print("Points")
-explanation: "The code executes from top to bottom, so the order of your print statements determines the order of the output."
+  - print("نقاط")
+explanation: "يتم تنفيذ الكود من الأعلى إلى الأسفل، لذا فإن ترتيب أوامر الطباعة الخاصة بك يحدد ترتيب المخرجات."

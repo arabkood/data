@@ -1,9 +1,9 @@
 # --- STEP 8: Quiz about numbers vs text ---
 type: "quiz"
-question: "Which of these will display the number 7 (not the text '7')?"
+question: "أي من هذه الأوامر سيعرض الرقم 7 (وليس النص '7')؟"
 options:
   - "print('7')"
   - "print(7)"
   - "print[7]"
 solution: 1
-explanation: "Numbers without quotes are treated as actual numbers."
+explanation: "الأرقام بدون علامات اقتباس تُعامل كأرقام فعلية."

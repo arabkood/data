@@ -1,4 +1,4 @@
-The word `print` is followed by parentheses `()`, and inside those parentheses, you put the text you want to display. The text is wrapped in quotation marks `"`.
+كلمة `print` متبوعة بقوسين `()`, وداخل هذين القوسين، تضع النص الذي تريد عرضه. النص محاط بعلامات اقتباس `"`.
 
 <!-- media_idea: Simple diagram showing print("text") with arrows pointing to each part: print, parentheses, quotation marks, and the output -->
 
