@@ -1,4 +1,3 @@
 كلمة `print` متبوعة بقوسين `()`, وداخل هذين القوسين، تضع النص الذي تريد عرضه. النص محاط بعلامات اقتباس `"`.
 
-<!-- media_idea: Simple diagram showing print("text") with arrows pointing to each part: print, parentheses, quotation marks, and the output -->
-
+![anatomy of print in python](public://images/python/python-print-anatomy.png?ph=461x319)
