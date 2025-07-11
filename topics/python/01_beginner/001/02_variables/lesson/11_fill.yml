@@ -1,0 +1,12 @@
+# --- STEP 9: Practice using variables ---
+type: "fill"
+lang: "python"
+question: "Create a variable called 'hobby' with the value 'coding', then print it."
+code: |
+  @@INPUT@@ = @@INPUT@@
+  print(@@INPUT@@)
+solution:
+  - "hobby"
+  - '"coding"'
+  - "hobby"
+explanation: "First you create the variable with a quoted string, then you print the variable name without quotes."

@@ -1,0 +1,14 @@
+id: d7240c2a-73bd-4933-9474-5ff8f6636c0b
+module_id: 3f12f636-373e-4333-8c8a-8b690187f556
+slug: variables
+position: 2
+created_at: 2025-07-11T14:42:55.475Z
+updated_at: 2025-07-11T14:42:55.475Z
+type: lesson
+title: الذاكرة والمتغيرات
+blurb: >-
+  الوصف: المتغيرات هي ذاكرة الكود. تعلّم كيف تخزّن المعلومات مثل النصوص والأرقام
+  لاستخدامها لاحقاً.
+difficulty: easy
+base_xp: 300
+s3_path: python/01_beginner/001/02_variables

@@ -1,0 +1,11 @@
+# --- STEP 12: Common mistake - quotes around variable names ---
+type: "bug"
+lang: "python"
+question: "We are trying to print the username, find the line with the mistake"
+code: |
+  username = "coder123"
+  print("username")
+solution: 1
+explanation: "When you put quotes around a variable name, it prints the name itself, not the value stored in the variable."
+expectedOutput: "coder123"
+actualOutput: "username"

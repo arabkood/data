@@ -1,0 +1,15 @@
+# --- STEP 11: Identifying statements ---
+type: "quiz"
+question: "How many statements are in this code?"
+code: |
+  username = "coder123"
+  password = "secret"
+  print(username)
+  print("Login successful")
+lang: "python"
+options:
+  - "2 statements"
+  - "3 statements"
+  - "4 statements"
+solution: 2
+explanation: "Each line that tells the computer to do something is a statement. This code has 4 statements: two assignments and two print statements."

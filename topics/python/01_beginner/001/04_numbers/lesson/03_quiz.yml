@@ -1,0 +1,8 @@
+# --- STEP 3: Quiz about numbers vs strings ---
+type: "quiz"
+question: "Which of these creates a number variable (not a string)?"
+options:
+  - 'temperature = "72"'
+  - "temperature = 72"
+  - "temperature = '72'"
+solution: 1

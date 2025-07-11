@@ -1,0 +1,14 @@
+# --- STEP 9: Practice with math operations ---
+type: "fill"
+lang: "python"
+question: "Calculate the area of a rectangle: create variables for length (12) and width (8), then calculate and print the area."
+code: |
+  length = @@INPUT@@
+  width = @@INPUT@@
+  area = length @@INPUT@@ width
+  print(area)
+solution:
+  - "12"
+  - "8"
+  - "*"
+explanation: "Area of a rectangle is length × width. The multiplication symbol in Python is *."

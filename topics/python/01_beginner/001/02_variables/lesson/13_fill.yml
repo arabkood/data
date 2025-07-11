@@ -1,0 +1,17 @@
+# --- STEP 11: Creating multiple variables ---
+type: "fill"
+lang: "python"
+question: "Create variables for a person's information: 'name' with 'Abeer', 'age' with 23, then print both."
+code: |
+  @@INPUT@@ = @@INPUT@@
+  @@INPUT@@ = @@INPUT@@
+  print(@@INPUT@@)
+  print(@@INPUT@@)
+solution:
+  - "name"
+  - '"Abeer"'
+  - "age"
+  - "23"
+  - "name"
+  - "age"
+explanation: "Each variable needs its own line with the pattern: name = value. Then you can print each variable by name."

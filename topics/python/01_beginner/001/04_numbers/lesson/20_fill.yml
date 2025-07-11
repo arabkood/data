@@ -1,0 +1,34 @@
+# --- STEP 20: Final comprehensive practice ---
+type: "fill"
+lang: "python"
+question: "Create a simple calculator: store two numbers (15 and 8), calculate their sum, difference, and product, then display all results with labels."
+code: |
+  number1 = @@INPUT@@
+  number2 = @@INPUT@@
+
+  sum_result = number1 @@INPUT@@ number2
+  difference = number1 @@INPUT@@ number2
+  product = number1 @@INPUT@@ number2
+
+  print("First number:")
+  print(@@INPUT@@)
+  print("Second number:")
+  print(@@INPUT@@)
+  print("Sum:")
+  print(@@INPUT@@)
+  print("Difference:")
+  print(@@INPUT@@)
+  print("Product:")
+  print(@@INPUT@@)
+solution:
+  - "15"
+  - "8"
+  - "+"
+  - "-"
+  - "*"
+  - "number1"
+  - "number2"
+  - "sum_result"
+  - "difference"
+  - "product"
+explanation: "This demonstrates storing numbers in variables, performing calculations, and displaying results with descriptive labels."

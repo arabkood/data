@@ -1,0 +1,23 @@
+# --- STEP 17: Final comprehensive practice ---
+type: "fill"
+lang: "python"
+question: "Create a mini profile: store your favorite movie, favorite color, and hometown in variables, then print them with labels."
+code: |
+  favorite_movie = @@INPUT@@
+  favorite_color = @@INPUT@@
+  hometown = @@INPUT@@
+
+  print("Favorite movie:")
+  print(@@INPUT@@)
+  print("Favorite color:")
+  print(@@INPUT@@)
+  print("Hometown:")
+  print(@@INPUT@@)
+solution:
+  - '/^"[^"]+"$/'
+  - '/^"[^"]+"$/'
+  - '/^"[^"]+"$/'
+  - "favorite_movie"
+  - "favorite_color"
+  - "hometown"
+explanation: "This pattern - store information in variables, then print with descriptive labels - is very common in programming."

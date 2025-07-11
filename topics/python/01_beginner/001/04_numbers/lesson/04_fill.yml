@@ -1,0 +1,13 @@
+# --- STEP 4: Creating number variables ---
+type: "fill"
+lang: "python"
+question: "Create three number variables: 'height' with 175, 'weight' with 68, and 'age' with 30."
+code: |
+  @@INPUT@@
+  @@INPUT@@
+  @@INPUT@@
+solution:
+  - "height = 175"
+  - "weight = 68"
+  - "age = 30"
+explanation: "Numbers don't need quotation marks when stored in variables."

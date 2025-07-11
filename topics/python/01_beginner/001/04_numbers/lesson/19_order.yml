@@ -1,0 +1,14 @@
+# --- STEP 19: Order challenge ---
+type: "order"
+lang: "python"
+question: "Put these statements in order to calculate the total cost of items with tax."
+code:
+  - item_price = 50
+  - tax_rate = 5
+  - total_cost = item_price + tax_rate
+  - print("Total cost:")
+  - print(total_cost)
+alternate:
+  - [0, 1, 2, 3, 4]
+  - [1, 0, 2, 3, 4]
+explanation: "Variables must be created before they can be used in calculations. The calculation comes before printing the result."

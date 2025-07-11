@@ -1,0 +1,12 @@
+# --- STEP 4: Quiz about print syntax ---
+type: "quiz"
+question: "What do you need to put around text when using print()?"
+code: |
+  print("This is text")
+lang: "python"
+options:
+  - "Square brackets []"
+  - 'Quotation marks " "'
+  - "Curly braces {}"
+solution: 1
+explanation: "Text (in programming we call it `string`) must be wrapped in quotation marks so Python knows it's text, not a command."

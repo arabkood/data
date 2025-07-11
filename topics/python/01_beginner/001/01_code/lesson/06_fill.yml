@@ -1,0 +1,9 @@
+# --- STEP 5: Practice with different text ---
+type: "fill"
+lang: "python"
+question: "Write code to display your name. Replace 'Your Name' with your actual name."
+code: |
+  print(@@INPUT@@)
+solution:
+  - '/^"[^"]+"$/'
+explanation: "Any text inside quotation marks will be displayed exactly as written. This is a 'string'."

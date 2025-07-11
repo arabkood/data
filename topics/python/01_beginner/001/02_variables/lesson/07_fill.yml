@@ -1,0 +1,10 @@
+# --- STEP 6: Practice with number variables ---
+type: "fill"
+lang: "python"
+question: "Create a variable called 'temperature' and store the number 29 in it."
+code: |
+  @@INPUT@@ = @@INPUT@@
+solution:
+  - "temperature"
+  - "29"
+explanation: "Numbers don't need quotation marks when stored in variables, just like when we used them with print()."

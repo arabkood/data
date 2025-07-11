@@ -1,0 +1,13 @@
+# --- STEP 8: Quiz about using variables ---
+type: "quiz"
+question: "What will this code display?"
+code: |
+  favorite_website = "akood.com"
+  print(favorite_website)
+lang: "python"
+options:
+  - "favorite_website"
+  - "akood.com"
+  - '"akood.com"'
+solution: 1
+explanation: "When you use a variable name in print() without quotes, it displays the value stored in that variable."

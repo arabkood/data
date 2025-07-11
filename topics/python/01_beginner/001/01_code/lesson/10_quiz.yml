@@ -1,0 +1,9 @@
+# --- STEP 8a: Quiz about numbers vs text ---
+type: "quiz"
+question: "Which of these will display the text '19' (not the number 19)?"
+options:
+  - "print[19]"
+  - "print(19)"
+  - "print('19')"
+solution: 2
+explanation: "Numbers with quotes, are a text (`string`) that contain a number."

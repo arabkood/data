@@ -1,0 +1,12 @@
+# --- STEP 12: Spot the bug ---
+type: "bug"
+lang: "python"
+question: "Find the line with the mistake"
+code: |
+  print("Hello")
+  print(42)
+  print(Good luck)
+  print("See you later")
+solution: 2
+explanation: "The text 'Good luck' is missing quotation marks. All text must be wrapped in quotes."
+hint: "Look for text that should be in quotes but isn't."

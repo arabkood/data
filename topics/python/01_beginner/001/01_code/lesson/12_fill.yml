@@ -1,0 +1,13 @@
+# --- STEP 10: Practice with multiple prints ---
+type: "fill"
+lang: "python"
+question: "Complete this code to display three lines: 'Hello', then the number 7, then 'Goodbye'"
+code: |
+  @@INPUT@@
+  @@INPUT@@
+  @@INPUT@@
+solution:
+  - 'print("Hello")'
+  - "print(7)"
+  - 'print("Goodbye")'
+explanation: "Each print() statement creates a new line. Text needs quotes, numbers don't."

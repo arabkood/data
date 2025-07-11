@@ -1,0 +1,9 @@
+# --- STEP 3: Quiz about strings ---
+type: "quiz"
+question: "Which of these is a string?"
+options:
+  - "Hello"
+  - '"114"'
+  - "print"
+solution: 1
+explanation: "A string is any text surrounded by quotation marks. Even numbers can be strings if they're in quotes!"

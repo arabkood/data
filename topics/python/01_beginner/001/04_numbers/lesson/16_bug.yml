@@ -1,0 +1,12 @@
+# --- STEP 16: Spot the bug ---
+type: "bug"
+lang: "python"
+question: "Find the line with the mistake"
+code: |
+  temperature = 72
+  humidity = "65"
+  feels_like = temperature + humidity
+  print(feels_like)
+solution: 1
+explanation: "You can't do math with a string. The humidity should be 65 (without quotes) to be treated as a number."
+hint: "Look for a number that's stored as a string instead of a number."

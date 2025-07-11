@@ -1,0 +1,13 @@
+# --- STEP 15: Order of operations practice ---
+type: "quiz"
+question: "What will this code display?"
+code: |
+  calculation = 10 + 5 * 2
+  print(calculation)
+lang: "python"
+options:
+  - "30"
+  - "20"
+  - "17"
+solution: 2
+explanation: "Following order of operations: 5 * 2 = 10, then 10 + 10 = 20. Multiplication happens before addition."

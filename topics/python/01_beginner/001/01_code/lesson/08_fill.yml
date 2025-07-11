@@ -1,0 +1,9 @@
+# --- STEP 7: Practice with numbers ---
+type: "fill"
+lang: "python"
+question: "Display the number 632 on the screen."
+code: |
+  print(@@INPUT@@)
+solution:
+  - "632"
+explanation: "Numbers don't need quotation marks. Python recognizes 632 as a number, not text."

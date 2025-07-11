@@ -1,0 +1,9 @@
+# --- STEP 11: Code ordering challenge ---
+type: "order"
+lang: "python"
+question: "Put these print statements in order to display: 'Welcome', then 6342, then 'Points'"
+code:
+  - print("Welcome")
+  - print(6342)
+  - print("Points")
+explanation: "The code executes from top to bottom, so the order of your print statements determines the order of the output."

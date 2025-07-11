@@ -1,0 +1,10 @@
+# --- STEP 4: First variable practice ---
+type: "fill"
+lang: "python"
+question: "Create a variable called 'city' and store the text 'Baghdad' in it."
+code: |
+  @@INPUT@@ = @@INPUT@@
+solution:
+  - "city"
+  - '"Baghdad"'
+explanation: "Variable names go on the left, the equal sign connects them, and the value goes on the right. Text values need quotation marks."

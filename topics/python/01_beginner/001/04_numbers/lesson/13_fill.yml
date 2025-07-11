@@ -1,0 +1,22 @@
+# --- STEP 13: Practice mixing strings and numbers ---
+type: "fill"
+lang: "python"
+question: "Create a simple product listing: \n\n- product: Laptop\n- price: 899`\n- quantity: 5\n\nThen display all information with labels.\"\n"
+code: |
+  product = @@INPUT@@
+  price = @@INPUT@@
+  quantity = @@INPUT@@
+
+  print("Product:")
+  print(@@INPUT@@)
+  print("Price:")
+  print(@@INPUT@@)
+  print("Quantity:")
+  print(@@INPUT@@)
+solution:
+  - '"Laptop"'
+  - "899"
+  - "5"
+  - "product"
+  - "price"
+  - "quantity"

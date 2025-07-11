@@ -1,0 +1,11 @@
+# --- STEP 6: Practice printing number variables ---
+type: "fill"
+lang: "python"
+question: "Create a variable called 'points' with the value 250, then print it."
+code: |
+  points @@INPUT@@ 250
+  print(@@INPUT@@)
+solution:
+  - "="
+  - "points"
+explanation: "You can assign values to variables with the equal sign. You can access the value stored in a variable by calling its name without quotes."

@@ -1,0 +1,9 @@
+# --- STEP 3: First practice - fill in the blank ---
+type: "fill"
+lang: "python"
+question: "Complete this code to display the message 'Welcome to Python!'"
+code: |
+  @@INPUT@@("Welcome to Python!")
+solution:
+  - "print"
+explanation: "You write 'print' followed by parentheses containing your message."

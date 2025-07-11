@@ -1,0 +1,15 @@
+# --- STEP 15: Final practice ---
+type: "fill"
+lang: "python"
+question: "Complete this code to store your favorite movie in a variable and display it twice."
+code: |
+  favorite_movie = @@INPUT@@
+  print("My favorite movie is:")
+  print(@@INPUT@@)
+  print("I really love:")
+  print(@@INPUT@@)
+solution:
+  - '/^"[^"]+"$/'
+  - "favorite_movie"
+  - "favorite_movie"
+explanation: "Once you store a value in a variable, you can use it as many times as you want by referring to its name."

@@ -1,0 +1,12 @@
+# --- STEP 13: Common string mistakes ---
+type: "bug"
+lang: "python"
+question: "Find the line with the mistake"
+code: |
+  first_name = "Hayat"
+  last_name = "Sindi'
+  print(first_name)
+  print(last_name)
+solution: 1
+explanation: "Every string must have matching opening and closing quotes."
+hint: "Look for mismatched quotation marks."

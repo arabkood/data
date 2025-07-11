@@ -1,0 +1,13 @@
+# --- STEP 8: Math operations quiz ---
+type: "quiz"
+question: "What will this code display?"
+code: |
+  answer = 12 + 8
+  print(answer)
+lang: "python"
+options:
+  - "12 + 8"
+  - "20"
+  - "answer"
+solution: 1
+explanation: "Python calculates 12 + 8 to get 20, stores it in the variable 'answer', then prints that value."

@@ -1,0 +1,19 @@
+# --- STEP 15: String content variety ---
+type: "fill"
+lang: "python"
+question: "Create string variables for different types of content: 'email' with an email address, 'phone' with a phone number, and 'website' with a website URL."
+code: |
+  @@INPUT@@ = @@INPUT@@
+  @@INPUT@@ = @@INPUT@@
+  @@INPUT@@ = @@INPUT@@
+  print(email)
+  print(phone)
+  print(website)
+solution:
+  - "email"
+  - "/^\"[^\"@]+@[^\"@]+\\.[^\"@]+\"$/"
+  - "phone"
+  - '/^"[^"]+"$/'
+  - "website"
+  - '/^"[^"]+"$/'
+explanation: "Strings can contain any text - email addresses, phone numbers, URLs, or any other information. They're all just text to Python."
