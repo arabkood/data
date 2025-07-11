@@ -1,7 +1,7 @@
 # --- STEP 9: Practice with math operations ---
 type: "fill"
 lang: "python"
-question: "Calculate the area of a rectangle: create variables for length (12) and width (8), then calculate and print the area."
+question: "احسب مساحة مستطيل: أنشئ متغيرين للطول `length` (12) والعرض `width` (8)، ثم احسب المساحة واطبعها."
 code: |
   length = @@INPUT@@
   width = @@INPUT@@
@@ -11,4 +11,4 @@ solution:
   - "12"
   - "8"
   - "*"
-explanation: "Area of a rectangle is length × width. The multiplication symbol in Python is *."
+explanation: "مساحة المستطيل هي الطول × العرض. رمز الضرب في بايثون هو `*`."

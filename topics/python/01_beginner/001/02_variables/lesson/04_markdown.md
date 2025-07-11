@@ -1,14 +1,14 @@
-You use the equal sign `=` to connect a name with a value:
+أنت تستخدم علامة المساواة `=` لربط اسم بقيمة:
 
 ```python
-name = "Reem"
+name = "ريم"
 ```
 
-This creates a variable called `name` and stores the text "Reem" inside it.
+هذا ينشئ متغيرًا يسمى `name` ويخزن النص "ريم" بداخله.
 
-The pattern is always: `variable_name = value`
+النمط دائمًا هو: `اسم_المتغير = القيمة`
 
-- The name goes on the left
-- The equal sign `=` goes in the middle (we call this `assignment`)
-- The value goes on the right
+- الاسم يكون على اليسار
+- علامة المساواة `=` تكون في المنتصف (نسمي هذه العملية **الإسناد**)
+- القيمة تكون على اليمين
 

@@ -1,11 +1,11 @@
-Let's talk about **`statements`**. In programming, a statement is a complete instruction that tells the computer to do something.
+لنتحدث عن **الجمل البرمجية** (`statements`). في البرمجة، الجملة البرمجية هي تعليمة كاملة تخبر الحاسوب بالقيام بشيء ما.
 
-Each line of code you've written is a statement:
+كل سطر من الكود كتبته هو جملة برمجية:
 ```python
-name = "Alex"        # This is a statement
-print(name)          # This is also a statement
-age = 25             # Another statement
+name = "خالد"        # هذه جملة برمجية
+print(name)          # هذه أيضًا جملة برمجية
+age = 25             # جملة برمجية أخرى
 ```
 
-Think of statements like sentences in English - each one expresses a complete thought or action.
+فكر في الجمل البرمجية كالجمل في اللغة العربية - كل واحدة تعبر عن فكرة أو إجراء كامل.
 

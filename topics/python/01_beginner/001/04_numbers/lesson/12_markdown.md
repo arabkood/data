@@ -1,17 +1,17 @@
-You can combine strings and numbers in your programs by printing them separately:
+يمكنك دمج النصوص والأرقام في برامجك عن طريق طباعة كل منها على حدة:
 
 ```python
-name = "Reem"
+name = "ريم"
 age = 25
 score = 95
 
-print("Player name:")
+print("اسم اللاعبة:")
 print(name)
-print("Age:")
+print("العمر:")
 print(age)
-print("Score:")
+print("الدرجة:")
 print(score)
 ```
 
-This creates a nice formatted output showing both text labels and numerical values.
+هذا ينشئ مخرجات منسقة بشكل جيد تعرض كلًا من التسميات النصية والقيم الرقمية.
 

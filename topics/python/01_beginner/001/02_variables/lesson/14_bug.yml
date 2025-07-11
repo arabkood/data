@@ -1,11 +1,11 @@
 # --- STEP 12: Common mistake - quotes around variable names ---
 type: "bug"
 lang: "python"
-question: "We are trying to print the username, find the line with the mistake"
+question: "نحن نحاول طباعة اسم المستخدم، ابحث عن السطر الذي يحتوي على الخطأ"
 code: |
-  username = "coder123"
+  username = "مبرمج123"
   print("username")
 solution: 1
-explanation: "When you put quotes around a variable name, it prints the name itself, not the value stored in the variable."
-expectedOutput: "coder123"
+explanation: "عندما تضع علامات اقتباس حول اسم المتغير، فإنك تطبع الاسم نفسه، وليس القيمة المخزنة في المتغير."
+expectedOutput: "مبرمج123"
 actualOutput: "username"

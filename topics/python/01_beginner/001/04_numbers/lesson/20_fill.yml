@@ -1,7 +1,7 @@
 # --- STEP 20: Final comprehensive practice ---
 type: "fill"
 lang: "python"
-question: "Create a simple calculator: store two numbers (15 and 8), calculate their sum, difference, and product, then display all results with labels."
+question: "أنشئ آلة حاسبة بسيطة: قم بتخزين رقمين (15 و 8)، واحسب مجموعهما، والفرق بينهما، وحاصل ضربهما، ثم اعرض جميع النتائج مع تسمياتها."
 code: |
   number1 = @@INPUT@@
   number2 = @@INPUT@@
@@ -10,15 +10,15 @@ code: |
   difference = number1 @@INPUT@@ number2
   product = number1 @@INPUT@@ number2
 
-  print("First number:")
+  print("الرقم الأول:")
   print(@@INPUT@@)
-  print("Second number:")
+  print("الرقم الثاني:")
   print(@@INPUT@@)
-  print("Sum:")
+  print("المجموع:")
   print(@@INPUT@@)
-  print("Difference:")
+  print("الفرق:")
   print(@@INPUT@@)
-  print("Product:")
+  print("الناتج:")
   print(@@INPUT@@)
 solution:
   - "15"
@@ -31,4 +31,4 @@ solution:
   - "sum_result"
   - "difference"
   - "product"
-explanation: "This demonstrates storing numbers in variables, performing calculations, and displaying results with descriptive labels."
+explanation: "يوضح هذا المثال تخزين الأرقام في متغيرات، وإجراء العمليات الحسابية، وعرض النتائج مع تسميات توضيحية."

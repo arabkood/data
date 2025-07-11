@@ -1,10 +1,10 @@
 # --- STEP 4: First variable practice ---
 type: "fill"
 lang: "python"
-question: "Create a variable called 'city' and store the text 'Baghdad' in it."
+question: "أنشئ متغيرًا باسم 'city' وخزّن فيه النص 'بغداد'."
 code: |
   @@INPUT@@ = @@INPUT@@
 solution:
   - "city"
-  - '"Baghdad"'
-explanation: "Variable names go on the left, the equal sign connects them, and the value goes on the right. Text values need quotation marks."
+  - '"بغداد"'
+explanation: "توضع أسماء المتغيرات على اليسار، وتربطها علامة المساواة، وتوضع القيمة على اليمين. القيم النصية تحتاج إلى علامات اقتباس."

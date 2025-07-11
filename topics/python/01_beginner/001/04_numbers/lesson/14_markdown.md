@@ -1,9 +1,9 @@
-Python follows standard math rules for order of operations:
+تتبع بايثون القواعد الرياضية القياسية لـ **أولويات العمليات الحسابية**:
 
 ```python
-result = 2 + 3 * 4    # result is 14, not 20
-result = (2 + 3) * 4  # result is 20
+result = 2 + 3 * 4    # النتيجة هي 14، وليس 20
+result = (2 + 3) * 4  # النتيجة هي 20
 ```
 
-Multiplication and division happen before addition and subtraction, just like in regular math. Use parentheses to change the order when needed.
+تتم عمليات الضرب والقسمة قبل الجمع والطرح، تمامًا كما في الرياضيات العادية. استخدم الأقواس لتغيير الترتيب عند الحاجة.
 

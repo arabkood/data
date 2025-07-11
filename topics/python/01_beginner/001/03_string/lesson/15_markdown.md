@@ -1,10 +1,10 @@
-Sometimes you need an empty string - a string with no content. This is perfectly valid in Python:
+أحيانًا تحتاج إلى `نص` فارغ - وهو نص لا يحتوي على أي محتوى. هذا صحيح تمامًا في بايثون:
 
 ```python
-empty_message = ""
-another_empty = ''
-print(empty_message)  # This prints nothing (blank line)
+رسالة_فارغة = ""
+رسالة_اخرى_فارغة = ''
+print(رسالة_فارغة)  # هذا يطبع سطراً فارغاً
 ```
 
-Empty strings are useful when you want to start with no text and add content later.
+النصوص الفارغة مفيدة عندما تريد أن تبدأ بدون نص ثم تضيف المحتوى لاحقًا.
 

@@ -1,9 +1,9 @@
-Here's where numbers get exciting! You can do math with them using these symbols:
+وهنا تكمن متعة الأرقام! يمكنك إجراء عمليات حسابية عليها باستخدام هذه الرموز:
 
-- `+` for addition
-- `-` for subtraction
-- `*` for multiplication
-- `/` for division
+- `+` للجمع
+- `-` للطرح
+- `*` للضرب
+- `/` للقسمة
 
 ```python
 result = 10 + 5    # result = 15

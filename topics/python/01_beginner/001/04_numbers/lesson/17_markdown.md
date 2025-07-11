@@ -1,17 +1,17 @@
-You can update number variables by assigning new values to them:
+يمكنك تحديث المتغيرات الرقمية عن طريق إسناد قيم جديدة لها:
 
 ```python
 score = 100
-print(score)    # Displays: 100
+print(score)    # يعرض: 100
 
 score = 150
-print(score)    # Displays: 150
+print(score)    # يعرض: 150
 ```
 
-You can even use the variable's current value to calculate its new value:
+يمكنك حتى استخدام القيمة الحالية للمتغير لحساب قيمته الجديدة:
 ```python
 score = 100
-score = score + 50  # Now score is 150
+score = score + 50  # الآن score تساوي 150
 print(score)
 ```
 

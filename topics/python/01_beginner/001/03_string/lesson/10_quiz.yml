@@ -1,15 +1,15 @@
 # --- STEP 11: Identifying statements ---
 type: "quiz"
-question: "How many statements are in this code?"
+question: "كم عدد الجمل البرمجية في هذا الكود؟"
 code: |
-  username = "coder123"
-  password = "secret"
+  username = "مبرمج١٢٣"
+  password = "سري"
   print(username)
-  print("Login successful")
+  print("تم تسجيل الدخول بنجاح")
 lang: "python"
 options:
-  - "2 statements"
-  - "3 statements"
-  - "4 statements"
+  - "جملتان برمجيتان"
+  - "٣ جمل برمجية"
+  - "٤ جمل برمجية"
 solution: 2
-explanation: "Each line that tells the computer to do something is a statement. This code has 4 statements: two assignments and two print statements."
+explanation: "كل سطر يخبر الحاسوب بفعل شيء ما هو جملة برمجية. هذا الكود يحتوي على ٤ جمل برمجية: جملتا إسناد (تخزين قيمة) وجملتا طباعة."

@@ -1,12 +1,12 @@
 # --- STEP 14: Text vs variable names ---
 type: "quiz"
-question: "What's the difference between these two lines?"
+question: "ما الفرق بين هذين السطرين؟"
 code: |
   print("message")
   print(message)
 lang: "python"
 options:
-  - "There's no difference - they do the same thing"
-  - "The first prints the word 'message', the second prints the value stored in a variable called message"
+  - "لا يوجد فرق - كلاهما يفعل نفس الشيء"
+  - "السطر الأول يطبع كلمة 'message'، والثاني يطبع القيمة المخزنة في متغير يسمى message"
 solution: 1
-explanation: "With quotes, Python directly know the string. Without quotes, Python looks for a variable with that name."
+explanation: "مع علامات الاقتباس، بايثون يعرض النص مباشرة. بدون علامات اقتباس، يبحث بايثون عن متغير بذلك الاسم."

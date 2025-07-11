@@ -1,16 +1,16 @@
-Excellent! You've mastered working with numbers in Python.
+ممتاز! لقد أتقنت التعامل مع الأرقام في بايثون.
 
-**What you learned:**
-- Numerical values can be stored in variables
-- You can access the value stored in a variable by calling its name
-- Numerical data should not be surrounded by quotation marks
-- You can perform math operations: `+`, `-`, `*`, `/`
-- You can use variables in calculations
-- You can update variables with new values
-- You can combine strings and numbers in your programs
+**ماذا تعلمت:**
+- يمكن تخزين القيم الرقمية في متغيرات.
+- يمكنك الوصول إلى القيمة المخزنة في متغير عن طريق استدعاء اسمه.
+- لا يجب إحاطة البيانات الرقمية بعلامات اقتباس.
+- يمكنك إجراء العمليات الحسابية: `+`، `-`، `*`، `/`.
+- يمكنك استخدام المتغيرات في العمليات الحسابية.
+- يمكنك تحديث المتغيرات بقيم جديدة.
+- يمكنك دمج النصوص والأرقام في برامجك.
 
-Numbers are fundamental to programming - from simple counting to complex calculations. You now have the tools to work with numerical data confidently.
+تعد الأرقام أساسية في البرمجة - من العد البسيط إلى الحسابات المعقدة. لديك الآن الأدوات اللازمة للعمل مع البيانات الرقمية بثقة.
 
 > [!NEXT]
-> In the next lesson, we'll put everything together with some hands-on practice!
+> في الدرس القادم، سنقوم بتطبيق كل ما تعلمناه في تمرين عملي شامل!
 

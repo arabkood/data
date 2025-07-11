@@ -1,11 +1,11 @@
-You can use variables in math operations just like direct numbers:
+يمكنك استخدام المتغيرات في العمليات الحسابية تمامًا مثل الأرقام المباشرة:
 
 ```python
 price = 25
 tax = 3
 total = price + tax
-print(total)  # This displays: 28
+print(total)  # هذا يعرض: 28
 ```
 
-This is incredibly useful - you can store values in variables and then perform calculations with them.
+هذا مفيد بشكل لا يصدق - يمكنك تخزين القيم في متغيرات ثم إجراء الحسابات عليها.
 

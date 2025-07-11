@@ -1,11 +1,11 @@
-Here's where variables become powerful! Once you've created a variable, you can use it with `print()` by writing its name **without quotes**:
+هنا تظهر قوة `المتغيرات`! بمجرد إنشاء `متغير`، يمكنك استخدامه مع `print()` بكتابة اسمه **بدون علامات اقتباس**:
 
 ```python
-name = "Asem"
+name = "عاصم"
 print(name)
 ```
 
-This will display: `Asem`
+سيؤدي هذا إلى عرض: `عاصم`
 
-Notice how we don't put quotes around `name` in the print statement? That's because we want to print the value stored in the variable, not the word "name" itself.
+هل لاحظت أننا لا نضع علامات اقتباس حول `name` في أمر الطباعة؟ ذلك لأننا نريد طباعة القيمة المخزنة في `المتغير`، وليس كلمة "name" نفسها.
 

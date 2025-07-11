@@ -1,12 +1,12 @@
-Fantastic! You now understand strings much better. 
+رائع! أنت الآن تفهم النصوص بشكل أفضل بكثير.
 
-**What you learned:**
-- A piece of text is called a **string**
-- Strings require quotation marks (single `'` or double `"`)
-- Each line of code that does something is called a **statement**
+**ماذا تعلمت:**
+- أي جزء من النص يسمى **`نصًا`** أو **`سلسلة نصية`**.
+- النصوص تتطلب علامات اقتباس (مفردة `'` أو مزدوجة `"`).
+- كل سطر من الكود يقوم بشيء ما يسمى **جملة برمجية**.
 
-Strings are everywhere in programming - user messages, file names, web addresses, and much more. You'll use them constantly, so getting comfortable with them now will serve you well.
+النصوص موجودة في كل مكان في البرمجة - رسائل المستخدم، أسماء الملفات، عناوين الويب، وغير ذلك الكثير. ستستخدمها باستمرار، لذا فإن التعود عليها الآن سيخدمك جيدًا.
 
 > [!NEXT]
-> In the next lesson, we'll explore numbers in depth and learn how to do calculations with them!
+> في الدرس التالي، سنستكشف الأرقام بعمق ونتعلم كيفية إجراء العمليات الحسابية بها!
 

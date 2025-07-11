@@ -1,16 +1,16 @@
-Remember the key difference from strings: numbers don't need quotation marks.
+تذكر الفرق الرئيسي بين الأرقام والنصوص: **الأرقام لا تحتاج إلى علامات اقتباس**.
 
 ```python
-age = 25          # This is a number
-price = 19.99     # This is also a number
-pi = 3.14159   # Another number
+age = 25          # هذا رقم
+price = 19.99     # هذا أيضًا رقم
+pi = 3.14159   # رقم آخر
 ```
 
-Compare this to strings:
+قارن هذا بالنصوص:
 ```python
-name = "Omar"    # This is a string
-year = "2026"    # This is a string that looks like a number
+name = "فاطمة"    # هذا نص
+year = "2026"    # هذا نص يشبه الرقم
 ```
 
-When you put quotes around numbers, they become strings (text), not actual numbers you can do math with.
+عندما تضع علامات اقتباس حول الأرقام، فإنها تصبح `نصوصًا`، وليست أرقامًا فعلية يمكنك إجراء عمليات حسابية عليها.
 

@@ -1,6 +1,6 @@
 # --- STEP 8: Quiz about using variables ---
 type: "quiz"
-question: "What will this code display?"
+question: "ما الذي سيعرضه هذا الكود؟"
 code: |
   favorite_website = "akood.com"
   print(favorite_website)
@@ -10,4 +10,4 @@ options:
   - "akood.com"
   - '"akood.com"'
 solution: 1
-explanation: "When you use a variable name in print() without quotes, it displays the value stored in that variable."
+explanation: "عندما تستخدم اسم متغير في `print()` بدون علامات اقتباس، فإنه يعرض القيمة المخزنة في ذلك المتغير."

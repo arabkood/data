@@ -1,7 +1,7 @@
 # --- STEP 15: String content variety ---
 type: "fill"
 lang: "python"
-question: "Create string variables for different types of content: 'email' with an email address, 'phone' with a phone number, and 'website' with a website URL."
+question: "أنشئ متغيرات نصية لأنواع مختلفة من المحتوى: `email` لعنوان بريد إلكتروني، و `phone` لرقم هاتف، و `website` لرابط موقع إلكتروني."
 code: |
   @@INPUT@@ = @@INPUT@@
   @@INPUT@@ = @@INPUT@@
@@ -16,4 +16,4 @@ solution:
   - '/^"[^"]+"$/'
   - "website"
   - '/^"[^"]+"$/'
-explanation: "Strings can contain any text - email addresses, phone numbers, URLs, or any other information. They're all just text to Python."
+explanation: "يمكن للنصوص أن تحتوي على أي شيء - عناوين بريد إلكتروني، أرقام هواتف، روابط مواقع، أو أي معلومات أخرى. كلها مجرد `نص` بالنسبة لبايثون."

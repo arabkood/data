@@ -1,11 +1,11 @@
-Python accepts both single quotes `'` and double quotes `"` for strings. These are all valid:
+تقبل بايثون كلاً من علامات الاقتباس المفردة `'` والمزدوجة `"` للنصوص. كل هذه الأمثلة صحيحة:
 
 ```python
-message1 = "Hello there"
-message2 = 'Hello there'
-message3 = "It's a beautiful day"
-message4 = 'Python is "awesome"'
+message1 = "أهلاً بك"
+message2 = 'أهلاً بك'
+message3 = "إنه يوم جميل"
+message4 = 'بايثون "رائعة"'
 ```
 
-Both work exactly the same way. Many programmers prefer double quotes, but you can use whichever you like.
+كلاهما يعمل بنفس الطريقة تمامًا. يفضل العديد من المبرمجين علامات الاقتباس المزدوجة، ولكن يمكنك استخدام أي منهما تفضل.
 

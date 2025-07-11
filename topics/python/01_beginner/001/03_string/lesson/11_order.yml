@@ -1,14 +1,14 @@
 # --- STEP 12: Order of statements ---
 type: "order"
 lang: "python"
-question: "Put these statements in the correct order to create and display a person's information."
+question: "ضع هذه الجمل البرمجية بالترتيب الصحيح لإنشاء وعرض معلومات شخصية."
 code:
-  - full_name = "Ahmed Zewail"
-  - occupation = "scientist"
+  - full_name = "أحمد زويل"
+  - occupation = "عالم"
   - print(full_name)
   - print(occupation)
 alternate:
   - [1, 0, 2, 3]
   - [0, 1, 3, 2]
   - [1, 0, 3, 2]
-explanation: "You must create variables before you can use them. The assignment statements come first, then the print statements."
+explanation: "يجب عليك إنشاء المتغيرات قبل أن تتمكن من استخدامها. جمل الإسناد تأتي أولاً، ثم جمل الطباعة."

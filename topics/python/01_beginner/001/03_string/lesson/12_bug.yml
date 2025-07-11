@@ -1,12 +1,12 @@
 # --- STEP 13: Common string mistakes ---
 type: "bug"
 lang: "python"
-question: "Find the line with the mistake"
+question: "ابحث عن السطر الذي يحتوي على الخطأ"
 code: |
-  first_name = "Hayat"
-  last_name = "Sindi'
+  first_name = "حياة"
+  last_name = "السندي'
   print(first_name)
   print(last_name)
 solution: 1
-explanation: "Every string must have matching opening and closing quotes."
-hint: "Look for mismatched quotation marks."
+explanation: "كل `نص` يجب أن يحتوي على علامتي اقتباس متطابقتين في البداية والنهاية."
+hint: "ابحث عن علامات الاقتباس غير المتطابقة."

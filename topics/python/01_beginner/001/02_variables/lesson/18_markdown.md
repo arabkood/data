@@ -1,13 +1,13 @@
-Excellent work! You've just learned one of the most important concepts in programming: `variables`.
+عمل ممتاز! لقد تعلمت للتو أحد أهم المفاهيم في البرمجة: **`المتغيرات`**.
 
-**What you learned:**
-- Computer programs use variables to remember important information
-- A variable has a name and a value
-- You create a variable by connecting the name and value with an equal sign `=`
-- Text values need quotation marks: `name = "Muhammad"`
-- Number values don't need quotation marks: `age = 30`
-- You use a variable by writing its name without quotes: `print(name)`
+**ماذا تعلمت:**
+- تستخدم برامج الحاسوب `المتغيرات` لتذكر المعلومات الهامة
+- `للمتغير` اسم وقيمة
+- يمكنك إنشاء `متغير` عن طريق ربط الاسم والقيمة بعلامة المساواة `=`
+- القيم النصية تحتاج إلى علامات اقتباس: `name = "محمد"`
+- القيم الرقمية لا تحتاج إلى علامات اقتباس: `age = 30`
+- يمكنك استخدام `المتغير` بكتابة اسمه بدون علامات اقتباس: `print(name)`
 
 > [!NEXT]
-> In the next lesson, we'll dive deeper into working with text (strings) and see even more ways to use variables!
+> في الدرس القادم، سنتعمق أكثر في التعامل مع النصوص (`نص`) وسنرى طرقًا أكثر لاستخدام المتغيرات!
 

@@ -1,7 +1,7 @@
 # --- STEP 11: More math practice ---
 type: "fill"
 lang: "python"
-question: "Calculate a student's average: create variables for three test scores (85, 92, 78), then calculate and print the average."
+question: "احسب متوسط درجات طالب: أنشئ متغيرات لثلاث درجات اختبار (85، 92، 78)، ثم احسب المتوسط واطبعه."
 code: |
   test1 = 85
   test2 = 92
@@ -13,4 +13,4 @@ solution:
   - "+"
   - "+"
   - "/"
-explanation: "To find an average, you add all the numbers together and divide by how many numbers there are."
+explanation: "لإيجاد المتوسط، تقوم بجمع كل الأرقام معًا ثم تقسمها على عددها."

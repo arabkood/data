@@ -1,14 +1,14 @@
-Remember variables from the last lesson? They work perfectly with strings. You can store any text in a variable and use it later:
+هل تتذكر المتغيرات من الدرس الماضي؟ إنها تعمل بشكل مثالي مع النصوص. يمكنك تخزين أي نص في `متغير` واستخدامه لاحقًا:
 
 ```python
-first_name = "Omar"
-last_name = "Ahmed"
-city = "Cairo"
+الاسم_الأول = "عمر"
+اسم_العائلة = "أحمد"
+المدينة = "القاهرة"
 
-print(first_name)
-print(last_name)
-print(city)
+print(الاسم_الأول)
+print(اسم_العائلة)
+print(المدينة)
 ```
 
-This creates three string variables, each containing different text.
+هذا الكود ينشئ ثلاثة متغيرات نصية، كل منها يحتوي على نص مختلف.
 

@@ -1,10 +1,10 @@
-Just like with strings, you can access the value stored in a number variable by calling its name:
+تمامًا كما هو الحال مع النصوص، يمكنك الوصول إلى القيمة المخزنة في `متغير` رقمي عن طريق استدعاء اسمه:
 
 ```python
 score = 85
-print(score)      # This displays: 85
-print("score")    # This displays: score
+print(score)      # هذا يعرض: 85
+print("score")    # هذا يعرض: score
 ```
 
-Remember: no quotes around the variable name when you want to use its value!
+تذكر: لا تضع علامات اقتباس حول اسم المتغير عندما تريد استخدام قيمته!
 

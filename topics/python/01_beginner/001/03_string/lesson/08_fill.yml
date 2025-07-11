@@ -1,10 +1,10 @@
 # --- STEP 9: Printing practice ---
 type: "fill"
 lang: "python"
-question: "Write the code to print the variable `favorite_food`."
+question: "اكتب الكود لطباعة قيمة المتغير `favorite_food`."
 code: |
-  favorite_food = "pizza"
+  favorite_food = "بيتزا"
   @@INPUT@@
 solution:
   - "print(favorite_food)"
-explanation: "Always use the print function with the variable name (without quotations marks) to display its value."
+explanation: "استخدم دائمًا `دالة` الطباعة `print` مع اسم المتغير (بدون علامات اقتباس) لعرض قيمته."

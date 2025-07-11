@@ -1,6 +1,6 @@
 # --- STEP 15: Order of operations practice ---
 type: "quiz"
-question: "What will this code display?"
+question: "ماذا سيعرض هذا الكود؟"
 code: |
   calculation = 10 + 5 * 2
   print(calculation)
@@ -9,5 +9,5 @@ options:
   - "30"
   - "20"
   - "17"
-solution: 2
-explanation: "Following order of operations: 5 * 2 = 10, then 10 + 10 = 20. Multiplication happens before addition."
+solution: 1
+explanation: "وفقًا لأولويات العمليات الحسابية: 5 * 2 = 10، ثم 10 + 10 = 20. عملية الضرب تحدث قبل عملية الجمع."

@@ -1,12 +1,12 @@
 # --- STEP 16: Spot the bug ---
 type: "bug"
 lang: "python"
-question: "Find the line with the mistake"
+question: "ابحث عن السطر الذي يحتوي على الخطأ"
 code: |
   temperature = 72
   humidity = "65"
   feels_like = temperature + humidity
   print(feels_like)
 solution: 1
-explanation: "You can't do math with a string. The humidity should be 65 (without quotes) to be treated as a number."
-hint: "Look for a number that's stored as a string instead of a number."
+explanation: "لا يمكنك إجراء عملية حسابية على `نص`. يجب أن تكون الرطوبة `humidity` تساوي 65 (بدون علامات اقتباس) ليتم التعامل معها كرقم."
+hint: "ابحث عن رقم تم تخزينه كنص بدلاً من رقم."

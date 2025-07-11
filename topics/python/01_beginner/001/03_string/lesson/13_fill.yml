@@ -1,13 +1,13 @@
 # --- STEP 14: Mixing strings and variables ---
 type: "fill"
 lang: "python"
-question: "Complete this code to show a person's hobby information."
+question: "أكمل هذا الكود لعرض معلومات عن هواية شخص ما."
 code: |
-  hobby = "coding"
-  skill_level = "beginner"
-  print("My hobby is:")
+  hobby = "البرمجة"
+  skill_level = "مبتدئ"
+  print("هوايتي هي:")
   print(@@INPUT@@)
-  print("I am a:")
+  print("مستواي:")
   print(@@INPUT@@)
 solution:
   - "hobby"

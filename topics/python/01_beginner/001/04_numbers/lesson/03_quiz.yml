@@ -1,6 +1,6 @@
 # --- STEP 3: Quiz about numbers vs strings ---
 type: "quiz"
-question: "Which of these creates a number variable (not a string)?"
+question: "أي من هذه الخيارات ينشئ متغيرًا رقميًا (وليس نصيًا)؟"
 options:
   - 'temperature = "72"'
   - "temperature = 72"

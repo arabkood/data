@@ -1,12 +1,12 @@
-You've been using text in your code, but let's give it its proper name: in programming, any piece of text is called a `string`.
+لقد كنت تستخدم النصوص في الكود الخاص بك، لكن دعنا نعطها اسمها الصحيح: في البرمجة، أي جزء من النص يسمى **`سلسلة نصية`** أو ببساطة **`نص`** (`string`).
 
-Why "string"? Think of it like a string of characters - letters, numbers, spaces, and symbols - all connected together in a sequence.
+لماذا "سلسلة"؟ فكر فيها كسلسلة من الأحرف - حروف وأرقام ومسافات ورموز - كلها مرتبطة معًا في تسلسل.
 
 ```python
-"Hello, world!"
-"Python is awesome"
-"123 Main Street"
+"مرحباً بالعالم!"
+"بايثون رائعة"
+"شارع النهضة رقم 123"
 ```
 
-Each of these is a string. Notice they all have one thing in common: quotation marks around them.
+كل من هذه الأمثلة هو `نص`. لاحظ أن لديها جميعًا شيئًا واحدًا مشتركًا: علامات الاقتباس حولها.
 

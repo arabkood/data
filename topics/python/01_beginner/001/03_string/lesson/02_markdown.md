@@ -1,11 +1,11 @@
-The quotation marks are not just decoration - they're essential! They tell Python "this is text, not a command."
+علامات الاقتباس ليست مجرد زخرفة - إنها **ضرورية**! فهي تخبر بايثون "هذا نص، وليس أمرًا برمجيًا."
 
-Without quotes, Python thinks you're trying to use a variable or command:
+بدون علامات الاقتباس، يعتقد بايثون أنك تحاول استخدام `متغير` أو أمر:
 
 ```python
-print(Hello)  # Python looks for a variable named "Hello"
-print("Hello")  # Python knows this is text
+print(مرحباً)  # تبحث بايثون عن متغير اسمه "مرحباً"
+print("مرحباً")  # تعرف بايثون أن هذا نص
 ```
 
-The quotes are like saying "I literally mean this text exactly as written."
+علامات الاقتباس تشبه قولك "أنا أعني حرفيًا هذا النص تمامًا كما هو مكتوب."
 

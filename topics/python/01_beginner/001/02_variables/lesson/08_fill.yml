@@ -1,10 +1,9 @@
 # --- STEP 6b: Practice with number variables ---
 type: "fill"
 lang: "python"
-question: "Complete this code"
+question: "أكمل هذا السطر لتعيين القيمة للمتغير."
 code: |
   website @@INPUT@@ "akood.com"
 solution:
-  - "temperature"
-  - "29"
-explanation: "We use the equal sign to assign values to variables."
+  - "="
+explanation: "نستخدم علامة المساواة `=` لإسناد القيم للمتغيرات."

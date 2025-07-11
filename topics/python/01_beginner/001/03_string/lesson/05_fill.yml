@@ -1,9 +1,9 @@
 # --- STEP 5: Practice with different quotes ---
 type: "fill"
 lang: "python"
-question: "Create a string variable using single quotes for the text 'Salam'"
+question: "أنشئ متغيرًا نصيًا باستخدام علامات الاقتباس المفردة لكلمة 'سلام'"
 code: |
   greeting = @@INPUT@@
 solution:
-  - "'Salam'"
-explanation: "Single quotes work just like double quotes for creating strings. The important thing is to have matching quotes at the beginning and end."
+  - "'سلام'"
+explanation: "علامات الاقتباس المفردة تعمل تمامًا مثل المزدوجة لإنشاء النصوص. الشيء المهم هو وجود علامات متطابقة في البداية والنهاية."

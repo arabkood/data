@@ -1,11 +1,11 @@
-The solution is **variables**. Think of a variable as a labeled box in your computer's memory.
+الحل هو **`المتغيرات`**. فكر في `المتغير` كصندوق عليه ملصق في ذاكرة حاسوبك.
 
-Just like you might have a box labeled "Winter Clothes" that contains your sweaters and coats, a variable is a box with a name that contains some information.
+تمامًا كما قد يكون لديك صندوق يحمل ملصق "ملابس الشتاء" ويحتوي على ستراتك ومعاطفك، فإن `المتغير` هو صندوق له اسم ويحتوي على بعض المعلومات.
 
-For example:
-- A box labeled `name` might contain the text "Faisal"
-- A box labeled `age` might contain the number 25
-- A box labeled `score` might contain the number 100
+على سبيل المثال:
+- صندوق باسم `name` قد يحتوي على النص "فيصل"
+- صندوق باسم `age` قد يحتوي على الرقم 25
+- صندوق باسم `score` قد يحتوي على الرقم 100
 
-Once you put something in the box, you can use it over and over again just by referring to the box's name.
+بمجرد وضع شيء في الصندوق، يمكنك استخدامه مرارًا وتكرارًا بمجرد الإشارة إلى اسم الصندوق.
 

@@ -1,6 +1,6 @@
 # --- STEP 8: Math operations quiz ---
 type: "quiz"
-question: "What will this code display?"
+question: "ماذا سيعرض هذا الكود؟"
 code: |
   answer = 12 + 8
   print(answer)
@@ -10,4 +10,4 @@ options:
   - "20"
   - "answer"
 solution: 1
-explanation: "Python calculates 12 + 8 to get 20, stores it in the variable 'answer', then prints that value."
+explanation: "تقوم بايثون بحساب 12 + 8 لتحصل على 20، وتخزنها في المتغير `answer`، ثم تطبع تلك القيمة."

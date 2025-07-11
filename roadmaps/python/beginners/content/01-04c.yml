@@ -1,40 +1,39 @@
----
 item_id: "module-1-item-4"
 item_type: "lesson"
-title: "Numbers in Python"
+title: "الأرقام في بايثون"
 
 steps:
   # --- STEP 1: Numbers are everywhere ---
   - type: "markdown"
     content: |
-      Numbers are just as important as strings in programming. Think about it - ages, prices, scores, temperatures, distances - numbers are everywhere in the programs we use daily.
+      تعتبر الأرقام بنفس أهمية النصوص في البرمجة. فكر في الأمر - الأعمار، الأسعار، الدرجات، درجات الحرارة، المسافات - **الأرقام موجودة في كل مكان** في البرامج التي نستخدمها يوميًا.
 
-      The great news? Working with numbers in Python is intuitive and powerful. You can store them in variables, display them with `print()`, and even do math with them!
+      والخبر السار؟ التعامل مع الأرقام في بايثون أمر سهل وبديهي للغاية. يمكنك تخزينها في متغيرات، وعرضها باستخدام `print()`، وحتى إجراء العمليات الحسابية عليها!
 
-      Let's dive into the world of numbers in Python.
+      هيا بنا نتعمق في عالم الأرقام في بايثون.
 
   # --- STEP 2: Numbers don't need quotes ---
   - type: "markdown"
     content: |
-      Remember the key difference from strings: numbers don't need quotation marks.
+      تذكر الفرق الرئيسي بين الأرقام والنصوص: **الأرقام لا تحتاج إلى علامات اقتباس**.
 
       ```python
-      age = 25          # This is a number
-      price = 19.99     # This is also a number
-      pi = 3.14159   # Another number
+      age = 25          # هذا رقم
+      price = 19.99     # هذا أيضًا رقم
+      pi = 3.14159   # رقم آخر
       ```
 
-      Compare this to strings:
+      قارن هذا بالنصوص:
       ```python
-      name = "Omar"    # This is a string
-      year = "2026"    # This is a string that looks like a number
+      name = "فاطمة"    # هذا نص
+      year = "2026"    # هذا نص يشبه الرقم
       ```
 
-      When you put quotes around numbers, they become strings (text), not actual numbers you can do math with.
+      عندما تضع علامات اقتباس حول الأرقام، فإنها تصبح `نصوصًا`، وليست أرقامًا فعلية يمكنك إجراء عمليات حسابية عليها.
 
   # --- STEP 3: Quiz about numbers vs strings ---
   - type: "quiz"
-    question: "Which of these creates a number variable (not a string)?"
+    question: "أي من هذه الخيارات ينشئ متغيرًا رقميًا (وليس نصيًا)؟"
     options:
       - 'temperature = "72"'
       - "temperature = 72"
@@ -44,7 +43,7 @@ steps:
   # --- STEP 4: Creating number variables ---
   - type: "fill"
     lang: "python"
-    question: "Create three number variables: 'height' with 175, 'weight' with 68, and 'age' with 30."
+    question: "أنشئ ثلاثة متغيرات رقمية: `height` بالقيمة 175، و `weight` بالقيمة 68، و `age` بالقيمة 30."
     code: |
       @@INPUT@@
       @@INPUT@@
@@ -53,42 +52,42 @@ steps:
       - "height = 175"
       - "weight = 68"
       - "age = 30"
-    explanation: "Numbers don't need quotation marks when stored in variables."
+    explanation: "الأرقام لا تحتاج إلى علامات اقتباس عند تخزينها في متغيرات."
 
   # --- STEP 5: Using number variables ---
   - type: "markdown"
     content: |
-      Just like with strings, you can access the value stored in a number variable by calling its name:
+      تمامًا كما هو الحال مع النصوص، يمكنك الوصول إلى القيمة المخزنة في `متغير` رقمي عن طريق استدعاء اسمه:
 
       ```python
       score = 85
-      print(score)      # This displays: 85
-      print("score")    # This displays: score
+      print(score)      # هذا يعرض: 85
+      print("score")    # هذا يعرض: score
       ```
 
-      Remember: no quotes around the variable name when you want to use its value!
+      تذكر: لا تضع علامات اقتباس حول اسم المتغير عندما تريد استخدام قيمته!
 
   # --- STEP 6: Practice printing number variables ---
   - type: "fill"
     lang: "python"
-    question: "Create a variable called 'points' with the value 250, then print it."
+    question: "أنشئ متغيرًا باسم `points` بقيمة 250، ثم اطبعه."
     code: |
       points @@INPUT@@ 250
       print(@@INPUT@@)
     solution:
       - "="
       - "points"
-    explanation: "You can assign values to variables with the equal sign. You can access the value stored in a variable by calling its name without quotes."
+    explanation: "يمكنك إسناد القيم للمتغيرات باستخدام علامة المساواة. ويمكنك الوصول إلى القيمة المخزنة في متغير عن طريق استدعاء اسمه بدون علامات اقتباس."
 
   # --- STEP 7: Simple math operations ---
   - type: "markdown"
     content: |
-      Here's where numbers get exciting! You can do math with them using these symbols:
+      وهنا تكمن متعة الأرقام! يمكنك إجراء عمليات حسابية عليها باستخدام هذه الرموز:
 
-      - `+` for addition
-      - `-` for subtraction
-      - `*` for multiplication
-      - `/` for division
+      - `+` للجمع
+      - `-` للطرح
+      - `*` للضرب
+      - `/` للقسمة
 
       ```python
       result = 10 + 5    # result = 15
@@ -99,7 +98,7 @@ steps:
 
   # --- STEP 8: Math operations quiz ---
   - type: "quiz"
-    question: "What will this code display?"
+    question: "ماذا سيعرض هذا الكود؟"
     code: |
       answer = 12 + 8
       print(answer)
@@ -109,12 +108,12 @@ steps:
       - "20"
       - "answer"
     solution: 1
-    explanation: "Python calculates 12 + 8 to get 20, stores it in the variable 'answer', then prints that value."
+    explanation: "تقوم بايثون بحساب 12 + 8 لتحصل على 20، وتخزنها في المتغير `answer`، ثم تطبع تلك القيمة."
 
   # --- STEP 9: Practice with math operations ---
   - type: "fill"
     lang: "python"
-    question: "Calculate the area of a rectangle: create variables for length (12) and width (8), then calculate and print the area."
+    question: "احسب مساحة مستطيل: أنشئ متغيرين للطول `length` (12) والعرض `width` (8)، ثم احسب المساحة واطبعها."
     code: |
       length = @@INPUT@@
       width = @@INPUT@@
@@ -124,26 +123,26 @@ steps:
       - "12"
       - "8"
       - "*"
-    explanation: "Area of a rectangle is length × width. The multiplication symbol in Python is *."
+    explanation: "مساحة المستطيل هي الطول × العرض. رمز الضرب في بايثون هو `*`."
 
   # --- STEP 10: Math with variables ---
   - type: "markdown"
     content: |
-      You can use variables in math operations just like direct numbers:
+      يمكنك استخدام المتغيرات في العمليات الحسابية تمامًا مثل الأرقام المباشرة:
 
       ```python
       price = 25
       tax = 3
       total = price + tax
-      print(total)  # This displays: 28
+      print(total)  # هذا يعرض: 28
       ```
 
-      This is incredibly useful - you can store values in variables and then perform calculations with them.
+      هذا مفيد بشكل لا يصدق - يمكنك تخزين القيم في متغيرات ثم إجراء الحسابات عليها.
 
   # --- STEP 11: More math practice ---
   - type: "fill"
     lang: "python"
-    question: "Calculate a student's average: create variables for three test scores (85, 92, 78), then calculate and print the average."
+    question: "احسب متوسط درجات طالب: أنشئ متغيرات لثلاث درجات اختبار (85، 92، 78)، ثم احسب المتوسط واطبعه."
     code: |
       test1 = 85
       test2 = 92
@@ -155,52 +154,52 @@ steps:
       - "+"
       - "+"
       - "/"
-    explanation: "To find an average, you add all the numbers together and divide by how many numbers there are."
+    explanation: "لإيجاد المتوسط، تقوم بجمع كل الأرقام معًا ثم تقسمها على عددها."
 
   # --- STEP 12: Mixed strings and numbers ---
   - type: "markdown"
     content: |
-      You can combine strings and numbers in your programs by printing them separately:
+      يمكنك دمج النصوص والأرقام في برامجك عن طريق طباعة كل منها على حدة:
 
       ```python
-      name = "Reem"
+      name = "ريم"
       age = 25
       score = 95
 
-      print("Player name:")
+      print("اسم اللاعبة:")
       print(name)
-      print("Age:")
+      print("العمر:")
       print(age)
-      print("Score:")
+      print("الدرجة:")
       print(score)
       ```
 
-      This creates a nice formatted output showing both text labels and numerical values.
+      هذا ينشئ مخرجات منسقة بشكل جيد تعرض كلًا من التسميات النصية والقيم الرقمية.
 
   # --- STEP 13: Practice mixing strings and numbers ---
   - type: "fill"
     lang: "python"
     question: |
-      Create a simple product listing: 
+      أنشئ قائمة بسيطة لمنتج: 
 
-      - product: Laptop
-      - price: 899`
-      - quantity: 5
+      - المنتج: حاسوب محمول
+      - السعر: 899
+      - الكمية: 5
 
-      Then display all information with labels."
+      ثم اعرض جميع المعلومات مع تسمياتها."
     code: |
       product = @@INPUT@@
       price = @@INPUT@@
       quantity = @@INPUT@@
 
-      print("Product:")
+      print("المنتج:")
       print(@@INPUT@@)
-      print("Price:")
+      print("السعر:")
       print(@@INPUT@@)
-      print("Quantity:")
+      print("الكمية:")
       print(@@INPUT@@)
     solution:
-      - '"Laptop"'
+      - '"حاسوب محمول"'
       - "899"
       - "5"
       - "product"
@@ -210,18 +209,18 @@ steps:
   # --- STEP 14: Order of operations ---
   - type: "markdown"
     content: |
-      Python follows standard math rules for order of operations:
+      تتبع بايثون القواعد الرياضية القياسية لـ **أولويات العمليات الحسابية**:
 
       ```python
-      result = 2 + 3 * 4    # result is 14, not 20
-      result = (2 + 3) * 4  # result is 20
+      result = 2 + 3 * 4    # النتيجة هي 14، وليس 20
+      result = (2 + 3) * 4  # النتيجة هي 20
       ```
 
-      Multiplication and division happen before addition and subtraction, just like in regular math. Use parentheses to change the order when needed.
+      تتم عمليات الضرب والقسمة قبل الجمع والطرح، تمامًا كما في الرياضيات العادية. استخدم الأقواس لتغيير الترتيب عند الحاجة.
 
   # --- STEP 15: Order of operations practice ---
   - type: "quiz"
-    question: "What will this code display?"
+    question: "ماذا سيعرض هذا الكود؟"
     code: |
       calculation = 10 + 5 * 2
       print(calculation)
@@ -230,46 +229,46 @@ steps:
       - "30"
       - "20"
       - "17"
-    solution: 2
-    explanation: "Following order of operations: 5 * 2 = 10, then 10 + 10 = 20. Multiplication happens before addition."
+    solution: 1
+    explanation: "وفقًا لأولويات العمليات الحسابية: 5 * 2 = 10، ثم 10 + 10 = 20. عملية الضرب تحدث قبل عملية الجمع."
 
   # --- STEP 16: Spot the bug ---
   - type: "bug"
     lang: "python"
-    question: "Find the line with the mistake"
+    question: "ابحث عن السطر الذي يحتوي على الخطأ"
     code: |
       temperature = 72
       humidity = "65"
       feels_like = temperature + humidity
       print(feels_like)
     solution: 1
-    explanation: "You can't do math with a string. The humidity should be 65 (without quotes) to be treated as a number."
-    hint: "Look for a number that's stored as a string instead of a number."
+    explanation: "لا يمكنك إجراء عملية حسابية على `نص`. يجب أن تكون الرطوبة `humidity` تساوي 65 (بدون علامات اقتباس) ليتم التعامل معها كرقم."
+    hint: "ابحث عن رقم تم تخزينه كنص بدلاً من رقم."
 
   # --- STEP 17: Variable updating ---
   - type: "markdown"
     content: |
-      You can update number variables by assigning new values to them:
+      يمكنك تحديث المتغيرات الرقمية عن طريق إسناد قيم جديدة لها:
 
       ```python
       score = 100
-      print(score)    # Displays: 100
+      print(score)    # يعرض: 100
 
       score = 150
-      print(score)    # Displays: 150
+      print(score)    # يعرض: 150
       ```
 
-      You can even use the variable's current value to calculate its new value:
+      يمكنك حتى استخدام القيمة الحالية للمتغير لحساب قيمته الجديدة:
       ```python
       score = 100
-      score = score + 50  # Now score is 150
+      score = score + 50  # الآن score تساوي 150
       print(score)
       ```
 
   # --- STEP 18: Practice updating variables ---
   - type: "fill"
     lang: "python"
-    question: "Start with a bank balance of 1000, add a deposit of 250, then subtract a withdrawal of 75. Print the final balance."
+    question: "ابدأ برصيد بنكي قدره 1000، وأضف إيداعًا بقيمة 250، ثم اطرح سحبًا بقيمة 75. اطبع الرصيد النهائي."
     code: |
       balance = @@INPUT@@
       balance = balance + @@INPUT@@
@@ -279,27 +278,27 @@ steps:
       - "1000"
       - "250"
       - "75"
-    explanation: "You can update a variable by using its current value in a calculation and assigning the result back to the same variable."
+    explanation: "يمكنك تحديث متغير باستخدام قيمته الحالية في عملية حسابية وإعادة إسناد النتيجة إلى نفس المتغير."
 
   # --- STEP 19: Order challenge ---
   - type: "order"
     lang: "python"
-    question: "Put these statements in order to calculate the total cost of items with tax."
+    question: "رتب هذه الأسطر البرمجية لحساب التكلفة الإجمالية للعناصر مع الضريبة."
     code:
       - item_price = 50
       - tax_rate = 5
       - total_cost = item_price + tax_rate
-      - print("Total cost:")
+      - print("التكلفة الإجمالية:")
       - print(total_cost)
     alternate:
       - [0, 1, 2, 3, 4]
       - [1, 0, 2, 3, 4]
-    explanation: "Variables must be created before they can be used in calculations. The calculation comes before printing the result."
+    explanation: "يجب إنشاء المتغيرات قبل استخدامها في العمليات الحسابية. وتأتي العملية الحسابية قبل طباعة النتيجة."
 
   # --- STEP 20: Final comprehensive practice ---
   - type: "fill"
     lang: "python"
-    question: "Create a simple calculator: store two numbers (15 and 8), calculate their sum, difference, and product, then display all results with labels."
+    question: "أنشئ آلة حاسبة بسيطة: قم بتخزين رقمين (15 و 8)، واحسب مجموعهما، والفرق بينهما، وحاصل ضربهما، ثم اعرض جميع النتائج مع تسمياتها."
     code: |
       number1 = @@INPUT@@
       number2 = @@INPUT@@
@@ -308,15 +307,15 @@ steps:
       difference = number1 @@INPUT@@ number2
       product = number1 @@INPUT@@ number2
 
-      print("First number:")
+      print("الرقم الأول:")
       print(@@INPUT@@)
-      print("Second number:")
+      print("الرقم الثاني:")
       print(@@INPUT@@)
-      print("Sum:")
+      print("المجموع:")
       print(@@INPUT@@)
-      print("Difference:")
+      print("الفرق:")
       print(@@INPUT@@)
-      print("Product:")
+      print("الناتج:")
       print(@@INPUT@@)
     solution:
       - "15"
@@ -329,23 +328,23 @@ steps:
       - "sum_result"
       - "difference"
       - "product"
-    explanation: "This demonstrates storing numbers in variables, performing calculations, and displaying results with descriptive labels."
+    explanation: "يوضح هذا المثال تخزين الأرقام في متغيرات، وإجراء العمليات الحسابية، وعرض النتائج مع تسميات توضيحية."
 
   # --- STEP 21: Congratulations ---
   - type: "markdown"
     content: |
-      Excellent! You've mastered working with numbers in Python.
+      ممتاز! لقد أتقنت التعامل مع الأرقام في بايثون.
 
-      **What you learned:**
-      - Numerical values can be stored in variables
-      - You can access the value stored in a variable by calling its name
-      - Numerical data should not be surrounded by quotation marks
-      - You can perform math operations: `+`, `-`, `*`, `/`
-      - You can use variables in calculations
-      - You can update variables with new values
-      - You can combine strings and numbers in your programs
+      **ماذا تعلمت:**
+      - يمكن تخزين القيم الرقمية في متغيرات.
+      - يمكنك الوصول إلى القيمة المخزنة في متغير عن طريق استدعاء اسمه.
+      - لا يجب إحاطة البيانات الرقمية بعلامات اقتباس.
+      - يمكنك إجراء العمليات الحسابية: `+`، `-`، `*`، `/`.
+      - يمكنك استخدام المتغيرات في العمليات الحسابية.
+      - يمكنك تحديث المتغيرات بقيم جديدة.
+      - يمكنك دمج النصوص والأرقام في برامجك.
 
-      Numbers are fundamental to programming - from simple counting to complex calculations. You now have the tools to work with numerical data confidently.
+      تعد الأرقام أساسية في البرمجة - من العد البسيط إلى الحسابات المعقدة. لديك الآن الأدوات اللازمة للعمل مع البيانات الرقمية بثقة.
 
       > [!NEXT]
-      > In the next lesson, we'll put everything together with some hands-on practice!
+      > في الدرس القادم، سنقوم بتطبيق كل ما تعلمناه في تمرين عملي شامل!

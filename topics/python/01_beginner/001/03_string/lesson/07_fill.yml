@@ -1,7 +1,7 @@
 # --- STEP 7: Creating string variables ---
 type: "fill"
 lang: "python"
-question: "Create three string variables: \n- 'book_title' with 'القانون في الطب'.\n- 'author' with 'Ibn Sina'.\n- 'year_hijri' with '416'\n"
+question: "أنشئ ثلاثة متغيرات نصية: \n- `book_title` بقيمة 'القانون في الطب'.\n- `author` بقيمة 'ابن سينا'.\n- `year_hijri` بقيمة '416'\n"
 code: |
   @@INPUT@@ = @@INPUT@@
   @@INPUT@@ = @@INPUT@@
@@ -12,8 +12,8 @@ solution:
     /^['"]القانون في الطب['"]$/
   - "author"
   - |
-    /^['"]Ibn Sina['"]$/
+    /^['"]ابن سينا['"]$/
   - "year_hijri"
   - |
     /^['"]416['"]$/
-explanation: "Notice that '416' is in quotes, making it a string (text) rather than a number. Sometimes we store numbers as strings when we don't need to do math with them."
+explanation: "لاحظ أن '416' موضوعة بين علامتي اقتباس، مما يجعلها `نصًا` وليس `رقمًا`. أحيانًا نقوم بتخزين الأرقام كنصوص عندما لا نحتاج إلى إجراء عمليات حسابية عليها."

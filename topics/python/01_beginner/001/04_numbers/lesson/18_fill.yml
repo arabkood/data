@@ -1,7 +1,7 @@
 # --- STEP 18: Practice updating variables ---
 type: "fill"
 lang: "python"
-question: "Start with a bank balance of 1000, add a deposit of 250, then subtract a withdrawal of 75. Print the final balance."
+question: "ابدأ برصيد بنكي قدره 1000، وأضف إيداعًا بقيمة 250، ثم اطرح سحبًا بقيمة 75. اطبع الرصيد النهائي."
 code: |
   balance = @@INPUT@@
   balance = balance + @@INPUT@@
@@ -11,4 +11,4 @@ solution:
   - "1000"
   - "250"
   - "75"
-explanation: "You can update a variable by using its current value in a calculation and assigning the result back to the same variable."
+explanation: "يمكنك تحديث متغير باستخدام قيمته الحالية في عملية حسابية وإعادة إسناد النتيجة إلى نفس المتغير."

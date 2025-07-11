@@ -1,8 +1,8 @@
-You can create as many variables as you need and use them together:
+يمكنك إنشاء أي عدد تريده من المتغيرات واستخدامها معًا:
 
 ```python
-first_name = "Muhammad"
-last_name = "Mahmud"
+first_name = "محمد"
+last_name = "محمود"
 age = 21
 
 print(first_name)
@@ -10,5 +10,5 @@ print(last_name)
 print(age)
 ```
 
-This creates three separate "boxes" in memory, each with its own name and value.
+هذا ينشئ ثلاثة "صناديق" منفصلة في الذاكرة، لكل منها اسمه وقيمته الخاصة.
 

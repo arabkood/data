@@ -1,10 +1,10 @@
-Imagine you're writing a program that mentions your name 10 times. You'd have to type it out every single time:
+تخيل أنك تكتب برنامجًا يذكر اسمك 10 مرات. سيتعين عليك كتابته في كل مرة:
 
 ```python
-print("Hello, Faisal!")
-print("Welcome back, Faisal!")
-print("Faisal, you have 5 messages")
+print("مرحباً يا فيصل!")
+print("أهلاً بعودتك يا فيصل!")
+print("يا فيصل، لديك 5 رسائل")
 ```
 
-This is exhausting! What if you wanted to change the name later? You'd have to find and replace it everywhere. There has to be a better way...
+هذا أمر مرهق! وماذا لو أردت تغيير الاسم لاحقًا؟ سيتعين عليك البحث عنه واستبداله في كل مكان. لا بد أن هناك طريقة أفضل...
 

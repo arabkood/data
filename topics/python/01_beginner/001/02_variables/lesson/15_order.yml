@@ -1,9 +1,9 @@
 # --- STEP 13: Order matters ---
 type: "order"
 lang: "python"
-question: "Put these lines in the correct order to create a variable and then use it."
+question: "ضع هذه الأسطر بالترتيب الصحيح لإنشاء متغير ثم استخدامه."
 code:
   - score = 95
-  - print("Your score is:")
+  - print("نتيجتك هي:")
   - print(score)
-explanation: "You must create a variable before you can use it. The variable assignment comes first, then you can print its value."
+explanation: "يجب عليك إنشاء المتغير قبل أن تتمكن من استخدامه. يأتي إسناد المتغير أولاً، ثم يمكنك طباعة قيمته."

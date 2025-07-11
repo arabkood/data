@@ -1,7 +1,7 @@
 # --- STEP 11: Creating multiple variables ---
 type: "fill"
 lang: "python"
-question: "Create variables for a person's information: 'name' with 'Abeer', 'age' with 23, then print both."
+question: "أنشئ متغيرات لمعلومات شخص: 'name' بقيمة 'عبير'، و 'age' بقيمة 23، ثم اطبعهما."
 code: |
   @@INPUT@@ = @@INPUT@@
   @@INPUT@@ = @@INPUT@@
@@ -9,9 +9,9 @@ code: |
   print(@@INPUT@@)
 solution:
   - "name"
-  - '"Abeer"'
+  - '"عبير"'
   - "age"
   - "23"
   - "name"
   - "age"
-explanation: "Each variable needs its own line with the pattern: name = value. Then you can print each variable by name."
+explanation: "كل متغير يحتاج إلى سطر خاص به بالنمط: اسم = قيمة. ثم يمكنك طباعة كل متغير باسمه."
