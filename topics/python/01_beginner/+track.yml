@@ -11,5 +11,5 @@ blurb: >-
   بايثون وابدأ في بناء مشاريعك الأولى اليوم!
 logo: public://images/random/learn-by-example@python.png
 premium_only: false
-coming_soon: true
+coming_soon: false
 position: 1
