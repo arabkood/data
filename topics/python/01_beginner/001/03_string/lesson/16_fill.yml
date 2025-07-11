@@ -1,23 +1,27 @@
 # --- STEP 17: Final comprehensive practice ---
 type: "fill"
 lang: "python"
-question: "أنشئ ملفًا شخصيًا مصغرًا: خزّن فيلمك المفضل، ولونك المفضل، ومسقط رأسك في متغيرات، ثم اطبعها مع تسميات توضيحية."
+question: "أنشئ ملفًا شخصيًا مصغرًا: خزّن فيلمك المفضل، ولونك المفضل، ومسقط رأسك في متغيرات، ثم اطبعها."
 code: |
   favorite_movie = @@INPUT@@
   favorite_color = @@INPUT@@
   hometown = @@INPUT@@
 
   print("الفيلم المفضل:")
-  print(@@INPUT@@)
+  @@INPUT@@
   print("اللون المفضل:")
   print(@@INPUT@@)
   print("مسقط الرأس:")
-  print(@@INPUT@@)
+  print@@INPUT@@hometown@@INPUT@@
 solution:
-  - '/^"[^"]+"$/'
-  - '/^"[^"]+"$/'
-  - '/^"[^"]+"$/'
-  - "favorite_movie"
+  - |
+    /^(["'])(.*?)\1$/
+  - |
+    /^(["'])(.*?)\1$/
+  - |
+    /^(["'])(.*?)\1$/
+  - "print(favorite_movie)"
   - "favorite_color"
-  - "hometown"
+  - "("
+  - ")"
 explanation: "هذا النمط - تخزين المعلومات في متغيرات، ثم طباعتها مع تسميات وصفية - شائع جدًا في البرمجة."

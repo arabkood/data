@@ -3,7 +3,7 @@ type: "fill"
 lang: "python"
 question: "تمرينك الأخير، أكمل هذا البرنامج!"
 code: |
-  print@@INPUT@@عمل رائع!@@INPUT@@
+  print@@INPUT@@"عمل رائع!"@@INPUT@@
 solution:
   - "("
   - ")"

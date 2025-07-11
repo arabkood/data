@@ -1,13 +1,15 @@
 # --- STEP 10: Practice with multiple prints ---
 type: "fill"
 lang: "python"
-question: "أكمل هذا الكود لعرض ثلاثة أسطر: 'مرحباً'، ثم الرقم 7، ثم 'وداعاً'"
+question: 'أكمل هذا الكود لعرض ثلاثة أسطر: "مرحبا"، ثم الرقم 7، ثم "وداعا"'
 code: |
   @@INPUT@@
   @@INPUT@@
   @@INPUT@@
 solution:
-  - 'print("مرحباً")'
-  - "print(7)"
-  - 'print("وداعاً")'
+  - |
+    /^print\((["'])مرحبا\1\)$/
+  - print(7)
+  - |
+    /^print\((["'])وداعا\1\)$/
 explanation: "كل أمر print() ينشئ سطرًا جديدًا. النص يحتاج إلى علامات اقتباس، والأرقام لا تحتاج."

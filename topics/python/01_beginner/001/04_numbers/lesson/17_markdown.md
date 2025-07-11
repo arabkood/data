@@ -9,9 +9,9 @@ print(score)    # يعرض: 150
 ```
 
 يمكنك حتى استخدام القيمة الحالية للمتغير لحساب قيمته الجديدة:
+
 ```python
 score = 100
-score = score + 50  # الآن score تساوي 150
-print(score)
+score = score + 50
+print(score)    # يعرض: 150
 ```
-

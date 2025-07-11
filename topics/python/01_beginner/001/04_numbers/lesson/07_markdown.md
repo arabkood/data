@@ -6,9 +6,8 @@
 - `/` للقسمة
 
 ```python
-result = 10 + 5    # result = 15
-difference = 20 - 8  # difference = 12
-product = 6 * 7    # product = 42
-quotient = 15 / 3  # quotient = 5.0
+result = 10 + 5      # = 15
+difference = 20 - 8  # = 12
+product = 6 * 7      # = 42
+quotient = 15 / 3    # = 5.0
 ```
-

@@ -1,7 +1,7 @@
 # --- STEP 19: Order challenge ---
 type: "order"
 lang: "python"
-question: "رتب هذه الأسطر البرمجية لحساب التكلفة الإجمالية للعناصر مع الضريبة."
+question: "رتب هذه الأسطر البرمجية لحساب التكلفة الإجمالية مع الضريبة."
 code:
   - item_price = 50
   - tax_rate = 5
