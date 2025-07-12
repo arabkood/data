@@ -6,7 +6,7 @@ import importlib.util
 
 class TestCoffeeShop(unittest.TestCase):
     def setUp(self):
-        spec = importlib.util.spec_from_file_location("main", "coffee_shop.py")
+        spec = importlib.util.spec_from_file_location("coffee_shop", "coffee_shop.py")
 
         assert spec is not None
         self.main_module = importlib.util.module_from_spec(spec)
