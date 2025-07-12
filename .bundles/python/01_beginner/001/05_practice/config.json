@@ -1,5 +1,5 @@
 {
-  "image": "runner/python",
+  "image": "python",
   "files": [
     {
       "idx": 0,
