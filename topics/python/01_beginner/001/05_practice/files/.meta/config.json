@@ -3,15 +3,15 @@
   "files": [
     {
       "idx": 0,
-      "path": "hello_world.py",
+      "path": "coffee_shop.py",
       "lang": "python"
     },
     {
       "idx": -1,
-      "path": "hello_world_test.py",
+      "path": "coffee_shop_test.py",
       "lang": "python",
       "ro": true
     }
   ],
-  "tests": ["hello_world_test.py"]
+  "tests": ["coffee_shop_test.py"]
 }
