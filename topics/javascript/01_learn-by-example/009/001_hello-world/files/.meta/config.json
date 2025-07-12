@@ -1,5 +1,5 @@
 {
-  "image": "runner/javascript",
+  "image": "javascript",
   "files": [
     {
       "idx": 0,
@@ -17,5 +17,6 @@
       "path": "package.json",
       "lang": "json"
     }
-  ]
+  ],
+  "tests": ["hello-world.spec.js"]
 }

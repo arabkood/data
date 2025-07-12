@@ -12,5 +12,6 @@
       "lang": "python",
       "ro": true
     }
-  ]
+  ],
+  "tests": ["hello_world_test.py"]
 }
