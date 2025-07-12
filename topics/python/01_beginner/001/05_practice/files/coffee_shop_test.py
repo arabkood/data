@@ -2,17 +2,28 @@ import unittest
 import sys
 from io import StringIO
 import importlib.util
+import os
 
 
 class TestCoffeeShop(unittest.TestCase):
     def setUp(self):
-        spec = importlib.util.spec_from_file_location("coffee_shop", "coffee_shop.py")
+        if not os.path.exists("coffee_shop.py"):
+            raise FileNotFoundError(
+                "coffee_shop.py file not found in current directory"
+            )
 
-        assert spec is not None
+        spec = importlib.util.spec_from_file_location("coffee_shop", "coffee_shop.py")
+        if spec is None:
+            raise ImportError("Could not create spec for coffee_shop.py")
+
         self.main_module = importlib.util.module_from_spec(spec)
+        if spec.loader is None:
+            raise ImportError("Could not create loader for coffee_shop.py")
+
+        # Capture print output
         self.held, sys.stdout = sys.stdout, StringIO()
 
-        assert spec.loader is not None
+        # Execute the module
         spec.loader.exec_module(self.main_module)
 
     def tearDown(self):
