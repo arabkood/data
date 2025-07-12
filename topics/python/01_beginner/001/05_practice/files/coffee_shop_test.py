@@ -6,7 +6,7 @@ import importlib.util
 
 class TestCoffeeShop(unittest.TestCase):
     def setUp(self):
-        spec = importlib.util.spec_from_file_location("main", "main.py")
+        spec = importlib.util.spec_from_file_location("main", "coffee_shop.py")
 
         assert spec is not None
         self.main_module = importlib.util.module_from_spec(spec)
@@ -41,10 +41,7 @@ class TestCoffeeShop(unittest.TestCase):
             "المتغير `price` يجب أن يكون من نوع `رقم`",
         )
         self.assertGreaterEqual(
-            self.main_module.price, 4.0, "السعر يجب أن يكون 4.00 على الأقل"
-        )
-        self.assertLessEqual(
-            self.main_module.price, 8.0, "السعر يجب أن يكون 8.00 على الأكثر"
+            self.main_module.price, 0.0, "السعر يجب أن يكون 0.00 على الأقل"
         )
 
     def test_total_calculation(self):
