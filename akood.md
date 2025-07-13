@@ -96,3 +96,11 @@ Now, generate module 2. Do not focus on details that waste time. Generate a modu
 6. **Use concrete analogies**
 
 7. **Be painfully explicit with steps**
+
+## VALUES
+
+- **Arabic**: China, Russia, Korea and more use their mother language for everything online, and we should do the same.
+- **Practice over theory**: Encouraging learning that uses thinking and critical thinking instead of consummation of knowledge.
+- **Make an Impact**: Focus on changing the world to better, not profits.
+- **Collaboration**: Encourage working together and peer to peer.
+- **Simplicity**: Don't confuse users and don't scare them, make them feel welcome.
