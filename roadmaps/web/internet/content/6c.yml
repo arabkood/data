@@ -1,0 +1,585 @@
+---
+item_id: "module-6-item-1"
+item_type: "lesson"
+title: "The Skeleton (HTML)"
+
+steps:
+  - type: "markdown"
+    content: |
+      We've learned how your browser finds a website using DNS and communicates with the server using HTTP. But what happens when the server sends back the actual webpage? What is a webpage made of?
+
+      Think about building a house. Before you can paint the walls, install beautiful fixtures, or add smart home technology, you need to build the basic structure - the foundation, walls, and roof. This skeleton gives the house its shape and defines where everything goes.
+
+      Webpages work the same way. Every webpage you've ever visited started with a skeleton that defines its basic structure and content.
+
+  - type: "markdown"
+    content: |
+      **Meet HTML: The Skeleton of the Web**
+
+      **HTML** stands for **HyperText Markup Language**. Don't let the fancy name intimidate you - HTML is simply the language used to create the basic structure and content of webpages.
+
+      HTML tells the browser: "This is a heading, this is a paragraph, this is a link, this is an image." It's like the blueprint that shows where each room, door, and window goes in a house.
+
+      Every single webpage on the internet - from Google's simple search page to complex sites like Amazon - starts with HTML providing the fundamental structure.
+
+      # media_idea: Simple house blueprint analogy showing rooms labeled as "Header", "Main Content", "Sidebar", "Footer"
+
+  - type: "quiz"
+    question: "What is HTML primarily responsible for in a webpage?"
+    options:
+      - "Making the webpage look colorful and attractive"
+      - "Providing the basic structure and content of the webpage"
+      - "Making the webpage interactive with buttons and forms"
+    solution: 1
+    explanation: "HTML defines the structure and content of a webpage - the headings, paragraphs, links, and images. It's like the skeleton that gives the page its basic shape and organization."
+
+  - type: "markdown"
+    content: |
+      **What HTML Looks Like**
+
+      HTML uses "tags" to mark different types of content. Tags are like labels that tell the browser what each piece of content is supposed to be.
+
+      Here's a simple example:
+
+      ```html
+      <h1>Welcome to My Website</h1>
+      <p>This is my first paragraph of text.</p>
+      <p>This is my second paragraph with a <a href="https://google.com">link to Google</a>.</p>
+      ```
+
+      Let's break this down:
+      - `<h1>` creates a large heading
+      - `<p>` creates a paragraph of text
+      - `<a href="...">` creates a clickable link
+
+      Notice how each tag has an opening (`&lt;h1&gt;`) and closing (`&lt;/h1&gt;`) version that wraps around the content.
+
+  - type: "markdown"
+    content: |
+      **Raw HTML in the Browser**
+
+      When a browser receives pure HTML without any styling, it displays a very basic, plain version of the webpage. It looks quite boring - just black text on a white background with default fonts.
+
+      But here's the important part: **all the content is there**. The headings, paragraphs, links, and images are all present and functional. You can click links, read text, and navigate the page. It's fully functional - just not very pretty.
+
+      Think of it like the skeleton of a house before any interior design. The structure is solid, the rooms are defined, and you can walk through it - but it's not decorated yet.
+
+      # media_idea: Screenshot comparison showing the same content as styled webpage vs raw HTML (plain black text on white background)
+
+  - type: "fill"
+    lang: "html"
+    question: "Complete this basic HTML structure:"
+    code: |
+      <h1>My Website Title<@@INPUT@@>
+      <p>Welcome to my website!<@@INPUT@@>
+    solution:
+      - "/^/h1$/i"
+      - "/^/p$/i"
+
+  - type: "markdown"
+    content: |
+      **Common HTML Elements**
+
+      HTML has many different tags for different types of content. Here are some of the most common ones:
+
+      **Headings**: `<h1>`, `<h2>`, `<h3>` - Different levels of headings (like chapter titles and subtitles)
+      **Paragraphs**: `<p>` - Normal text content
+      **Links**: `<a href="...">` - Clickable links to other pages
+      **Images**: `<img src="...">` - Pictures and graphics
+      **Lists**: `<ul>` and `<li>` - Bullet points and numbered lists
+      **Divisions**: `<div>` - Containers that group other elements together
+
+      Each tag has a specific purpose and tells the browser how to interpret that piece of content.
+
+  - type: "quiz"
+    question: "Which HTML tag would you use to create a clickable link?"
+    options:
+      - "`<link>`"
+      - "`<a>`"
+      - "`<url>`"
+    solution: 1
+    explanation: "The `<a>` tag (which stands for 'anchor') is used to create clickable links. You specify where the link goes using the `href` attribute, like `<a href='https://akood.com'>Click here</a>`."
+
+  - type: "markdown"
+    content: |
+      **Why HTML is Called "Markup"**
+
+      HTML is called a "markup language" because it's like marking up a document with instructions. Imagine you're an editor reviewing a manuscript:
+
+      - You might circle a line and write "Make this a heading"
+      - You might underline text and write "Make this a link"
+      - You might draw a box around text and write "This is a paragraph"
+
+      HTML does exactly this, but in a standardized way that browsers can understand. The tags are the "markup" that tells the browser how to display each piece of content.
+
+  - type: "markdown"
+    content: |
+      **HTML is Semantic**
+
+      One of HTML's most important features is that it's "semantic" - meaning the tags describe what the content *is*, not what it should *look like*.
+
+      For example:
+      - `<h1>` doesn't mean "make this big and bold"
+      - `<h1>` means "this is the main heading of the page"
+
+      This distinction is crucial because:
+      - Screen readers for visually impaired users can understand the page structure
+      - Search engines can better understand your content
+      - The appearance can be changed later without touching the HTML
+
+      HTML focuses on meaning and structure, leaving the visual appearance to CSS (which we'll learn about next).
+
+  - type: "markdown"
+    content: |
+      **HTML is Everywhere**
+
+      Every webpage you visit uses HTML as its foundation:
+      - Social media posts on Facebook? HTML structures each post
+      - Search results on Google? HTML organizes each result
+      - Product listings on Amazon? HTML defines each product's information
+      - This lesson you're reading right now? Built with HTML
+
+      HTML is so fundamental that even when websites look completely different, they all share this common structural language underneath.
+
+      In our next lesson, we'll discover how CSS transforms this basic HTML skeleton into the beautiful, styled websites we're used to seeing.
+
+---
+item_id: "module-6-item-2"
+item_type: "lesson"
+title: "The Style (CSS)"
+
+steps:
+  - type: "markdown"
+    content: |
+      Remember our house analogy? We built the skeleton with HTML - the basic structure with rooms, doors, and windows. Now we have a functional house, but it's pretty plain. The walls are bare, there's no furniture, and everything looks the same.
+
+      What if we want to paint the walls blue? Add some furniture? Change the lighting? Install beautiful hardwood floors? We need interior design.
+
+      That's exactly what **CSS** does for webpages. CSS stands for **Cascading Style Sheets**, and it's the language that transforms plain HTML into the beautiful, colorful, well-designed websites we're used to seeing.
+
+  - type: "markdown"
+    content: |
+      **The Transformation Power of CSS**
+
+      Let's continue with the HTML example from our previous lesson:
+
+      ```html
+      <h1>Welcome to My Website</h1>
+      <p>This is my first paragraph of text.</p>
+      <p>This is my second paragraph with a <a href="https://google.com">link to Google</a>.</p>
+      ```
+
+      Without CSS, this appears as plain black text on a white background. But with CSS, we can:
+      - Change the heading to be blue and use a fancy font
+      - Make the paragraphs use a different font size and color
+      - Style the link to be red and remove the underline
+      - Add a colorful background to the entire page
+      - Add spacing and layout to make everything look organized
+
+      The content stays exactly the same - we're just changing how it looks.
+
+      # media_idea: Before/after comparison showing the same HTML content without CSS (plain) vs with CSS (styled and colorful)
+
+  - type: "quiz"
+    question: "What is the primary purpose of CSS?"
+    options:
+      - "To create the structure and content of a webpage"
+      - "To control the visual appearance and layout of a webpage"
+      - "To make webpages interactive with user input"
+    solution: 1
+    explanation: "CSS is responsible for the visual presentation of a webpage - colors, fonts, layouts, spacing, and overall design. It transforms the basic HTML structure into visually appealing websites."
+
+  - type: "markdown"
+    content: |
+      **How CSS Works: Rules and Selectors**
+
+      CSS works by creating "rules" that tell the browser how to style specific HTML elements. Each rule has two parts:
+
+      **Selector**: Which HTML element(s) to style
+      **Properties**: What changes to make to those elements
+
+      Here's a simple example:
+
+      ```css
+      h1 {
+        color: blue;
+        font-size: 36px;
+      }
+      ```
+
+      This rule says: "Find all `&lt;h1&gt;` elements and make them blue with a font size of 36 pixels."
+
+      It's like giving specific instructions to an interior designer: "Take all the main headings and make them blue and large."
+
+  - type: "markdown"
+    content: |
+      **CSS Properties: The Design Toolbox**
+
+      CSS has hundreds of properties that control different aspects of appearance:
+
+      **Colors**: `color` (text color), `background-color` (background color)
+      **Text**: `font-size`, `font-family`, `font-weight` (bold/normal)
+      **Spacing**: `margin` (space around elements), `padding` (space inside elements)
+      **Layout**: `width`, `height`, `position` (where elements are placed)
+      **Borders**: `border` (lines around elements)
+      **Effects**: `shadow`, `opacity` (transparency)
+
+      Each property gives you control over a different aspect of how elements look and behave.
+
+  - type: "fill"
+    lang: "css"
+    question: "Complete this CSS rule to make paragraphs red with a large font:"
+    code: |
+      @@INPUT@@ {
+        color: red;
+        font-size: 24px;
+      }
+    solution:
+      - "/^p$/i"
+
+  - type: "markdown"
+    content: |
+      **The Separation of Concerns**
+
+      One of the most important concepts in web development is separating structure (HTML) from presentation (CSS). This separation provides several benefits:
+
+      **Maintainability**: You can change the design without touching the content
+      **Reusability**: The same CSS can style multiple HTML pages
+      **Flexibility**: You can have different designs for different devices (desktop, mobile, tablet)
+      **Collaboration**: Content writers can work on HTML while designers work on CSS
+
+      It's like having separate blueprints for a house's structure and its interior design. The architect and interior designer can work independently.
+
+  - type: "markdown"
+    content: |
+      **CSS Selectors: Getting More Specific**
+
+      CSS gives you many ways to target specific elements:
+
+      **Element selectors**: `p` (all paragraphs), `h1` (all main headings)
+      **Class selectors**: `.highlight` (elements with class="highlight")
+      **ID selectors**: `#main-title` (the element with id="main-title")
+      **Descendant selectors**: `p a` (links inside paragraphs)
+
+      This is like being able to give very specific instructions: "Paint all the bedroom walls blue" vs "Paint only the master bedroom wall blue" vs "Paint the accent wall in the living room blue."
+
+  - type: "quiz"
+    question: "Which CSS selector would target all paragraph elements on a page?"
+    options:
+      - "`#paragraph`"
+      - "`.paragraph`"
+      - "`p`"
+    solution: 2
+    explanation: "The `p` selector targets all `<p>` elements (paragraphs) on the page. The `#` symbol is for IDs, and the `.` symbol is for classes."
+
+  - type: "markdown"
+    content: |
+      **Responsive Design: Different Styles for Different Devices**
+
+      One of CSS's most powerful features is the ability to apply different styles based on the device or screen size. This is called "responsive design."
+
+      You can write CSS rules that say:
+      - "On large desktop screens, show three columns"
+      - "On tablets, show two columns"
+      - "On phones, show one column"
+
+      The same HTML content automatically adapts to look great on any device, all thanks to CSS.
+
+  - type: "markdown"
+    content: |
+      **CSS Animations and Effects**
+
+      Modern CSS can create sophisticated visual effects:
+      - Smooth transitions when you hover over buttons
+      - Elements that fade in and out
+      - Animations that move elements around the page
+      - 3D transformations and rotations
+
+      These effects make websites feel more interactive and engaging, even before we add JavaScript.
+
+  - type: "bug"
+    lang: "css"
+    question: "Find the line with the CSS syntax error:"
+    code: |
+      h1 {
+        color: blue;
+        font-size 24px;
+        font-weight: bold;
+      }
+    solution: 2
+    explanation: "Line 3 is missing a colon (:) after 'font-size'. CSS properties require a colon between the property name and value."
+    hint: "Look for missing punctuation in the CSS properties."
+
+  - type: "markdown"
+    content: |
+      **CSS Frameworks: Standing on the Shoulders of Giants**
+
+      While you can write all CSS from scratch, many developers use CSS frameworks - pre-written CSS code that provides common design patterns and components.
+
+      Popular frameworks include Bootstrap, Tailwind CSS, and Foundation. These frameworks provide:
+      - Pre-designed buttons, forms, and navigation menus
+      - Responsive grid systems for layouts
+      - Consistent color schemes and typography
+      - Common UI components like modals and carousels
+
+      It's like using pre-made furniture and decorations instead of building everything from scratch.
+
+  - type: "markdown"
+    content: |
+      **The Evolution of CSS**
+
+      CSS has evolved significantly since its creation:
+      - **CSS1** (1996): Basic styling capabilities
+      - **CSS2** (1998): Added positioning and media types
+      - **CSS3** (1999-ongoing): Modular approach with new features like animations, flexbox, and grid layout
+      - **Modern CSS**: Continues to add new features like CSS Grid, custom properties (variables), and advanced selectors
+
+      Today's CSS is incredibly powerful and can handle complex layouts and interactions that once required JavaScript or complex workarounds.
+
+  - type: "markdown"
+    content: |
+      **CSS in the Real World**
+
+      Every beautifully designed website you admire uses CSS:
+      - The smooth animations on Apple's website
+      - The responsive layout of your favorite news site
+      - The colorful interface of social media platforms
+      - The professional look of corporate websites
+
+      CSS is what makes the web visually appealing and user-friendly. Without it, every website would look like a plain text document.
+
+      In our next lesson, we'll explore JavaScript - the technology that makes websites truly interactive and dynamic.
+
+---
+item_id: "module-6-item-3"
+item_type: "lesson"
+title: "The Interactivity (JavaScript)"
+
+steps:
+  - type: "markdown"
+    content: |
+      We've built our house with HTML (the structure) and decorated it beautifully with CSS (the style). But something's missing. The lights don't turn on when we flip the switch. The faucet doesn't run water. The doorbell doesn't ring. The house looks perfect, but it's not truly functional.
+
+      What we need is the electrical system, plumbing, and all the mechanisms that make a house come alive. In the web world, that's **JavaScript**.
+
+      JavaScript is the programming language that makes websites interactive and dynamic. It's what turns static pages into applications that respond to your actions.
+
+  - type: "markdown"
+    content: |
+      **What JavaScript Brings to Life**
+
+      Think about your favorite websites. What makes them engaging?
+      - When you click a "Like" button on social media, the heart turns red instantly
+      - When you type in a search box, suggestions appear as you type
+      - Photo galleries where you can click through images
+      - Forms that check if your email address is valid as you type
+      - Shopping carts that update totals when you add items
+      - Maps that you can drag and zoom
+
+      None of these interactions are possible with just HTML and CSS. They all require JavaScript to detect your actions and respond accordingly.
+
+      # media_idea: Split screen showing a static webpage vs the same page with interactive elements highlighted (buttons, forms, animations)
+
+  - type: "quiz"
+    question: "Which technology would be responsible for showing a pop-up message after you click a button?"
+    options:
+      - "HTML"
+      - "CSS"
+      - "JavaScript"
+    solution: 2
+    explanation: "JavaScript handles interactivity and dynamic behavior. While HTML creates the button structure and CSS styles its appearance, JavaScript is needed to detect the click and show the pop-up message."
+
+  - type: "markdown"
+    content: |
+      **JavaScript: The Brain of the Webpage**
+
+      If HTML is the skeleton and CSS is the appearance, then JavaScript is the brain. It can:
+
+      **Think**: Make decisions based on user input or conditions
+      **Remember**: Store information and data
+      **React**: Respond to user actions like clicks, typing, or scrolling
+      **Communicate**: Send and receive data from servers
+      **Calculate**: Perform mathematical operations
+      **Animate**: Create dynamic visual effects beyond what CSS can do
+
+      JavaScript transforms a static document into an interactive application.
+
+  - type: "markdown"
+    content: |
+      **A Simple JavaScript Example**
+
+      Let's say we have a button in our HTML:
+
+      ```html
+      <button id="magic-button">Click me!</button>
+      <p id="message"></p>
+      ```
+
+      And some CSS to make it look nice:
+
+      ```css
+      button {
+        background-color: blue;
+        color: white;
+        padding: 10px 20px;
+      }
+      ```
+
+      Now, let's add JavaScript to make it interactive:
+
+      ```javascript
+      document.getElementById('magic-button').addEventListener('click', function() {
+        document.getElementById('message').textContent = 'Hello! You clicked the button!';
+      });
+      ```
+
+      This JavaScript code says: "When someone clicks the button with id 'magic-button', change the text of the paragraph with id 'message' to say 'Hello! You clicked the button!'"
+
+  - type: "fill"
+    lang: "javascript"
+    question: "Complete this JavaScript code to change text when a button is clicked:"
+    code: |
+      document.getElementById('my-button').@@INPUT@@('click', function() {
+        document.getElementById('output').@@INPUT@@ = 'Button was clicked!';
+      });
+    solution:
+      - "/^addEventListener$/i"
+      - "/^(textContent|innerText)$/i"
+
+  - type: "markdown"
+    content: |
+      **JavaScript Can Manipulate HTML and CSS**
+
+      One of JavaScript's most powerful features is its ability to change HTML and CSS after the page has loaded. This is called "DOM manipulation" (DOM stands for Document Object Model).
+
+      JavaScript can:
+      - Add new HTML elements to the page
+      - Remove existing elements
+      - Change the text content of elements
+      - Modify CSS styles dynamically
+      - Show and hide elements
+      - Rearrange the order of elements
+
+      This is like having a renovation crew that can instantly remodel your house while you're living in it.
+
+  - type: "markdown"
+    content: |
+      **JavaScript Handles Events**
+
+      JavaScript excels at responding to "events" - things that happen on the webpage:
+
+      **User Events**: clicks, typing, scrolling, hovering
+      **Browser Events**: page loading, window resizing
+      **Time Events**: timers, delays, repeated actions
+      **Network Events**: receiving data from servers
+
+      For each event, you can write JavaScript code that responds appropriately. It's like having a very attentive butler who notices everything and responds to your needs.
+
+  - type: "quiz"
+    question: "What is an 'event' in JavaScript?"
+    options:
+      - "A type of HTML element"
+      - "A CSS property for styling"
+      - "Something that happens on a webpage that JavaScript can respond to"
+    solution: 2
+    explanation: "An event is an action or occurrence that happens in the browser - like a user clicking a button, typing in a form, or the page finishing loading. JavaScript can 'listen' for these events and respond with code."
+
+  - type: "markdown"
+    content: |
+      **JavaScript Variables and Data**
+
+      JavaScript can store and work with different types of information:
+
+      **Numbers**: `let age = 25;`
+      **Text**: `let name = "Ibrahim";`
+      **True/False**: `let isLoggedIn = true;`
+      **Lists**: `let colors = ["red", "green", "blue"];`
+      **Objects**: `let person = {name: "Sarah", age: 30};`
+
+      This data can be used to personalize websites, remember user preferences, perform calculations, and much more.
+
+  - type: "markdown"
+    content: |
+      **JavaScript and APIs: Connecting to the Outside World**
+
+      JavaScript can communicate with external services through APIs (Application Programming Interfaces). This allows websites to:
+
+      - Get real-time weather data
+      - Display maps and directions
+      - Process payments
+      - Send emails
+      - Access social media feeds
+      - Translate languages
+
+      It's like giving your website the ability to make phone calls to other services and get information or perform actions.
+
+  - type: "order"
+    lang: "javascript"
+    question: "Put these JavaScript concepts in order from basic to advanced:"
+    code:
+      - "Variables and data types"
+      - "Advanced API integration"
+      - "Event handling (clicks, typing)"
+      - "DOM manipulation (changing HTML/CSS)"
+      - "Functions and logic"
+
+  - type: "markdown"
+    content: |
+      **Modern JavaScript Frameworks**
+
+      As websites became more complex, developers created frameworks to make JavaScript development easier:
+
+      **React**: Created by Facebook, great for building user interfaces
+      **Vue.js**: Known for being beginner-friendly and flexible
+      **Angular**: Comprehensive framework for large applications
+
+      These frameworks provide pre-built components and patterns, like having a toolkit of advanced electrical components instead of wiring everything from scratch.
+
+  - type: "markdown"
+    content: |
+      **JavaScript Beyond the Browser**
+
+      While we've focused on JavaScript in web browsers, it's worth knowing that JavaScript is also used for:
+
+      **Server-side programming**: Node.js allows JavaScript to run on servers
+      **Mobile app development**: React Native, Ionic
+      **Desktop applications**: Electron (used by apps like Discord, Slack)
+      **Game development**: Various game engines support JavaScript
+
+      JavaScript has grown from a simple scripting language to a versatile programming language used across many platforms.
+
+  - type: "bug"
+    lang: "javascript"
+    question: "Find the line with the JavaScript syntax error:"
+    code: |
+      function showMessage() {
+        let message = "Hello World";
+        console.log(message)
+        alert(message);
+      }
+    solution: 2
+    explanation: "Line 3 is missing a semicolon (;) after 'console.log(message)'. While JavaScript can sometimes work without semicolons, it's considered best practice to include them."
+    hint: "Look for missing punctuation at the end of statements."
+
+  - type: "markdown"
+    content: |
+      **The Three Pillars Working Together**
+
+      Now you understand the three fundamental technologies that power every website:
+
+      **HTML**: Provides structure and content ("This is a heading, this is a paragraph")
+      **CSS**: Controls appearance and layout ("Make it blue, center it, add spacing")
+      **JavaScript**: Adds interactivity and dynamic behavior ("When clicked, show a message")
+
+      These three technologies work together seamlessly. HTML creates the foundation, CSS makes it beautiful, and JavaScript makes it alive. Every website you visit uses this same fundamental combination.
+
+      In our final module, we'll see how all the concepts we've learned come together when you actually visit a website - from typing the URL to seeing the fully interactive page.
+
+  - type: "quiz"
+    question: "Which statement best describes how HTML, CSS, and JavaScript work together?"
+    options:
+      - "They are three separate technologies that work independently"
+      - "They are complementary technologies that work together to create complete web experiences"
+      - "Only one is needed to create a functional website"
+    solution: 1
+    explanation: "HTML, CSS, and JavaScript are designed to work together. HTML provides structure, CSS adds styling, and JavaScript enables interactivity. Modern websites typically use all three technologies to create complete, engaging user experiences."

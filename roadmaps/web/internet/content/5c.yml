@@ -1,0 +1,190 @@
+---
+item_id: "module-5-item-1"
+item_type: "lesson"
+title: "The Translation Problem"
+
+steps:
+  - type: "markdown"
+    content: |
+      Let's think about what we've learned so far. We know that every computer on the internet has a unique IP address - a set of numbers like `192.168.1.1` or `172.217.14.206`. We also know that when you want to visit a website, your browser needs to connect to the server's IP address.
+
+      But here's the thing: when you want to visit Google, you don't type `172.217.14.206` into your browser. You type `google.com`. When you want to check Facebook, you don't memorize `157.240.241.35` - you just type `facebook.com`.
+
+      This creates a fundamental problem that every internet user faces daily, often without realizing it.
+
+  - type: "markdown"
+    content: |
+      **The Problem: Humans vs. Computers**
+
+      Think about your phone's contact list. When you want to call your friend Ibrahim, you don't memorize his phone number `+46-70-123-4567`. You just tap on "Ibrahim" in your contacts, and your phone automatically dials the number.
+
+      But what if your phone could *only* dial numbers, not names? Every time you wanted to call Ibrahim, you'd have to:
+      1. Open your contacts
+      2. Find Ibrahim's name
+      3. Look up his number
+      4. Manually dial those digits
+
+      This is exactly the challenge on the internet. Your browser can only connect to IP addresses (the numbers), but you want to use domain names (the friendly names) because they're easier to remember.
+
+  - type: "quiz"
+    question: "Why do we use domain names like 'google.com' instead of IP addresses like '172.217.14.206'?"
+    options:
+      - "Domain names make websites load faster"
+      - "IP addresses are not secure enough for public use"
+      - "Domain names are much easier for humans to remember and use"
+    solution: 2
+    explanation: "Domain names are designed to be human-friendly. It's much easier to remember 'google.com' than a string of numbers like '172.217.14.206'. This makes the internet accessible to everyone, not just people who memorize numbers well."
+
+  - type: "markdown"
+    content: |
+      **The Scale of the Problem**
+
+      Let's put this in perspective. There are over 1.8 billion websites on the internet today. Imagine if you had to memorize the IP address for every single website you wanted to visit:
+
+      - Amazon: `176.32.103.205`
+      - YouTube: `172.217.14.174`
+      - Wikipedia: `91.198.174.192`
+      - Your bank's website: `203.0.113.42`
+      - Your favorite news site: `198.51.100.89`
+
+      Not only would this be impossible to remember, but here's another problem: **IP addresses can change**. If YouTube moved to a different server with a new IP address, every bookmark, link, and reference to YouTube across the entire internet would break.
+
+  - type: "markdown"
+    content: |
+      **What We Need: A Translation Service**
+
+      What we need is a service that can instantly translate between human-friendly names and computer-friendly numbers. This service would need to:
+
+      1. **Store the relationships**: Keep track of which domain name corresponds to which IP address
+      2. **Be fast**: Translate names to numbers instantly when requested
+      3. **Be reliable**: Work 24/7 without breaking
+      4. **Be global**: Work the same way everywhere in the world
+      5. **Stay updated**: Handle changes when websites move to new servers
+
+      Think of it like a universal phone book that every device on the internet can consult whenever it needs to "call" a website.
+
+  - type: "markdown"
+    content: |
+      **A Real-World Example**
+
+      Let's trace through what happens when you type `akood.com` into your browser:
+
+      1. **You type**: `akood.com` (human-friendly)
+      2. **Your browser thinks**: "I need to connect to a server, but I can only connect to IP addresses. What's the IP address for akood.com?"
+      3. **The problem**: Your browser doesn't know the IP address for akood.com
+      4. **What's needed**: A way to look up "akood.com" and find its corresponding IP address
+
+      This lookup needs to happen for every single website you visit, and it needs to happen fast enough that you don't notice any delay.
+
+      In the next lesson, we'll discover how the internet solves this translation problem with an elegant system called DNS.
+
+---
+item_id: "module-5-item-2"
+item_type: "lesson"
+title: "The Phonebook Solution (DNS)"
+
+steps:
+  - type: "markdown"
+    content: |
+      Now we understand the problem: browsers need IP addresses, but humans prefer domain names. We need a translation service that can convert `google.com` into `172.217.14.206` instantly.
+
+      The internet's solution is called **DNS** - the **Domain Name System**. Think of DNS as the internet's massive, global phonebook that every device can consult to look up addresses.
+
+      But here's what makes DNS truly remarkable: it's not just one giant phonebook sitting in one place. It's a distributed system of thousands of servers working together around the world to provide this translation service.
+
+  - type: "markdown"
+    content: |
+      **How DNS Works: The Phonebook Analogy**
+
+      Imagine you're trying to call a restaurant, but you only know its name: "Giuseppe's Italian Restaurant." Here's how you'd find the phone number:
+
+      1. **Check your contacts**: Maybe you called them before and saved the number
+      2. **Ask a friend**: Someone might know the number off the top of their head
+      3. **Look in the phone book**: Find the restaurant's listing in the directory
+      4. **Call directory assistance**: Ask the operator to look it up for you
+
+      DNS works exactly the same way, but instead of looking up phone numbers, it looks up IP addresses. Your browser follows a similar process when you type in a domain name.
+
+  - type: "quiz"
+    question: "What is the primary job of a DNS server?"
+    options:
+      - "To store website files and serve them to users"
+      - "To translate domain names into IP addresses"
+      - "To secure the connection between browsers and servers"
+    solution: 1
+    explanation: "DNS servers are specialized computers whose main job is to maintain a directory of domain names and their corresponding IP addresses. When asked about a domain name, they respond with the IP address needed to reach that website."
+
+  - type: "markdown"
+    content: |
+      **The DNS Lookup Process**
+
+      Let's walk through what happens when you type `akood.com` into your browser:
+
+      **Step 1: Check the Cache**
+      Your browser first checks if it recently looked up akood.com. If it did, it uses the saved IP address (like checking your recent calls).
+
+      **Step 2: Ask Your Local DNS Server**
+      If not cached, your browser asks your ISP's DNS server: "What's the IP address for akood.com?"
+
+      **Step 3: The DNS Server Responds**
+      The DNS server looks up akood.com in its records and responds: "akood.com is at IP address 192.0.2.1"
+
+      **Step 4: Connect to the Website**
+      Now your browser can connect to 192.0.2.1 and request the akood.com website.
+
+      # media_idea: Simple flowchart showing browser → DNS server → IP address → website connection
+
+  - type: "markdown"
+    content: |
+      **Why DNS is Distributed**
+
+      You might wonder: why not just have one giant DNS server that knows every website's IP address? Here are the problems with that approach:
+
+      **Speed**: If there was only one DNS server in California, someone in Sweden would have to wait for their request to travel halfway around the world.
+
+      **Reliability**: If that one server crashed, the entire internet would stop working. No one could visit any websites.
+
+      **Scale**: Billions of devices make DNS requests every second. One server couldn't handle that load.
+
+      Instead, DNS uses thousands of servers distributed globally, with each server knowing about different parts of the internet.
+
+  - type: "quiz"
+    question: "Which statement about DNS is correct?"
+    options:
+      - "DNS is a single, centralized server that stores all domain name information"
+      - "DNS is a distributed system of servers working together globally"
+      - "DNS only works for websites that end in '.com'"
+    solution: 1
+    explanation: "DNS is distributed across thousands of servers worldwide. This distribution provides speed (servers closer to users), reliability (no single point of failure), and scalability (can handle billions of requests)."
+
+  - type: "markdown"
+    content: |
+      **DNS Caching: Making it Faster**
+
+      To make DNS even faster, the system uses caching at multiple levels:
+
+      **Browser Cache**: Your browser remembers recent lookups for a few minutes
+      **Operating System Cache**: Your computer remembers lookups for longer
+      **ISP Cache**: Your internet provider remembers popular websites
+      **DNS Server Cache**: Even DNS servers remember recent lookups
+
+      This is like how you gradually memorize phone numbers you call frequently. The more often a website is visited, the more likely its IP address is cached somewhere close to you, making future visits faster.
+
+      **Fun fact**: This is why when a website changes its IP address, it can take a few hours for everyone around the world to see the change. The old IP address is still cached in various places until the cache expires.
+
+  - type: "markdown"
+    content: |
+      **DNS in Your Daily Life**
+
+      Every time you:
+      - Type a web address and press Enter
+      - Click a link on a webpage  
+      - Check your email
+      - Use a mobile app that connects to the internet
+      - Stream a video
+
+      DNS is working behind the scenes, translating human-friendly names into the IP addresses that computers need to communicate.
+
+      DNS is so fundamental to how the internet works that if it stopped working, the internet would effectively be unusable for most people. It's one of those invisible systems that just works, allowing us to navigate the web using memorable names instead of memorizing strings of numbers.
+
+      In our next lesson, we'll see how all these internet concepts come together when you visit a website.

@@ -1,0 +1,195 @@
+---
+item_id: "module-7-item-1"
+item_type: "lesson"
+title: "The Complete Journey"
+steps:
+  - type: "markdown"
+    content: |
+      Congratulations! You've learned all the fundamental pieces of how the internet works. Now, let's see how they all fit together.
+
+      Imagine you're sitting at your computer, and you decide you want to visit akood.com. What happens from the moment you type that URL until the webpage appears on your screen?
+
+      Let's walk through this journey step by step, using everything we've learned so far.
+
+  - type: "markdown"
+    content: |
+      ## Step 1: You Type the Domain Name
+
+      You open your web browser (Chrome, Firefox, Safari, etc.) and type "akood.com" into the address bar. Remember, your browser is acting as a **client** - it's going to request information from a server.
+
+      But here's the problem: your browser needs an IP address to find the server, not a human-friendly domain name.
+
+  - type: "markdown"
+    content: |
+      ## Step 2: DNS Lookup - Finding the Address
+
+      Your browser realizes it needs to translate "akood.com" into an IP address. So it sends a request to a **DNS server** (the internet's phonebook).
+
+      The DNS server looks up "akood.com" in its directory and responds with something like "192.168.1.100" - the actual IP address where the akood.com server lives.
+
+      Think of this like looking up your friend's phone number in your contacts before calling them.
+
+  - type: "quiz"
+    question: "At this point in the journey, what has your browser successfully obtained?"
+    options:
+      - "The actual webpage content"
+      - "The IP address of the akood.com server"
+      - "A secure HTTPS connection"
+    solution: 1
+    explanation: "Your browser now knows the IP address (like 192.168.1.100) where the akood.com server is located, but it hasn't requested the webpage yet."
+
+  - type: "markdown"
+    content: |
+      ## Step 3: Making the HTTP Request
+
+      Now your browser knows where to go! It creates an **HTTP request** and sends it to the server at that IP address.
+
+      The request basically says: "Hello server at 192.168.1.100, I'm a web browser and I would like the homepage of akood.com, please."
+
+      If the website uses HTTPS (the secure version), this conversation happens in an encrypted envelope that only your browser and the server can read.
+
+  - type: "markdown"
+    content: |
+      ## Step 4: Server Processing
+
+      The **server** at akood.com receives your request. It's a powerful computer that's been waiting 24/7 for requests just like yours.
+
+      The server processes your request, gathers all the files needed for the akood.com homepage (HTML, CSS, JavaScript files), and prepares to send them back to you.
+
+      This is like a waiter in a restaurant receiving your order and going to the kitchen to prepare your meal.
+
+  - type: "markdown"
+    content: |
+      ## Step 5: HTTP Response
+
+      The server sends back an **HTTP response** containing all the files your browser needs to display the webpage.
+
+      This response includes:
+      - The HTML (the structure and content)
+      - The CSS (the styling and colors)
+      - The JavaScript (the interactive features)
+      - Any images or other media files
+
+  - type: "quiz"
+    question: "What is the server's role in this process?"
+    options:
+      - "It translates domain names to IP addresses"
+      - "It receives requests and sends back webpage files"
+      - "It encrypts the data for security"
+    solution: 1
+    explanation: "The server's job is to receive HTTP requests from clients (like your browser) and respond with the requested files and data."
+
+  - type: "markdown"
+    content: |
+      ## Step 6: Browser Renders the Page
+
+      Finally, your browser receives all the files and gets to work displaying the webpage:
+
+      1. It reads the **HTML** to understand the structure (headings, paragraphs, images, etc.)
+      2. It applies the **CSS** to make everything look beautiful (colors, fonts, layout)
+      3. It runs the **JavaScript** to add interactive features (buttons that respond to clicks, animations, etc.)
+
+      And voilà! The akood.com website appears on your screen, ready for you to use.
+
+  - type: "markdown"
+    content: |
+      ## The Complete Journey Summary
+
+      Here's the entire process from start to finish:
+
+      1. **You type the domain name** (akood.com) into your browser
+      2. **Browser asks DNS** for the IP address of akood.com
+      3. **DNS responds** with the IP address (like 192.168.1.100)
+      4. **Browser sends HTTP request** to the server at that IP address
+      5. **Server processes the request** and gathers the webpage files
+      6. **Server sends HTTP response** with HTML, CSS, JavaScript, and media files
+      7. **Browser renders the page** by combining all these files into the final webpage
+
+      This entire process usually takes just a few seconds, but involves multiple computers working together across the globe!
+
+  - type: "quiz"
+    question: "This entire journey from typing a URL to seeing a webpage typically involves how many different computers?"
+    options:
+      - "Just your computer"
+      - "Your computer and the website's server"
+      - "Your computer, DNS servers, and the website's server"
+    solution: 2
+    explanation: "At minimum, three types of computers are involved: your computer (the client), DNS servers (to translate the domain name), and the website's server (to provide the content)."
+
+---
+item_id: "module-7-item-2"
+item_type: "lesson"
+title: "Order the Steps"
+steps:
+  - type: "markdown"
+    content: |
+      Now it's time to test your understanding! You've learned about the complete journey from typing a URL to seeing a webpage.
+
+      Let's see if you can put the steps in the correct order. Think of this like assembling a piece of furniture - the steps must be done in the right sequence for everything to work properly.
+
+  - type: "order"
+    lang: "text"
+    question: "Put these steps in the correct order for what happens when you visit a website:"
+    code:
+      - "User types domain name into browser"
+      - "Browser asks DNS server for IP address"
+      - "DNS server responds with IP address"
+      - "Browser sends HTTP request to server"
+      - "Server processes request and prepares response"
+      - "Server sends HTTP response with webpage files"
+      - "Browser renders the page using HTML, CSS, and JavaScript"
+
+  - type: "markdown"
+    content: |
+      Excellent! You've successfully mapped out the complete journey of a web request.
+
+      This process happens millions of times every second across the internet, connecting people to information, services, and each other.
+
+  - type: "quiz"
+    question: "Which step in this process is responsible for making domain names human-friendly?"
+    options:
+      - "The browser rendering the page"
+      - "The DNS lookup translating domain names to IP addresses"
+      - "The server processing the request"
+    solution: 1
+    explanation: "The DNS system exists specifically to translate human-friendly domain names (like akood.com) into computer-friendly IP addresses (like 192.168.1.100)."
+
+  - type: "markdown"
+    content: |
+      ## You've Mastered the Fundamentals!
+
+      Congratulations! You now understand how the internet works at a fundamental level. You know:
+
+      - The internet is a **physical network** of connected computers
+      - Every device has an **IP address** (like a postal address)
+      - **Domain names** make IP addresses human-friendly
+      - **Clients** (like browsers) request information from **servers**
+      - **HTTP/HTTPS** are the rules for communication
+      - **DNS** is the internet's phonebook
+      - **HTML, CSS, and JavaScript** work together to create webpages
+
+      This knowledge gives you a solid foundation for understanding any web technology you encounter in the future.
+
+  - type: "quiz"
+    question: "When you understand these fundamentals, what are you better equipped to do?"
+    options:
+      - "Only build simple websites"
+      - "Understand and learn any web technology more effectively"
+      - "Become a network administrator immediately"
+    solution: 1
+    explanation: "Understanding these fundamentals gives you the conceptual foundation to understand how any web technology fits into the bigger picture, making all future learning easier and more meaningful."
+
+  - type: "markdown"
+    content: |
+      ## What's Next?
+
+      Now that you understand how the internet works, you're ready to dive deeper into specific technologies:
+
+      - **Frontend Development**: Learn to build the client-side of websites using HTML, CSS, and JavaScript
+      - **Backend Development**: Learn to build the server-side that handles requests and manages data
+      - **Networking**: Dive deeper into how data travels across networks
+      - **Web Security**: Understand how to protect websites and users
+
+      The beautiful thing is that everything you learn next will build upon these fundamental concepts you've just mastered.
+
+      Welcome to the world of web technology! 🚀

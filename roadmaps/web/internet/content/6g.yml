@@ -1,0 +1,171 @@
+---
+item_id: "module-6-item-1"
+item_type: "lesson"
+title: "The Skeleton (HTML)"
+steps:
+  - type: "markdown"
+    content: |
+      We've learned how your browser finds a website and talks to the server. But what does the server send back? What is a webpage actually *made of*?
+
+      Think about building a house. Before you can paint or decorate, you need the **structure**: the foundation, walls, and roof. This skeleton gives the house its shape.
+
+      Webpages work the same way. Every page starts with a skeleton that defines its basic structure and content.
+
+  - type: "markdown"
+    content: |
+      **Meet HTML: The Skeleton of the Web**
+
+      That skeleton is called **HTML**, which stands for **HyperText Markup Language**.
+
+      Don't worry about the name. Just know this: HTML is the language used to give a webpage its structure. It tells the browser, "This is a heading," "This is a paragraph," or "This is an image."
+
+      It's the blueprint for the webpage.
+
+      # media_idea: "A simple diagram showing a house blueprint on the left, and a simple webpage layout on the right, with corresponding areas labeled (e.g., 'Roof' -> 'Header', 'Living Room' -> 'Main Content')."
+
+  - type: "quiz"
+    question: "What is HTML's primary job on a webpage?"
+    options:
+      - "To make the page look colorful and stylish."
+      - "To provide the basic structure and content."
+      - "To handle clicks and user interactions."
+    correct_index: 1
+
+  - type: "markdown"
+    content: |
+      **Meaning, Not Looks**
+
+      A key idea in HTML is that it describes the **meaning** of the content, not what it looks like.
+
+      For example, HTML says "This text is the main heading," not "Make this text big and bold."
+
+      This is important because it allows search engines and screen readers for visually impaired users to understand the page's structure, regardless of its visual design. It separates the blueprint from the interior design.
+
+  - type: "markdown"
+    content: |
+      **The Foundation of Everything**
+
+      Every single webpage on the internet, from a simple blog post to a complex site like Amazon, is built on a foundation of HTML.
+
+      Even when websites look completely different, they all share this common structural language underneath.
+
+      But a skeleton alone is quite plain. In the next item, we'll see how to add style and design to our structure.
+
+---
+item_id: "module-6-item-2"
+item_type: "lesson"
+title: "The Style (CSS)"
+steps:
+  - type: "markdown"
+    content: |
+      Our webpage now has a solid skeleton (HTML), but it's plain and boring—like a house with bare walls and no furniture.
+
+      How do we add color, choose nice fonts, and arrange everything neatly? We need interior design.
+
+      For websites, our interior designer is **CSS**, which stands for **Cascading Style Sheets**.
+
+  - type: "markdown"
+    content: |
+      **The Power of Transformation**
+
+      CSS is the language that controls the **visual presentation** of a webpage. It takes the plain HTML structure and makes it look great.
+
+      With CSS, you can control:
+      - **Colors:** Change the color of text, links, and backgrounds.
+      - **Fonts:** Choose the font style, size, and weight (boldness).
+      - **Spacing:** Add space between elements to avoid clutter.
+      - **Layout:** Arrange content into columns, grids, and position items exactly where you want them.
+
+      # media_idea: "A simple before/after GIF. The 'before' frame shows a plain, unstyled text page. The 'after' frame shows the same text but now with colors, a nice font, and a clear layout."
+
+  - type: "quiz"
+    question: "If you wanted to change the background color of a webpage, which technology would you use?"
+    options:
+      - "HTML"
+      - "CSS"
+      - "DNS"
+    solution: 1
+
+  - type: "markdown"
+    content: |
+      **Separating Structure from Style**
+
+      A huge advantage of this system is that the blueprint (HTML) is separate from the design (CSS).
+
+      This means you can completely change the look and feel of a website just by changing the CSS, without ever touching the underlying HTML content. You can redecorate the house without knocking down any walls.
+
+      This also allows a website to have different styles for different devices. The same HTML can be styled one way for a large desktop screen and another way for a small phone screen. This is called **Responsive Design**.
+
+  - type: "markdown"
+    content: |
+      **The Visual Web**
+
+      Every beautifully designed website you admire is a result of CSS. It's what makes the web not just functional, but also visually appealing and user-friendly.
+
+      Now our house has structure and style. But it's still static. What happens when we want to turn on the lights? That's where our final technology comes in.
+
+---
+item_id: "module-6-item-3"
+item_type: "lesson"
+title: "The Interactivity (JavaScript)"
+steps:
+  - type: "markdown"
+    content: |
+      Our house is built (HTML) and beautifully decorated (CSS). But it's lifeless. The light switches don't work, the doorbell doesn't ring, and the garage door won't open.
+
+      We need the electrical system, the plumbing, the "brains" that make the house come alive.
+
+      On the web, this is **JavaScript**. It's the programming language that makes websites **interactive** and **dynamic**.
+
+  - type: "markdown"
+    content: |
+      **What JavaScript Brings to Life**
+
+      JavaScript is responsible for anything that happens on a page *after* it has loaded. Think about:
+      - "Like" buttons that change color instantly when you click them.
+      - Search boxes that show suggestions as you type.
+      - Photo galleries you can click through.
+      - Online maps you can drag and zoom.
+      - Shopping carts that update your total automatically.
+
+      These are all actions powered by JavaScript.
+
+      # media_idea: "A simple GIF showing a cursor clicking a grey heart icon, which then turns red and a 'Liked!' message appears. This visually demonstrates an interactive event."
+
+  - type: "quiz"
+    question: "A website has a form that checks if your password is strong *as you type it*. What technology is most likely responsible for this instant feedback?"
+    options:
+      - "HTML"
+      - "CSS"
+      - "JavaScript"
+    solution: 2
+
+  - type: "markdown"
+    content: |
+      **The Brain of the Page**
+
+      If HTML is the skeleton and CSS is the appearance, then **JavaScript is the brain**.
+
+      It can react to user **events** like clicks, scrolls, and keyboard presses. When an event happens, JavaScript can instantly change the page's HTML or CSS.
+
+      This is like having a renovation crew that can remodel your house in real-time based on your commands. You click a switch (the event), and JavaScript instantly paints the wall a new color (changes the CSS).
+
+  - type: "markdown"
+    content: |
+      **Connecting to the World**
+
+      JavaScript can also communicate with other servers and services on the internet through things called **APIs**.
+
+      This is how a weather website can get the latest forecast, a travel site can get flight prices, or a news site can load new articles without you having to refresh the entire page. It gives the webpage the ability to fetch new information on its own.
+
+  - type: "markdown"
+    content: |
+      **The Three Pillars Working Together**
+
+      Now you understand the three fundamental technologies that power the modern web:
+
+      - **HTML**: Provides the structure and meaning. (The Skeleton)
+      - **CSS**: Controls the visual style and layout. (The Appearance)
+      - **JavaScript**: Adds interactivity and dynamic behavior. (The Brain)
+
+      These three pillars work together seamlessly to create every rich, interactive web experience you use every day.

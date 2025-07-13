@@ -1,0 +1,244 @@
+---
+item_id: "module-3-item-1"
+item_type: "lesson"
+title: "The Customer (The Client)"
+steps:
+  - type: "markdown"
+    content: |
+      Now that we understand how computers find each other using IP addresses and domain names, let's explore what happens when they actually connect.
+
+      Think about this: when you visit a website, two computers are involved: yours and the one hosting the website. But these two computers have completely different roles, just like a customer and a store employee have different roles in a transaction.
+
+      Let's start with your computer's role. When you browse the web, your computer acts as a **client**.
+
+  - type: "markdown"
+    content: |
+      **What Is a Client?**
+
+      A client is any piece of software that **requests information** from another computer. The most common client you use is your web browser, whether that's Chrome, Firefox, Safari, or Edge.
+
+      Think of it this way: imagine you're hungry and you go to a restaurant. In this scenario:
+      - **You are the customer** (the client)
+      - **You ask for something** (you request food from the menu)
+      - **You wait to receive what you asked for** (you wait for your meal)
+
+      This is exactly what your web browser does when you visit a website!
+
+      # media_idea: A simple illustration showing a person at a restaurant table looking at a menu, with labels showing "Customer = Client" and "Asking for food = Requesting data"
+
+  - type: "markdown"
+    content: |
+      **What Does a Client Do?**
+
+      Every time you use the internet, your client (browser) follows the same basic process:
+
+      1. **Makes a request:** "Hey, I want to see the Akood homepage"
+      2. **Waits for a response:** Sits patiently while the request is processed
+      3. **Receives the response:** Gets the HTML, CSS, and JavaScript that makes up the webpage
+      4. **Displays the result:** Shows you the beautiful, formatted webpage
+
+      Just like when you order food at a restaurant, you ask for what you want, wait for it to be prepared, and then receive your meal.
+
+  - type: "quiz"
+    question: "When you watch a YouTube video, what is your web browser acting as?"
+    options:
+      - "A server"
+      - "A client"
+      - "A network"
+    solution: 1
+    explanation: "Correct! Your web browser is acting as a client because it's requesting information (the video) from YouTube's servers. The browser is asking for something, not providing something."
+
+  - type: "markdown"
+    content: |
+      **Different Types of Clients**
+
+      While web browsers are the most common type of client, there are many others you use every day:
+
+      **Mobile Apps:** When you open Tiktok, Telegram, or any other app, that app is acting as a client. It's requesting information from the company's servers.
+
+      **Email Programs:** When you check your email in Gmail, Outlook, or Apple Mail, those programs are clients requesting your emails from email servers.
+
+      **Video Streaming:** When you watch Shahid, the Shahid app is a client requesting movie data from Shahid's servers.
+
+      **Video Games:** When you play an online game, your game is a client requesting game data from the game company's servers.
+
+      The pattern is always the same: **clients ask for things, servers provide things**.
+
+  - type: "markdown"
+    content: |
+      **The Client's Job Is Simple**
+
+      Here's what's beautiful about being a client: your job is relatively simple. You just need to:
+
+      1. **Know what you want** (which webpage, video, or data)
+      2. **Know where to ask for it** (which server to contact)
+      3. **Understand the response** (how to display the webpage or play the video)
+
+      You don't need to store massive amounts of data, serve thousands of users, or run 24/7. You just ask for what you need, when you need it.
+
+      It's like being a customer at a restaurant—you don't need to know how to cook, manage inventory, or run a kitchen. You just need to know what you want and how to ask for it.
+
+      # media_idea: A comparison showing a simple client device (laptop) with a few basic functions vs. a complex server setup with multiple responsibilities
+
+  - type: "quiz"
+    question: "Which of these is NOT typically a job of a client?"
+    options:
+      - "Requesting information from a server"
+      - "Displaying webpages to the user"
+      - "Storing website files for thousands of users"
+    solution: 2
+    explanation: "Exactly! Storing website files for thousands of users is a server's job, not a client's job. Clients request information and display it, but they don't store and serve data to other users."
+
+  - type: "markdown"
+    content: |
+      **You Are Using a Client Right Now**
+
+      As you read this lesson, you're using a client! Your web browser requested this lesson from Akood's servers, and now it's displaying the content for you.
+
+      Every click, every page load, every video you watch—your browser is acting as a client, politely asking servers around the world to send you the information you want.
+
+      > **Remember:** A client is always the one asking for something. It's the customer in the restaurant, the person making the request. In the next lesson, we'll learn about the other side of this relationship: the server that receives these requests and provides the responses.
+
+---
+item_id: "module-3-item-2"
+item_type: "lesson"
+title: "The Store (The Server)"
+steps:
+  - type: "markdown"
+    content: |
+      In the last lesson, we learned that your computer acts as a client when you browse the web, it's like a customer asking for something. But who's on the other side of this conversation?
+
+      Meet the **server**: the computer that receives requests from clients and sends back responses. If a client is the customer, then a server is like the entire restaurant: the kitchen, the storage, and the staff all working together to serve customers.
+
+  - type: "markdown"
+    content: |
+      **What Is a Server?**
+
+      A server is a powerful computer that:
+      - **Runs 24/7, 365 days a year** (it never sleeps)
+      - **Stores data** (websites, videos, files, databases)
+      - **Waits for requests** from clients
+      - **Processes those requests** and sends back responses
+
+      Think of a server like a restaurant's kitchen. The kitchen:
+      - Is always open during business hours
+      - Has all the ingredients (data) stored and ready
+      - Waits for orders from customers
+      - Prepares the food (processes the request) and sends it out
+
+      # media_idea: A split-screen showing a busy restaurant kitchen on one side and a server room with racks of computers on the other, with labels showing the similarities
+
+  - type: "markdown"
+    content: |
+      **The Server's Day Job**
+
+      Here's what happens from a server's perspective when you visit a website:
+
+      1. **Receives a request:** "Someone wants to see our homepage"
+      2. **Processes the request:** Finds the right files, runs any necessary code
+      3. **Prepares the response:** Gathers all the HTML, CSS, images, and data needed
+      4. **Sends the response:** Delivers everything back to the client
+
+      This might happen thousands or millions of times per day for a popular website! The server handles each request, one after another, like a kitchen preparing meals during a busy dinner rush.
+
+  - type: "quiz"
+    question: "What is the main job of a server?"
+    options:
+      - "To request information from other computers"
+      - "To receive requests and send back responses"
+      - "To browse websites for users"
+    solution: 1
+    explanation: "Correct! A server's main job is to receive requests from clients and send back responses. Servers provide information; they don't request it."
+
+  - type: "markdown"
+    content: |
+      **Why Servers Are So Powerful**
+
+      Servers need to be much more powerful than your personal computer because they have a much harder job:
+
+      **They serve many customers at once:** While your laptop serves just you, a web server might serve thousands of people simultaneously. Imagine a restaurant that had to serve 1,000 customers at the same time!
+
+      **They store massive amounts of data:** YouTube's servers store billions of videos. Facebook's servers store trillions of photos and posts. Your laptop doesn't need to store that much data.
+
+      **They never get to rest:** Your laptop can go to sleep, but servers run 24/7. They're like restaurants that never close.
+
+      **They need backup systems:** If your laptop crashes, only you are affected. If a server crashes, thousands of users lose access to a website.
+
+      # media_idea: A comparison showing a regular laptop vs. a server rack, highlighting the size and power differences
+
+  - type: "markdown"
+    content: |
+      **Different Types of Servers**
+
+      Just like there are different types of restaurants, there are different types of servers:
+
+      **Web Servers:** These store and serve websites. When you visit any website, you're connecting to a web server.
+
+      **Email Servers:** These handle sending, receiving, and storing emails. Your Gmail is stored on Google's email servers.
+
+      **File Servers:** These store and share files. When you save something to Google Drive or Dropbox, it's stored on file servers.
+
+      **Database Servers:** These store and manage organized data. When you search for something on Amazon, the search goes through database servers.
+
+      **Game Servers:** These handle online multiplayer games. When you play Fortnite online, you're connecting to game servers.
+
+  - type: "bug"
+    lang: "text"
+    question: "Find the incorrect statement about servers:"
+    code: |
+      Servers are powerful computers that run 24/7.
+      Servers store websites, files, and other data.
+      Servers request information from your browser.
+      Servers send responses back to clients.
+      Servers can handle thousands of requests simultaneously.
+    solution: 2
+    explanation: "Correct! Servers don't request information from your browser. It's the other way around—your browser (the client) requests information from servers. Servers respond to requests; they don't make them."
+
+  - type: "markdown"
+    content: |
+      **Where Are These Servers?**
+
+      Remember those data centers we talked about in Module 1? That's where most servers live!
+
+      Data centers are like massive warehouses filled with thousands of servers, all humming away 24/7. These buildings have:
+      - **Powerful air conditioning** to keep servers cool
+      - **Backup power systems** in case electricity goes out
+      - **Security systems** to protect the servers
+      - **Fast internet connections** to handle all the requests
+
+      When you visit Facebook, you're connecting to servers in one of Facebook's data centers. When you watch a YouTube video, you're connecting to servers in one of Google's data centers.
+
+      # media_idea: A cutaway view of a data center showing rows of server racks, cooling systems, and security measures
+
+  - type: "quiz"
+    question: "A server is best described as:"
+    options:
+      - "A computer that requests information from websites"
+      - "A powerful computer that stores data and responds to client requests"
+      - "A program that helps you browse the internet"
+    solution: 1
+    explanation: "Perfect! A server is a powerful computer that stores data and responds to requests from clients. It's the provider in the client-server relationship."
+
+  - type: "markdown"
+    content: |
+      **The Beautiful Partnership**
+
+      Here's what makes the internet work: clients and servers are perfect partners.
+
+      **Clients** are great at:
+      - Asking for what users want
+      - Displaying information in a user-friendly way
+      - Being portable and personal
+
+      **Servers** are great at:
+      - Storing massive amounts of data
+      - Handling thousands of requests at once
+      - Running continuously without interruption
+
+      Neither one could exist without the other. It's like a restaurant—you need both customers (clients) and a kitchen (server) to make the system work.
+
+      Every time you use the internet, you're participating in millions of these client-server conversations happening all around the world. Your browser politely asks servers for information, and servers politely respond with the data you need.
+
+      It's a beautiful system of cooperation that makes the modern internet possible!
+
+      > **Remember:** If someone asks you "What's a server?", you can tell them: "It's like a restaurant's kitchen—it's always ready, it has all the ingredients (data), and it prepares exactly what customers (clients) order."

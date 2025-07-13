@@ -1,0 +1,103 @@
+---
+item_id: "module-1-item-1"
+item_type: "lesson"
+title: "A World of Connected Computers"
+steps:
+  - type: "markdown"
+    content: |
+      Welcome! Let's start with the most basic question: what even *is* the internet?
+
+      Forget about clouds, satellites, and abstract ideas for a moment. At its core, the internet is surprisingly simple: it's **a giant, global network of connected computers.**
+
+      That's it. Your laptop, your phone, the servers at Google, the computer that runs the screen at the train station—they are all connected by a massive web of physical cables and wireless signals.
+
+  - type: "markdown"
+    content: |
+      Think of it like a giant, worldwide city.
+
+      - Every device (your phone, a server, etc.) is a **house**.
+      - The physical wires and wireless signals that connect them are the **roads**.
+
+      When you send an email, you're just sending a little car (your data) from your house, down the roads, to someone else's house. It's not magic, it's infrastructure.
+    # media_idea: A simple diagram showing a few houses (labeled "Your PC", "Google Server", "Friend's Phone") connected by a network of roads.
+
+  - type: "quiz"
+    question: "Based on this, which of these *best* describes the internet?"
+    options:
+      - "A magical wireless system that exists in the sky."
+      - "A global network of physically connected computers."
+      - "A single, giant computer owned by a tech company."
+    solution: 1
+    explanation: |
+      Exactly! While parts of it are wireless (like WiFi), the backbone of the internet is a physical connection between billions of separate computers.
+---
+item_id: "module-1-item-2"
+item_type: "lesson"
+title: "The Physical Wires"
+steps:
+  - type: "markdown"
+    content: |
+      Okay, if the internet is a physical network, a fair question is: where are all the wires? You don't see a cable running from your house all the way to Japan.
+
+      This is where the scale of the internet's infrastructure becomes truly impressive. The connections exist on different levels, from local to global.
+
+  - type: "markdown"
+    content: |
+      Let's stick with our city analogy. The road network isn't just one type of road, right? You have:
+
+      - **Local Streets:** The cable or fiber line from your Internet Service Provider (ISP) that connects your house to the neighborhood network.
+      - **Highways:** Larger regional networks that connect entire cities and regions.
+      - **Intercontinental Freeways:** Massive, high-speed **undersea fiber optic cables** that are the true marvel of the internet. These are bundles of glass threads that carry data as pulses of light across the ocean floor.
+
+  - type: "markdown"
+    content: |
+      This isn't just an analogy. These cables physically exist. The map below shows the world's major submarine cables.
+
+      Every time you access a website hosted in another country, your data is likely zipping through one of these cables at the bottom of the ocean.
+
+    # media_idea: A static world map showing the web of real-world submarine fiber optic cables, like the one from TeleGeography.
+
+  - type: "quiz"
+    question: "A massive undersea cable connecting North America and Europe is like which part of our road analogy?"
+    options:
+      - "A driveway."
+      - "A quiet local street."
+      - "An intercontinental freeway."
+    solution: 2
+    explanation: "Correct! These giant cables are the superhighways of the internet, carrying immense amounts of data between continents."
+
+---
+item_id: "module-1-item-3"
+item_type: "lesson"
+title: "What is 'The Cloud'?"
+steps:
+  - type: "markdown"
+    content: |
+      We've spent the last two lessons talking about how the internet is a physical thing made of computers and wires.
+
+      So... what on earth is "The Cloud"? The name makes it sound like the exact opposite—something intangible and floating in the air.
+
+  - type: "markdown"
+    content: |
+      Here's the secret: **"The Cloud" is just a friendly marketing term for someone else's computer.**
+
+      Specifically, it refers to powerful computers called **servers** that are stored in huge, secure buildings called **data centers**. When you "upload a file to the cloud," you're just sending a copy of that file over the internet to be stored on one of those servers.
+
+  - type: "markdown"
+    content: |
+      A perfect analogy is a **storage unit**.
+
+      Instead of keeping all your old furniture (your files) in your own house (your computer), you rent space in a secure storage facility (a data center).
+
+      You can access your stuff anytime you want by driving there (connecting via the internet), but you don't have to worry about maintaining the building yourself. That's the responsibility of the storage company (like Google, Apple, or Amazon).
+
+    # media_idea: A simple 2-panel cartoon. Panel 1: A person looking worried at a computer overflowing with files. Panel 2: The person smiling, with an arrow showing the files neatly stored in a large, secure building labeled "Data Center (aka 'The Cloud')".
+
+  - type: "quiz"
+    question: "When you save a photo to 'the cloud', where is it actually going?"
+    options:
+      - "Into a wireless network that floats in the atmosphere."
+      - "To a server in a physical data center that you access via the internet."
+      - "To a special, non-physical partition on your own hard drive."
+    solution: 1
+    explanation: "That's the key takeaway! 'The Cloud' is just a user-friendly name for a network of physical servers you can rent space on."

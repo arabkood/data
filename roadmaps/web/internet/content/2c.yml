@@ -1,0 +1,210 @@
+---
+item_id: "module-2-item-1"
+item_type: "lesson"
+title: "The Computer's Address (IP Address)"
+steps:
+  - type: "markdown"
+    content: |
+      Now that we know the internet is a massive network of connected computers, let's solve a crucial problem: **How does one computer find another specific computer in this network of billions?**
+
+      Think about it—when you want to visit a friend, you need their address. When you want to send a letter, you need to know exactly where it should go. The same is true for computers on the internet.
+
+      Every single device connected to the internet needs a unique address so other computers can find it. This address is called an **IP address** (Internet Protocol address).
+
+  - type: "markdown"
+    content: |
+      **What Does an IP Address Look Like?**
+
+      An IP address is a unique set of numbers that identifies a specific computer on the internet. It looks like this:
+
+      `192.168.1.1` or `172.217.164.110`
+
+      Just like your home address has a specific format (street number, street name, city, state), an IP address has a specific format: four numbers separated by dots, where each number is between 0 and 255.
+
+      # media_idea: A side-by-side comparison showing a postal address format next to an IP address format, highlighting the structural similarities
+
+  - type: "markdown"
+    content: |
+      **The Perfect Analogy: Postal Addresses**
+
+      Think of an IP address exactly like a postal address for a house:
+
+      - **Your house address** tells the postal service exactly where to deliver your mail
+      - **An IP address** tells the internet exactly where to deliver your data
+
+      When you type "google.com" in your browser, behind the scenes your computer is really trying to reach Google's servers at IP address `142.250.191.14`.
+
+      Just like every house on a street has a unique address, every computer on the internet has a unique IP address.
+
+  - type: "quiz"
+    question: "Which of these best describes the purpose of an IP address?"
+    options:
+      - "To make websites load faster"
+      - "To provide a unique address so computers can find each other on the internet"
+      - "To secure your internet connection"
+    solution: 1
+    explanation: "Exactly! An IP address is like a postal address for computers—it provides a unique identifier so data knows exactly where to go in the vast network of the internet."
+
+  - type: "markdown"
+    content: |
+      **Who Assigns These Addresses?**
+
+      You might be wondering: "Who makes sure no two computers have the same IP address?"
+
+      Great question! There are organizations that manage IP addresses to ensure they're unique, just like how your city ensures no two houses have the same street address.
+
+      When you connect to the internet, your Internet Service Provider (ISP) assigns your device an IP address. They have a pool of addresses they can give out, and they make sure no two customers get the same one at the same time.
+
+  - type: "fill"
+    lang: "text"
+    question: "Complete this valid IP address format:"
+    code: |
+      @@INPUT@@.@@INPUT@@.1.100
+    solution:
+      - "/^([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$/"
+      - "/^([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$/"
+
+  - type: "markdown"
+    content: |
+      **Two Types of IP Addresses**
+
+      There are actually two main types of IP addresses you should know about:
+
+      **IPv4 (the old system):** This is what we've been looking at—four numbers separated by dots. But here's the problem: there are only about 4.3 billion possible IPv4 addresses, and we've almost run out!
+
+      **IPv6 (the new system):** This looks like `2001:0db8:85a3:0000:0000:8a2e:0370:7334`. It's much longer and uses letters and numbers. This gives us trillions and trillions of possible addresses—enough for every grain of sand on Earth to have its own IP address!
+
+      Most websites still use IPv4, but IPv6 is slowly becoming more common.
+
+      # media_idea: A visual comparison showing IPv4 and IPv6 address formats, with a note about IPv6 having vastly more possible combinations
+
+  - type: "quiz"
+    question: "Why was IPv6 created?"
+    options:
+      - "To make IP addresses easier to remember"
+      - "To make the internet faster"
+      - "Because we were running out of IPv4 addresses"
+    solution: 2
+    explanation: "Correct! IPv4 only provides about 4.3 billion possible addresses, which seemed like a lot in the early days of the internet. But with billions of devices now online, we needed IPv6 to provide many more possible addresses."
+
+  - type: "markdown"
+    content: |
+      **Finding Your Own IP Address**
+
+      Every device you're using right now has an IP address. Your phone has one, your laptop has one, and even your smart TV has one.
+
+      You can easily find your current IP address by visiting websites like "whatismyipaddress.com" or simply searching "what is my IP address".
+
+      Try it right now if you're curious! You'll see something like `203.0.113.45`—that's your unique address on the internet at this moment.
+
+      > ⚠️ **Remember:** Don’t share your IP address with strangers.  
+      > It’s like giving out your digital home address, others could use it to find and interact with your device online.
+
+---
+item_id: "module-2-item-2"
+item_type: "lesson"
+title: "The Human-Friendly Address (Domain Name)"
+steps:
+  - type: "markdown"
+    content: |
+      Now we have a problem. You just learned that computers use IP addresses like `172.217.164.110` to find each other on the internet.
+
+      But imagine if every time you wanted to visit Google, you had to type `172.217.164.110` into your browser. Or if you wanted to check Facebook, you had to remember `157.240.241.35`.
+
+      This would be absolutely terrible! It would be like having to remember everyone's phone number instead of just their name in your contacts.
+
+  - type: "markdown"
+    content: |
+      **The Solution: Domain Names**
+
+      Thankfully, the internet has a much better solution. Instead of making humans remember numbers, we can use **domain names**—easy-to-remember names that represent those hard-to-remember IP addresses.
+
+      Examples of domain names:
+      - `google.com` instead of `172.217.164.110`
+      - `facebook.com` instead of `157.240.241.35`
+      - `akood.com` instead of whatever IP address our servers have
+
+      Think of it exactly like your phone's contact list: you don't remember your friend Ibrahim's phone number—you just remember "Ibrahim" and your phone looks up the number for you.
+
+      # media_idea: A side-by-side comparison showing a phone contact list ("Mom", "Ibrahim", "Pizza Place") next to domain names ("google.com", "facebook.com", "akood.com")
+
+  - type: "quiz"
+    question: "What is the primary purpose of a domain name?"
+    options:
+      - "To secure a website from hackers"
+      - "To make IP addresses easier for humans to remember"
+      - "To make websites load faster"
+    solution: 1
+    explanation: "Exactly! Domain names exist purely for human convenience. They're easy-to-remember labels that represent hard-to-remember IP addresses, just like contact names in your phone represent hard-to-remember phone numbers."
+
+  - type: "markdown"
+    content: |
+      **Understanding Domain Structure**
+
+      Let's break down how domain names work using `akood.com` as an example:
+
+      **`.com`** - This is called the "top-level domain" (TLD). It's like the country or region in a postal address. Other examples include `.org`, `.net`, `.edu`, and country-specific ones like `.sa` or `.eg`.
+
+      **`akood`** - This is the actual name chosen by the company or person who registered the domain. It's like the street name in a postal address.
+
+      **`www.akood.com`** - The "www" part is called a "subdomain." It's like an apartment number—it can help direct you to a specific part of the website.
+
+      # media_idea: A visual breakdown of a domain name showing each part labeled, similar to how you might label parts of a postal address
+
+  - type: "markdown"
+    content: |
+      **Who Owns Domain Names?**
+
+      Here's something important to understand: **domain names are rented, not owned forever.**
+
+      When a company "buys" a domain name, they're actually renting it for a specific period (usually 1-10 years). They have to renew it regularly, just like renewing a lease on an apartment.
+
+      There are companies called "domain registrars" (like Namecheap, Cloudflare or Gandi Domains) that handle the rental process. They make sure no two people can rent the same domain name at the same time.
+
+      If someone forgets to renew their domain name, it becomes available for anyone else to rent!
+
+  - type: "fill"
+    lang: "text"
+    question: "Complete this domain name structure:"
+    code: |
+      www.@@INPUT@@.@@INPUT@@
+    solution:
+      - "/^[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]$|^[a-zA-Z0-9]$/"
+      - "/^(com|org|net|edu|io|me|co|tv|ae|eg|sa|qa|kw|om|bh|jo|lb|sy|iq|ye|ps|ma|dz|tn|sd|ly)$/"
+
+  - type: "markdown"
+    content: |
+      **Fun Fact: Creative Domain Names**
+
+      Companies get very creative with domain names! Here are some clever examples:
+
+      - `bit.ly` - A URL shortening service (plays on "bitly")
+      - `del.icio.us` - Used to be a bookmarking service (reads as "delicious")
+      - `t.co` - Twitter's URL shortener (short for "Twitter company")
+
+      Some companies even use country-specific domains creatively. For example, `.ly` belongs to Libya, but it's popular for making words that end in "ly"!
+
+      The key is that a domain name should be easy to remember, easy to type, and represent what your website is about.
+
+  - type: "quiz"
+    question: "If you wanted to visit Google but could only use IP addresses, what would you have to do?"
+    options:
+      - "Type something like 172.217.164.110 into your browser"
+      - "Send an email to Google first"
+      - "Connect to the internet differently"
+    solution: 0
+    explanation: "Correct! Without domain names, you'd have to remember and type IP addresses like 172.217.164.110 to visit websites. Domain names like google.com are much easier for humans to remember and use."
+
+  - type: "markdown"
+    content: |
+      **The Magic Translation**
+
+      Here's the beautiful thing: when you type `google.com` into your browser, your computer automatically translates it to Google's IP address behind the scenes.
+
+      You get to use the human-friendly name, but the computers still communicate using the numerical IP addresses they prefer.
+
+      It's like having a universal translator that lets you speak in English while the computers speak in numbers. You never have to worry about the translation—it happens automatically.
+
+      In the next module, we'll learn exactly how this magical translation happens. For now, just remember: domain names exist to make your life easier, but underneath it all, computers are still using IP addresses to find each other.
+
+      So the next time someone asks you "What's a domain name?", you can tell them: "It's like a contact name in your phone—an easy-to-remember label that represents a hard-to-remember number!"

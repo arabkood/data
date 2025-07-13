@@ -1,0 +1,192 @@
+---
+item_id: "module-1-item-1"
+item_type: "lesson"
+title: "A World of Connected Computers"
+steps:
+  - type: "markdown"
+    content: |
+      Welcome! Let's start with the most basic question: what even *is* the internet?
+
+      Forget about clouds and abstract ideas. At its core, the internet is simply **a giant, global network of connected computers.**
+
+      That's it. Your laptop, your phone, the servers at Google, the computer that runs the screen at the train station—they are all connected by a massive web of physical cables and wireless signals.
+
+      media_idea: A simple diagram showing various devices (laptop, phone, server, smart TV) connected by lines representing cables and wireless signals
+
+  - type: "markdown"
+    content: |
+      Think of it like a massive city where every house is a computer, and the roads connecting them are the cables and wireless signals.
+
+      Just like you can drive from your house to visit a friend across town, your computer can send messages to any other computer in this global network. The internet is that road system—nothing more, nothing less.
+
+      When you send a message on WhatsApp, check your email, or watch a YouTube video, you're essentially asking your computer to travel down these digital roads to visit another computer somewhere in the world.
+
+  - type: "quiz"
+    question: "Based on what we've learned, which of these best describes the internet?"
+    options:
+      - "A magical wireless system that exists in the sky"
+      - "A global network of physically connected computers"
+      - "A single, giant computer owned by a tech company"
+    solution: 1
+    explanation: "Exactly! The internet is fundamentally a physical network of billions of computers connected by cables and wireless signals. It's not magic."
+
+  - type: "markdown"
+    content: |
+      Now here's what might surprise you: the internet isn't owned by anyone. 
+
+      No single company, government, or organization controls the entire internet. It's more like a massive public highway system that different organizations help maintain different parts of.
+
+      Your internet service provider (ISP) maintains the road from your house to the main highway. Other companies maintain the big intercontinental highways. But nobody owns the whole thing.
+
+      This is why the internet is so resilient. If one part goes down, traffic can usually find another route—just like how you can take side streets if the main road is blocked.
+
+---
+item_id: "module-1-item-2"
+item_type: "lesson"
+title: "The Physical Wires"
+steps:
+  - type: "markdown"
+    content: |
+      You might be thinking: "If the internet is connected by wires, where are all these cables? I don't see massive cables running down my street!"
+
+      Great question! The physical infrastructure of the internet is actually all around us—you just need to know where to look.
+
+      Let's take a journey from your device to a computer on the other side of the world and see what physical connections we encounter along the way.
+
+  - type: "markdown"
+    content: |
+      **Your Home Connection**
+
+      Right now, there's likely a cable running from your house to a box on a telephone pole or buried underground. This connects you to your local internet service provider (ISP).
+
+      This is like the small street that connects your house to the main road in our city analogy.
+
+      # media_idea: A simple illustration showing a house connected to a telephone pole with a cable, then to a local ISP building
+
+  - type: "markdown"
+    content: |
+      **The Big Highways**
+
+      Your ISP connects to larger networks through massive fiber optic cables—think of these as the major highways in our city analogy.
+
+      But here's the really cool part: when you want to reach a website in another country, your data travels through **undersea fiber optic cables** that lie on the ocean floor!
+
+      These cables are only about as thick as a garden hose, but they carry most of the world's internet traffic. There are hundreds of these cables crisscrossing the ocean floors right now.
+
+      # media_idea: A world map showing major submarine internet cables connecting continents, with a close-up illustration of an undersea cable
+
+  - type: "quiz"
+    question: "How does internet data travel between continents?"
+    options:
+      - "Through satellites in space"
+      - "Through undersea fiber optic cables on the ocean floor"
+      - "Through radio waves that bounce off the atmosphere"
+    solution: 1
+    explanation: "That's right! Most intercontinental internet traffic travels through undersea fiber optic cables. While satellites do carry some internet traffic, the vast majority goes through these physical cables on the ocean floor."
+
+  - type: "markdown"
+    content: |
+      **Data Centers: The Internet's Warehouses**
+
+      At the end of these cables, you'll find massive buildings called data centers. These are like giant warehouses filled with thousands of powerful computers called servers.
+
+      When you visit a website, you're actually connecting to one of these servers in a data center somewhere in the world. Companies like Google, Facebook, and Amazon operate massive data centers around the globe.
+
+      These buildings are kept ice-cold and have backup power systems because they need to run 24/7, 365 days a year.
+
+      # media_idea: A cutaway illustration of a data center showing rows of server racks, cooling systems, and power infrastructure
+
+  - type: "markdown"
+    content: |
+      So remember: the internet isn't floating in the sky or living in some mystical "cloud." It's a physical network of:
+
+      - Cables from your home to your ISP
+      - Fiber optic cables connecting cities and countries
+      - Undersea cables connecting continents
+      - Data centers housing the servers that store websites and services
+
+      The next time someone talks about "the cloud," you'll know they're really talking about a very real, physical computer in a very real, physical building somewhere in the world!
+
+---
+item_id: "module-1-item-3"
+item_type: "lesson"
+title: "What is 'The Cloud'?"
+steps:
+  - type: "markdown"
+    content: |
+      Now that we understand the internet is a physical network of connected computers, let's tackle one of the biggest mysteries in modern technology: **What is "the cloud"?**
+
+      You've probably heard phrases like "save it to the cloud" or "it's stored in the cloud." But what does that actually mean?
+
+      Here's the truth: **"The cloud" is just a fancy marketing term for "someone else's computer."**
+
+  - type: "markdown"
+    content: |
+      Think of it this way: imagine you have too much stuff in your house, so you decide to rent a storage unit across town.
+
+      - Your house = your personal computer or phone
+      - The storage unit = "the cloud" (which is actually a server in a data center)
+      - The storage facility = the data center
+      - The company that runs the storage facility = cloud providers like Google, Amazon, or Microsoft
+
+      When you "save something to the cloud," you're really just storing it on someone else's computer that you can access through the internet.
+
+      # media_idea: A side-by-side comparison showing a cluttered house next to a clean storage unit, with arrows indicating moving items between them
+
+  - type: "quiz"
+    question: "When you save a photo to iCloud, where is it actually stored?"
+    options:
+      - "In the sky, floating wirelessly"
+      - "On Apple's servers in a data center"
+      - "On a special invisible hard drive"
+    solution: 1
+    explanation: "Exactly! When you save to iCloud, your photo is stored on Apple's servers in one of their data centers. You can access it from any device because it's connected to the internet, but it's physically stored on Apple's computers."
+
+  - type: "markdown"
+    content: |
+      **Why Do We Call It "The Cloud"?**
+
+      The term "cloud" comes from old network diagrams where engineers would draw a cloud shape to represent "the internet" or "someone else's network that we don't need to worry about the details of."
+
+      It was never meant to suggest that data floats around in the sky! It was just a way to say "this happens somewhere else on the internet."
+
+      But marketing departments loved the term because it sounds more appealing than "rent space on our servers."
+
+      # media_idea: A simple network diagram showing computers connected to a cloud symbol, with an arrow pointing to the cloud labeled "This represents the internet"
+
+  - type: "markdown"
+    content: |
+      **The Benefits of "The Cloud"**
+
+      So why would you want to store your files on someone else's computer instead of your own? Several reasons:
+
+      **Accessibility:** You can access your files from any device with an internet connection. Your photos, documents, and emails follow you wherever you go.
+
+      **Backup:** If your laptop crashes or your phone breaks, your files are safe on the cloud company's servers.
+
+      **Collaboration:** Multiple people can work on the same document simultaneously because it's stored in one central location.
+
+      **No Maintenance:** You don't have to worry about keeping servers running, backing up data, or updating software—the cloud company handles all of that.
+
+  - type: "quiz"
+    question: "The 'cloud' is best described as:"
+    options:
+      - "A wireless network that exists in the sky"
+      - "Servers in a data center that you can access over the internet"
+      - "A new type of hard drive that doesn't need electricity"
+    solution: 1
+    explanation: "Perfect! The cloud is simply servers (powerful computers) in data centers that you can access over the internet. It's not in the sky—it's in very real buildings with very real computers."
+
+  - type: "markdown"
+    content: |
+      **Remember This Key Point**
+
+      Every time you hear someone say "it's in the cloud," mentally replace that with "it's on someone else's computer that I can access through the internet."
+
+      - "My photos are in the cloud" = "My photos are stored on Google's servers"
+      - "The app runs in the cloud" = "The app runs on Amazon's servers"
+      - "Cloud storage" = "Renting space on someone else's hard drives"
+
+      This simple mental translation will help you understand what's really happening behind all the marketing buzzwords.
+
+      Now you know the truth: there is no cloud. There are only other people's computers!

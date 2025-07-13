@@ -1,0 +1,251 @@
+---
+item_id: "module-4-item-1"
+item_type: "lesson"
+title: "The Rules of Communication (HTTP)"
+
+steps:
+  - type: "markdown"
+    content: |
+      Imagine you walk into a restaurant in a foreign country. You want to order food, but you and the waiter don't speak the same language. How would you communicate? You'd probably point at the menu, use gestures, maybe draw pictures. It would be chaotic and confusing.
+
+      The same problem exists on the internet. Your browser (the client) wants to talk to a server, but they're completely different pieces of software running on different computers. How do they understand each other?
+
+      The answer is **protocols** - agreed-upon sets of rules that define exactly how two computers should communicate.
+
+  - type: "markdown"
+    content: |
+      The most important protocol for web browsing is **HTTP**, which stands for **HyperText Transfer Protocol**.
+
+      Think of HTTP as the universal language that browsers and web servers use to communicate. Just like how all restaurants have similar patterns (you sit down, look at a menu, place an order, receive food, pay), HTTP defines the standard patterns for web communication.
+
+      When you type a website address and press Enter, your browser uses HTTP to:
+      - Request a specific webpage from the server
+      - Tell the server what kind of device you're using
+      - Receive the webpage content back from the server
+
+      # media_idea: Simple diagram showing a browser and server with speech bubbles containing "HTTP Request" and "HTTP Response"
+
+  - type: "quiz"
+    question: "What is the primary purpose of HTTP?"
+    options:
+      - "To make websites load faster"
+      - "To provide a standard way for browsers and servers to communicate"
+      - "To secure data transmission over the internet"
+    solution: 1
+    explanation: "HTTP is the protocol that defines the rules and format for communication between web browsers and servers, ensuring they can understand each other."
+
+  - type: "markdown"
+    content: |
+      Let's break down what happens when you visit a website using HTTP:
+
+      **Step 1: Your Request**
+      Your browser creates an HTTP request that says something like: "Hello server, I would like the homepage of this website, please. I'm using Chrome browser on Windows."
+
+      **Step 2: The Server's Response**
+      The server receives your request and sends back an HTTP response: "Here's the webpage you requested, along with some information about how to display it."
+
+      This back-and-forth conversation follows HTTP rules, ensuring both sides understand each other perfectly.
+
+  - type: "fill"
+    lang: "text"
+    question: "Complete this sentence about HTTP:"
+    code: |
+      @@INPUT@@ is the protocol that defines the rules for communication between web @@INPUT@@ and @@INPUT@@.
+    solution:
+      - "/^HTTP$/i"
+      - "/^(browsers?|clients?)$/i"
+      - "/^servers?$/i"
+
+  - type: "markdown"
+    content: |
+      Here's something interesting: HTTP is what's called a "stateless" protocol. This means that each request is independent - the server doesn't remember previous conversations with your browser.
+
+      Think of it like this: every time you call a pizza place, you have to introduce yourself again and give your full order, even if you called yesterday. The server treats each HTTP request as a completely new conversation.
+
+      This might seem inefficient, but it actually makes the internet more reliable and scalable. If a server crashes and restarts, it doesn't need to remember thousands of ongoing conversations - it can just handle new requests as they come in.
+
+---
+item_id: "module-4-item-2"
+item_type: "lesson"
+title: "The Secure Handshake (HTTPS)"
+
+steps:
+  - type: "markdown"
+    content: |
+      Remember our restaurant analogy? Imagine you're ordering food, but instead of whispering your order to the waiter, you have to shout it across the entire restaurant. Everyone can hear your order, including what you're paying with your credit card.
+
+      That's essentially what happens with regular HTTP. Your communication with the server is sent in plain text that anyone "listening" on the network can read. This includes your passwords, credit card numbers, and personal messages.
+
+      Obviously, this is a serious problem. We need a way to have private conversations on the internet.
+
+  - type: "markdown"
+    content: |
+      The solution is **HTTPS** - HTTP**S**ecure. That little "S" at the end makes all the difference.
+
+      HTTPS takes regular HTTP and wraps it in a secure layer called SSL/TLS encryption. Think of it as putting your entire conversation in a sealed, unbreakable envelope that only you and the server can open.
+
+      When you see `https://` in your browser's address bar (often with a lock icon), it means:
+      - Your communication is encrypted
+      - No one else can read what you're sending or receiving
+      - You can safely enter sensitive information like passwords and credit card numbers
+
+      # media_idea: Side-by-side comparison showing HTTP as an open postcard vs HTTPS as a sealed envelope
+
+  - type: "quiz"
+    question: "You should always look for HTTPS when:"
+    options:
+      - "Watching videos on YouTube"
+      - "Reading news articles"
+      - "Entering a password or credit card number"
+    solution: 2
+    explanation: "HTTPS is essential when transmitting sensitive information like passwords, credit card numbers, or personal data. While many sites use HTTPS for all content now, it's absolutely critical for sensitive information."
+
+  - type: "markdown"
+    content: |
+      Here's how HTTPS encryption works in simple terms:
+
+      **Step 1: The Handshake**
+      When you visit an HTTPS website, your browser and the server first perform a "handshake." They agree on a secret code that only they know.
+
+      **Step 2: The Secure Tunnel**
+      All communication is then encrypted using this secret code. Even if someone intercepts your data, they just see scrambled nonsense.
+
+      **Step 3: Your Browser Verifies**
+      Your browser also checks that the server is who it claims to be (using something called a digital certificate), preventing imposters from pretending to be legitimate websites.
+
+  - type: "markdown"
+    content: |
+      **How can you tell if a website is using HTTPS?**
+
+      Look at the address bar in your browser:
+      - ✅ `https://example.com` - Secure
+      - ❌ `http://example.com` - Not secure
+      - Most browsers also show a lock icon (🔒) next to secure websites
+      - Some browsers warn you with "Not Secure" labels for HTTP sites
+
+      **Pro tip:** Never enter sensitive information on a website that doesn't use HTTPS. If you see a warning about an "insecure connection," take it seriously!
+
+  - type: "quiz"
+    question: "Which of these statements about HTTPS is correct?"
+    options:
+      - "HTTPS makes websites load faster than HTTP"
+      - "HTTPS encrypts the data sent between your browser and the server"
+      - "HTTPS is only needed for online shopping websites"
+    solution: 1
+    explanation: "HTTPS encrypts all data transmitted between your browser and the server, making it unreadable to anyone who might intercept it. This protection is valuable for all types of sensitive communication, not just shopping."
+
+  - type: "markdown"
+    content: |
+      **Why isn't everything HTTPS?**
+
+      Great question! Actually, most of the modern web *is* moving to HTTPS. Google and other companies have been pushing for "HTTPS everywhere" because:
+
+      - It protects user privacy
+      - It prevents data tampering
+      - Search engines favor HTTPS sites
+      - It builds user trust
+
+      The main historical reasons some sites stayed with HTTP were cost and performance, but these barriers have largely disappeared. Today, there's really no good reason not to use HTTPS for all websites.
+
+---
+item_id: "module-4-item-3"
+item_type: "lesson"
+title: "The Internet's Toolbox (Other Protocols)"
+
+steps:
+  - type: "markdown"
+    content: |
+      So far, we've focused on HTTP and HTTPS because they're what make web browsing possible. But here's the thing: the internet is much bigger than just websites.
+
+      Think of the internet as a massive toolbox. HTTP is like a hammer - it's probably the tool you use most often, but it's not the only tool available. Just like a construction worker needs different tools for different jobs, the internet has different protocols for different types of communication.
+
+      Let's explore some of the other important tools in the internet's toolbox.
+
+  - type: "markdown"
+    content: |
+      **Email: SMTP, POP3, and IMAP**
+
+      When you send an email, you're not using HTTP. Instead, your email client uses protocols specifically designed for email:
+
+      - **SMTP** (Simple Mail Transfer Protocol): This is like the postal service for email. It handles sending your email from your device to the recipient's email server.
+      - **POP3** and **IMAP**: These are like different ways to check your mailbox. They handle downloading emails from the server to your device.
+
+      Think of it this way: SMTP is the mail truck that delivers letters, while POP3/IMAP are different ways to organize and access your mailbox.
+
+  - type: "markdown"
+    content: |
+      **File Transfer: FTP**
+
+      **FTP** (File Transfer Protocol) is specifically designed for uploading and downloading files. It's like a specialized delivery service for large packages.
+
+      While you can download files through HTTP (like when you download a PDF from a website), FTP is more efficient for transferring large files or many files at once. Web developers often use FTP to upload their website files to a server.
+
+      # media_idea: Simple icons showing different protocols - HTTP (web browser), SMTP (envelope), FTP (folder with arrow)
+
+  - type: "quiz"
+    question: "Match each protocol to its primary purpose:"
+    code: |
+      Protocol A: SMTP
+      Protocol B: HTTP
+      Protocol C: FTP
+
+      Purpose 1: Transferring files between computers
+      Purpose 2: Sending email messages
+      Purpose 3: Requesting and receiving web pages
+    options:
+      - "A-1, B-2, C-3"
+      - "A-2, B-3, C-1"
+      - "A-3, B-1, C-2"
+    solution: 1
+    explanation: "SMTP is for sending email (A-2), HTTP is for web pages (B-3), and FTP is for file transfers (C-1). Each protocol is specialized for its specific type of communication."
+
+  - type: "markdown"
+    content: |
+      **Real-time Communication: WebRTC and WebSocket**
+
+      HTTP works great for traditional web pages, but what about real-time communication like video calls or instant messaging?
+
+      - **WebRTC** (Web Real-Time Communication): This enables direct browser-to-browser communication for video calls, voice calls, and file sharing. Think Zoom, Google Meet, or Discord voice chat.
+      - **WebSocket**: This allows for continuous, two-way communication between your browser and a server. Perfect for chat applications, live updates, or online gaming.
+
+      Unlike HTTP's "request-response" pattern, these protocols maintain ongoing connections for instant communication.
+
+  - type: "markdown"
+    content: |
+      **Security and Remote Access: SSH and VPN**
+
+      - **SSH** (Secure Shell): This is like a secure tunnel that allows you to remotely control another computer. System administrators use SSH to manage servers from anywhere in the world.
+      - **VPN** (Virtual Private Network): This creates a secure, encrypted connection between your device and a remote server, making it appear as if you're browsing from a different location.
+
+      Both of these prioritize security and privacy for different types of remote access.
+
+  - type: "quiz"
+    question: "Which statement about internet protocols is INCORRECT?"
+    options:
+      - "Different protocols are designed for different types of communication"
+      - "HTTP is the only protocol needed for all internet communication"
+      - "Email uses different protocols than web browsing"
+    solution: 1
+    explanation: "HTTP is just one of many protocols. The internet uses different protocols for different purposes - email (SMTP), file transfer (FTP), real-time communication (WebRTC), and many others."
+
+  - type: "markdown"
+    content: |
+      **The Big Picture**
+
+      Here's what's important to remember: **you don't need to memorize all these protocols**. The key insight is that the internet is a flexible system with specialized tools for different jobs.
+
+      When you send an email, watch a video call, download a file, or browse a website, different protocols are working behind the scenes to make each experience possible. Your devices and applications automatically choose the right protocol for each task.
+
+      HTTP and HTTPS remain the most important protocols for web developers to understand, but knowing that other protocols exist helps you appreciate the internet's versatility and power.
+
+      As you continue learning about web development, you'll primarily work with HTTP/HTTPS, but you might occasionally encounter these other protocols in specific contexts.
+
+  - type: "order"
+    lang: "text"
+    question: "Put these steps in the correct order for how an HTTP request works:"
+    code:
+      - "User enters a URL into the browser"
+      - "The browser (client) sends an HTTP request to the server"
+      - "The server receives the request and processes it"
+      - "The server sends back an HTTP response"
+      - "The browser (client) displays the response to the user"
