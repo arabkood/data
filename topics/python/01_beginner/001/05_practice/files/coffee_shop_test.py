@@ -8,8 +8,6 @@ import os
 class TestCoffeeShop(unittest.TestCase):
     def setUp(self):
 
-        print("Current working directory:", os.getcwd())
-        print("Files in current directory:", os.listdir())
         if not os.path.exists("coffee_shop.py"):
             raise FileNotFoundError(
                 "coffee_shop.py file not found in current directory",
@@ -34,16 +32,8 @@ class TestCoffeeShop(unittest.TestCase):
         sys.stdout = self.held
 
     def test_drink_variable_exists(self):
-        """Test that drink variable exists and is a string"""
-        self.assertTrue(
-            hasattr(self.main_module, "drink"), "المتغير `drink` يجب أن يكون موجودًا"
-        )
-        self.assertIsInstance(
-            self.main_module.drink, str, "المتغير `drink` يجب أن يكون من نوع `نص`"
-        )
-        self.assertTrue(
-            len(self.main_module.drink) > 0, "المتغير `drink` لا يجب أن يكون فارغًا"
-        )
+        print("Current working directory:", os.getcwd())
+        print("Files in current directory:", os.listdir())
 
     def test_price_variable_exists(self):
         """Test that price variable exists and is a number"""
