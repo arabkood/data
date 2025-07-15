@@ -7,6 +7,9 @@ import os
 
 class TestCoffeeShop(unittest.TestCase):
     def setUp(self):
+
+        print("Current working directory:", os.getcwd())
+        print("Files in current directory:", os.listdir())
         if not os.path.exists("coffee_shop.py"):
             raise FileNotFoundError(
                 "coffee_shop.py file not found in current directory"
