@@ -12,7 +12,8 @@ class TestCoffeeShop(unittest.TestCase):
         print("Files in current directory:", os.listdir())
         if not os.path.exists("coffee_shop.py"):
             raise FileNotFoundError(
-                "coffee_shop.py file not found in current directory"
+                "coffee_shop.py file not found in current directory",
+                os.listdir()
             )
 
         spec = importlib.util.spec_from_file_location("coffee_shop", "coffee_shop.py")
