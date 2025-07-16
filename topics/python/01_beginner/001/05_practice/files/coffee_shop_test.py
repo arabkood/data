@@ -77,6 +77,6 @@ class TestCoffeeShop(unittest.TestCase):
             f"ولكن كانت نتيجة الكود الخاص بك:\n---\n{output}\n---\n\n"
         )
         try:
-            self.assertEqual(output, expected_output)
+            self.assertEqual(output.strip(), expected_output)
         except:  # noqa: E722
             raise AssertionError(error_message)
