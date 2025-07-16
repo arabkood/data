@@ -35,20 +35,18 @@ class TestCoffeeShop(unittest.TestCase):
 
     def assertAttrIsInstance(self, obj, cls, name):
         if not isinstance(obj, cls):
-            type_map = {
-                str: "`نص` (string)",
-                (int, float): "`رقم` (number)",
-            }
-            key = (
-                cls
-                if isinstance(cls, type)
-                else tuple(sorted(cls, key=lambda x: x.__name__))
-            )
-            expected_type_str = type_map.get(key, str(cls))
+            # type_map = {
+            #     str: "`نص` (string)",
+            #     (int, float): "`رقم` (number)",
+            # }
+            # key = (
+            #     cls
+            #     if isinstance(cls, type)
+            #     else tuple(sorted(cls, key=lambda x: x.__name__))
+            # )
+            # expected_type_str = type_map.get(key, str(cls))
 
-            raise AssertionError(
-                f"نوع المتغير `{name}` غير صحيح. كان من المفترض أن يكون من نوع {expected_type_str}، ولكن نوعه الحالي هو `{type(obj).__name__}`."
-            )
+            raise AssertionError(f"غير صحيح `{name}` نوع المتغير")
 
     def test_step_one(self):
         self.assertHasAttr("drink")
