@@ -70,5 +70,13 @@ class TestCoffeeShop(unittest.TestCase):
 
     def test_output_format(self):
         output = sys.stdout.getvalue()
+
         expected_output = f"{self.main_module.drink}\n{self.main_module.total}"
-        self.assertIn(expected_output, output, "المخرجات المطبوعة غير مطابق للمطلوب")
+
+        error_message = (
+            f"شكل المخرجات المطبوعة غير مطابق للمطلوب.\n\n"
+            f"توقعنا أن نرى:\n---\n{expected_output}\n---\n\n"
+            f"ولكن كانت نتيجة الكود الخاص بك:\n---\n{output}\n---\n\n"
+            "تلميح: تأكد من أنك تطبع قيمة `drink` أولاً، ثم قيمة `total` في سطر جديد تمامًا بدون أي نصوص أو مسافات إضافية."
+        )
+        self.assertEqual(output, expected_output, error_message)
