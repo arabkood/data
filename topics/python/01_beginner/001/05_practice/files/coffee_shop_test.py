@@ -31,11 +31,11 @@ class TestCoffeeShop(unittest.TestCase):
 
     def assertHasAttr(self, name: str):
         if not hasattr(self.main_module, name):
-            raise AssertionError('Variable not exists "' + name + '".')
+            raise AssertionError(f'Variable not exists "{name}"')
 
     def assertAttrIsInstance(self, obj, cls, name):
         if not isinstance(obj, cls):
-            raise AssertionError('Variable "' + name + '" is not "' + cls + '".')
+            raise AssertionError(f'Variable "{name}" is not an instance of "{cls}".')
 
     def test_step_one(self):
         self.assertHasAttr("drink")
