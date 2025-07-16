@@ -75,6 +75,8 @@ class TestCoffeeShop(unittest.TestCase):
             f"شكل المخرجات المطبوعة غير مطابق للمطلوب.\n\n"
             f"توقعنا أن نرى:\n---\n{expected_output}\n---\n\n"
             f"ولكن كانت نتيجة الكود الخاص بك:\n---\n{output}\n---\n\n"
-            "تلميح: تأكد من أنك تطبع قيمة `drink` أولاً، ثم قيمة `total` في سطر جديد تمامًا بدون أي نصوص أو مسافات إضافية."
         )
-        self.assertEqual(output, expected_output, error_message)
+        try:
+            self.assertEqual(output, expected_output)
+        except:  # noqa: E722
+            raise AssertionError(error_message)
