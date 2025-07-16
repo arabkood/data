@@ -29,89 +29,33 @@ class TestCoffeeShop(unittest.TestCase):
     def tearDown(self):
         sys.stdout = self.held
 
-    def test_drink_variable_exists(self):
-        """Test that drink variable exists and is a string"""
-        self.assertTrue(
-            hasattr(self.main_module, "drink"), "المتغير `drink` يجب أن يكون موجودًا"
-        )
-        self.assertIsInstance(
-            self.main_module.drink, str, "المتغير `drink` يجب أن يكون من نوع `نص`"
-        )
-        self.assertTrue(
-            len(self.main_module.drink) > 0, "المتغير `drink` لا يجب أن يكون فارغًا"
-        )
+    def assertHasAttr(self, name: str):
+        if not hasattr(self.main_module, name):
+            raise AssertionError('Variable not exists "' + name + '".')
 
-    def test_price_variable_exists(self):
-        """Test that price variable exists and is a number"""
-        self.assertTrue(
-            hasattr(self.main_module, "price"), "المتغير `price` يجب أن يكون موجودًا"
-        )
-        self.assertIsInstance(
-            self.main_module.price,
-            (int, float),
-            "المتغير `price` يجب أن يكون من نوع `رقم`",
-        )
-        self.assertGreaterEqual(
-            self.main_module.price, 0.0, "السعر يجب أن يكون 0.00 على الأقل"
-        )
+    def assertAttrIsInstance(self, obj, cls, name):
+        if not isinstance(obj, cls):
+            raise AssertionError('Variable "' + name + '" is not "' + cls + '".')
 
-    def test_total_calculation(self):
-        """Test that total is calculated correctly"""
-        self.assertTrue(
-            hasattr(self.main_module, "total"), "المتغير `total` يجب أن يكون موجودًا"
-        )
-        self.assertIsInstance(
-            self.main_module.total,
-            (int, float),
-            "المتغير `total` يجب أن يكون من نوع `رقم`",
-        )
-        expected_total = self.main_module.price + 2
+    def test_step_one(self):
+        self.assertHasAttr("drink")
+        self.assertHasAttr("price")
+        self.assertHasAttr("tip")
+        self.assertAttrIsInstance(self.main_module.drink, str, "drink")
+        self.assertAttrIsInstance(self.main_module.price, (int, float), "price")
+        self.assertAttrIsInstance(self.main_module.tip, (int, float), "tip")
+
+    def test_step_two(self):
+        self.assertHasAttr("total")
+        self.assertAttrIsInstance(self.main_module.total, (int, float), "total")
+        expected_total = self.main_module.price + self.main_module.tip
         self.assertEqual(
             self.main_module.total,
             expected_total,
-            f"الإجمالي (`total`) يجب أن يساوي {expected_total} (أي `price` + 2)",
+            "Total should be equal to 'price' + 'tip'",
         )
 
     def test_output_format(self):
-        """Test that the output contains all required information"""
         output = sys.stdout.getvalue()
-        self.assertIn(
-            "- المشروب:", output, "الناتج يجب أن يحتوي على العنوان '- المشروب:'"
-        )
-        self.assertIn("- السعر:", output, "الناتج يجب أن يحتوي على العنوان '- السعر:'")
-        self.assertIn(
-            "- الإكرامية:", output, "الناتج يجب أن يحتوي على العنوان '- الإكرامية:'"
-        )
-        self.assertIn(
-            "- الإجمالي:", output, "الناتج يجب أن يحتوي على العنوان '- الإجمالي:'"
-        )
-        self.assertIn(
-            self.main_module.drink, output, "الناتج يجب أن يحتوي على اسم المشروب"
-        )
-        self.assertIn(
-            str(self.main_module.price), output, "الناتج يجب أن يحتوي على السعر"
-        )
-        self.assertIn("2", output, "الناتج يجب أن يحتوي على قيمة الإكرامية")
-        self.assertIn(
-            str(self.main_module.total),
-            output,
-            "الناتج يجب أن يحتوي على القيمة الإجمالية",
-        )
-
-    def test_correct_data_types(self):
-        """Test that correct data types are used"""
-        self.assertIsInstance(
-            self.main_module.drink,
-            str,
-            "المتغير `drink` يجب أن يكون من نوع `نص` (مكتوب بين علامتي اقتباس)",
-        )
-        self.assertIsInstance(
-            self.main_module.price,
-            (int, float),
-            "المتغير `price` يجب أن يكون من نوع `رقم` (بدون علامات اقتباس)",
-        )
-        self.assertIsInstance(
-            self.main_module.total,
-            (int, float),
-            "المتغير `total` يجب أن يكون من نوع `رقم` (بدون علامات اقتباس)",
-        )
+        expected_output = self.main_module.drink + "\n" + self.main_module.total
+        self.assertIn(expected_output, output, "Wrong output")

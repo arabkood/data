@@ -1,11 +1,12 @@
-# نظام طلبات المقهى
-# أكمل هذا الكود لإنشاء طلب زبون
+# اكتب الكود أسفل هذا السطر ↓
 
-drink = 
+drink = "latte"
 
-price = 
+price = 6.50
 
-total = 
+tip = 2
+
+total = price + tip
 
 print("- المشروب:")
 print(drink)
