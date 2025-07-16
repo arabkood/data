@@ -31,11 +31,24 @@ class TestCoffeeShop(unittest.TestCase):
 
     def assertHasAttr(self, name: str):
         if not hasattr(self.main_module, name):
-            raise AssertionError(f'Variable not exists "{name}"')
+            raise AssertionError(f"`{name}` لم يتم العثور على المتغير")
 
     def assertAttrIsInstance(self, obj, cls, name):
         if not isinstance(obj, cls):
-            raise AssertionError(f'Variable "{name}" is not an instance of "{cls}".')
+            type_map = {
+                str: "`نص` (string)",
+                (int, float): "`رقم` (number)",
+            }
+            key = (
+                cls
+                if isinstance(cls, type)
+                else tuple(sorted(cls, key=lambda x: x.__name__))
+            )
+            expected_type_str = type_map.get(key, str(cls))
+
+            raise AssertionError(
+                f"نوع المتغير `{name}` غير صحيح. كان من المفترض أن يكون من نوع {expected_type_str}، ولكن نوعه الحالي هو `{type(obj).__name__}`."
+            )
 
     def test_step_one(self):
         self.assertHasAttr("drink")
@@ -57,5 +70,5 @@ class TestCoffeeShop(unittest.TestCase):
 
     def test_output_format(self):
         output = sys.stdout.getvalue()
-        expected_output = self.main_module.drink + "\n" + self.main_module.total
-        self.assertIn(expected_output, output, "Wrong output")
+        expected_output = f"{self.main_module.drink}\n{self.main_module.total}"
+        self.assertIn(expected_output, output, "المخرجات المطبوعة غير مطابق للمطلوب")
