@@ -7,6 +7,12 @@ decoration = "=" * 5
 title = "أهلاً بكم"
 banner = decoration + " " + title + " " + decoration
 print(banner)
-# Prints: ===== أهلاً بكم =====
+```
+
+
+**الناتج:**
+
+```text
+===== أهلاً بكم =====
 ```
 
