@@ -1,13 +1,13 @@
 id: 60c1d23b-9717-473a-b8eb-3173b1b5571a
 module_id: 3f12f636-373e-4333-8c8a-8b690187f556
-slug: practice
+slug: cafe
 position: 5
 created_at: 2025-07-12T12:55:15.353Z
-updated_at: 2025-07-12T12:55:15.353Z
+updated_at: 2025-07-18T12:33:53.705Z
 type: code
-title: "☕ نظام طلبات المقهى"
+title: ☕ نظام طلبات المقهى
 blurb: null
 difficulty: easy
 premium_only: false
 base_xp: 200
-s3_path: python/01_beginner/001/05_practice
+s3_path: python/01_beginner/001/05_cafe
