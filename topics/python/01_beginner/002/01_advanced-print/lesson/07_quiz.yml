@@ -1,7 +1,7 @@
 type: "quiz"
 question: "ما هو ناتج هذا الكود؟"
 code: |
-  product = "حاسوب محمول"
+  product = "الحاسوب محمول"
   price = 999
   print("تكلفة", product, "هي", price, "دولار")
 lang: python

@@ -5,7 +5,9 @@ code: |
   title = "مغامرات بايثون"
   author = "خبير الأكواد"
   pages = 250
-  print("الكتاب:", @@INPUT@@, "تأليف:", @@INPUT@@, "عدد الصفحات:", @@INPUT@@)
+  print("الكتاب:", @@INPUT@@)
+  print("تأليف:", @@INPUT@@)
+  print("عدد الصفحات:", @@INPUT@@)
 solution:
   - "title"
   - "author"
