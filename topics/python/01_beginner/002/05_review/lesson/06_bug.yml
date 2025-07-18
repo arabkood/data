@@ -6,5 +6,5 @@ code: |
   message_1 = "أهلاً بك في اللعبة!'
   message_2 = "حظاً موفقاً."
 solution: 1
-actualOutput: "SyntaxError: EOL while scanning string literal"
+actualOutput: "SyntaxError: unterminated string literal (detected at line 2)"
 explanation: "يجب أن يبدأ `النص` وينتهي بنفس نوع علامة الاقتباس. هذا النص يبدأ بعلامة اقتباس مزدوجة (`\"`) ولكنه ينتهي بعلامة اقتباس مفردة (`'`)."

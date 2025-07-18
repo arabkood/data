@@ -5,5 +5,5 @@ code: |
   item_name = درع
   print(item_name)
 solution: 0
-actualOutput: "NameError: name 'Shield' is not defined"
+actualOutput: "NameError: name 'درع' is not defined"
 explanation: "القيم النصية، أو `النصوص`، يجب أن تكون محاطة بعلامات اقتباس (`\"\"` أو `''`). بدون علامات اقتباس، تعتقد بايثون أن `درع` هو اسم `متغير` آخر، وليس النص الذي تريد تخزينه."

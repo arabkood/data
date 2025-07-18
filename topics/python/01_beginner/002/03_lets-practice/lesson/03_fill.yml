@@ -3,8 +3,8 @@ lang: "python"
 question: "ممتاز. الآن، لننشئ رسالة ترحيب. أنشئ `متغيرًا` جديدًا باسم `welcome_message` يدمج `النص` `\"أهلاً بك، \"` مع `المتغير` `player_name`."
 code: |
   player_name = "أحمد"
-  welcome_message = @@INPUT@@ + @@INPUT@@
+  welcome_message = "أهلاً بك، " @@INPUT@@
   print(welcome_message)
 solution:
-  - '"أهلاً بك، "'
-  - "player_name"
+  - |
+    /^\s*\+\s*player_name\s*$/

@@ -2,7 +2,6 @@ type: "fill"
 lang: "python"
 question: "اللاعب `\"إلياس\"` وجد `3` جرعات. استخدم جملة `print()` واحدة مع وسائط متعددة لطباعة الرسالة `لقد وجدت 3 جرعات`."
 code: |
-  player = "إلياس"
   item_count = 3
   item_name = "جرعات"
   print(@@INPUT@@, @@INPUT@@, @@INPUT@@)

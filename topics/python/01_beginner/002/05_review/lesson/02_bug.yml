@@ -5,5 +5,5 @@ code: |
   message = "مرحباً أيها المبرمج!"
   print(message
 solution: 1
-actualOutput: "SyntaxError: unexpected EOF while parsing"
+actualOutput: "SyntaxError: '(' was never closed"
 explanation: "الدالة `print()`، مثل كل الدوال، تحتاج إلى زوج متطابق من الأقواس `()`. القوس الختامي مفقود في السطر الثاني."
