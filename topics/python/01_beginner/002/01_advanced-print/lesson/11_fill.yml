@@ -6,7 +6,7 @@ code: |
   shipping = 5.99
   total = 24.99
   print("العربة:", @@INPUT@@)
-  print("عناصر, الشحن:", @@INPUT@@)
+  print("عناصر الشحن:", @@INPUT@@)
   print("الإجمالي:", @@INPUT@@)
 solution:
   - "cart_items"

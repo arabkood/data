@@ -1,12 +1,18 @@
 type: "fill"
 lang: "python"
-question: "أصلح هذا الكود ليطبع 'صباح الخير، يا لمياء!' مع ترك المسافات المناسبة:"
+question: "أصلح هذا الكود ليطبع 'صباح الخير لمياء' مع ترك المسافات المناسبة:"
 code: |
-  time_of_day = "صباح الخير"
+  greet = "صباح الخير"
   name = "لمياء"
-  message = time_of_day @@INPUT@@ name @@INPUT@@
+  message = greet @@INPUT@@ name
   print(message)
 solution:
-  - "+ \"، يا \" +"
-  - "+ \"!\""
-explanation: "نحن بحاجة إلى إضافة فاصلة ومسافة بين التحية والاسم، ثم علامة تعجب في النهاية."
+  # This regex validates all reasonable inputs like + " " +, +' '+, + " " +, etc.
+  # \s* => any amount of white space
+  # \+ => plus sign
+  # (["']) => ' or " and capture it
+  # \s+ => one or more white space
+  # \1 => reference to the captured ' or "
+  - |
+    /^\s*\+\s*(["'])\s+\1\s*\+\s*$/
+explanation: "لدمج متغيري النص `greet` و `name`، نستخدم عامل الربط `+`. بما أن بايثون لا تضيف مسافات تلقائيًا بين النصوص المدمجة، يجب علينا إضافة نص يحتوي على مسافة (مثل `\" \"` أو `' '`) بينهما للفصل بين الكلمات."
