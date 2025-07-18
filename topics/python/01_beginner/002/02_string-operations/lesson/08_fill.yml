@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أنشئ إطارًا مزخرفًا بتكرار نمط. اجعله يطبع 10 نجوم متتالية:"
+code: |
+  star = "*"
+  border = star @@INPUT@@ @@INPUT@@
+  print(border)
+solution:
+  - "*"
+  - "10"
+explanation: "عامل التشغيل * يكرر النص. `star * 10` تنشئ نصًا يحتوي على 10 من حروف النجمة."

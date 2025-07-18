@@ -1,0 +1,9 @@
+type: "fill"
+lang: "python"
+question: "أنشئ رسالة تعرض اللون المفضل للمستخدم:"
+code: |
+  favorite_color = "أزرق"
+  print("لوني المفضل هو", @@INPUT@@)
+solution:
+  - "favorite_color"
+explanation: "ممتاز! الآن ستعرض الرسالة أي لون مُخزّن في المتغير."

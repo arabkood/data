@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "لإصلاح هذا، نحتاج إلى تحويل `الرقم` إلى `نص` قبل دمجهما. استخدم `str(player_level)` لإصلاح الكود."
+code: |
+  player_level = 10
+  message = "لقد وصلت إلى المستوى " + @@INPUT@@(player_level)
+  print(message)
+solution:
+  - "str"
+explanation: "تغليف `متغير` بالدالة `str()` مثل `str(player_level)` يخبر بايثون: 'تعامل مع هذا `الرقم` كقطعة من `النص`.' هذا يسمح لك بدمجه مع نصوص أخرى دون التسبب في خطأ."

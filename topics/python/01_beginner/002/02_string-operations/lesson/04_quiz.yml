@@ -1,0 +1,14 @@
+type: "quiz"
+question: "ماذا سيطبع هذا الكود؟"
+code: |
+  word1 = "بايثون"
+  word2 = "رائعة"
+  result = word1 + word2
+  print(result)
+lang: "python"
+options:
+  - "بايثون رائعة"
+  - "بايثونرائعة"
+  - "بايثون + رائعة"
+solution: 1
+explanation: "دمج النصوص باستخدام + يربط النصوص مباشرة معًا دون إضافة مسافات تلقائيًا."

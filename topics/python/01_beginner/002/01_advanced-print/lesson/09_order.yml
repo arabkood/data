@@ -1,0 +1,9 @@
+type: "order"
+lang: "python"
+question: "رتب هذه الأسطر لإنشاء تقرير طقس صحيح:"
+code:
+  - "temperature = 22"
+  - "city = \"لندن\""
+  - "condition = \"مشمس\""
+  - "print(\"الطقس في\", city, \"هو\", condition, \"بدرجة حرارة\", temperature, \"درجة\")"
+explanation: "نحتاج إلى إنشاء جميع المتغيرات أولاً، ثم استخدامها في جملة الطباعة لعرض تقرير الطقس."

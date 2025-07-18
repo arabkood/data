@@ -1,0 +1,10 @@
+type: "order"
+lang: "python"
+question: "رتب هذه الأسطر لإنشاء برنامج يطبع '*** تخفيضات *** خصم 50% ***'"
+code:
+  - "stars = \"*\" * 3"
+  - "announcement = \"تخفيضات\""
+  - "discount = \"خصم 50%\""
+  - "result = stars + \" \" + announcement + \" \" + stars + \" \" + discount + \" \" + stars"
+  - "print(result)"
+explanation: "أولاً، ننشئ وحدات البناء الخاصة بنا (النجوم، الإعلان، الخصم)، ثم ندمجها مع ترك المسافات المناسبة."

@@ -1,0 +1,11 @@
+id: 38adf689-b6a5-4b9f-8fe9-db49d4e4c837
+module_id: 951f5cd2-20fb-424e-9f7a-9cc6d59ecb6f
+slug: lets-practice
+position: 3
+created_at: 2025-07-18T06:44:27.808Z
+updated_at: 2025-07-18T06:44:27.808Z
+type: lesson
+title: 'لعبة تدريبية: محترف النصوص'
+difficulty: easy
+base_xp: 300
+s3_path: python/01_beginner/002/03_lets-practice

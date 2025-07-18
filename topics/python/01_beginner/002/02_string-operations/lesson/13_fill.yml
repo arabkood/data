@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أنشئ تنسيقًا لرسالة محادثة. اجعلها تطبع '[فاطمة]: مرحباً بالجميع!'"
+code: |
+  username = "فاطمة"
+  message_text = "مرحباً بالجميع!"
+  formatted_message = "[" @@INPUT@@ username @@INPUT@@ "]: " @@INPUT@@ message_text
+  print(formatted_message)
+solution:
+  - "+"
+  - "+"
+  - "+"
+explanation: "نبني الرسالة عن طريق دمج القوس، واسم المستخدم، والقوس المغلق مع النقطتين، ثم نص الرسالة."

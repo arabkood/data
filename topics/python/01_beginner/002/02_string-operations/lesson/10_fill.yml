@@ -1,0 +1,20 @@
+type: "fill"
+lang: "python"
+question: "أنشئ عرض عنوان أنيق. املأ الفراغات لجعله يطبع '--- أخبار ---'"
+code: |
+  dash = "-"
+  title = "أخبار"
+  left_border = dash @@INPUT@@ @@INPUT@@
+  right_border = dash @@INPUT@@ @@INPUT@@
+  result = left_border @@INPUT@@ " " @@INPUT@@ title @@INPUT@@ " " @@INPUT@@ right_border
+  print(result)
+solution:
+  - "*"
+  - "3"
+  - "*"
+  - "3"
+  - "+"
+  - "+"
+  - "+"
+  - "+"
+explanation: "نكرر الشرطات 3 مرات لكل إطار، ثم ندمجها مع المسافات والعنوان."

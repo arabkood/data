@@ -1,0 +1,14 @@
+type: "quiz"
+question: "ماذا سيطبع هذا الكود؟"
+code: |
+  symbol = "!"
+  word = "رائع"
+  result = symbol * 2 + word + symbol * 2
+  print(result)
+lang: "python"
+options:
+  - "!!رائع!!"
+  - "!2رائع!2"
+  - "! ! رائع ! !"
+solution: 0
+explanation: "عامل التشغيل * يكرر النص، لذا `symbol * 2` تصبح '!!'. ثم ندمج للحصول على '!!رائع!!'."

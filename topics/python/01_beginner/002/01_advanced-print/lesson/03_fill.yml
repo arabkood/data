@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "جرب بنفسك! اطبع كلًا من التحية والاسم في جملة طباعة واحدة:"
+code: |
+  greeting = "مرحباً"
+  name = "خالد"
+  print(@@INPUT@@, @@INPUT@@)
+output: |
+  مرحباً خالد
+solution:
+  - "greeting"
+  - "name"
+explanation: "رائع! الفاصلة تخبر الدالة `print()` بعرض كلتا القيمتين مفصولتين بمسافة."

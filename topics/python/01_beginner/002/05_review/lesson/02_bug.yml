@@ -1,0 +1,9 @@
+type: "bug"
+lang: "python"
+question: "من المفترض أن يطبع هذا الكود رسالة ترحيب، لكنه يحتوي على خطأ في الصياغة (syntax error). ابحث عن السطر الخاطئ."
+code: |
+  message = "مرحباً أيها المبرمج!"
+  print(message
+solution: 1
+actualOutput: "SyntaxError: unexpected EOF while parsing"
+explanation: "الدالة `print()`، مثل كل الدوال، تحتاج إلى زوج متطابق من الأقواس `()`. القوس الختامي مفقود في السطر الثاني."

@@ -1,0 +1,8 @@
+type: "fill"
+lang: "python"
+question: "أضف `تعليقًا` إلى السطر أدناه يشرح أنه يخزن صحة اللاعب."
+code: |
+  player_health = 100 @@INPUT@@
+solution:
+  - "/^#.*$/" # Matches '#' followed by any characters
+explanation: "ممتاز! بإضافة `# تخزين صحة اللاعب`، جعلت الغرض من الكود واضحًا دون تغيير طريقة عمله."

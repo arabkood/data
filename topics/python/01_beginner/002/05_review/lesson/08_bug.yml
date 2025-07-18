@@ -1,0 +1,11 @@
+type: "bug"
+lang: "python"
+question: "يحاول هذا الكود تكرار `نص` لإنشاء خط فاصل، لكنه يسبب خطأ النوع (TypeError). ابحث عن السطر غير الصحيح."
+code: |
+  # إنشاء خط فاصل
+  separator_char = ">"
+  line = separator_char * "---"
+  print(line)
+solution: 2
+actualOutput: "TypeError: can't multiply sequence by non-int of type 'str'"
+explanation: "يمكنك فقط ضرب `نص` في `رقم صحيح` (integer) لتكراره. **لا يمكنك ضرب `نص` في `نص` آخر**."

@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "أكمل توقيع البريد الإلكتروني. اجعله يطبع توقيعًا به شرطات فوق الاسم وأسفله:"
+code: |
+  name = "د. خالد"
+  separator = "-" @@INPUT@@ @@INPUT@@
+  signature = separator @@INPUT@@ "\n" @@INPUT@@ name @@INPUT@@ "\n" @@INPUT@@ separator
+  print(signature)
+solution:
+  - "*"
+  - "10"
+  - "+"
+  - "+"
+  - "+"
+  - "+"
+explanation: "ننشئ فاصلاً من 10 شرطات، ثم نبني التوقيع بأسطر جديدة (\\n) فوق الاسم وأسفله."

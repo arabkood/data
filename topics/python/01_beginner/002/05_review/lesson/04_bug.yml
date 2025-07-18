@@ -1,0 +1,10 @@
+type: "bug"
+lang: "python"
+question: "نحاول تعريف `متغير` لتخزين نقاط لاعب، لكن بايثون تقول إن اسم المتغير غير صالح. ابحث عن السطر غير الصحيح."
+code: |
+  # نقاط اللاعبين
+  1st_player_score = 1000
+  2nd_player_score = 850
+solution: 1
+actualOutput: "SyntaxError: invalid decimal literal"
+explanation: "في بايثون، **لا يمكن أن تبدأ أسماء `المتغيرات` برقم**. يجب أن تبدأ بحرف (a-z, A-Z) أو شرطة سفلية (`_`)."

@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أنشئ رسالة ترحيب بدمج النصوص. املأ الفراغات لجعلها تطبع 'مرحباً، يا سارة!'"
+code: |
+  greeting = "مرحباً، يا "
+  name = "سارة"
+  exclamation = "!"
+  message = greeting @@INPUT@@ name @@INPUT@@ exclamation
+  print(message)
+solution:
+  - "+"
+  - "+"
+explanation: "نستخدم عامل التشغيل + لربط النصوص معًا. كل + تربط نصين في نص واحد أطول."

@@ -1,0 +1,12 @@
+type: "bug"
+lang: "python"
+question: "ابحث عن السطر الذي به الخطأ في هذا الكود الذي يحاول إنشاء 'مرحباً بالعالم!!'"
+code: |
+  greeting = "مرحباً"
+  target = "بالعالم"
+  exclamation = "!"
+  result = greeting + " " + target + exclamation + 2
+  print(result)
+solution: 3
+explanation: "**لا يمكنك استخدام `+` لدمج `نص` مع `رقم`**. يجب أن تكون `exclamation * 2` لتكرار علامة التعجب."
+hint: "انظر إلى الطريقة التي نحاول بها إضافة علامات التعجب."

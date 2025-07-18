@@ -1,0 +1,11 @@
+type: "bug"
+lang: "python"
+question: "نحن نحاول دمج `نص` و`رقم`، لكن البرنامج يتعطل. أي سطر يسبب خطأ النوع (TypeError)؟"
+code: |
+  player_name = "أحمد"
+  player_level = 5
+  status = player_name + " وصل إلى المستوى " + player_level
+  print(status)
+solution: 2
+actualOutput: "TypeError: can only concatenate str (not \"int\") to str"
+explanation: "بايثون لا تسمح لك باستخدام عامل التشغيل `+` لربط `نص` و`رقم` مباشرة. يجب عليك أولاً تحويل `الرقم` إلى `نص` باستخدام `str(player_level)`."

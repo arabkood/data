@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أنشئ عرضًا لمعلومات كتاب:"
+code: |
+  title = "مغامرات بايثون"
+  author = "خبير الأكواد"
+  pages = 250
+  print("الكتاب:", @@INPUT@@, "تأليف:", @@INPUT@@, "عدد الصفحات:", @@INPUT@@)
+solution:
+  - "title"
+  - "author"
+  - "pages"
+explanation: "ممتاز! لقد أنشأت عرضًا ديناميكيًا لمعلومات الكتاب يعمل مع بيانات أي كتاب."

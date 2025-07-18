@@ -1,0 +1,11 @@
+id: f669fdf7-7e6d-42e3-b609-5ab173e78c03
+module_id: 951f5cd2-20fb-424e-9f7a-9cc6d59ecb6f
+slug: string-operations
+position: 2
+created_at: 2025-07-18T06:44:27.807Z
+updated_at: 2025-07-18T06:44:27.807Z
+type: lesson
+title: العمليات على النصوص وسحرها
+difficulty: easy
+base_xp: 300
+s3_path: python/01_beginner/002/02_string-operations

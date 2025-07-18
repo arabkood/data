@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أصلح هذا الكود ليطبع 'صباح الخير، يا لمياء!' مع ترك المسافات المناسبة:"
+code: |
+  time_of_day = "صباح الخير"
+  name = "لمياء"
+  message = time_of_day @@INPUT@@ name @@INPUT@@
+  print(message)
+solution:
+  - "+ \"، يا \" +"
+  - "+ \"!\""
+explanation: "نحن بحاجة إلى إضافة فاصلة ومسافة بين التحية والاسم، ثم علامة تعجب في النهاية."

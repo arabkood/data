@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أنشئ ملخصًا لعربة التسوق:"
+code: |
+  cart_items = 3
+  shipping = 5.99
+  total = 24.99
+  print("العربة:", @@INPUT@@, "عناصر, الشحن:", @@INPUT@@, "الإجمالي:", @@INPUT@@)
+solution:
+  - "cart_items"
+  - "shipping"
+  - "total"
+explanation: "ممتاز! عرض عربة التسوق الخاص بك يظهر جميع المعلومات المهمة في سطر واحد واضح."

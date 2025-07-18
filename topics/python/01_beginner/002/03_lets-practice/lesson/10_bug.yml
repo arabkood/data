@@ -1,0 +1,11 @@
+type: "bug"
+lang: "python"
+question: "يا إلهي! نحاول الإعلان عن مستوى اللاعب، لكن الكود يتعطل. ابحث عن السطر الذي يحتوي على الخطأ."
+code: |
+  player_level = 10
+  message = "لقد وصلت إلى المستوى " + player_level
+  print(message)
+solution: 1
+expectedOutput: "لقد وصلت إلى المستوى 10"
+actualOutput: "TypeError: can only concatenate str (not \"int\") to str"
+explanation: "بايثون لا تسمح لك باستخدام `+` لدمج `نص` و`رقم` مباشرة. الأمر أشبه بمحاولة جمع كلمة ورقم معًا في الرياضيات - هذا غير منطقي!"
