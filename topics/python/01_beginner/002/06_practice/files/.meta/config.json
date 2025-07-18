@@ -1,0 +1,19 @@
+{
+  "image": "python",
+  "files": [
+    {
+      "idx": 0,
+      "path": "broken_welcome.py",
+      "lang": "python"
+    },
+    {
+      "idx": -1,
+      "path": "broken_welcome_test.py",
+      "lang": "python",
+      "ro": true
+    }
+  ],
+  "tests": [
+    "broken_welcome_test.py"
+  ]
+}

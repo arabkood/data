@@ -1,0 +1,13 @@
+id: b605a7ca-624f-4d36-bad8-cef51c89ada8
+module_id: 951f5cd2-20fb-424e-9f7a-9cc6d59ecb6f
+slug: practice
+position: 6
+created_at: 2025-07-18T12:32:23.073Z
+updated_at: 2025-07-18T12:32:23.073Z
+type: code
+title: إصلاح لافتة الترحيب المعطلة
+blurb: null
+difficulty: easy
+premium_only: false
+base_xp: 600
+s3_path: python/01_beginner/002/06_practice
