@@ -47,7 +47,7 @@ class TestChallenge(unittest.TestCase):
         self.assertEqual(
             expected_output,
             actual_output,
-            f"لافتة المخرجات غير صحيحة.\n--- المخرجات المتوقعة ---\n{expected_output}\n\n--- المخرجات الخاصة بك ---\n{actual_output}",
+            # f"لافتة المخرجات غير صحيحة.\n--- المخرجات المتوقعة ---\n{expected_output}\n\n--- المخرجات الخاصة بك ---\n{actual_output}",
         )
 
         # 2. Check for the required introductory comment
