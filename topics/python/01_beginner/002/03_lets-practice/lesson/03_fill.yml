@@ -1,6 +1,6 @@
 type: "fill"
 lang: "python"
-question: "ممتاز. الآن، لننشئ رسالة ترحيب. أنشئ `متغيرًا` جديدًا باسم `welcome_message` يدمج `النص` `\"أهلاً بك، \"` مع `المتغير` `player_name`."
+question: "ممتاز. الآن، لننشئ رسالة ترحيب. أنشئ `متغيرًا` باسم `welcome_message` يدمج `النص` `\"أهلاً بك، \"` مع `المتغير` `player_name`."
 code: |
   player_name = "أحمد"
   welcome_message = "أهلاً بك، " @@INPUT@@

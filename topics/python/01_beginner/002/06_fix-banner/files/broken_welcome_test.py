@@ -4,7 +4,7 @@ import sys
 import os
 
 # The user's code file
-file_to_test = "./broken_welcome.py"
+file_to_test = "broken_welcome.py"
 
 
 class TestChallenge(unittest.TestCase):
@@ -19,7 +19,7 @@ class TestChallenge(unittest.TestCase):
         # Define the exact expected output, removing leading/trailing whitespace
         expected_output = (
             "******************************\n"
-            "!مرحباً بك يا محارب طه\n"
+            "مرحباً بك يا محارب طه!\n"
             "أنت تبدأ من المستوى 5\n"
             "******************************"
         ).strip()
@@ -54,9 +54,6 @@ class TestChallenge(unittest.TestCase):
         with open(file_to_test, "r") as f:
             content = f.read()
             self.assertTrue(
-                any(
-                    line.strip().startswith("#") and "banner" in line.lower()
-                    for line in content.splitlines()
-                ),
+                any(line.strip().startswith("#") for line in content.splitlines()),
                 "السكريبت الخاص بك يفتقد التعليق المطلوب في الأعلى الذي يشرح وظيفته (مثال: '# هذا السكريبت يُنشئ لافتة ترحيب للاعب.').",
             )
