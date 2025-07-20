@@ -1,0 +1,118 @@
+item_id: "module-2-item-8"
+item_type: "code"
+title: "Module Challenge: Fix the Banner"
+files:
+  - name: "instructions.md"
+    content: |
+      ### Your Mission: Fix the Broken Welcome Banner
+
+      You're the newest programmer at a game studio, and your first task is to fix a broken Python script. This script is supposed to generate a personalized welcome banner for new players, but the previous developer left it in a complete mess!
+
+      Your goal is to edit `initial_code.py` to fix all the bugs so it runs perfectly and prints the correct banner.
+
+      ---
+
+      #### Requirements
+
+      The final output in the console must look *exactly* like this:
+
+      ```text
+      ******************************
+      Welcome, Mighty Warrior ZARA!
+      You are starting at Level 5
+      ******************************
+      ```
+
+      ---
+
+      #### Bugs to Hunt
+
+      The script is riddled with common errors. Look carefully for:
+      - **Syntax Errors:** Check for things like incorrect comment symbols (`//` instead of `#`) or missing parentheses `()`.
+      - **Name Errors:** Make sure all text (strings) are wrapped in quotes. If they aren't, Python will think they are variables!
+      - **Type Errors:** Remember, you can't use `+` to add a string and a number. You'll need to convert the number to a string first.
+      - **Indentation Errors:** Python is strict about whitespace. Make sure lines of code aren't indented when they shouldn't be.
+      - **Missing Comments:** The script should start with a proper comment explaining its purpose.
+
+      Good luck, programmer!
+
+  - name: "initial_code.py"
+    content: |
+      // This script generates a player welcome banner.
+      player_name = "ZARA"
+      player_class = Warrior
+      player_level = 5
+
+      # Create the top and bottom borders
+      border_char = "*"
+      border_length = 30
+      full_border = border_char * border_length
+
+      # Generate the welcome messages
+      message_1 = "Welcome, Mighty " + player_class + " " + player_name + "!"
+      message_2 = "You are starting at Level " + player_level
+
+      # Print the final banner
+        print(full_border)
+      print(message_1
+      print(message_2)
+      print(full_border)
+
+  - name: "initial_code_test.py"
+    content: |
+      import unittest
+      import subprocess
+      import sys
+      import os
+
+      # The user's code file
+      file_to_test = "initial_code.py"
+
+      class TestChallenge(unittest.TestCase):
+          def test_banner_challenge(self):
+              """
+              Runs the user's script and checks its output and source code for requirements.
+              """
+              # Check if the user's file exists
+              if not os.path.exists(file_to_test):
+                  self.fail(f"The file '{file_to_test}' was not found.")
+
+              # Define the exact expected output, removing leading/trailing whitespace
+              expected_output = (
+                  "******************************\n"
+                  "Welcome, Mighty Warrior ZARA!\n"
+                  "You are starting at Level 5\n"
+                  "******************************"
+              ).strip()
+
+              try:
+                  # Run the user's script as a separate process to catch all errors
+                  process = subprocess.run(
+                      [sys.executable, file_to_test],
+                      capture_output=True,
+                      text=True,
+                      check=True,
+                      timeout=5
+                  )
+                  actual_output = process.stdout.strip()
+
+              except subprocess.CalledProcessError as e:
+                  # If the script exits with an error, fail the test and provide the error message
+                  self.fail(
+                      "Your script failed to run. Check the console for the error message.\n"
+                      f"--- ERROR ---\n{e.stderr}"
+                  )
+              except subprocess.TimeoutExpired:
+                  self.fail("Your script took too long to run. It might be stuck in a loop.")
+
+              # 1. Check if the output matches the expected banner
+              self.assertEqual(expected_output, actual_output,
+                               f"The output banner is incorrect.\n--- Expected ---\n{expected_output}\n\n--- Your Output ---\n{actual_output}")
+
+              # 2. Check for the required introductory comment
+              with open(file_to_test, "r") as f:
+                  content = f.read()
+                  self.assertTrue(
+                      any(line.strip().startswith("#") and "banner" in line.lower() for line in content.splitlines()),
+                      "Your script is missing the required comment at the top explaining what it does (e.g., '# This script generates a player welcome banner.')."
+                  )

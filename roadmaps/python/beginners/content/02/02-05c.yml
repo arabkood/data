@@ -1,0 +1,106 @@
+item_id: "module-2-item-7"
+item_type: "lesson"
+title: "المراجعة النهائية"
+steps:
+  - type: "markdown"
+    content: |
+      أهلاً بك في المراجعة النهائية! لقد تعلمت الكثير عن `المتغيرات`، و`النصوص`، و`الطباعة`، و`التعليقات`.
+
+      الآن، لنضع مهاراتك البوليسية الجديدة قيد الاختبار. في هذا القسم، ستقدم كل خطوة مقطعًا من الكود يحتوي على **خطأ شائع واحد**.
+
+      مهمتك هي العثور على السطر الذي يحتوي على الخطأ في كل مثال. لنبدأ!
+
+  - type: "bug"
+    lang: "python"
+    question: "من المفترض أن يطبع هذا الكود رسالة ترحيب، لكنه يحتوي على خطأ في الصياغة (syntax error). ابحث عن السطر الخاطئ."
+    code: |
+      message = "مرحباً أيها المبرمج!"
+      print(message
+    solution: 1
+    actualOutput: "SyntaxError: unexpected EOF while parsing"
+    explanation: "الدالة `print()`، مثل كل الدوال، تحتاج إلى زوج متطابق من الأقواس `()`. القوس الختامي مفقود في السطر الثاني."
+
+  - type: "bug"
+    lang: "python"
+    question: "نحن نحاول دمج `نص` و`رقم`، لكن البرنامج يتعطل. أي سطر يسبب خطأ النوع (TypeError)؟"
+    code: |
+      player_name = "أحمد"
+      player_level = 5
+      status = player_name + " وصل إلى المستوى " + player_level
+      print(status)
+    solution: 2
+    actualOutput: "TypeError: can only concatenate str (not \"int\") to str"
+    explanation: "بايثون لا تسمح لك باستخدام عامل التشغيل `+` لربط `نص` و`رقم` مباشرة. يجب عليك أولاً تحويل `الرقم` إلى `نص` باستخدام `str(player_level)`."
+
+  - type: "bug"
+    lang: "python"
+    question: "نحاول تعريف `متغير` لتخزين نقاط لاعب، لكن بايثون تقول إن اسم المتغير غير صالح. ابحث عن السطر غير الصحيح."
+    code: |
+      # نقاط اللاعبين
+      1st_player_score = 1000
+      2nd_player_score = 850
+    solution: 1
+    actualOutput: "SyntaxError: invalid decimal literal"
+    explanation: "في بايثون، **لا يمكن أن تبدأ أسماء `المتغيرات` برقم**. يجب أن تبدأ بحرف (a-z, A-Z) أو شرطة سفلية (`_`)."
+
+  - type: "bug"
+    lang: "python"
+    question: "يجب أن يعرّف هذا الكود سلاحًا ثم يطبع اسمه، لكنه يتعطل بخطأ الاسم (NameError). ابحث عن السطر الذي يسبب التعطل."
+    code: |
+      print("تم تجهيز: " + weapon)
+      weapon = "سيف حديدي"
+    solution: 0
+    actualOutput: "NameError: name 'weapon' is not defined"
+    explanation: "يتم تشغيل الكود من الأعلى إلى الأسفل. أنت تحاول طباعة المتغير `weapon` في السطر الأول، لكنه لم يتم إنشاؤه حتى السطر الثاني. **يجب عليك تعريف `المتغيرات` *قبل* استخدامها**."
+
+  - type: "bug"
+    lang: "python"
+    question: "تعريف هذا `النص` يحتوي على خطأ في الصياغة لأن علامات الاقتباس غير متطابقة. هل يمكنك تحديد السطر الذي به الخطأ؟"
+    code: |
+      # رسائل ترحيب
+      message_1 = "أهلاً بك في اللعبة!'
+      message_2 = "حظاً موفقاً."
+    solution: 1
+    actualOutput: "SyntaxError: EOL while scanning string literal"
+    explanation: "يجب أن يبدأ `النص` وينتهي بنفس نوع علامة الاقتباس. هذا النص يبدأ بعلامة اقتباس مزدوجة (`\"`) ولكنه ينتهي بعلامة اقتباس مفردة (`'`)."
+
+  - type: "bug"
+    lang: "python"
+    question: "الهدف هو تخزين كلمة `\"درع\"` في `متغير`، لكن بايثون تعتقد أنه `متغير` غير معرّف. ابحث عن الخطأ."
+    code: |
+      item_name = درع
+      print(item_name)
+    solution: 0
+    actualOutput: "NameError: name 'Shield' is not defined"
+    explanation: "القيم النصية، أو `النصوص`، يجب أن تكون محاطة بعلامات اقتباس (`\"\"` أو `''`). بدون علامات اقتباس، تعتقد بايثون أن `درع` هو اسم `متغير` آخر، وليس النص الذي تريد تخزينه."
+
+  - type: "bug"
+    lang: "python"
+    question: "يحاول هذا الكود تكرار `نص` لإنشاء خط فاصل، لكنه يسبب خطأ النوع (TypeError). ابحث عن السطر غير الصحيح."
+    code: |
+      # إنشاء خط فاصل
+      separator_char = ">"
+      line = separator_char * "---"
+      print(line)
+    solution: 2
+    actualOutput: "TypeError: can't multiply sequence by non-int of type 'str'"
+    explanation: "يمكنك فقط ضرب `نص` في `رقم صحيح` (integer) لتكراره. **لا يمكنك ضرب `نص` في `نص` آخر**."
+
+  - type: "bug"
+    lang: "python"
+    question: "نحاول ترك `تعليق` لشرح الكود، لكنه يسبب خطأ في الصياغة (SyntaxError). ما هو الخطأ؟"
+    code: |
+      // تعيين الموضع الأولي
+      x_position = 0
+      y_position = 0
+    solution: 0
+    actualOutput: "SyntaxError: invalid syntax"
+    explanation: "في بايثون، تبدأ `التعليقات` أحادية السطر برمز المربع (`#`). تُستخدم الشرطة المائلة المزدوجة (`//`) للتعليقات في لغات أخرى مثل جافاسكريبت، لكنها غير صالحة لبدء سطر تعليق في بايثون."
+
+  - type: "markdown"
+    content: |
+      عمل ممتاز في اكتشاف كل هذه الأخطاء!
+
+      إصلاح الأخطاء جزء كبير من البرمجة. كلما تدربت على التعرف على هذه الأخطاء الشائعة، أصبحت أسرع في كتابة `كود` صحيح.
+
+      لقد أكملت المراجعة!
