@@ -1,4 +1,4 @@
-## First Steps in Python
+## MODULE 1: First Steps in Python
 
    1. Writing Code
       description: A straight to coding lesson introduction, it will teach only one line of code print("text") and print(number). It will be focused on practice with very little theory and explanation.
@@ -32,25 +32,25 @@
    8. Module Challenge
       description: a code runner challenge, where we give the user a code (related to what they learned so far) full of bugs, and they have to fix it to pass.
 
-## Let's Go Deeper
+## MODULE 2: Let's Go Deeper
 
 
-   2. Advanced Print Techniques
+   1. Advanced Print Techniques
       description: Expand familiar print() function through practice. Learn multiple arguments, create formatted output, combine with variables from previous lessons. Practice-driven with real examples.
       goal: Master print() functionality for better program output
       concepts: "multiple arguments", "print formatting", "output control"
       takeaways: print() can display multiple values at once, You can combine text and variables in print(), Commas separate multiple items in print()
 
-   3. String Operations
+   2. String Operations
       description: Build on existing string knowledge with hands-on manipulation. Practice string concatenation, repetition, and combining with variables. Connect to real-world applications through examples.
       goal: Combine and manipulate strings effectively in practical scenarios
       concepts: "string concatenation", "string repetition", "string operators", "+"
       takeaways: Strings can be joined together using +, Strings can be repeated using *, You can combine variables and text to create dynamic messages
 
-   5. Practice Game (String Master)
+   3. Practice Game (String Master)
       description: A fun multi step lesson with mostly practice about everything learned so far Real-world scenario combining all concepts learned so far.
 
-   6. Comments & Code Documentation
+   4. Comments & Code Documentation
       description: We've been using comments in our examples before, but now we'll introduce what they are to the user. Learn single-line comments, when to use them, and how they help. Practice commenting existing code from previous lessons. Also introduce multi-line comments quickly (not in depth).
       goal: Understand why and how to comment.
       concepts: "comments", "#", "code documentation", "readability"

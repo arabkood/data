@@ -1,0 +1,263 @@
+item_id: "module-1-item-6"
+item_type: "lesson"
+title: "التعامل مع المتغيرات"
+
+steps:
+  # --- STEP 1: Introduction with purpose ---
+  - type: "markdown"
+    content: |
+      الآن بعد أن عرفت كيف تنشئ المتغيرات، هيا نتعلم كيف **نتعامل معها** بطرق أكثر قوة.
+
+      فكر في المتغيرات كمكونات في وصفة طبخ. أنت لا تضع المكونات على الطاولة فقط، بل تمزجها وتجمعها وتحولها إلى شيء جديد.
+
+      في هذا الدرس، ستتعلم كيف تستخدم المتغيرات معًا، وتجري عليها عمليات حسابية، بل وتغير قيمها أثناء تشغيل برنامجك.
+
+  # --- STEP 2: Using variables in calculations ---
+  - type: "markdown"
+    content: |
+      إليك أمر مدهش: يمكنك استخدام المتغيرات في العمليات الحسابية تمامًا كما تفعل مع الأرقام العادية.
+
+      ```python
+      price = 25
+      quantity = 3
+      total = price * quantity
+      print(total)
+      ```
+
+      يأخذ بايثون **القيم** المخزنة في `price` و`quantity` (وهي 25 و 3)، ويضربها ببعضها، ثم يخزن النتيجة (75) في المتغير الجديد `total`.
+
+      <!-- media_idea: Simple diagram showing three boxes labeled "price" (containing 25), "quantity" (containing 3), and "total" (containing 75), with arrows showing the calculation flow -->
+
+  # --- STEP 3: Practice with variable calculations ---
+  - type: "fill"
+    lang: "python"
+    question: |
+      أكمل هذا الكود لحساب المبلغ الذي ستكسبه فاطمة إذا عملت 8 ساعات مقابل 15 وحدة نقدية في الساعة:
+    code: |
+      hourly_rate = 15
+      hours_worked = @@INPUT@@
+      total = hourly_rate @@INPUT@@ hours_worked
+      print(@@INPUT@@)
+    solution:
+      - "8"
+      - "*"
+      - "total"
+    explanation: "نقوم بتخزين الرقم 8 في `hours_worked`، ثم نضرب `hourly_rate` في `hours_worked` باستخدام علامة `*`، ونطبع النتيجة المخزنة في `total`."
+
+  # --- STEP 4: Using variables in print statements ---
+  - type: "markdown"
+    content: |
+      يمكنك أيضًا إجراء العملية الحسابية في جملة الطباعة مباشرة.
+
+      ```python
+      price = 25
+      tip = 10
+      print(price + tip)
+      ```
+
+      سيطبع هذا الكود: `35`
+
+  # --- STEP 5: Practice ---
+  - type: "fill"
+    lang: "python"
+    question: |
+      أكمل هذا الكود لعرض مجموع درجات أحد الطلاب:
+    code: |
+      score1 = 80
+      score2 = 92
+      @@INPUT@@(score1 + @@INPUT@@)
+    solution:
+      - "print"
+      - "score2"
+
+  # --- STEP 5b: Using more variables ---
+  - type: "markdown"
+    content: |
+      يمكنك أيضًا استخدام أي عدد من المتغيرات. الشيء المهم هو أن تحافظ على **أسماء فريدة** لكل متغير.
+
+      ```python
+      price1 = 10
+      price2 = 15
+      price3 = 5
+      price4 = 21
+      price5 = 7
+      price6 = 28
+      price7 = 9
+      total = price1 + price2 + price3 + price4 + price5 + price6 + price7 # المجموع يساوي 95
+      tip = 10
+      tax = 20
+      print(total + tip + tax)
+      ```
+
+      سيطبع هذا الكود: `125`
+
+  # --- STEP 5c: Spot the bug ---
+  - type: "bug"
+    lang: "python"
+    question: |
+      من المفترض أن يحسب هذا الكود التكلفة الإجمالية لـ 7 منتجات ثم يضيف الضريبة والإكرامية، ولكن هناك خطأ. 
+      يجب أن يطبع `125` ولكنه يطبع `131`. ابحث عن الخطأ:
+    code: |
+      price1 = 10
+      price2 = 9
+      price2 = 15
+      price3 = 5
+      price4 = 21
+      price5 = 7
+      price6 = 28
+      total = price1 + price2 + price2 + price3 + price4 + price5 + price6
+      tip = 10
+      tax = 20
+      print(total + tip + tax)
+    solution: 2
+    explanation: |  
+      لقد استخدمنا اسم المتغير `price2` مرتين، وهذا يلغي القيمة الأولى، ويعطينا مجموعًا خاطئًا.
+      سيتم حساب المجموع كالتالي:
+      `total = 10 + 15 + 15 + 5 + 21 + 7 + 28`
+      بدلاً من:
+      `total = 10 + 9 + 15 + 5 + 21 + 7 + 28`
+    hint: "انظر بعناية إلى أسماء المتغيرات."
+
+  # --- STEP 5c: Spot the bug ---
+  - type: "bug"
+    lang: "python"
+    question: "من المفترض أن يحسب هذا الكود العمر بالسنوات ولكننا نحصل على خطأ، ابحث عن السطر الذي يحتوي على الخلل:"
+    code: |
+      currentYear = 2025
+      birthYear = 2000
+      age = currentyear - birthYear
+
+      print("Your Age:")
+      print(age)
+    solution: 2
+    explanation: "أسماء المتغيرات حساسة لحالة الأحرف، `currentYear` و `currentyear` ليسا نفس الشيء في بايثون."
+    hint: "انظر بعناية إلى أسماء المتغيرات."
+
+  # --- STEP 6: The power of updating variables ---
+  - type: "markdown"
+    content: |
+      هنا تكمن القوة الحقيقية للمتغيرات: يمكنك **تغيير قيمها** أثناء تشغيل برنامجك.
+
+      ```python
+      score = 10
+      print("النقاط المبدئية:", score)
+      
+      score = score + 5
+      print("بعد المكافأة:", score)
+      ```
+
+      قد يبدو هذا غريبًا في البداية. `score = score + 5` تعني "خذ القيمة الحالية للمتغير `score` (وهي 10)، وأضف إليها 5، ثم قم بتخزين النتيجة الجديدة (15) مرة أخرى في المتغير `score`."
+
+      يحتوي المتغير `score` الآن على القيمة 15، وليس 10.
+
+  # --- STEP 7: Quiz about variable updating ---
+  - type: "quiz"
+    question: "ما هي القيمة النهائية للمتغير `points` بعد تشغيل هذا الكود؟"
+    code: |
+      points = 100
+      points = points - 20
+      points = points + 15
+    lang: "python"
+    options:
+      - "100"
+      - "95"
+      - "80"
+      - "115"
+    solution: 1
+    explanation: |
+      هذا ما يفعله الكود خلف الكواليس:
+
+      ```python
+      points = 100
+      points = 100 - 20 # 80
+      points = 80 + 15 # 95
+      ```
+
+  # --- STEP 8: Practice updating variables ---
+  - type: "fill"
+    lang: "python"
+    question: |
+      أكمل هذا الكود لمحاكاة حساب بنكي. ابدأ بـ 500، ثم أودع 200، ثم اسحب 150:
+    code: |
+      balance @@INPUT@@ 500
+      print("الرصيد الابتدائي:")
+      print(balance)
+      
+      balance = balance @@INPUT@@ 200
+      print("بعد الإيداع:")
+      print(balance)
+      
+      balance = balance @@INPUT@@ 150  
+      print("بعد السحب:")
+      print(balance)
+    solution:
+      - "="
+      - "+"
+      - "-"
+
+  # --- STEP 9: Order of operations matters ---
+  - type: "markdown"
+    content: |
+      عندما تكتب الكود، فإن ترتيب الجمل مهم جدًا! يقرأ بايثون الكود الخاص بك من الأعلى إلى الأسفل، سطراً بسطر.
+
+      ```python
+      x = 5
+      y = x + 2    # y تصبح 7
+      x = 10       # x تتغير إلى 10
+      print(y)     # لا يزال يطبع 7، وليس 12!
+      ```
+
+      على الرغم من أننا غيرنا قيمة `x` إلى 10 لاحقًا، فإن `y` تحتفظ بقيمتها الأصلية التي هي 7. **المتغيرات تتذكر قيمها من وقت إسنادها**، وليس من وقت استخدامها.
+
+  # --- STEP 10: Practice with order of operations ---
+  - type: "order"
+    lang: "python" 
+    question: "رتب هذه الأسطر لإنشاء برنامج يحسب مساحة مستطيل، ثم يضاعفها:"
+    code:
+      - "length = 8"
+      - "width = 5" 
+      - "area = length * width"
+      - "doubled_area = area * 2"
+      - "print(doubled_area)"
+    explanation: "نحتاج إلى تعريف المتغيرات أولاً، ثم حساب المساحة، ثم مضاعفتها، وأخيراً طباعة النتيجة."
+    alternate:
+      - [1, 0, 2, 3, 4]
+
+  # --- STEP 14: Final challenge ---
+  - type: "fill"
+    lang: "python" 
+    question: |
+      لنقم بإنشاء حاسبة تسوق بسيطة. أكمل الكود لحساب التكلفة الإجمالية لشراء المنتجات:
+    code: |
+      # التسوق من متجر البقالة
+      apples = 3
+      apple_price = 2
+      
+      bananas = 5  
+      banana_price = 1
+      
+      apple_cost = @@INPUT@@ * @@INPUT@@
+      banana_cost = bananas * @@INPUT@@
+      
+      total = @@INPUT@@ + @@INPUT@@
+      print("المجموع:")
+      print(total)
+    solution:
+      - "apples"
+      - "apple_price"
+      - "banana_price"
+      - "apple_cost"
+      - "banana_cost"
+
+  # --- STEP 13: Summary and key takeaways ---
+  - type: "markdown"
+    content: |
+      عمل ممتاز! لقد تعلمت بعض الطرق القوية للتعامل مع المتغيرات:
+
+      **✅ أهم النقاط:**
+      - يمكنك استخدام المتغيرات في العمليات الحسابية تمامًا مثل الأرقام العادية.
+      - يمكن حساب قيمة المتغيرات مباشرة في جمل الطباعة.
+      - يمكنك تحديث قيمة متغير باستخدام `variable = variable + شيء ما`.
+      - ترتيب الكود مهم، فبايثون يقرأ من الأعلى إلى الأسفل.
+
+      المتغيرات تشبه الحاويات الذكية التي يمكنها إجراء العمليات الحسابية وتغيير محتوياتها والعمل معًا. في الدرس التالي، سنقوم بمراجعة كل ما تعلمناه من خلال بعض التمارين!

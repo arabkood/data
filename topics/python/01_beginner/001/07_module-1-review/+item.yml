@@ -1,0 +1,14 @@
+id: e23d7d20-f63e-4289-b8ad-fc03d89af67d
+module_id: 3f12f636-373e-4333-8c8a-8b690187f556
+slug: module-1-review
+position: 7
+created_at: 2025-07-21T15:06:01.117Z
+updated_at: 2025-07-21T15:06:01.117Z
+type: lesson
+title: مراجعة أخيرة
+blurb: >-
+  واجه أشهر الأخطاء التي يقع فيها المبرمجون في هذه المراجعة النهائية، وأثبت
+  إتقانك لأساسيات البرمجة.
+difficulty: easy
+base_xp: 300
+s3_path: python/01_beginner/001/07_module-1-review

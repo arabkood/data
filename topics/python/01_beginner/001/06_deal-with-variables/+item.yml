@@ -1,0 +1,14 @@
+id: f9194586-f9d5-460f-af0f-33637c4def8e
+module_id: 3f12f636-373e-4333-8c8a-8b690187f556
+slug: deal-with-variables
+position: 6
+created_at: 2025-07-21T15:06:01.115Z
+updated_at: 2025-07-21T15:06:01.115Z
+type: lesson
+title: التعامل مع المتغيرات
+blurb: >-
+  تجاوز مجرد تخزين البيانات. تعلم كيف تجري عمليات حسابية بالمتغيرات وتحدث قيمها
+  لبناء برامج أكثر قوة وتفاعلية.
+difficulty: easy
+base_xp: 300
+s3_path: python/01_beginner/001/06_deal-with-variables

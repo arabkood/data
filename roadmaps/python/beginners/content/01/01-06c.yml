@@ -1,0 +1,110 @@
+item_id: "module-1-item-7"
+item_type: "lesson"
+title: "مراجعة أخيرة"
+
+steps:
+  - type: "quiz"
+    question: "أي من هذه الخيارات سيسبب خطأ؟"
+    options:
+      - '`print("Hello World")`'
+      - '`print(Hello World)`'
+      - '`name = "نورة"`'
+      - '`age = 25`'
+    solution: 1
+    explanation: "يجب دائمًا إحاطة `النصوص` بعلامات اقتباس. بدونها، يعتقد بايثون أن `Hello` و `World` هما اسما `متغيرين`، وهما غير موجودين."
+
+  - type: "bug"
+    lang: "python"
+    question: "من المفترض أن يحسب هذا الكود مجموع رقمين، ولكن هناك خطأ ما. ابحث عن الخطأ:"
+    code: |
+      first_number = "10"
+      second_number = "5"
+      result = first_number + second_number
+      print(result)
+    solution: 0
+    explanation: 'علامات الاقتباس حول `"10"` تجعله `نصًا`، وليس `رقمًا`. عند إضافة `النصوص`، يتم دمجها معًا (لصقها) بدلاً من جمعها رياضيًا.'
+    expectedOutput: "15"
+    actualOutput: "105"
+
+  # --- STEP 5: Variable assignment direction ---
+  - type: "quiz"
+    question: "ماذا يحدث عند تشغيل هذا الكود؟"
+    code: |
+      x = 5
+      y = 10
+      x = y
+      print(x)
+    lang: "python"
+    options:
+      - "5"
+      - "10"
+      - "15"
+      - "خطأ"
+    solution: 1
+    explanation: "السطر `x = y` ينسخ القيمة من `y` (وهي 10) ويضعها في `x`. الآن كلا المتغيرين يحتويان على القيمة 10."
+
+  # --- STEP 6: The order trap ---
+  - type: "bug"
+    lang: "python"
+    question: "أراد هذا المبرمج حساب مساحة مستطيل، لكنه ارتكب خطأ في الترتيب. ابحث عنه:"
+    code: |
+      area = length * width
+      length = 8
+      width = 5
+      print(area)
+    solution: 0
+    explanation: "لا يمكنك استخدام المتغيرات قبل إنشائها!"
+
+  # --- STEP 7: Practice with correct ordering ---
+  - type: "order"
+    lang: "python"
+    question: "ضع هذه الأسطر بالترتيب الصحيح لحساب الدرجة النهائية لطالب (متوسط ثلاثة اختبارات):"
+    code:
+      - "test1 = 85"
+      - "test2 = 92"
+      - "test3 = 78"
+      - "total = test1 + test2 + test3"
+      - "average = total / 3"
+      - "print(average)"
+    explanation: "يجب إنشاء المتغيرات قبل استخدامها في العمليات الحسابية."
+
+  # --- STEP 8: Variable updating confusion ---
+  - type: "quiz"
+    question: "بعد تشغيل هذا الكود، ما هي القيمة التي ستكون في المتغير `counter`؟"
+    code: |
+      counter = 0
+      counter = counter + 1
+      counter = counter + 1
+      counter = counter + 1
+    lang: "python"
+    options:
+      - "0"
+      - "1"
+      - "3"
+      - "6"
+    solution: 2
+    explanation: "بدءًا من 0، نضيف 1 ثلاث مرات: 0+1=1، ثم 1+1=2، ثم 2+1=3."
+
+  # --- STEP 9: The print statement gotcha ---
+  - type: "fill"
+    lang: "python"
+    question: "أكمل هذا الكود لطباعة كل من اسم المتغير وقيمته:"
+    code: |
+      score = 95
+      print(@@INPUT@@)
+      print(@@INPUT@@)
+    solution:
+      - '"score"'
+      - "score"
+    explanation: 'استخدم علامات الاقتباس حول `"score"` لطباعة النص الحرفي، ولا تستخدمها حول `score` لطباعة قيمته.'
+
+  # --- STEP 12: Variable naming review ---
+  - type: "quiz"
+    question: "أي من هذه الأسماء ليس اسم متغير صالحًا في بايثون؟"
+    options:
+      - "`student_age`"
+      - "`firstName`"
+      - "`2nd_place`"
+      - "`user_score`"
+    solution: 2
+    explanation: "**لا يمكن أن تبدأ أسماء المتغيرات برقم.**"
