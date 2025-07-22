@@ -1,0 +1,10 @@
+# --- STEP 12: Variable naming review ---
+type: "quiz"
+question: "أي من هذه الأسماء ليس اسم متغير صالحًا في بايثون؟"
+options:
+  - "`student_age`"
+  - "`firstName`"
+  - "`2nd_place`"
+  - "`user_score`"
+solution: 2
+explanation: "**لا يمكن أن تبدأ أسماء المتغيرات برقم.**"

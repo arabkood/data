@@ -1,0 +1,12 @@
+# --- STEP 7: Practice with correct ordering ---
+type: "order"
+lang: "python"
+question: "ضع هذه الأسطر بالترتيب الصحيح لحساب الدرجة النهائية لطالب (متوسط ثلاثة اختبارات):"
+code:
+  - "test1 = 85"
+  - "test2 = 92"
+  - "test3 = 78"
+  - "total = test1 + test2 + test3"
+  - "average = total / 3"
+  - "print(average)"
+explanation: "يجب إنشاء المتغيرات قبل استخدامها في العمليات الحسابية."

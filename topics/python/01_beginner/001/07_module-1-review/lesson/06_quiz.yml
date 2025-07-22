@@ -1,0 +1,16 @@
+# --- STEP 8: Variable updating confusion ---
+type: "quiz"
+question: "بعد تشغيل هذا الكود، ما هي القيمة التي ستكون في المتغير `counter`؟"
+code: |
+  counter = 0
+  counter = counter + 1
+  counter = counter + 1
+  counter = counter + 1
+lang: "python"
+options:
+  - "0"
+  - "1"
+  - "3"
+  - "6"
+solution: 2
+explanation: "بدءًا من 0، نضيف 1 ثلاث مرات: 0+1=1، ثم 1+1=2، ثم 2+1=3."

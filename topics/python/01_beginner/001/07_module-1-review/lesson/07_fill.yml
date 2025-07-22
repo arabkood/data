@@ -1,0 +1,12 @@
+# --- STEP 9: The print statement gotcha ---
+type: "fill"
+lang: "python"
+question: "أكمل هذا الكود لطباعة كل من اسم المتغير وقيمته:"
+code: |
+  score = 95
+  print(@@INPUT@@)
+  print(@@INPUT@@)
+solution:
+  - '"score"'
+  - "score"
+explanation: 'استخدم علامات الاقتباس حول `"score"` لطباعة النص الحرفي، ولا تستخدمها حول `score` لطباعة قيمته.'

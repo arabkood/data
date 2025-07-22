@@ -1,0 +1,9 @@
+type: "quiz"
+question: "أي من هذه الخيارات سيسبب خطأ؟"
+options:
+  - '`print("Hello World")`'
+  - '`print(Hello World)`'
+  - '`name = "نورة"`'
+  - '`age = 25`'
+solution: 1
+explanation: "يجب دائمًا إحاطة `النصوص` بعلامات اقتباس. بدونها، يعتقد بايثون أن `Hello` و `World` هما اسما `متغيرين`، وهما غير موجودين."

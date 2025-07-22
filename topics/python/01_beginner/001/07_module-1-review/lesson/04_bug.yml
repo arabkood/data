@@ -1,0 +1,11 @@
+# --- STEP 6: The order trap ---
+type: "bug"
+lang: "python"
+question: "أراد هذا المبرمج حساب مساحة مستطيل، لكنه ارتكب خطأ في الترتيب. ابحث عنه:"
+code: |
+  area = length * width
+  length = 8
+  width = 5
+  print(area)
+solution: 0
+explanation: "لا يمكنك استخدام المتغيرات قبل إنشائها!"

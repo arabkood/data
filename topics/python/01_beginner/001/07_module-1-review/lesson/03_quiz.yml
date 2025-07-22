@@ -1,0 +1,16 @@
+# --- STEP 5: Variable assignment direction ---
+type: "quiz"
+question: "ماذا يحدث عند تشغيل هذا الكود؟"
+code: |
+  x = 5
+  y = 10
+  x = y
+  print(x)
+lang: "python"
+options:
+  - "5"
+  - "10"
+  - "15"
+  - "خطأ"
+solution: 1
+explanation: "السطر `x = y` ينسخ القيمة من `y` (وهي 10) ويضعها في `x`. الآن كلا المتغيرين يحتويان على القيمة 10."
