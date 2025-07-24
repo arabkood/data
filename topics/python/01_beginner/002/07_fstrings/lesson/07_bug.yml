@@ -1,0 +1,11 @@
+type: "bug"
+lang: "python"
+question: "هذا الكود لا يعمل كما متوقع. أين المشكلة؟"
+code: |
+  pet_name = "قطقوط"
+  pet_type = "قط"
+  description = "حيواني الأليف {pet_name} هو {pet_type} لطيف"
+  print(description)
+solution: 2
+explanation: "المشكلة أنك نسيت الحرف `f` قبل النص! يجب أن يكون: `f\"حيواني الأليف {pet_name}...\"`"
+hint: "تأكد من وجود `f` قبل علامات الاقتباس"

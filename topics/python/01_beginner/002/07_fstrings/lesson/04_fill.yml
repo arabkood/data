@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "حوّل هذا الكود لاستخدام F-string:"
+code: |
+  city = "الرياض"
+  greeting = @@INPUT@@"أهلاً وسهلاً بك في @@INPUT@@"@@INPUT@@
+solution:
+  - "f"
+  - "{city}"
+  - ""
+explanation: "ممتاز! تذكر: `f` قبل النص، و `{}` حول اسم المتغير."

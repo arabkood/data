@@ -1,0 +1,161 @@
+item_id: "module-2-item-9"
+item_type: "lesson"
+title: "النصوص المنسقة (F-Strings)"
+steps:
+  - type: "markdown"
+    content: |
+      تذكر عندما كنا نربط النصوص باستخدام علامة `+`؟
+
+      ```python
+      name = "أحمد"
+      message = "مرحباً " + name + "!"
+      ```
+
+      هذا يعمل، لكن ماذا لو أردت إدراج عدة متغيرات؟ الأمر يصبح فوضوياً بسرعة!
+
+  - type: "markdown"
+    content: |
+      **النصوص المنسقة** (F-strings) هي طريقة بايثون السهلة لوضع المتغيرات داخل النصوص.
+
+      فكر فيها كملء الفراغات في جملة جاهزة:
+
+      ```python
+      name = "أحمد"
+      message = f"مرحباً {name}!"
+      ```
+
+      انظر؟ أبسط بكثير! لا حاجة لعلامات `+` متعددة.
+    media_idea: "A simple before/after comparison showing string concatenation with + versus an f-string with curly braces."
+
+  - type: "quiz"
+    question: "ما الفرق الأساسي بين `\"مرحباً \" + name` و `f\"مرحباً {name}\"`؟"
+    options:
+      - "لا يوجد فرق، كلاهما يعطي نفس النتيجة."
+      - "F-string أسهل للقراءة وأقل تعقيداً."
+      - "الطريقة الأولى أسرع."
+      - "F-string تعمل مع الأرقام فقط."
+    solution: 1
+    explanation: "صحيح! كلاهما يعطي نفس النتيجة، لكن F-string أنظف وأسهل للكتابة والقراءة."
+
+  - type: "fill"
+    lang: "python"
+    question: "حوّل هذا الكود لاستخدام F-string:"
+    code: |
+      city = "الرياض"
+      greeting = @@INPUT@@"أهلاً وسهلاً بك في @@INPUT@@"@@INPUT@@
+    solution:
+      - "f"
+      - "{city}"
+      - ""
+    explanation: "ممتاز! تذكر: `f` قبل النص، و `{}` حول اسم المتغير."
+
+  - type: "markdown"
+    content: |
+      إليك القاعدة البسيطة لاستخدام F-strings:
+
+      1. **ضع `f`** قبل علامات الاقتباس
+      2. **ضع `{}`** حول اسم المتغير
+      3. **هذا كل شيء!**
+
+      ```python
+      favorite_color = "أزرق"
+      sentence = f"لوني المفضل هو {favorite_color}"
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لطباعة اسم الطالب ومدرسته:"
+    code: |
+      student_name = "فاطمة"
+      school_name = "مدرسة النور"
+      
+      intro = @@INPUT@@"الطالبة @@INPUT@@ تدرس في @@INPUT@@"@@INPUT@@
+      print(intro)
+    solution:
+      - "f"
+      - "{student_name}"
+      - "{school_name}"
+      - ""
+    explanation: "رائع! يمكنك استخدام عدة متغيرات في نفس F-string."
+
+  - type: "bug"
+    lang: "python"
+    question: "هذا الكود لا يعمل كما متوقع. أين المشكلة؟"
+    code: |
+      pet_name = "قطقوط"
+      pet_type = "قط"
+      description = "حيواني الأليف {pet_name} هو {pet_type} لطيف"
+      print(description)
+    solution: 2
+    explanation: "المشكلة أنك نسيت الحرف `f` قبل النص! يجب أن يكون: `f\"حيواني الأليف {pet_name}...\"`"
+    hint: "تأكد من وجود `f` قبل علامات الاقتباس"
+
+  - type: "markdown"
+    content: |
+      يمكنك استخدام F-strings مع أي نوع من المتغيرات:
+
+      ```python
+      # مع النصوص
+      game_name = "سوبر ماريو"
+      message1 = f"ألعب {game_name} الآن"
+      
+      # مع الأرقام
+      score = 1500
+      message2 = f"نقاطي هي {score}"
+      
+      # مع عدة متغيرات
+      player = "سارة"
+      level = 5
+      message3 = f"اللاعبة {player} وصلت للمستوى {level}"
+      ```
+
+  - type: "order"
+    lang: "python"
+    question: "رتب هذا الكود لإنشاء بطاقة تعريف باستخدام F-strings:"
+    code:
+      - "name = \"محمد\""
+      - "age = 22"
+      - "hobby = \"القراءة\""
+      - "card = f\"الاسم: {name}\""
+      - "card = card + f\"\\nالعمر: {age}\""
+      - "card = card + f\"\\nالهواية: {hobby}\""
+      - "print(card)"
+    explanation: "ممتاز! لاحظ كيف استخدمنا F-string في كل سطر، وكيف أضفنا `\\n` لإنشاء أسطر جديدة."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل هذا الكود لإنشاء رسالة ترحيب شخصية:"
+    code: |
+      user_name = "خالد"
+      favorite_sport = "كرة القدم"
+      
+      welcome = @@INPUT@@"مرحباً @@INPUT@@! أرى أنك تحب @@INPUT@@"@@INPUT@@
+      print(welcome)
+    solution:
+      - "f"
+      - "{user_name}"
+      - "{favorite_sport}"
+      - ""
+    explanation: "ممتاز! F-strings تجعل إنشاء الرسائل الشخصية سهلاً جداً."
+
+  - type: "quiz"
+    question: "أي من هذه الأكواد سيطبع: \"كتابي المفضل هو هاري بوتر\"؟"
+    options:
+      - "book = \"هاري بوتر\"\\nprint(\"كتابي المفضل هو {book}\")"
+      - "book = \"هاري بوتر\"\\nprint(f\"كتابي المفضل هو {book}\")"
+      - "book = \"هاري بوتر\"\\nprint(\"كتابي المفضل هو \" book)"
+      - "book = \"هاري بوتر\"\\nprint(\"كتابي المفضل هو\" + {book})"
+    solution: 1
+    explanation: "صحيح! تحتاج إلى `f` قبل النص و `{}` حول اسم المتغير لتعمل F-string بشكل صحيح."
+
+  - type: "markdown"
+    content: |
+      عمل رائع! لقد تعلمت أساسيات F-strings.
+
+      **لنراجع سريعاً:**
+      - **F-strings** تبدأ بالحرف `f` قبل النص
+      - **ضع المتغيرات** داخل أقواس مجعدة `{}`
+      - **أسهل وأنظف** من استخدام علامة `+`
+      - **تعمل مع أي نوع** من المتغيرات
+
+      من الآن فصاعداً، استخدم F-strings عندما تريد إدراج متغيرات في نصوصك. ستجد كودك أكثر وضوحاً!

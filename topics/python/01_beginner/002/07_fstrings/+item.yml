@@ -1,0 +1,13 @@
+id: 0ea3f80c-fb08-4d0c-801d-d49a5bea85c0
+module_id: 951f5cd2-20fb-424e-9f7a-9cc6d59ecb6f
+slug: fstrings
+position: 7
+created_at: 2025-07-24T10:30:16.380Z
+updated_at: 2025-07-24T10:30:16.380Z
+type: lesson
+title: النصوص المنسقة (F-Strings)
+blurb: null
+difficulty: easy
+premium_only: false
+base_xp: 300
+s3_path: python/01_beginner/002/07_fstrings

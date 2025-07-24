@@ -29,9 +29,6 @@
    7. Last Review
       description: Gather the trickiest questions from last lessons into one, and include some new common mistakes, to help user spot them.
 
-   8. Module Challenge
-      description: a code runner challenge, where we give the user a code (related to what they learned so far) full of bugs, and they have to fix it to pass.
-
 ## MODULE 2: Let's Go Deeper
 
 
@@ -62,6 +59,9 @@
    8. Module Challenge
       description: A code runner challenge, where we give the user a code (related to what they learned so far) full of bugs including indentation errors, missing comments, and string operation mistakes, and they have to fix it to pass.
 
+   9. A helpful shortcut for strings
+      description: learn how to use the f-string formatting
+
 ## Let's Go Even Deeper
 
    1. Python Statements & Expressions
@@ -91,6 +91,22 @@ The `input()` function is a natural next step that makes programs interactive an
 
 ### 8. **String Formatting (f-strings)**
 More advanced than basic string concatenation - allows for cleaner, more readable code when combining text and variables.
+
+
+## M3: Working with Data
+
+- Input
+- data type checking
+- data conversion
+- fixing data types
+
+## M4: Working with Data II
+
+- comparison operations
+- logical operations
+- combining operations
+- Python Syntax & Indentation
+- When Code Should Only Sometimes Run (if)
 
 
 ## Making Decisions with Conditionals
