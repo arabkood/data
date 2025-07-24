@@ -4,9 +4,9 @@ question: "رتب هذا الكود لإنشاء بطاقة تعريف باست�
 code:
   - "name = \"محمد\""
   - "age = 22"
-  - "hobby = \"القراءة\""
   - "card = f\"الاسم: {name}\""
   - "card = card + f\"\\nالعمر: {age}\""
-  - "card = card + f\"\\nالهواية: {hobby}\""
   - "print(card)"
 explanation: "ممتاز! لاحظ كيف استخدمنا F-string في كل سطر، وكيف أضفنا `\\n` لإنشاء أسطر جديدة."
+alternate:
+  - [1, 0, 2, 3, 4]
