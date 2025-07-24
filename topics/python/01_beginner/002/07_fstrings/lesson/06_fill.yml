@@ -5,11 +5,10 @@ code: |
   student_name = "فاطمة"
   school_name = "مدرسة النور"
 
-  intro = @@INPUT@@"الطالبة @@INPUT@@ تدرس في @@INPUT@@"@@INPUT@@
+  intro = @@INPUT@@"الطالبة @@INPUT@@ تدرس في @@INPUT@@"
   print(intro)
 solution:
   - "f"
   - "{student_name}"
   - "{school_name}"
-  - ""
 explanation: "رائع! يمكنك استخدام عدة متغيرات في نفس F-string."

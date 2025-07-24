@@ -5,11 +5,10 @@ code: |
   user_name = "خالد"
   favorite_sport = "كرة القدم"
 
-  welcome = @@INPUT@@"مرحباً @@INPUT@@! أرى أنك تحب @@INPUT@@"@@INPUT@@
+  welcome = @@INPUT@@"مرحباً @@INPUT@@! أرى أنك تحب @@INPUT@@"
   print(welcome)
 solution:
   - "f"
   - "{user_name}"
   - "{favorite_sport}"
-  - ""
 explanation: "ممتاز! F-strings تجعل إنشاء الرسائل الشخصية سهلاً جداً."
