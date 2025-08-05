@@ -1,0 +1,12 @@
+id: e3f109cc-3e08-46f0-af69-ba65e91cc2d3
+module_id: 51c522c1-6b2f-4182-8581-6bf64f8d9dfe
+slug: input
+position: 1
+created_at: 2025-08-05T13:45:38.360Z
+updated_at: 2025-08-05T13:45:38.360Z
+type: lesson
+title: Input
+difficulty: easy
+premium_only: false
+base_xp: 300
+s3_path: python/01_beginner/003/01_input

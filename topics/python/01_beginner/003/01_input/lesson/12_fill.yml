@@ -1,0 +1,14 @@
+# --- STEP 12: Practice with meaningful prompts ---
+type: "fill"
+lang: "python"
+question: "أنشئ كودًا يجمع معلومات عن كتاب مع محفزات واضحة"
+code: |
+  book_title = input(@@INPUT@@)
+  author = input(@@INPUT@@)
+  pages = input(@@INPUT@@)
+  print("كتاب", book_title, "تأليف", author, "يحتوي على", pages, "صفحة")
+solution:
+  - '"عنوان الكتاب: "'
+  - '"اسم المؤلف: "'
+  - '"عدد الصفحات: "'
+explanation: "ممتاز! المحفزات الواضحة تساعد المستخدم على فهم ما هو مطلوب منه بالضبط."

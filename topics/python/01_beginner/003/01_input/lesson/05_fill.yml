@@ -1,0 +1,11 @@
+# --- STEP 5: Practice creating interaction ---
+type: "fill"
+lang: "python"
+question: "أكمل هذا الكود لإنشاء محادثة عن الهوايات"
+code: |
+  hobby = @@INPUT@@("ما هوايتك المفضلة؟ ")
+  @@INPUT@@("هواية ممتعة!", hobby, "هي")
+solution:
+  - "input"
+  - "print"
+explanation: "ممتاز! لقد أنشأت تفاعلًا شخصيًا مع المستخدم."

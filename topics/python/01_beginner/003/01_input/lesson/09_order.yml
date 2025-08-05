@@ -1,0 +1,9 @@
+# --- STEP 9: Order challenge ---
+type: "order"
+lang: "python"
+question: "رتب هذا الكود لإنشاء تحية شخصية"
+code:
+  - "name = input(\"اسمك: \")"
+  - "greeting = input(\"تحيتك المفضلة: \")"
+  - "print(greeting, name, \"! أتمنى لك يومًا سعيدًا\")"
+explanation: "نحتاج لجمع المعلومات أولاً، ثم استخدامها في التحية الشخصية."

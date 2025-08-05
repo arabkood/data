@@ -1,0 +1,11 @@
+# --- STEP 11: Bug challenge ---
+type: "bug"
+lang: "python"
+question: "ابحث عن الخطأ في هذا الكود"
+code: |
+  name = input("اسمك: ")
+  age = Input("عمرك: ")
+  print("مرحباً", name, "عمرك", age)
+solution: 1
+explanation: "الخطأ هو كتابة `Input` بحرف كبير بدلاً من `input` بحرف صغير. في بايثون، أسماء الدوال حساسة للأحرف الكبيرة والصغيرة."
+hint: "انظر بعناية لكتابة أسماء الدوال."

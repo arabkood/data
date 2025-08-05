@@ -1,0 +1,14 @@
+# --- STEP 8: Create a mini survey ---
+type: "fill"
+lang: "python"
+question: "أنشئ استبيانًا يسأل عن اللون المفضل والرياضة المفضلة"
+code: |
+  color = @@INPUT@@("لونك المفضل: ")
+  sport = @@INPUT@@("رياضتك المفضلة: ")
+  print("أحب اللون", @@INPUT@@, "وأمارس", @@INPUT@@)
+solution:
+  - "input"
+  - "input"
+  - "color"
+  - "sport"
+explanation: "رائع! لقد أنشأت استبيانًا تفاعليًا يجمع معلومات متعددة."

@@ -1,0 +1,10 @@
+# --- STEP 3: Practice with input ---
+type: "fill"
+lang: "python"
+question: "اكتب كودًا يسأل المستخدم عن مدينته المفضلة ويحفظ الإجابة في متغير يسمى `city`"
+code: |
+  @@INPUT@@ = @@INPUT@@("ما هي مدينتك المفضلة؟ ")
+solution:
+  - "city"
+  - "input"
+explanation: "ممتاز! الآن أي شيء يكتبه المستخدم سيتم حفظه في المتغير `city`."

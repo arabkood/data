@@ -1,0 +1,20 @@
+# --- STEP 14: Final practice ---
+type: "fill"
+lang: "python"
+question: "أكمل برنامج حجز مطعم"
+code: |
+  print("مرحباً بك في مطعم الياسمين!")
+  customer_name = @@INPUT@@("اسم العميل: ")
+  party_size = @@INPUT@@("عدد الأشخاص: ")
+  preferred_time = @@INPUT@@("الوقت المفضل: ")
+
+  print("تم حجز طاولة لـ", @@INPUT@@, "أشخاص")
+  print("باسم", @@INPUT@@, "في الساعة", @@INPUT@@)
+solution:
+  - "input"
+  - "input"
+  - "input"
+  - "party_size"
+  - "customer_name"
+  - "preferred_time"
+explanation: "ممتاز! لقد أنشأت نظام حجز تفاعلي كامل."
