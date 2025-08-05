@@ -1,0 +1,17 @@
+# --- STEP 11: Practice identifying mixed types ---
+type: "fill"
+lang: "python"
+question: "أكمل هذا الكود لعرض أنواع البيانات المختلفة"
+code: |
+  product_name = "لابتوب"
+  price = 2500.50
+  quantity = 10
+
+  print("اسم المنتج:", @@INPUT@@(product_name))
+  print("السعر:", @@INPUT@@(price))
+  print("الكمية:", @@INPUT@@(quantity))
+solution:
+  - "type"
+  - "type"
+  - "type"
+explanation: "ممتاز! الآن يمكنك رؤية الأنواع: str للاسم، float للسعر، int للكمية."

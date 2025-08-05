@@ -1,0 +1,9 @@
+# --- STEP 6: Practice identifying types ---
+type: "quiz"
+question: "أي من هذه القيم هو نص (string)؟"
+options:
+  - "42"
+  - "\"42\""
+  - "42.0"
+solution: 1
+explanation: "صحيح! `\"42\"` هو نص لأنه محاط بعلامات اقتباس، بينما `42` هو رقم صحيح و `42.0` هو رقم عشري."

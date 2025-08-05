@@ -1,0 +1,12 @@
+# --- STEP 15: Practice with input types ---
+type: "fill"
+lang: "python"
+question: "اكتشف نوع البيانات التي تعطيها دالة input"
+code: |
+  favorite_number = input("رقمك المفضل: ")
+  print("القيمة:", favorite_number)
+  print("النوع:", @@INPUT@@(@@INPUT@@))
+solution:
+  - "type"
+  - "favorite_number"
+explanation: "ستلاحظ أن النوع هو `str` حتى لو كتب المستخدم رقماً!"

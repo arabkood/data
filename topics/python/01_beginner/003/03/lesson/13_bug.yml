@@ -1,0 +1,13 @@
+# --- STEP 13: Bug hunting ---
+type: "bug"
+lang: "python"
+question: "ابحث عن الخطأ في هذا الكود"
+code: |
+  price = 29.99
+  if isinstance(price, int):
+      print("سعر صحيح!")
+  elif isinstance(price, Float):
+      print("سعر عشري!")
+solution: 3
+explanation: "الخطأ هو كتابة `Float` بحرف كبير بدلاً من `float` بحرف صغير. أنواع البيانات في بايثون تُكتب بأحرف صغيرة."
+hint: "تحقق من كتابة أسماء الأنواع."

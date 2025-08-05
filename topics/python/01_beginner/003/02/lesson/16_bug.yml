@@ -1,0 +1,12 @@
+# --- STEP 16: Bug challenge ---
+type: "bug"
+lang: "python"
+question: "ابحث عن الخطأ في هذا الكود"
+code: |
+  name = "خالد"
+  age = 30
+  print("النوع للاسم:", type(name))
+  print("النوع للعمر:", Type(age))
+solution: 3
+explanation: "الخطأ هو كتابة `Type` بحرف كبير بدلاً من `type` بحرف صغير. في بايثون، أسماء الدوال حساسة للأحرف."
+hint: "تحقق من كتابة أسماء الدوال بعناية."

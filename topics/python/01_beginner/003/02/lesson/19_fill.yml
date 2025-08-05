@@ -1,0 +1,24 @@
+# --- STEP 19: Final practice ---
+type: "fill"
+lang: "python"
+question: "أنشئ برنامجًا يعرض معلومات كتاب مع أنواع البيانات"
+code: |
+  book_title = "تعلم البرمجة"
+  pages = 350
+  rating = 4.8
+  isbn = "978-123456789"
+
+  print("العنوان:", book_title, "- النوع:", @@INPUT@@(@@INPUT@@))
+  print("الصفحات:", pages, "- النوع:", @@INPUT@@(@@INPUT@@))
+  print("التقييم:", rating, "- النوع:", @@INPUT@@(@@INPUT@@))
+  print("ISBN:", isbn, "- النوع:", @@INPUT@@(@@INPUT@@))
+solution:
+  - "type"
+  - "book_title"
+  - "type"
+  - "pages"
+  - "type"
+  - "rating"
+  - "type"
+  - "isbn"
+explanation: "ممتاز! الآن تفهم كيف تختار النوع المناسب لكل معلومة."

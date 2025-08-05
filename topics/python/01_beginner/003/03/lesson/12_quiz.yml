@@ -1,0 +1,13 @@
+# --- STEP 12: Quiz about input types ---
+type: "quiz"
+question: "ماذا سيحدث في هذا الكود؟"
+code: |
+  user_input = input("أدخل رقماً: ")  # المستخدم يكتب: 25
+  print(isinstance(user_input, int))
+lang: "python"
+options:
+  - "True"
+  - "False"
+  - "خطأ"
+solution: 1
+explanation: "`False` لأن `input()` دائماً تعطي `str`، حتى لو كتب المستخدم رقماً."

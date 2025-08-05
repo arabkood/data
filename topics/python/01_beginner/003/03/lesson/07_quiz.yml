@@ -1,0 +1,14 @@
+# --- STEP 7: Quiz about isinstance ---
+type: "quiz"
+question: "ما ناتج هذا الكود؟"
+code: |
+  value = "123"
+  result = isinstance(value, int)
+  print(result)
+lang: "python"
+options:
+  - "True"
+  - "False"
+  - "خطأ"
+solution: 1
+explanation: "الناتج `False` لأن `\"123\"` هو نص وليس رقم صحيح، رغم أنه يحتوي على أرقام."

@@ -1,0 +1,13 @@
+# --- STEP 14: Order challenge ---
+type: "order"
+lang: "python"
+question: "رتب هذا الكود لفحص نوع البيانات وطباعة رسالة مناسبة"
+code:
+  - "value = 42"
+  - "if isinstance(value, str):"
+  - "    print(\"هذا نص!\")"
+  - "elif isinstance(value, int):"
+  - "    print(\"هذا رقم صحيح!\")"
+  - "else:"
+  - "    print(\"نوع آخر!\")"
+explanation: "نحتاج لإنشاء المتغير أولاً، ثم فحص الأنواع بالترتيب المنطقي."
