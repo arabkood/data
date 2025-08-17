@@ -1,0 +1,219 @@
+item_id: "module-3-item-1"
+item_type: "lesson"
+title: "الحصول على معلومات من المستخدم"
+
+steps:
+  # --- STEP 1: Introduction ---
+  - type: "markdown"
+    content: |
+      حتى الآن، كانت برامجك تعرض نفس الأشياء في كل مرة. ولكن ماذا لو أردت إنشاء برامج تتفاعل مع الأشخاص؟
+
+      تخيل برنامجًا يسأل عن اسمك ثم يرحب بك شخصيًا. أو تطبيق يسأل عن عمرك ويخبرك كم سنة تبقى لك حتى التقاعد.
+
+      هذا بالضبط ما ستتعلمه اليوم - كيفية الحصول على معلومات من المستخدمين وجعل برامجك تتفاعل معهم!
+
+  # --- STEP 2: The input() function ---
+  - type: "markdown"
+    content: |
+      في بايثون، نستخدم الدالة `input()` للحصول على معلومات من المستخدم.
+
+      فكر في `input()` كسؤال يطرحه برنامجك. البرنامج سيتوقف وينتظر حتى يكتب المستخدم شيئًا ويضغط Enter.
+
+      ```python
+      name = input("ما اسمك؟ ")
+      print("مرحباً", name)
+      ```
+
+      عند تشغيل هذا الكود:
+      1. البرنامج يعرض: `ما اسمك؟ `
+      2. ينتظر حتى تكتب شيئًا وتضغط Enter
+      3. يحفظ ما كتبته في المتغير `name`
+      4. يستخدم ذلك المتغير في الطباعة
+
+  # --- STEP 3: Practice with input ---
+  - type: "fill"
+    lang: "python"
+    question: "اكتب كودًا يسأل المستخدم عن مدينته المفضلة ويحفظ الإجابة في متغير يسمى `city`"
+    code: |
+      @@INPUT@@ = @@INPUT@@("ما هي مدينتك المفضلة؟ ")
+    solution:
+      - "city"
+      - "input"
+    explanation: "ممتاز! الآن أي شيء يكتبه المستخدم سيتم حفظه في المتغير `city`."
+
+  # --- STEP 4: Using input with print ---
+  - type: "markdown"
+    content: |
+      الآن لنجمع `input()` مع `print()` لإنشاء محادثة:
+
+      ```python
+      favorite_food = input("ما طعامك المفضل؟ ")
+      print("رائع! أنا أيضًا أحب", favorite_food)
+      ```
+
+      هذا ينشئ تفاعلًا:
+      - المستخدم يرى: `ما طعامك المفضل؟ `
+      - يكتب: `البيتزا`
+      - البرنامج يرد: `رائع! أنا أيضًا أحب البيتزا`
+
+  # --- STEP 5: Practice creating interaction ---
+  - type: "fill"
+    lang: "python"
+    question: "أكمل هذا الكود لإنشاء محادثة عن الهوايات"
+    code: |
+      hobby = @@INPUT@@("ما هوايتك المفضلة؟ ")
+      @@INPUT@@("هواية ممتعة!", hobby, "هي")
+    solution:
+      - "input"
+      - "print"
+    explanation: "ممتاز! لقد أنشأت تفاعلًا شخصيًا مع المستخدم."
+
+  # --- STEP 6: Quiz about input ---
+  - type: "quiz"
+    question: "ماذا يحدث عندما يصل البرنامج لسطر `input()`؟"
+    options:
+      - "يتجاهل السطر ويكمل للسطر التالي"
+      - "يتوقف وينتظر المستخدم أن يكتب شيئًا ويضغط Enter"
+      - "يطبع رسالة خطأ"
+    solution: 1
+    explanation: "صحيح! الدالة `input()` تتوقف تمامًا وتنتظر المستخدم. هذا ما يجعل البرامج تفاعلية."
+
+  # --- STEP 7: Multiple inputs ---
+  - type: "markdown"
+    content: |
+      يمكنك استخدام `input()` عدة مرات لجمع معلومات مختلفة:
+
+      ```python
+      name = input("اسمك: ")
+      age = input("عمرك: ")
+      city = input("مدينتك: ")
+      
+      print("مرحباً", name, "من", city, "عمرك", age, "سنة!")
+      ```
+
+      هذا ينشئ استبيانًا صغيرًا!
+
+  # --- STEP 8: Create a mini survey ---
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ استبيانًا يسأل عن اللون المفضل والرياضة المفضلة"
+    code: |
+      color = @@INPUT@@("لونك المفضل: ")
+      sport = @@INPUT@@("رياضتك المفضلة: ")
+      print("أحب اللون", @@INPUT@@, "وأمارس", @@INPUT@@)
+    solution:
+      - "input"
+      - "input"
+      - "color"
+      - "sport"
+    explanation: "رائع! لقد أنشأت استبيانًا تفاعليًا يجمع معلومات متعددة."
+
+  # --- STEP 9: Order challenge ---
+  - type: "order"
+    lang: "python"
+    question: "رتب هذا الكود لإنشاء تحية شخصية"
+    code:
+      - "name = input(\"اسمك: \")"
+      - "greeting = input(\"تحيتك المفضلة: \")"
+      - "print(greeting, name, \"! أتمنى لك يومًا سعيدًا\")"
+    explanation: "نحتاج لجمع المعلومات أولاً، ثم استخدامها في التحية الشخصية."
+
+  # --- STEP 10: The input prompt ---
+  - type: "markdown"
+    content: |
+      لاحظ أن النص داخل `input()` يسمى "prompt" (المحفز). هذا ما يراه المستخدم قبل أن يكتب إجابته.
+
+      ```python
+      # محفز واضح
+      email = input("أدخل بريدك الإلكتروني: ")
+      
+      # محفز غير واضح
+      email = input("البريد؟ ")
+      ```
+
+      المحفز الجيد يخبر المستخدم بالضبط ما تريده منه.
+
+  # --- STEP 11: Bug challenge ---
+  - type: "bug"
+    lang: "python"
+    question: "ابحث عن الخطأ في هذا الكود"
+    code: |
+      name = input("اسمك: ")
+      age = Input("عمرك: ")
+      print("مرحباً", name, "عمرك", age)
+    solution: 1
+    explanation: "الخطأ هو كتابة `Input` بحرف كبير بدلاً من `input` بحرف صغير. في بايثون، أسماء الدوال حساسة للأحرف الكبيرة والصغيرة."
+    hint: "انظر بعناية لكتابة أسماء الدوال."
+
+  # --- STEP 12: Practice with meaningful prompts ---
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ كودًا يجمع معلومات عن كتاب مع محفزات واضحة"
+    code: |
+      book_title = input(@@INPUT@@)
+      author = input(@@INPUT@@)
+      pages = input(@@INPUT@@)
+      print("كتاب", book_title, "تأليف", author, "يحتوي على", pages, "صفحة")
+    solution:
+      - |
+        /^(['"])(.*?)\1$/
+      - |
+        /^(['"])(.*?)\1$/
+      - |
+        /^(['"])(.*?)\1$/
+    explanation: "ممتاز! المحفزات الواضحة تساعد المستخدم على فهم ما هو مطلوب منه بالضبط."
+
+  # --- STEP 13: Real world example ---
+  - type: "markdown"
+    content: |
+      لنطبق ما تعلمناه في مثال عملي - برنامج تسجيل في نادي رياضي:
+
+      ```python
+      print("مرحباً بك في نادي اللياقة البدنية!")
+      name = input("الاسم الكامل: ")
+      phone = input("رقم الهاتف: ")
+      goal = input("هدفك من النادي: ")
+      
+      print("شكراً", name)
+      print("سنتواصل معك على", phone)
+      print("سنساعدك في تحقيق هدفك:", goal)
+      ```
+
+  # --- STEP 14: Final practice ---
+  - type: "fill"
+    lang: "python"
+    question: "أكمل برنامج حجز مطعم"
+    code: |
+      print("مرحباً بك في مطعم الياسمين!")
+      customer_name = @@INPUT@@("اسم العميل: ")
+      party_size = @@INPUT@@("عدد الأشخاص: ")
+      preferred_time = @@INPUT@@("الوقت المفضل: ")
+      
+      print("تم حجز طاولة لـ", @@INPUT@@, "أشخاص")
+      print("باسم", @@INPUT@@, "في الساعة", @@INPUT@@)
+    solution:
+      - "input"
+      - "input"
+      - "input"
+      - "party_size"
+      - "customer_name"
+      - "preferred_time"
+    explanation: "ممتاز! لقد أنشأت نظام حجز تفاعلي كامل."
+
+  # --- STEP 15: Congratulations ---
+  - type: "markdown"
+    content: |
+      تهانينا! لقد تعلمت كيفية جعل برامجك تتفاعل مع المستخدمين!
+
+      ما تعلمته اليوم:
+
+      - الدالة `input()` تحصل على معلومات من المستخدم
+      - البرنامج يتوقف عند `input()` وينتظر المستخدم
+      - النص داخل `input()` يسمى "محفز" ويجب أن يكون واضحًا
+      - يمكنك استخدام `input()` عدة مرات لجمع معلومات مختلفة
+      - ما يكتبه المستخدم يتم حفظه في متغير لاستخدامه لاحقًا
+
+      برامجك الآن أصبحت حية ومتفاعلة! لم تعد مجرد نصوص ثابتة، بل محادثات حقيقية مع المستخدمين.
+
+      > [!NEXT]
+      > في الدرس القادم، سنتعلم أنواع البيانات المختلفة وكيفية التعامل معها بذكاء!

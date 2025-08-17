@@ -4,8 +4,7 @@ lang: "python"
 question: "استخدم الدالة `type()` لمعرفة نوع المتغير `age`"
 code: |
   age = 30
-  print(@@INPUT@@(@@INPUT@@))
+  print(@@INPUT@@)
 solution:
-  - "type"
-  - "age"
+  - "type(age)"
 explanation: "ممتاز! الآن ستعرف أن `age` من نوع `int` (رقم صحيح)."

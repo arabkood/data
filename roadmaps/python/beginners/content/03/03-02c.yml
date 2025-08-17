@@ -1,0 +1,302 @@
+item_id: "module-3-item-2"
+item_type: "lesson"
+title: "أنواع البيانات"
+
+steps:
+  # --- STEP 1: Introduction ---
+  - type: "markdown"
+    content: |
+      هل تساءلت يومًا كيف يفهم الحاسوب الفرق بين الرقم `25` والنص `"25"`؟ أو لماذا يمكنك جمع `5 + 3` ولكن لا يمكنك جمع `"مرحباً" + 7`؟
+
+      الجواب يكمن في شيء يسمى **أنواع البيانات**. تماماً كما أننا نفرق بين الأرقام والكلمات في الحياة الحقيقية، بايثون تفرق بين أنواع مختلفة من المعلومات.
+
+      اليوم ستتعلم الأنواع الأساسية وكيفية استخدامها بذكاء!
+
+  # --- STEP 2: What are data types ---
+  - type: "markdown"
+    content: |
+      تخيل أن بايثون مثل منظم مكتبة ذكي. عندما تعطيه معلومة، يسأل نفسه:
+
+      - "هل هذا رقم يمكنني الحساب معه؟"
+      - "هل هذا نص يمكنني عرضه؟"
+      - "هل هذا رقم عشري أم صحيح؟"
+
+      بناءً على الإجابة، يضع المعلومة في الفئة المناسبة. هذه الفئات تسمى **أنواع البيانات**.
+
+      <!-- media_idea: Simple diagram showing different data types like boxes labeled "Numbers", "Text", "True/False" with examples inside -->
+
+  # --- STEP 3: String type ---
+  - type: "markdown"
+    content: |
+      أول نوع تعرفت عليه هو **النص** أو كما نسميه في البرمجة `string` (نص).
+
+      ```python
+      name = "أحمد"
+      message = "مرحباً بالعالم!"
+      city = "الرياض"
+      ```
+
+      **العلامة المميزة:** النصوص دائماً محاطة بعلامات اقتباس `" "` أو `' '`.
+
+      النصوص يمكن أن تحتوي على أي شيء: أحرف، أرقام، رموز، حتى مسافات فارغة!
+
+  # --- STEP 4: Integer type ---
+  - type: "markdown"
+    content: |
+      النوع الثاني هو **الأرقام الصحيحة** أو `integer` (عدد صحيح).
+
+      ```python
+      age = 25
+      score = 100
+      temperature = -5
+      ```
+
+      **العلامة المميزة:** أرقام بدون علامات اقتباس وبدون فاصلة عشرية.
+
+      هذه الأرقام يمكنك استخدامها في العمليات الحسابية مباشرة.
+
+  # --- STEP 5: Float type ---
+  - type: "markdown"
+    content: |
+      النوع الثالث هو **الأرقام العشرية** أو `float` (رقم عائم).
+
+      ```python
+      price = 19.99
+      height = 175.5
+      pi = 3.14159
+      ```
+
+      **العلامة المميزة:** أرقام تحتوي على نقطة عشرية `.`
+
+      هذه مفيدة للقياسات الدقيقة والحسابات المالية.
+
+  # --- STEP 6: Practice identifying types ---
+  - type: "quiz"
+    question: "أي من هذه القيم هو نص (string)؟"
+    options:
+      - "42"
+      - "\"42\""
+      - "42.0"
+    solution: 1
+    explanation: "صحيح! `\"42\"` هو نص لأنه محاط بعلامات اقتباس، بينما `42` هو رقم صحيح و `42.0` هو رقم عشري."
+
+  # --- STEP 7: Quiz about numbers ---
+  - type: "quiz"
+    question: "أي من هذه القيم هو رقم عشري (float)؟"
+    options:
+      - "100"
+      - "100.0"
+      - "\"100.0\""
+    solution: 1
+    explanation: "صحيح! `100.0` هو رقم عشري بسبب النقطة العشرية، `100` رقم صحيح، و `\"100.0\"` نص."
+
+  # --- STEP 8: The type() function ---
+  - type: "markdown"
+    content: |
+      بايثون تقدم لك أداة رائعة لمعرفة نوع أي قيمة: الدالة `type()`.
+
+      فكر فيها كعدسة مكبرة تكشف لك حقيقة البيانات:
+
+      ```python
+      print(type("مرحباً"))    # <class 'str'>
+      print(type(42))         # <class 'int'>
+      print(type(3.14))       # <class 'float'>
+      ```
+
+      - `str` يعني string (نص)
+      - `int` يعني integer (رقم صحيح)  
+      - `float` يعني floating point (رقم عشري)
+
+  # --- STEP 9: Practice with type() ---
+  - type: "fill"
+    lang: "python"
+    question: "استخدم الدالة `type()` لمعرفة نوع المتغير `age`"
+    code: |
+      age = 30
+      print(@@INPUT@@(@@INPUT@@))
+    solution:
+      - "type"
+      - "age"
+    explanation: "ممتاز! الآن ستعرف أن `age` من نوع `int` (رقم صحيح)."
+
+  # --- STEP 10: Mixed variables ---
+  - type: "markdown"
+    content: |
+      لنجرب مثالاً أكثر تعقيداً:
+
+      ```python
+      name = "سارة"
+      age = 28
+      height = 165.5
+      id_number = "123456789"
+
+      print("الاسم:", name, "- النوع:", type(name))
+      print("العمر:", age, "- النوع:", type(age))
+      print("الطول:", height, "- النوع:", type(height))
+      print("رقم الهوية:", id_number, "- النوع:", type(id_number))
+      ```
+
+      لاحظ أن `id_number` هو نص رغم أنه يحتوي على أرقام، لأنه محاط بعلامات اقتباس!
+
+  # --- STEP 11: Practice identifying mixed types ---
+  - type: "fill"
+    lang: "python"
+    question: "أكمل هذا الكود لعرض أنواع البيانات المختلفة"
+    code: |
+      product_name = "لابتوب"
+      price = 2500.50
+      quantity = 10
+      
+      print("اسم المنتج:", @@INPUT@@(product_name))
+      print("السعر:", @@INPUT@@(price))
+      print("الكمية:", @@INPUT@@(quantity))
+    solution:
+      - "type"
+      - "type"
+      - "type"
+    explanation: "ممتاز! الآن يمكنك رؤية الأنواع: str للاسم، float للسعر، int للكمية."
+
+  # --- STEP 12: Why data types matter ---
+  - type: "markdown"
+    content: |
+      قد تتساءل: "لماذا يهم نوع البيانات؟"
+
+      الإجابة: لأن نوع البيانات يحدد ما يمكنك فعله!
+
+      ```python
+      # هذا يعمل - جمع رقمين
+      result1 = 5 + 3        # النتيجة: 8
+
+      # هذا يعمل - ضم نصين  
+      result2 = "مرحبا" + " بك"   # النتيجة: "مرحبا بك"
+
+      # هذا لا يعمل - خلط الأنواع
+      result3 = 5 + "3"      # خطأ!
+      ```
+
+  # --- STEP 13: Quiz about operations ---
+  - type: "quiz"
+    question: "أي من هذه العمليات ستعمل بدون خطأ؟"
+    options:
+      - "10 + \"5\""
+      - "\"10\" + \"5\""
+      - "\"مرحبا\" + 123"
+    solution: 1
+    explanation: "صحيح! `\"10\" + \"5\"` سيعطي `\"105\"` (ضم نصين). الخيارات الأخرى تخلط أنواع مختلفة وتسبب خطأ."
+
+  # --- STEP 14: Input always returns string ---
+  - type: "markdown"
+    content: |
+      معلومة مهمة جداً: **الدالة `input()` دائماً تعطيك نص!**
+
+      حتى لو كتب المستخدم رقماً:
+
+      ```python
+      user_age = input("كم عمرك؟ ")  # المستخدم يكتب: 25
+      print(type(user_age))          # النتيجة: <class 'str'>
+      print(user_age)                # النتيجة: "25" (نص وليس رقم!)
+      ```
+
+      هذا أمر طبيعي! سنتعلم كيفية تحويل النصوص لأرقام في الدرس القادم.
+
+  # --- STEP 15: Practice with input types ---
+  - type: "fill"
+    lang: "python"
+    question: "اكتشف نوع البيانات التي تعطيها دالة input"
+    code: |
+      favorite_number = input("رقمك المفضل: ")
+      print("القيمة:", favorite_number)
+      print("النوع:", @@INPUT@@(@@INPUT@@))
+    solution:
+      - "type"
+      - "favorite_number"
+    explanation: "ستلاحظ أن النوع هو `str` حتى لو كتب المستخدم رقماً!"
+
+  # --- STEP 16: Bug challenge ---
+  - type: "bug"
+    lang: "python"
+    question: "ابحث عن الخطأ في هذا الكود"
+    code: |
+      name = "خالد"
+      age = 30
+      print("النوع للاسم:", type(name))
+      print("النوع للعمر:", Type(age))
+    solution: 3
+    explanation: "الخطأ هو كتابة `Type` بحرف كبير بدلاً من `type` بحرف صغير. في بايثون، أسماء الدوال حساسة للأحرف."
+    hint: "تحقق من كتابة أسماء الدوال بعناية."
+
+  # --- STEP 17: Order challenge ---
+  - type: "order"
+    lang: "python"
+    question: "رتب هذا الكود لعرض معلومات طالب مع أنواع بياناتها"
+    code:
+      - "student_name = \"فاطمة\""
+      - "student_grade = 95.5"
+      - "student_id = 12345"
+      - "print(\"الاسم:\", student_name, \"- النوع:\", type(student_name))"
+      - "print(\"الدرجة:\", student_grade, \"- النوع:\", type(student_grade))"
+      - "print(\"الرقم الجامعي:\", student_id, \"- النوع:\", type(student_id))"
+    explanation: "نحتاج لإنشاء جميع المتغيرات أولاً، ثم عرض كل منها مع نوع بياناتها."
+
+  # --- STEP 18: Real world example ---
+  - type: "markdown"
+    content: |
+      لنطبق ما تعلمناه في مثال من متجر إلكتروني:
+
+      ```python
+      # بيانات منتج
+      product_name = "سماعات لاسلكية"    # نص
+      price = 299.99                   # رقم عشري
+      in_stock = 150                   # رقم صحيح
+      product_code = "WH1000XM4"       # نص (رغم وجود أرقام!)
+      
+      print("المنتج:", product_name)
+      print("السعر:", price, "ريال")
+      print("المتوفر:", in_stock, "قطعة")
+      print("الكود:", product_code)
+      ```
+
+      كل نوع بيانات له استخدام مختلف!
+
+  # --- STEP 19: Final practice ---
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ برنامجًا يعرض معلومات كتاب مع أنواع البيانات"
+    code: |
+      book_title = "تعلم البرمجة"
+      pages = 350
+      rating = 4.8
+      isbn = "978-123456789"
+      
+      print("العنوان:", book_title, "- النوع:", @@INPUT@@(@@INPUT@@))
+      print("الصفحات:", pages, "- النوع:", @@INPUT@@(@@INPUT@@))
+      print("التقييم:", rating, "- النوع:", @@INPUT@@(@@INPUT@@))
+      print("ISBN:", isbn, "- النوع:", @@INPUT@@(@@INPUT@@))
+    solution:
+      - "type"
+      - "book_title"
+      - "type" 
+      - "pages"
+      - "type"
+      - "rating"
+      - "type"
+      - "isbn"
+    explanation: "ممتاز! الآن تفهم كيف تختار النوع المناسب لكل معلومة."
+
+  # --- STEP 20: Congratulations ---
+  - type: "markdown"
+    content: |
+      تهانينا! لقد أتقنت أساسيات أنواع البيانات في بايثون!
+
+      ما تعلمته اليوم:
+
+      - **النصوص (str):** محاطة بعلامات اقتباس - للكلمات والجمل
+      - **الأرقام الصحيحة (int):** أرقام بدون فاصلة عشرية - للعد والحساب البسيط
+      - **الأرقام العشرية (float):** أرقام بفاصلة عشرية - للقياسات الدقيقة
+      - **الدالة `type()`:** لمعرفة نوع أي قيمة
+      - **`input()` دائماً تعطي نص** - حتى لو كتب المستخدم رقماً
+
+      الآن أصبحت تفهم كيف يفكر الحاسوب في البيانات! هذا الفهم سيساعدك في تجنب أخطاء كثيرة وكتابة برامج أكثر ذكاءً.
+
+      > [!NEXT]
+      > في الدرس القادم، سنتعلم كيفية التحقق من أنواع البيانات واستخدام هذه المعرفة لحل مشاكل حقيقية!
