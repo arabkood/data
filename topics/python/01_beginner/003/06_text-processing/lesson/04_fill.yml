@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "اطلب من المستخدم إدخال كلمة المرور، ثم استخدم `.strip()` لتنظيفها قبل تخزينها."
+code: |
+  raw_password = input("أدخل كلمة المرور: ")
+  # لنفترض أن المستخدم أدخل "  myPass123  "
+
+  clean_password = raw_password.@@INPUT@@()
+
+  print(f"كلمة المرور النظيفة هي: '{clean_password}'")
+solution:
+  - "strip"
+explanation: "`.strip()` هو الـ method المثالي لإزالة المسافات البادئة واللاحقة غير المرغوب فيها من مدخلات المستخدم."

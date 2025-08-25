@@ -1,0 +1,11 @@
+type: "bug"
+lang: "python"
+question: "يريد هذا البرنامج حساب التكلفة الإجمالية لثلاثة منتجات، لكنه يتعطل إذا كان السعر يحتوي على فاصلة عشرية. حدد السطر الذي يسبب المشكلة."
+code: |
+  price_text = input("أدخل سعر المنتج: ")
+  # لنفترض أن المستخدم أدخل "12.50"
+  price_num = int(price_text)
+  total_cost = price_num * 3
+  print(total_cost)
+solution: 2
+explanation: "المشكلة هنا! بما أن السعر قد يحتوي على أجزاء عشرية، يجب أن نستخدم `float(price_text)` بدلاً من `int(price_text)` لتجنب خطأ `ValueError`."

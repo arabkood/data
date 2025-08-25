@@ -1,0 +1,47 @@
+starter_code: |
+  # احصل على سطر البيانات الخام من المستخدم
+  raw_data = input("أدخل بيانات المبيعات الخام: ")
+
+  # الخطوة 1: قسّم البيانات
+
+  # الخطوة 2: نظّف كل جزء من البيانات
+
+  # الخطوة 3: حوّل المبيعات إلى رقم وقم بالحساب
+
+  # الخطوة 4: اطبع التقرير المنسق
+solution: |
+  # احصل على سطر البيانات الخام من المستخدم
+  raw_data = input("أدخل بيانات المبيعات الخام: ")
+
+  # الخطوة 1: قسّم البيانات إلى قائمة من النصوص
+  data_parts = raw_data.split(';')
+
+  # الخطوة 2: نظّف كل جزء من البيانات
+  user_id = data_parts[0].strip()
+  user_name = data_parts[1].strip()
+  sales_str = data_parts[2].strip()
+
+  # الخطوة 3: حوّل المبيعات إلى رقم وقم بالحساب
+  sales_float = float(sales_str)
+  bonus = sales_float * 0.10
+
+  # الخطوة 4: اطبع التقرير المنسق
+  print(f"User ID: {user_id}")
+  print(f"Name: {user_name}")
+  print(f"Bonus: {bonus}")
+test_cases:
+- name: "حالة أساسية"
+  input: "  101 ;  علي أحمد  ; 1550.75   "
+  expected: "User ID: 101\nName: علي أحمد\nBonus: 155.075\n"
+- name: "مبيعات بعدد صحيح"
+  input: "205;فاطمة السيد;2000"
+  expected: "User ID: 205\nName: فاطمة السيد\nBonus: 200.0\n"
+- name: "الكثير من المسافات الفارغة"
+  input: "    330    ;    خالد يوسف    ;   850.50     "
+  expected: "User ID: 330\nName: خالد يوسف\nBonus: 85.05\n"
+- name: "مبيعات صفرية"
+  input: "404;نورا سعد;0"
+  expected: "User ID: 404\nName: نورا سعد\nBonus: 0.0\n"
+- name: "اسم مركب"
+  input: "512 ; عبد الرحمن محمد ; 10000"
+  expected: "User ID: 512\nName: عبد الرحمن محمد\nBonus: 1000.0\n"

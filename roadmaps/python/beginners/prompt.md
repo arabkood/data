@@ -186,6 +186,7 @@ steps:
     # An optional field for alternate answers, in case the code can be ordered in many ways correctly, each number represend the index from the provided code array
     alternate:
       - [1, 0, 2, 3]
+      - [2, 0, 1, 3]
     # An (optional) explanation explaining the answer
     explanation: ""
 ```

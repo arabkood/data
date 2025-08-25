@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "املأ الفراغات للتحقق مما إذا كان `item_price` من نوع `float`."
+code: |
+  item_price = 19.99
+
+  # تحقق مما إذا كان السعر من نوع float
+  is_float = @@INPUT@@(item_price, @@INPUT@@)
+
+  print(is_float)
+solution:
+  - "isinstance"
+  - "float"
+explanation: "نستخدم `isinstance()` للتحقق، ونحدد `float` كنوع البيانات الذي نبحث عنه."

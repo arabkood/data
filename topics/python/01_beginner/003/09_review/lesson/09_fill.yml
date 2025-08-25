@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود للتحقق مما إذا كان رمز المرور الذي تم إدخاله، بعد إزالة المسافات، يطابق الرمز السري."
+code: |
+  secret_code = "PYTHON101"
+  user_code = "  python101  "
+
+  # نظّف وحوّل المدخلات إلى أحرف كبيرة
+  clean_user_code = user_code.strip().@@INPUT@@()
+
+  if clean_user_code @@INPUT@@ secret_code:
+    print("الرمز صحيح!")
+solution:
+  - "upper"
+  - "=="
+explanation: "لضمان مقارنة عادلة، قمنا أولاً بتنظيف المدخلات وتحويلها إلى أحرف كبيرة باستخدام `.strip().upper()` لتطابق `secret_code`. ثم استخدمنا `==` للمقارنة."

@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: |
+  املأ الفراغ لاستخدام الدالة `type()` وطباعة نوع المتغير `temperature`.
+code: |
+  temperature = 25.5
+  data_type = @@INPUT@@(temperature)
+  print(data_type)
+solution:
+  - "type"
+explanation: |
+  ممتاز! الدالة `type()` تأخذ المتغير كوسيط (`argument`) وتُرجع نوعه.

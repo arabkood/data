@@ -1,0 +1,17 @@
+type: "fill"
+lang: "python"
+question: "املأ الفراغ لإزالة ' ريال' من النص حتى يمكن تحويله بنجاح إلى `float`."
+code: |
+  price_with_currency = "19.99 ريال"
+
+  # الخطوة 1: نظّف النص
+  clean_price_text = price_with_currency.@@INPUT@@(" ريال", "")
+
+  # الخطوة 2: الآن التحويل آمن
+  price_value = float(clean_price_text)
+
+  print(f"السعر كرقم هو: {price_value}")
+solution:
+  - "replace"
+explanation: |
+  عمل رائع! لقد واجهنا خطأ `ValueError` محتمل. من خلال استخدام `.replace()` لإزالة الجزء غير الرقمي من النص أولاً، جعلنا عملية التحويل باستخدام `float()` آمنة وناجحة. تذكر دائماً: نظّف أولاً، ثم حوّل.

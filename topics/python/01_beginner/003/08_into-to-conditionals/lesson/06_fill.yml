@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "املأ الفراغ لمقارنة `user_input` بكلمة المرور الصحيحة."
+code: |
+  password = "secret123"
+  user_input = "secret123"
+
+  is_correct = user_input @@INPUT@@ password
+  print(is_correct)
+solution:
+  - "=="
+explanation: "للمقارنة وطرح سؤال حول المساواة، نستخدم دائماً علامتي يساوي `==`."

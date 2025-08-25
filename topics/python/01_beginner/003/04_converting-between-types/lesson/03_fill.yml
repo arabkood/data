@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "املأ الفراغ لتحويل `score_text` إلى عدد صحيح وإضافته إلى `bonus_points`."
+code: |
+  score_text = "150"
+  bonus_points = 25
+
+  # حول score_text إلى رقم
+  score_number = @@INPUT@@(score_text)
+
+  total_score = score_number + bonus_points
+  print(total_score)
+solution:
+  - "int"
+explanation: |
+  ممتاز! استخدمنا `int()` لتحويل النص "150" إلى الرقم 150، مما سمح لنا بجمعه مع `bonus_points`.

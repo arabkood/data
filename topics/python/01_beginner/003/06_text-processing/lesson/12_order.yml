@@ -1,0 +1,9 @@
+type: "order"
+lang: "python"
+question: "أعد ترتيب الأسطر لإنشاء عنوان URL صالح من قائمة الأجزاء."
+code:
+  - 'parts = ["https:", "", "akood.com", "learn", "python"]'
+  - 'url = "/".join(parts)'
+  - 'print(url)'
+explanation: |
+  أولاً، نعرّف قائمة الأجزاء. ثم نستخدم الفاصل الذي نريده (`"/"`) ونستدعي عليه `.join()` مع تمرير القائمة. أخيراً، نطبع النتيجة.

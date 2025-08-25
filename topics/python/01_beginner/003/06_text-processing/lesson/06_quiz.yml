@@ -1,0 +1,15 @@
+type: "quiz"
+question: "أي سطر كود سيحول `userInput` إلى 'welcome' لتتم مقارنتها بشكل صحيح؟"
+code: |
+  userInput = "  Welcome  "
+  # ... أي سطر يجب أن يكون هنا؟
+  if ________ == "welcome":
+      print("تمت المطابقة!")
+options:
+  - "userInput.strip().upper()"
+  - "userInput.strip().lower()"
+  - "userInput.lower().strip()"
+  - "كلا الخيارين الثاني والثالث صحيحان"
+solution: 3
+explanation: |
+  كلاهما يعمل! يمكنك تنظيف المسافات أولاً ثم تحويل الحالة، أو العكس. هذه العملية تسمى "method chaining" أو "سلسلة الأساليب"، وهي تقنية قوية جداً تجمع عدة عمليات في خطوة واحدة.
