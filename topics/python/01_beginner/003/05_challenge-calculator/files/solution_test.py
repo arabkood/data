@@ -52,15 +52,16 @@ class TestBillSplitter(unittest.TestCase):
             )
         except subprocess.CalledProcessError as e:
             # The user's script crashed (e.g., SyntaxError, ValueError).
+            formatted_input = input_data.replace("\n", " (ثم Enter) ")
             self.fail(
                 f"\n\n--- فشل تشغيل السكريبت الخاص بك ---\n"
-                f"المدخلات التي تم توفيرها للسكريبت:\n{input_data.replace(r'\n', ' (ثم Enter) ')}\n\n"
+                f"المدخلات التي تم توفيرها للسكريپت:\n{formatted_input}\n\n"
                 f"--- رسالة الخطأ ---\n{e.stderr}"
             )
         except subprocess.TimeoutExpired:
             # The user's script took too long, likely an infinite loop.
             self.fail(
-                "استغرق السكريبت وقتاً طويلاً للتشغيل. قد يكون عالقاً في حلقة لا نهائية."
+                "استغرق السكريپت وقتاً طويلاً للتشغيل. قد يكون عالقاً في حلقة لا نهائية."
             )
 
     def _verify_output(
@@ -95,11 +96,12 @@ class TestBillSplitter(unittest.TestCase):
         actual_last_line = actual_output.strip().splitlines()[-1]
         expected_line_stripped = expected_line.strip()
 
+        formatted_input = input_data.replace("\n", " (ثم Enter) ")
         self.assertEqual(
             expected_line_stripped,
             actual_last_line,
             f"\n\n--- فشل في حالة الاختبار: '{test_name}' ---\n"
-            f"المدخلات التي تم توفيرها للسكريبت:\n{input_data.replace(r'\n', ' (ثم Enter) ')}\n\n"
+            f"المدخلات التي تم توفيرها للسكريپت:\n{formatted_input}\n\n"
             f"--- السطر الأخير المتوقع من المخرجات ---\n{expected_line_stripped}\n\n"
             f"--- السطر الأخير الفعلي من المخرجات ---\n{actual_last_line}\n\n"
             "تلميح: تأكد من أن السطر الأخير من المخرجات يطابق الصيغة المطلوبة تمامًا.",
