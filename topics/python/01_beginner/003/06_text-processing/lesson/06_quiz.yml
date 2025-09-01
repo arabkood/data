@@ -1,8 +1,8 @@
 type: "quiz"
 question: "أي سطر كود سيحول `userInput` إلى 'welcome' لتتم مقارنتها بشكل صحيح؟"
+lang: javascript
 code: |
   userInput = "Welcome"
-  # ... أي سطر يجب أن يكون هنا؟
   if @@INPUT@@ == "welcome":
       print("تمت المطابقة!")
 options:

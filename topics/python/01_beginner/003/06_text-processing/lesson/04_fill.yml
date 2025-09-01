@@ -5,9 +5,9 @@ code: |
   raw_password = input("أدخل كلمة المرور: ")
   # لنفترض أن المستخدم أدخل "  myPass123  "
 
-  clean_password = raw_password.@@INPUT@@()
+  clean_password = raw_password@@INPUT@@
 
   print(f"كلمة المرور النظيفة هي: '{clean_password}'")
 solution:
-  - "strip"
+  - ".strip()"
 explanation: "`.strip()` هو الـ method المثالي لإزالة المسافات البادئة واللاحقة غير المرغوب فيها من مدخلات المستخدم."
