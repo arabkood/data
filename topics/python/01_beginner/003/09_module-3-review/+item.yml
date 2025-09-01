@@ -1,12 +1,12 @@
 id: b2ad85ef-acb9-48bc-aacd-6035dbae540c
 module_id: 51c522c1-6b2f-4182-8581-6bf64f8d9dfe
-slug: review
+slug: module-3-review
 position: 9
 created_at: 2025-08-25T13:38:03.680Z
-updated_at: 2025-08-25T13:38:03.680Z
+updated_at: 2025-09-01T10:27:57.815Z
 type: lesson
 title: المراجعة النهائية
 difficulty: easy
 premium_only: false
 base_xp: 300
-s3_path: python/01_beginner/003/09_review
+s3_path: python/01_beginner/003/09_module-3-review

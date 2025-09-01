@@ -3,13 +3,13 @@ lang: "python"
 question: "هذا الكود يحاول حساب سعر المنتج بعد الخصم. إذا أدخل المستخدم السعر '99.50'، سيتعطل البرنامج مع `ValueError`. حدد السطر الذي يسبب المشكلة."
 code: |
   original_price_str = input("أدخل سعر المنتج: ")
-  # المستخدم يدخل "99.50"
+  # المستخدم يدخل 99.50
   discount = 10
 
   price_as_num = int(original_price_str)
   final_price = price_as_num - discount
 
   print(f"السعر النهائي: {final_price}")
-solution: 4
+solution: 3
 explanation: |
   لقد وجدتها! الخطأ هو استخدام `int()` مع نص يحتوي على فاصلة عشرية. `int()` لا تفهم إلا الأعداد الصحيحة. الأداة الصحيحة لهذه المهمة هي `float()` لأنها تستطيع التعامل مع الأعداد العشرية.
