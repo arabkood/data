@@ -15,9 +15,10 @@ print(sentence)
 dashed_sentence = "-".join(words)
 print(dashed_sentence)
 ```
+
 **الناتج:**
+
 ```text
 بايثون سهل وممتع
 بايثون-سهل-وممتع
 ```
-

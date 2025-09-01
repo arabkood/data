@@ -2,12 +2,13 @@ type: "fill"
 lang: "python"
 question: "لدينا قالب رسالة. استخدم `.replace()` لوضع اسم المستخدم الفعلي في الرسالة."
 code: |
-  username = "علي"
-  template = "مرحباً [USERNAME]، أهلاً بك في أكود!"
+  username = "Ali"
+  template = "Hello [USERNAME], welcome to Akood!"
 
-  welcome_message = template.@@INPUT@@("[USERNAME]", username)
+  welcome_message = template.@@INPUT@@("[USERNAME]", @@INPUT@@)
 
-  print(welcome_message)
+  print(welcome_message) # Expected: Hello Ali, welcome to Akood!
 solution:
   - "replace"
+  - "username"
 explanation: "`.replace()` ممتاز لملء القوالب واستبدال النصوص النائبة بقيم حقيقية."
