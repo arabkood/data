@@ -5,6 +5,6 @@ code: |
   user = "admin"
   if user != "admin":
       print("مرحبًا أيها المدير!")
-solution: 2
+solution: 1
 explanation: |
   الخطأ هنا منطقي وليس نحويًا. الشرط `user != "admin"` يعني "إذا لم يكن المستخدم هو admin". بما أن المستخدم *هو* 'admin'، فإن الشرط يصبح `False` ولن يتم طباعة الرسالة أبدًا. يجب أن يكون الشرط `user == "admin"`.

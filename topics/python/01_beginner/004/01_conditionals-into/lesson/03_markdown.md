@@ -2,6 +2,6 @@
 
 هذا يعني أننا نكتبهما مباشرة بدون علامات اقتباس.
 
-`is_raining = True` ✅ (قيمة بولينية)
-`is_raining = "True"` ❌ (هذا مجرد نص أو string)
+- `is_raining = True` ✅ (قيمة بولينية)
 
+- `is_raining = "True"` ❌ (هذا مجرد نص أو string)

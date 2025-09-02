@@ -4,7 +4,6 @@ question: "هناك خطأ في المسافة البادئة في هذا الك
 code: |
   has_ticket = True
   is_first_class = True
-
   if has_ticket:
       print("مرحبًا بك على متن الطائرة.")
       if is_first_class:
