@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "املأ الفراغ لجعل الكود يتحقق مما إذا كان `is_logged_in` صحيحًا."
+code: |
+  is_logged_in = True
+  is_admin = False
+
+  @@INPUT@@ is_logged_in:
+      print("تم تسجيل دخول المستخدم.")
+      if is_admin:
+          print("لديك صلاحيات المدير.")
+solution:
+  - "if"
+explanation: |
+  نستخدم الكلمة المفتاحية `if` لبدء الجملة الشرطية. لاحظ كيف أن `print` الثاني مزاح مرتين - مرة لـ `if is_logged_in:` ومرة أخرى لـ `if is_admin:`.

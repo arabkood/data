@@ -1,0 +1,20 @@
+type: "quiz"
+question: "ماذا سيطبع الكود التالي على الشاشة؟"
+lang: "python"
+code: |
+  is_weekend = False
+  is_sunny = True
+
+  if is_weekend:
+      print("وقت الاسترخاء!")
+
+  if is_sunny:
+      print("يا له من يوم جميل!")
+options:
+  - "وقت الاسترخاء!"
+  - "يا له من يوم جميل!"
+  - "وقت الاسترخاء!\nيا له من يوم جميل!"
+  - "لن يتم طباعة أي شيء."
+solution: 1
+explanation: |
+  جملة `if` الأولى تتحقق من `is_weekend` وهي `False`، لذا يتم تخطي `print("وقت الاسترخاء!")`. جملة `if` الثانية تتحقق من `is_sunny` وهي `True`، لذا يتم تنفيذ `print("يا له من يوم جميل!")`.

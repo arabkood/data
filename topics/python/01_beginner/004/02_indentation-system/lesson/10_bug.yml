@@ -1,0 +1,14 @@
+type: "bug"
+lang: "python"
+question: "هناك خطأ في المسافة البادئة في هذا الكود المتداخل. حدد السطر الذي به الخطأ."
+code: |
+  has_ticket = True
+  is_first_class = True
+
+  if has_ticket:
+      print("مرحبًا بك على متن الطائرة.")
+      if is_first_class:
+      print("تفضل إلى مقعدك في الدرجة الأولى.")
+solution: 5
+explanation: |
+  السطر الأخير، `print("تفضل...")`، هو جزء من جملة `if is_first_class:`. لذلك، يجب أن يكون مزاحًا للداخل بالنسبة لتلك الجملة. بما أن `if is_first_class:` مزاح بالفعل بـ 4 مسافات، فإن هذا السطر يجب أن يكون مزاحًا بـ 8 مسافات.

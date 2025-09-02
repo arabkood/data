@@ -1,0 +1,12 @@
+id: 393bbc60-e547-453b-b732-3c6f396ff1c2
+module_id: 3de39c64-8eaa-485d-84a5-79a284d20b1b
+slug: equality-unequality
+position: 3
+created_at: 2025-09-02T15:18:29.783Z
+updated_at: 2025-09-02T15:18:29.783Z
+type: lesson
+title: مقارنات المساواة `==` و `!=`
+difficulty: easy
+premium_only: false
+base_xp: 450
+s3_path: python/01_beginner/004/03_equality-unequality

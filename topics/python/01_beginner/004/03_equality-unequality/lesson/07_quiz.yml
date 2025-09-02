@@ -1,0 +1,13 @@
+type: "quiz"
+question: "ما هي نتيجة التعبير التالي؟"
+lang: "python"
+code: |
+  user_input = "Start"
+  user_input == "start"
+options:
+  - "`True`"
+  - "`False`"
+  - "`Start`"
+  - "`start`"
+solution: 1
+explanation: "بايثون حساسة لحالة الأحرف. الحرف الكبير 'S' لا يساوي الحرف الصغير 's'، لذا فإن المقارنة تعيد `False`."

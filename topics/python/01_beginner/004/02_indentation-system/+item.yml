@@ -1,0 +1,12 @@
+id: 767f8edf-d265-43b5-9cd8-9e4962ccfd8f
+module_id: 3de39c64-8eaa-485d-84a5-79a284d20b1b
+slug: indentation-system
+position: 2
+created_at: 2025-09-02T15:18:29.782Z
+updated_at: 2025-09-02T15:18:29.782Z
+type: lesson
+title: نظام المسافات البادئة - Python Indentation
+difficulty: easy
+premium_only: false
+base_xp: 400
+s3_path: python/01_beginner/004/02_indentation-system

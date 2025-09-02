@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: |
+  املأ الفراغات لجعل الكود يطبع الرسالة فقط إذا كانت قيمة `game_over` تساوي `True`.
+code: |
+  game_over = True
+
+  @@INPUT@@ game_over:
+      @@INPUT@@("انتهت اللعبة! حاول مرة أخرى.")
+solution:
+  - "if"
+  - "print"
+explanation: |
+  نستخدم الكلمة المفتاحية `if` لبدء الجملة الشرطية، ونتحقق من المتغير `game_over`. داخل كتلة `if` (مع مسافة بادئة)، نستخدم الدالة `print()` لعرض الرسالة.

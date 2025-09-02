@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: |
+  أكمل الكود بحيث يطبع "الوصول مسموح به" إذا كانت `access_code` المدخلة تساوي `secret_code`.
+code: |
+  secret_code = "alpha-7"
+  access_code = "alpha-7"
+
+  if access_code @@INPUT@@ secret_code:
+      print("الوصول مسموح به")
+solution:
+  - "=="
+explanation: "للمقارنة بين قيمتي متغيرين والتحقق من تطابقهما، نستخدم عامل المساواة `==`."
