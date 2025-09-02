@@ -3,7 +3,6 @@ lang: "python"
 question: "الهدف هو طباعة 'مرحبًا أيها المدير!' فقط إذا كان المستخدم هو 'admin'. حدد السطر الذي به الخطأ المنطقي."
 code: |
   user = "admin"
-
   if user != "admin":
       print("مرحبًا أيها المدير!")
 solution: 2

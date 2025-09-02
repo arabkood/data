@@ -3,7 +3,6 @@ lang: "python"
 question: "هذا الكود يحاول التحقق مما إذا كانت `player_level` تساوي 10، لكنه يستخدم عامل الإسناد بدلاً من عامل المقارنة. حدد السطر الذي به الخطأ."
 code: |
   player_level = 10
-
   if player_level = 10:
       print("أنت في المستوى العاشر!")
 solution: 2

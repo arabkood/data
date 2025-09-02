@@ -4,8 +4,9 @@ question: "املأ الفراغ للتحقق مما إذا كان `current_stat
 code: |
   current_status = "online"
 
-  if current_status @@INPUT@@ "offline":
+  if current_status @@INPUT@@ "offline"@@INPUT@@
       print("النظام يعمل!")
 solution:
   - "!="
+  - ":"
 explanation: "نستخدم `!=` للتحقق من عدم المساواة. بما أن 'online' لا تساوي 'offline'، فإن الشرط صحيح وسيتم طباعة الرسالة."

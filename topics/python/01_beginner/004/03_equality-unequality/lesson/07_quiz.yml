@@ -3,7 +3,8 @@ question: "ما هي نتيجة التعبير التالي؟"
 lang: "python"
 code: |
   user_input = "Start"
-  user_input == "start"
+
+  print(user_input == "start")
 options:
   - "`True`"
   - "`False`"

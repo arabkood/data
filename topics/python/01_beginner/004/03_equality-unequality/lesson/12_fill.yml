@@ -6,7 +6,7 @@ code: |
   secret_code = "alpha-7"
   access_code = "alpha-7"
 
-  if access_code @@INPUT@@ secret_code:
+  if access_code @@INPUT@@ secret_code@@INPUT@@
       print("الوصول مسموح به")
 solution:
   - "=="
