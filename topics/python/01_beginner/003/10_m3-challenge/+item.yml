@@ -5,8 +5,8 @@ position: 10
 created_at: 2025-08-25T13:38:03.678Z
 updated_at: 2025-09-01T14:12:51.030Z
 type: code
-title: التحدي النهائي
-difficulty: medium
+title: "تحدي تطبيقي"
+base_xp: 1100
+difficulty: hard
 premium_only: false
-base_xp: 700
 s3_path: python/01_beginner/003/10_m3-challenge

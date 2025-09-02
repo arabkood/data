@@ -5,9 +5,8 @@ position: 6
 created_at: 2025-07-18T12:32:23.073Z
 updated_at: 2025-07-18T12:33:53.707Z
 type: code
-title: إصلاح لافتة الترحيب المعطلة
-blurb: null
-difficulty: easy
+title: "تحدي: إصلاح لافتة الترحيب"
+base_xp: 900
+difficulty: medium
 premium_only: false
-base_xp: 600
 s3_path: python/01_beginner/002/06_fix-banner

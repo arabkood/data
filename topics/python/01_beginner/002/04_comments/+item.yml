@@ -5,7 +5,7 @@ position: 4
 created_at: 2025-07-18T06:44:27.807Z
 updated_at: 2025-07-18T06:44:27.807Z
 type: lesson
-title: التعليقات وتوثيق الكود
+title: "التعليقات في الكود `#`"
+base_xp: 250
 difficulty: easy
-base_xp: 300
 s3_path: python/01_beginner/002/04_comments

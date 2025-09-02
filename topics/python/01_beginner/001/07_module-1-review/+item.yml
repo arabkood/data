@@ -5,10 +5,7 @@ position: 7
 created_at: 2025-07-21T15:06:01.117Z
 updated_at: 2025-07-21T15:06:01.117Z
 type: lesson
-title: مراجعة أخيرة
-blurb: >-
-  واجه أشهر الأخطاء التي يقع فيها المبرمجون في هذه المراجعة النهائية، وأثبت
-  إتقانك لأساسيات البرمجة.
-difficulty: easy
-base_xp: 300
+title: "مراجعة نهائية"
+base_xp: 600
+difficulty: medium
 s3_path: python/01_beginner/001/07_module-1-review

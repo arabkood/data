@@ -5,8 +5,8 @@ position: 4
 created_at: 2025-08-25T13:38:03.680Z
 updated_at: 2025-08-25T13:38:03.680Z
 type: lesson
-title: 'Converting Between Types: تحويل البينات'
-difficulty: easy
+title: "التحويل بين أنواع البيانات"
+base_xp: 550
+difficulty: medium
 premium_only: false
-base_xp: 300
 s3_path: python/01_beginner/003/04_converting-between-types

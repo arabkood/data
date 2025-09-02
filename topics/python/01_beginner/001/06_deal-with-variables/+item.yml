@@ -5,10 +5,7 @@ position: 6
 created_at: 2025-07-21T15:06:01.115Z
 updated_at: 2025-07-21T15:06:01.115Z
 type: lesson
-title: التعامل مع المتغيرات
-blurb: >-
-  تجاوز مجرد تخزين البيانات. تعلم كيف تجري عمليات حسابية بالمتغيرات وتحدث قيمها
-  لبناء برامج أكثر قوة وتفاعلية.
+title: "استخدام وتحديث المتغيرات"
+base_xp: 350
 difficulty: easy
-base_xp: 300
 s3_path: python/01_beginner/001/06_deal-with-variables

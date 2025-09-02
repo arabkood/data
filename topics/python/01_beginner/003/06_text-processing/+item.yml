@@ -5,8 +5,8 @@ position: 6
 created_at: 2025-08-25T13:38:03.681Z
 updated_at: 2025-08-25T13:38:03.681Z
 type: lesson
-title: 'Text Processing: معالجة النصوص'
-difficulty: easy
+title: "معالجة النصوص والـ String Methods"
+base_xp: 600
+difficulty: medium
 premium_only: false
-base_xp: 300
 s3_path: python/01_beginner/003/06_text-processing

@@ -5,11 +5,8 @@ position: 3
 created_at: 2025-07-11T14:42:55.476Z
 updated_at: 2025-07-11T14:42:55.476Z
 type: lesson
-title: "النصوص في بايثون"
-blurb: >-
-  النص في عالم البرمجة يسمى "سلسلة نصية". اكتشف كيفية إنشائها باستخدام علامات
-  التنصيص وتخزينها في متغيرات.
+title: "التعامل مع النصوص في بايثون"
+base_xp: 400
 difficulty: easy
-base_xp: 300
 s3_path: python/01_beginner/001/03_string
 

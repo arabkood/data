@@ -5,10 +5,7 @@ position: 2
 created_at: 2025-07-11T14:42:55.475Z
 updated_at: 2025-07-11T14:42:55.475Z
 type: lesson
-title: الذاكرة والمتغيرات
-blurb: >-
-  الوصف: المتغيرات هي ذاكرة الكود. تعلّم كيف تخزّن المعلومات مثل النصوص والأرقام
-  لاستخدامها لاحقاً.
+title: "المتغيرات والذاكرة - Variables & Memory"
+base_xp: 400
 difficulty: easy
-base_xp: 300
 s3_path: python/01_beginner/001/02_variables
