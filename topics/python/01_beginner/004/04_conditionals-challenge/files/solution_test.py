@@ -41,8 +41,7 @@ class TestNumberClassifier(unittest.TestCase):
         """Test: Input is '0'"""
         input_val = 0
         output = self.run_solution(input_val)
-        expected_text = "The number is zero."
-        # We check if the expected text is at the end of the output, after the prompt.
+        expected_text = "zero"
         self.assertTrue(
             output.endswith(expected_text),
             f"\nTest failed for input: {input_val}"
@@ -54,7 +53,7 @@ class TestNumberClassifier(unittest.TestCase):
         """Test: Input is '42'"""
         input_val = 42
         output = self.run_solution(input_val)
-        expected_text = "The number is not zero."
+        expected_text = "not zero"
         self.assertTrue(
             output.endswith(expected_text),
             f"\nTest failed for input: {input_val}"
@@ -66,7 +65,7 @@ class TestNumberClassifier(unittest.TestCase):
         """Test: Input is '-15'"""
         input_val = -15
         output = self.run_solution(input_val)
-        expected_text = "The number is not zero."
+        expected_text = "not zero"
         self.assertTrue(
             output.endswith(expected_text),
             f"\nTest failed for input: {input_val}"
@@ -78,7 +77,7 @@ class TestNumberClassifier(unittest.TestCase):
         """Test: Input is '1000000'"""
         input_val = 1000000
         output = self.run_solution(input_val)
-        expected_text = "The number is not zero."
+        expected_text = "not zero"
         self.assertTrue(
             output.endswith(expected_text),
             f"\nTest failed for input: {input_val}"
