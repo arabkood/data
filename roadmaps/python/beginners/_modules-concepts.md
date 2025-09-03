@@ -57,14 +57,14 @@
 
 - [x] [L] Getting User Input
 - [x] [L] Data Types
-- [ ] [L] Type Checking
-- [ ] [L] Converting Between Types
-- [ ] [C] Challenge combining input and conversion and basic math
-- [ ] [L] Text Processing
-- [ ] [L] Debugging Data Problems (bug practice driven)
-- [ ] [L] Very Very Simple Introduction to Conditional Logic & Boolean
-- [ ] [L] Final Review
-- [ ] [C] A Challenge?
+- [x] [L] Type Checking
+- [x] [L] Converting Between Types
+- [x] [C] Challenge combining input and conversion and basic math
+- [x] [L] Text Processing
+- [x] [L] Debugging Data Problems (bug practice driven)
+- [x] [L] Very Very Simple Introduction to Conditional Logic & Boolean
+- [x] [L] Final Review
+- [x] [C] A Challenge?
 
 ## M4: Making Smart Decisions
 
@@ -81,10 +81,10 @@
 
 ### Items
 
-- [ ] [L] Introduction to Boolean Logic & If Statements
-- [ ] [L] Python Indentation System
-- [ ] [L] Equality & Inequality Comparisons
-- [ ] [C] Number Classifier
+- [x] [L] Introduction to Boolean Logic & If Statements
+- [x] [L] Python Indentation System
+- [x] [L] Equality & Inequality Comparisons
+- [x] [C] Number Classifier
 - [ ] [L] Numerical Comparisons
 - [ ] [L] The NOT Operator
 - [ ] [L] The AND Operator

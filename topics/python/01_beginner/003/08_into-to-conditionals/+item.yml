@@ -8,5 +8,5 @@ type: lesson
 title: "مقدمة بسيطة للمنطق الشرطي if و Boolean"
 base_xp: 300
 difficulty: easy
-premium_only: false
+premium_only: true
 s3_path: python/01_beginner/003/08_into-to-conditionals

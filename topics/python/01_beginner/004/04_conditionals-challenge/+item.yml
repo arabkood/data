@@ -7,6 +7,6 @@ updated_at: 2025-09-02T18:56:39.882Z
 type: code
 title: 'تحدي: مصنف الأرقام'
 difficulty: medium
-premium_only: false
+premium_only: true
 base_xp: 1000
 s3_path: python/01_beginner/004/04_conditionals-challenge
