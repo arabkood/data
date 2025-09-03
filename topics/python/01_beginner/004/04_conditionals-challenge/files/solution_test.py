@@ -2,15 +2,10 @@ import unittest
 import subprocess
 import sys
 import os
-import tempfile
 
 
 class TestNumberClassifier(unittest.TestCase):
-    """
-    Test suite for the Number Classifier challenge.
-    It works by creating a temporary script for each test case,
-    injecting the test number, running it, and checking the output.
-    """
+    """Test suite for the Number Classifier challenge using user input."""
 
     @classmethod
     def setUpClass(cls):
@@ -20,113 +15,87 @@ class TestNumberClassifier(unittest.TestCase):
             raise FileNotFoundError(
                 f"{cls.solution_path} not found. Please create your solution file."
             )
-        with open(cls.solution_path, "r", encoding="utf-8") as f:
-            cls.user_code = f.read()
 
-    def run_solution_with_number(self, number_value):
-        """
-        Runs the user's code with a specific number injected
-        and returns the standard output.
-        """
-        # Create a temporary file to run the test
-        with tempfile.NamedTemporaryFile(
-            mode="w+", delete=False, suffix=".py", encoding="utf-8"
-        ) as temp_f:
-            temp_script_path = temp_f.name
-            # Write the number assignment first
-            temp_f.write(f"number = {number_value}\n\n")
-            # Write the user's code
-            temp_f.write(self.user_code)
-
+    def run_solution(self, input_data):
+        """Run the solution with given input and return the stripped output."""
         try:
-            # Execute the temporary script
             result = subprocess.run(
-                [sys.executable, temp_script_path],
+                [sys.executable, self.solution_path],
+                input=str(input_data),
                 capture_output=True,
                 text=True,
                 timeout=5,
                 encoding="utf-8",
             )
-
             if result.returncode != 0:
-                # If the script fails, include stderr in the failure message
                 self.fail(
-                    f"Program crashed for number = {number_value}.\n"
-                    f"Error:\n{result.stderr}"
+                    f"Program crashed with input '{input_data}'.\nError:\n{result.stderr}"
                 )
-
             return result.stdout.strip()
-
         except subprocess.TimeoutExpired:
-            self.fail(f"Program took too long to run for number = {number_value}.")
-        finally:
-            # Clean up the temporary file
-            if os.path.exists(temp_script_path):
-                os.remove(temp_script_path)
+            self.fail(
+                f"Program took too long to run with input '{input_data}' (possible infinite loop)."
+            )
 
     def test_case_is_zero(self):
-        """Test: number = 0"""
-        number = 0
-        output = self.run_solution_with_number(number)
-        expected_output = "The number is zero."
-        self.assertEqual(
-            output,
-            expected_output,
-            f"\nTest failed for input: number = {number}"
-            f"\nExpected output: '{expected_output}'"
-            f"\nActual output:   '{output}'",
+        """Test: Input is '0'"""
+        input_val = 0
+        output = self.run_solution(input_val)
+        expected_text = "The number is zero."
+        # We check if the expected text is at the end of the output, after the prompt.
+        self.assertTrue(
+            output.endswith(expected_text),
+            f"\nTest failed for input: {input_val}"
+            f"\nExpected the output to end with: '{expected_text}'"
+            f"\nActual output: '{output}'",
         )
 
     def test_case_is_positive_integer(self):
-        """Test: number = 42"""
-        number = 42
-        output = self.run_solution_with_number(number)
-        expected_output = "The number is not zero."
-        self.assertEqual(
-            output,
-            expected_output,
-            f"\nTest failed for input: number = {number}"
-            f"\nExpected output: '{expected_output}'"
-            f"\nActual output:   '{output}'",
+        """Test: Input is '42'"""
+        input_val = 42
+        output = self.run_solution(input_val)
+        expected_text = "The number is not zero."
+        self.assertTrue(
+            output.endswith(expected_text),
+            f"\nTest failed for input: {input_val}"
+            f"\nExpected the output to end with: '{expected_text}'"
+            f"\nActual output: '{output}'",
         )
 
     def test_case_is_negative_integer(self):
-        """Test: number = -15"""
-        number = -15
-        output = self.run_solution_with_number(number)
-        expected_output = "The number is not zero."
-        self.assertEqual(
-            output,
-            expected_output,
-            f"\nTest failed for input: number = {number}"
-            f"\nExpected output: '{expected_output}'"
-            f"\nActual output:   '{output}'",
+        """Test: Input is '-15'"""
+        input_val = -15
+        output = self.run_solution(input_val)
+        expected_text = "The number is not zero."
+        self.assertTrue(
+            output.endswith(expected_text),
+            f"\nTest failed for input: {input_val}"
+            f"\nExpected the output to end with: '{expected_text}'"
+            f"\nActual output: '{output}'",
         )
 
     def test_case_is_large_positive_integer(self):
-        """Test: number = 1000000"""
-        number = 1000000
-        output = self.run_solution_with_number(number)
-        expected_output = "The number is not zero."
-        self.assertEqual(
-            output,
-            expected_output,
-            f"\nTest failed for input: number = {number}"
-            f"\nExpected output: '{expected_output}'"
-            f"\nActual output:   '{output}'",
+        """Test: Input is '1000000'"""
+        input_val = 1000000
+        output = self.run_solution(input_val)
+        expected_text = "The number is not zero."
+        self.assertTrue(
+            output.endswith(expected_text),
+            f"\nTest failed for input: {input_val}"
+            f"\nExpected the output to end with: '{expected_text}'"
+            f"\nActual output: '{output}'",
         )
 
-    def test_case_is_large_negative_integer(self):
-        """Test: number = -987654"""
-        number = -987654
-        output = self.run_solution_with_number(number)
-        expected_output = "The number is not zero."
-        self.assertEqual(
-            output,
-            expected_output,
-            f"\nTest failed for input: number = {number}"
-            f"\nExpected output: '{expected_output}'"
-            f"\nActual output:   '{output}'",
+    def test_prompt_message(self):
+        """Test: The prompt message 'Enter a number: ' is correct"""
+        input_val = 1
+        output = self.run_solution(input_val)
+        expected_prompt = "Enter a number: "
+        self.assertTrue(
+            output.startswith(expected_prompt),
+            f"\nTest for correct prompt message failed."
+            f"\nExpected output to start with: '{expected_prompt}'"
+            f"\nActual output: '{output}'",
         )
 
 
