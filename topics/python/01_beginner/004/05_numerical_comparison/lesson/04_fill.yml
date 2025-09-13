@@ -1,11 +1,13 @@
 type: "fill"
 lang: "python"
 question: |
-  أكمل الكود التالي لطباعة رسالة "High Score!" فقط إذا كانت قيمة `score` أكبر من `100`.
+  أكمل الكود التالي لطباعة رسالة "High Score!" فقط إذا كانت قيمة `score` أكبر من `100`. استخدم `if`.
 code: |
   score = 125
-  if score @@INPUT@@ 100:
+  @@INPUT@@ score @@INPUT@@ 100@@INPUT@@
       print("High Score!")
 solution:
+  - "if"
   - ">"
+  - ":"
 explanation: "نستخدم المعامل `>` للتحقق مما إذا كانت `score` (قيمتها 125) أكبر من 100."
