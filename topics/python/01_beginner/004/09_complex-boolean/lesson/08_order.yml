@@ -8,3 +8,8 @@ code:
   - "if has_all_gems or (boss_defeated and time_less_than_5_min):"
   - '    print("لقد فزت بالجائزة الكبرى!")'
 explanation: "نبدأ بتعريف متغيرات الحالة. ثم نكتب جملة `if` التي تتحقق من الشرط الأول (`has_all_gems`) أو من نتيجة الشرط المركب الثاني `(boss_defeated and time_less_than_5_min)` الذي تم تجميعه بالأقواس."
+alternate:
+  - [1, 2, 0, 3, 4]
+  - [1, 0, 2, 3, 4]
+  - [2, 1, 0, 3, 4]
+  - [2, 0, 1, 3, 4]

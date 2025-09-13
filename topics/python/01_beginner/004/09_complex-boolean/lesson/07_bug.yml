@@ -5,10 +5,9 @@ code: |
   is_windy = True
   temp = 10
   is_icy = False
-
   if temp < 0 and is_icy or is_windy:
       print("Warning: Hazardous conditions!")
-solution: 4
+solution: 3
 explanation: "بسبب ترتيب الأولويات، يقوم بايثون بتقييم `temp < 0 and is_icy` أولاً. الشرط الصحيح يجب أن يستخدم الأقواس لتوضيح أن `is_windy` هو شرط مستقل وكافٍ لإظهار التحذير: `if is_windy or (temp < 0 and is_icy):`"
 expectedOutput: "Warning: Hazardous conditions!"
 actualOutput: "" # The condition evaluates to False without the parentheses in this case.
