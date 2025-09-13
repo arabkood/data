@@ -1,0 +1,10 @@
+type: "order"
+lang: "python"
+question: "للدخول إلى منطقة سرية، يجب ألا تكون إنذارات الأمان مفعلة (`not security_alert`) **و** أن يكون لدى اللاعب مفتاح أزرق **أو** مفتاح أحمر. أعد ترتيب الأسطر."
+code:
+  - "security_alert = False"
+  - "has_blue_key = False"
+  - "has_red_key = True"
+  - "if not security_alert and (has_blue_key or has_red_key):"
+  - '    print("تم فتح الباب السري!")'
+explanation: "الترتيب الصحيح هو تعريف المتغيرات أولاً، ثم استخدام جملة `if` التي تجمع الشروط. لاحظ استخدام `not` والأقواس `()` لتطبيق المنطق الصحيح."

@@ -1,0 +1,14 @@
+type: "bug"
+lang: "python"
+question: "الهدف هو عرض رسالة خطأ إذا كان المستخدم **غير متصل** (`is_online` قيمتها `False`). لكن الكود الحالي يعرض الرسالة الخاطئة. حدد السطر الذي يحتوي على الخطأ المنطقي."
+code: |
+  is_online = False
+
+  if is_online:
+      print("Connection successful!")
+  else:
+      print("Error: You are not connected.")
+solution: 2
+explanation: "الخطأ هو في الشرط. `if is_online:` يتحقق فقط إذا كانت `is_online` تساوي `True`. لعرض رسالة الخطأ عندما يكون المستخدم غير متصل، يجب أن يكون الشرط `if not is_online:`."
+expectedOutput: "Error: You are not connected."
+actualOutput: "Connection successful!"

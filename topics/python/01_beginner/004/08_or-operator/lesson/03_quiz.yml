@@ -1,0 +1,12 @@
+type: "quiz"
+question: "ما هي نتيجة التعبير التالي في بايثون؟"
+code: |
+  print((5 == 5) or (10 < 2))
+lang: python
+options:
+  - "True"
+  - "False"
+  - "Error"
+  - "5"
+solution: 0
+explanation: "الشرط الأول `(5 == 5)` هو `True`. الشرط الثاني `(10 < 2)` هو `False`. وبما أن `True or False` ينتج `True`، فإن النتيجة النهائية هي `True`."

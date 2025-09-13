@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: |
+  في لعبة مغامرات، لفتح باب الكنز، يجب أن يكون مستوى اللاعب 20 أو أعلى **و** أن يمتلك مفتاح الكنز. املأ الفراغ لإكمال الشرط.
+code: |
+  player_level = 25
+  has_treasure_key = True
+
+  if player_level >= 20 @@INPUT@@ has_treasure_key:
+      print("الباب يفتح!")
+solution:
+  - "and"
+explanation: "نحتاج إلى التأكد من أن كلا الشرطين (المستوى والمفتاح) صحيحان في نفس الوقت، لذلك نستخدم المعامل `and` لربطهما."

@@ -1,0 +1,9 @@
+type: "quiz"
+question: "ما هي نتيجة التعبير `50 < 25`؟"
+options:
+  - "True"
+  - "False"
+  - "50"
+  - "خطأ في الكود"
+solution: 1
+explanation: "العدد 50 ليس أصغر من 25، لذا فإن الشرط خاطئ (False)."

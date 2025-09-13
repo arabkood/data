@@ -1,0 +1,12 @@
+id: 73962e8d-03fa-4e47-b95c-41cf4f951eba
+module_id: 3de39c64-8eaa-485d-84a5-79a284d20b1b
+slug: and-operator
+position: 7
+created_at: 2025-09-13T15:40:05.566Z
+updated_at: 2025-09-13T15:40:05.566Z
+type: lesson
+title: المعامل المنطقي `and`
+difficulty: easy
+premium_only: true
+base_xp: 400
+s3_path: python/01_beginner/004/07_and-operator

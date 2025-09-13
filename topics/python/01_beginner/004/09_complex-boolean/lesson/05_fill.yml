@@ -1,0 +1,17 @@
+type: "fill"
+lang: "python"
+question: |
+  للتأهل لمهمة خاصة، يجب أن يكون اللاعب فارسًا (`is_knight`) **و** أن يمتلك سيفًا سحريًا (`has_magic_sword`) **أو** درعًا أسطوريًا (`has_legendary_shield`). املأ الفراغات بالأقواس والمعاملات الصحيحة.
+code: |
+  is_knight = True
+  has_magic_sword = False
+  has_legendary_shield = True
+
+  if is_knight @@INPUT@@ @@INPUT@@ has_magic_sword @@INPUT@@ has_legendary_shield @@INPUT@@:
+      print("أنت مؤهل للمهمة الخاصة!")
+solution:
+  - "and"
+  - "("
+  - "or"
+  - ")"
+explanation: "الشرط هو أن يكون اللاعب فارسًا، بالإضافة إلى تحقق أحد الشرطين الآخرين. لذلك، نجمع شرطي السيف والدرع معًا داخل أقواس باستخدام `or`، ثم نربط هذه المجموعة بشرط الفارس باستخدام `and`."

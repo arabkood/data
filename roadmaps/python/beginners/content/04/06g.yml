@@ -1,0 +1,143 @@
+---
+item_id: "module-4-the-not-operator"
+item_type: "lesson"
+title: "المعامل NOT"
+steps:
+  - type: "markdown"
+    content: |
+      ### عكس المنطق
+
+      حتى الآن، ركزنا على التحقق مما إذا كان الشرط صحيحاً (`True`).
+      `if score > 100:` (هل النتيجة أكبر من 100؟)
+      `if user == "admin":` (هل المستخدم هو المدير؟)
+
+      ولكن في بعض الأحيان، يكون من الأسهل والأكثر منطقية التحقق مما إذا كان الشرط **خاطئاً** (`False`).
+
+      تخيل أنك تريد تنفيذ إجراء معين فقط إذا كان المستخدم **ليس** مسجلاً دخوله، أو إذا كانت اللعبة **لم** تنتهِ بعد.
+
+      يمكنك كتابة `if is_logged_in == False:`، وهذا يعمل بشكل صحيح. لكن بايثون توفر طريقة أكثر أناقة وقراءة: المعامل `not`.
+
+  - type: "markdown"
+    content: |
+      ### تقديم المعامل `not`
+
+      المعامل `not` هو أبسط معامل منطقي. كل ما يفعله هو **عكس** قيمة `boolean`.
+
+      *   `not True` تصبح `False`.
+      *   `not False` تصبح `True`.
+
+      فكر فيه كمفتاح تبديل للضوء. إذا كان الضوء مضاءً (`True`)، فإن `not` يطفئه (`False`). وإذا كان مطفأً (`False`)، فإن `not` يضيئه (`True`).
+
+      ```python
+      print(not True)
+      print(not False)
+
+      is_game_over = False
+      print(not is_game_over)
+      ```
+
+      **الناتج:**
+      ```text
+      False
+      True
+      True
+      ```
+    # media_idea: رسم بسيط يظهر مفتاح تبديل. في الوضع "ON"، هناك لمبة مضيئة وكلمة "True". سهم مكتوب عليه "not" يشير إلى الوضع "OFF" حيث تكون اللمبة مطفأة وكلمة "False". وسهم آخر يعود بالعكس.
+
+  - type: "quiz"
+    question: "إذا كان `is_cloudy = True`، فما هي نتيجة `not is_cloudy`؟"
+    options:
+      - "True"
+      - "False"
+      - "Error"
+      - "None"
+    solution: 1
+    explanation: "المعامل `not` يعكس قيمة الـ boolean. بما أن `is_cloudy` هي `True`، فإن `not is_cloudy` ستكون `False`."
+
+  - type: "markdown"
+    content: |
+      ### استخدام `not` في الشروط
+
+      القوة الحقيقية لـ `not` تظهر عندما نستخدمها في جمل `if`. إنها تجعل الكود يبدو أقرب إلى اللغة الإنجليزية الطبيعية.
+
+      **الطريقة القديمة (تعمل ولكنها أقل شيوعاً):**
+      ```python
+      is_logged_in = False
+      if is_logged_in == False:
+          print("Please log in to continue.")
+      ```
+
+      **طريقة بايثون الأنيقة (الأكثر تفضيلاً):**
+      ```python
+      is_logged_in = False
+      if not is_logged_in:
+          print("Please log in to continue.")
+      ```
+
+      كلا الكودين يفعلان نفس الشيء تماماً، لكن النسخة الثانية أسهل في القراءة: "إذا لم يكن المستخدم مسجلاً دخوله...".
+
+  - type: "fill"
+    lang: "python"
+    question: "لديك متغير `has_permission`. املأ الفراغ لطباعة رسالة Access Denied فقط إذا كان المستخدم **لا** يملك الإذن."
+    code: |
+      has_permission = False
+      if @@INPUT@@ has_permission:
+          print("Access Denied.")
+    solution:
+      - "not"
+    explanation: "نستخدم `not` لعكس الشرط. الكود يقرأ الآن 'إذا لم يكن لدى المستخدم إذن، اطبع رسالة الرفض'."
+
+  - type: "markdown"
+    content: |
+      ### دمج `not` مع المقارنات
+
+      يمكنك أيضاً استخدام `not` لعكس نتيجة تعبير مقارنة كامل. من الأفضل دائماً وضع المقارنة بين قوسين `()` لجعل الكود أكثر وضوحاً.
+
+      لنفترض أنك تريد التحقق مما إذا كان عمر الشخص **ليس** أكبر من 18 عاماً.
+
+      ```python
+      age = 15
+      
+      # (age > 18) نتيجتها False
+      # not False نتيجتها True
+      if not (age > 18):
+          print("You are not old enough.") 
+      ```
+      هذا الشرط `not (age > 18)` يعادل تماماً الشرط `age <= 18`. في بعض الأحيان، استخدام `not` يمكن أن يجعل منطقك أوضح، خاصة مع الشروط المعقدة التي سنتعلمها لاحقاً.
+
+  - type: "bug"
+    lang: "python"
+    question: "الهدف هو عرض رسالة خطأ إذا كان المستخدم **غير متصل** (`is_online` قيمتها `False`). لكن الكود الحالي يعرض الرسالة الخاطئة. حدد السطر الذي يحتوي على الخطأ المنطقي."
+    code: |
+      is_online = False
+      
+      if is_online:
+          print("Connection successful!")
+      else:
+          print("Error: You are not connected.")
+    solution: 2
+    explanation: "الخطأ هو في الشرط. `if is_online:` يتحقق فقط إذا كانت `is_online` تساوي `True`. لعرض رسالة الخطأ عندما يكون المستخدم غير متصل، يجب أن يكون الشرط `if not is_online:`."
+    expectedOutput: "Error: You are not connected."
+    actualOutput: "Connection successful!"
+
+  - type: "order"
+    lang: "python"
+    question: "أعد ترتيب الأسطر للتحقق مما إذا كان اللاعب **ليس** في المستوى الأقصى (100) وطباعة رسالة تشجيعية."
+    code:
+      - "player_level = 95"
+      - "is_max_level = (player_level == 100)"
+      - "if not is_max_level:"
+      - "    print('Keep going, you are almost there!')"
+    explanation: "أولاً، نحدد مستوى اللاعب. ثانياً، ننشئ متغيراً من نوع boolean يسمى `is_max_level` لتخزين نتيجة المقارنة. ثالثاً، نستخدم `not` على هذا المتغير في جملة `if` للتحقق من العكس. أخيراً، نطبع الرسالة."
+
+  - type: "markdown"
+    content: |
+      ممتاز! لقد أضفت الآن أداة منطقية جديدة وقوية إلى معرفتك.
+
+      **ملخص سريع:**
+      *   المعامل `not` يعكس قيمة `boolean`.
+      *   `not True` -> `False`
+      *   `not False` -> `True`
+      *   يجعل التحقق من الشروط السلبية (مثل `if not is_ready:`) أسهل في القراءة.
+
+      في الدروس القادمة، سنتعلم كيفية دمج شروط متعددة معاً باستخدام `and` و `or` لبناء منطق أكثر تعقيداً وقوة. استعد!

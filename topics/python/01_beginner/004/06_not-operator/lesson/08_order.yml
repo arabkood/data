@@ -1,0 +1,9 @@
+type: "order"
+lang: "python"
+question: "أعد ترتيب الأسطر للتحقق مما إذا كان اللاعب **ليس** في المستوى الأقصى (100) وطباعة رسالة تشجيعية."
+code:
+  - "player_level = 95"
+  - "is_max_level = (player_level == 100)"
+  - "if not is_max_level:"
+  - "    print('Keep going, you are almost there!')"
+explanation: "أولاً، نحدد مستوى اللاعب. ثانياً، ننشئ متغيراً من نوع boolean يسمى `is_max_level` لتخزين نتيجة المقارنة. ثالثاً، نستخدم `not` على هذا المتغير في جملة `if` للتحقق من العكس. أخيراً، نطبع الرسالة."

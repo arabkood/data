@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: |
+  للدخول إلى منطقة VIP، يجب أن يكون لديك تذكرة VIP **أو** أن يكون اسمك على قائمة الضيوف. املأ الفراغ لإكمال الشرط.
+code: |
+  has_vip_ticket = False
+  is_on_guest_list = True
+
+  if has_vip_ticket @@INPUT@@ is_on_guest_list:
+      print("تفضل بالدخول إلى منطقة VIP.")
+solution:
+  - "or"
+explanation: "بما أن أحد الشرطين كافٍ للسماح بالدخول، نستخدم المعامل `or`."

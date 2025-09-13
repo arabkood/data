@@ -1,0 +1,10 @@
+type: "order"
+lang: "python"
+question: "للفوز بالجائزة الكبرى، يجب على اللاعب جمع كل الجواهر الثلاث **أو** هزيمة الزعيم النهائي في أقل من 5 دقائق. أعد ترتيب الأسطر لتمثيل هذا الشرط."
+code:
+  - "has_all_gems = False"
+  - "boss_defeated = True"
+  - "time_less_than_5_min = True"
+  - "if has_all_gems or (boss_defeated and time_less_than_5_min):"
+  - '    print("لقد فزت بالجائزة الكبرى!")'
+explanation: "نبدأ بتعريف متغيرات الحالة. ثم نكتب جملة `if` التي تتحقق من الشرط الأول (`has_all_gems`) أو من نتيجة الشرط المركب الثاني `(boss_defeated and time_less_than_5_min)` الذي تم تجميعه بالأقواس."

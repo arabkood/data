@@ -1,0 +1,9 @@
+type: "quiz"
+question: "ما هو نوع البيانات (`data type`) الذي ينتج عن التعبير `100 != 50`؟"
+options:
+  - "integer"
+  - "string"
+  - "boolean"
+  - "float"
+solution: 2
+explanation: "أي عملية مقارنة (مثل `==`, `!=`, `>`, `<`) تنتج دائماً قيمة منطقية، إما `True` أو `False`. نوع هذه البيانات هو `boolean` أو `bool`."

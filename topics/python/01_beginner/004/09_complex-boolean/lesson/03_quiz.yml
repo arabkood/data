@@ -1,0 +1,11 @@
+type: "quiz"
+question: "بناءً على ترتيب الأولويات، ما هي النتيجة النهائية لهذا التعبير؟"
+code: |
+  print(True and False or True)
+lang: python
+options:
+  - "True"
+  - "False"
+  - "سيحدث خطأ"
+solution: 0
+explanation: "بايثون تقيّم `True and False` أولاً، والذي ينتج `False`. بعد ذلك، تقيّم `False or True`، والذي ينتج `True`."

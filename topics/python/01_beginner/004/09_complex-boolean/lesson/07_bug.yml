@@ -1,0 +1,14 @@
+type: "bug"
+lang: "python"
+question: "يجب أن يظهر هذا الكود رسالة تحذير إذا كان الطقس عاصفاً، أو إذا كانت درجة الحرارة أقل من 0 **و** الطريق جليدي. الكود لا يعمل كما هو متوقع عندما يكون الطقس عاصفاً فقط. حدد الخطأ."
+code: |
+  is_windy = True
+  temp = 10
+  is_icy = False
+
+  if temp < 0 and is_icy or is_windy:
+      print("Warning: Hazardous conditions!")
+solution: 4
+explanation: "بسبب ترتيب الأولويات، يقوم بايثون بتقييم `temp < 0 and is_icy` أولاً. الشرط الصحيح يجب أن يستخدم الأقواس لتوضيح أن `is_windy` هو شرط مستقل وكافٍ لإظهار التحذير: `if is_windy or (temp < 0 and is_icy):`"
+expectedOutput: "Warning: Hazardous conditions!"
+actualOutput: "" # The condition evaluates to False without the parentheses in this case.

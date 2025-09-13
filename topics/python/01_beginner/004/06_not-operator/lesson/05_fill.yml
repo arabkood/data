@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "لديك متغير `has_permission`. املأ الفراغ لطباعة رسالة Access Denied فقط إذا كان المستخدم **لا** يملك الإذن."
+code: |
+  has_permission = False
+  if @@INPUT@@ has_permission:
+      print("Access Denied.")
+solution:
+  - "not"
+explanation: "نستخدم `not` لعكس الشرط. الكود يقرأ الآن 'إذا لم يكن لدى المستخدم إذن، اطبع رسالة الرفض'."

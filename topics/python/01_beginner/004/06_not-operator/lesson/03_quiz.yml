@@ -1,0 +1,9 @@
+type: "quiz"
+question: "إذا كان `is_cloudy = True`، فما هي نتيجة `not is_cloudy`؟"
+options:
+  - "True"
+  - "False"
+  - "Error"
+  - "None"
+solution: 1
+explanation: "المعامل `not` يعكس قيمة الـ boolean. بما أن `is_cloudy` هي `True`، فإن `not is_cloudy` ستكون `False`."
