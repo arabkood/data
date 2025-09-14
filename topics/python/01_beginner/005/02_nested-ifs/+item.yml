@@ -1,0 +1,12 @@
+id: 42be64e1-6be6-46c5-8cc0-b5f1724d1c7c
+module_id: 3de39c64-8eaa-485d-84a5-79a284d20b1b
+slug: nested-ifs
+position: 2
+created_at: 2025-09-14T10:21:43.197Z
+updated_at: 2025-09-14T10:21:43.197Z
+type: lesson
+title: الشروط المتداخلة - Nested Conditionals
+difficulty: medium
+premium_only: true
+base_xp: 650
+s3_path: python/01_beginner/005/02_nested-ifs

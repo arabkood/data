@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "لنكتب الكود الخاص بإشارة المرور. املأ الفراغ للتحقق من الضوء الأصفر."
+code: |
+  light = "yellow"
+
+  if light == "green":
+    print("انطلق!")
+  @@INPUT@@ light == "yellow":
+    print("تمهل!")
+solution:
+  - "elif"
+explanation: |
+  استخدمنا `elif` لأننا نريد التحقق من شرط ثانٍ (`light == "yellow"`) فقط في حال لم يكن الشرط الأول (`light == "green"`) صحيحاً.

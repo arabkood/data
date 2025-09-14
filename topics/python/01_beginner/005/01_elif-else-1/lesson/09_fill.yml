@@ -1,0 +1,19 @@
+type: "fill"
+lang: "python"
+question: "املأ الفراغات لإكمال منطق الخصم."
+code: |
+  total_spent = 75
+  discount = 0
+
+  if total_spent > 100:
+    discount = 20
+  @@INPUT@@ total_spent > 50:
+    discount = 10
+  @@INPUT@@:
+    discount = 0
+
+  print(f"خصمك هو {discount}%")
+solution:
+  - "elif"
+  - "else"
+explanation: "بما أن `total_spent` هو 75، فإن شرط `if` الأول خاطئ، لكن شرط `elif` صحيح. لذلك، يتم تعيين الخصم إلى 10."

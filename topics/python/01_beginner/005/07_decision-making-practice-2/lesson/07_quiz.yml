@@ -1,0 +1,35 @@
+type: "quiz"
+lang: "python"
+question: "بناءً على قيم المتغيرات، ما هي النصيحة التي سيطبعها هذا الكود؟"
+code: |
+  temperature = 28
+  is_raining = True
+  is_sunny = True # قد تكون مشمسة وممطرة في نفس الوقت!
+
+  advice = ""
+
+  if temperature > 25:
+    advice = "الجو حار. "
+    if is_raining:
+      advice += "ابق في الداخل."
+    elif is_sunny:
+      advice += "استخدم واقي الشمس."
+  else:
+    advice = "الجو معتدل. "
+    if is_raining:
+      advice += "خذ معك مظلة."
+
+  print(advice)
+options:
+  - "الجو حار. ابق في الداخل."
+  - "الجو حار. استخدم واقي الشمس."
+  - "الجو معتدل. خذ معك مظلة."
+  - "الجو حار. "
+solution: 0
+explanation: |
+  1. `temperature > 25` (28 > 25) صحيح. ندخل الكتلة الأولى.
+  2. `advice` يصبح "الجو حار. ".
+  3. ندخل الشرط المتداخل. أولاً، `if is_raining:`. بما أن `is_raining` هي `True`، يتم تنفيذ الكود الخاص بها.
+  4. `advice` يصبح "الجو حار. " + "ابق في الداخل.".
+  5. بما أن شرط `if` الداخلي كان صحيحاً، يتم تجاهل `elif is_sunny` بالكامل.
+  6. يتم طباعة القيمة النهائية لـ `advice`.

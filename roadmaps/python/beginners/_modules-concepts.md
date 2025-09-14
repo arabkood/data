@@ -85,13 +85,13 @@
 - [x] [L] Python Indentation System
 - [x] [L] Equality & Inequality Comparisons
 - [x] [C] Number Classifier
-- [ ] [L] Numerical Comparisons
-- [ ] [L] The NOT Operator
-- [ ] [L] The AND Operator
-- [ ] [L] The OR Operator
-- [ ] [L] Complex Boolean Conditions
-- [ ] [L] Final Review
-- [ ] [C] Smart Password Validator
+- [x] [L] Numerical Comparisons
+- [x] [L] The NOT Operator
+- [x] [L] The AND Operator
+- [x] [L] The OR Operator
+- [x] [L] Complex Boolean Conditions
+- [x] [L] Final Review
+- [x] [C] Smart Password Validator
 
 ## M5: Making Smarter Decisions
 

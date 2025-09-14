@@ -1,0 +1,18 @@
+type: "bug"
+lang: "python"
+question: |
+  **الهدف:** السماح بالدخول إذا كان الشخص موظفاً ولديه بطاقة دخول، **أو** إذا كان ضيفاً مع مرافق.
+
+  الكود الحالي يسمح للموظفين بالدخول حتى بدون بطاقة دخول بسبب خطأ في أولويات `and`/`or`. حدد السطر الذي يحتاج إلى أقواس لتصحيح المنطق.
+code: "is_employee = True\nhas_badge = False\nis_guest_with_escort = False\n\ncan_enter = False\n\n# Python تقييمها كـ (is_employee and has_badge) or is_guest_with_escort\n# ولكن الهدف هو is_employee and (has_badge or is_guest_with_escort) \n# هذا ليس الهدف المطلوب، الهدف هو: (is_employee and has_badge) or is_guest_with_escort\n\nif is_employee and has_badge or is_guest_with_escort:\n    can_enter = True\n\nprint(can_enter)\n"
+solution: 11 # The line with the complex if statement
+expectedOutput: "False"
+actualOutput: "True"
+hint: "كيف يمكنك إجبار بايثون على تقييم شرطين معاً قبل تقييم الشرط الثالث؟"
+explanation: |
+  المشكلة تكمن في أن `and` لها أولوية أعلى من `or`. لذلك، يقوم بايثون بتقييم `is_employee and has_badge` أولاً (`True and False` -> `False`). ثم يقيم `False or is_guest_with_escort` (`False or False` -> `False`).
+
+  لكن دعنا نفترض أن `is_guest_with_escort` كانت `True`. الكود سيسمح بالدخول. المنطق المطلوب هو أن الموظف يحتاج *دائماً* إلى بطاقة. يجب تجميع شروط الموظف معاً.
+
+  **الحل الصحيح:** `if (is_employee and has_badge) or is_guest_with_escort:`
+  استخدام الأقواس يجعل المنطق واضحاً لا لبس فيه ويضمن تنفيذ الشروط بالترتيب الذي تريده.

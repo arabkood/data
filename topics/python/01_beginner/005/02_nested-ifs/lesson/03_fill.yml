@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "لنطبق سيناريو منطقة الـ VIP. املأ الفراغ للتحقق من نوع التذكرة."
+code: |
+  has_ticket = True
+  ticket_type = "VIP"
+
+  if has_ticket == True:
+    print("لديك تذكرة. جار التحقق من النوع...")
+    @@INPUT@@ ticket_type == "VIP":
+      print("تفضل بالدخول إلى منطقة VIP!")
+solution:
+  - "if"
+explanation: |
+  وضعنا عبارة `if` الثانية داخل الأولى. لن يتم التحقق من `ticket_type` إلا إذا كانت قيمة `has_ticket` هي `True` في البداية.

@@ -1,0 +1,21 @@
+type: "bug"
+lang: "python"
+question: "هذا الكود يطبق الخصم بشكل خاطئ حتى لو انتهت صلاحية القسيمة. حدد السطر الذي يحتوي على الخطأ المنطقي."
+code: |
+  is_used = False
+  is_expired = True # القسيمة منتهية الصلاحية
+  discount = 0
+
+  if not is_used:
+    if is_expired:
+        discount = 0
+    else:
+        discount = 20
+
+  print(f"الخصم المطبق: {discount}%")
+solution: 5
+expectedOutput: "الخصم المطبق: 0%"
+actualOutput: "الخصم المطبق: 20%"
+hint: "انظر جيداً إلى الشرط المتداخل. ماذا يعني `if is_expired:`؟"
+explanation: |
+  الخطأ يكمن في `if is_expired:`. هذه العبارة تُقرأ كـ "إذا كانت منتهية الصلاحية (`True`)..."، ثم الكود بداخلها لا يفعل شيئاً تقريباً. المنطق الصحيح هو التحقق من أنها **ليست** منتهية الصلاحية. يجب أن يكون الشرط `if not is_expired:` أو `if is_expired == False:`.

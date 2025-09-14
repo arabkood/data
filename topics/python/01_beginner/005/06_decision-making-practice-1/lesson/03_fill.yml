@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "املأ الفراغات لإكمال منطق مدقق التذاكر."
+code: |
+  age = 22
+
+  @@INPUT@@ age >= 18:
+    print("مسموح بالدخول")
+  @@INPUT@@:
+    print("الدخول ممنوع")
+solution:
+  - "if"
+  - "else"
+explanation: "هذا هو الاستخدام الأساسي لـ `if/else` لاتخاذ قرار بين نتيجتين ممكنتين."

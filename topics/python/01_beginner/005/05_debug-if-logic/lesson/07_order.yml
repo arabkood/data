@@ -1,0 +1,22 @@
+type: "order"
+lang: "python"
+question: "يعطي هذا الكود دائماً رسالة 'الشحن العادي' حتى للطرود الثقيلة جداً بسبب الترتيب الخاطئ. أعد ترتيب الكتل (مع ترك المتغيرات في الأعلى) لإصلاح المنطق."
+code:
+  - |
+    weight = 25
+    shipping_method = ""
+  - |
+    if weight > 1:
+        shipping_method = "الشحن العادي"
+  - |
+    elif weight > 20:
+        shipping_method = "الشحن الثقيل"
+  - |
+    elif weight > 50:
+        shipping_method = "الشحن الخاص للبضائع"
+  - |
+    else:
+        shipping_method = "شحن الرسائل"
+alternate:
+  - [0, 3, 2, 1, 4] # Correct order is heaviest to lightest
+explanation: "يجب عليك دائماً التحقق من الحالة الأكثر تحديداً (الأثقل) أولاً. عندما يكون الوزن 25، فإن الشرط الأول `weight > 1` يكون صحيحاً، فيتم تعيين 'الشحن العادي' ويتوقف التنفيذ، وهذا خطأ. الترتيب الصحيح هو من الأثقل إلى الأخف."

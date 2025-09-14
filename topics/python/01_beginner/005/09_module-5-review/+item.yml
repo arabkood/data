@@ -1,0 +1,12 @@
+id: 4e340a44-2c67-4df9-8c49-dd5e8f12d899
+module_id: 3de39c64-8eaa-485d-84a5-79a284d20b1b
+slug: module-5-review
+position: 9
+created_at: 2025-09-14T10:21:43.199Z
+updated_at: 2025-09-14T10:21:43.199Z
+type: lesson
+title: مراجعة نهائية
+difficulty: hard
+premium_only: true
+base_xp: 900
+s3_path: python/01_beginner/005/09_module-5-review

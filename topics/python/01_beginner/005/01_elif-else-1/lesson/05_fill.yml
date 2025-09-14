@@ -1,0 +1,17 @@
+type: "fill"
+lang: "python"
+question: "أكمل كود إشارة المرور. أضف `elif` للضوء الأصفر و `else` لأي لون آخر (مثل الأحمر)."
+code: |
+  light = "red"
+
+  if light == "green":
+    print("انطلق!")
+  @@INPUT@@ light == "yellow":
+    print("تمهل!")
+  @@INPUT@@:
+    print("توقف!")
+solution:
+  - "elif"
+  - "else"
+explanation: |
+  الآن الكود كامل! إذا كان الضوء ليس "أخضر" وليس "أصفر"، فإن عبارة `else` ستعمل تلقائياً وتطبع "توقف!".

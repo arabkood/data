@@ -1,0 +1,20 @@
+type: "fill"
+lang: "python"
+question: |
+  الكود أدناه لا يعمل بشكل صحيح. لاكتشاف المشكلة، أضف عبارات `print()` للتحقق من قيم `score_text` و `score_number` **مباشرة بعد تحويل النوع**.
+code: |
+  score_text = " 95 " # لاحظ المسافات!
+
+  score_number = int(score_text)
+  @@INPUT@@
+  @@INPUT@@
+
+  if score_number >= 90:
+    print("ممتاز!")
+  else:
+    print("جيد.")
+solution:
+  - 'print(f"DEBUG: score_text is [{score_text}]")'
+  - 'print(f"DEBUG: score_number is {score_number}")'
+explanation: |
+  عند إضافة `print()`، ستكتشف أن `score_text` يحتوي على مسافات، وهذا ما يسبب خطأ عند محاولة تحويله إلى `int()`. هذا يوضح كيف أن `print()` تساعدك في "رؤية" المشكلة. (في الواقع، الكود سيتوقف مع `ValueError`. هذه مقدمة جيدة لهذا المفهوم!)

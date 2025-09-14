@@ -1,0 +1,12 @@
+id: 9ad1bb4b-dd08-4184-ac01-e9c8800bb922
+module_id: 3de39c64-8eaa-485d-84a5-79a284d20b1b
+slug: debug-if-logic
+position: 5
+created_at: 2025-09-14T10:21:43.199Z
+updated_at: 2025-09-14T10:21:43.199Z
+type: lesson
+title: تصحيح أخطاء المنطق الشرطي
+difficulty: hard
+premium_only: true
+base_xp: 800
+s3_path: python/01_beginner/005/05_debug-if-logic

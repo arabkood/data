@@ -1,0 +1,21 @@
+type: "fill"
+lang: "python"
+question: "املأ الفراغات لإكمال منطق تسعير التذاكر."
+code: |
+  age = 65
+  price = 0
+
+  if age <= 4:
+    price = 0
+  elif age <= 12:
+    price = 20
+  @@INPUT@@ age <= 64:
+    price = 50
+  @@INPUT@@:
+    price = 25
+
+  print(f"سعر التذكرة: {price} ريال")
+solution:
+  - "elif"
+  - "else"
+explanation: "بما أن الشروط مرتبة تصاعدياً، يمكننا التحقق من كل حد أعلى. `elif age <= 64` تتحقق من فئة الكبار. وأخيراً، `else` تلتقط كل الأعمار المتبقية (65 فما فوق) تلقائياً."

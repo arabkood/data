@@ -1,0 +1,30 @@
+type: "quiz"
+lang: "python"
+question: "بدون تشغيل الكود، ماذا ستكون النتيجة النهائية المطبوعة؟"
+code: |
+  is_premium_customer = False
+  order_total = 120
+  shipping_country = "KSA"
+  final_cost = order_total
+
+  if shipping_country == "KSA":
+    if order_total > 100 or is_premium_customer:
+      final_cost = order_total # شحن مجاني
+    else:
+      final_cost = order_total + 30 # رسوم شحن 30
+  else:
+    final_cost = order_total + 70 # شحن دولي 70
+
+  print(f"التكلفة النهائية: {final_cost}")
+options:
+  - "التكلفة النهائية: 120"
+  - "التكلفة النهائية: 150"
+  - "التكلفة النهائية: 190"
+  - "لن يتم طباعة أي شيء"
+solution: 0
+explanation: |
+  1.  `shipping_country == "KSA"` صحيح. ندخل الكتلة الأولى.
+  2.  ندخل الشرط المتداخل: `order_total > 100 or is_premium_customer`.
+  3.  `120 > 100` صحيحة. بما أننا نستخدم `or`، لا يهم أن `is_premium_customer` خاطئة. الشرط بأكمله صحيح.
+  4.  يتم تنفيذ `final_cost = order_total`، لذا تبقى القيمة 120.
+  5.  تطبع النتيجة النهائية.

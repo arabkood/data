@@ -1,0 +1,27 @@
+type: "fill"
+lang: "python"
+question: "أعد كتابة هذا الكود المتداخل باستخدام أسلوب الشرط الحارس."
+code: |
+  # الكود الأصلي المتداخل
+  # if cart_total > 0:
+  #   if stock_available > 0:
+  #     print("جاري معالجة الطلب...")
+  #   else:
+  #     print("عذراً، المنتج غير متوفر في المخزون.")
+  # else:
+  #   print("سلة التسوق فارغة.")
+
+  # الحل باستخدام الشرط الحارس
+  cart_total = 150
+  stock_available = 0
+
+  if cart_total <= 0:
+    print("سلة التسوق فارغة.")
+  @@INPUT@@ stock_available <= 0:
+    print("عذراً، المنتج غير متوفر في المخزون.")
+  @@INPUT@@:
+    print("جاري معالجة الطلب...")
+solution:
+  - "elif"
+  - "else"
+explanation: "بفحص الحالات الخاطئة أولاً (`cart_total <= 0` و `stock_available <= 0`)، يصبح المنطق الرئيسي في كتلة `else` النهائية أكثر وضوحاً وبساطة."

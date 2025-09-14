@@ -1,0 +1,19 @@
+type: "fill"
+lang: "python"
+question: "أكمل كود حاسبة الشحن."
+code: |
+  weight = 7.5
+  cost = 0
+
+  if weight < 2:
+    cost = 10
+  @@INPUT@@ weight <= 10:
+    cost = 25
+  @@INPUT@@:
+    cost = 50
+
+  print(f"تكلفة الشحن هي: {cost}")
+solution:
+  - "elif"
+  - "else"
+explanation: "استخدمنا `elif` للتحقق من الحالة المتوسطة. عبارة `else` تلتقط كل الحالات المتبقية (أكثر من 10 كجم) تلقائياً."

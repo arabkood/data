@@ -1,0 +1,20 @@
+type: "fill"
+lang: "python"
+question: "أكمل كود نظام توصية الأفلام للتحقق من الأفلام الكوميدية."
+code: |
+  genre = "comedy"
+  rating = 8.5
+  famous_actors = 3
+
+  if genre == "action":
+    if rating > 8:
+      print("نوصي بهذا الفيلم الأكشن!")
+  @@INPUT@@ genre == "comedy":
+    print("فيلم كوميدي، لنر...")
+    if famous_actors > 2:
+      @@INPUT@@("نوصي بهذا الفيلم الكوميدي!")
+solution:
+  - "elif"
+  - "print"
+explanation: |
+  نستخدم `elif` للتحقق من النوع "كوميدي" كخيار ثانٍ. ثم بداخل هذا الـ `elif`، نستخدم `if` متداخلة للتحقق من عدد الممثلين.
