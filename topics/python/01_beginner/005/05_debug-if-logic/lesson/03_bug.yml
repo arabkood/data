@@ -3,10 +3,9 @@ lang: "python"
 question: "هذا الكود لن يعمل بسبب خطأ في بناء الجملة (SyntaxError). حدد السطر الذي يحتوي على خطأ التعيين بدلاً من المقارنة."
 code: |
   user_input = "start"
-
   if user_input = "start":
       print("Starting the process...")
   else:
       print("Unknown command.")
-solution: 2
+solution: 1
 explanation: "يجب استخدام `==` للمقارنة داخل جملة `if`. السطر 3 يستخدم `=`، وهي لتعيين القيم، مما يسبب خطأ."

@@ -14,7 +14,9 @@ code: |
   else:
     print("جيد.")
 solution:
-  - 'print(f"DEBUG: score_text is [{score_text}]")'
-  - 'print(f"DEBUG: score_number is {score_number}")'
+  - |
+    /print\s*\([^)]*score_text[^)]*\)/i
+  - |
+    /print\s*\([^)]*score_number[^)]*\)/i
 explanation: |
   عند إضافة `print()`، ستكتشف أن `score_text` يحتوي على مسافات، وهذا ما يسبب خطأ عند محاولة تحويله إلى `int()`. هذا يوضح كيف أن `print()` تساعدك في "رؤية" المشكلة. (في الواقع، الكود سيتوقف مع `ValueError`. هذه مقدمة جيدة لهذا المفهوم!)
