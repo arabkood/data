@@ -2,21 +2,15 @@ type: "order"
 lang: "python"
 question: "أنت تبرمج نظام دخول لمكتبة. للدخول، يجب أن تكون طالباً، وإذا كنت طالباً، يجب ألا تكون لديك كتب متأخرة. رتب الكود التالي."
 code:
-  - "is_student = True"
-  - "has_overdue_books = False"
   - |
-    if is_student:
-  - |
-    if not has_overdue_books:
-  - |
-    print("مرحباً بك في المكتبة.")
-  - |
-    else:
-  - |
-    print("يرجى إعادة الكتب المتأخرة أولاً.")
-  - |
-    else:
-  - |
-    print("الدخول للطلاب فقط.")
+    is_student = True
+    has_overdue_books = False
+  - "if is_student:"
+  - "    if not has_overdue_books:"
+  - "        print('مرحباً بك في المكتبة.')"
+  - "    else:"
+  - "        print('يرجى إعادة الكتب المتأخرة أولاً.')"
+  - "else:"
+  - "    print('الدخول للطلاب فقط.')"
 explanation: |
   المنطق يتدفق من التحقق العام (هل هو طالب؟) إلى التحقق المحدد (هل لديه كتب متأخرة؟). المسافات البادئة هي التي تحدد هذا التدفق.

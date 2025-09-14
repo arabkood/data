@@ -106,16 +106,16 @@
 
 ### Items
 
-- [ ] [L] Elif and Else Statements
-- [ ] [L] Nesting Conditional Statements
-- [ ] [C] Grade Calculator
-- [ ] [L] Program Flow Control Mastery
-- [ ] [L] Debugging Conditional Logic
-- [ ] [L] Decision Making Practice I
-- [ ] [L] Decision Making Practice II
-- [ ] [L] Advanced Conditional Scenarios
-- [ ] [L] Final Review
-- [ ] [C] Smart Recommendation Engine
+- [x] [L] Elif and Else Statements
+- [x] [L] Nesting Conditional Statements
+- [x] [C] Grade Calculator
+- [x] [L] Program Flow Control Mastery
+- [x] [L] Debugging Conditional Logic
+- [x] [L] Decision Making Practice I
+- [x] [L] Decision Making Practice II
+- [x] [L] Advanced Conditional Scenarios
+- [x] [L] Final Review
+- [x] [C] Smart Recommendation Engine
 
 ## M6: Repeating Actions
 
