@@ -8,15 +8,12 @@ code: |
   age = 70
   is_student = True
   ticket_price = 100
-
   if is_student:
     ticket_price = 50
-
   if age >= 65:
     ticket_price = 60
-
   print(f"السعر النهائي: {ticket_price}")
-solution: 7
+solution: 5
 expectedOutput: "السعر النهائي: 50"
 actualOutput: "السعر النهائي: 60"
 explanation: |
