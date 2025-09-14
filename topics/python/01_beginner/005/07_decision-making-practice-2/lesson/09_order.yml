@@ -2,19 +2,21 @@ type: "order"
 lang: "python"
 question: "أعد ترتيب هذه الأسطر لإنشاء مدقق أهلية القرض بالمنطق الصحيح."
 code:
-  - "credit_score = 700"
-  - "income = 45000"
-  - "has_guarantor = True"
-  - "is_eligible = False"
+  - |
+    credit_score = 700
+    income = 45000
+    has_guarantor = True
+    is_eligible = False
   - |
     if credit_score > 650:
   - |
-    if income >= 50000 or has_guarantor:
+        if income >= 50000 or has_guarantor:
   - |
-    is_eligible = True
+            is_eligible = True
   - |
     if is_eligible:
         print("العميل مؤهل للحصول على قرض.")
+  - |
     else:
         print("العميل غير مؤهل.")
 explanation: |
