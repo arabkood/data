@@ -1,0 +1,12 @@
+id: 8f890bbf-e8e5-446b-8917-ca0711778709
+module_id: efaf01c7-f88b-4dde-89b3-3593d56230fa
+slug: pattern-generator
+position: 3
+created_at: 2025-09-15T13:05:38.989Z
+updated_at: 2025-09-15T13:05:38.989Z
+type: code
+title: 'تحدي: مولد الأنماط'
+difficulty: hard
+premium_only: true
+base_xp: 1200
+s3_path: python/01_beginner/006/03_pattern-generator

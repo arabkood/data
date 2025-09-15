@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لتخطي طباعة الأرقام الزوجية:"
+code: |
+  for i in range(1, 8):
+      if i % 2 == 0:  # إذا كان الرقم زوجي
+          @@INPUT@@
+      print(f"رقم فردي: {i}")
+solution:
+  - "continue"

@@ -1,0 +1,9 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لكتابة جدول ضرب العدد 3:"
+code:
+  - "number = 3"
+  - "print(f\"جدول ضرب العدد {number}:\")"
+  - "for i in range(1, 11):"
+  - "    result = number * i"
+  - "    print(f\"{number} × {i} = {result}\")"

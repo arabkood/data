@@ -3,6 +3,8 @@
 [L] Stands for (multi-step lesson that contain explanations and exercises)
 [C] Stand for (unit-tested challenges like leetcode)
 
+**NOTE**: Always keep the progress linear, do not use concepts before the user have studied it.
+
 ## M1: First Steps in Python
 
 ### Concepts

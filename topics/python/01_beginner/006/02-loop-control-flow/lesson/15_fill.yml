@@ -1,0 +1,7 @@
+type: "fill"
+lang: "python"
+question: "أكمل لعبة البحث عن الكنز:"
+code: "print(\"\U0001F3F4‍☠️ لعبة البحث عن الكنز!\")\ntreasure_location = 7\n\nfor position in range(1, 12):\n    print(f\"\U0001F50D البحث في الموضع {position}\")\n    \n    if position == 4:\n        print(\"⚠️  مكان خطير، سأتخطاه!\")\n        @@INPUT@@\n        \n    if position == treasure_location:\n        print(\"\U0001F389 وجدت الكنز!\")\n        @@INPUT@@\n        \n    print(\"❌ لا يوجد كنز هنا\")\n\nprint(\"\U0001F61E لم أجد أي كنز...\")\n"
+solution:
+  - "continue"
+  - "break"

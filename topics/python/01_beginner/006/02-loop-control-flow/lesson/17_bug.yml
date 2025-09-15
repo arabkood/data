@@ -1,0 +1,14 @@
+type: "bug"
+lang: "python"
+question: "اعثر على الخطأ المنطقي في هذا الكود:"
+code: |
+  for i in range(10):
+      if i > 5:
+          break
+      if i == 3:
+          continue
+      if i < 2:
+          pass
+      print(f"الرقم: {i}")
+solution: 4
+explanation: "السطر 5 يحتوي على pass غير مفيد. pass لا يؤثر على تدفق البرنامج، والكود سيعمل بنفس الطريقة بدونه."

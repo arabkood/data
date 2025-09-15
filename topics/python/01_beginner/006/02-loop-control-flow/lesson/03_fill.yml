@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود للتوقف عند العثور على الرقم 7:"
+code: |
+  for number in range(1, 15):
+      print("الرقم الحالي:", number)
+      if number == 7:
+          print("وجدت الرقم 7!")
+          @@INPUT@@
+      print("سأواصل البحث...")
+solution:
+  - "break"

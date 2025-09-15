@@ -1,0 +1,8 @@
+type: "quiz"
+question: "ماذا سينتج عن `range(4)`؟"
+options:
+  - "0, 1, 2, 3"
+  - "1, 2, 3, 4"
+  - "0, 1, 2, 3, 4"
+solution: 0
+explanation: "range(4) ينشئ الأرقام من 0 إلى 3 (أي 4 أرقام إجمالاً)"

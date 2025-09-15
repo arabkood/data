@@ -1,0 +1,8 @@
+type: "quiz"
+question: "ما هو الغرض الأساسي من pass؟"
+options:
+  - "إيقاف الحلقة نهائياً"
+  - "تخطي الدورة الحالية"
+  - "placeholder عندما لا نريد فعل شيء"
+solution: 2
+explanation: "pass هو placeholder يُستخدم عندما نحتاج كوداً فارغاً مؤقتاً"

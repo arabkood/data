@@ -1,0 +1,14 @@
+type: "quiz"
+question: "في الكود التالي، كم مرة سيتم طباعة \"مرحبا\"؟"
+code: |
+  for i in range(8):
+      print("مرحبا")
+      if i == 2:
+          break
+lang: "python"
+options:
+  - "3 مرات"
+  - "2 مرة"
+  - "8 مرات"
+solution: 0
+explanation: "الحلقة ستعمل 3 مرات (i = 0, 1, 2) وتتوقف عندما i يصبح 2"

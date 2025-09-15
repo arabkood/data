@@ -1,0 +1,9 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة \"أهلا وسهلا\" ثلاث مرات:"
+code: |
+  @@INPUT@@ i in @@INPUT@@:
+      print("أهلا وسهلا")
+solution:
+  - "for"
+  - "range(3)"

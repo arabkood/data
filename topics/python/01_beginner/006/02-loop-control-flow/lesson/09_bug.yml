@@ -1,0 +1,13 @@
+type: "bug"
+lang: "python"
+question: "اعثر على الخطأ في استخدام continue:"
+code: |
+  for i in range(5):
+      if i == 3:
+          print("تخطي الرقم 3")
+          continue
+          print("هذا السطر لن يُطبع أبداً")
+      print(f"الرقم: {i}")
+solution: 3
+hint: "انظر للسطر الذي يأتي بعد continue مباشرة"
+explanation: "الكود بعد continue في نفس الدورة لن يتم تنفيذه أبداً. يجب وضع print قبل continue."
