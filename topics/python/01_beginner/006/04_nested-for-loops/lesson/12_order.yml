@@ -1,0 +1,9 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لطباعة مثلث معكوس من النجوم (4 نجوم في الأول، 3 في الثاني، إلخ):"
+code:
+  - "for i in range(4, 0, -1):"
+  - "    for j in range(i):"
+  - "        print('*', end='')"
+  - "    print()"
+explanation: "نبدأ من 4 وننزل إلى 1 باستخدام range(4, 0, -1). لكل صف i، نطبع i عدد من النجوم."

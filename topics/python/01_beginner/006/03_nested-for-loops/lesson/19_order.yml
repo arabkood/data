@@ -1,8 +1,0 @@
-type: "order"
-lang: "python"
-question: "رتب الكود لرسم مثلث مقلوب (يبدأ بـ 5 نجوم وينتهي بنجمة واحدة):"
-code:
-  - "for i in range(5, 0, -1):"
-  - "    for j in range(i):"
-  - "        print(\"*\", end=\" \")"
-  - "    print()"

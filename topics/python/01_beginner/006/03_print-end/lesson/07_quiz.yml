@@ -1,0 +1,13 @@
+type: "quiz"
+question: "ما النتيجة المتوقعة للكود التالي؟"
+code: |
+  print("Python", end="*")
+  print("هو", end="*")
+  print("رائع")
+lang: "python"
+options:
+  - "Python*هو*رائع"
+  - "Python هو رائع"
+  - "Python\nهو\nرائع"
+solution: 0
+explanation: "كل print() ينتهي بـ * بدلاً من السطر الجديد، باستثناء الأخير الذي يستخدم السطر الجديد الافتراضي."

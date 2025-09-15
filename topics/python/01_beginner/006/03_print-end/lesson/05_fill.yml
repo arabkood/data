@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "اكمل الكود لطباعة الأرقام في نفس السطر مع مسافة بينها:"
+code: |
+  print("1", @@INPUT@@)
+  print("2", @@INPUT@@)
+  print("3", @@INPUT@@)
+  print("4", @@INPUT@@)
+  print("5")
+solution:
+  - 'end=" "'
+  - 'end=" "'
+  - 'end=" "'
+  - 'end=" "'
+explanation: "نستخدم end=\" \" لإضافة مسافة بدلاً من السطر الجديد. آخر print() لا يحتاج end لأننا نريد الانتقال للسطر التالي في النهاية."

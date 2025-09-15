@@ -1,0 +1,8 @@
+type: "quiz"
+question: "أي من هذه الأكواد سينتج النص: 'Python هو لغة برمجة قوية'؟"
+options:
+  - 'print("Python", end=" ")\nprint("هو", end=" ")\nprint("لغة", end=" ")\nprint("برمجة", end=" ")\nprint("قوية")'
+  - 'print("Python")\nprint("هو")\nprint("لغة")\nprint("برمجة")\nprint("قوية")'
+  - 'print("Python", end="")\nprint("هو", end="")\nprint("لغة", end="")\nprint("برمجة", end="")\nprint("قوية")'
+solution: 0
+explanation: "الخيار الأول يستخدم end=\" \" لإضافة مسافة بين الكلمات، مما ينتج النص المطلوب في سطر واحد."

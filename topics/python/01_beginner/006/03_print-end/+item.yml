@@ -1,0 +1,12 @@
+id: 75f25056-8bc6-4a00-9f88-715066a40fbc
+module_id: efaf01c7-f88b-4dde-89b3-3593d56230fa
+slug: print-end
+position: 3
+created_at: 2025-09-15T14:41:46.975Z
+updated_at: 2025-09-15T14:41:46.975Z
+type: lesson
+title: التحكم في نهاية النص - معامل end
+difficulty: easy
+premium_only: true
+base_xp: 600
+s3_path: python/01_beginner/006/03_print-end
