@@ -6,8 +6,11 @@ code: |
   print("رائع")
 lang: "python"
 options:
-  - "Python*هو*رائع"
-  - "Python هو رائع"
-  - "Python\nهو\nرائع"
-solution: 0
+  - |
+    Python هو رائع
+  - |
+    Python\nهو\nرائع
+  - |
+    Python\*هو\*رائع
+solution: 2
 explanation: "كل print() ينتهي بـ * بدلاً من السطر الجديد، باستثناء الأخير الذي يستخدم السطر الجديد الافتراضي."
