@@ -4,12 +4,10 @@ question: "هذا الكود يهدف إلى منح ترقية للموظفين 
 code: |
   performance_score = 4
   is_eligible_for_promotion = False
-
   if performance_score > 4:
     is_eligible_for_promotion = True
-
   print(f"مؤهل للترقية: {is_eligible_for_promotion}")
-solution: 3
+solution: 2
 expectedOutput: "مؤهل للترقية: True"
 actualOutput: "مؤهل للترقية: False"
 explanation: "هذا خطأ حدود كلاسيكي. الشرط `performance_score > 4` لا يشمل الرقم 4 نفسه. يجب أن يكون `performance_score >= 4` لتضمين كل من تقييم 4 و 5."
