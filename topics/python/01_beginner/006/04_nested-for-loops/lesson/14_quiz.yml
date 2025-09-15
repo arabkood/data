@@ -1,8 +1,8 @@
 type: "quiz"
 question: "أي من هذه الأكواد سينتج مربع 3×3 من الدوائر (○)؟"
 options:
-  - "for i in range(3):\n    for j in range(3):\n        print('○', end='')\nprint()"
-  - "for i in range(3):\n    for j in range(3):\n        print('○', end='')\n    print()"
-  - "for i in range(3):\n    for j in range(i):\n        print('○', end='')\n    print()"
+  - "```python\nfor i in range(3):\n    for j in range(3):\n        print('○', end='')\nprint()\n```"
+  - "```python\nfor i in range(3):\n    for j in range(3):\n        print('○', end='')\n    print()\n```"
+  - "```python\nfor i in range(3):\n    for j in range(i):\n        print('○', end='')\n    print()\n```"
 solution: 1
 explanation: "نحتاج print() داخل الحلقة الخارجية (ليس خارج الحلقات) لننتقل إلى سطر جديد بعد كل صف. الخيار الثاني يفعل هذا بشكل صحيح."
