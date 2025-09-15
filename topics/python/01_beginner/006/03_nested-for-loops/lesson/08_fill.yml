@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة صف من الرموز #:"
+code: |
+  for i in range(4):
+      print("#", @@INPUT@@)
+  @@INPUT@@  # للانتقال لسطر جديد
+solution:
+  - "end=\" \""
+  - "print()"

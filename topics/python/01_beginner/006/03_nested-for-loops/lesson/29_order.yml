@@ -1,0 +1,12 @@
+type: "order"
+lang: "python"
+question: "رتب الكود لبناء آلة حاسبة تطبع جدول ضرب مخصص:"
+code:
+  - "print(\"آلة حاسبة جدول الضرب\")"
+  - "size = 3  # يمكن تغييرها"
+  - "print(f\"جدول الضرب حتى {size}:\")"
+  - "for i in range(1, size + 1):"
+  - "    for j in range(1, size + 1):"
+  - "        result = i * j"
+  - "        print(f\"{result:3}\", end=\" \")"
+  - "    print()"

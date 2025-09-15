@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أكمل كود رسم نمط شطرنج 3×3 باستخدام O و X:"
+code: |
+  for i in range(3):
+      for j in range(3):
+          if (@@INPUT@@) % 2 == 0:
+              print("O", end=" ")
+          else:
+              print(@@INPUT@@, end=" ")
+      print()
+solution:
+  - "i + j"
+  - "\"X\""

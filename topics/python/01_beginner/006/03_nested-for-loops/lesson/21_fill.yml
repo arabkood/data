@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لتخطي طباعة النقاط عندما يكون مجموع الإحداثيات زوجي:"
+code: |
+  for x in range(3):
+      for y in range(3):
+          if (x + y) % 2 == 0:
+              @@INPUT@@
+          print(f"({x},{y})", end=" ")
+      print()
+solution:
+  - "continue"

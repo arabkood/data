@@ -1,0 +1,15 @@
+type: "bug"
+lang: "python"
+question: "اعثر على الخطأ في كود البحث:"
+code: |
+  target = 5
+  for i in range(3):
+      for j in range(3):
+          if i * j == target:
+              print("وجدت!", end=" ")
+              break
+          print(f"البحث في ({i},{j})", end=" ")
+      print()
+  print("انتهى البحث")
+solution: 2
+explanation: "المشكلة في الشرط: i * j لن يساوي 5 أبداً مع القيم من 0 إلى 2. يجب تغيير المنطق للبحث الصحيح."

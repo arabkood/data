@@ -4,9 +4,10 @@ question: "أكمل الكود للتوقف عند العثور على الرق�
 code: |
   for number in range(1, 15):
       print("الرقم الحالي:", number)
-      if number == 7:
+      if @@INPUT@@:
           print("وجدت الرقم 7!")
           @@INPUT@@
       print("سأواصل البحث...")
 solution:
+  - "number == 7"
   - "break"

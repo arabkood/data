@@ -3,7 +3,8 @@ lang: "python"
 question: "أكمل الكود لتخطي طباعة الأرقام الزوجية:"
 code: |
   for i in range(1, 8):
-      if i % 2 == 0:  # إذا كان الرقم زوجي
+      # إذا كان الرقم زوجي
+      if i % 2 == 0:  
           @@INPUT@@
       print(f"رقم فردي: {i}")
 solution:

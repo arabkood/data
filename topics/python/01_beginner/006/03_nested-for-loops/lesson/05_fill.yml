@@ -1,0 +1,8 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة الأرقام على نفس السطر مفصولة بـ (-):"
+code: |
+  for i in range(5):
+      print(i, @@INPUT@@)
+solution:
+  - "end=\"-\""
