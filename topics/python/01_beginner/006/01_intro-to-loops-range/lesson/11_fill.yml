@@ -6,5 +6,5 @@ code: |
       print(num)
 solution:
   - "2"
-  - "10"
+  - "9"
   - "2"
