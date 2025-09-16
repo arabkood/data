@@ -1,0 +1,597 @@
+---
+item_id: "m6-when-loops-go-wrong"
+item_type: "lesson"
+title: "عندما تفشل الحلقات"
+steps:
+  - type: "markdown"
+    content: |
+      ## لماذا تفشل الحلقات؟
+
+      تخيل أنك تتبع وصفة طبخ، لكن:
+      - نسيت إضافة خطوة مهمة
+      - كررت خطوة أكثر من المطلوب
+      - توقفت في المكان الخاطئ
+
+      نفس الشيء يحدث مع الحلقات! الأخطاء شائعة ومتوقعة، لكن **الخبر الجيد** أنها قابلة للإصلاح بمجرد أن نتعلم كيف نتعرف عليها.
+
+      اليوم سنصبح **محققي أخطاء الحلقات** 🔍
+
+  - type: "markdown"
+    content: |
+      ## الخطأ الأكثر شيوعاً: الحلقة اللا نهائية
+
+      ### المشكلة:
+      ```python
+      # خطأ: الحلقة لن تتوقف أبداً!
+      count = 1
+      while count <= 5:
+          print(f"العد: {count}")
+          # نسينا count += 1
+      ```
+
+      ### العلامات التحذيرية:
+      - البرنامج "يعلق" ولا يتوقف
+      - نفس الناتج يطبع إلى ما لا نهاية
+      - الكمبيوتر يصبح بطيئاً
+
+      ### الحل:
+      ```python
+      # الحل: تحديث المتغير
+      count = 1
+      while count <= 5:
+          print(f"العد: {count}")
+          count += 1  # هذا السطر مفقود!
+      ```
+
+  - type: "quiz"
+    question: "أي من هذه الحلقات ستؤدي إلى حلقة لا نهائية؟"
+    code: |
+      # الخيار A
+      i = 0
+      while i < 3:
+          print("مرحبا")
+          i += 1
+      
+      # الخيار B  
+      x = 5
+      while x > 0:
+          print(x)
+          x -= 1
+      
+      # الخيار C
+      num = 1
+      while num <= 4:
+          print("رقم:", num)
+          num = num + 0  # خطأ!
+      
+      # الخيار D
+      j = 10
+      while j >= 1:
+          print(j)
+          j = j - 1
+    lang: python
+    options:
+      - "الخيار A"
+      - "الخيار B" 
+      - "الخيار C"
+      - "الخيار D"
+    solution: 2
+    explanation: "الخيار C يضيف 0 إلى num، فلن تتغير قيمته أبداً وستبقى الحلقة تعمل إلى ما لا نهاية."
+
+  - type: "markdown"
+    content: |
+      ## خطأ الفهرس خارج النطاق (Index Out of Range)
+
+      ### المشكلة:
+      ```python
+      # خطأ شائع!
+      numbers = [10, 20, 30]
+      for i in range(4):  # خطأ: القائمة بها 3 عناصر فقط!
+          print(numbers[i])
+      ```
+
+      ### رسالة الخطأ:
+      ```
+      NameError: name 'number' is not defined
+      ```
+
+      ### الحل:
+      ```python
+      for i in range(3):
+          print(f"الرقم: {i}")  # استخدام i المُعرَّف
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أصلح هذا الكود الذي يحتوي على متغير غير معرف:"
+    code: |
+      sum_total = 0
+      for i in range(1, 6):
+          sum_total += @@INPUT@@
+      
+      print(f"المجموع: {sum_total}")
+    solution:
+      - "i"
+    explanation: "المتغير number غير معرف. يجب استخدام i الذي تم تعريفه في حلقة for."
+
+  - type: "markdown"
+    content: |
+      ## خطأ استخدام متغيرات الحلقة خارج نطاقها
+
+      ### المشكلة:
+      ```python
+      # في بعض الحالات قد يكون هذا مشكلة
+      for i in range(3):
+          last_number = i
+      
+      print(f"آخر رقم: {last_number}")  # قد يعمل، لكن ليس أفضل ممارسة
+      ```
+
+      ### حل أفضل:
+      ```python
+      last_number = 0  # تعريف واضح خارج الحلقة
+      for i in range(3):
+          last_number = i
+      
+      print(f"آخر رقم: {last_number}")
+      ```
+
+  - type: "markdown"
+    content: |
+      ## خطأ المنطق في الحلقات المتداخلة
+
+      ### المشكلة:
+      ```python
+      # نريد طباعة جدول الضرب لكن هناك خطأ منطقي
+      for i in range(1, 4):
+          for j in range(1, 4):
+              print(f"{i} × {j} = {i + j}")  # خطأ: + بدلاً من *
+      ```
+
+      ### الحل:
+      ```python
+      for i in range(1, 4):
+          for j in range(1, 4):
+              print(f"{i} × {j} = {i * j}")  # الآن صحيح
+      ```
+
+  - type: "bug"
+    lang: python
+    question: "اعثر على الخطأ المنطقي في كود حساب المتوسط:"
+    code: |
+      numbers = [10, 20, 30, 40, 50]
+      total = 0
+      count = 0
+      
+      for num in numbers:
+          total += num
+          count += 1
+      
+      average = total * count
+      print(f"المتوسط: {average}")
+    solution: 6
+    explanation: "المتوسط = المجموع ÷ العدد، يجب استخدام / بدلاً من *."
+    hint: "كيف نحسب المتوسط رياضياً؟"
+
+  - type: "markdown"
+    content: |
+      ## كيفية تتبع الأخطاء (Debugging)
+
+      ### 1. استخدام print() للتتبع:
+      ```python
+      total = 0
+      for i in range(1, 4):
+          print(f"قبل الإضافة: total = {total}, i = {i}")  # تتبع
+          total += i
+          print(f"بعد الإضافة: total = {total}")  # تتبع
+      ```
+
+      ### 2. التحقق من الشروط:
+      ```python
+      number = 5
+      if number > 0:
+          print("الرقم موجب")  # تأكيد
+      else:
+          print("الرقم سالب أو صفر")  # تأكيد
+      ```
+
+      ### 3. اختبار الحالات الحدية:
+      - ماذا لو كانت القائمة فارغة؟
+      - ماذا لو كان الرقم صفراً؟
+      - ماذا لو كان المدخل نصاً بدلاً من رقم؟
+
+  - type: "fill"
+    lang: "python"
+    question: "أضف أسطر تتبع لهذا الكود لفهم سبب عدم عمله:"
+    code: |
+      count = 0
+      for i in range(5):
+          if i % 2 == 0:
+              count += 1
+              @@INPUT@@(f"i = {i}, count = {count}")
+      
+      @@INPUT@@(f"العدد النهائي: {count}")
+    solution:
+      - "print"
+      - "print"
+    explanation: "نضيف print() لتتبع قيم المتغيرات ومعرفة كيفية تغيرها."
+
+  - type: "markdown"
+    content: |
+      ## أخطاء شائعة في حلقات while
+
+      ### 1. شرط البداية خاطئ:
+      ```python
+      # خطأ: الشرط خاطئ من البداية
+      count = 10
+      while count < 5:  # لن تعمل أبداً!
+          print(count)
+          count += 1
+      ```
+
+      ### 2. تحديث خاطئ:
+      ```python
+      # خطأ: تحديث في الاتجاه الخاطئ
+      count = 0
+      while count < 5:
+          print(count)
+          count -= 1  # خطأ: ينقص بدلاً من أن يزيد!
+      ```
+
+      ### 3. نسيان حالات الخروج:
+      ```python
+      # خطأ: لا توجد طريقة للخروج
+      while True:
+          user_input = input("ادخل 'خروج' للتوقف: ")
+          if user_input == "خروج":
+              print("وداعاً")
+              # نسينا break!
+      ```
+
+  - type: "order"
+    lang: "python"
+    question: "رتب هذا الكود المصحح لحساب مجموع الأرقام الموجبة:"
+    code:
+      - "numbers = [5, -3, 8, -1, 12, -7]"
+      - "positive_sum = 0"
+      - |
+        for num in numbers:
+            if num > 0:
+                positive_sum += num
+      - "print(f'مجموع الأرقام الموجبة: {positive_sum}')"
+    explanation: "نعرف القائمة، ننشئ متغير المجموع، نمر عبر الأرقام ونجمع الموجبة فقط، ثم نطبع النتيجة."
+
+  - type: "markdown"
+    content: |
+      ## ورشة إصلاح الأخطاء العملية
+
+      دعنا نطبق ما تعلمناه على مثال معقد يحتوي على عدة أخطاء:
+
+      ### الكود الخاطئ:
+      ```python
+      # برنامج لحساب درجات الطلاب (يحتوي على أخطاء!)
+      students = ["أحمد", "فاطمة", "سالم"]
+      grades = [[85, 90], [78, 82, 95], [88]]
+      
+      for i in range(len(students) + 1):  # خطأ 1
+          student_name = students[i]
+          student_grades = grades[i]
+          
+          total = 0
+          count = 0
+          for grade in student_grades:
+              total = grade  # خطأ 2
+              count += 1
+          
+          if count = 0:  # خطأ 3
+              average = 0
+          else:
+              average = total / count
+          
+          print(f"{student_name}: {average}")
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أصلح الأخطاء الثلاثة في الكود السابق:"
+    code: |
+      students = ["أحمد", "فاطمة", "سالم"]
+      grades = [[85, 90], [78, 82, 95], [88]]
+      
+      for i in range(len(students)):  # إصلاح 1: إزالة + 1
+          student_name = students[i]
+          student_grades = grades[i]
+          
+          total = 0
+          count = 0
+          for grade in student_grades:
+              total @@INPUT@@ grade  # إصلاح 2
+              count += 1
+          
+          if count @@INPUT@@ 0:  # إصلاح 3
+              average = 0
+          else:
+              average = total / count
+          
+          print(f"{student_name}: {average:.1f}")
+    solution:
+      - "+="
+      - "=="
+    explanation: "نصلح: 1) إزالة +1 من range، 2) += لتجميع الدرجات، 3) == للمقارنة."
+
+  - type: "markdown"
+    content: |
+      ## استراتيجية شاملة لتجنب أخطاء الحلقات
+
+      ### قبل كتابة الحلقة:
+      1. **اكتب التعليقات أولاً** - ما الهدف؟
+      2. **حدد نوع الحلقة** - for أم while؟
+      3. **ارسم المنطق** على الورق
+
+      ### أثناء كتابة الحلقة:
+      1. **ابدأ بحلقة بسيطة** واختبرها
+      2. **أضف التعقيد تدريجياً**
+      3. **اختبر بعد كل إضافة**
+
+      ### بعد كتابة الحلقة:
+      1. **اختبر الحالات العادية**
+      2. **اختبر الحالات الحدية** (قوائم فارغة، أرقام صفر)
+      3. **أضف رسائل تتبع** إذا لزم الأمر
+
+  - type: "quiz"
+    question: "ما أفضل طريقة لإصلاح حلقة لا تعمل كما متوقع؟"
+    options:
+      - "إعادة كتابة الكود من الصفر"
+      - "إضافة رسائل print() لتتبع المتغيرات"
+      - "السؤال في منتدى برمجة"
+      - "تجاهل المشكلة والمتابعة"
+    solution: 1
+    explanation: "أفضل طريقة هي إضافة print() لتتبع قيم المتغيرات وفهم سبب عدم عمل الكود كما متوقع."
+
+  - type: "markdown"
+    content: |
+      ## مرجع سريع: رسائل الأخطاء الشائعة
+
+      | رسالة الخطأ | السبب المحتمل | الحل |
+      |------------|-------------|-----|
+      | `IndexError: list index out of range` | فهرس أكبر من حجم القائمة | استخدم `len()` أو تحقق من الفهرس |
+      | `NameError: name 'x' is not defined` | متغير غير معرف | تأكد من تعريف المتغير قبل الاستخدام |
+      | `SyntaxError: invalid syntax` | خطأ في بناء الجملة | تحقق من الأقواس والفواصل |
+      | `IndentationError` | مشكلة في المسافات | تأكد من المحاذاة الصحيحة |
+      | البرنامج "معلق" | حلقة لا نهائية | تأكد من تحديث متغير الشرط |
+
+  - type: "markdown"
+    content: |
+      ## تمرين تطبيقي: مدقق الحلقات
+
+      ```python
+      # كود يحتوي على أخطاء متعددة - هل يمكنك إصلاحها؟
+      
+      def find_max_in_list(numbers):
+          """يجد أكبر رقم في القائمة"""
+          if len(numbers) == 0:
+              return None
+          
+          max_num = numbers[0]
+          for i in range(1, len(numbers) + 1):  # خطأ محتمل؟
+              if numbers[i] > max_num:
+                  max_num = numbers[i]
+          
+          return max_num
+      
+      # اختبار
+      test_numbers = [3, 7, 2, 9, 1]
+      result = find_max_in_list(test_numbers)
+      print(f"أكبر رقم: {result}")
+      ```
+
+      **هل تستطيع اكتشاف الخطأ قبل تشغيل الكود؟**
+
+  - type: "markdown"
+    content: |
+      ## ملخص: أخطاء الحلقات وحلولها
+
+      تعلمت اليوم كيفية:
+
+      ✅ **تحديد أخطاء الحلقات الشائعة** قبل حدوثها  
+      ✅ **إصلاح الحلقات اللا نهائية** بتحديث المتغيرات  
+      ✅ **تجنب أخطاء الفهارس** باستخدام `len()` بشكل صحيح  
+      ✅ **التمييز بين = و ==** في الشروط  
+      ✅ **استخدام print() للتتبع** ومراقبة المتغيرات  
+      ✅ **فهم رسائل الأخطاء** وما تعنيه  
+      ✅ **اتباع استراتيجية منهجية** لكتابة حلقات صحيحة
+
+      **تذكر:** الأخطاء جزء طبيعي من تعلم البرمجة! كل مبرمج محترف مر بهذه الأخطاء. المهم هو تعلم كيفية اكتشافها وإصلاحها بسرعة.
+
+      🎉 **تهانينا!** أنت الآن مستعد للانتقال إلى التحدي النهائي للوحدة 6!
+      IndexError: list index out of range
+      ```
+
+      ### الحل:
+      ```python
+      # الحل الصحيح
+      numbers = [10, 20, 30]
+      for i in range(len(numbers)):  # len(numbers) = 3
+          print(numbers[i])
+      ```
+
+  - type: "bug"
+    lang: python
+    question: "اعثر على الخطأ في هذا الكود:"
+    code: |
+      colors = ["أحمر", "أزرق", "أخضر"]
+      for i in range(5):
+          print(f"اللون رقم {i + 1}: {colors[i]}")
+    solution: 1
+    explanation: "range(5) ينتج أرقام من 0 إلى 4، لكن القائمة بها 3 عناصر فقط (0 إلى 2). يجب استخدام range(len(colors))."
+    hint: "كم عنصر في قائمة الألوان؟"
+
+  - type: "markdown"
+    content: |
+      ## خطأ الشرط المقلوب
+
+      ### المشكلة:
+      ```python
+      # نريد طباعة الأرقام الموجبة فقط
+      numbers = [5, -3, 8, -1, 12]
+      for num in numbers:
+          if num < 0:  # خطأ: الشرط مقلوب!
+              print(f"رقم موجب: {num}")
+      ```
+
+      ### النتيجة الخاطئة:
+      ```
+      رقم موجب: -3
+      رقم موجب: -1
+      ```
+
+      ### الحل:
+      ```python
+      # الحل: عكس الشرط
+      for num in numbers:
+          if num > 0:  # الآن الشرط صحيح
+              print(f"رقم موجب: {num}")
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أصلح هذا الكود ليطبع الأرقام الزوجية فقط:"
+    code: |
+      numbers = [2, 7, 10, 13, 16, 21]
+      
+      for num in numbers:
+          if num % 2 @@INPUT@@ 1:  # خطأ في الشرط
+              print(f"رقم زوجي: {num}")
+    solution:
+      - "=="
+    explanation: "للتحقق من الأرقام الزوجية، نستخدم num % 2 == 0، وليس == 1."
+
+  - type: "markdown"
+    content: |
+      ## خطأ النسيان في التحديث
+
+      ### المشكلة في for:
+      ```python
+      # نريد تعديل عناصر القائمة
+      numbers = [1, 2, 3, 4, 5]
+      for num in numbers:
+          num = num * 2  # خطأ: هذا لا يغير القائمة الأصلية!
+      
+      print(numbers)  # لا تزال [1, 2, 3, 4, 5]
+      ```
+
+      ### الحل الصحيح:
+      ```python
+      # استخدام الفهرس لتعديل القائمة
+      numbers = [1, 2, 3, 4, 5]
+      for i in range(len(numbers)):
+          numbers[i] = numbers[i] * 2
+      
+      print(numbers)  # الآن [2, 4, 6, 8, 10]
+      ```
+
+  - type: "markdown"
+    content: |
+      ## خطأ الشرط الخاطئ في while
+
+      ### المشكلة:
+      ```python
+      # نريد العد من 1 إلى 5
+      count = 1
+      while count < 5:  # خطأ: سيتوقف عند 4!
+          print(count)
+          count += 1
+      # النتيجة: 1, 2, 3, 4 (بدون 5)
+      ```
+
+      ### الحل:
+      ```python
+      count = 1
+      while count <= 5:  # الحل: <= بدلاً من <
+          print(count)
+          count += 1
+      # النتيجة: 1, 2, 3, 4, 5
+      ```
+
+  - type: "quiz"
+    question: "ما الخطأ في هذا الكود الذي يبحث عن رقم في قائمة؟"
+    code: |
+      numbers = [10, 20, 30, 40]
+      target = 30
+      found = False
+      
+      for num in numbers:
+          if num == target:
+              found = True
+      
+      if found:
+          print("الرقم موجود")
+      else:
+          print("الرقم غير موجود")
+    lang: python
+    options:
+      - "الكود صحيح تماماً"
+      - "يجب استخدام break بعد العثور على الرقم"
+      - "الشرط في if خاطئ"
+      - "المتغير found يجب أن يبدأ بـ True"
+    solution: 1
+    explanation: "الكود صحيح منطقياً، لكن يمكن تحسينه باستخدام break لتوفير الوقت بعد العثور على الرقم."
+
+  - type: "markdown"
+    content: |
+      ## خطأ الخلط بين = و ==
+
+      ### المشكلة:
+      ```python
+      password = "سري"
+      user_input = input("كلمة المرور: ")
+      
+      if user_input = password:  # خطأ: استخدام = بدلاً من ==
+          print("مرحباً")
+      ```
+
+      ### رسالة الخطأ:
+      ```
+      SyntaxError: invalid syntax
+      ```
+
+      ### الحل:
+      ```python
+      if user_input == password:  # == للمقارنة
+          print("مرحباً")
+      ```
+
+      **تذكر:**
+      - `=` للإسناد (وضع قيمة في متغير)
+      - `==` للمقارنة (هل شيئان متساويان؟)
+
+  - type: "bug"
+    lang: python
+    question: "اعثر على الخطأ في هذا الكود:"
+    code: |
+      total = 0
+      numbers = [5, 10, 15, 20]
+      
+      for num in numbers:
+          if total = 0:
+              total = num
+          else:
+              total += num
+      
+      print(f"المجموع: {total}")
+    solution: 3
+    explanation: "في السطر الثالث، يجب استخدام == للمقارنة بدلاً من = للإسناد."
+    hint: "ما الفرق بين = و == ؟"
+
+  - type: "markdown"
+    content: |
+      ## خطأ المتغيرات غير المُعرَّفة
+
+      ### المشكلة:
+      ```python
+      for i in range(3):
+          print(f"الرقم: {number}")  # خطأ: number غير معرف!
+      ```
+
+      ### رسالة الخطأ:
+      ```

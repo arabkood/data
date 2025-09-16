@@ -1,0 +1,331 @@
+---
+item_id: "m6-counting-tracking"
+item_type: "lesson"
+title: "العد والتتبع في الحلقات"
+steps:
+  - type: "markdown"
+    content: |
+      ## لماذا نحتاج للعد والتتبع؟
+
+      تخيل أنك تعمل كمحاسب في متجر، وتريد معرفة:
+      - كم عدد المبيعات اليوم؟
+      - كم إجمالي المبلغ المحصل؟
+      - كم عدد العملاء الذين اشتروا أكثر من 100 ريال؟
+
+      هذا بالضبط ما نسميه **العد والتتبع في الحلقات** - استخدام متغيرات خاصة لجمع المعلومات أثناء تكرار العمليات.
+
+  - type: "markdown"
+    content: |
+      ## المتغير العداد (Counter Variable)
+
+      **العداد** هو متغير نستخدمه لحساب عدد المرات التي حدث فيها شيء معين.
+
+      إليك المثال الأساسي:
+
+      ```python
+      counter = 0  # نبدأ من الصفر
+      
+      for i in range(5):
+          counter = counter + 1  # أو counter += 1
+          print(f"المرة رقم: {counter}")
+      
+      print(f"المجموع النهائي: {counter}")
+      ```
+
+      **النتيجة:**
+      ```
+      المرة رقم: 1
+      المرة رقم: 2
+      المرة رقم: 3
+      المرة رقم: 4
+      المرة رقم: 5
+      المجموع النهائي: 5
+      ```
+
+  - type: "quiz"
+    question: "ما قيمة المتغير `count` بعد تنفيذ هذا الكود؟"
+    code: |
+      count = 0
+      for i in range(3):
+          count += 1
+      print(count)
+    lang: python
+    options:
+      - "0"
+      - "2"
+      - "3"
+      - "4"
+    solution: 2
+    explanation: "المتغير count يبدأ من 0، وفي كل تكرار من التكرارات الثلاثة يزيد بـ 1، فالنتيجة النهائية هي 3."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لعد الأرقام الزوجية من 1 إلى 10:"
+    code: |
+      even_count = @@INPUT@@
+      
+      for i in range(1, 11):
+          if i % 2 == 0:
+              @@INPUT@@ += 1
+      
+      print(f"عدد الأرقام الزوجية: {even_count}")
+    solution:
+      - "0"
+      - "even_count"
+    explanation: "نبدأ العداد من 0، ونزيد قيمته بـ 1 في كل مرة نجد رقماً زوجياً."
+
+  - type: "markdown"
+    content: |
+      ## المتغير المجمع (Accumulator Variable)
+
+      **المجمع** هو متغير نستخدمه لجمع القيم أو تراكمها.
+
+      مثال: حساب مجموع الأرقام من 1 إلى 5:
+
+      ```python
+      total = 0  # نبدأ من الصفر
+      
+      for i in range(1, 6):
+          total = total + i  # أو total += i
+          print(f"أضفنا {i}، المجموع الآن: {total}")
+      
+      print(f"المجموع النهائي: {total}")
+      ```
+
+      **النتيجة:**
+      ```
+      أضفنا 1، المجموع الآن: 1
+      أضفنا 2، المجموع الآن: 3
+      أضفنا 3، المجموع الآن: 6
+      أضفنا 4، المجموع الآن: 10
+      أضفنا 5، المجموع الآن: 15
+      المجموع النهائي: 15
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لحساب مجموع المربعات للأرقام من 1 إلى 4:"
+    code: |
+      sum_of_squares = 0
+      
+      for i in @@INPUT@@:
+          square = i * i
+          @@INPUT@@ += square
+      
+      print(f"مجموع المربعات: {sum_of_squares}")
+    solution:
+      - "range(1, 5)"
+      - "sum_of_squares"
+    explanation: "نستخدم range(1, 5) للأرقام من 1 إلى 4، ونضيف مربع كل رقم إلى المجموع."
+
+  - type: "markdown"
+    content: |
+      ## العد الشرطي (Conditional Counting)
+
+      أحياناً نريد أن نعد فقط العناصر التي تحقق شرطاً معيناً.
+
+      مثال: عد الأرقام الموجبة:
+
+      ```python
+      positive_count = 0
+      numbers = [3, -2, 7, -1, 0, 5]
+      
+      for num in numbers:
+          if num > 0:
+              positive_count += 1
+      
+      print(f"عدد الأرقام الموجبة: {positive_count}")
+      ```
+
+      **النتيجة:** `عدد الأرقام الموجبة: 3`
+
+  - type: "quiz"
+    question: "ما عدد الأرقام الأكبر من 10 في هذه القائمة؟"
+    code: |
+      numbers = [5, 15, 8, 12, 3, 20]
+      count = 0
+      
+      for num in numbers:
+          if num > 10:
+              count += 1
+      
+      print(count)
+    lang: python
+    options:
+      - "2"
+      - "3" 
+      - "4"
+      - "5"
+    solution: 1
+    explanation: "الأرقام الأكبر من 10 هي: 15، 12، و 20. إذن العدد هو 3."
+
+  - type: "markdown"
+    content: |
+      ## استخدام عدة متغيرات للتتبع
+
+      يمكننا استخدام أكثر من متغير لتتبع معلومات مختلفة في نفس الوقت:
+
+      ```python
+      positive_count = 0
+      negative_count = 0
+      zero_count = 0
+      
+      numbers = [3, -2, 0, 7, -1, 0, 5]
+      
+      for num in numbers:
+          if num > 0:
+              positive_count += 1
+          elif num < 0:
+              negative_count += 1
+          else:
+              zero_count += 1
+      
+      print(f"موجبة: {positive_count}")
+      print(f"سالبة: {negative_count}")  
+      print(f"صفر: {zero_count}")
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لحساب عدد الأرقام الزوجية والفردية:"
+    code: |
+      even_count = 0
+      odd_count = 0
+      
+      for i in range(1, 11):
+          if i % 2 == 0:
+              @@INPUT@@ += 1
+          else:
+              @@INPUT@@ += 1
+      
+      print(f"زوجية: {even_count}, فردية: {odd_count}")
+    solution:
+      - "even_count"
+      - "odd_count"
+    explanation: "إذا كان الرقم زوجياً (باقي القسمة على 2 يساوي 0)، نزيد عداد الزوجية، وإلا نزيد عداد الفردية."
+
+  - type: "bug"
+    lang: python
+    question: "اعثر على الخطأ في هذا الكود الذي يحسب مجموع الأرقام الموجبة:"
+    code: |
+      total = 0
+      numbers = [3, -2, 7, -1, 5]
+      
+      for num in numbers:
+          if num > 0:
+              total = num
+      
+      print(f"مجموع الأرقام الموجبة: {total}")
+    solution: 4
+    explanation: "يجب استخدام += بدلاً من = لتجميع القيم. استخدام = يعني استبدال القيمة بدلاً من إضافتها."
+    hint: "انظر لكيفية إضافة القيم إلى المجموع"
+
+  - type: "markdown"
+    content: |
+      ## تتبع القيم الأكبر والأصغر
+
+      يمكننا أيضاً تتبع أكبر وأصغر القيم:
+
+      ```python
+      numbers = [12, 3, 25, 8, 15]
+      
+      largest = numbers[0]  # نبدأ بأول عنصر
+      smallest = numbers[0]
+      
+      for num in numbers:
+          if num > largest:
+              largest = num
+          if num < smallest:
+              smallest = num
+      
+      print(f"الأكبر: {largest}")
+      print(f"الأصغر: {smallest}")
+      ```
+
+  - type: "order"
+    lang: "python"
+    question: "رتب هذا الكود لحساب متوسط الأرقام الموجبة فقط:"
+    code:
+      - "positive_sum = 0"
+      - "positive_count = 0"
+      - "numbers = [5, -3, 8, -1, 12]"
+      - |
+        for num in numbers:
+            if num > 0:
+                positive_sum += num
+                positive_count += 1
+      - |
+        if positive_count > 0:
+            average = positive_sum / positive_count
+            print(f"متوسط الأرقام الموجبة: {average}")
+    explanation: "نحتاج أولاً لتعريف المتغيرات، ثم القائمة، ثم الحلقة لجمع القيم الموجبة، وأخيراً حساب وطباعة المتوسط."
+
+  - type: "markdown"
+    content: |
+      ## تطبيق عملي: محلل النتائج
+
+      دعنا نطبق ما تعلمناه في مثال عملي - تحليل درجات الطلاب:
+
+      ```python
+      grades = [85, 92, 78, 96, 88, 73, 90]
+      
+      # متغيرات التتبع
+      total = 0
+      count = 0
+      passed = 0  # درجة النجاح 75 فما فوق
+      excellent = 0  # درجة ممتاز 90 فما فوق
+      
+      for grade in grades:
+          total += grade
+          count += 1
+          
+          if grade >= 75:
+              passed += 1
+          if grade >= 90:
+              excellent += 1
+      
+      # النتائج
+      average = total / count
+      pass_rate = (passed / count) * 100
+      
+      print(f"المتوسط: {average:.1f}")
+      print(f"معدل النجاح: {pass_rate:.1f}%")
+      print(f"عدد الممتازين: {excellent}")
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل كود تحليل المبيعات اليومية:"
+    code: |
+      daily_sales = [150, 200, 175, 300, 250, 180, 220]
+      
+      total_sales = 0
+      high_sales_days = 0  # أيام المبيعات العالية (أكثر من 200)
+      
+      for sale in daily_sales:
+          @@INPUT@@ += sale
+          if sale > 200:
+              @@INPUT@@ += 1
+      
+      average_daily = total_sales / len(daily_sales)
+      print(f"متوسط المبيعات اليومية: {average_daily:.1f}")
+      print(f"أيام المبيعات العالية: {high_sales_days}")
+    solution:
+      - "total_sales"
+      - "high_sales_days"
+    explanation: "نجمع إجمالي المبيعات في total_sales، ونعد الأيام التي تجاوزت 200 في high_sales_days."
+
+  - type: "markdown"
+    content: |
+      ## ملخص العد والتتبع
+
+      تعلمت اليوم كيفية:
+
+      ✅ **استخدام العدادات** لحساب عدد مرات حدوث شيء معين  
+      ✅ **استخدام المجمعات** لجمع وتراكم القيم  
+      ✅ **العد الشرطي** - العد فقط عند تحقق شرط معين  
+      ✅ **استخدام متعدد المتغيرات** لتتبع معلومات مختلفة  
+      ✅ **تتبع القيم القصوى والدنيا**  
+      ✅ **التطبيق العملي** في تحليل البيانات
+
+      هذه المهارات أساسية في البرمجة وتحليل البيانات. في الدرس القادم، سنتعلم كيفية استخدام القوائم مع الحلقات بطريقة أكثر تفصيلاً!

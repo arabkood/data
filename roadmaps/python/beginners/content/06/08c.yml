@@ -1,0 +1,421 @@
+---
+item_id: "m6-while-loops"
+item_type: "lesson"
+title: "حلقات While"
+steps:
+  - type: "markdown"
+    content: |
+      ## لماذا نحتاج حلقات While؟
+
+      تخيل أنك تلعب لعبة "خمن الرقم":
+      - الكمبيوتر يفكر في رقم من 1 إلى 100
+      - أنت تخمن حتى تجد الرقم الصحيح
+      - لا تعرف كم مرة ستحتاج للتخمين!
+
+      هنا تكمن القوة في **حلقة while** - تستمر في التكرار **طالما** أن شرطاً معيناً صحيح، حتى لو لم نعرف كم مرة سنحتاج للتكرار مسبقاً.
+
+  - type: "markdown"
+    content: |
+      ## الفرق بين for و while
+
+      ### حلقة for - عندما نعرف العدد:
+      ```python
+      # نعرف أننا نريد 5 تكرارات
+      for i in range(5):
+          print("مرحبا")
+      ```
+
+      ### حلقة while - عندما لا نعرف العدد:
+      ```python
+      # نستمر حتى يحدث شيء معين
+      count = 0
+      while count < 5:
+          print("مرحبا")
+          count += 1  # مهم جداً!
+      ```
+
+      **النقطة الأساسية:** `while` تتحقق من الشرط قبل كل تكرار، و`for` تعرف عدد التكرارات مسبقاً.
+
+  - type: "quiz"
+    question: "متى نستخدم حلقة while بدلاً من for؟"
+    options:
+      - "عندما نريد تكرار كود 10 مرات بالضبط"
+      - "عندما نريد المرور عبر قائمة معروفة"
+      - "عندما لا نعرف كم مرة سنحتاج للتكرار مسبقاً"
+      - "عندما نريد طباعة الأرقام من 1 إلى 100"
+    solution: 2
+    explanation: "while مفيدة عندما نريد الاستمرار حتى يتحقق شرط معين، دون معرفة عدد التكرارات مسبقاً."
+
+  - type: "markdown"
+    content: |
+      ## البنية الأساسية لحلقة while
+
+      ```python
+      while الشرط:
+          # الكود الذي سيتكرر
+          # تعديل المتغير (مهم جداً!)
+      ```
+
+      **مثال بسيط:**
+      ```python
+      counter = 1
+      while counter <= 3:
+          print(f"العد: {counter}")
+          counter += 1  # نزيد العداد
+      
+      print("انتهت الحلقة!")
+      ```
+
+      **النتيجة:**
+      ```
+      العد: 1
+      العد: 2
+      العد: 3
+      انتهت الحلقة!
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لطباعة الأرقام من 5 إلى 1 تنازلياً:"
+    code: |
+      number = @@INPUT@@
+      while number >= @@INPUT@@:
+          print(number)
+          number @@INPUT@@ 1
+    solution:
+      - "5"
+      - "1"
+      - "-="
+    explanation: "نبدأ من 5، نستمر طالما الرقم أكبر من أو يساوي 1، وننقص 1 في كل تكرار."
+
+  - type: "markdown"
+    content: |
+      ## while مع المدخلات من المستخدم
+
+      إحدى أقوى استخدامات `while` هي مع المدخلات:
+
+      ```python
+      password = ""
+      while password != "سر123":
+          password = input("ادخل كلمة المرور: ")
+          if password != "سر123":
+              print("كلمة مرور خاطئة، حاول مرة أخرى")
+      
+      print("مرحباً! تم تسجيل الدخول بنجاح")
+      ```
+
+      هذا الكود سيستمر في طلب كلمة المرور حتى يدخل المستخدم الكلمة الصحيحة.
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل كود لعبة تخمين الرقم:"
+    code: |
+      secret_number = 7
+      guess = 0
+      
+      while @@INPUT@@ != secret_number:
+          guess = int(input("خمن رقماً من 1 إلى 10: "))
+          if guess < secret_number:
+              print("الرقم أكبر!")
+          elif guess > secret_number:
+              print("الرقم أصغر!")
+      
+      print("@@INPUT@@! لقد خمنت الرقم الصحيح")
+    solution:
+      - "guess"
+      - "مبروك"
+    explanation: "نستمر في الحلقة طالما التخمين لا يساوي الرقم السري، ونعطي تلميحات للمستخدم."
+
+  - type: "markdown"
+    content: |
+      ## حلقات while مع العدادات والمجمعات
+
+      يمكننا استخدام `while` مع تقنيات العد والتجميع:
+
+      ```python
+      total = 0
+      count = 0
+      number = 0
+      
+      print("ادخل أرقاماً (ادخل -1 للتوقف):")
+      while number != -1:
+          number = int(input("الرقم: "))
+          if number != -1:
+              total += number
+              count += 1
+      
+      if count > 0:
+          average = total / count
+          print(f"المجموع: {total}")
+          print(f"العدد: {count}")
+          print(f"المتوسط: {average:.2f}")
+      ```
+
+  - type: "quiz"
+    question: "ما قيمة sum بعد تنفيذ هذا الكود؟"
+    code: |
+      sum = 0
+      i = 2
+      while i <= 6:
+          sum += i
+          i += 2
+      print(sum)
+    lang: python
+    options:
+      - "6"
+      - "8"
+      - "12"
+      - "14"
+    solution: 2
+    explanation: "الحلقة تضيف: 2 (sum=2) ثم 4 (sum=6) ثم 6 (sum=12). النتيجة النهائية 12."
+
+  - type: "markdown"
+    content: |
+      ## استخدام break و continue مع while
+
+      ### break - للخروج من الحلقة فوراً:
+      ```python
+      count = 0
+      while True:  # حلقة لا نهائية
+          count += 1
+          print(f"العد: {count}")
+          if count >= 3:
+              break  # توقف عند 3
+      print("تم الخروج من الحلقة")
+      ```
+
+      ### continue - لتخطي باقي التكرار:
+      ```python
+      number = 0
+      while number < 5:
+          number += 1
+          if number == 3:
+              continue  # تخطي طباعة 3
+          print(f"الرقم: {number}")
+      ```
+
+  - type: "bug"
+    lang: python
+    question: "اعثر على الخطأ في هذا الكود الذي يحسب مجموع الأرقام الزوجية:"
+    code: |
+      sum = 0
+      i = 2
+      while i <= 10:
+          sum += i
+      print(f"مجموع الأرقام الزوجية: {sum}")
+    solution: 3
+    explanation: "الحلقة لا نهائية! يجب إضافة i += 2 داخل الحلقة لتحديث المتغير."
+    hint: "ما الذي يحدث لقيمة i داخل الحلقة؟"
+
+  - type: "markdown"
+    content: |
+      ## while مع الشروط المركبة
+
+      يمكننا استخدام عدة شروط مع `and` و `or`:
+
+      ```python
+      attempts = 0
+      max_attempts = 3
+      correct_password = False
+      
+      while attempts < max_attempts and not correct_password:
+          password = input(f"كلمة المرور (المحاولة {attempts + 1}/{max_attempts}): ")
+          attempts += 1
+          
+          if password == "آمن123":
+              correct_password = True
+              print("تم تسجيل الدخول بنجاح!")
+          else:
+              print("كلمة مرور خاطئة")
+      
+      if not correct_password:
+          print("تم تجاوز العدد المسموح من المحاولات")
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل كود لعبة 'ارمي النرد حتى تحصل على 6':"
+    code: |
+      import random
+      
+      dice = 0
+      rolls = 0
+      
+      while @@INPUT@@ != 6:
+          dice = random.randint(1, 6)
+          @@INPUT@@ += 1
+          print(f"رمية {rolls}: حصلت على {dice}")
+      
+      print(f"مبروك! حصلت على 6 في {rolls} رمية/رميات")
+    solution:
+      - "dice"
+      - "rolls"
+    explanation: "نستمر في رمي النرد (dice) وعد الرميات (rolls) حتى نحصل على 6."
+
+  - type: "markdown"
+    content: |
+      ## أنماط شائعة لحلقات while
+
+      ### 1. حلقة التحقق من الصحة:
+      ```python
+      age = -1
+      while age < 0 or age > 120:
+          age = int(input("ادخل عمرك (0-120): "))
+          if age < 0 or age > 120:
+              print("عمر غير صحيح!")
+      ```
+
+      ### 2. حلقة القوائم (Menus):
+      ```python
+      choice = ""
+      while choice != "خروج":
+          print("1. إضافة")
+          print("2. حذف") 
+          print("3. عرض")
+          print("خروج - للخروج")
+          choice = input("اختر: ")
+      ```
+
+      ### 3. حلقة البحث:
+      ```python
+      numbers = [10, 25, 30, 45, 50]
+      target = 30
+      index = 0
+      found = False
+      
+      while index < len(numbers) and not found:
+          if numbers[index] == target:
+              found = True
+          else:
+              index += 1
+      ```
+
+  - type: "order"
+    lang: "python"
+    question: "رتب هذا الكود لحساب العد التنازلي:"
+    code:
+      - "start = int(input('ادخل رقم البداية: '))"
+      - "current = start"
+      - |
+        while current >= 0:
+            print(f"العد التنازلي: {current}")
+            current -= 1
+      - "print('انطلق! 🚀')"
+    explanation: "نأخذ رقم البداية، نضعه في current، نعد تنازلياً حتى الصفر، ثم نطبع رسالة الإنطلاق."
+
+  - type: "markdown"
+    content: |
+      ## مثال تطبيقي: آلة حاسبة بسيطة
+
+      ```python
+      print("=== آلة حاسبة بسيطة ===")
+      print("العمليات المتاحة: +, -, *, /")
+      print("اكتب 'خروج' للإنهاء")
+      
+      while True:
+          operation = input("\nما العملية التي تريد؟ ")
+          
+          if operation == "خروج":
+              print("شكراً لاستخدام الآلة الحاسبة!")
+              break
+          
+          if operation in ["+", "-", "*", "/"]:
+              num1 = float(input("الرقم الأول: "))
+              num2 = float(input("الرقم الثاني: "))
+              
+              if operation == "+":
+                  result = num1 + num2
+              elif operation == "-":
+                  result = num1 - num2
+              elif operation == "*":
+                  result = num1 * num2
+              elif operation == "/" and num2 != 0:
+                  result = num1 / num2
+              else:
+                  print("لا يمكن القسمة على صفر!")
+                  continue
+              
+              print(f"النتيجة: {num1} {operation} {num2} = {result}")
+          else:
+              print("عملية غير صحيحة!")
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل كود برنامج توفير المال:"
+    code: |
+      target = 1000  # الهدف: 1000 ريال
+      current_savings = 0
+      month = 0
+      
+      while @@INPUT@@ < target:
+          @@INPUT@@ += 1
+          monthly_saving = float(input(f"الشهر {month} - كم وفرت؟ "))
+          current_savings += monthly_saving
+          
+          remaining = target - current_savings
+          print(f"وفرت حتى الآن: {current_savings} ريال")
+          print(f"متبقي للهدف: {remaining} ريال")
+      
+      print(f"مبروك! وصلت لهدفك في {month} شهر!")
+    solution:
+      - "current_savings"
+      - "month"
+    explanation: "نستمر حتى نصل للمبلغ المستهدف، ونعد الأشهر ونتتبع المدخرات."
+
+  - type: "markdown"
+    content: |
+      ## نصائح مهمة لحلقات while
+
+      ### ✅ افعل:
+      - **تأكد من تحديث المتغير** في الشرط داخل الحلقة
+      - **اختبر الشروط الحدية** (ماذا لو كان الشرط خاطئ من البداية؟)
+      - **استخدم أسماء متغيرات واضحة** مثل `is_running`, `user_wants_to_continue`
+      - **اضع حد أقصى للتكرارات** في الحالات الحرجة
+
+      ### ❌ تجنب:
+      - **الحلقات اللا نهائية** بسبب عدم تحديث المتغير
+      - **الشروط المعقدة جداً** التي يصعب فهمها
+      - **نسيان حالات الخروج** من الحلقة
+
+  - type: "quiz"
+    question: "أي من هذه الحلقات ستتسبب في حلقة لا نهائية؟"
+    options:
+      - |
+        i = 0
+        while i < 5:
+            print(i)
+            i += 1
+      - |
+        x = 10
+        while x > 0:
+            print(x)
+            x -= 1
+      - |
+        count = 1
+        while count <= 3:
+            print("مرحبا")
+      - |
+        num = 0
+        while num < 2:
+            print(num)
+            num += 1
+    solution: 2
+    explanation: "الخيار الثالث لا يحدث متغير count داخل الحلقة، فسيبقى 1 إلى الأبد."
+
+  - type: "markdown"
+    content: |
+      ## ملخص حلقات While
+
+      تعلمت اليوم:
+
+      ✅ **الفرق بين for و while** - متى نستخدم كل واحدة  
+      ✅ **البنية الأساسية** لحلقة while والشرط  
+      ✅ **استخدام while مع المدخلات** للتحقق من صحة البيانات  
+      ✅ **العدادات والمجمعات** في حلقات while  
+      ✅ **break و continue** للتحكم في تدفق الحلقة  
+      ✅ **الشروط المركبة** باستخدام and/or  
+      ✅ **الأنماط الشائعة** للاستخدامات العملية  
+      ✅ **نصائح لتجنب الأخطاء** وخاصة الحلقات اللا نهائية
+
+      حلقة `while` أداة قوية عندما لا نعرف عدد التكرارات مسبقاً. في الدرس القادم، سنتعلم كيفية التعامل مع الأخطاء الشائعة في الحلقات وكيفية تصحيحها!

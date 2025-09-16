@@ -133,11 +133,11 @@
 
 ### Items
 
-- [ ] [L] Introduction to For Loops & Range
-- [ ] [L] Loop Control Flow
-- [ ] [L] print(x, end="...")
-- [ ] [L] Nested Loops
-- [ ] [C] Pattern Generator
+- [x] [L] Introduction to For Loops & Range
+- [x] [L] Loop Control Flow
+- [x] [L] print(x, end="...")
+- [x] [L] Nested Loops
+- [x] [C] Pattern Generator
 - [ ] [L] Counting & Tracking in Loops
 - [ ] [L] Simple Lists in Loops
 - [ ] [L] While Loops
