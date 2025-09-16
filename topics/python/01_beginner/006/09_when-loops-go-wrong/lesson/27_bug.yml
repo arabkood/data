@@ -1,0 +1,17 @@
+type: "bug"
+lang: python
+question: "اعثر على الخطأ في هذا الكود:"
+code: |
+  total = 0
+  numbers = [5, 10, 15, 20]
+
+  for num in numbers:
+      if total = 0:
+          total = num
+      else:
+          total += num
+
+  print(f"المجموع: {total}")
+solution: 3
+explanation: "في السطر الثالث، يجب استخدام == للمقارنة بدلاً من = للإسناد."
+hint: "ما الفرق بين = و == ؟"

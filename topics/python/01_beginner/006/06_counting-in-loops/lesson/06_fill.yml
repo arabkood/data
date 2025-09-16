@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لحساب مجموع المربعات للأرقام من 1 إلى 4:"
+code: |
+  sum_of_squares = 0
+
+  for i in @@INPUT@@:
+      square = i * i
+      @@INPUT@@ += square
+
+  print(f"مجموع المربعات: {sum_of_squares}")
+solution:
+  - "range(1, 5)"
+  - "sum_of_squares"
+explanation: "نستخدم range(1, 5) للأرقام من 1 إلى 4، ونضيف مربع كل رقم إلى المجموع."

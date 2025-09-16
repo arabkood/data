@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "أضف أسطر تتبع لهذا الكود لفهم سبب عدم عمله:"
+code: |
+  count = 0
+  for i in range(5):
+      if i % 2 == 0:
+          count += 1
+          @@INPUT@@(f"i = {i}, count = {count}")
+
+  @@INPUT@@(f"العدد النهائي: {count}")
+solution:
+  - "print"
+  - "print"
+explanation: "نضيف print() لتتبع قيم المتغيرات ومعرفة كيفية تغيرها."

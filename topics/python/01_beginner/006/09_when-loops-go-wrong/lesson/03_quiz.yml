@@ -1,0 +1,11 @@
+type: "quiz"
+question: "أي من هذه الحلقات ستؤدي إلى حلقة لا نهائية؟"
+code: "# الخيار A\ni = 0\nwhile i < 3:\n    print(\"مرحبا\")\n    i += 1\n\n# الخيار B  \nx = 5\nwhile x > 0:\n    print(x)\n    x -= 1\n\n# الخيار C\nnum = 1\nwhile num <= 4:\n    print(\"رقم:\", num)\n    num = num + 0  # خطأ!\n\n# الخيار D\nj = 10\nwhile j >= 1:\n    print(j)\n    j = j - 1\n"
+lang: python
+options:
+  - "الخيار A"
+  - "الخيار B"
+  - "الخيار C"
+  - "الخيار D"
+solution: 2
+explanation: "الخيار C يضيف 0 إلى num، فلن تتغير قيمته أبداً وستبقى الحلقة تعمل إلى ما لا نهاية."

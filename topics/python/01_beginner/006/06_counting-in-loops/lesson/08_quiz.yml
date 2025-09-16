@@ -1,0 +1,19 @@
+type: "quiz"
+question: "ما عدد الأرقام الأكبر من 10 في هذه القائمة؟"
+code: |
+  numbers = [5, 15, 8, 12, 3, 20]
+  count = 0
+
+  for num in numbers:
+      if num > 10:
+          count += 1
+
+  print(count)
+lang: python
+options:
+  - "2"
+  - "3"
+  - "4"
+  - "5"
+solution: 1
+explanation: "الأرقام الأكبر من 10 هي: 15، 12، و 20. إذن العدد هو 3."

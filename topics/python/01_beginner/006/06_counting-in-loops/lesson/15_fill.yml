@@ -1,0 +1,21 @@
+type: "fill"
+lang: "python"
+question: "أكمل كود تحليل المبيعات اليومية:"
+code: |
+  daily_sales = [150, 200, 175, 300, 250, 180, 220]
+
+  total_sales = 0
+  high_sales_days = 0  # أيام المبيعات العالية (أكثر من 200)
+
+  for sale in daily_sales:
+      @@INPUT@@ += sale
+      if sale > 200:
+          @@INPUT@@ += 1
+
+  average_daily = total_sales / len(daily_sales)
+  print(f"متوسط المبيعات اليومية: {average_daily:.1f}")
+  print(f"أيام المبيعات العالية: {high_sales_days}")
+solution:
+  - "total_sales"
+  - "high_sales_days"
+explanation: "نجمع إجمالي المبيعات في total_sales، ونعد الأيام التي تجاوزت 200 في high_sales_days."

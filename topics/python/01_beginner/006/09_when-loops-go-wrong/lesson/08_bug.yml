@@ -1,0 +1,17 @@
+type: "bug"
+lang: python
+question: "اعثر على الخطأ المنطقي في كود حساب المتوسط:"
+code: |
+  numbers = [10, 20, 30, 40, 50]
+  total = 0
+  count = 0
+
+  for num in numbers:
+      total += num
+      count += 1
+
+  average = total * count
+  print(f"المتوسط: {average}")
+solution: 6
+explanation: "المتوسط = المجموع ÷ العدد، يجب استخدام / بدلاً من *."
+hint: "كيف نحسب المتوسط رياضياً؟"

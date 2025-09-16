@@ -1,0 +1,24 @@
+type: "quiz"
+question: "أي من هذه الحلقات ستتسبب في حلقة لا نهائية؟"
+options:
+  - |
+    i = 0
+    while i < 5:
+        print(i)
+        i += 1
+  - |
+    x = 10
+    while x > 0:
+        print(x)
+        x -= 1
+  - |
+    count = 1
+    while count <= 3:
+        print("مرحبا")
+  - |
+    num = 0
+    while num < 2:
+        print(num)
+        num += 1
+solution: 2
+explanation: "الخيار الثالث لا يحدث متغير count داخل الحلقة، فسيبقى 1 إلى الأبد."

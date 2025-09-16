@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة الأرقام من 5 إلى 1 تنازلياً:"
+code: |
+  number = @@INPUT@@
+  while number >= @@INPUT@@:
+      print(number)
+      number @@INPUT@@ 1
+solution:
+  - "5"
+  - "1"
+  - "-="
+explanation: "نبدأ من 5، نستمر طالما الرقم أكبر من أو يساوي 1، وننقص 1 في كل تكرار."

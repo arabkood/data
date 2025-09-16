@@ -1,0 +1,17 @@
+type: "quiz"
+question: "ما قيمة sum بعد تنفيذ هذا الكود؟"
+code: |
+  sum = 0
+  i = 2
+  while i <= 6:
+      sum += i
+      i += 2
+  print(sum)
+lang: python
+options:
+  - "6"
+  - "8"
+  - "12"
+  - "14"
+solution: 2
+explanation: "الحلقة تضيف: 2 (sum=2) ثم 4 (sum=6) ثم 6 (sum=12). النتيجة النهائية 12."

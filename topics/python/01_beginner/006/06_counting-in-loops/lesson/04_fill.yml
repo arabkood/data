@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لعد الأرقام الزوجية من 1 إلى 10:"
+code: |
+  even_count = @@INPUT@@
+
+  for i in range(1, 11):
+      if i % 2 == 0:
+          @@INPUT@@ += 1
+
+  print(f"عدد الأرقام الزوجية: {even_count}")
+solution:
+  - "0"
+  - "even_count"
+explanation: "نبدأ العداد من 0، ونزيد قيمته بـ 1 في كل مرة نجد رقماً زوجياً."

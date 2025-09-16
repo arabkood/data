@@ -1,0 +1,12 @@
+type: "order"
+lang: "python"
+question: "رتب هذا الكود المصحح لحساب مجموع الأرقام الموجبة:"
+code:
+  - "numbers = [5, -3, 8, -1, 12, -7]"
+  - "positive_sum = 0"
+  - |
+    for num in numbers:
+        if num > 0:
+            positive_sum += num
+  - "print(f'مجموع الأرقام الموجبة: {positive_sum}')"
+explanation: "نعرف القائمة، ننشئ متغير المجموع، نمر عبر الأرقام ونجمع الموجبة فقط، ثم نطبع النتيجة."

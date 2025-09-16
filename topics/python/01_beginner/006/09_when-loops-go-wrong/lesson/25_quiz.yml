@@ -1,0 +1,23 @@
+type: "quiz"
+question: "ما الخطأ في هذا الكود الذي يبحث عن رقم في قائمة؟"
+code: |
+  numbers = [10, 20, 30, 40]
+  target = 30
+  found = False
+
+  for num in numbers:
+      if num == target:
+          found = True
+
+  if found:
+      print("الرقم موجود")
+  else:
+      print("الرقم غير موجود")
+lang: python
+options:
+  - "الكود صحيح تماماً"
+  - "يجب استخدام break بعد العثور على الرقم"
+  - "الشرط في if خاطئ"
+  - "المتغير found يجب أن يبدأ بـ True"
+solution: 1
+explanation: "الكود صحيح منطقياً، لكن يمكن تحسينه باستخدام break لتوفير الوقت بعد العثور على الرقم."

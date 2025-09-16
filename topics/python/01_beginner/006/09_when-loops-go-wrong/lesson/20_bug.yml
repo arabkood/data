@@ -1,0 +1,10 @@
+type: "bug"
+lang: python
+question: "اعثر على الخطأ في هذا الكود:"
+code: |
+  colors = ["أحمر", "أزرق", "أخضر"]
+  for i in range(5):
+      print(f"اللون رقم {i + 1}: {colors[i]}")
+solution: 1
+explanation: "range(5) ينتج أرقام من 0 إلى 4، لكن القائمة بها 3 عناصر فقط (0 إلى 2). يجب استخدام range(len(colors))."
+hint: "كم عنصر في قائمة الألوان؟"

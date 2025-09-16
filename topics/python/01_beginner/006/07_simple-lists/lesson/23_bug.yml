@@ -1,0 +1,14 @@
+type: "bug"
+lang: python
+question: "اعثر على الخطأ في كود حساب مجموع عناصر القائمة:"
+code: |
+  numbers = [5, 10, 15, 20]
+  total = 0
+
+  for i in range(numbers):
+      total += numbers[i]
+
+  print(f"المجموع: {total}")
+solution: 3
+explanation: "يجب استخدام range(len(numbers)) وليس range(numbers). numbers هي قائمة وليست رقماً."
+hint: "انظر لما بداخل range()"

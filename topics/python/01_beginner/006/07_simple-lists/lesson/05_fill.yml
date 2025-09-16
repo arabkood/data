@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة جميع أسماء الطلاب مع ترحيب:"
+code: |
+  students = ["سارة", "خالد", "نور", "عبدالله"]
+
+  for @@INPUT@@ in students:
+      print(f"مرحباً {@@INPUT@@}")
+solution:
+  - "student"
+  - "student"
+explanation: "نستخدم متغير student للإشارة إلى كل عنصر في القائمة أثناء التكرار."

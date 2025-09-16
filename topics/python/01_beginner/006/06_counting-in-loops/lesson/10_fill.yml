@@ -1,0 +1,18 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لحساب عدد الأرقام الزوجية والفردية:"
+code: |
+  even_count = 0
+  odd_count = 0
+
+  for i in range(1, 11):
+      if i % 2 == 0:
+          @@INPUT@@ += 1
+      else:
+          @@INPUT@@ += 1
+
+  print(f"زوجية: {even_count}, فردية: {odd_count}")
+solution:
+  - "even_count"
+  - "odd_count"
+explanation: "إذا كان الرقم زوجياً (باقي القسمة على 2 يساوي 0)، نزيد عداد الزوجية، وإلا نزيد عداد الفردية."

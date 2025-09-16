@@ -1,0 +1,8 @@
+type: "fill"
+lang: "python"
+question: "أكمل كود برنامج توفير المال:"
+code: "target = 1000  # الهدف: 1000 ريال\ncurrent_savings = 0\nmonth = 0\n\nwhile @@INPUT@@ < target:\n    @@INPUT@@ += 1\n    monthly_saving = float(input(f\"الشهر {month} - كم وفرت؟ \"))\n    current_savings += monthly_saving\n    \n    remaining = target - current_savings\n    print(f\"وفرت حتى الآن: {current_savings} ريال\")\n    print(f\"متبقي للهدف: {remaining} ريال\")\n\nprint(f\"مبروك! وصلت لهدفك في {month} شهر!\")\n"
+solution:
+  - "current_savings"
+  - "month"
+explanation: "نستمر حتى نصل للمبلغ المستهدف، ونعد الأشهر ونتتبع المدخرات."

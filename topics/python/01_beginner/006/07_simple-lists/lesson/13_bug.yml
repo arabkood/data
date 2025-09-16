@@ -1,0 +1,11 @@
+type: "bug"
+lang: python
+question: "اعثر على الخطأ في هذا الكود الذي يطبع عناصر القائمة مع أرقامها:"
+code: |
+  colors = ["أحمر", "أزرق", "أخضر"]
+
+  for i in range(len(colors)):
+      print(f"{i}. {colors[i]}")
+solution: 2
+explanation: "المشكلة في طباعة الرقم من 0، يُفضل طباعته من 1 باستخدام i + 1."
+hint: "انظر للرقم المطبوع مع كل لون"

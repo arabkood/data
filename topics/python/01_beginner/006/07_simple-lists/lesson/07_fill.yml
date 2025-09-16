@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لحساب مضاعف كل رقم في القائمة:"
+code: |
+  numbers = [3, 7, 12, 5, 9]
+
+  for @@INPUT@@ in numbers:
+      double = num * @@INPUT@@
+      print(f"{num} × 2 = {double}")
+solution:
+  - "num"
+  - "2"
+explanation: "نستخدم متغير num للإشارة إلى كل رقم، ونضربه في 2 للحصول على المضاعف."

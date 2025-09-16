@@ -1,0 +1,21 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لفصل الأرقام عن النصوص في قائمة مختلطة:"
+code: |
+  data = [10, "نص", 20, "كلمة", 30, "جملة"]
+  numbers = []
+  texts = []
+
+  for item in data:
+      if @@INPUT@@(item) == int:
+          numbers.@@INPUT@@(item)
+      elif type(item) == @@INPUT@@:
+          texts.append(item)
+
+  print("الأرقام:", numbers)
+  print("النصوص:", texts)
+solution:
+  - "type"
+  - "append"
+  - "str"
+explanation: "نستخدم type() للتحقق من نوع البيانات، ونضيف الأرقام والنصوص لقوائم منفصلة."
