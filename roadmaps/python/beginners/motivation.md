@@ -9,7 +9,7 @@ Don't forget how far you've come.
 * **M3: Working with Data:** ✅✅✅✅✅✅✅✅✅✅ **[100% COMPLETE]**
 * **M4: Making Smart Decisions:** ✅✅✅✅✅✅✅✅✅✅ **[100% COMPLETE]**
 * **M5: Making Smarter Decisions:** ✅✅✅✅✅✅✅✅✅✅ **[100% COMPLETE]**
-* **M6: Repeating Actions:** 🔲🔲🔲🔲🔲🔲🔲🔲🔲🔲
+* **M6: Repeating Actions:** ✅✅✅✅✅🔲🔲🔲🔲🔲🔲 [50% COMPLETE]
 * **M7: Mastering Lists:** 🔲🔲🔲🔲🔲🔲🔲🔲🔲
 * **M8: Working with Dictionaries:** 🔲🔲🔲🔲🔲🔲🔲🔲🔲
 * **M9: Organizing Code:** 🔲🔲🔲🔲🔲🔲🔲🔲🔲🔲🔲
