@@ -2,7 +2,6 @@ type: "order"
 lang: "python"
 question: "أعد ترتيب هذه الأسطر لإنشاء مدقق أهلية القرض بالمنطق الصحيح."
 code:
-code:
   - "credit_score = 700\nincome = 45000\nhas_guarantor = True\nis_eligible = False"
   - "if credit_score > 650:"
   - "    if income >= 50000 or has_guarantor:"
