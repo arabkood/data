@@ -7,19 +7,19 @@ if condition:
         # <-- 8 مسافات
         if condition:
             # <-- 12 مسافات
-            ...
+            pass
         elif condition:
-            ...
+            pass
         else:
-            ...
+            pass
     elif condition:
-        ...
+        pass
     else:
-        ...
+        pass
 elif condition:
-    ...
+    pass
 else:
-    ...
+    pass
 ```
 
 #### **الأخطاء الشائعة**
