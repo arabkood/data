@@ -2,22 +2,14 @@ type: "order"
 lang: "python"
 question: "أعد ترتيب هذه الأسطر لإنشاء مدقق أهلية القرض بالمنطق الصحيح."
 code:
-  - |
-    credit_score = 700
-    income = 45000
-    has_guarantor = True
-    is_eligible = False
-  - |
-    if credit_score > 650:
-  - |
-        if income >= 50000 or has_guarantor:
-  - |
-            is_eligible = True
-  - |
-    if is_eligible:
-        print("العميل مؤهل للحصول على قرض.")
-  - |
-    else:
-        print("العميل غير مؤهل.")
+code:
+  - "credit_score = 700\nincome = 45000\nhas_guarantor = True\nis_eligible = False"
+  - "if credit_score > 650:"
+  - "    if income >= 50000 or has_guarantor:"
+  - "        is_eligible = True"
+  - "if is_eligible:"
+  - "    print(\"العميل مؤهل للحصول على قرض.\")"
+  - "else:"
+  - "    print(\"العميل غير مؤهل.\")"
 explanation: |
   المنطق الصحيح هو التحقق من الشرط الأساسي (درجة الائتمان) أولاً. ثم، داخل هذا الشرط، نتحقق من الشرط المركب (الدخل أو الضامن) باستخدام `or`. وأخيراً، نطبع النتيجة بناءً على القيمة النهائية للمتغير `is_eligible`.
