@@ -1,0 +1,23 @@
+type: "fill"
+lang: "python"
+question: |
+  اكتب كود لإنشاء رقعة شطرنج 3×3 بالإيموجي:
+  ```
+  🔴⚪🔴
+  ⚪🔴⚪
+  🔴⚪🔴
+  ```
+code: |
+  for i in range(@@INPUT@@):
+      for j in range(@@INPUT@@):
+          if (i + j) @@INPUT@@ 2 == 0:
+              print("🔴", end="")
+          else:
+              print(@@INPUT@@, end="")
+      @@INPUT@@
+solution:
+  - "3"
+  - "3"
+  - "%"
+  - "\"⚪\""
+  - "print()"

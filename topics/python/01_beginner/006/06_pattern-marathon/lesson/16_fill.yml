@@ -1,0 +1,24 @@
+type: "fill"
+lang: "python"
+question: |
+  اكتب كود لإنشاء مثلث أرقام متناقص:
+  ```
+  54321
+  4321
+  321
+  21
+  1
+  ```
+code: |
+  for i in range(@@INPUT@@, @@INPUT@@, @@INPUT@@):
+      for j in range(@@INPUT@@, @@INPUT@@, @@INPUT@@):
+          print(j, end="")
+      print()
+solution:
+  - "5"
+  - "0"
+  - "-1"
+  - "i"
+  - "0"
+  - "-1"
+explanation: "نستخدم range(5, 0, -1) للصفوف المتناقصة، وفي كل صف نطبع من i إلى 1 تنازليًا."

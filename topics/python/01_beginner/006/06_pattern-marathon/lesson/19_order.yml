@@ -1,0 +1,19 @@
+type: "order"
+lang: "python"
+question: |
+  رتب الأسطر لإنشاء مستطيل مفرغ:
+  ```
+  ******
+  *    *
+  *    *
+  ******
+  ```
+code:
+  - "for i in range(4):"
+  - "    for j in range(6):"
+  - "        if i == 0 or i == 3 or j == 0 or j == 5:"
+  - "            print(\"*\", end=\"\")"
+  - "        else:"
+  - "            print(\" \", end=\"\")"
+  - "    print()"
+explanation: "نطبع نجوم في الصف الأول والأخير (i == 0 or i == 3) وفي العمود الأول والأخير (j == 0 or j == 5)، وإلا نطبع مسافات."

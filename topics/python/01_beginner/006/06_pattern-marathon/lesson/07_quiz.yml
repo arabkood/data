@@ -1,5 +1,6 @@
 # Step 7: Quiz - Understanding nested loops
 type: "quiz"
+lang: "python"
 question: "كم نجمة سيطبع هذا الكود؟"
 code: |
   for i in range(2):
@@ -7,9 +8,9 @@ code: |
           print("*", end="")
       print()
 options:
+  - "2 نجوم"
+  - "4 نجوم"
   - "6 نجوم"
   - "8 نجوم"
-  - "4 نجوم"
-  - "2 نجوم"
-solution: 1
+solution: 3
 explanation: "الحلقة الخارجية تتكرر مرتين، والداخلية 4 مرات في كل دورة. إذن: 2 × 4 = 8 نجوم إجمالاً."
