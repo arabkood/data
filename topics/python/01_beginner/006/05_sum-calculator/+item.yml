@@ -1,0 +1,12 @@
+id: ed81448f-1e26-4376-9de6-f393a604f7e0
+module_id: efaf01c7-f88b-4dde-89b3-3593d56230fa
+slug: sum-calculator
+position: 5
+created_at: 2025-09-18T17:36:46.921Z
+updated_at: 2025-09-18T17:36:46.921Z
+type: code
+title: 'تحدي: حاسبة المجموع'
+difficulty: medium
+premium_only: true
+base_xp: 1000
+s3_path: python/01_beginner/006/05_sum-calculator

@@ -7,9 +7,9 @@ code: |
       total = total + i
 lang: python
 options:
-  - "0"
-  - "1"
   - "10"
   - "20"
-solution: 0
+  - "1"
+  - "0"
+solution: 3
 explanation: "دائماً نبدأ المجموع من 0، بغض النظر عن نطاق الأرقام."

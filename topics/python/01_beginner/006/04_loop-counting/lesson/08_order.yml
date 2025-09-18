@@ -1,13 +1,10 @@
 # Step 8: Order challenge
 type: "order"
 lang: "python"
-question: "رتب هذا الكود لحساب متوسط الأرقام من 1 إلى 100:"
+question: "رتب هذا الكود لحساب عدد الأرقام بين 1 و 50 القابلة للقسمة على 3:"
 code:
-  - "total = 0"
   - "count = 0"
-  - "for i in range(1, 101):"
-  - "    total = total + i"
-  - "    count = count + 1"
-  - "average = total / count"
-  - "print(f\"المتوسط: {average}\")"
-explanation: "نحتاج متغيرين: واحد للمجموع وآخر للعد، ثم نقسم في النهاية."
+  - "for i in range(1, 51):"
+  - "    if i % 3 == 0:"
+  - "        count = count + 1"
+  - "print(f\"عدد الأرقام القابلة للقسمة على 3: {count}\")"

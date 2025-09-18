@@ -219,6 +219,9 @@ base_xp: 750
 # Difficulty of the lesson. Always use one of the following in english (easy, medium, hard)
 difficulty: "medium"
 
+# Always include premium_only: true
+premium_only: true
+
 
 # A list of steps that make up this lesson.
 steps:
@@ -332,11 +335,13 @@ steps:
 
 For code, you have to generate 3 distinct files:
 
-1. Instructions.md: an arabic clear but concise instructions for the user, specifying exactly what's requested from him.
+1. Instructions.md: an arabic clear but concise instructions for the user, specifying exactly and concisely what's requested from him.
 
 2. solution.py: the starter code, where the user will edit the code
 
 3. solution_test.py: the python code that will import solution.py and use unit-tests to make sure student answer is acceptable.
+
+4. Hints.md: (very optional) an arabic clear but concise hints for the user, only create it if the code is too hard, and user may get stuck. Include possible things where user can get stuck, and if a concept is very very new, you can rarely help by showing the code structure.
 
 Example tests:
 
