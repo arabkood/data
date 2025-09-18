@@ -1,0 +1,10 @@
+# Step 12: Order challenge
+type: "order"
+lang: "python"
+question: "رتب الكود لطباعة مربع من النجوم 3x3:"
+code:
+  - "for i in range(3):"
+  - "    for j in range(3):"
+  - "        print('*', end=' ')"
+  - "    print()"
+explanation: "الحلقة الداخلية تطبع النجوم على نفس السطر، ثم print() ينتقل لسطر جديد"

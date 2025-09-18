@@ -1,0 +1,14 @@
+# Step 7: Practice - numbers in a row
+type: "fill"
+lang: "python"
+question: |
+  اطبع الأرقام من 1 إلى 5 على نفس السطر مع شرطة بينهم:
+code: |
+  for i in range(1, 6):
+      if i < 5:
+          print(i, @@INPUT@@)
+      else:
+          print(i)
+solution:
+  - 'end="-"'
+explanation: "نضع شرطة بعد كل رقم ما عدا الأخير"

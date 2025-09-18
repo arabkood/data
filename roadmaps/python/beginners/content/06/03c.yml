@@ -1,234 +1,296 @@
 ---
-item_id: "m6-l1-advanced-print-end"
-item_type: "lesson"
-title: "التحكم في نهاية النص - معامل end"
+item_id: "m6-print-formatting-workshop"
+type: "lesson"
+title: "ورشة تنسيق الطباعة - معامل end"
+base_xp: 850
+difficulty: "easy"
 
 steps:
+  # Step 1: Quick introduction to end parameter
   - type: "markdown"
     content: |
-      مرحباً بك! هل لاحظت شيئاً مثيراً للاهتمام عندما تستخدم `print()` عدة مرات؟
+      ## تحكم في نهاية السطر مع `end`
       
-      دعنا نرى مثالاً:
-
+      حتى الآن، كل أمر `print()` كان ينتقل لسطر جديد تلقائياً. لكن ماذا لو أردنا طباعة عدة أشياء على نفس السطر؟
+      
+      المعامل `end` يتحكم في ما يحدث بعد الطباعة:
       ```python
-      print("مرحبا")
-      print("كيف حالك؟")
-      print("أتمنى لك يوماً سعيداً")
+      print("مرحبا", end=" ")  # مسافة بدلاً من سطر جديد
+      print("بالعالم")         # الآن على نفس السطر!
       ```
+      
+      **الناتج:** `مرحبا بالعالم`
 
-      النتيجة ستكون:
-      ```
-      مرحبا
-      كيف حالك؟
-      أتمنى لك يوماً سعيداً
-      ```
-
-      كل `print()` ينتقل إلى **سطر جديد** تلقائياً! لكن ماذا لو أردنا التحكم في هذا السلوك؟
-
-  - type: "markdown"
-    content: |
-      ## المشكلة: عندما لا نريد أسطر جديدة
-
-      تخيل أنك تريد طباعة عداد من 1 إلى 5، لكن في نفس السطر:
-
-      ```python
-      print("1")
-      print("2") 
-      print("3")
-      print("4")
-      print("5")
-      ```
-
-      هذا سيعطينا:
-      ```
-      1
-      2
-      3
-      4
-      5
-      ```
-
-      لكن ما نريده حقاً هو: `1 2 3 4 5` في سطر واحد!
-
-  - type: "quiz"
-    question: "لماذا تعتقد أن كل print() ينتقل إلى سطر جديد؟"
-    options:
-      - "لأن هذا هو السلوك الافتراضي لـ print()"
-      - "لأنه خطأ في الكود"
-      - "لأننا نسينا إضافة شيء ما"
-    solution: 0
-    explanation: "صحيح! print() يضيف تلقائياً رمز السطر الجديد '\\n' في نهاية كل نص."
-
-  - type: "markdown"
-    content: |
-      ## الحل: معامل `end`
-
-      السر يكمن في معامل خاص يسمى `end`. 
-
-      **بشكل افتراضي:** `print("النص", end="\n")`
-
-      رمز `\n` يعني "انتقل إلى سطر جديد". لكن يمكننا تغيير هذا!
-
-      **لطباعة النص بدون انتقال إلى سطر جديد:**
-
-      ```python
-      print("مرحبا", end="")
-      print("عالم")
-      ```
-
-      النتيجة: `مرحباعالم`
-
+  # Step 2: First practice - basic end usage
   - type: "fill"
     lang: "python"
-    question: "اكمل الكود لطباعة الأرقام في نفس السطر مع مسافة بينها:"
+    question: |
+      اجعل الأرقام تطبع على نفس السطر مع فاصلة بينهم:
     code: |
-      print("1", @@INPUT@@)
-      print("2", @@INPUT@@)
-      print("3", @@INPUT@@)
-      print("4", @@INPUT@@)
-      print("5")
+      print(1, @@INPUT@@)
+      print(2, @@INPUT@@)
+      print(3)
+    solution:
+      - 'end=", "'
+      - 'end=", "'
+    explanation: "استخدمنا end=', ' لإضافة فاصلة ومسافة بدلاً من سطر جديد"
+
+  # Step 3: Practice with spaces
+  - type: "fill"
+    lang: "python"
+    question: |
+      اطبع الكلمات على سطر واحد مع مسافات بينها:
+    code: |
+      print("البرمجة", @@INPUT@@)
+      print("ممتعة", @@INPUT@@)
+      print("جداً!")
     solution:
       - 'end=" "'
       - 'end=" "'
-      - 'end=" "'
-      - 'end=" "'
-    explanation: "نستخدم end=\" \" لإضافة مسافة بدلاً من السطر الجديد. آخر print() لا يحتاج end لأننا نريد الانتقال للسطر التالي في النهاية."
+    explanation: "end=' ' يضع مسافة واحدة بدلاً من الانتقال لسطر جديد"
 
-  - type: "markdown"
-    content: |
-      ## أمثلة متنوعة على استخدام `end`
-
-      يمكنك وضع أي نص تريده في `end`:
-
-      ```python
-      # باستخدام النقطة
-      print("أ", end=".")
-      print("ب", end=".")
-      print("ج")
-      # النتيجة: أ.ب.ج
-
-      # باستخدام السهم
-      print("البداية", end=" -> ")
-      print("الوسط", end=" -> ")
-      print("النهاية")
-      # النتيجة: البداية -> الوسط -> النهاية
-      ```
-
-  - type: "quiz"
-    question: "ما النتيجة المتوقعة للكود التالي؟"
-    code: |
-      print("Python", end="*")
-      print("هو", end="*")
-      print("رائع")
-    lang: "python"
-    options:
-      - "Python*هو*رائع"
-      - "Python هو رائع"
-      - "Python\nهو\nرائع"
-    solution: 0
-    explanation: "كل print() ينتهي بـ * بدلاً من السطر الجديد، باستثناء الأخير الذي يستخدم السطر الجديد الافتراضي."
-
-  - type: "markdown"
-    content: |
-      ## تطبيق عملي: بناء شريط التحميل
-
-      دعنا نبني شريط تحميل بسيط باستخدام `end`:
-
-      ```python
-      print("تحميل: ", end="")
-      print("[", end="")
-      print("=", end="")
-      print("=", end="")
-      print("=", end="")
-      print("   ]")
-      ```
-
-      النتيجة: `تحميل: [===   ]`
-
-      بدون `end`، كان سيظهر كل رمز في سطر منفصل!
-
+  # Step 4: Practice with dashes
   - type: "fill"
     lang: "python"
-    question: "اكمل الكود لطباعة رسالة ترحيب جميلة في سطر واحد:"
+    question: |
+      اصنع خط من الشرطات على نفس السطر:
     code: |
-      print("*** ", @@INPUT@@)
-      print("أهلاً وسهلاً بك", @@INPUT@@)
-      print(" ***")
+      print("-", @@INPUT@@)
+      print("-", @@INPUT@@)
+      print("-", @@INPUT@@)
+      print("-", @@INPUT@@)
+      print("-")
     solution:
       - 'end=""'
       - 'end=""'
-    explanation: "نريد دمج كل النصوص في سطر واحد، لذلك نستخدم end=\"\" لإزالة الأسطر الجديدة."
+      - 'end=""'
+      - 'end=""'
+    explanation: "end='' (نص فارغ) يلصق النتائج مباشرة بدون أي فاصل"
 
+  # Step 5: Creating patterns with loops
+  - type: "markdown"
+    content: |
+      ## دمج `end` مع الحلقات
+      
+      المعامل `end` قوي جداً عند استخدامه مع الحلقات:
+      
+      ```python
+      for i in range(5):
+          print("*", end=" ")
+      # الناتج: * * * * *
+      ```
+      
+      لاحظ كيف طبعنا 5 نجوم على نفس السطر!
+
+  # Step 6: Practice - stars pattern
+  - type: "fill"
+    lang: "python"
+    question: |
+      اطبع 10 نجوم على سطر واحد مع مسافة بين كل نجمة:
+    code: |
+      for i in range(10):
+          print("*", @@INPUT@@)
+    solution:
+      - 'end=" "'
+    explanation: "كل تكرار في الحلقة يطبع نجمة ومسافة على نفس السطر"
+
+  # Step 7: Practice - numbers in a row
+  - type: "fill"
+    lang: "python"
+    question: |
+      اطبع الأرقام من 1 إلى 5 على نفس السطر مع شرطة بينهم:
+    code: |
+      for i in range(1, 6):
+          if i < 5:
+              print(i, @@INPUT@@)
+          else:
+              print(i)
+    solution:
+      - 'end="-"'
+    explanation: "نضع شرطة بعد كل رقم ما عدا الأخير"
+
+  # Step 8: Bug fixing practice
   - type: "bug"
     lang: "python"
-    question: "هناك خطأ في الكود التالي يمنع طباعة النتيجة المطلوبة في سطر واحد. أين الخطأ؟"
+    question: "هذا الكود يجب أن يطبع الأرقام على نفس السطر. أين الخطأ؟"
     code: |
-      print("A", end=" ")
-      print("B", end=" ")
-      print("C", end="\n")
-      print("D")
-    solution: 2
-    explanation: "السطر الثالث يستخدم end=\"\\n\" مما يسبب انتقال إلى سطر جديد قبل طباعة D. يجب استخدام end=\" \" للحفاظ على النص في نفس السطر."
-    hint: "ابحث عن السطر الذي يستخدم \\n"
+      for i in range(1, 4):
+          print(i, end="\n")
+      print("النهاية")
+    solution: 1
+    explanation: "end='\\n' يعني سطر جديد، وهذا ما نريد تجنبه! يجب استخدام end=' ' أو end='' "
+    expectedOutput: "1 2 3 النهاية"
+    actualOutput: "1\n2\n3\nالنهاية"
 
-  - type: "markdown"
-    content: |
-      ## متى نستخدم `end`؟
+  # Step 9: Creating a progress bar
+  - type: "fill"
+    lang: "python"
+    question: |
+      اصنع شريط تقدم بسيط باستخدام علامات #:
+    code: |
+      print("التحميل: [", end="")
+      for i in range(8):
+          print("#", @@INPUT@@)
+      print("] مكتمل!")
+    solution:
+      - 'end=""'
+    explanation: "نلصق علامات # مباشرة لصنع شريط متصل"
 
-      **استخدم `end` عندما تريد:**
+  # Step 10: Practice with dots
+  - type: "fill"
+    lang: "python"
+    question: |
+      اطبع "جاري المعالجة" متبوعة بـ 5 نقاط على نفس السطر:
+    code: |
+      print("جاري المعالجة", @@INPUT@@)
+      for i in range(5):
+          print(".", @@INPUT@@)
+      print(" تم!")
+    solution:
+      - 'end=""'
+      - 'end=""'
+    explanation: "نلصق النقاط مباشرة بالنص لإظهار التقدم"
 
-      ✅ طباعة عدة أجزاء في نفس السطر  
-      ✅ بناء أشكال وأنماط نصية  
-      ✅ إنشاء عدادات أو أشرطة تقدم  
-      ✅ تجميع النصوص بفواصل مخصصة  
+  # Step 11: Complex pattern
+  - type: "fill"
+    lang: "python"
+    question: |
+      اصنع نمط الأسهم: -> -> -> ->
+    code: |
+      for i in range(4):
+          print("->", @@INPUT@@)
+      print("الهدف!")
+    solution:
+      - 'end=" "'
+    explanation: "نضع مسافة بعد كل سهم لفصلها بشكل واضح"
 
-      **مثال من الحياة الواقعية:**
-      ```python
-      print("اسم المستخدم: ", end="")
-      username = input()
-      # المستخدم يكتب اسمه في نفس السطر!
-      ```
-
+  # Step 12: Order challenge
   - type: "order"
     lang: "python"
-    question: "رتب الأسطر لطباعة قائمة تسوق مرقمة في تنسيق جميل:"
+    question: "رتب الكود لطباعة مربع من النجوم 3x3:"
     code:
-      - 'print("قائمة التسوق:")'
-      - 'print("1. ", end="")'
-      - 'print("خبز")'
-      - 'print("2. ", end="")'
-      - 'print("حليب")'
-      - 'print("3. ", end="")'
-      - 'print("بيض")'
-    explanation: "نطبع العنوان أولاً، ثم لكل عنصر نطبع الرقم بدون سطر جديد، ثم اسم العنصر مع السطر الجديد."
+      - "for i in range(3):"
+      - "    for j in range(3):"
+      - "        print('*', end=' ')"
+      - "    print()"
+    explanation: "الحلقة الداخلية تطبع النجوم على نفس السطر، ثم print() ينتقل لسطر جديد"
 
+  # Step 13: Practice with commas in list
+  - type: "fill"
+    lang: "python"
+    question: |
+      اطبع قائمة الفواكه بفواصل (لاحظ: لا فاصلة بعد آخر عنصر):
+    code: |
+      fruits = ["تفاح", "برتقال", "موز"]
+      for i in range(len(fruits)):
+          if i < len(fruits) - 1:
+              print(fruits[i], @@INPUT@@)
+          else:
+              print(fruits[i])
+    solution:
+      - 'end=", "'
+    explanation: "نضيف فاصلة ومسافة بعد كل عنصر ما عدا الأخير"
+
+  # Step 14: Creating a countdown
+  - type: "fill"
+    lang: "python"
+    question: |
+      اصنع عد تنازلي على سطر واحد: 5...4...3...2...1...انطلق!
+    code: |
+      for i in range(5, 0, -1):
+          print(i, @@INPUT@@)
+      print("انطلق!")
+    solution:
+      - 'end="..."'
+    explanation: "نستخدم ثلاث نقاط لفصل الأرقام في العد التنازلي"
+
+  # Step 15: Bug challenge - mixed newlines
+  - type: "bug"
+    lang: "python"
+    question: "الكود يجب أن يطبع جدول ضرب 2 على سطر واحد. أين المشكلة؟"
+    code: |
+      for i in range(1, 6):
+          result = 2 * i
+          print(f"2×{i}={result}", end=" | ")
+          print()
+    solution: 3
+    explanation: "print() الفارغ ينتقل لسطر جديد! يجب حذفه أو نقله خارج الحلقة"
+    expectedOutput: "2×1=2 | 2×2=4 | 2×3=6 | 2×4=8 | 2×5=10 | "
+    actualOutput: "2×1=2 | \n2×2=4 | \n2×3=6 | \n2×4=8 | \n2×5=10 | \n"
+
+  # Step 16: Creating a menu
+  - type: "fill"
+    lang: "python"
+    question: |
+      اصنع قائمة أفقية بخيارات مرقمة:
+    code: |
+      options = ["ابدأ", "إعدادات", "خروج"]
+      for i in range(len(options)):
+          print(f"{i+1}. {options[i]}", @@INPUT@@)
+      print()  # سطر جديد في النهاية
+    solution:
+      - 'end="  |  "'
+    explanation: "نفصل الخيارات بخط عمودي ومسافات لوضوح أكثر"
+
+  # Step 17: Triangle pattern
+  - type: "fill"
+    lang: "python"
+    question: |
+      اطبع مثلث من النجوم (كل سطر يحتوي على عدد متزايد):
+    code: |
+      for i in range(1, 6):
+          for j in range(i):
+              print("*", @@INPUT@@)
+          print()  # انتقل لسطر جديد
+    solution:
+      - 'end=" "'
+    explanation: "نطبع النجوم على نفس السطر، ثم ننتقل لسطر جديد بعد كل صف"
+
+  # Step 18: Quiz on end values
+  - type: "quiz"
+    question: "ماذا سيكون ناتج هذا الكود؟"
+    code: |
+      print("A", end="->")
+      print("B", end="->")
+      print("C")
+    lang: "python"
+    options:
+      - "A B C"
+      - "A->B->C"
+      - "A->\nB->\nC"
+      - "ABC"
+    solution: 1
+    explanation: "end='->' يضع سهم بعد كل print، والأخير بدون end ينتقل لسطر جديد"
+
+  # Step 19: Final challenge
+  - type: "fill"
+    lang: "python"
+    question: |
+      اصنع هذا النمط: [1] [2] [3] [4] [5]
+    code: |
+      for num in range(1, 6):
+          print(f"[{num}]", @@INPUT@@)
+      print()  # سطر جديد في النهاية
+    solution:
+      - 'end=" "'
+    explanation: "نضع كل رقم في أقواس مربعة مع مسافة بينهم"
+
+  # Step 20: Summary
   - type: "markdown"
     content: |
-      ## تحدي إضافي: الإبداع مع `end`
-
-      جرب هذه الأفكار:
-
-      ```python
-      # إنشاء خط فاصل
-      for i in range(10):
-          print("-", end="")
-      print()  # سطر جديد في النهاية
-
-      # طباعة الوقت بتنسيق جميل
-      hours = "14"
-      minutes = "30"
-      print("الوقت الآن: ", end="")
-      print(hours, end=":")
-      print(minutes)
-      ```
-
-      الآن أنت تعرف سر التحكم في نهايات `print()`! 🎉
-
-  - type: "quiz"
-    question: "أي من هذه الأكواد سينتج النص: 'Python هو لغة برمجة قوية'؟"
-    options:
-      - 'print("Python", end=" ")\nprint("هو", end=" ")\nprint("لغة", end=" ")\nprint("برمجة", end=" ")\nprint("قوية")'
-      - 'print("Python")\nprint("هو")\nprint("لغة")\nprint("برمجة")\nprint("قوية")'
-      - 'print("Python", end="")\nprint("هو", end="")\nprint("لغة", end="")\nprint("برمجة", end="")\nprint("قوية")'
-    solution: 0
-    explanation: "الخيار الأول يستخدم end=\" \" لإضافة مسافة بين الكلمات، مما ينتج النص المطلوب في سطر واحد."
+      ## ملخص معامل `end`
+      
+      تعلمنا اليوم كيف نتحكم في نهاية السطر:
+      
+      - `end=" "` ← مسافة بدلاً من سطر جديد
+      - `end=""` ← لصق مباشر بدون فواصل
+      - `end=", "` ← فاصلة ومسافة
+      - `end="أي_نص"` ← أي نص تريده!
+      
+      **القوة الحقيقية:** عند دمج `end` مع الحلقات، يمكننا:
+      - طباعة قوائم أفقية
+      - رسم أنماط وأشكال
+      - إنشاء أشرطة تقدم
+      - تنسيق الجداول
+      
+      في الدرس القادم، سنتعلم كيف نجمع ونحسب القيم داخل الحلقات!

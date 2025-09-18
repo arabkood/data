@@ -2,13 +2,12 @@
 type: "fill"
 lang: "python"
 question: |
-  اطبع جدول ضرب الـ 3 (من 3 إلى 30):
+  اطبع مضاعفات الرقم 10، من 10 إلى 100:
 code: |
-  print("جدول ضرب 3:")
-  for multiple in range(@@INPUT@@, @@INPUT@@, @@INPUT@@):
-      print(f"3 × {multiple//3} = {multiple}")
+  for num in range(@@INPUT@@, @@INPUT@@, @@INPUT@@):
+      print(num)
 solution:
-  - "3"
-  - "31"
-  - "3"
-explanation: "نبدأ من 3، نقفز 3 خطوات: 3, 6, 9, 12... حتى 30"
+  - "10"
+  - "101"
+  - "10"
+explanation: "نبدأ من 10، ننتهي عند 101 (لتضمين 100)، ونقفز 10 خطوات."

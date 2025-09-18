@@ -1,0 +1,12 @@
+# Step 11: Complex pattern
+type: "fill"
+lang: "python"
+question: |
+  اصنع نمط الأسهم: -> -> -> ->
+code: |
+  for i in range(4):
+      print("->", @@INPUT@@)
+  print("الهدف!")
+solution:
+  - 'end=" "'
+explanation: "نضع مسافة بعد كل سهم لفصلها بشكل واضح"

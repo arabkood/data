@@ -9,4 +9,6 @@ code: |
   print("انتهى!")
 solution: 1
 hint: "تذكر أن range تتوقف قبل الرقم النهائي"
-explanation: "range(5, 10) تعطي 5,6,7,8,9 فقط. نحتاج range(5, 11) للحصول على 10"
+explanation: |
+  range(5, 10) = 5,6,7,8,9 
+  range(5, 11) = 5,6,7,8,9,10

@@ -1,0 +1,13 @@
+# Step 3: Practice with spaces
+type: "fill"
+lang: "python"
+question: |
+  اطبع الكلمات على سطر واحد مع مسافات بينها:
+code: |
+  print("البرمجة", @@INPUT@@)
+  print("ممتعة", @@INPUT@@)
+  print("جداً!")
+solution:
+  - 'end=" "'
+  - 'end=" "'
+explanation: "end=' ' يضع مسافة واحدة بدلاً من الانتقال لسطر جديد"

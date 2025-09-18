@@ -1,0 +1,17 @@
+# Step 4: Practice with dashes
+type: "fill"
+lang: "python"
+question: |
+  اصنع خط من الشرطات على نفس السطر:
+code: |
+  print("-", @@INPUT@@)
+  print("-", @@INPUT@@)
+  print("-", @@INPUT@@)
+  print("-", @@INPUT@@)
+  print("-")
+solution:
+  - 'end=""'
+  - 'end=""'
+  - 'end=""'
+  - 'end=""'
+explanation: "end='' (نص فارغ) يلصق النتائج مباشرة بدون أي فاصل"

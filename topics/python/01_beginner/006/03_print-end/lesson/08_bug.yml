@@ -1,0 +1,12 @@
+# Step 8: Bug fixing practice
+type: "bug"
+lang: "python"
+question: "هذا الكود يجب أن يطبع الأرقام على نفس السطر. أين الخطأ؟"
+code: |
+  for i in range(1, 4):
+      print(i, end="\n")
+  print("النهاية")
+solution: 1
+explanation: "end='\\n' يعني سطر جديد، وهذا ما نريد تجنبه! يجب استخدام end=' ' أو end='' "
+expectedOutput: "1 2 3 النهاية"
+actualOutput: "1\n2\n3\nالنهاية"

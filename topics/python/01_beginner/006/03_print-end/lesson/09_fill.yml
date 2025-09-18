@@ -1,0 +1,13 @@
+# Step 9: Creating a progress bar
+type: "fill"
+lang: "python"
+question: |
+  اصنع شريط تقدم بسيط باستخدام علامات #:
+code: |
+  print("التحميل: [", end="")
+  for i in range(8):
+      print("#", @@INPUT@@)
+  print("] مكتمل!")
+solution:
+  - 'end=""'
+explanation: "نلصق علامات # مباشرة لصنع شريط متصل"

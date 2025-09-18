@@ -2,7 +2,14 @@
 type: "fill"
 lang: "python"
 question: |
-  اطبع مثلث من النجوم باستخدام range:
+  استخدم `range` لطباعة مثلث من النجوم بحجم 5 صفوف.
+
+  **المخرجات المتوقعة:**
+  *
+  **
+  ***
+  ****
+  *****
 code: |
   for stars in range(@@INPUT@@, @@INPUT@@):
       print('*' * stars)

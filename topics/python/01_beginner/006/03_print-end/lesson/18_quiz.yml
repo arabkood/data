@@ -1,0 +1,15 @@
+# Step 18: Quiz on end values
+type: "quiz"
+question: "ماذا سيكون ناتج هذا الكود؟"
+code: |
+  print("A", end="->")
+  print("B", end="->")
+  print("C")
+lang: "python"
+options:
+  - "A B C"
+  - "A->B->C"
+  - "A->\nB->\nC"
+  - "ABC"
+solution: 1
+explanation: "end='->' يضع سهم بعد كل print، والأخير بدون end ينتقل لسطر جديد"

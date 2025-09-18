@@ -1,0 +1,13 @@
+# Step 2: First practice - basic end usage
+type: "fill"
+lang: "python"
+question: |
+  اجعل الأرقام تطبع على نفس السطر مع فاصلة بينهم:
+code: |
+  print(1, @@INPUT@@)
+  print(2, @@INPUT@@)
+  print(3)
+solution:
+  - 'end=", "'
+  - 'end=", "'
+explanation: "استخدمنا end=', ' لإضافة فاصلة ومسافة بدلاً من سطر جديد"

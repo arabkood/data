@@ -1,0 +1,11 @@
+# Step 6: Practice - stars pattern
+type: "fill"
+lang: "python"
+question: |
+  اطبع 10 نجوم على سطر واحد مع مسافة بين كل نجمة:
+code: |
+  for i in range(10):
+      print("*", @@INPUT@@)
+solution:
+  - 'end=" "'
+explanation: "كل تكرار في الحلقة يطبع نجمة ومسافة على نفس السطر"

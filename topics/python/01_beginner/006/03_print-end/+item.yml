@@ -1,0 +1,12 @@
+id: 1d9bec23-585f-48a7-91f6-cffdd77041e4
+module_id: efaf01c7-f88b-4dde-89b3-3593d56230fa
+slug: print-end
+position: 3
+created_at: 2025-09-18T16:21:18.576Z
+updated_at: 2025-09-18T16:21:18.576Z
+type: lesson
+title: ورشة تنسيق الطباعة - معامل end
+difficulty: easy
+premium_only: true
+base_xp: 850
+s3_path: python/01_beginner/006/03_print-end
