@@ -1,0 +1,19 @@
+type: "fill"
+lang: "python"
+question: "أكمل كود حساب إجمالي راتب 10 موظفين، حيث كل موظف راتبه 3000 + (رقمه × 100):"
+code: |
+  total_salary = @@INPUT@@
+  print("تقرير رواتب الموظفين:")
+
+  for employee in range(@@INPUT@@, @@INPUT@@):
+      salary = 3000 + (employee * @@INPUT@@)
+      print(f"الموظف {employee}: {salary} ريال")
+      total_salary @@INPUT@@ salary
+
+  print(f"إجمالي الرواتب: {total_salary} ريال")
+solution:
+  - "0"
+  - "1"
+  - "11"
+  - "100"
+  - "+="

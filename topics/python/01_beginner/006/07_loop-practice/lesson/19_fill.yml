@@ -1,0 +1,25 @@
+type: "fill"
+lang: "python"
+question: "التحدي النهائي! أكمل برنامج حساب أرباح متجر لمدة 30 يوم، حيث الربح اليومي = 500 + (رقم اليوم × 20):"
+code: |
+  daily_base_profit = @@INPUT@@
+  total_profit = @@INPUT@@
+
+  print("تقرير أرباح المتجر الشهرية:")
+  for day in range(@@INPUT@@, @@INPUT@@):
+      daily_profit = daily_base_profit + (day * @@INPUT@@)
+      print(f"اليوم {day}: {daily_profit} ريال", @@INPUT@@)
+      @@INPUT@@ += daily_profit
+
+  print(f"إجمالي أرباح الشهر: {total_profit} ريال")
+  average_profit = total_profit @@INPUT@@ 30
+  print(f"متوسط الربح اليومي: {average_profit} ريال")
+solution:
+  - "500"
+  - "0"
+  - "1"
+  - "31"
+  - "20"
+  - "end=' '"
+  - "total_profit"
+  - "/"

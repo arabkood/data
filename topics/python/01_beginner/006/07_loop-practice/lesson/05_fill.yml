@@ -1,0 +1,8 @@
+type: "fill"
+lang: "python"
+question: "أكمل كود العد التنازلي من 10 إلى 1:"
+code: "print(\"بداية العد التنازلي...\")\nfor count in range(@@INPUT@@, @@INPUT@@, @@INPUT@@):\n    print(f\"{count}...\")\nprint(\"\U0001F680 الإطلاق! \U0001F680\")\n"
+solution:
+  - "10"
+  - "0"
+  - "-1"

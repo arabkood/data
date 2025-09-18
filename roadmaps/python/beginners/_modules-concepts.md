@@ -134,12 +134,12 @@
 
 - [x] [L] Introduction to For Loops & Range
 - [x] [L] Range Parameters Deep Dive
-- [ ] [L] Print Formatting Workshop (practice with end parameter)
-- [ ] [L] Counting & Accumulating Practice *(practice-heavy)*
-- [ ] [C] Sum Calculator
-- [ ] [L] Pattern Building Marathon *(15 steps of pattern exercises)*
+- [x] [L] Print Formatting Workshop (practice with end parameter)
+- [x] [L] Counting & Accumulating Practice *(practice-heavy)*
+- [x] [C] Sum Calculator
+- [x] [L] Pattern Building Marathon
 - [ ] [L] Loop Practice Scenarios
-- [ ] [C] Number Pattern Generator
+- [ ] [C] Multiplication table generator
 - [ ] [L] Final Review
 
 ## M7: Lists & Loops Together

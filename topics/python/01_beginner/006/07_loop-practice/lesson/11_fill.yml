@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "أكمل كود طباعة جدول ضرب العدد 6 من 1 إلى 12:"
+code: |
+  number = @@INPUT@@
+  print(f"جدول ضرب العدد {number}:")
+
+  for i in range(@@INPUT@@, @@INPUT@@):
+      result = @@INPUT@@ * @@INPUT@@
+      print(f"{number} × {i} = {result}")
+solution:
+  - "6"
+  - "1"
+  - "13"
+  - "number"
+  - "i"

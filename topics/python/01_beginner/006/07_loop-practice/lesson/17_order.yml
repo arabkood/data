@@ -1,0 +1,11 @@
+type: "order"
+lang: "python"
+question: "رتب خطوات حساب متوسط درجات الامتحان:"
+code:
+  - "total_score = 0"
+  - "student_count = 4"
+  - "for student in range(1, student_count + 1):"
+  - "    score = int(input(f'درجة الطالب {student}: '))"
+  - "    total_score += score"
+  - "average = total_score / student_count"
+  - "print(f'متوسط الدرجات: {average}')"

@@ -1,0 +1,12 @@
+id: 6b6deb97-31c4-43e4-b882-4a8ecf0726cd
+module_id: efaf01c7-f88b-4dde-89b3-3593d56230fa
+slug: loop-practice
+position: 7
+created_at: 2025-09-18T18:13:46.622Z
+updated_at: 2025-09-18T18:13:46.622Z
+type: lesson
+title: Loop Practice Scenarios
+difficulty: medium
+premium_only: true
+base_xp: 850
+s3_path: python/01_beginner/006/07_loop-practice

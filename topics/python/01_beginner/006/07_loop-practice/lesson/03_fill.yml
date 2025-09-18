@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة قائمة بأسعار 8 منتجات، حيث كل منتج يكلف رقمه × 3 ريال:"
+code: |
+  # طباعة قائمة أسعار 8 منتجات
+  for product_number in range(@@INPUT@@, @@INPUT@@):
+      price = product_number * @@INPUT@@
+      print(f"المنتج رقم {product_number}: {price} ريال")
+solution:
+  - "1"
+  - "9"
+  - "3"

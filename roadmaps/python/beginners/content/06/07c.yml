@@ -1,520 +1,321 @@
 ---
-item_id: "m6-simple-lists-loops"
-item_type: "lesson"
-title: "القوائم البسيطة في الحلقات"
+item_id: "m6-loop-practice-scenarios"
+type: "lesson"
+title: "Loop Practice Scenarios"
+base_xp: 850
+difficulty: "medium"
+premium_only: true
+
 steps:
   - type: "markdown"
     content: |
-      ## لماذا القوائم مع الحلقات؟
+      الآن بعد أن تعلمت أساسيات الـ for loops، حان الوقت لتطبيق هذه المهارات على مشاكل حقيقية!
 
-      تخيل أن لديك قائمة تسوق مكتوبة على ورقة:
-      - تفاح
-      - خبز  
-      - حليب
-      - جبن
+      في هذا الدرس، ستواجه سيناريوهات مختلفة من الحياة العملية. كل سيناريو يتطلب استخدام الحلقات بطريقة مختلفة قليلاً.
 
-      بدلاً من معالجة كل عنصر منفصلاً، يمكنك **المرور عبر القائمة** واحداً تلو الآخر. هذا بالضبط ما تفعله الحلقات مع القوائم في Python!
+      **لا تقلق** - كل المفاهيم التي تحتاجها تعلمتها بالفعل. الهدف هنا هو ممارسة تطبيقها في مواقف متنوعة.
 
   - type: "markdown"
     content: |
-      ## إنشاء واستخدام القوائم البسيطة
+      ## السيناريو الأول: متجر البقالة 🛒
 
-      **القائمة** في Python هي مجموعة مرتبة من العناصر، نضعها بين أقواس مربعة `[]`:
+      تخيل أنك تعمل في متجر بقالة، وتحتاج لطباعة قائمة بأسعار المنتجات مع أرقامها.
 
-      ```python
-      # قائمة أسماء
-      names = ["أحمد", "فاطمة", "محمد", "عائشة"]
-      
-      # قائمة أرقام
-      numbers = [10, 20, 30, 40, 50]
-      
-      # قائمة فارغة
-      empty_list = []
-      ```
-
-      لطباعة القائمة كاملة:
-      ```python
-      print(names)
-      # النتيجة: ['أحمد', 'فاطمة', 'محمد', 'عائشة']
-      ```
-
-  - type: "quiz"
-    question: "ما هي الطريقة الصحيحة لإنشاء قائمة من الألوان؟"
-    options:
-      - "colors = (أحمر، أزرق، أخضر)"
-      - 'colors = ["أحمر", "أزرق", "أخضر"]'
-      - "colors = {أحمر، أزرق، أخضر}"
-      - "colors = أحمر، أزرق، أخضر"
-    solution: 1
-    explanation: "القوائم في Python تُكتب بين أقواس مربعة []، والنصوص بين علامات اقتباس."
-
-  - type: "markdown"
-    content: |
-      ## التكرار عبر القوائم باستخدام for
-
-      أسهل طريقة للمرور عبر جميع عناصر القائمة:
+      هذا مثال بسيط لكيفية استخدام الحلقات في إدارة المتاجر:
 
       ```python
-      fruits = ["تفاح", "موز", "برتقال", "عنب"]
-      
-      for fruit in fruits:
-          print(f"أحب أكل {fruit}")
+      # طباعة قائمة أسعار المنتجات
+      for product_number in range(1, 6):
+          price = product_number * 5  # كل منتج يكلف رقمه × 5
+          print(f"المنتج رقم {product_number}: {price} ريال")
       ```
 
-      **النتيجة:**
-      ```
-      أحب أكل تفاح
-      أحب أكل موز  
-      أحب أكل برتقال
-      أحب أكل عنب
-      ```
-
-      **ملاحظة هامة:** يمكنك استخدام أي اسم متغير بدلاً من `fruit`، مثل `item` أو `element`.
+      ستحصل على مخرجات مثل: "المنتج رقم 1: 5 ريال"
 
   - type: "fill"
     lang: "python"
-    question: "أكمل الكود لطباعة جميع أسماء الطلاب مع ترحيب:"
+    question: "أكمل الكود لطباعة قائمة بأسعار 8 منتجات، حيث كل منتج يكلف رقمه × 3 ريال:"
     code: |
-      students = ["سارة", "خالد", "نور", "عبدالله"]
-      
-      for @@INPUT@@ in students:
-          print(f"مرحباً {@@INPUT@@}")
+      # طباعة قائمة أسعار 8 منتجات
+      for product_number in range(@@INPUT@@, @@INPUT@@):
+          price = product_number * @@INPUT@@
+          print(f"المنتج رقم {product_number}: {price} ريال")
     solution:
-      - "student"
-      - "student"
-    explanation: "نستخدم متغير student للإشارة إلى كل عنصر في القائمة أثناء التكرار."
-
-  - type: "markdown"
-    content: |
-      ## التكرار عبر الأرقام في القوائم
-
-      يمكننا أيضاً التعامل مع قوائم الأرقام بطريقة مماثلة:
-
-      ```python
-      scores = [85, 92, 78, 96, 88]
-      
-      for score in scores:
-          print(f"الدرجة: {score}")
-          if score >= 90:
-              print("ممتاز!")
-          elif score >= 80:
-              print("جيد جداً")
-          else:
-              print("جيد")
-      ```
-
-  - type: "fill"
-    lang: "python"
-    question: "أكمل الكود لحساب مضاعف كل رقم في القائمة:"
-    code: |
-      numbers = [3, 7, 12, 5, 9]
-      
-      for @@INPUT@@ in numbers:
-          double = num * @@INPUT@@
-          print(f"{num} × 2 = {double}")
-    solution:
-      - "num"
-      - "2"
-    explanation: "نستخدم متغير num للإشارة إلى كل رقم، ونضربه في 2 للحصول على المضاعف."
-
-  - type: "markdown"
-    content: |
-      ## استخدام القوائم مع العدادات
-
-      يمكننا دمج ما تعلمناه عن العد مع القوائم:
-
-      ```python
-      temperatures = [25, 30, 22, 35, 28, 31, 24]
-      hot_days = 0  # عداد الأيام الحارة (أكثر من 30)
-      
-      for temp in temperatures:
-          print(f"درجة الحرارة: {temp}°C")
-          if temp > 30:
-              hot_days += 1
-              print("يوم حار!")
-      
-      print(f"عدد الأيام الحارة: {hot_days}")
-      ```
-
-  - type: "quiz"
-    question: "كم عدد الأرقام الموجبة في هذه القائمة؟"
-    code: |
-      numbers = [5, -3, 8, -1, 0, 12, -7]
-      positive_count = 0
-      
-      for num in numbers:
-          if num > 0:
-              positive_count += 1
-      
-      print(positive_count)
-    lang: python
-    options:
-      - "2"
+      - "1"
+      - "9"
       - "3"
-      - "4" 
-      - "5"
-    solution: 1
-    explanation: "الأرقام الموجبة في القائمة هي: 5، 8، و 12. إذن العدد هو 3."
 
   - type: "markdown"
     content: |
-      ## إنشاء قوائم جديدة من خلال الحلقات
+      ## السيناريو الثاني: العد التنازلي للألعاب النارية 🎆
 
-      أحياناً نريد إنشاء قائمة جديدة بناء على قائمة موجودة:
+      في احتفالات رأس السنة، نحتاج لعد تنازلي قبل إطلاق الألعاب النارية.
+
+      هذا مثال رائع لاستخدام range مع step سالب:
 
       ```python
-      # القائمة الأصلية
-      prices = [100, 150, 200, 80, 120]
-      
-      # قائمة جديدة للأسعار مع الخصم 20%
-      discounted_prices = []
-      
-      for price in prices:
-          new_price = price * 0.8  # خصم 20%
-          discounted_prices.append(new_price)
-      
-      print("الأسعار الأصلية:", prices)
-      print("الأسعار بعد الخصم:", discounted_prices)
+      print("الاستعداد للألعاب النارية...")
+      for count in range(5, 0, -1):
+          print(f"{count}...")
+      print("🎆 الألعاب النارية! 🎆")
       ```
-
-      **ملاحظة:** `append()` تضيف عنصراً جديداً لنهاية القائمة.
 
   - type: "fill"
-    lang: "python" 
-    question: "أكمل الكود لإنشاء قائمة مربعات الأرقام:"
+    lang: "python"
+    question: "أكمل كود العد التنازلي من 10 إلى 1:"
     code: |
-      numbers = [2, 4, 6, 8]
-      squares = []
-      
-      for num in numbers:
-          square = @@INPUT@@ * @@INPUT@@
-          squares.@@INPUT@@(square)
-      
-      print("المربعات:", squares)
+      print("بداية العد التنازلي...")
+      for count in range(@@INPUT@@, @@INPUT@@, @@INPUT@@):
+          print(f"{count}...")
+      print("🚀 الإطلاق! 🚀")
     solution:
-      - "num"
-      - "num"
-      - "append"
-    explanation: "نحسب مربع كل رقم (num * num) ونضيفه للقائمة الجديدة باستخدام append()."
+      - "10"
+      - "0"
+      - "-1"
+
+  - type: "quiz"
+    question: "في العد التنازلي من 8 إلى 1، ما هي القيم الصحيحة لـ range؟"
+    options:
+      - "range(8, 0, -1)"
+      - "range(8, 1, -1)"
+      - "range(8, 0, 1)"
+    solution: 0
+    explanation: "نبدأ من 8، نتوقف قبل 0 (أي عند 1)، ونتحرك بخطوة -1 للعد التنازلي"
 
   - type: "markdown"
     content: |
-      ## التكرار مع الفهارس (Index)
+      ## السيناريو الثالث: حساب فاتورة المطعم 🍽️
 
-      أحياناً نحتاج لمعرفة موقع العنصر في القائمة:
+      تخيل أنك تعمل في مطعم وتحتاج لحساب إجمالي فاتورة الطاولات المختلفة.
 
       ```python
-      cities = ["الرياض", "جدة", "الدمام", "مكة"]
+      total_bill = 0
+      print("حساب فواتير الطاولات:")
       
-      for i in range(len(cities)):
-          print(f"{i + 1}. {cities[i]}")
+      for table in range(1, 4):
+          table_bill = table * 25  # كل طاولة لها فاتورة مختلفة
+          print(f"الطاولة {table}: {table_bill} ريال")
+          total_bill = total_bill + table_bill
+      
+      print(f"إجمالي اليوم: {total_bill} ريال")
       ```
 
-      **النتيجة:**
-      ```
-      1. الرياض
-      2. جدة  
-      3. الدمام
-      4. مكة
-      ```
-
-      **شرح:** `len(cities)` يعطي عدد العناصر (4)، و `range(4)` ينتج `[0, 1, 2, 3]`.
+  - type: "fill"
+    lang: "python"
+    question: "أكمل كود حساب فواتير 5 طاولات، حيث كل طاولة فاتورتها رقمها × 15 ريال:"
+    code: |
+      total_bill = @@INPUT@@
+      print("حساب فواتير الطاولات:")
+      
+      for table in range(1, @@INPUT@@):
+          table_bill = table * @@INPUT@@
+          print(f"الطاولة {table}: {table_bill} ريال")
+          @@INPUT@@ = @@INPUT@@ + table_bill
+      
+      print(f"إجمالي اليوم: {total_bill} ريال")
+    solution:
+      - "0"
+      - "6"
+      - "15"
+      - "total_bill"
+      - "total_bill"
 
   - type: "bug"
-    lang: python
-    question: "اعثر على الخطأ في هذا الكود الذي يطبع عناصر القائمة مع أرقامها:"
-    code: |
-      colors = ["أحمر", "أزرق", "أخضر"]
-      
-      for i in range(len(colors)):
-          print(f"{i}. {colors[i]}")
-    solution: 2
-    explanation: "المشكلة في طباعة الرقم من 0، يُفضل طباعته من 1 باستخدام i + 1."
-    hint: "انظر للرقم المطبوع مع كل لون"
-
-  - type: "markdown"
-    content: |
-      ## البحث في القوائم
-
-      يمكننا البحث عن عنصر معين في القائمة:
-
-      ```python
-      fruits = ["تفاح", "موز", "برتقال", "عنب"]
-      search_fruit = "موز"
-      found = False
-      
-      for fruit in fruits:
-          if fruit == search_fruit:
-              found = True
-              break  # توقف عند العثور على العنصر
-      
-      if found:
-          print(f"وُجد {search_fruit} في القائمة!")
-      else:
-          print(f"لم يُوجد {search_fruit} في القائمة")
-      ```
-
-      **ملاحظة:** `break` توقف الحلقة فوراً عند العثور على العنصر.
-
-  - type: "order"
     lang: "python"
-    question: "رتب هذا الكود للعثور على أكبر رقم في القائمة:"
-    code:
-      - "numbers = [23, 67, 12, 89, 45]"
-      - "largest = numbers[0]"
-      - |
-        for num in numbers:
-            if num > largest:
-                largest = num
-      - "print(f'أكبر رقم هو: {largest}')"
-    explanation: "نبدأ بتعريف القائمة، ثم نضع أول عنصر كأكبر قيمة، نمر عبر القائمة للمقارنة، وأخيراً نطبع النتيجة."
+    question: "اعثر على الخطأ في كود حساب متوسط درجات الطلاب:"
+    code: |
+      total_score = 0
+      student_count = 5
+      for student in range(1, student_count):
+          score = student * 10 + 50
+          print(f"الطالب {student}: {score} درجة")
+          total_score = total_score + score
+      average = total_score / student_count
+      print(f"متوسط الدرجات: {average}")
+    solution: 2
+    explanation: "يجب أن يكون range(1, student_count + 1) أو range(1, 6) ليشمل 5 طلاب. الكود الحالي يعد من 1 إلى 4 فقط"
+    hint: "كم طالب يتم احتسابهم فعلياً في الحلقة؟"
 
   - type: "markdown"
     content: |
-      ## تطبيق عملي: إدارة قائمة المهام
+      ## السيناريو الرابع: طباعة جدول الضرب 📊
 
-      دعنا نطبق ما تعلمناه في مثال عملي:
+      المعلمون يحتاجون لطباعة جداول الضرب للطلاب. دعنا ننشئ جدول ضرب بسيط:
 
       ```python
-      # قائمة المهام مع حالاتها (True = مكتملة، False = غير مكتملة)
-      tasks = ["دراسة Python", "شراء البقالة", "تنظيف المنزل", "قراءة كتاب"]
-      completed = [True, False, True, False]
+      number = 7
+      print(f"جدول ضرب العدد {number}:")
       
-      print("=== قائمة المهام ===")
-      for i in range(len(tasks)):
-          status = "✓ مكتمل" if completed[i] else "✗ غير مكتمل"
-          print(f"{i + 1}. {tasks[i]} - {status}")
-      
-      # إحصائيات
-      total_tasks = len(tasks)
-      completed_count = 0
-      
-      for status in completed:
-          if status:
-              completed_count += 1
-      
-      remaining = total_tasks - completed_count
-      print(f"\nالمجموع: {total_tasks}")
-      print(f"مكتملة: {completed_count}")  
-      print(f"متبقية: {remaining}")
+      for i in range(1, 11):
+          result = number * i
+          print(f"{number} × {i} = {result}")
       ```
 
   - type: "fill"
     lang: "python"
-    question: "أكمل كود حساب متوسط درجات كل طالب:"
+    question: "أكمل كود طباعة جدول ضرب العدد 6 من 1 إلى 12:"
     code: |
-      students = ["أحمد", "فاطمة", "سالم"]
-      grades = [[85, 90, 78], [92, 88, 95], [76, 82, 80]]
+      number = @@INPUT@@
+      print(f"جدول ضرب العدد {number}:")
       
-      for i in range(len(students)):
-          student_name = @@INPUT@@[i]
-          student_grades = grades[i]
-          
-          total = 0
-          for grade in @@INPUT@@:
-              total += grade
-          
-          average = total / len(student_grades)
-          print(f"{student_name}: {average:.1f}")
+      for i in range(@@INPUT@@, @@INPUT@@):
+          result = @@INPUT@@ * @@INPUT@@
+          print(f"{number} × {i} = {result}")
     solution:
-      - "students"
-      - "student_grades"
-    explanation: "نأخذ اسم الطالب من قائمة الأسماء ودرجاته من قائمة الدرجات، ثم نحسب المتوسط."
+      - "6"
+      - "1"
+      - "13"
+      - "number"
+      - "i"
 
   - type: "markdown"
     content: |
-      ## طرق بديلة للتعامل مع القوائم
+      ## السيناريو الخامس: نظام حضور الموظفين 👥
 
-      ### استخدام `enumerate()` للحصول على الفهرس والقيمة معاً:
-      ```python
-      colors = ["أحمر", "أزرق", "أخضر"]
-      
-      for index, color in enumerate(colors):
-          print(f"{index + 1}. {color}")
-      ```
+      في الشركات، نحتاج لتتبع حضور الموظفين وحساب إجمالي ساعات العمل:
 
-      ### استخدام `in` للتحقق من وجود عنصر:
       ```python
-      fruits = ["تفاح", "موز", "برتقال"]
+      total_hours = 0
+      print("تقرير ساعات العمل الأسبوعية:")
       
-      if "موز" in fruits:
-          print("الموز موجود في القائمة")
+      for day in range(1, 8):  # 7 أيام في الأسبوع
+          daily_hours = 8  # 8 ساعات يومياً
+          print(f"اليوم {day}: {daily_hours} ساعات")
+          total_hours += daily_hours  # طريقة مختصرة لـ total_hours = total_hours + daily_hours
+      
+      print(f"إجمالي ساعات الأسبوع: {total_hours} ساعة")
       ```
 
   - type: "quiz"
-    question: "ما الذي سيطبعه هذا الكود؟"
-    code: |
-      numbers = [1, 2, 3, 4, 5]
-      result = []
-      
-      for num in numbers:
-          if num % 2 == 1:  # الأرقام الفردية
-              result.append(num * 2)
-      
-      print(result)
-    lang: python
+    question: "ما معنى العبارة total_hours += daily_hours؟"
     options:
-      - "[1, 3, 5]"
-      - "[2, 4, 6, 8, 10]"
-      - "[2, 6, 10]"
-      - "[1, 2, 3, 4, 5]"
-    solution: 2
-    explanation: "الكود يأخذ الأرقام الفردية (1, 3, 5) ويضاعفها، فالنتيجة [2, 6, 10]."
+      - "total_hours = daily_hours"
+      - "total_hours = total_hours + daily_hours"
+      - "daily_hours = total_hours + daily_hours"
+    solution: 1
+    explanation: "الرمز += هو اختصار لإضافة القيمة إلى المتغير. فهو مساوي لكتابة total_hours = total_hours + daily_hours"
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل كود حساب إجمالي راتب 10 موظفين، حيث كل موظف راتبه 3000 + (رقمه × 100):"
+    code: |
+      total_salary = @@INPUT@@
+      print("تقرير رواتب الموظفين:")
+      
+      for employee in range(@@INPUT@@, @@INPUT@@):
+          salary = 3000 + (employee * @@INPUT@@)
+          print(f"الموظف {employee}: {salary} ريال")
+          total_salary @@INPUT@@ salary
+      
+      print(f"إجمالي الرواتب: {total_salary} ريال")
+    solution:
+      - "0"
+      - "1"
+      - "11"
+      - "100"
+      - "+="
 
   - type: "markdown"
     content: |
-      ## التعامل مع القوائم المختلطة
+      ## السيناريو السادس: حاسبة الخصومات 💰
 
-      يمكن للقوائم أن تحتوي على أنواع مختلفة من البيانات:
+      المتاجر تقدم خصومات متدرجة حسب كمية الشراء. دعنا ننشئ حاسبة خصومات:
 
       ```python
-      mixed_list = ["أحمد", 25, True, "طالب", 3.14]
+      base_price = 100
+      print("جدول الخصومات:")
       
-      for item in mixed_list:
-          print(f"العنصر: {item}, النوع: {type(item).__name__}")
+      for quantity in range(1, 6):
+          discount = quantity * 5  # خصم 5% لكل قطعة إضافية
+          final_price = base_price - discount
+          print(f"عند شراء {quantity} قطع: {final_price} ريال (خصم {discount}%)")
       ```
 
-      **النتيجة:**
-      ```
-      العنصر: أحمد, النوع: str
-      العنصر: 25, النوع: int
-      العنصر: True, النوع: bool
-      العنصر: طالب, النوع: str
-      العنصر: 3.14, النوع: float
+  - type: "bug"
+    lang: "python"
+    question: "اعثر على الخطأ في كود حساب فوائد البنك:"
+    code: |
+      initial_amount = 1000
+      print("نمو المبلغ مع الفوائد:")
+      for year in range(0, 5):
+          interest = initial_amount * 0.05
+          initial_amount = initial_amount + interest
+          print(f"السنة {year}: {initial_amount} ريال")
+    solution: 2
+    explanation: "يجب أن يبدأ العام من 1 وليس 0، أو تغيير النص ليقول 'السنة {year + 1}' لأن عادة نحسب السنوات من 1"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب خطوات حساب متوسط درجات الامتحان:"
+    code:
+      - "total_score = 0"
+      - "student_count = 4"
+      - "for student in range(1, student_count + 1):"
+      - "    score = int(input(f'درجة الطالب {student}: '))"
+      - "    total_score += score"
+      - "average = total_score / student_count"
+      - "print(f'متوسط الدرجات: {average}')"
+
+  - type: "markdown"
+    content: |
+      ## السيناريو الأخير: تحدي شامل 🎯
+
+      الآن دعنا نجمع عدة مفاهيم في تحدي واحد. سنبني برنامج لحساب تكلفة رحلة:
+
+      ```python
+      # حساب تكلفة رحلة لعدة أيام
+      daily_budget = 200
+      total_cost = 0
+      
+      print("تقرير مصاريف الرحلة:")
+      for day in range(1, 8):  # رحلة 7 أيام
+          daily_expense = daily_budget + (day * 10)  # المصاريف تزيد مع الوقت
+          print(f"اليوم {day}: {daily_expense} ريال")
+          total_cost += daily_expense
+      
+      print(f"إجمالي تكلفة الرحلة: {total_cost} ريال")
+      average_daily = total_cost / 7
+      print(f"متوسط المصاريف اليومية: {average_daily} ريال")
       ```
 
   - type: "fill"
     lang: "python"
-    question: "أكمل الكود لفصل الأرقام عن النصوص في قائمة مختلطة:"
+    question: "التحدي النهائي! أكمل برنامج حساب أرباح متجر لمدة 30 يوم، حيث الربح اليومي = 500 + (رقم اليوم × 20):"
     code: |
-      data = [10, "نص", 20, "كلمة", 30, "جملة"]
-      numbers = []
-      texts = []
+      daily_base_profit = @@INPUT@@
+      total_profit = @@INPUT@@
       
-      for item in data:
-          if @@INPUT@@(item) == int:
-              numbers.@@INPUT@@(item)
-          elif type(item) == @@INPUT@@:
-              texts.append(item)
+      print("تقرير أرباح المتجر الشهرية:")
+      for day in range(@@INPUT@@, @@INPUT@@):
+          daily_profit = daily_base_profit + (day * @@INPUT@@)
+          print(f"اليوم {day}: {daily_profit} ريال", @@INPUT@@)
+          @@INPUT@@ += daily_profit
       
-      print("الأرقام:", numbers)
-      print("النصوص:", texts)
+      print(f"إجمالي أرباح الشهر: {total_profit} ريال")
+      average_profit = total_profit @@INPUT@@ 30
+      print(f"متوسط الربح اليومي: {average_profit} ريال")
     solution:
-      - "type"
-      - "append"
-      - "str"
-    explanation: "نستخدم type() للتحقق من نوع البيانات، ونضيف الأرقام والنصوص لقوائم منفصلة."
+      - "500"
+      - "0"
+      - "1"
+      - "31"
+      - "20"
+      - "end=' '"
+      - "total_profit"
+      - "/"
 
   - type: "markdown"
     content: |
-      ## تطبيق متقدم: تحليل بيانات المبيعات
+      ## ممتاز! أنجزت التحدي 🎉
 
-      ```python
-      # بيانات المبيعات: [اسم المنتج، السعر، الكمية المباعة]
-      products = [
-          ["لابتوب", 3000, 5],
-          ["هاتف", 1200, 10], 
-          ["تابلت", 800, 8],
-          ["ساعة ذكية", 500, 15]
-      ]
-      
-      print("=== تقرير المبيعات ===")
-      total_revenue = 0
-      best_selling_product = ""
-      max_quantity = 0
-      
-      for product in products:
-          name = product[0]
-          price = product[1] 
-          quantity = product[2]
-          revenue = price * quantity
-          
-          print(f"{name}: {quantity} قطعة × {price} ريال = {revenue} ريال")
-          
-          total_revenue += revenue
-          
-          if quantity > max_quantity:
-              max_quantity = quantity
-              best_selling_product = name
-      
-      print(f"\nإجمالي الإيرادات: {total_revenue} ريال")
-      print(f"المنتج الأكثر مبيعاً: {best_selling_product} ({max_quantity} قطعة)")
-      ```
+      لقد تدربت على استخدام الحلقات في مواقف حقيقية متنوعة:
 
-  - type: "bug"
-    lang: python
-    question: "اعثر على الخطأ في كود حساب مجموع عناصر القائمة:"
-    code: |
-      numbers = [5, 10, 15, 20]
-      total = 0
-      
-      for i in range(numbers):
-          total += numbers[i]
-      
-      print(f"المجموع: {total}")
-    solution: 3
-    explanation: "يجب استخدام range(len(numbers)) وليس range(numbers). numbers هي قائمة وليست رقماً."
-    hint: "انظر لما بداخل range()"
+      ✅ **متاجر وأسعار** - تنظيم قوائم المنتجات  
+      ✅ **عد تنازلي** - استخدام الخطوة السالبة  
+      ✅ **حسابات مالية** - تجميع المبالغ  
+      ✅ **جداول رياضية** - تطبيق العمليات  
+      ✅ **تقارير** - معالجة البيانات  
 
-  - type: "markdown"
-    content: |
-      ## أفضل الممارسات مع القوائم والحلقات
+      **الخطوة التالية:** في الدرس القادم سنتعلم مفهوم جديد مثير - التحديات البرمجية المتقدمة!
 
-      ### ✅ الطرق الصحيحة:
-      ```python
-      # تكرار مباشر عندما لا نحتاج للفهرس
-      for item in my_list:
-          print(item)
-      
-      # استخدام enumerate عندما نحتاج للفهرس
-      for index, item in enumerate(my_list):
-          print(f"{index}: {item}")
-      
-      # استخدام range(len()) عند التعديل على القائمة
-      for i in range(len(my_list)):
-          my_list[i] = my_list[i] * 2
-      ```
-
-      ### ❌ تجنب هذه الأخطاء:
-      ```python
-      # خطأ: التكرار على range بدلاً من القائمة
-      for i in range(my_list):  # خطأ!
-      
-      # خطأ: فهرس خارج النطاق
-      for i in range(len(my_list) + 1):  # خطأ!
-          print(my_list[i])
-      ```
-
-  - type: "order"
-    lang: "python"
-    question: "رتب هذا الكود لإنشاء قائمة الأرقام المضاعفة والفردية منفصلة:"
-    code:
-      - "numbers = [1, 4, 7, 8, 12, 15, 18]"
-      - "even = []"
-      - "odd = []"
-      - |
-        for num in numbers:
-            if num % 2 == 0:
-                even.append(num)
-            else:
-                odd.append(num)
-      - 'print("زوجية:", even)'
-      - 'print("فردية:", odd)'
-    explanation: "نبدأ بالقائمة الأصلية، ننشئ قائمتين فارغتين، نمر عبر الأرقام ونصنفها، ثم نطبع النتائج."
-
-  - type: "markdown"
-    content: |
-      ## ملخص القوائم البسيطة في الحلقات
-
-      تعلمت اليوم كيفية:
-
-      ✅ **إنشاء القوائم** واستخدامها مع الحلقات  
-      ✅ **التكرار عبر القوائم** باستخدام `for item in list`  
-      ✅ **استخدام العدادات** مع القوائم لجمع الإحصائيات  
-      ✅ **إنشاء قوائم جديدة** من خلال معالجة قوائم موجودة  
-      ✅ **التكرار مع الفهارس** باستخدام `range(len())`  
-      ✅ **البحث في القوائم** والعثور على عناصر معينة  
-      ✅ **التعامل مع القوائم المختلطة** والمعقدة  
-      ✅ **أفضل الممارسات** وتجنب الأخطاء الشائعة
-
-      القوائم والحلقات معاً هما أساس قوي لمعالجة البيانات في Python. في الدرس القادم، سنتعلم حلقة `while` وكيفية التعامل مع الأخطاء في الحلقات!
+      تذكر: الحلقات أداة قوية لحل المشاكل المتكررة. كلما مارستها أكثر، أصبحت أسرع في رؤية الحلول.

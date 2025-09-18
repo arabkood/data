@@ -1,0 +1,15 @@
+type: "bug"
+lang: "python"
+question: "اعثر على الخطأ في كود حساب متوسط درجات الطلاب:"
+code: |
+  total_score = 0
+  student_count = 5
+  for student in range(1, student_count):
+      score = student * 10 + 50
+      print(f"الطالب {student}: {score} درجة")
+      total_score = total_score + score
+  average = total_score / student_count
+  print(f"متوسط الدرجات: {average}")
+solution: 2
+explanation: "يجب أن يكون range(1, student_count + 1) أو range(1, 6) ليشمل 5 طلاب. الكود الحالي يعد من 1 إلى 4 فقط"
+hint: "كم طالب يتم احتسابهم فعلياً في الحلقة؟"

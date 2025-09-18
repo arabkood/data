@@ -1,0 +1,19 @@
+type: "fill"
+lang: "python"
+question: "أكمل كود حساب فواتير 5 طاولات، حيث كل طاولة فاتورتها رقمها × 15 ريال:"
+code: |
+  total_bill = @@INPUT@@
+  print("حساب فواتير الطاولات:")
+
+  for table in range(1, @@INPUT@@):
+      table_bill = table * @@INPUT@@
+      print(f"الطاولة {table}: {table_bill} ريال")
+      @@INPUT@@ = @@INPUT@@ + table_bill
+
+  print(f"إجمالي اليوم: {total_bill} ريال")
+solution:
+  - "0"
+  - "6"
+  - "15"
+  - "total_bill"
+  - "total_bill"
