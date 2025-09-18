@@ -2,9 +2,9 @@ type: "fill"
 lang: "python"
 question: "أكمل الكود لطباعة 'أهلاً وسهلاً' 5 مرات:"
 code: |
-  for i in @@INPUT@@:
-      @@INPUT@@
+  for i @@INPUT@@ @@INPUT@@:
+      print("أهلاً وسهلاً")
 solution:
+  - "in"
   - "range(5)"
-  - 'print("أهلاً وسهلاً")'
 explanation: "نستخدم range(5) للتكرار 5 مرات، وprint() لطباعة النص المطلوب."
