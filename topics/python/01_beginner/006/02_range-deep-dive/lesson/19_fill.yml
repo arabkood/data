@@ -1,0 +1,18 @@
+# Step 19: Final challenge
+type: "fill"
+lang: "python"
+question: |
+  اطبع ساعة رقمية (الساعات من 0 إلى 23، بخطوات 3):
+code: |
+  print("جدول المواعيد:")
+  for hour in range(@@INPUT@@, @@INPUT@@, @@INPUT@@):
+      if hour < 12:
+          period = "صباحاً"
+      else:
+          period = "مساءً"
+      print(f"الساعة {hour:02d}:00 {period}")
+solution:
+  - "0"
+  - "24"
+  - "3"
+explanation: "من 0 إلى 23 بخطوات 3: 0, 3, 6, 9, 12, 15, 18, 21"

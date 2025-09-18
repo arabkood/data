@@ -132,9 +132,9 @@
 
 ### Items
 
-- [ ] [L] Introduction to For Loops & Range
-- [ ] [L] Range Parameters Deep Dive
-- [ ] [L] Print Formatting Workshop *(80% practice with end parameter)*
+- [x] [L] Introduction to For Loops & Range
+- [x] [L] Range Parameters Deep Dive
+- [ ] [L] Print Formatting Workshop (practice with end parameter)
 - [ ] [L] Counting & Accumulating Practice *(practice-heavy: 10+ exercises)*
 - [ ] [C] Sum Calculator
 - [ ] [L] Pattern Building Marathon *(15 steps of pattern exercises)*

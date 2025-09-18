@@ -1,0 +1,12 @@
+# Step 17: Building patterns with range
+type: "fill"
+lang: "python"
+question: |
+  اطبع مثلث من النجوم باستخدام range:
+code: |
+  for stars in range(@@INPUT@@, @@INPUT@@):
+      print('*' * stars)
+solution:
+  - "1"
+  - "6"
+explanation: "نبدأ من 1 نجمة وننتهي عند 5 نجوم"

@@ -1,0 +1,13 @@
+# Step 18: Reverse triangle
+type: "fill"
+lang: "python"
+question: |
+  اطبع مثلث مقلوب من 5 إلى 1 نجمة:
+code: |
+  for stars in range(@@INPUT@@, @@INPUT@@, @@INPUT@@):
+      print('*' * stars)
+solution:
+  - "5"
+  - "0"
+  - "-1"
+explanation: "نبدأ من 5 نجوم وننزل واحدة كل مرة حتى نصل إلى 1"

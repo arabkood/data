@@ -1,0 +1,13 @@
+# Step 12: Complex countdown
+type: "fill"
+lang: "python"
+question: |
+  اطبع الأرقام الزوجية من 20 إلى 10 بشكل تنازلي:
+code: |
+  for even in range(@@INPUT@@, @@INPUT@@, @@INPUT@@):
+      print(even, end=" ")
+solution:
+  - "20"
+  - "8"
+  - "-2"
+explanation: "نبدأ من 20، ننزل خطوتين: 20, 18, 16, 14, 12, 10"

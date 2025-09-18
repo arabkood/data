@@ -1,0 +1,9 @@
+# Step 15: Complex practice combining all
+type: "order"
+lang: "python"
+question: "رتب الكود لطباعة: سنوات كأس العالم من 2010 إلى 2022"
+code:
+  - "print('سنوات كأس العالم:')"
+  - "for year in range(2010, 2023, 4):"
+  - "    print(f'كأس العالم {year}')"
+explanation: "كأس العالم كل 4 سنوات: 2010, 2014, 2018, 2022"

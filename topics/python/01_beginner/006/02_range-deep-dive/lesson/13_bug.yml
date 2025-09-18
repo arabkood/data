@@ -1,0 +1,12 @@
+# Step 13: Debug negative step
+type: "bug"
+lang: "python"
+question: "لماذا لا يطبع هذا الكود أي شيء؟"
+code: |
+  print("العد من 5 إلى 1:")
+  for i in range(5, 0, 1):
+      print(i)
+  print("انتهى")
+solution: 1
+hint: "انظر إلى اتجاه الخطوة مقارنة بالبداية والنهاية"
+explanation: "نحاول الذهاب من 5 إلى 0 بخطوة موجبة! نحتاج خطوة سالبة: range(5, 0, -1)"

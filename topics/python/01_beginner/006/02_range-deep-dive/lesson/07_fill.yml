@@ -1,0 +1,13 @@
+# Step 7: Practice step parameter
+type: "fill"
+lang: "python"
+question: |
+  اطبع الأرقام الزوجية من 2 إلى 10:
+code: |
+  for even in range(@@INPUT@@, @@INPUT@@, @@INPUT@@):
+      print(even)
+solution:
+  - "2"
+  - "11"
+  - "2"
+explanation: "نبدأ من 2، ننتهي عند 11، ونقفز خطوتين في كل مرة"

@@ -1,0 +1,11 @@
+# Step 11: Practice countdown
+type: "fill"
+lang: "python"
+question: |
+  اكتب عد تنازلي من 10 إلى 1:
+code: "print(\"العد التنازلي يبدأ!\")\nfor count in range(@@INPUT@@, @@INPUT@@, @@INPUT@@):\n    print(count)\nprint(\"انطلق! \U0001F680\")\n"
+solution:
+  - "10"
+  - "0"
+  - "-1"
+explanation: "نبدأ من 10، ننتهي عند 0 (غير مضمن)، نقفز -1 كل مرة"

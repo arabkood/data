@@ -1,0 +1,13 @@
+# Step 4: Practice with different ranges
+type: "fill"
+lang: "python"
+question: |
+  اطبع أعمار الأطفال في الروضة (من 3 إلى 6 سنوات):
+code: |
+  print("أعمار أطفال الروضة:")
+  for age in range(@@INPUT@@, @@INPUT@@):
+      print(f"عمر {age} سنوات")
+solution:
+  - "3"
+  - "7"
+explanation: "الأعمار من 3 إلى 6، لذا نحتاج range(3, 7)"

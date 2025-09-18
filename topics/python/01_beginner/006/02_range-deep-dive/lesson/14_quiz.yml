@@ -1,0 +1,10 @@
+# Step 14: Quiz on range parameters
+type: "quiz"
+question: "ما الذي سيطبعه range(15, 5, -3)؟"
+options:
+  - "15, 12, 9, 6"
+  - "15, 12, 9, 6, 3"
+  - "15, 12, 9"
+  - "5, 8, 11, 14"
+solution: 0
+explanation: "نبدأ من 15، ننزل 3 خطوات: 15, 12, 9, 6. نتوقف عند 6 لأن 3 أصغر من 5"

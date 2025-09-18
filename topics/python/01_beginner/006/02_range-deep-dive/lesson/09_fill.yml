@@ -1,0 +1,14 @@
+# Step 9: Multiples practice
+type: "fill"
+lang: "python"
+question: |
+  اطبع جدول ضرب الـ 3 (من 3 إلى 30):
+code: |
+  print("جدول ضرب 3:")
+  for multiple in range(@@INPUT@@, @@INPUT@@, @@INPUT@@):
+      print(f"3 × {multiple//3} = {multiple}")
+solution:
+  - "3"
+  - "31"
+  - "3"
+explanation: "نبدأ من 3، نقفز 3 خطوات: 3, 6, 9, 12... حتى 30"
