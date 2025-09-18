@@ -1,0 +1,9 @@
+type: "fill"
+lang: "python"
+question: "أكمل هذا الكود المشابه لتحليل درجات الطلاب:"
+code: "students_grades = [\n    {\"name\": \"أحمد\", \"grades\": [85, 90, 78]},\n    {\"name\": \"فاطمة\", \"grades\": [92, 88, 95]},\n    {\"name\": \"سالم\", \"grades\": [76, 82, 80]}\n]\n\nclass_total = 0\nstudent_count = 0\ntop_student = \"\"\nhighest_average = 0\n\nfor student in students_grades:\n    name = student[\"name\"]\n    grades = student[\"@@INPUT@@\"]\n    \n    # حساب متوسط الطالب\n    student_total = 0\n    for grade in grades:\n        student_total @@INPUT@@ grade\n    \n    student_average = student_total / len(grades)\n    print(f\"{name}: {student_average:.1f}\")\n    \n    # تحديث إحصائيات الفصل\n    class_total += student_average\n    @@INPUT@@ += 1\n    \n    # تحديد أفضل طالب\n    if student_average > highest_average:\n        highest_average = student_average\n        top_student = name\n\nclass_average = class_total / student_count\nprint(f\"متوسط الفصل: {class_average:.1f}\")\nprint(f\"أفضل طالب: {top_student} ({highest_average:.1f})\")\n"
+solution:
+  - "grades"
+  - "+="
+  - "student_count"
+explanation: "نصل لدرجات الطالب، نجمعها، ونعد الطلاب لحساب الإحصائيات."

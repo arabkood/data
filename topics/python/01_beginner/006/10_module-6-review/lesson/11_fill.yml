@@ -1,0 +1,17 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود للعثور على أطول اسم في القائمة:"
+code: |
+  names = ["أحمد", "فاطمة", "عبدالرحمن", "نور"]
+  longest_name = ""
+
+  for @@INPUT@@ in names:
+      if len(name) > len(@@INPUT@@):
+          longest_name = @@INPUT@@
+
+  print(f"أطول اسم: {longest_name}")
+solution:
+  - "name"
+  - "longest_name"
+  - "name"
+explanation: "نقارن طول كل اسم مع أطول اسم حالي، ونحدث longest_name إذا وجدنا اسماً أطول."

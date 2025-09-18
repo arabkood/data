@@ -1,0 +1,12 @@
+id: cdf62aeb-2456-4d4a-a0aa-7f83beabec24
+module_id: efaf01c7-f88b-4dde-89b3-3593d56230fa
+slug: number-guesser
+position: 11
+created_at: 2025-09-18T11:34:31.863Z
+updated_at: 2025-09-18T11:34:31.863Z
+type: code
+title: 'تحدي: مدقق كلمة المرور الذكي'
+difficulty: hard
+premium_only: true
+base_xp: 1400
+s3_path: python/01_beginner/006/11_number-guesser

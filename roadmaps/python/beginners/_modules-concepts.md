@@ -138,12 +138,12 @@
 - [x] [L] print(x, end="...")
 - [x] [L] Nested Loops
 - [x] [C] Pattern Generator
-- [ ] [L] Counting & Tracking in Loops
-- [ ] [L] Simple Lists in Loops
-- [ ] [L] While Loops
-- [ ] [L] When Loops Go Wrong
-- [ ] [L] Final Review
-- [ ] [C] Number Guessing Game
+- [x] [L] Counting & Tracking in Loops
+- [x] [L] Simple Lists in Loops
+- [x] [L] While Loops
+- [x] [L] When Loops Go Wrong
+- [x] [L] Final Review
+- [x] [C] Number Guessing Game
 
 ## M7: Mastering Lists
 

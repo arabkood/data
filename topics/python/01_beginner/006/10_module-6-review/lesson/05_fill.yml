@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة الأرقام الفردية من 1 إلى 9:"
+code: |
+  for i in range(@@INPUT@@, @@INPUT@@, @@INPUT@@):
+      print(i)
+solution:
+  - "1"
+  - "10"
+  - "2"
+explanation: "نبدأ من 1، ننتهي عند 10 (غير متضمنة)، ونزيد بخطوة 2 للحصول على الأرقام الفردية."
