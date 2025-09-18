@@ -1,0 +1,22 @@
+# Step 13: Complex pattern challenge
+type: "fill"
+lang: "python"
+question: |
+  تحدي متقدم! اكتب كود لإنشاء هذا النمط:
+  ```
+  1
+  22
+  333
+  4444
+  ```
+code: |
+  for i in range(@@INPUT@@, @@INPUT@@):
+      for j in range(@@INPUT@@):
+          print(@@INPUT@@, end="")
+      print()
+solution:
+  - "1"
+  - "5"
+  - "i"
+  - "i"
+explanation: "نطبع الرقم i في كل موضع، وعدد المرات = i أيضًا. لذلك الصف الثالث يطبع 3 ثلاث مرات."

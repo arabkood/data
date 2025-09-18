@@ -1,0 +1,12 @@
+# Step 11: Bug finding - Triangle with error
+type: "bug"
+lang: "python"
+question: "هذا الكود يجب أن ينشئ مثلث أرقام لكن به خطأ. أين المشكلة؟"
+code: |
+  for i in range(1, 5):
+      for j in range(1, i):
+          print(j, end="")
+      print()
+solution: 1
+explanation: "المشكلة في range(1, i) - يجب أن تكون range(1, i + 1) لتشمل الرقم i نفسه."
+hint: "انتبه لنهاية نطاق الحلقة الداخلية"

@@ -1,0 +1,10 @@
+# Step 12: Order exercise - Build countdown pattern
+type: "order"
+lang: "python"
+question: "رتب الأسطر لإنشاء نمط عكسي (4321، 321، 21، 1):"
+code:
+  - "for i in range(4, 0, -1):"
+  - "    for j in range(i, 0, -1):"
+  - "        print(j, end=\"\")"
+  - "    print()"
+explanation: "نبدأ من 4 وننزل لـ 1، وفي كل صف نطبع من i إلى 1 تنازليًا."

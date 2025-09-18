@@ -1,331 +1,266 @@
 ---
-item_id: "m6-counting-tracking"
-item_type: "lesson"
-title: "العد والتتبع في الحلقات"
+item_id: "m6-lesson-5-pattern-building-marathon"
+type: "lesson"
+title: "ماراثون بناء الأنماط"
+base_xp: 800
+difficulty: "medium"
+premium_only: true
+
 steps:
+  # Step 1: Introduction - Why patterns matter
   - type: "markdown"
     content: |
-      ## لماذا نحتاج للعد والتتبع؟
+      الآن بعد أن تعلمت حلقات for والدالة range، حان الوقت للمرح الحقيقي!
 
-      تخيل أنك تعمل كمحاسب في متجر، وتريد معرفة:
-      - كم عدد المبيعات اليوم؟
-      - كم إجمالي المبلغ المحصل؟
-      - كم عدد العملاء الذين اشتروا أكثر من 100 ريال؟
+      **بناء الأنماط** هو مثل الرسم بالكود. سنستخدم حلقات for لإنشاء أشكال وأنماط رائعة على الشاشة.
 
-      هذا بالضبط ما نسميه **العد والتتبع في الحلقات** - استخدام متغيرات خاصة لجمع المعلومات أثناء تكرار العمليات.
+      لماذا نتعلم هذا؟ لأنه يساعدك على:
+      - **فهم كيف تعمل الحلقات** بصريًا
+      - **التفكير المنطقي** في حل المشاكل
+      - **الإبداع** في البرمجة
 
+  # Step 2: Simple horizontal line
   - type: "markdown"
     content: |
-      ## المتغير العداد (Counter Variable)
-
-      **العداد** هو متغير نستخدمه لحساب عدد المرات التي حدث فيها شيء معين.
-
-      إليك المثال الأساسي:
+      لنبدأ بأبسط نمط: **خط أفقي من النجوم**
 
       ```python
-      counter = 0  # نبدأ من الصفر
-      
       for i in range(5):
-          counter = counter + 1  # أو counter += 1
-          print(f"المرة رقم: {counter}")
-      
-      print(f"المجموع النهائي: {counter}")
+          print("*", end="")
       ```
 
-      **النتيجة:**
-      ```
-      المرة رقم: 1
-      المرة رقم: 2
-      المرة رقم: 3
-      المرة رقم: 4
-      المرة رقم: 5
-      المجموع النهائي: 5
-      ```
+      الناتج: `*****`
 
-  - type: "quiz"
-    question: "ما قيمة المتغير `count` بعد تنفيذ هذا الكود؟"
+      لاحظ `end=""` - هذا يجعل النجوم تطبع في نفس السطر بدلاً من أسطر منفصلة!
+
+  # Step 3: Fill - Create horizontal line
+  - type: "fill"
+    lang: "python"
+    question: |
+      اكتب كود لطباعة خط أفقي من 8 نجوم:
     code: |
-      count = 0
+      for @@INPUT@@ in range(@@INPUT@@):
+          print("*", @@INPUT@@)
+    solution:
+      - "/^[a-zA-Z_][a-zA-Z0-9_]*$/"
+      - "8"
+      - "end=\"\""
+    explanation: "نستخدم range(8) للحصول على 8 تكرارات، و end=\"\" لطباعة النجوم في نفس السطر."
+
+  # Step 4: Vertical line pattern
+  - type: "markdown"
+    content: |
+      الآن لنصنع **خط عمودي**:
+
+      ```python
+      for i in range(4):
+          print("*")
+      ```
+
+      الناتج:
+      ```
+      *
+      *
+      *
+      *
+      ```
+
+      هنا لا نحتاج `end=""` لأننا نريد كل نجمة في سطر منفصل.
+
+  # Step 5: Fill - Vertical pattern with numbers
+  - type: "fill"
+    lang: "python"
+    question: |
+      اكتب كود لطباعة الأرقام من 1 إلى 6 عموديًا:
+    code: |
+      for @@INPUT@@ in range(1, @@INPUT@@):
+          print(@@INPUT@@)
+    solution:
+      - "/^[a-zA-Z_][a-zA-Z0-9_]*$/"
+      - "7"
+      - "/^[a-zA-Z_][a-zA-Z0-9_]*$/"
+    explanation: "نستخدم range(1, 7) للحصول على الأرقام من 1 إلى 6، ونطبع قيمة المتغير في كل دورة."
+
+  # Step 6: Rectangle pattern
+  - type: "markdown"
+    content: |
+      الآن شيء أكثر تعقيدًا: **مستطيل من النجوم**!
+
+      ```python
       for i in range(3):
-          count += 1
-      print(count)
-    lang: python
-    options:
-      - "0"
-      - "2"
-      - "3"
-      - "4"
-    solution: 2
-    explanation: "المتغير count يبدأ من 0، وفي كل تكرار من التكرارات الثلاثة يزيد بـ 1، فالنتيجة النهائية هي 3."
-
-  - type: "fill"
-    lang: "python"
-    question: "أكمل الكود لعد الأرقام الزوجية من 1 إلى 10:"
-    code: |
-      even_count = @@INPUT@@
-      
-      for i in range(1, 11):
-          if i % 2 == 0:
-              @@INPUT@@ += 1
-      
-      print(f"عدد الأرقام الزوجية: {even_count}")
-    solution:
-      - "0"
-      - "even_count"
-    explanation: "نبدأ العداد من 0، ونزيد قيمته بـ 1 في كل مرة نجد رقماً زوجياً."
-
-  - type: "markdown"
-    content: |
-      ## المتغير المجمع (Accumulator Variable)
-
-      **المجمع** هو متغير نستخدمه لجمع القيم أو تراكمها.
-
-      مثال: حساب مجموع الأرقام من 1 إلى 5:
-
-      ```python
-      total = 0  # نبدأ من الصفر
-      
-      for i in range(1, 6):
-          total = total + i  # أو total += i
-          print(f"أضفنا {i}، المجموع الآن: {total}")
-      
-      print(f"المجموع النهائي: {total}")
+          for j in range(5):
+              print("*", end="")
+          print()  # سطر جديد بعد كل صف
       ```
 
-      **النتيجة:**
+      الناتج:
       ```
-      أضفنا 1، المجموع الآن: 1
-      أضفنا 2، المجموع الآن: 3
-      أضفنا 3، المجموع الآن: 6
-      أضفنا 4، المجموع الآن: 10
-      أضفنا 5، المجموع الآن: 15
-      المجموع النهائي: 15
+      *****
+      *****
+      *****
       ```
 
-  - type: "fill"
-    lang: "python"
-    question: "أكمل الكود لحساب مجموع المربعات للأرقام من 1 إلى 4:"
-    code: |
-      sum_of_squares = 0
-      
-      for i in @@INPUT@@:
-          square = i * i
-          @@INPUT@@ += square
-      
-      print(f"مجموع المربعات: {sum_of_squares}")
-    solution:
-      - "range(1, 5)"
-      - "sum_of_squares"
-    explanation: "نستخدم range(1, 5) للأرقام من 1 إلى 4، ونضيف مربع كل رقم إلى المجموع."
+      هذا يُسمى **حلقة متداخلة** - حلقة داخل حلقة!
 
-  - type: "markdown"
-    content: |
-      ## العد الشرطي (Conditional Counting)
-
-      أحياناً نريد أن نعد فقط العناصر التي تحقق شرطاً معيناً.
-
-      مثال: عد الأرقام الموجبة:
-
-      ```python
-      positive_count = 0
-      numbers = [3, -2, 7, -1, 0, 5]
-      
-      for num in numbers:
-          if num > 0:
-              positive_count += 1
-      
-      print(f"عدد الأرقام الموجبة: {positive_count}")
-      ```
-
-      **النتيجة:** `عدد الأرقام الموجبة: 3`
-
+  # Step 7: Quiz - Understanding nested loops
   - type: "quiz"
-    question: "ما عدد الأرقام الأكبر من 10 في هذه القائمة؟"
+    question: "كم نجمة سيطبع هذا الكود؟"
     code: |
-      numbers = [5, 15, 8, 12, 3, 20]
-      count = 0
-      
-      for num in numbers:
-          if num > 10:
-              count += 1
-      
-      print(count)
-    lang: python
+      for i in range(2):
+          for j in range(4):
+              print("*", end="")
+          print()
     options:
-      - "2"
-      - "3" 
-      - "4"
-      - "5"
+      - "6 نجوم"
+      - "8 نجوم"
+      - "4 نجوم"
+      - "2 نجوم"
     solution: 1
-    explanation: "الأرقام الأكبر من 10 هي: 15، 12، و 20. إذن العدد هو 3."
+    explanation: "الحلقة الخارجية تتكرر مرتين، والداخلية 4 مرات في كل دورة. إذن: 2 × 4 = 8 نجوم إجمالاً."
 
+  # Step 8: Triangle pattern - increasing
   - type: "markdown"
     content: |
-      ## استخدام عدة متغيرات للتتبع
-
-      يمكننا استخدام أكثر من متغير لتتبع معلومات مختلفة في نفس الوقت:
+      الآن لنصنع **مثلث متزايد**:
 
       ```python
-      positive_count = 0
-      negative_count = 0
-      zero_count = 0
-      
-      numbers = [3, -2, 0, 7, -1, 0, 5]
-      
-      for num in numbers:
-          if num > 0:
-              positive_count += 1
-          elif num < 0:
-              negative_count += 1
-          else:
-              zero_count += 1
-      
-      print(f"موجبة: {positive_count}")
-      print(f"سالبة: {negative_count}")  
-      print(f"صفر: {zero_count}")
+      for i in range(1, 5):
+          for j in range(i):
+              print("*", end="")
+          print()
       ```
 
+      الناتج:
+      ```
+      *
+      **
+      ***
+      ****
+      ```
+
+      السر: في كل صف، نطبع عدد النجوم = رقم الصف!
+
+  # Step 9: Fill - Complete the triangle
   - type: "fill"
     lang: "python"
-    question: "أكمل الكود لحساب عدد الأرقام الزوجية والفردية:"
+    question: |
+      أكمل الكود لإنشاء مثلث من 5 صفوف:
     code: |
-      even_count = 0
-      odd_count = 0
-      
-      for i in range(1, 11):
-          if i % 2 == 0:
-              @@INPUT@@ += 1
-          else:
-              @@INPUT@@ += 1
-      
-      print(f"زوجية: {even_count}, فردية: {odd_count}")
+      for i in range(@@INPUT@@, @@INPUT@@):
+          for j in range(@@INPUT@@):
+              print("*", end="")
+          @@INPUT@@
     solution:
-      - "even_count"
-      - "odd_count"
-    explanation: "إذا كان الرقم زوجياً (باقي القسمة على 2 يساوي 0)، نزيد عداد الزوجية، وإلا نزيد عداد الفردية."
+      - "1"
+      - "6"
+      - "i"
+      - "print()"
+    explanation: "نستخدم range(1, 6) للصفوف من 1 إلى 5، ونطبع i نجوم في كل صف، ثم ننتقل لسطر جديد."
 
-  - type: "bug"
-    lang: python
-    question: "اعثر على الخطأ في هذا الكود الذي يحسب مجموع الأرقام الموجبة:"
-    code: |
-      total = 0
-      numbers = [3, -2, 7, -1, 5]
-      
-      for num in numbers:
-          if num > 0:
-              total = num
-      
-      print(f"مجموع الأرقام الموجبة: {total}")
-    solution: 4
-    explanation: "يجب استخدام += بدلاً من = لتجميع القيم. استخدام = يعني استبدال القيمة بدلاً من إضافتها."
-    hint: "انظر لكيفية إضافة القيم إلى المجموع"
-
+  # Step 10: Number triangle
   - type: "markdown"
     content: |
-      ## تتبع القيم الأكبر والأصغر
-
-      يمكننا أيضاً تتبع أكبر وأصغر القيم:
+      مثلث من **الأرقام** أجمل!
 
       ```python
-      numbers = [12, 3, 25, 8, 15]
-      
-      largest = numbers[0]  # نبدأ بأول عنصر
-      smallest = numbers[0]
-      
-      for num in numbers:
-          if num > largest:
-              largest = num
-          if num < smallest:
-              smallest = num
-      
-      print(f"الأكبر: {largest}")
-      print(f"الأصغر: {smallest}")
+      for i in range(1, 4):
+          for j in range(1, i + 1):
+              print(j, end="")
+          print()
       ```
 
+      الناتج:
+      ```
+      1
+      12
+      123
+      ```
+
+      هنا نطبع الرقم `j` بدلاً من النجوم.
+
+  # Step 11: Bug finding - Triangle with error
+  - type: "bug"
+    lang: "python"
+    question: "هذا الكود يجب أن ينشئ مثلث أرقام لكن به خطأ. أين المشكلة؟"
+    code: |
+      for i in range(1, 5):
+          for j in range(1, i):
+              print(j, end="")
+          print()
+    solution: 1
+    explanation: "المشكلة في range(1, i) - يجب أن تكون range(1, i + 1) لتشمل الرقم i نفسه."
+    hint: "انتبه لنهاية نطاق الحلقة الداخلية"
+
+  # Step 12: Order exercise - Build countdown pattern
   - type: "order"
     lang: "python"
-    question: "رتب هذا الكود لحساب متوسط الأرقام الموجبة فقط:"
+    question: "رتب الأسطر لإنشاء نمط عكسي (4321، 321، 21، 1):"
     code:
-      - "positive_sum = 0"
-      - "positive_count = 0"
-      - "numbers = [5, -3, 8, -1, 12]"
-      - |
-        for num in numbers:
-            if num > 0:
-                positive_sum += num
-                positive_count += 1
-      - |
-        if positive_count > 0:
-            average = positive_sum / positive_count
-            print(f"متوسط الأرقام الموجبة: {average}")
-    explanation: "نحتاج أولاً لتعريف المتغيرات، ثم القائمة، ثم الحلقة لجمع القيم الموجبة، وأخيراً حساب وطباعة المتوسط."
+      - "for i in range(4, 0, -1):"
+      - "    for j in range(i, 0, -1):"
+      - "        print(j, end=\"\")"
+      - "    print()"
+    explanation: "نبدأ من 4 وننزل لـ 1، وفي كل صف نطبع من i إلى 1 تنازليًا."
 
-  - type: "markdown"
-    content: |
-      ## تطبيق عملي: محلل النتائج
-
-      دعنا نطبق ما تعلمناه في مثال عملي - تحليل درجات الطلاب:
-
-      ```python
-      grades = [85, 92, 78, 96, 88, 73, 90]
-      
-      # متغيرات التتبع
-      total = 0
-      count = 0
-      passed = 0  # درجة النجاح 75 فما فوق
-      excellent = 0  # درجة ممتاز 90 فما فوق
-      
-      for grade in grades:
-          total += grade
-          count += 1
-          
-          if grade >= 75:
-              passed += 1
-          if grade >= 90:
-              excellent += 1
-      
-      # النتائج
-      average = total / count
-      pass_rate = (passed / count) * 100
-      
-      print(f"المتوسط: {average:.1f}")
-      print(f"معدل النجاح: {pass_rate:.1f}%")
-      print(f"عدد الممتازين: {excellent}")
-      ```
-
+  # Step 13: Complex pattern challenge
   - type: "fill"
     lang: "python"
-    question: "أكمل كود تحليل المبيعات اليومية:"
+    question: |
+      تحدي متقدم! اكتب كود لإنشاء هذا النمط:
+      ```
+      1
+      22
+      333
+      4444
+      ```
     code: |
-      daily_sales = [150, 200, 175, 300, 250, 180, 220]
-      
-      total_sales = 0
-      high_sales_days = 0  # أيام المبيعات العالية (أكثر من 200)
-      
-      for sale in daily_sales:
-          @@INPUT@@ += sale
-          if sale > 200:
-              @@INPUT@@ += 1
-      
-      average_daily = total_sales / len(daily_sales)
-      print(f"متوسط المبيعات اليومية: {average_daily:.1f}")
-      print(f"أيام المبيعات العالية: {high_sales_days}")
+      for i in range(@@INPUT@@, @@INPUT@@):
+          for j in range(@@INPUT@@):
+              print(@@INPUT@@, end="")
+          print()
     solution:
-      - "total_sales"
-      - "high_sales_days"
-    explanation: "نجمع إجمالي المبيعات في total_sales، ونعد الأيام التي تجاوزت 200 في high_sales_days."
+      - "1"
+      - "5"
+      - "i"
+      - "i"
+    explanation: "نطبع الرقم i في كل موضع، وعدد المرات = i أيضًا. لذلك الصف الثالث يطبع 3 ثلاث مرات."
 
+  # Step 14: Diamond pattern introduction
   - type: "markdown"
     content: |
-      ## ملخص العد والتتبع
+      **تحدي الخبراء**: نمط الماس! 💎
 
-      تعلمت اليوم كيفية:
+      ```python
+      # الجزء العلوي
+      for i in range(1, 4):
+          for j in range(3 - i):
+              print(" ", end="")
+          for j in range(i):
+              print("* ", end="")
+          print()
+      ```
 
-      ✅ **استخدام العدادات** لحساب عدد مرات حدوث شيء معين  
-      ✅ **استخدام المجمعات** لجمع وتراكم القيم  
-      ✅ **العد الشرطي** - العد فقط عند تحقق شرط معين  
-      ✅ **استخدام متعدد المتغيرات** لتتبع معلومات مختلفة  
-      ✅ **تتبع القيم القصوى والدنيا**  
-      ✅ **التطبيق العملي** في تحليل البيانات
+      الناتج:
+      ```
+        * 
+       * * 
+      * * * 
+      ```
 
-      هذه المهارات أساسية في البرمجة وتحليل البيانات. في الدرس القادم، سنتعلم كيفية استخدام القوائم مع الحلقات بطريقة أكثر تفصيلاً!
+      هذا يستخدم **مسافات فارغة** لإنشاء الشكل!
+
+  # Step 15: Summary and bridge to next lesson
+  - type: "markdown"
+    content: |
+      🎉 **أحسنت! لقد أنهيت ماراثون الأنماط!**
+
+      تعلمت اليوم:
+      - ✅ إنشاء خطوط أفقية وعمودية
+      - ✅ استخدام الحلقات المتداخلة
+      - ✅ بناء مثلثات متزايدة وأنماط أرقام
+      - ✅ التحكم في تنسيق الطباعة
+      - ✅ حل تحديات الأنماط المعقدة
+
+      **التالي**: سنتعلم كيفية العد والتجميع باستخدام الحلقات، مما يفتح المجال لحسابات أكثر قوة!
+
+      تذكر: كل مبرمج عظيم بدأ بأنماط بسيطة مثل هذه. أنت في الطريق الصحيح! 🚀

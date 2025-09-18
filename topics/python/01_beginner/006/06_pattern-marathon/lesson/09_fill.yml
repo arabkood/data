@@ -1,0 +1,16 @@
+# Step 9: Fill - Complete the triangle
+type: "fill"
+lang: "python"
+question: |
+  أكمل الكود لإنشاء مثلث من 5 صفوف:
+code: |
+  for i in range(@@INPUT@@, @@INPUT@@):
+      for j in range(@@INPUT@@):
+          print("*", end="")
+      @@INPUT@@
+solution:
+  - "1"
+  - "6"
+  - "i"
+  - "print()"
+explanation: "نستخدم range(1, 6) للصفوف من 1 إلى 5، ونطبع i نجوم في كل صف، ثم ننتقل لسطر جديد."
