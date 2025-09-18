@@ -1,0 +1,9 @@
+type: "bug"
+lang: "python"
+question: "ابحث عن الخطأ في هذا الكود:"
+code: |
+  for i in range(3)
+      print(f"العدد هو {i}")
+solution: 0
+explanation: "نسيان النقطتين (:) في نهاية سطر for. يجب أن يكون: for i in range(3):"
+hint: "تحقق من نهاية السطر الأول"

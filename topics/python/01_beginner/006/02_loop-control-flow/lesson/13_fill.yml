@@ -1,0 +1,16 @@
+# Step 13: Complex example
+type: "fill"
+lang: "python"
+question: |
+  أكمل البرنامج الذي يحسب عدد الأرقام الزوجية من 1 إلى 20:
+code: |
+  count = 0
+  for i in range(@@INPUT@@, @@INPUT@@):
+      if i % 2 == @@INPUT@@:
+          count = count + 1
+  print(f"عدد الأرقام الزوجية: {count}")
+solution:
+  - "1"
+  - "21"
+  - "0"
+explanation: "نفحص من 1 إلى 20، والرقم زوجي إذا كان باقي قسمته على 2 يساوي 0."

@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "اكتب حلقة تطبع قيمة i في كل دورة لـ 4 مرات:"
+code: |
+  for @@INPUT@@ in range(@@INPUT@@):
+      print(@@INPUT@@)
+solution:
+  - "i"
+  - "4"
+  - "i"
+explanation: "المتغير i يأخذ قيماً من 0 إلى 3، وسنطبع قيمته في كل دورة."

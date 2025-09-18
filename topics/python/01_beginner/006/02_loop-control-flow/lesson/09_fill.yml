@@ -1,0 +1,14 @@
+# Step 9: Practice with real example
+type: "fill"
+lang: "python"
+question: |
+  اطبع جدول الضرب للرقم 5 (من 5×1 إلى 5×5):
+code: |
+  for i in range(@@INPUT@@, @@INPUT@@):
+      result = 5 * i
+      print(f"5 × {i} = {@@INPUT@@}")
+solution:
+  - "1"
+  - "6"
+  - "result"
+explanation: "نبدأ من 1 وننتهي عند 6 لنحصل على الأرقام 1-5، ونطبع النتيجة."

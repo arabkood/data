@@ -1,0 +1,10 @@
+# Step 12: Order exercise
+type: "order"
+lang: "python"
+question: "رتب الكود لحساب مجموع الأرقام من 1 إلى 100:"
+code:
+  - "sum = 0"
+  - "for num in range(1, 101):"
+  - "    sum = sum + num"
+  - "print(f\"المجموع هو: {sum}\")"
+explanation: "نبدأ بتعريف المتغير `sum`، ثم الحلقة التي تجمع الأرقام، وأخيراً نطبع النتيجة."

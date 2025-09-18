@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود ليطبع 'المحاولة رقم X' لـ 5 محاولات:"
+code: |
+  for i in range(@@INPUT@@):
+      print(f"@@INPUT@@")
+solution:
+  - "5"
+  - "المحاولة رقم {i}"
+explanation: "نستخدم f-string لدمج قيمة i مع النص، وrange(5) للحصول على 5 دورات."

@@ -119,129 +119,170 @@
 - [x] [L] Final Review
 - [x] [C] Smart Recommendation Engine
 
-## M6: Repeating Actions
+## M6: Mastering For Loops
 
 ### Concepts
 
-- For loops using `range()`
-- Loop control flow (`break`, `continue`, `pass`)
-- Let's nest loops!
-- Counting and Tracking in Loops
-- Very simple list and using it in loops
-- Let's `while` it!
-- When Loops Go Wrong, error driven practice
+- For loops with `range()` basics
+- Understanding range parameters (start, stop, step)
+- The `end=""` parameter for print formatting
+- Counting and accumulating values in loops
+- Creating simple patterns and sequences
+- Loop execution flow and iteration tracking
 
 ### Items
 
-- [x] [L] Introduction to For Loops & Range
-- [x] [L] Loop Control Flow
-- [x] [L] print(x, end="...")
-- [x] [L] Nested Loops
-- [x] [C] Pattern Generator
-- [x] [L] Counting & Tracking in Loops
-- [x] [L] Simple Lists in Loops
-- [x] [L] While Loops
-- [x] [L] When Loops Go Wrong
-- [x] [L] Final Review
-- [x] [C] Number Guessing Game
-
-## M7: Mastering Lists
-
-### Concepts
-
-- Lists second introductions
-- Indexing
-- Using indexing
-- Slicing
-- Using Slicing
-- Modifying lists (`.append()`, `.pop()`, `.sort()`)
-- Using lists in practice
-
-### Items
-
-- [ ] [L] Lists Deep Dive
-- [ ] [L] List Indexing
-- [ ] [C] List Navigator
-- [ ] [L] List Slicing
-- [ ] [L] List Modification Methods
-- [ ] [L] Advanced List Operations
-- [ ] [L] Lists in Practice
+- [ ] [L] Introduction to For Loops & Range
+- [ ] [L] Range Parameters Deep Dive
+- [ ] [L] Print Formatting Workshop *(80% practice with end parameter)*
+- [ ] [L] Counting & Accumulating Practice *(practice-heavy: 10+ exercises)*
+- [ ] [C] Sum Calculator
+- [ ] [L] Pattern Building Marathon *(15 steps of pattern exercises)*
+- [ ] [L] Loop Practice Scenarios
+- [ ] [C] Number Pattern Generator
 - [ ] [L] Final Review
-- [ ] [C] Shopping Cart Manager
 
-## M8: Working with Dictionaries
+## M7: Lists & Loops Together
 
 ### Concepts
 
-- Dictionaries introduction
-- Dictionary indexing with keys
-- Modifying Dictionaries
+- Lists introduction and why we need them
+- List indexing (positive and negative)
+- List slicing basics
+- For loops with lists
+- Basic list methods (`.append()`, `.pop()`, `.remove()`)
+- Common list-loop patterns
+- Building lists with loops
+
+### Items
+
+- [ ] [L] Introduction to Lists
+- [ ] [L] List Indexing Gym *(practice-heavy: 12+ indexing exercises)*
+- [ ] [L] List Slicing Fundamentals
+- [ ] [L] Loops & Lists Workshop *(80% exercises combining both)*
+- [ ] [C] Shopping Cart Manager
+- [ ] [L] Essential List Methods
+- [ ] [L] List Building Bootcamp *(practice marathon: 15+ exercises)*
+- [ ] [L] Common List Patterns
+- [ ] [C] Grade Analyzer
+- [ ] [L] Final Review
+
+## M8: Advanced Loops
+
+### Concepts
+
+- While loops and when to use them
+- Loop control flow (`break`, `continue`, `pass`)
+- Nested loops with practical examples
+- Comparing for vs while loops
+- Infinite loops and how to avoid them
+- Debugging loop errors
+- Complex loop scenarios
+
+### Items
+
+- [ ] [L] While Loops Introduction
+- [ ] [L] Loop Control Gym *(practice-heavy: break, continue, pass exercises)*
+- [ ] [L] Nested Loops Workshop *(12+ nested loop patterns)*
+- [ ] [C] Matrix Pattern Builder
+- [ ] [L] For vs While: Choosing the Right Loop
+- [ ] [L] Loop Debugging Clinic *(10 bug-finding exercises)*
+- [ ] [L] Advanced Loop Marathon *(15+ complex scenarios)*
+- [ ] [C] Number Guessing Game
+- [ ] [L] Final Review
+
+## M9: Dictionaries & Data
+
+### Concepts
+
+- Dictionary fundamentals and use cases
+- Creating and accessing dictionaries
+- Modifying dictionaries (adding, updating, deleting)
 - Dictionary methods (`.keys()`, `.values()`, `.items()`)
-- Using dictionaries in loops
-- Using dictionaries in practice
+- Looping through dictionaries
+- Combining lists and dictionaries
+- Real-world data structures
 
 ### Items
 
 - [ ] [L] Dictionary Fundamentals
-- [ ] [L] Dictionary Keys & Access
-- [ ] [L] Modifying Dictionaries
-- [ ] [C] Contact Book
+- [ ] [L] Dictionary Access Bootcamp *(practice-heavy: 12+ exercises)*
 - [ ] [L] Dictionary Methods
-- [ ] [L] Dictionaries in Loops
-- [ ] [L] Dictionary Practice Scenarios
+- [ ] [L] Dictionary Loops Workshop *(80% practice with iteration)*
+- [ ] [C] Contact Manager
+- [ ] [L] Data Structures Gym *(combining lists & dicts: 15+ exercises)*
+- [ ] [L] Real-World Data Scenarios
+- [ ] [C] Inventory System
 - [ ] [L] Final Review
-- [ ] [C] Inventory Management System
 
-## M9: Organizing Code
+## M10: Functions Essentials
 
 ### Concepts
 
-- Functions introductions (no arguments, no return)
-- Playing with functions, more complex scenarions, let the user understand the stack of code, and execution order, and nested functions
-- Function return with completx scenarios too
-- Functions arguments
+- Function basics (definition and calling)
+- Functions with parameters
+- Return values and their importance
+- Multiple parameters and argument order
 - Default parameters
-- Let's play with custom functions a lot, in many different forms
-- Variable scope and global variables
-- Understanding local vs global scope
+- Simple function composition
+- When and why to use functions
 
 ### Items
 
-- [ ] [L] Function Basics
-- [ ] [L] Function Execution & Call Stack
-- [ ] [C] Function Library Builder
-- [ ] [L] Function Returns
-- [ ] [L] Function Arguments
-- [ ] [L] Default Parameters
-- [ ] [L] Advanced Function Scenarios
-- [ ] [L] Variable Scope
-- [ ] [L] Local vs Global Scope
+- [ ] [L] Introduction to Functions
+- [ ] [L] Parameter Practice Lab *(12+ parameter exercises)*
+- [ ] [L] Return Values Workshop *(practice-heavy)*
+- [ ] [C] Calculator Functions
+- [ ] [L] Multiple Parameters & Arguments
+- [ ] [L] Default Parameters Gym *(10+ exercises)*
+- [ ] [L] Function Composition Marathon *(15+ building block exercises)*
+- [ ] [L] Practical Function Scenarios
+- [ ] [C] Text Processor Library
 - [ ] [L] Final Review
-- [ ] [C] Code Organization Challenge
 
-## M10: Handling Errors
+## M11: Scope & Advanced Functions
 
 ### Concepts
 
-- Introduction to `try` and `except`
-- Common exception types (`ValueError`, `TypeError`, `IndexError`)
-- Using `finally` blocks
-- Error driven practice with many scenarios
-- Debugging complex error situations
-- Making code more robust
+- Variable scope introduction
+- Local vs global variables
+- The `global` keyword
+- Functions calling other functions
+- Function execution order and call stack
+- Practical function patterns
+- Code organization with functions
 
 ### Items
 
-- [ ] [L] Try and Except Basics
-- [ ] [L] Common Exception Types
-- [ ] [C] Error Handler
-- [ ] [L] Finally Blocks
-- [ ] [L] Error-Driven Practice Scenarios
-- [ ] [L] Debugging Complex Errors
-- [ ] [L] Building Robust Code
+- [ ] [L] Understanding Variable Scope
+- [ ] [L] Scope Practice Lab *(12+ scope puzzles)*
+- [ ] [L] The Global Keyword
+- [ ] [C] Scope Detective
+- [ ] [L] Function Orchestra *(functions calling functions: 15+ exercises)*
+- [ ] [L] Function Patterns Bootcamp *(practice-heavy patterns)*
+- [ ] [C] Game Score Tracker
 - [ ] [L] Final Review
+
+## M12: Error Handling & Final Project
+
+### Concepts
+
+- Introduction to exceptions
+- Try and except blocks
+- Common exception types (`ValueError`, `TypeError`, `IndexError`)
+- The `finally` block
+- Building robust programs
+- Defensive programming
+- Project preparation and integration
+
+### Items
+
+- [ ] [L] Introduction to Exceptions
+- [ ] [L] Try-Except Gym *(12+ exception handling exercises)*
+- [ ] [L] Common Exception Types
+- [ ] [C] Safe Input Handler
+- [ ] [L] Error Handling Marathon *(15+ debugging scenarios)*
+- [ ] [L] Building Robust Programs
 - [ ] [C] Bulletproof Calculator
-
-## M11: Graduation Project
-
-Stil didn't plan it, I'm thinking to guide user to create a full project in their laptop, then publish it githu
+- [ ] [L] Integration Megapractice *(combining all concepts: 20+ steps)*
+- [ ] [L] Project Preparation

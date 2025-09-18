@@ -1,9 +1,0 @@
-type: "fill"
-lang: "python"
-question: "أكمل الكود لطباعة الأرقام من 0 إلى 2:"
-code: |
-  for @@INPUT@@ in range(3):
-      print(@@INPUT@@)
-solution:
-  - "i"
-  - "i"

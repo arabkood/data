@@ -1,13 +1,13 @@
+# Step 3: Fill exercise - complete the loop
 type: "fill"
 lang: "python"
-question: "أكمل الكود للتوقف عند العثور على الرقم 7:"
+question: |
+  أكمل الحلقة لتطبع "Python رائعة!" ثلاث مرات:
 code: |
-  for number in range(1, 15):
-      print("الرقم الحالي:", number)
-      if @@INPUT@@:
-          print("وجدت الرقم 7!")
-          @@INPUT@@
-      print("سأواصل البحث...")
+  @@INPUT@@ i in range(@@INPUT@@):
+      @@INPUT@@("Python رائعة!")
 solution:
-  - "number == 7"
-  - "break"
+  - "for"
+  - "3"
+  - "print"
+explanation: "نستخدم `for` لبدء الحلقة، `range(3)` للتكرار 3 مرات، و`print` للطباعة."

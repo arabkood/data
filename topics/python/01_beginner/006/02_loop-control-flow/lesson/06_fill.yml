@@ -1,0 +1,13 @@
+# Step 6: Fill - print numbers
+type: "fill"
+lang: "python"
+question: |
+  أكمل الكود لطباعة الأرقام من 0 إلى 6:
+code: |
+  for @@INPUT@@ in range(@@INPUT@@):
+      print(@@INPUT@@)
+solution:
+  - "/^[a-zA-Z_][a-zA-Z0-9_]*$/"
+  - "7"
+  - "/^[a-zA-Z_][a-zA-Z0-9_]*$/"
+explanation: "نستخدم `range(7)` للحصول على الأرقام من 0 إلى 6، ونطبع قيمة المتغير."

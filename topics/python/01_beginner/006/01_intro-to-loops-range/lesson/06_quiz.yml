@@ -1,8 +1,8 @@
 type: "quiz"
-question: "ماذا سينتج عن `range(4)`؟"
+question: "إذا كتبنا `for i in range(4):` فما هي قيم i في كل دورة؟"
 options:
-  - "0, 1, 2, 3"
   - "1, 2, 3, 4"
-  - "0, 1, 2, 3, 4"
-solution: 0
-explanation: "range(4) ينشئ الأرقام من 0 إلى 3 (أي 4 أرقام إجمالاً)"
+  - "0, 1, 2, 3"
+  - "4, 3, 2, 1"
+solution: 1
+explanation: "range(4) يبدأ من 0 وينتهي عند 3، لذلك القيم هي: 0, 1, 2, 3"

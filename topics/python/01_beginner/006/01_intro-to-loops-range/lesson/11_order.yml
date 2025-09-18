@@ -1,0 +1,7 @@
+type: "order"
+lang: "python"
+question: "رتب هذه الأسطر لإنشاء حلقة تطبع الأرقام من 0 إلى 2:"
+code:
+  - "for i in range(3):"
+  - "    print(i)"
+explanation: "أولاً نكتب حلقة for، ثم نطبع قيمة i مع المسافة البادئة."
