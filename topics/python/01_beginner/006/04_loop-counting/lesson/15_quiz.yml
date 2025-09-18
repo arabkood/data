@@ -1,0 +1,15 @@
+# Step 15: Quiz - understanding
+type: "quiz"
+question: "إذا أردنا حساب مجموع الأرقام من 10 إلى 20، ما القيمة الابتدائية الصحيحة للمتغير total؟"
+code: |
+  total = @@INPUT@@
+  for i in range(10, 21):
+      total = total + i
+lang: python
+options:
+  - "0"
+  - "1"
+  - "10"
+  - "20"
+solution: 0
+explanation: "دائماً نبدأ المجموع من 0، بغض النظر عن نطاق الأرقام."

@@ -1,0 +1,14 @@
+# Step 13: Running total
+type: "fill"
+lang: "python"
+question: |
+  اطبع المجموع التراكمي بعد كل إضافة:
+code: |
+  running_total = 0
+  for i in range(1, 6):
+      @@INPUT@@ = running_total + i
+      print(f"بعد إضافة {i}: المجموع = {@@INPUT@@}")
+solution:
+  - "running_total"
+  - "running_total"
+explanation: "نحدث المتغير ثم نطبع قيمته الجديدة في كل دورة."

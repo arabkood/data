@@ -1,0 +1,21 @@
+# Step 7: Multiple counters
+type: "fill"
+lang: "python"
+question: |
+  عد الأرقام الزوجية والفردية من 1 إلى 20:
+code: |
+  even_count = @@INPUT@@
+  odd_count = @@INPUT@@
+
+  for num in range(1, 21):
+      if num % 2 == 0:
+          @@INPUT@@ = even_count + 1
+      else:
+          @@INPUT@@ = odd_count + 1
+
+  print(f"زوجي: {even_count}, فردي: {odd_count}")
+solution:
+  - "0"
+  - "0"
+  - "even_count"
+  - "odd_count"

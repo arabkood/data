@@ -1,0 +1,14 @@
+# Step 5: Bug finding - common mistake
+type: "bug"
+lang: "python"
+question: "هذا الكود يجب أن يحسب مجموع الأرقام من 1 إلى 10، لكن النتيجة خاطئة. اكتشف الخطأ:"
+code: |
+  total = 1
+  for i in range(1, 11):
+      total = total + i
+  print(f"المجموع: {total}")
+solution: 0
+hint: "ما القيمة الابتدائية الصحيحة للمجموع؟"
+expectedOutput: "المجموع: 55"
+actualOutput: "المجموع: 56"
+explanation: "يجب أن نبدأ بـ total = 0 وليس 1 عند حساب المجموع."

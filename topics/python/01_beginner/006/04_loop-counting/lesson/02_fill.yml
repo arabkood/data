@@ -1,0 +1,15 @@
+# Step 2: First practice - Simple sum
+type: "fill"
+lang: "python"
+question: |
+  لنبدأ بالأساسيات. أكمل هذا الكود لحساب مجموع الأرقام من 1 إلى 5:
+code: |
+  total = @@INPUT@@
+  for i in range(1, @@INPUT@@):
+      total = total + @@INPUT@@
+  print(total)
+solution:
+  - "0"
+  - "6"
+  - "i"
+explanation: "نبدأ بـ total = 0، ونستخدم range(1, 6) للأرقام من 1 إلى 5، ثم نضيف i إلى total في كل دورة."

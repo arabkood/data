@@ -1,0 +1,16 @@
+# Step 17: Final challenge
+type: "order"
+lang: "python"
+question: "رتب هذا الكود لحساب مجموع الأرقام الأولية الأصغر من 20:"
+code:
+  - "primes_sum = 0"
+  - "for num in range(2, 20):"
+  - "    is_prime = True"
+  - "    for i in range(2, num):"
+  - "        if num % i == 0:"
+  - "            is_prime = False"
+  - "            break"
+  - "    if is_prime:"
+  - "        primes_sum = primes_sum + num"
+  - "print(f\"مجموع الأعداد الأولية: {primes_sum}\")"
+explanation: "نفحص كل رقم، وإذا كان أولياً نضيفه للمجموع."

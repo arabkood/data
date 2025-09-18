@@ -1,0 +1,16 @@
+# Step 14: Maximum finder
+type: "fill"
+lang: "python"
+question: |
+  أوجد أكبر رقم يقبل القسمة على 7 وأصغر من 100:
+code: |
+  max_divisible = 0
+  for num in range(1, @@INPUT@@):
+      if num % 7 == @@INPUT@@:
+          max_divisible = @@INPUT@@
+  print(f"أكبر رقم: {max_divisible}")
+solution:
+  - "100"
+  - "0"
+  - "num"
+explanation: "نستمر في تحديث max_divisible كلما وجدنا رقماً أكبر يقبل القسمة على 7."

@@ -1,0 +1,16 @@
+# Step 3: Count practice
+type: "fill"
+lang: "python"
+question: |
+  الآن لنعد كم رقم زوجي يوجد بين 1 و 10:
+code: |
+  count = @@INPUT@@
+  for num in range(1, 11):
+      if num % 2 == @@INPUT@@:
+          count = count + @@INPUT@@
+  print(f"عدد الأرقام الزوجية: {count}")
+solution:
+  - "0"
+  - "0"
+  - "1"
+explanation: "نبدأ العد من 0، نفحص إذا كان الرقم زوجياً (num % 2 == 0)، ونضيف 1 للعداد."

@@ -1,0 +1,14 @@
+# Step 4: Product accumulation
+type: "fill"
+lang: "python"
+question: |
+  لحساب حاصل الضرب (factorial) للأرقام من 1 إلى 4:
+code: |
+  product = @@INPUT@@
+  for i in range(1, 5):
+      product = product @@INPUT@@ i
+  print(f"4! = {product}")
+solution:
+  - "1"
+  - "*"
+explanation: "للضرب التراكمي، نبدأ بـ 1 (ليس 0!) ونضرب في كل رقم."

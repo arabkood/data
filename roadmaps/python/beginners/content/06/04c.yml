@@ -1,270 +1,307 @@
 ---
-item_id: "m6-l4-nested-loops"
-item_type: "lesson"
-title: "الحلقات المتداخلة - حلقة داخل حلقة"
+item_id: "m6-counting-accumulating-practice"
+type: "lesson"
+title: "ورشة العد والتجميع"
+base_xp: 850
+difficulty: "medium"
 
 steps:
+  # Step 1: Quick concept introduction
   - type: "markdown"
     content: |
-      مرحباً بك في عالم الحلقات المتداخلة! 🎯
+      مرحباً! في هذا الدرس، سنتدرب بشكل مكثف على أحد أهم استخدامات حلقات for: **العد والتجميع**.
 
-      تخيل أنك تريد طباعة جدول الضرب من 1 إلى 3:
+      تخيل أنك تريد جمع الأرقام من 1 إلى 100. بدلاً من كتابة 1+2+3+4... يدوياً، سنستخدم حلقة for!
 
-      ```
-      1 × 1 = 1    1 × 2 = 2    1 × 3 = 3
-      2 × 1 = 2    2 × 2 = 4    2 × 3 = 6  
-      3 × 1 = 3    3 × 2 = 6    3 × 3 = 9
-      ```
+      **القاعدة الذهبية:** نبدأ بمتغير فارغ (للمجموع أو العد)، ثم نضيف إليه في كل دورة من الحلقة.
 
-      لإنشاء هذا الجدول، نحتاج إلى:
-      - حلقة للأرقام الأولى (1، 2، 3)
-      - **داخل كل مرة**: حلقة أخرى للأرقام الثانية (1، 2، 3)
-
-      هذا ما نسميه **الحلقات المتداخلة**!
-
-  - type: "markdown"
-    content: |
-      ## فكر في الأمر كصندوق داخل صندوق 📦
-
-      تخيل أن لديك صندوق كبير يحتوي على 3 صناديق صغيرة.  
-      كل صندوق صغير يحتوي على 3 كرات.
-
-      **للوصول إلى كل كرة:**
-      1. افتح الصندوق الكبير (الحلقة الخارجية)
-      2. اختر صندوق صغير (المرة الأولى، الثانية، الثالثة...)
-      3. افتح الصندوق الصغير (الحلقة الداخلية) 
-      4. اختر كرة (الأولى، الثانية، الثالثة...)
-
-      هذا بالضبط كيف تعمل الحلقات المتداخلة!
-
-  - type: "quiz"
-    question: "إذا كان لدينا حلقة خارجية تتكرر 3 مرات وحلقة داخلية تتكرر 4 مرات، كم مرة ستتم طباعة print() الموجودة داخل الحلقة الداخلية؟"
-    options:
-      - "7 مرات (3 + 4)"
-      - "12 مرة (3 × 4)"
-      - "4 مرات فقط"
-    solution: 1
-    explanation: "الحلقة الداخلية تتكرر 4 مرات لكل مرة من الحلقة الخارجية. إذن: 3 × 4 = 12 مرة إجمالاً."
-
-  - type: "markdown"
-    content: |
-      ## أول حلقة متداخلة: المثال البسيط
-
-      دعنا نبدأ بمثال بسيط لنفهم الفكرة:
-
-      ```python
-      for i in range(3):
-          print(f"الحلقة الخارجية: {i}")
-          for j in range(2):
-              print(f"    الحلقة الداخلية: {j}")
-      ```
-
-      **كيف يعمل هذا؟**
-      - `i` يأخذ القيم: 0، 1، 2
-      - **لكل قيمة من `i`**: `j` يأخذ القيم: 0، 1
-
+  # Step 2: First practice - Simple sum
   - type: "fill"
     lang: "python"
-    question: "اكمل الكود لطباعة الأرقام من 1 إلى 6 في شكل مصفوفة 2×3:"
+    question: |
+      لنبدأ بالأساسيات. أكمل هذا الكود لحساب مجموع الأرقام من 1 إلى 5:
     code: |
-      counter = 1
-      for i in @@INPUT@@:
-          for j in @@INPUT@@:
-              print(counter, end=" ")
-              counter += 1
-          @@INPUT@@  # سطر جديد بعد كل صف
+      total = @@INPUT@@
+      for i in range(1, @@INPUT@@):
+          total = total + @@INPUT@@
+      print(total)
     solution:
-      - "range(2)"
-      - "range(3)"
-      - "print()"
-    explanation: "نحتاج صفين (range(2)) وثلاثة أعمدة لكل صف (range(3)). print() في النهاية ينتقل لسطر جديد بعد كل صف."
+      - "0"
+      - "6"
+      - "i"
+    explanation: "نبدأ بـ total = 0، ونستخدم range(1, 6) للأرقام من 1 إلى 5، ثم نضيف i إلى total في كل دورة."
 
-  - type: "markdown"
-    content: |
-      ## مثال من الحياة الواقعية: طباعة النجوم ⭐
+  # Step 3: Count practice
+  - type: "fill"
+    lang: "python"
+    question: |
+      الآن لنعد كم رقم زوجي يوجد بين 1 و 10:
+    code: |
+      count = @@INPUT@@
+      for num in range(1, 11):
+          if num % 2 == @@INPUT@@:
+              count = count + @@INPUT@@
+      print(f"عدد الأرقام الزوجية: {count}")
+    solution:
+      - "0"
+      - "0"
+      - "1"
+    explanation: "نبدأ العد من 0، نفحص إذا كان الرقم زوجياً (num % 2 == 0)، ونضيف 1 للعداد."
 
-      لنطبع مثلث من النجوم:
+  # Step 4: Product accumulation
+  - type: "fill"
+    lang: "python"
+    question: |
+      لحساب حاصل الضرب (factorial) للأرقام من 1 إلى 4:
+    code: |
+      product = @@INPUT@@
+      for i in range(1, 5):
+          product = product @@INPUT@@ i
+      print(f"4! = {product}")
+    solution:
+      - "1"
+      - "*"
+    explanation: "للضرب التراكمي، نبدأ بـ 1 (ليس 0!) ونضرب في كل رقم."
 
-      ```
-      *
-      **
-      ***
-      ****
-      ```
-
-      **التفكير:**
-      - الصف الأول: نجمة واحدة
-      - الصف الثاني: نجمتان  
-      - الصف الثالث: 3 نجوم
-      - الصف الرابع: 4 نجوم
-
-      ```python
-      for row in range(1, 5):  # 4 صفوف
-          for star in range(row):  # عدد النجوم = رقم الصف
-              print("*", end="")
-          print()  # سطر جديد بعد كل صف
-      ```
-
+  # Step 5: Bug finding - common mistake
   - type: "bug"
     lang: "python"
-    question: "هذا الكود يجب أن يطبع مربع 3×3 من النجوم، لكن هناك خطأ. أين هو؟"
+    question: "هذا الكود يجب أن يحسب مجموع الأرقام من 1 إلى 10، لكن النتيجة خاطئة. اكتشف الخطأ:"
     code: |
-      for i in range(3):
-          for j in range(3):
-              print("*", end="")
-      print()
-    solution: 3
-    explanation: "print() الموجود خارج الحلقات سيطبع سطر جديد واحد فقط في النهاية، مما يجعل كل النجوم في سطر واحد. يجب وضع print() داخل الحلقة الخارجية."
-    hint: "أين يجب أن نضع السطر الجديد؟ بعد كل صف أم في نهاية كل شيء؟"
+      total = 1
+      for i in range(1, 11):
+          total = total + i
+      print(f"المجموع: {total}")
+    solution: 0
+    hint: "ما القيمة الابتدائية الصحيحة للمجموع؟"
+    expectedOutput: "المجموع: 55"
+    actualOutput: "المجموع: 56"
+    explanation: "يجب أن نبدأ بـ total = 0 وليس 1 عند حساب المجموع."
 
-  - type: "markdown"
-    content: |
-      ## نمط شائع: جدول الضرب
-
-      الآن لننشئ جدول ضرب حقيقي:
-
-      ```python
-      for i in range(1, 4):  # الأرقام من 1 إلى 3
-          for j in range(1, 4):  # الأرقام من 1 إلى 3
-              result = i * j
-              print(f"{i}×{j}={result}", end="  ")
-          print()  # سطر جديد لكل صف
-      ```
-
-      **النتيجة:**
-      ```
-      1×1=1  1×2=2  1×3=3
-      2×1=2  2×2=4  2×3=6
-      3×1=3  3×2=6  3×3=9
-      ```
-
+  # Step 6: Complex accumulation
   - type: "fill"
     lang: "python"
-    question: "اكمل الكود لطباعة هرم من الأرقام:"
+    question: |
+      احسب مجموع مربعات الأرقام من 1 إلى 5 (1² + 2² + 3² + 4² + 5²):
     code: |
-      for i in range(1, @@INPUT@@):
-          for j in range(1, @@INPUT@@):
-              print(j, end="")
-          @@INPUT@@
+      sum_squares = @@INPUT@@
+      for n in range(@@INPUT@@, @@INPUT@@):
+          sum_squares = sum_squares + @@INPUT@@
+      print(f"مجموع المربعات: {sum_squares}")
     solution:
-      - "5"
-      - "i + 1" 
-      - "print()"
-    explanation: "نريد 4 صفوف (1 إلى 4)، لذلك range(1, 5). في كل صف i، نطبع الأرقام من 1 إلى i، لذلك range(1, i + 1)."
+      - "0"
+      - "1"
+      - "6"
+      - "n**2"
+    explanation: "نحسب n**2 لكل رقم ونضيفه للمجموع. النتيجة: 1+4+9+16+25 = 55"
 
-  - type: "quiz"
-    question: "ما النتيجة المتوقعة لهذا الكود؟"
-    code: |
-      for x in range(2):
-          for y in range(3):
-              print(f"({x},{y})", end=" ")
-          print()
+  # Step 7: Multiple counters
+  - type: "fill"
     lang: "python"
-    options:
-      - "(0,0) (0,1) (0,2)\n(1,0) (1,1) (1,2)"
-      - "(0,0) (1,1) (2,2)"  
-      - "(0,0) (0,1) (0,2) (1,0) (1,1) (1,2)"
-    solution: 0
-    explanation: "الحلقة الخارجية (x) تتكرر مرتين: 0 و 1. لكل قيمة x، الحلقة الداخلية (y) تأخذ القيم: 0، 1، 2. print() تنتقل لسطر جديد بعد كل مجموعة."
+    question: |
+      عد الأرقام الزوجية والفردية من 1 إلى 20:
+    code: |
+      even_count = @@INPUT@@
+      odd_count = @@INPUT@@
+      
+      for num in range(1, 21):
+          if num % 2 == 0:
+              @@INPUT@@ = even_count + 1
+          else:
+              @@INPUT@@ = odd_count + 1
+      
+      print(f"زوجي: {even_count}, فردي: {odd_count}")
+    solution:
+      - "0"
+      - "0"
+      - "even_count"
+      - "odd_count"
 
-  - type: "markdown"
-    content: |
-      ## تطبيق متقدم: شطرنج صغير 🏁
-
-      لنطبع رقعة شطرنج 4×4 باستخدام ⬜ و ⬛:
-
-      ```python
-      for row in range(4):
-          for col in range(4):
-              if (row + col) % 2 == 0:
-                  print("⬜", end="")
-              else:
-                  print("⬛", end="")
-          print()
-      ```
-
-      **الفكرة:** إذا كان مجموع (الصف + العمود) زوجي → مربع أبيض، وإلا مربع أسود.
-
+  # Step 8: Order challenge
   - type: "order"
     lang: "python"
-    question: "رتب الأسطر لطباعة مثلث معكوس من النجوم (4 نجوم في الأول، 3 في الثاني، إلخ):"
+    question: "رتب هذا الكود لحساب متوسط الأرقام من 1 إلى 100:"
     code:
-      - "for i in range(4, 0, -1):"
-      - "    for j in range(i):"
-      - "        print('*', end='')"
-      - "    print()"
-    explanation: "نبدأ من 4 وننزل إلى 1 باستخدام range(4, 0, -1). لكل صف i، نطبع i عدد من النجوم."
+      - "total = 0"
+      - "count = 0"
+      - "for i in range(1, 101):"
+      - "    total = total + i"
+      - "    count = count + 1"
+      - "average = total / count"
+      - "print(f\"المتوسط: {average}\")"
+    explanation: "نحتاج متغيرين: واحد للمجموع وآخر للعد، ثم نقسم في النهاية."
 
-  - type: "markdown"
-    content: |
-      ## أنماط شائعة للحلقات المتداخلة
-
-      **1. المربع الكامل (n×n):**
-      ```python
-      for i in range(n):
-          for j in range(n):
-              print("■", end="")
-          print()
-      ```
-
-      **2. المثلث القائم:**
-      ```python
-      for i in range(n):
-          for j in range(i + 1):
-              print("*", end="")
-          print()
-      ```
-
-      **3. التكرار المتعدد الأبعاد:**
-      ```python
-      for hour in range(24):
-          for minute in range(60):
-              print(f"{hour:02d}:{minute:02d}")
-      ```
-
-  - type: "quiz"
-    question: "أي من هذه الأكواد سينتج مربع 3×3 من الدوائر (○)؟"
-    options:
-      - "for i in range(3):\n    for j in range(3):\n        print('○', end='')\nprint()"
-      - "for i in range(3):\n    for j in range(3):\n        print('○', end='')\n    print()"
-      - "for i in range(3):\n    for j in range(i):\n        print('○', end='')\n    print()"
-    solution: 1
-    explanation: "نحتاج print() داخل الحلقة الخارجية (ليس خارج الحلقات) لننتقل إلى سطر جديد بعد كل صف. الخيار الثاني يفعل هذا بشكل صحيح."
-
-  - type: "markdown"
-    content: |
-      ## تحدي نهائي: فهم التدفق 🧠
-
-      عندما نرى حلقات متداخلة، فكر في التسلسل:
-
-      ```python
-      for i in range(2):
-          print(f"بداية الحلقة الخارجية: i = {i}")
-          for j in range(3):
-              print(f"  داخل الحلقة الداخلية: j = {j}")
-          print(f"نهاية الحلقة الخارجية: i = {i}")
-      ```
-
-      **التسلسل:**
-      1. i = 0 → j يأخذ 0, 1, 2
-      2. i = 1 → j يأخذ 0, 1, 2 مرة أخرى
-
-      **القاعدة الذهبية:** الحلقة الداخلية تكمل دورتها كاملة قبل أن تنتقل الحلقة الخارجية للقيمة التالية.
-
+  # Step 9: Conditional accumulation
   - type: "fill"
     lang: "python"
-    question: "اكمل الكود لطباعة جدول البيانات التالي - الأسماء مع درجاتهم في 3 مواد:"
+    question: |
+      احسب مجموع الأرقام التي تقبل القسمة على 3 من 1 إلى 30:
     code: |
-      names = ["أحمد", "فاطمة", "محمد"]
-      subjects = ["رياضيات", "فيزياء", "كيمياء"]
-      
-      for @@INPUT@@ in names:
-          print(f"درجات {name}:")
-          for @@INPUT@@ in subjects:
-              print(f"  {subject}: 85")
-          @@INPUT@@
+      sum_divisible = 0
+      for num in range(1, @@INPUT@@):
+          if num % @@INPUT@@ == 0:
+              sum_divisible = @@INPUT@@
+      print(f"المجموع: {sum_divisible}")
     solution:
-      - "name"
-      - "subject"
-      - "print()"
-    explanation: "نتكرر خلال الأسماء في الحلقة الخارجية، وخلال المواد في الحلقة الداخلية. print() الفارغة تضيف مسافة بين كل طالب."
+      - "31"
+      - "3"
+      - "sum_divisible + num"
+    explanation: "نجمع فقط الأرقام التي تقبل القسمة على 3 (3, 6, 9, 12...)"
+
+  # Step 10: String accumulation
+  - type: "fill"
+    lang: "python"
+    question: |
+      اجمع الأرقام في نص واحد مفصول بفواصل:
+    code: |
+      result = ""
+      for i in range(1, 6):
+          if i == 1:
+              result = @@INPUT@@
+          else:
+              result = result + @@INPUT@@ + str(i)
+      print(result)
+    solution:
+      - "str(i)"
+      - '", "'
+    explanation: "نبني النص تدريجياً، مع إضافة فاصلة قبل كل رقم عدا الأول."
+
+  # Step 11: Bug - accumulation error
+  - type: "bug"
+    lang: "python"
+    question: "هذا الكود يجب أن يحسب 5! (factorial) لكنه يعطي نتيجة خاطئة:"
+    code: |
+      factorial = 0
+      for i in range(1, 6):
+          factorial = factorial * i
+      print(f"5! = {factorial}")
+    solution: 0
+    hint: "ماذا يحدث عندما نضرب أي رقم في صفر؟"
+    expectedOutput: "5! = 120"
+    actualOutput: "5! = 0"
+    explanation: "للضرب التراكمي، يجب أن نبدأ بـ 1 وليس 0، لأن أي رقم × 0 = 0"
+
+  # Step 12: Complex pattern
+  - type: "fill"
+    lang: "python"
+    question: |
+      احسب مجموع الأرقام الزوجية ومجموع الأرقام الفردية من 1 إلى 50:
+    code: |
+      even_sum = @@INPUT@@
+      odd_sum = @@INPUT@@
+      
+      for n in range(1, 51):
+          if n % 2 == 0:
+              even_sum = @@INPUT@@
+          else:
+              odd_sum = @@INPUT@@
+      
+      print(f"مجموع الزوجية: {even_sum}")
+      print(f"مجموع الفردية: {odd_sum}")
+    solution:
+      - "0"
+      - "0"
+      - "even_sum + n"
+      - "odd_sum + n"
+
+  # Step 13: Running total
+  - type: "fill"
+    lang: "python"
+    question: |
+      اطبع المجموع التراكمي بعد كل إضافة:
+    code: |
+      running_total = 0
+      for i in range(1, 6):
+          @@INPUT@@ = running_total + i
+          print(f"بعد إضافة {i}: المجموع = {@@INPUT@@}")
+    solution:
+      - "running_total"
+      - "running_total"
+    explanation: "نحدث المتغير ثم نطبع قيمته الجديدة في كل دورة."
+
+  # Step 14: Maximum finder
+  - type: "fill"
+    lang: "python"
+    question: |
+      أوجد أكبر رقم يقبل القسمة على 7 وأصغر من 100:
+    code: |
+      max_divisible = 0
+      for num in range(1, @@INPUT@@):
+          if num % 7 == @@INPUT@@:
+              max_divisible = @@INPUT@@
+      print(f"أكبر رقم: {max_divisible}")
+    solution:
+      - "100"
+      - "0"
+      - "num"
+    explanation: "نستمر في تحديث max_divisible كلما وجدنا رقماً أكبر يقبل القسمة على 7."
+
+  # Step 15: Quiz - understanding
+  - type: "quiz"
+    question: "إذا أردنا حساب مجموع الأرقام من 10 إلى 20، ما القيمة الابتدائية الصحيحة للمتغير total؟"
+    code: |
+      total = @@INPUT@@
+      for i in range(10, 21):
+          total = total + i
+    lang: python
+    options:
+      - "0"
+      - "1"
+      - "10"
+      - "20"
+    solution: 0
+    explanation: "دائماً نبدأ المجموع من 0، بغض النظر عن نطاق الأرقام."
+
+  # Step 16: Nested accumulation
+  - type: "fill"
+    lang: "python"
+    question: |
+      احسب مجموع كل الأرقام في جدول الضرب من 1×1 إلى 3×3:
+    code: |
+      total = 0
+      for i in range(1, 4):
+          for j in range(1, 4):
+              total = total + (@@INPUT@@ * @@INPUT@@)
+      print(f"المجموع الكلي: {total}")
+    solution:
+      - "i"
+      - "j"
+    explanation: "نجمع: 1×1 + 1×2 + 1×3 + 2×1 + 2×2 + 2×3 + 3×1 + 3×2 + 3×3 = 36"
+
+  # Step 17: Final challenge
+  - type: "order"
+    lang: "python"
+    question: "رتب هذا الكود لحساب مجموع الأرقام الأولية الأصغر من 20:"
+    code:
+      - "primes_sum = 0"
+      - "for num in range(2, 20):"
+      - "    is_prime = True"
+      - "    for i in range(2, num):"
+      - "        if num % i == 0:"
+      - "            is_prime = False"
+      - "            break"
+      - "    if is_prime:"
+      - "        primes_sum = primes_sum + num"
+      - "print(f\"مجموع الأعداد الأولية: {primes_sum}\")"
+    explanation: "نفحص كل رقم، وإذا كان أولياً نضيفه للمجموع."
+
+  # Step 18: Review and summary
+  - type: "markdown"
+    content: |
+      **ممتاز! 🎉** لقد أتقنت أساسيات العد والتجميع في Python!
+
+      **ما تعلمته:**
+      - البدء بالقيمة الصحيحة (0 للجمع، 1 للضرب)
+      - تحديث المتغير في كل دورة
+      - استخدام شروط للتجميع الانتقائي
+      - إدارة عدة عدادات في نفس الوقت
+      - بناء النصوص تدريجياً
+
+      **القاعدة الذهبية:** 
+      ```python
+      accumulator = initial_value
+      for item in sequence:
+          accumulator = accumulator + item
+      ```
+
+      في الدرس القادم، سنتعلم كيف نبني أنماطاً وأشكالاً باستخدام الحلقات!

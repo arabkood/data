@@ -1,0 +1,16 @@
+# Step 9: Conditional accumulation
+type: "fill"
+lang: "python"
+question: |
+  احسب مجموع الأرقام التي تقبل القسمة على 3 من 1 إلى 30:
+code: |
+  sum_divisible = 0
+  for num in range(1, @@INPUT@@):
+      if num % @@INPUT@@ == 0:
+          sum_divisible = @@INPUT@@
+  print(f"المجموع: {sum_divisible}")
+solution:
+  - "31"
+  - "3"
+  - "sum_divisible + num"
+explanation: "نجمع فقط الأرقام التي تقبل القسمة على 3 (3, 6, 9, 12...)"

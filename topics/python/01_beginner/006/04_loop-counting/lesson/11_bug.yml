@@ -1,0 +1,14 @@
+# Step 11: Bug - accumulation error
+type: "bug"
+lang: "python"
+question: "هذا الكود يجب أن يحسب 5! (factorial) لكنه يعطي نتيجة خاطئة:"
+code: |
+  factorial = 0
+  for i in range(1, 6):
+      factorial = factorial * i
+  print(f"5! = {factorial}")
+solution: 0
+hint: "ماذا يحدث عندما نضرب أي رقم في صفر؟"
+expectedOutput: "5! = 120"
+actualOutput: "5! = 0"
+explanation: "للضرب التراكمي، يجب أن نبدأ بـ 1 وليس 0، لأن أي رقم × 0 = 0"
