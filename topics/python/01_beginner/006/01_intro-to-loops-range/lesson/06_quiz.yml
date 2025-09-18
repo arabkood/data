@@ -1,8 +1,0 @@
-type: "quiz"
-question: "إذا كتبنا `for i in range(4):` فما هي قيم i في كل دورة؟"
-options:
-  - "1, 2, 3, 4"
-  - "0, 1, 2, 3"
-  - "4, 3, 2, 1"
-solution: 1
-explanation: "range(4) يبدأ من 0 وينتهي عند 3، لذلك القيم هي: 0, 1, 2, 3"

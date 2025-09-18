@@ -1,142 +1,245 @@
 ---
-item_id: "m6-intro-for-loops-range"
+item_id: "m6-lesson-1-intro-loops-range"
 item_type: "lesson"
-title: "مقدمة إلى حلقات For والدالة Range"
+title: "مقدمة في حلقات For و Range"
 
 steps:
+  # Step 1: The Problem
   - type: "markdown"
     content: |
-      تخيل أنك تريد طباعة الأرقام من 1 إلى 100. هل ستكتب `print()` مئة مرة؟
+      تخيل أنك تريد طباعة الأرقام من 1 إلى 100.
+      
+      هل ستكتب `print(1)` ثم `print(2)` ثم `print(3)`... مائة مرة؟! 😰
+      
+      **لحسن الحظ، لدينا حل سحري: حلقات التكرار (Loops)!**
+      
+      الحلقة تسمح لك بتنفيذ نفس الكود عدة مرات دون إعادة كتابته.
 
+  # Step 2: First Loop
+  - type: "markdown"
+    content: |
+      **أول حلقة for في حياتك:**
+      
       ```python
-      print(1)
-      print(2)
-      print(3)
-      # ... و 97 سطر آخر؟!
-      ```
-
-      هذا سيكون مرهقاً جداً! لحسن الحظ، لدينا **حلقات For** لحل هذه المشكلة بالضبط.
-
-  - type: "markdown"
-    content: |
-      **حلقة For** هي مثل إعطاء تعليمات للكمبيوتر: "كرر هذا العمل عدد معين من المرات".
-
-      فكر فيها كما لو كنت تقول لصديق: "اكتب اسمك 5 مرات على الورقة". سيفعل ذلك تلقائياً دون أن تطلب منه في كل مرة.
-
-      الآن دعنا نتعلم كيف نكتب حلقة For بسيطة!
-
-  - type: "markdown"
-    content: |
-      إليك أبسط حلقة for في Python:
-
-      ```python
-      for i in range(3):
+      for i in range(5):
           print("مرحبا!")
       ```
+      
+      هذا الكود يطبع "مرحبا!" خمس مرات. 
+      
+      لاحظ المسافة الفارغة قبل `print` - هذا يخبر Python أن هذا السطر جزء من الحلقة.
 
-      دعني أفسر لك ما يحدث هنا:
-      - `for i in range(3):` تعني "كرر 3 مرات"
-      - `print("مرحبا!")` هو العمل الذي سيتكرر
-      - `i` هو متغير العد (سنفهمه أكثر قريباً)
-
+  # Step 3: Fill exercise - complete the loop
   - type: "fill"
     lang: "python"
-    question: "أكمل الكود لطباعة 'أهلاً وسهلاً' 5 مرات:"
+    question: |
+      أكمل الحلقة لتطبع "Python رائعة!" ثلاث مرات:
     code: |
-      for i in @@INPUT@@:
-          @@INPUT@@
+      @@INPUT@@ i in range(@@INPUT@@):
+          @@INPUT@@("Python رائعة!")
     solution:
-      - "range(5)"
-      - 'print("أهلاً وسهلاً")'
-    explanation: "نستخدم range(5) للتكرار 5 مرات، وprint() لطباعة النص المطلوب."
+      - "for"
+      - "3"
+      - "print"
+    explanation: "نستخدم `for` لبدء الحلقة، `range(3)` للتكرار 3 مرات، و`print` للطباعة."
 
+  # Step 4: Understanding range()
   - type: "markdown"
     content: |
-      ممتاز! الآن دعنا نفهم متغير العد `i` أكثر.
+      **ما هو `range()`؟**
+      
+      `range(5)` ينتج الأرقام: 0, 1, 2, 3, 4
+      
+      لاحظ:
+      - يبدأ من 0 (وليس 1)
+      - ينتهي قبل الرقم المحدد (5-1 = 4)
+      
+      لذلك `range(5)` يعطينا 5 أرقام، من 0 إلى 4.
 
-      في كل دورة من الحلقة، يأخذ `i` قيمة مختلفة:
-      - الدورة الأولى: `i = 0`
-      - الدورة الثانية: `i = 1` 
-      - الدورة الثالثة: `i = 2`
+  # Step 5: Using the loop variable
+  - type: "markdown"
+    content: |
+      **المتغير `i` في الحلقة:**
+      
+      ```python
+      for i in range(3):
+          print(i)
+      ```
+      
+      الناتج:
+      ```
+      0
+      1
+      2
+      ```
+      
+      في كل دورة، يأخذ `i` القيمة التالية من `range()`.
 
-      **ملاحظة مهمة**: range(3) يعطينا الأرقام 0, 1, 2 (وليس 1, 2, 3)!
-
-  - type: "quiz"
-    question: "إذا كتبنا `for i in range(4):` فما هي قيم i في كل دورة؟"
-    options:
-      - "1, 2, 3, 4"
-      - "0, 1, 2, 3"
-      - "4, 3, 2, 1"
-    solution: 1
-    explanation: "range(4) يبدأ من 0 وينتهي عند 3، لذلك القيم هي: 0, 1, 2, 3"
-
+  # Step 6: Fill - print numbers
   - type: "fill"
     lang: "python"
-    question: "اكتب حلقة تطبع قيمة i في كل دورة لـ 4 مرات:"
+    question: |
+      أكمل الكود لطباعة الأرقام من 0 إلى 6:
     code: |
       for @@INPUT@@ in range(@@INPUT@@):
           print(@@INPUT@@)
     solution:
-      - "i"
-      - "4"
-      - "i"
-    explanation: "المتغير i يأخذ قيماً من 0 إلى 3، وسنطبع قيمته في كل دورة."
+      - "/^[a-zA-Z_][a-zA-Z0-9_]*$/"
+      - "7"
+      - "/^[a-zA-Z_][a-zA-Z0-9_]*$/"
+    explanation: "نستخدم `range(7)` للحصول على الأرقام من 0 إلى 6، ونطبع قيمة المتغير."
 
+  # Step 7: Range with start and stop
   - type: "markdown"
     content: |
-      رائع! الآن دعنا نجرب شيئاً أكثر إفادة.
-
-      يمكننا استخدام قيمة `i` لإنشاء أنماط مختلفة:
-
+      **تحديد البداية والنهاية:**
+      
       ```python
-      for i in range(3):
-          print(f"هذه هي الدورة رقم {i}")
+      for i in range(2, 6):
+          print(i)
       ```
+      
+      الناتج:
+      ```
+      2
+      3
+      4
+      5
+      ```
+      
+      `range(2, 6)` = ابدأ من 2، انتهي قبل 6
 
-      سيطبع:
-      ```
-      هذه هي الدورة رقم 0
-      هذه هي الدورة رقم 1  
-      هذه هي الدورة رقم 2
-      ```
+  # Step 8: Quiz - range understanding
+  - type: "quiz"
+    question: "ماذا سيطبع هذا الكود؟"
+    code: |
+      for x in range(3, 7):
+          print(x)
+    lang: python
+    options:
+      - "3, 4, 5, 6, 7"
+      - "3, 4, 5, 6"
+      - "4, 5, 6"
+      - "3, 4, 5"
+    solution: 1
+    explanation: "`range(3, 7)` ينتج الأرقام من 3 إلى 6 (يتوقف قبل 7)."
 
+  # Step 9: Practice with real example
   - type: "fill"
     lang: "python"
-    question: "أكمل الكود ليطبع 'المحاولة رقم X' لـ 5 محاولات:"
+    question: |
+      اطبع جدول الضرب للرقم 5 (من 5×1 إلى 5×5):
     code: |
-      for i in range(@@INPUT@@):
-          print(f"@@INPUT@@")
+      for i in range(@@INPUT@@, @@INPUT@@):
+          result = 5 * i
+          print(f"5 × {i} = {@@INPUT@@}")
     solution:
-      - "5"
-      - "المحاولة رقم {i}"
-    explanation: "نستخدم f-string لدمج قيمة i مع النص، وrange(5) للحصول على 5 دورات."
+      - "1"
+      - "6"
+      - "result"
+    explanation: "نبدأ من 1 وننتهي عند 6 لنحصل على الأرقام 1-5، ونطبع النتيجة."
 
+  # Step 10: Bug finding
   - type: "bug"
     lang: "python"
-    question: "ابحث عن الخطأ في هذا الكود:"
+    question: "اعثر على الخطأ في هذا الكود الذي يحاول طباعة الأرقام من 1 إلى 10:"
     code: |
-      for i in range(3)
-          print(f"العدد هو {i}")
+      for i in range(10)
+          print(i + 1)
     solution: 0
-    explanation: "نسيان النقطتين (:) في نهاية سطر for. يجب أن يكون: for i in range(3):"
-    hint: "تحقق من نهاية السطر الأول"
+    explanation: "نسينا النقطتين `:` بعد `range(10)`. في Python، كل حلقة for تحتاج `:` في نهاية السطر الأول."
+    expectedOutput: "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+    actualOutput: "SyntaxError"
 
-  - type: "order"
-    lang: "python" 
-    question: "رتب هذه الأسطر لإنشاء حلقة تطبع الأرقام من 0 إلى 2:"
-    code:
-      - "for i in range(3):"
-      - "    print(i)"
-    explanation: "أولاً نكتب حلقة for، ثم نطبع قيمة i مع المسافة البادئة."
-
+  # Step 11: Using loops for calculations
   - type: "markdown"
     content: |
-      ممتاز! لقد تعلمت الأساسيات:
+      **استخدام الحلقات للحسابات:**
+      
+      ```python
+      total = 0
+      for i in range(1, 6):
+          total = total + i
+      print(f"المجموع: {total}")
+      ```
+      
+      الناتج: `المجموع: 15`
+      
+      الحلقة جمعت: 1 + 2 + 3 + 4 + 5 = 15
 
-      - **حلقة for** تكرر كوداً معين عدد محدد من المرات
-      - **range(n)** يعطي الأرقام من 0 إلى n-1  
-      - **متغير العد i** يأخذ قيمة مختلفة في كل دورة
-      - **النقطتان (:)** ضروريتان بعد for
-      - **المسافة البادئة** ضرورية للكود داخل الحلقة
+  # Step 12: Order exercise
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لحساب مجموع الأرقام من 1 إلى 100:"
+    code:
+      - "sum = 0"
+      - "for num in range(1, 101):"
+      - "    sum = sum + num"
+      - "print(f\"المجموع هو: {sum}\")"
+    explanation: "نبدأ بتعريف المتغير `sum`، ثم الحلقة التي تجمع الأرقام، وأخيراً نطبع النتيجة."
 
-      في الدرس القادم، سنتعلم كيف نتحكم أكثر في range() لبدء العد من أرقام مختلفة!
+  # Step 13: Complex example
+  - type: "fill"
+    lang: "python"
+    question: |
+      أكمل البرنامج الذي يحسب عدد الأرقام الزوجية من 1 إلى 20:
+    code: |
+      count = 0
+      for i in range(@@INPUT@@, @@INPUT@@):
+          if i % 2 == @@INPUT@@:
+              count = count + 1
+      print(f"عدد الأرقام الزوجية: {count}")
+    solution:
+      - "1"
+      - "21"
+      - "0"
+    explanation: "نفحص من 1 إلى 20، والرقم زوجي إذا كان باقي قسمته على 2 يساوي 0."
+
+  # Step 14: Different loop variables
+  - type: "markdown"
+    content: |
+      **يمكنك استخدام أي اسم للمتغير:**
+      
+      ```python
+      for number in range(3):
+          print(number)
+      
+      for x in range(3):
+          print(x)
+      
+      for item in range(3):
+          print(item)
+      ```
+      
+      كلها تعمل بنفس الطريقة! اختر اسماً واضحاً ومناسباً.
+
+  # Step 15: Final Challenge
+  - type: "fill"
+    lang: "python"
+    question: |
+      اكتب برنامج يطبع مربعات الأرقام من 1 إلى 5:
+    code: |
+      print("مربعات الأرقام:")
+      @@INPUT@@ num @@INPUT@@ range(1, @@INPUT@@):
+          square = @@INPUT@@ * @@INPUT@@
+          print(f"{num}² = {@@INPUT@@}")
+    solution:
+      - "for"
+      - "in"
+      - "6"
+      - "num"
+      - "num"
+      - "square"
+    explanation: "نستخدم حلقة من 1 إلى 5، نحسب المربع، ثم نطبعه."
+
+  # Step 16: Summary
+  - type: "markdown"
+    content: |
+      **🎉 مبروك! تعلمت أساسيات حلقات for:**
+      
+      ✅ `for i in range(n)` - تكرار n مرة
+      ✅ `range(start, stop)` - تحديد البداية والنهاية
+      ✅ استخدام متغير الحلقة في الحسابات
+      ✅ الحلقات توفر الوقت والجهد!
+      
+      **في الدرس القادم:** سنتعمق أكثر في `range()` ونتعلم الخطوة (step) والعد العكسي!

@@ -207,11 +207,18 @@ Your entire output must be a single YAML code block. Follow this structure preci
 # The unique identifier for the item, provided in the roadmap
 item_id: "module-1-item-1"
 
-# The type of the item. For now, always use 'lesson'.
-item_type: "lesson"
+# The type of the item. For now, always use 'lesson' or 'code'.
+type: "lesson"
 
 # The title of the lesson item.
 title: "A World of Connected Computers"
+
+# Base xp to award to user, between 200 and 2000
+base_xp: 750
+
+# Difficulty of the lesson. Always use one of the following in english (easy, medium, hard)
+difficulty: "medium"
+
 
 # A list of steps that make up this lesson.
 steps:
@@ -233,7 +240,9 @@ steps:
   - type: "quiz"
     question: "Based on this, which of these best describes the internet?"
     # An (optional) code block to display to user if the question involves code
+    # for blank placeholders use @@INPUT@@, it will get replaced with the user selected solution
     code: |
+      # @@INPUT@@
       let score = 100;
       score = 150;
       console.log(score);
@@ -276,6 +285,7 @@ steps:
   - type: bug
     lang: javascript
     question: "Find the line with the mistake"
+    # code should never contain an empty line
     code: |
       function calculateSum(arr) {
         let sum = 0;
@@ -284,7 +294,6 @@ steps:
         }
         return sum;
       }
-
       const numbers = [10, 20, 30, 40, 50];
       console.log(calculateSum(numbers));
     # wrong line number starting from 0

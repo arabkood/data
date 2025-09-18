@@ -1,9 +1,0 @@
-type: "fill"
-lang: "python"
-question: "في برنامج المكتبة، أكمل هذه الدالة لإيجاد الكتاب الأكثر صفحات:"
-code: "def find_longest_book():\n    if not library:\n        return None\n    \n    longest_book = library[0]\n    for @@INPUT@@ in library:\n        if book[\"pages\"] > @@INPUT@@[\"pages\"]:\n            @@INPUT@@ = book\n    \n    return longest_book\n"
-solution:
-  - "book"
-  - "longest_book"
-  - "longest_book"
-explanation: "نقارن عدد صفحات كل كتاب مع الكتاب الأطول الحالي، ونحدث longest_book إذا وجدنا كتاباً أطول."

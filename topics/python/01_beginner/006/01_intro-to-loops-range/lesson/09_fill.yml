@@ -1,10 +1,14 @@
+# Step 9: Practice with real example
 type: "fill"
 lang: "python"
-question: "أكمل الكود ليطبع 'المحاولة رقم X' لـ 5 محاولات:"
+question: |
+  اطبع جدول الضرب للرقم 5 (من 5×1 إلى 5×5):
 code: |
-  for i in range(@@INPUT@@):
-      print(f"@@INPUT@@")
+  for i in range(@@INPUT@@, @@INPUT@@):
+      result = 5 * i
+      print(f"5 × {i} = {@@INPUT@@}")
 solution:
-  - "5"
-  - "المحاولة رقم {i}"
-explanation: "نستخدم f-string لدمج قيمة i مع النص، وrange(5) للحصول على 5 دورات."
+  - "1"
+  - "6"
+  - "result"
+explanation: "نبدأ من 1 وننتهي عند 6 لنحصل على الأرقام 1-5، ونطبع النتيجة."

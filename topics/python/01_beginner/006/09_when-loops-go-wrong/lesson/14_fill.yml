@@ -1,8 +1,0 @@
-type: "fill"
-lang: "python"
-question: "أصلح الأخطاء الثلاثة في الكود السابق:"
-code: "students = [\"أحمد\", \"فاطمة\", \"سالم\"]\ngrades = [[85, 90], [78, 82, 95], [88]]\n\nfor i in range(len(students)):  # إصلاح 1: إزالة + 1\n    student_name = students[i]\n    student_grades = grades[i]\n    \n    total = 0\n    count = 0\n    for grade in student_grades:\n        total @@INPUT@@ grade  # إصلاح 2\n        count += 1\n    \n    if count @@INPUT@@ 0:  # إصلاح 3\n        average = 0\n    else:\n        average = total / count\n    \n    print(f\"{student_name}: {average:.1f}\")\n"
-solution:
-  - "+="
-  - "=="
-explanation: "نصلح: 1) إزالة +1 من range، 2) += لتجميع الدرجات، 3) == للمقارنة."

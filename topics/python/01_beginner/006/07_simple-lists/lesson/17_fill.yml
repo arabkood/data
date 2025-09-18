@@ -1,8 +1,0 @@
-type: "fill"
-lang: "python"
-question: "أكمل كود حساب متوسط درجات كل طالب:"
-code: "students = [\"أحمد\", \"فاطمة\", \"سالم\"]\ngrades = [[85, 90, 78], [92, 88, 95], [76, 82, 80]]\n\nfor i in range(len(students)):\n    student_name = @@INPUT@@[i]\n    student_grades = grades[i]\n    \n    total = 0\n    for grade in @@INPUT@@:\n        total += grade\n    \n    average = total / len(student_grades)\n    print(f\"{student_name}: {average:.1f}\")\n"
-solution:
-  - "students"
-  - "student_grades"
-explanation: "نأخذ اسم الطالب من قائمة الأسماء ودرجاته من قائمة الدرجات، ثم نحسب المتوسط."
