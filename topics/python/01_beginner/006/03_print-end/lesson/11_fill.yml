@@ -1,12 +1,18 @@
-# Step 11: Complex pattern
 type: "fill"
 lang: "python"
 question: |
-  اصنع نمط الأسهم: -> -> -> ->
+  اطبع الأرقام من 1 إلى 5 على نفس السطر مع شرطة بينهم، بحيث يكون الإخراج كما يلي:
+
+  ```
+  1-2-3-4-5
+  ```
 code: |
-  for i in range(4):
-      print("->", @@INPUT@@)
-  print("الهدف!")
+  for i in range(@@INPUT@@, @@INPUT@@):
+      if i < 5:
+          print(i, @@INPUT@@)
+      else:
+          print(i)
 solution:
-  - 'end=" "'
-explanation: "نضع مسافة بعد كل سهم لفصلها بشكل واضح"
+  - "1"
+  - "6"
+  - /^\s*end\s*=\s*(?:"-"|'-')\s*$/

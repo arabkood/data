@@ -1,13 +1,8 @@
-# Step 3: Practice with spaces
-type: "fill"
-lang: "python"
-question: |
-  اطبع الكلمات على سطر واحد مع مسافات بينها:
-code: |
-  print("البرمجة", @@INPUT@@)
-  print("ممتعة", @@INPUT@@)
-  print("جداً!")
-solution:
-  - 'end=" "'
-  - 'end=" "'
-explanation: "end=' ' يضع مسافة واحدة بدلاً من الانتقال لسطر جديد"
+type: "quiz"
+question: "لماذا تعتقد أن كل print() ينتقل إلى سطر جديد؟"
+options:
+  - "لأن هذا هو السلوك الافتراضي لـ print()"
+  - "لأنه خطأ في الكود"
+  - "لأننا نسينا إضافة شيء ما"
+solution: 0
+explanation: "صحيح! print() يضيف تلقائياً رمز السطر الجديد '\\n' في نهاية كل نص."

@@ -1,14 +1,15 @@
-# Step 7: Practice - numbers in a row
 type: "fill"
 lang: "python"
 question: |
-  اطبع الأرقام من 1 إلى 5 على نفس السطر مع شرطة بينهم:
+  اجعل الأرقام تطبع على نفس السطر مع فاصلة بينهم، بحيث يكون الإخراج كما يلي:
+
+  ```
+  1, 2, 3
+  ```
 code: |
-  for i in range(1, 6):
-      if i < 5:
-          print(i, @@INPUT@@)
-      else:
-          print(i)
+  print(1, @@INPUT@@)
+  print(2, @@INPUT@@)
+  print(3)
 solution:
-  - 'end="-"'
-explanation: "نضع شرطة بعد كل رقم ما عدا الأخير"
+  - /^\s*end\s*=\s*(?:", "|', ')\s*$/
+  - /^\s*end\s*=\s*(?:", "|', ')\s*$/

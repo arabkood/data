@@ -1,13 +1,19 @@
-# Step 9: Creating a progress bar
 type: "fill"
 lang: "python"
 question: |
-  اصنع شريط تقدم بسيط باستخدام علامات #:
+  اصنع خط من الشرطات على نفس السطر، بحيث يكون الإخراج كما يلي:
+
+  ```
+  -----
+  ```
 code: |
-  print("التحميل: [", end="")
-  for i in range(8):
-      print("#", @@INPUT@@)
-  print("] مكتمل!")
+  print("-", @@INPUT@@)
+  print("-", @@INPUT@@)
+  print("-", @@INPUT@@)
+  print("-", @@INPUT@@)
+  print("-")
 solution:
-  - 'end=""'
-explanation: "نلصق علامات # مباشرة لصنع شريط متصل"
+  - /^\s*end\s*=\s*(?:""|'')\s*$/
+  - /^\s*end\s*=\s*(?:""|'')\s*$/
+  - /^\s*end\s*=\s*(?:""|'')\s*$/
+  - /^\s*end\s*=\s*(?:""|'')\s*$/

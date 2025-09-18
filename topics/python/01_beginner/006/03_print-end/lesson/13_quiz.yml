@@ -12,4 +12,3 @@ options:
   - "A->\nB->\nC"
   - "ABC"
 solution: 1
-explanation: "end='->' يضع سهم بعد كل print، والأخير بدون end ينتقل لسطر جديد"
