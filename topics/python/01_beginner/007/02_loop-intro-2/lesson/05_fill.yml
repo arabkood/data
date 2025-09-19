@@ -2,7 +2,7 @@
 type: "fill"
 lang: "python"
 question: |
-  أنشئ قائمة بأسماء 3 مدن عربية
+  أنشئ قائمة بأسماء 3 مدن
 code: |
   cities = @@INPUT@@
   print("المدن:", cities)
