@@ -9,7 +9,7 @@ code: |
 
   # إضافة 3 درجات
   grades.append(85)
-  grades.@@INPUT@@(90)
+  grades@@INPUT@@(90)
   grades.append(78)
 
   # حساب العدد
@@ -17,7 +17,7 @@ code: |
   print(f"عدد الدرجات: {total}")
   print(f"الدرجات: {grades}")
 solution:
-  - "\\[\\]"
-  - "append"
-  - "len\\(grades\\)"
+  - "[]"
+  - ".append"
+  - "len(grades)"
 explanation: "ممتاز! لقد تعلمت إنشاء القوائم، إضافة العناصر، وحساب العدد!"

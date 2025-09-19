@@ -1,0 +1,23 @@
+# Step 4: Negative indexing practice
+type: "fill"
+lang: "python"
+question: |
+  استخدم الفهرسة السالبة للوصول للعناصر:
+code: |
+  days = ["السبت", "الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة"]
+
+  # احصل على آخر يوم
+  last_day = days[@@INPUT@@]
+
+  # احصل على ثاني آخر يوم
+  before_last = days[@@INPUT@@]
+
+  # احصل على أول يوم باستخدام الفهرسة السالبة
+  first_day = days[@@INPUT@@]
+
+  print(last_day, before_last, first_day)
+solution:
+  - "-1"
+  - "-2"
+  - "-7"
+explanation: "في قائمة من 7 عناصر، -7 يشير للعنصر الأول، و -1 للأخير"

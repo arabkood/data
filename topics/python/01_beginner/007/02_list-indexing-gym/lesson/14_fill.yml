@@ -1,0 +1,24 @@
+# Step 14: Pattern recognition with indexing
+type: "fill"
+lang: "python"
+question: |
+  أكمل النمط للوصول لعناصر متباعدة:
+code: |
+  alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+  # احصل على كل حرف ثاني (a, c, e, g, i)
+  pattern1 = []
+  pattern1.append(alphabet[@@INPUT@@])  # a
+  pattern1.append(alphabet[@@INPUT@@])  # c
+  pattern1.append(alphabet[@@INPUT@@])  # e
+  pattern1.append(alphabet[@@INPUT@@])  # g
+  pattern1.append(alphabet[@@INPUT@@])  # i
+
+  print(pattern1)
+solution:
+  - "0"
+  - "2"
+  - "4"
+  - "6"
+  - "8"
+explanation: "النمط هو القفز بمقدار 2 في كل مرة: 0، 2، 4، 6، 8"

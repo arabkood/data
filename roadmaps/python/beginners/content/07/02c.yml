@@ -1,285 +1,299 @@
 ---
-item_id: "m7-intro-lists"
+item_id: "m7-list-indexing-gym"
 type: "lesson"
-title: "مقدمة إلى القوائم"
-base_xp: 800
-difficulty: "easy"
+title: "صالة تدريب فهرسة القوائم"
+base_xp: 850
+difficulty: "medium"
 premium_only: true
 
 steps:
-  # Step 1: The Problem
+  # Step 1: Quick reminder about indexing
   - type: "markdown"
     content: |
-      تخيل أنك تريد تخزين درجات 30 طالب في الفصل.
+      مرحباً في صالة التدريب! 💪
       
-      بدون القوائم، ستحتاج إلى كتابة:
+      تذكير سريع: الفهرسة (indexing) تسمح لنا بالوصول لعنصر محدد في القائمة.
+      
       ```python
-      student1 = 85
-      student2 = 92
-      student3 = 78
-      # ... وهكذا حتى student30!
+      fruits = ["تفاح", "موز", "برتقال"]
+      print(fruits[0])  # تفاح (العنصر الأول)
+      print(fruits[2])  # برتقال (العنصر الثالث)
       ```
       
-      هذا مُرهق جداً! 😅
-      
-      **الحل؟ القوائم (Lists)!** 
-      
-      القائمة تسمح لك بتخزين مجموعة من القيم في متغير واحد.
+      هيا نبدأ التدريب المكثف!
 
-  # Step 2: First List
-  - type: "markdown"
-    content: |
-      القائمة في Python هي مثل صندوق به أقسام متعددة، كل قسم يحتوي على قيمة.
-      
-      إليك أول قائمة لك:
-      ```python
-      grades = [85, 92, 78, 90, 88]
-      print(grades)
-      ```
-      
-      **لاحظ:**
-      - نستخدم الأقواس المربعة `[]` لإنشاء قائمة
-      - نفصل بين العناصر بفاصلة `,`
-      - يمكننا طباعة القائمة كاملة بـ `print()`
-      
-      # media_idea: رسم توضيحي لصندوق به 5 أقسام، كل قسم يحتوي على رقم من الدرجات
-
-  # Step 3: Create Your First List
+  # Step 2: Basic positive indexing practice
   - type: "fill"
     lang: "python"
     question: |
-      أنشئ قائمة تحتوي على أعمار 4 أصدقاء: 22، 25، 21، 24
+      أكمل الكود للوصول للعناصر المطلوبة:
     code: |
-      ages = @@INPUT@@
-      print(ages)
+      colors = ["أحمر", "أزرق", "أخضر", "أصفر", "بنفسجي"]
+      
+      # احصل على اللون الأول
+      first = colors[@@INPUT@@]
+      
+      # احصل على اللون الثالث
+      third = colors[@@INPUT@@]
+      
+      # احصل على اللون الأخير (الخامس)
+      last = colors[@@INPUT@@]
+      
+      print(first, third, last)
     solution:
-      - "[22, 25, 21, 24]"
-    explanation: "رائع! لقد أنشأت قائمتك الأولى. لاحظ كيف استخدمنا الأقواس المربعة والفواصل."
+      - "0"
+      - "2"
+      - "4"
+    explanation: "الفهرسة تبدأ من 0، لذا العنصر الأول عند 0، والثالث عند 2، والخامس عند 4"
 
-  # Step 4: Lists Can Hold Anything
+  # Step 3: Negative indexing introduction
   - type: "markdown"
     content: |
-      القوائم ليست للأرقام فقط! يمكنها تخزين:
+      **الفهرسة السالبة** - ميزة قوية في Python!
       
-      **نصوص:**
       ```python
-      names = ["أحمد", "فاطمة", "عمر", "مريم"]
+      numbers = [10, 20, 30, 40, 50]
+      print(numbers[-1])  # 50 (آخر عنصر)
+      print(numbers[-2])  # 40 (ثاني آخر عنصر)
       ```
       
-      **أنواع مختلطة:**
-      ```python
-      mixed = ["أحمد", 25, True, 3.14]
-      ```
-      
-      **حتى قوائم فارغة:**
-      ```python
-      empty_list = []
-      ```
-      
-      القائمة مثل حقيبة سفر - يمكنك وضع أي شيء فيها! 🎒
+      الفهرسة السالبة تبدأ من النهاية:
+      - `-1` = آخر عنصر
+      - `-2` = ثاني آخر عنصر
+      - وهكذا...
 
-  # Step 5: Practice Different Types
+  # Step 4: Negative indexing practice
   - type: "fill"
     lang: "python"
     question: |
-      أنشئ قائمة بأسماء 3 مدن عربية
+      استخدم الفهرسة السالبة للوصول للعناصر:
     code: |
-      cities = @@INPUT@@
-      print("المدن:", cities)
-    solution:
-      - '/^\[".+",\s*".+",\s*".+"\]$/'
-    explanation: "ممتاز! القوائم يمكنها تخزين النصوص تماماً مثل الأرقام."
-
-  # Step 6: List Length
-  - type: "markdown"
-    content: |
-      كم عنصراً في القائمة؟ استخدم `len()`:
+      days = ["السبت", "الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة"]
       
-      ```python
-      fruits = ["تفاح", "موز", "برتقال", "عنب"]
-      count = len(fruits)
-      print(f"لدينا {count} أنواع من الفواكه")
-      # Output: لدينا 4 أنواع من الفواكه
-      ```
+      # احصل على آخر يوم
+      last_day = days[@@INPUT@@]
       
-      `len()` تعمل مع القوائم تماماً كما تعمل مع النصوص!
-
-  # Step 7: Practice len()
-  - type: "fill"
-    lang: "python"
-    question: |
-      احسب عدد الطلاب في القائمة واطبع النتيجة
-    code: |
-      students = ["سارة", "خالد", "نور", "يوسف", "ليلى"]
-      number = @@INPUT@@
-      print(f"عدد الطلاب: {number}")
+      # احصل على ثاني آخر يوم
+      before_last = days[@@INPUT@@]
+      
+      # احصل على أول يوم باستخدام الفهرسة السالبة
+      first_day = days[@@INPUT@@]
+      
+      print(last_day, before_last, first_day)
     solution:
-      - "len(students)"
-    explanation: "صحيح! `len()` تُرجع عدد العناصر في القائمة."
+      - "-1"
+      - "-2"
+      - "-7"
+    explanation: "في قائمة من 7 عناصر، -7 يشير للعنصر الأول، و -1 للأخير"
 
-  # Step 8: Why Lists Are Powerful
+  # Step 5: Mixed indexing challenge
   - type: "quiz"
-    question: "ما الميزة الأساسية لاستخدام القوائم بدلاً من متغيرات منفصلة؟"
-    options:
-      - "القوائم أسرع في التنفيذ"
-      - "يمكن تخزين عدد كبير من القيم في متغير واحد"
-      - "القوائم تستهلك ذاكرة أقل"
-      - "القوائم أسهل في الكتابة دائماً"
-    solution: 1
-    explanation: "بالضبط! القائمة تسمح لك بتخزين مئات أو آلاف القيم في متغير واحد بدلاً من إنشاء متغير منفصل لكل قيمة."
-
-  # Step 9: Building Lists Step by Step
-  - type: "markdown"
-    content: |
-      يمكنك بناء القائمة تدريجياً:
-      
-      ```python
-      # البداية بقائمة فارغة
-      shopping = []
-      
-      # إضافة عناصر باستخدام append()
-      shopping.append("خبز")
-      shopping.append("حليب")
-      shopping.append("بيض")
-      
-      print(shopping)
-      # Output: ['خبز', 'حليب', 'بيض']
-      ```
-      
-      `append()` تضيف عنصراً جديداً في نهاية القائمة.
-
-  # Step 10: Practice append()
-  - type: "fill"
-    lang: "python"
-    question: |
-      أضف "تفاح" إلى قائمة المشتريات
+    question: "ما الناتج من هذا الكود؟"
     code: |
-      shopping = ["خبز", "حليب"]
-      shopping.@@INPUT@@
-      print(shopping)
-    solution:
-      - 'append\("تفاح"\)'
-      - 'append\(\"تفاح\"\)'
-    explanation: "ممتاز! `append()` دائماً تضيف العنصر في نهاية القائمة."
+      grades = [85, 92, 78, 95, 88, 91]
+      result = grades[1] + grades[-2]
+      print(result)
+    lang: python
+    options:
+      - "177"
+      - "180"
+      - "183"
+      - "186"
+    solution: 2
+    explanation: "grades[1] = 92 (العنصر الثاني) و grades[-2] = 88 (ثاني آخر عنصر). المجموع = 92 + 88 = 180"
 
-  # Step 11: Order the List Building
-  - type: "order"
-    lang: "python"
-    question: "رتب الكود لبناء قائمة بالأرقام من 1 إلى 3"
-    code:
-      - "numbers = []"
-      - "numbers.append(1)"
-      - "numbers.append(2)"
-      - "numbers.append(3)"
-      - "print(numbers)"
-    explanation: "يجب إنشاء القائمة الفارغة أولاً، ثم إضافة العناصر بالترتيب، ثم طباعة النتيجة."
-
-  # Step 12: Find the Bug
+  # Step 6: Bug hunting with indexing
   - type: "bug"
     lang: "python"
-    question: "اكتشف الخطأ في إنشاء القائمة"
+    question: "اكتشف الخطأ في الكود:"
     code: |
-      colors = ["أحمر", "أخضر", "أزرق"]
-      colors.append["أصفر"]
-      print(colors)
-    solution: 1
-    hint: "كيف نستدعي الدوال في Python؟"
-    explanation: "يجب استخدام الأقواس العادية () مع append وليس الأقواس المربعة []"
-    expectedOutput: "['أحمر', 'أخضر', 'أزرق', 'أصفر']"
-    actualOutput: "TypeError"
+      inventory = ["قلم", "دفتر", "ممحاة", "مسطرة"]
+      print("لدينا", len(inventory), "أدوات")
+      print("الأداة الأولى:", inventory[1])
+      print("الأداة الأخيرة:", inventory[-1])
+    solution: 2
+    explanation: "الفهرسة تبدأ من 0، لذا inventory[1] يعطي العنصر الثاني وليس الأول. الصحيح: inventory[0]"
+    expectedOutput: "الأداة الأولى: قلم"
+    actualOutput: "الأداة الأولى: دفتر"
 
-  # Step 13: Mixed Practice
+  # Step 7: Complex indexing patterns
   - type: "fill"
     lang: "python"
     question: |
-      أكمل الكود لإنشاء قائمة بمعلومات طالب
+      أكمل الكود لطباعة العناصر المطلوبة:
     code: |
-      # قائمة تحتوي على: الاسم، العمر، النجاح
-      student_info = ["أحمد", @@INPUT@@, @@INPUT@@]
-      print(f"الطالب: {student_info}")
+      temperatures = [22, 24, 19, 26, 28, 23, 21, 25]
+      
+      # احصل على أول 3 درجات حرارة
+      print(temperatures[@@INPUT@@], temperatures[@@INPUT@@], temperatures[@@INPUT@@])
+      
+      # احصل على آخر 3 درجات حرارة
+      print(temperatures[@@INPUT@@], temperatures[@@INPUT@@], temperatures[@@INPUT@@])
     solution:
-      - "/^\\d+$/"
-      - "/^(True|False)$/"
-    explanation: "رائع! القوائم يمكنها تخزين أنواع مختلفة من البيانات معاً."
+      - "0"
+      - "1"
+      - "2"
+      - "-3"
+      - "-2"
+      - "-1"
 
-  # Step 14: Real-World Application
-  - type: "markdown"
-    content: |
-      **متى نستخدم القوائم في الحياة الواقعية؟**
+  # Step 8: Dynamic indexing practice
+  - type: "fill"
+    lang: "python"
+    question: |
+      استخدم المتغيرات للفهرسة الديناميكية:
+    code: |
+      products = ["كمبيوتر", "هاتف", "سماعات", "شاشة", "لوحة مفاتيح", "فأرة"]
       
-      📱 **تطبيقات الهاتف:**
-      - قائمة جهات الاتصال
-      - قائمة الرسائل
-      - قائمة التطبيقات المثبتة
+      # احسب فهرس العنصر الأوسط
+      middle_index = len(products) // @@INPUT@@
       
-      🛒 **التسوق الإلكتروني:**
-      - قائمة المنتجات في السلة
-      - قائمة الطلبات السابقة
-      - قائمة المفضلات
+      # احصل على العنصر الأوسط
+      middle_item = products[@@INPUT@@]
       
-      📊 **تحليل البيانات:**
-      - قائمة درجات الطلاب
-      - قائمة المبيعات اليومية
-      - قائمة درجات الحرارة
+      # احصل على العنصر قبل الأخير باستخدام len()
+      before_last_index = len(products) - @@INPUT@@
+      before_last_item = products[@@INPUT@@]
       
-      القوائم في كل مكان حولنا!
+      print(f"العنصر الأوسط: {middle_item}")
+      print(f"قبل الأخير: {before_last_item}")
+    solution:
+      - "2"
+      - "middle_index"
+      - "2"
+      - "before_last_index"
+    explanation: "القسمة على 2 تعطينا الفهرس الأوسط، وطرح 2 من الطول يعطينا فهرس العنصر قبل الأخير"
 
-  # Step 15: Summary Quiz
+  # Step 9: Order challenge with different indexing methods
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود للحصول على العناصر الأول والأوسط والأخير:"
+    code:
+      - "letters = ['A', 'B', 'C', 'D', 'E']"
+      - "first = letters[0]"
+      - "middle = letters[len(letters) // 2]"
+      - "last = letters[-1]"
+      - "print(first, middle, last)"
+
+  # Step 10: IndexError understanding
+  - type: "bug"
+    lang: "python"
+    question: "أي سطر سيسبب IndexError؟"
+    code: |
+      scores = [100, 85, 92, 78, 95]
+      print(scores[0])     # الأول
+      print(scores[4])     # الخامس
+      print(scores[5])     # خطأ! لا يوجد عنصر سادس
+      print(scores[-1])    # الأخير
+    solution: 3
+    hint: "القائمة تحتوي 5 عناصر (فهارس 0-4)"
+    expectedOutput: "طباعة العناصر"
+    actualOutput: "IndexError: list index out of range"
+
+  # Step 11: Advanced negative indexing
+  - type: "fill"
+    lang: "python"
+    question: |
+      استخدم الفهرسة السالبة بطرق متقدمة:
+    code: |
+      playlist = ["أغنية1", "أغنية2", "أغنية3", "أغنية4", "أغنية5", "أغنية6"]
+      
+      # احصل على الأغنية في المنتصف من النهاية
+      # (إذا كان لدينا 6 أغاني، نريد الثالثة من النهاية)
+      middle_from_end = playlist[@@INPUT@@]
+      
+      # احصل على الأغنية الثانية باستخدام الفهرسة السالبة
+      second = playlist[@@INPUT@@]
+      
+      # تحقق أن العنصر الأول بالموجب = العنصر الأخير بالسالب المناسب
+      same_element = playlist[0] == playlist[@@INPUT@@]
+      
+      print(middle_from_end, second, same_element)
+    solution:
+      - "-3"
+      - "-5"
+      - "-6"
+    explanation: "-3 تعطي الثالث من النهاية، -5 تعطي الثاني من البداية، -6 تعطي الأول في قائمة من 6 عناصر"
+
+  # Step 12: Quiz on equivalent indexing
   - type: "quiz"
-    question: "أي من التالي هو طريقة صحيحة لإنشاء قائمة فارغة؟"
-    lang: "python"
+    question: "أي من هذه الخيارات تعطي نفس العنصر في قائمة من 8 عناصر؟"
     code: |
-      # أي خيار صحيح؟
-      option_a = []
-      option_b = list()
-      option_c = {}
-      option_d = ()
+      items = [1, 2, 3, 4, 5, 6, 7, 8]
+      # أي خيارين متكافئين؟
+    lang: python
     options:
-      - "option_a فقط"
-      - "option_a و option_b"
-      - "option_c فقط"
-      - "جميعها صحيحة"
-    solution: 1
-    explanation: "كلاً من [] و list() ينشئان قائمة فارغة. {} للقواميس و () للـ tuples."
+      - "items[3] و items[-5]"
+      - "items[2] و items[-6]"
+      - "items[5] و items[-2]"
+      - "items[0] و items[-7]"
+    solution: 0
+    explanation: "items[3] يعطي العنصر الرابع (4)، و items[-5] أيضاً يعطي العنصر الرابع من النهاية = 4"
 
-  # Step 16: Final Challenge
+  # Step 13: Complex bug with indexing logic
+  - type: "bug"
+    lang: "python"
+    question: "اكتشف الخطأ المنطقي:"
+    code: |
+      queue = ["أحمد", "فاطمة", "علي", "مريم", "يوسف"]
+      
+      # نريد طباعة الشخص في منتصف الطابور
+      middle_position = len(queue) / 2
+      middle_person = queue[middle_position]
+      print(f"الشخص في المنتصف: {middle_person}")
+    solution: 2
+    explanation: "القسمة العادية (/) تعطي عدد عشري، لكن الفهرسة تحتاج عدد صحيح. استخدم // للقسمة الصحيحة"
+    hint: "الفهارس يجب أن تكون أعداد صحيحة"
+
+  # Step 14: Pattern recognition with indexing
   - type: "fill"
     lang: "python"
     question: |
-      أنشئ برنامج يبني قائمة درجات ويحسب عددها
+      أكمل النمط للوصول لعناصر متباعدة:
     code: |
-      # إنشاء قائمة فارغة
-      grades = @@INPUT@@
+      alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
       
-      # إضافة 3 درجات
-      grades.append(85)
-      grades.@@INPUT@@(90)
-      grades.append(78)
+      # احصل على كل حرف ثاني (a, c, e, g, i)
+      pattern1 = []
+      pattern1.append(alphabet[@@INPUT@@])  # a
+      pattern1.append(alphabet[@@INPUT@@])  # c
+      pattern1.append(alphabet[@@INPUT@@])  # e
+      pattern1.append(alphabet[@@INPUT@@])  # g
+      pattern1.append(alphabet[@@INPUT@@])  # i
       
-      # حساب العدد
-      total = @@INPUT@@
-      print(f"عدد الدرجات: {total}")
-      print(f"الدرجات: {grades}")
+      print(pattern1)
     solution:
-      - "\\[\\]"
-      - "append"
-      - "len\\(grades\\)"
-    explanation: "ممتاز! لقد تعلمت إنشاء القوائم، إضافة العناصر، وحساب العدد!"
+      - "0"
+      - "2"
+      - "4"
+      - "6"
+      - "8"
+    explanation: "النمط هو القفز بمقدار 2 في كل مرة: 0، 2، 4، 6، 8"
 
-  # Step 17: Bridge to Next Lesson
+  # Step 15: Final indexing mastery challenge
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لتبديل أول وآخر عنصر في القائمة:"
+    code:
+      - "cities = ['الرياض', 'جدة', 'مكة', 'المدينة', 'الدمام']"
+      - "temp = cities[0]"
+      - "cities[0] = cities[-1]"
+      - "cities[-1] = temp"
+      - "print(cities)"
+    alternate:
+      - [0, 1, 2, 3, 4]
+      - [0, 2, 1, 3, 4]
+
+  # Step 16: Summary and next steps
   - type: "markdown"
     content: |
-      **🎉 تهانينا! لقد تعلمت أساسيات القوائم!**
+      🎉 **أحسنت! أكملت تدريب الفهرسة المكثف!**
       
-      **ما تعلمته:**
-      ✅ إنشاء القوائم باستخدام []
-      ✅ القوائم يمكنها تخزين أي نوع من البيانات
-      ✅ استخدام len() لمعرفة عدد العناصر
-      ✅ إضافة عناصر جديدة باستخدام append()
+      لقد تعلمت:
+      ✅ الفهرسة الموجبة (من 0 للأمام)
+      ✅ الفهرسة السالبة (من -1 للخلف)
+      ✅ حساب الفهارس الديناميكية
+      ✅ تجنب أخطاء IndexError
+      ✅ استخدام الفهرسة في حل المشاكل
       
-      **في الدرس القادم:**
-      🔜 كيفية الوصول لعناصر محددة في القائمة (الفهرسة)
-      🔜 تعديل عناصر القائمة
-      🔜 الفهرسة السالبة للوصول من النهاية
-      
-      القوائم هي من أهم المفاهيم في البرمجة - ستستخدمها في كل برنامج تقريباً!
+      **التالي:** سنتعلم كيف نأخذ أجزاء من القوائم باستخدام التقطيع (Slicing)!

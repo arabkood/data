@@ -1,0 +1,23 @@
+# Step 2: Basic positive indexing practice
+type: "fill"
+lang: "python"
+question: |
+  أكمل الكود للوصول للعناصر المطلوبة:
+code: |
+  colors = ["أحمر", "أزرق", "أخضر", "أصفر", "بنفسجي"]
+
+  # احصل على اللون الأول
+  first = colors[@@INPUT@@]
+
+  # احصل على اللون الثالث
+  third = colors[@@INPUT@@]
+
+  # احصل على اللون الأخير (الخامس)
+  last = colors[@@INPUT@@]
+
+  print(first, third, last)
+solution:
+  - "0"
+  - "2"
+  - "4"
+explanation: "الفهرسة تبدأ من 0، لذا العنصر الأول عند 0، والثالث عند 2، والخامس عند 4"

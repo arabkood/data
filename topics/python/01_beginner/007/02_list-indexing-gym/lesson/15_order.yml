@@ -1,0 +1,13 @@
+# Step 15: Final indexing mastery challenge
+type: "order"
+lang: "python"
+question: "رتب الكود لتبديل أول وآخر عنصر في القائمة:"
+code:
+  - "cities = ['الرياض', 'جدة', 'مكة', 'المدينة', 'الدمام']"
+  - "temp = cities[0]"
+  - "cities[0] = cities[-1]"
+  - "cities[-1] = temp"
+  - "print(cities)"
+alternate:
+  - [0, 1, 2, 3, 4]
+  - [0, 2, 1, 3, 4]

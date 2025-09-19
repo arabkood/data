@@ -8,5 +8,5 @@ code: |
   shopping.@@INPUT@@
   print(shopping)
 solution:
-  - 'append\("تفاح"\)'
+  - 'append("تفاح")'
 explanation: "ممتاز! `append()` دائماً تضيف العنصر في نهاية القائمة."

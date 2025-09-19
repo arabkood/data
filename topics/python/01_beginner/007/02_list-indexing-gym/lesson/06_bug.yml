@@ -1,0 +1,13 @@
+# Step 6: Bug hunting with indexing
+type: "bug"
+lang: "python"
+question: "اكتشف الخطأ في الكود:"
+code: |
+  inventory = ["قلم", "دفتر", "ممحاة", "مسطرة"]
+  print("لدينا", len(inventory), "أدوات")
+  print("الأداة الأولى:", inventory[1])
+  print("الأداة الأخيرة:", inventory[-1])
+solution: 2
+explanation: "الفهرسة تبدأ من 0، لذا inventory[1] يعطي العنصر الثاني وليس الأول. الصحيح: inventory[0]"
+expectedOutput: "الأداة الأولى: قلم"
+actualOutput: "الأداة الأولى: دفتر"

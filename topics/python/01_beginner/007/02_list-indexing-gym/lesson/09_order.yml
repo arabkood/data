@@ -1,0 +1,10 @@
+# Step 9: Order challenge with different indexing methods
+type: "order"
+lang: "python"
+question: "رتب الكود للحصول على العناصر الأول والأوسط والأخير:"
+code:
+  - "letters = ['A', 'B', 'C', 'D', 'E']"
+  - "first = letters[0]"
+  - "middle = letters[len(letters) // 2]"
+  - "last = letters[-1]"
+  - "print(first, middle, last)"

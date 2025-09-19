@@ -1,0 +1,14 @@
+# Step 13: Complex bug with indexing logic
+type: "bug"
+lang: "python"
+question: "اكتشف الخطأ المنطقي:"
+code: |
+  queue = ["أحمد", "فاطمة", "علي", "مريم", "يوسف"]
+
+  # نريد طباعة الشخص في منتصف الطابور
+  middle_position = len(queue) / 2
+  middle_person = queue[middle_position]
+  print(f"الشخص في المنتصف: {middle_person}")
+solution: 2
+explanation: "القسمة العادية (/) تعطي عدد عشري، لكن الفهرسة تحتاج عدد صحيح. استخدم // للقسمة الصحيحة"
+hint: "الفهارس يجب أن تكون أعداد صحيحة"

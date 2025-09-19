@@ -1,0 +1,12 @@
+id: ebfe0840-f935-406d-8bbc-5c6d920fa82a
+module_id: 25f62daa-a846-4102-abe1-9c5afffdea66
+slug: list-indexing-gym
+position: 2
+created_at: 2025-09-19T08:24:00.220Z
+updated_at: 2025-09-19T08:24:00.220Z
+type: lesson
+title: صالة تدريب فهرسة القوائم
+difficulty: medium
+premium_only: true
+base_xp: 850
+s3_path: python/01_beginner/007/02_list-indexing-gym

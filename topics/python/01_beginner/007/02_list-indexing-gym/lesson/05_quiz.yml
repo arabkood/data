@@ -1,0 +1,15 @@
+# Step 5: Mixed indexing challenge
+type: "quiz"
+question: "ما الناتج من هذا الكود؟"
+code: |
+  grades = [85, 92, 78, 95, 88, 91]
+  result = grades[1] + grades[-2]
+  print(result)
+lang: python
+options:
+  - "177"
+  - "180"
+  - "183"
+  - "186"
+solution: 2
+explanation: "grades[1] = 92 (العنصر الثاني) و grades[-2] = 88 (ثاني آخر عنصر). المجموع = 92 + 88 = 180"
