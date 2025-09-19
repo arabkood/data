@@ -3,7 +3,9 @@ type: "quiz"
 question: "إذا أردنا حساب مجموع الأرقام من 10 إلى 20، ما القيمة الابتدائية الصحيحة للمتغير total؟"
 code: |
   total = @@INPUT@@
-  for i in range(10, 21):
+  start = 10
+  stop = 21
+  for i in range(start, stop):
       total = total + i
 lang: python
 options:

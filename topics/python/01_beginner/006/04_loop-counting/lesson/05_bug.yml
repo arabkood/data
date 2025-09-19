@@ -4,7 +4,9 @@ lang: "python"
 question: "هذا الكود يجب أن يحسب مجموع الأرقام من 1 إلى 10، لكن النتيجة خاطئة. اكتشف الخطأ:"
 code: |
   total = 1
-  for i in range(1, 11):
+  start = 1
+  stop = 11
+  for i in range(start, stop):
       total = total + i
   print(f"المجموع: {total}")
 solution: 0

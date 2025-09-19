@@ -4,7 +4,9 @@ question: |
   احسب عدد الأرقام بين 1 و 30 التي تقبل القسمة على 3:
 code: |
   count = 0
-  for num in range(1, @@INPUT@@):
+  start = 1
+  stop = @@INPUT@@
+  for num in range(start, stop):
       if num % @@INPUT@@ == 0:
           count = @@INPUT@@
   print(f"عدد الأرقام القابلة للقسمة على 3: {count}")
