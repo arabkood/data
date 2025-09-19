@@ -1,0 +1,11 @@
+# Step 11: Order the List Building
+type: "order"
+lang: "python"
+question: "رتب الكود لبناء قائمة بالأرقام من 1 إلى 3"
+code:
+  - "numbers = []"
+  - "numbers.append(1)"
+  - "numbers.append(2)"
+  - "numbers.append(3)"
+  - "print(numbers)"
+explanation: "يجب إنشاء القائمة الفارغة أولاً، ثم إضافة العناصر بالترتيب، ثم طباعة النتيجة."

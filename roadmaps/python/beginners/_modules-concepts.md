@@ -138,9 +138,9 @@
 - [x] [L] Counting & Accumulating Practice *(practice-heavy)*
 - [x] [C] Sum Calculator
 - [x] [L] Pattern Building Marathon
-- [ ] [L] Loop Practice Scenarios
-- [ ] [C] Multiplication table generator
-- [ ] [L] Final Review
+- [x] [L] Loop Practice Scenarios
+- [x] [C] Multiplication table generator
+- [ ] [L] Loops -> Lists Bridge
 
 ## M7: Lists & Loops Together
 

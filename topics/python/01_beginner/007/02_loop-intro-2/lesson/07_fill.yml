@@ -1,0 +1,12 @@
+# Step 7: Practice len()
+type: "fill"
+lang: "python"
+question: |
+  احسب عدد الطلاب في القائمة واطبع النتيجة
+code: |
+  students = ["سارة", "خالد", "نور", "يوسف", "ليلى"]
+  number = @@INPUT@@
+  print(f"عدد الطلاب: {number}")
+solution:
+  - "len(students)"
+explanation: "صحيح! `len()` تُرجع عدد العناصر في القائمة."

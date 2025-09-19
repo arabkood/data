@@ -8,7 +8,7 @@ code: |
   print("تقرير أرباح المتجر الشهرية:")
   for day in range(@@INPUT@@, @@INPUT@@):
       daily_profit = daily_base_profit + (day * @@INPUT@@)
-      print(f"اليوم {day}: {daily_profit} ريال", @@INPUT@@)
+      print(f"اليوم {day}: {daily_profit} ريال")
       @@INPUT@@ += daily_profit
 
   print(f"إجمالي أرباح الشهر: {total_profit} ريال")
@@ -20,6 +20,5 @@ solution:
   - "1"
   - "31"
   - "20"
-  - "end=' '"
   - "total_profit"
   - "/"

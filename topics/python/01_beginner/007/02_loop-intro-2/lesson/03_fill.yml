@@ -1,0 +1,11 @@
+# Step 3: Create Your First List
+type: "fill"
+lang: "python"
+question: |
+  أنشئ قائمة تحتوي على أعمار 4 أصدقاء: 22، 25، 21، 24
+code: |
+  ages = @@INPUT@@
+  print(ages)
+solution:
+  - "[22, 25, 21, 24]"
+explanation: "رائع! لقد أنشأت قائمتك الأولى. لاحظ كيف استخدمنا الأقواس المربعة والفواصل."

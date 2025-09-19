@@ -1,0 +1,13 @@
+# Step 12: Find the Bug
+type: "bug"
+lang: "python"
+question: "اكتشف الخطأ في إنشاء القائمة"
+code: |
+  colors = ["أحمر", "أخضر", "أزرق"]
+  colors.append["أصفر"]
+  print(colors)
+solution: 1
+hint: "كيف نستدعي الدوال في Python؟"
+explanation: "يجب استخدام الأقواس العادية () مع append وليس الأقواس المربعة []"
+expectedOutput: "['أحمر', 'أخضر', 'أزرق', 'أصفر']"
+actualOutput: "TypeError"

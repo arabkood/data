@@ -1,0 +1,23 @@
+# Step 16: Final Challenge
+type: "fill"
+lang: "python"
+question: |
+  أنشئ برنامج يبني قائمة درجات ويحسب عددها
+code: |
+  # إنشاء قائمة فارغة
+  grades = @@INPUT@@
+
+  # إضافة 3 درجات
+  grades.append(85)
+  grades.@@INPUT@@(90)
+  grades.append(78)
+
+  # حساب العدد
+  total = @@INPUT@@
+  print(f"عدد الدرجات: {total}")
+  print(f"الدرجات: {grades}")
+solution:
+  - "\\[\\]"
+  - "append"
+  - "len\\(grades\\)"
+explanation: "ممتاز! لقد تعلمت إنشاء القوائم، إضافة العناصر، وحساب العدد!"

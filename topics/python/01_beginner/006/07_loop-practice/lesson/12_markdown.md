@@ -9,8 +9,23 @@ print("تقرير ساعات العمل الأسبوعية:")
 for day in range(1, 8):  # 7 أيام في الأسبوع
     daily_hours = 8  # 8 ساعات يومياً
     print(f"اليوم {day}: {daily_hours} ساعات")
-    total_hours += daily_hours  # طريقة مختصرة لـ total_hours = total_hours + daily_hours
+
+    # طريقة مختصرة لـ total_hours = total_hours + daily_hours
+    total_hours += daily_hours  
 
 print(f"إجمالي ساعات الأسبوع: {total_hours} ساعة")
 ```
 
+الناتج:
+
+```
+تقرير ساعات العمل الأسبوعية:
+اليوم 1: 8 ساعات
+اليوم 2: 8 ساعات
+اليوم 3: 8 ساعات
+اليوم 4: 8 ساعات
+اليوم 5: 8 ساعات
+اليوم 6: 8 ساعات
+اليوم 7: 8 ساعات
+إجمالي ساعات الأسبوع: 56 ساعة
+```

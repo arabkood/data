@@ -1,0 +1,13 @@
+# Step 10: Practice append()
+type: "fill"
+lang: "python"
+question: |
+  أضف "تفاح" إلى قائمة المشتريات
+code: |
+  shopping = ["خبز", "حليب"]
+  shopping.@@INPUT@@
+  print(shopping)
+solution:
+  - 'append\("تفاح"\)'
+  - 'append\(\"تفاح\"\)'
+explanation: "ممتاز! `append()` دائماً تضيف العنصر في نهاية القائمة."

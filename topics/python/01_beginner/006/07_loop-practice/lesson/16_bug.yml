@@ -1,12 +1,12 @@
 type: "bug"
 lang: "python"
-question: "اعثر على الخطأ في كود حساب فوائد البنك:"
+question: "اعثر على الخطأ في كود حساب أرباح التجارة:"
 code: |
-  initial_amount = 1000
-  print("نمو المبلغ مع الفوائد:")
-  for year in range(0, 5):
-      interest = initial_amount * 0.05
-      initial_amount = initial_amount + interest
-      print(f"السنة {year}: {initial_amount} ريال")
-solution: 2
-explanation: "يجب أن يبدأ العام من 1 وليس 0، أو تغيير النص ليقول 'السنة {year + 1}' لأن عادة نحسب السنوات من 1"
+  capital = 1000
+  print("نمو رأس المال مع الأرباح:")
+  for year in range(2020, 2025):
+      profit = capital * 0.2
+      capital = profit
+      print(f"السنة {year}: {capital} ريال")
+solution: 4
+explanation: "الخطأ أن الكود يستبدل رأس المال بالأرباح فقط (`capital = profit`). الصحيح أن نضيف الربح إلى رأس المال: `capital += profit`."

@@ -1,0 +1,17 @@
+# Step 15: Summary Quiz
+type: "quiz"
+question: "أي من التالي هو طريقة صحيحة لإنشاء قائمة فارغة؟"
+lang: "python"
+code: |
+  # أي خيار صحيح؟
+  option_a = []
+  option_b = list()
+  option_c = {}
+  option_d = ()
+options:
+  - "option_a فقط"
+  - "option_a و option_b"
+  - "option_c فقط"
+  - "جميعها صحيحة"
+solution: 1
+explanation: "كلاً من [] و list() ينشئان قائمة فارغة. {} للقواميس و () للـ tuples."

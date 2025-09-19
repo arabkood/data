@@ -2,7 +2,8 @@ type: "quiz"
 question: "ما معنى العبارة total_hours += daily_hours؟"
 options:
   - "total_hours = daily_hours"
-  - "total_hours = total_hours + daily_hours"
   - "daily_hours = total_hours + daily_hours"
-solution: 1
+  - "total_hours = total_hours + daily_hours"
+  - "total_hours == daily_hours"
+solution: 2
 explanation: "الرمز += هو اختصار لإضافة القيمة إلى المتغير. فهو مساوي لكتابة total_hours = total_hours + daily_hours"

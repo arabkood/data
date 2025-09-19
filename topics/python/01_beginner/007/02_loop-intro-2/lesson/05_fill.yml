@@ -1,0 +1,11 @@
+# Step 5: Practice Different Types
+type: "fill"
+lang: "python"
+question: |
+  أنشئ قائمة بأسماء 3 مدن عربية
+code: |
+  cities = @@INPUT@@
+  print("المدن:", cities)
+solution:
+  - '/^\[".+",\s*".+",\s*".+"\]$/'
+explanation: "ممتاز! القوائم يمكنها تخزين النصوص تماماً مثل الأرقام."

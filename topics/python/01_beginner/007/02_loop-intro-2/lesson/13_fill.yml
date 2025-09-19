@@ -1,0 +1,13 @@
+# Step 13: Mixed Practice
+type: "fill"
+lang: "python"
+question: |
+  أكمل الكود لإنشاء قائمة بمعلومات طالب
+code: |
+  # قائمة تحتوي على: الاسم، العمر، النجاح
+  student_info = ["أحمد", @@INPUT@@, @@INPUT@@]
+  print(f"الطالب: {student_info}")
+solution:
+  - "/^\\d+$/"
+  - "/^(True|False)$/"
+explanation: "رائع! القوائم يمكنها تخزين أنواع مختلفة من البيانات معاً."

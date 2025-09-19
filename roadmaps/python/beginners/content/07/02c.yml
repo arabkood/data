@@ -1,0 +1,285 @@
+---
+item_id: "m7-intro-lists"
+type: "lesson"
+title: "مقدمة إلى القوائم"
+base_xp: 800
+difficulty: "easy"
+premium_only: true
+
+steps:
+  # Step 1: The Problem
+  - type: "markdown"
+    content: |
+      تخيل أنك تريد تخزين درجات 30 طالب في الفصل.
+      
+      بدون القوائم، ستحتاج إلى كتابة:
+      ```python
+      student1 = 85
+      student2 = 92
+      student3 = 78
+      # ... وهكذا حتى student30!
+      ```
+      
+      هذا مُرهق جداً! 😅
+      
+      **الحل؟ القوائم (Lists)!** 
+      
+      القائمة تسمح لك بتخزين مجموعة من القيم في متغير واحد.
+
+  # Step 2: First List
+  - type: "markdown"
+    content: |
+      القائمة في Python هي مثل صندوق به أقسام متعددة، كل قسم يحتوي على قيمة.
+      
+      إليك أول قائمة لك:
+      ```python
+      grades = [85, 92, 78, 90, 88]
+      print(grades)
+      ```
+      
+      **لاحظ:**
+      - نستخدم الأقواس المربعة `[]` لإنشاء قائمة
+      - نفصل بين العناصر بفاصلة `,`
+      - يمكننا طباعة القائمة كاملة بـ `print()`
+      
+      # media_idea: رسم توضيحي لصندوق به 5 أقسام، كل قسم يحتوي على رقم من الدرجات
+
+  # Step 3: Create Your First List
+  - type: "fill"
+    lang: "python"
+    question: |
+      أنشئ قائمة تحتوي على أعمار 4 أصدقاء: 22، 25، 21، 24
+    code: |
+      ages = @@INPUT@@
+      print(ages)
+    solution:
+      - "[22, 25, 21, 24]"
+    explanation: "رائع! لقد أنشأت قائمتك الأولى. لاحظ كيف استخدمنا الأقواس المربعة والفواصل."
+
+  # Step 4: Lists Can Hold Anything
+  - type: "markdown"
+    content: |
+      القوائم ليست للأرقام فقط! يمكنها تخزين:
+      
+      **نصوص:**
+      ```python
+      names = ["أحمد", "فاطمة", "عمر", "مريم"]
+      ```
+      
+      **أنواع مختلطة:**
+      ```python
+      mixed = ["أحمد", 25, True, 3.14]
+      ```
+      
+      **حتى قوائم فارغة:**
+      ```python
+      empty_list = []
+      ```
+      
+      القائمة مثل حقيبة سفر - يمكنك وضع أي شيء فيها! 🎒
+
+  # Step 5: Practice Different Types
+  - type: "fill"
+    lang: "python"
+    question: |
+      أنشئ قائمة بأسماء 3 مدن عربية
+    code: |
+      cities = @@INPUT@@
+      print("المدن:", cities)
+    solution:
+      - '/^\[".+",\s*".+",\s*".+"\]$/'
+    explanation: "ممتاز! القوائم يمكنها تخزين النصوص تماماً مثل الأرقام."
+
+  # Step 6: List Length
+  - type: "markdown"
+    content: |
+      كم عنصراً في القائمة؟ استخدم `len()`:
+      
+      ```python
+      fruits = ["تفاح", "موز", "برتقال", "عنب"]
+      count = len(fruits)
+      print(f"لدينا {count} أنواع من الفواكه")
+      # Output: لدينا 4 أنواع من الفواكه
+      ```
+      
+      `len()` تعمل مع القوائم تماماً كما تعمل مع النصوص!
+
+  # Step 7: Practice len()
+  - type: "fill"
+    lang: "python"
+    question: |
+      احسب عدد الطلاب في القائمة واطبع النتيجة
+    code: |
+      students = ["سارة", "خالد", "نور", "يوسف", "ليلى"]
+      number = @@INPUT@@
+      print(f"عدد الطلاب: {number}")
+    solution:
+      - "len(students)"
+    explanation: "صحيح! `len()` تُرجع عدد العناصر في القائمة."
+
+  # Step 8: Why Lists Are Powerful
+  - type: "quiz"
+    question: "ما الميزة الأساسية لاستخدام القوائم بدلاً من متغيرات منفصلة؟"
+    options:
+      - "القوائم أسرع في التنفيذ"
+      - "يمكن تخزين عدد كبير من القيم في متغير واحد"
+      - "القوائم تستهلك ذاكرة أقل"
+      - "القوائم أسهل في الكتابة دائماً"
+    solution: 1
+    explanation: "بالضبط! القائمة تسمح لك بتخزين مئات أو آلاف القيم في متغير واحد بدلاً من إنشاء متغير منفصل لكل قيمة."
+
+  # Step 9: Building Lists Step by Step
+  - type: "markdown"
+    content: |
+      يمكنك بناء القائمة تدريجياً:
+      
+      ```python
+      # البداية بقائمة فارغة
+      shopping = []
+      
+      # إضافة عناصر باستخدام append()
+      shopping.append("خبز")
+      shopping.append("حليب")
+      shopping.append("بيض")
+      
+      print(shopping)
+      # Output: ['خبز', 'حليب', 'بيض']
+      ```
+      
+      `append()` تضيف عنصراً جديداً في نهاية القائمة.
+
+  # Step 10: Practice append()
+  - type: "fill"
+    lang: "python"
+    question: |
+      أضف "تفاح" إلى قائمة المشتريات
+    code: |
+      shopping = ["خبز", "حليب"]
+      shopping.@@INPUT@@
+      print(shopping)
+    solution:
+      - 'append\("تفاح"\)'
+      - 'append\(\"تفاح\"\)'
+    explanation: "ممتاز! `append()` دائماً تضيف العنصر في نهاية القائمة."
+
+  # Step 11: Order the List Building
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لبناء قائمة بالأرقام من 1 إلى 3"
+    code:
+      - "numbers = []"
+      - "numbers.append(1)"
+      - "numbers.append(2)"
+      - "numbers.append(3)"
+      - "print(numbers)"
+    explanation: "يجب إنشاء القائمة الفارغة أولاً، ثم إضافة العناصر بالترتيب، ثم طباعة النتيجة."
+
+  # Step 12: Find the Bug
+  - type: "bug"
+    lang: "python"
+    question: "اكتشف الخطأ في إنشاء القائمة"
+    code: |
+      colors = ["أحمر", "أخضر", "أزرق"]
+      colors.append["أصفر"]
+      print(colors)
+    solution: 1
+    hint: "كيف نستدعي الدوال في Python؟"
+    explanation: "يجب استخدام الأقواس العادية () مع append وليس الأقواس المربعة []"
+    expectedOutput: "['أحمر', 'أخضر', 'أزرق', 'أصفر']"
+    actualOutput: "TypeError"
+
+  # Step 13: Mixed Practice
+  - type: "fill"
+    lang: "python"
+    question: |
+      أكمل الكود لإنشاء قائمة بمعلومات طالب
+    code: |
+      # قائمة تحتوي على: الاسم، العمر، النجاح
+      student_info = ["أحمد", @@INPUT@@, @@INPUT@@]
+      print(f"الطالب: {student_info}")
+    solution:
+      - "/^\\d+$/"
+      - "/^(True|False)$/"
+    explanation: "رائع! القوائم يمكنها تخزين أنواع مختلفة من البيانات معاً."
+
+  # Step 14: Real-World Application
+  - type: "markdown"
+    content: |
+      **متى نستخدم القوائم في الحياة الواقعية؟**
+      
+      📱 **تطبيقات الهاتف:**
+      - قائمة جهات الاتصال
+      - قائمة الرسائل
+      - قائمة التطبيقات المثبتة
+      
+      🛒 **التسوق الإلكتروني:**
+      - قائمة المنتجات في السلة
+      - قائمة الطلبات السابقة
+      - قائمة المفضلات
+      
+      📊 **تحليل البيانات:**
+      - قائمة درجات الطلاب
+      - قائمة المبيعات اليومية
+      - قائمة درجات الحرارة
+      
+      القوائم في كل مكان حولنا!
+
+  # Step 15: Summary Quiz
+  - type: "quiz"
+    question: "أي من التالي هو طريقة صحيحة لإنشاء قائمة فارغة؟"
+    lang: "python"
+    code: |
+      # أي خيار صحيح؟
+      option_a = []
+      option_b = list()
+      option_c = {}
+      option_d = ()
+    options:
+      - "option_a فقط"
+      - "option_a و option_b"
+      - "option_c فقط"
+      - "جميعها صحيحة"
+    solution: 1
+    explanation: "كلاً من [] و list() ينشئان قائمة فارغة. {} للقواميس و () للـ tuples."
+
+  # Step 16: Final Challenge
+  - type: "fill"
+    lang: "python"
+    question: |
+      أنشئ برنامج يبني قائمة درجات ويحسب عددها
+    code: |
+      # إنشاء قائمة فارغة
+      grades = @@INPUT@@
+      
+      # إضافة 3 درجات
+      grades.append(85)
+      grades.@@INPUT@@(90)
+      grades.append(78)
+      
+      # حساب العدد
+      total = @@INPUT@@
+      print(f"عدد الدرجات: {total}")
+      print(f"الدرجات: {grades}")
+    solution:
+      - "\\[\\]"
+      - "append"
+      - "len\\(grades\\)"
+    explanation: "ممتاز! لقد تعلمت إنشاء القوائم، إضافة العناصر، وحساب العدد!"
+
+  # Step 17: Bridge to Next Lesson
+  - type: "markdown"
+    content: |
+      **🎉 تهانينا! لقد تعلمت أساسيات القوائم!**
+      
+      **ما تعلمته:**
+      ✅ إنشاء القوائم باستخدام []
+      ✅ القوائم يمكنها تخزين أي نوع من البيانات
+      ✅ استخدام len() لمعرفة عدد العناصر
+      ✅ إضافة عناصر جديدة باستخدام append()
+      
+      **في الدرس القادم:**
+      🔜 كيفية الوصول لعناصر محددة في القائمة (الفهرسة)
+      🔜 تعديل عناصر القائمة
+      🔜 الفهرسة السالبة للوصول من النهاية
+      
+      القوائم هي من أهم المفاهيم في البرمجة - ستستخدمها في كل برنامج تقريباً!
