@@ -18,3 +18,7 @@
 ```python
 print(f"مجموع الأرقام من 1 إلى {number} هو: {total}")
 ```
+
+## تلميح حول range
+
+- تذكر أن `range(start, stop)` لا يشمل قيمة `stop` - لذلك لتشمل الرقم نفسه، استخدم `range(1, number + 1)`
