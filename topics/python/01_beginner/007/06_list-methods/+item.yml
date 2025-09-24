@@ -1,0 +1,12 @@
+id: 1580d2cd-2d81-4bf0-ad7d-0065907cc896
+module_id: 25f62daa-a846-4102-abe1-9c5afffdea66
+slug: list-methods
+position: 6
+created_at: 2025-09-24T14:52:59.802Z
+updated_at: 2025-09-24T14:52:59.802Z
+type: lesson
+title: الطرق الأساسية للقوائم
+difficulty: medium
+premium_only: true
+base_xp: 800
+s3_path: python/01_beginner/007/06_list-methods

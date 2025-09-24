@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "اطبع قائمة المهام مع ترقيم يبدأ من 1:"
+code: |
+  tasks = ["قراءة كتاب", "تمارين رياضية", "مراجعة الكود"]
+
+  for @@INPUT@@, @@INPUT@@ in enumerate(tasks):
+      print(f"{@@INPUT@@}. {@@INPUT@@}")
+solution:
+  - "i"
+  - "task"
+  - "i+1"
+  - "task"
+explanation: "enumerate() تعطيك الفهرس والعنصر معاً، مما يسهل إضافة الترقيم."

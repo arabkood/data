@@ -1,0 +1,16 @@
+# --- STEP 15: Advanced filtering bug ---
+type: "bug"
+lang: "python"
+question: "اعثر على الخطأ في إنشاء قائمة بالأرقام الموجبة فقط"
+code: |
+  numbers = [-3, 5, -1, 8, 0, -7, 2]
+  positive_numbers = []
+  for num in numbers:
+      if num >= 0:
+          positive_numbers.append(num)
+  print(positive_numbers)
+solution: 3
+hint: "هل الرقم 0 يعتبر موجباً حقاً؟"
+explanation: "المشكلة في >= 0. إذا كنا نريد الأرقام الموجبة فقط، يجب استخدام > 0"
+expectedOutput: "[5, 8, 2]"
+actualOutput: "[5, 8, 0, 2]"

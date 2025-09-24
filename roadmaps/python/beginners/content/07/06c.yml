@@ -1,0 +1,307 @@
+---
+item_id: "m7-list-building-bootcamp"
+type: "lesson"
+title: "بناء القوائم: مارثون التطبيق العملي"
+base_xp: 950
+difficulty: "medium"
+premium_only: true
+
+steps:
+  # --- STEP 1: Introduction and motivation ---
+  - type: "markdown"
+    content: |
+      مرحباً بك في مارثون بناء القوائم! 🏃‍♂️
+      
+      حتى الآن تعلمت كيف تستخدم القوائم الموجودة. اليوم ستتعلم كيف **تبني قوائمك الخاصة من الصفر** باستخدام الحلقات.
+      
+      تخيل أنك تريد إنشاء قائمة بجميع الأرقام الزوجية من 1 إلى 20. بدلاً من كتابتها يدوياً، ستجعل البرنامج يبنيها لك تلقائياً!
+
+  # --- STEP 2: The basic pattern ---
+  - type: "markdown"
+    content: |
+      ## نمط بناء القوائم الأساسي
+      
+      الطريقة المعتادة لبناء قائمة:
+      1. ابدأ بقائمة فارغة `[]`
+      2. استخدم حلقة للمرور عبر البيانات
+      3. أضف العناصر واحداً تلو الآخر باستخدام `append()`
+      
+      هذا هو النمط الذهبي الذي ستستخدمه مراراً وتكراراً!
+
+  # --- STEP 3: First practice - basic building ---
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ قائمة تحتوي على الأرقام من 1 إلى 5"
+    code: |
+      numbers = @@INPUT@@
+      
+      for i in range(@@INPUT@@, @@INPUT@@):
+          numbers.@@INPUT@@(@@INPUT@@)
+      
+      print(numbers)
+    solution:
+      - "[]"
+      - "1"
+      - "6"
+      - "append"
+      - "i"
+    explanation: "نبدأ بقائمة فارغة، ثم نضيف كل رقم من 1 إلى 5 باستخدام append()"
+
+  # --- STEP 4: Building with conditions ---
+  - type: "markdown"
+    content: |
+      ## البناء الذكي: إضافة شروط
+      
+      لا نريد دائماً كل العناصر. أحياناً نريد فقط العناصر التي تحقق شرط معين.
+      
+      مثلاً: "أضف فقط الأرقام الزوجية" أو "أضف فقط الأسماء التي تبدأ بحرف A"
+
+  # --- STEP 5: Even numbers challenge ---
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ قائمة بالأرقام الزوجية فقط من 1 إلى 10"
+    code: |
+      even_numbers = []
+      
+      for i in range(1, 11):
+          if i @@INPUT@@ 2 == @@INPUT@@:
+              even_numbers.@@INPUT@@(@@INPUT@@)
+      
+      print(even_numbers)  # [2, 4, 6, 8, 10]
+    solution:
+      - "%"
+      - "0"
+      - "append"
+      - "i"
+    explanation: "نتحقق من أن باقي القسمة على 2 يساوي 0 (رقم زوجي) قبل الإضافة"
+
+  # --- STEP 6: Building from user input ---
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لإنشاء قائمة بالأسماء من إدخال المستخدم (يدخل 'stop' للتوقف)"
+    code:
+      - "names = []"
+      - "while True:"
+      - "    name = input('أدخل اسماً (أو stop للتوقف): ')"
+      - "    if name == 'stop':"
+      - "        break"
+      - "    names.append(name)"
+      - "print('الأسماء المدخلة:', names)"
+    explanation: "نستخدم while True مع break للسماح للمستخدم بإدخال عدد غير محدد من الأسماء"
+
+  # --- STEP 7: Bug hunting in list building ---
+  - type: "bug"
+    lang: "python"
+    question: "اعثر على الخطأ في بناء قائمة المربعات"
+    code: |
+      squares = []
+      for i in range(1, 6):
+          square = i * i
+          squares.append(square)
+      squares = []
+      print(squares)
+    solution: 4
+    hint: "انظر بعناية إلى آخر سطرين..."
+    explanation: "المشكلة في السطر الخامس: نحن نعيد تفريغ القائمة بعد ملئها!"
+    expectedOutput: "[1, 4, 9, 16, 25]"
+    actualOutput: "[]"
+
+  # --- STEP 8: Building from existing lists ---
+  - type: "markdown"
+    content: |
+      ## بناء قوائم من قوائم موجودة
+      
+      أحياناً تريد إنشاء قائمة جديدة بناء على قائمة موجودة. مثلاً:
+      - تحويل الأسماء إلى أحرف كبيرة
+      - ضرب كل رقم في 2
+      - أخذ فقط العناصر الأطول من 5 أحرف
+
+  # --- STEP 9: Transform while building ---
+  - type: "fill"
+    lang: "python"
+    question: "حول قائمة الأسماء إلى أحرف كبيرة وأنشئ قائمة جديدة"
+    code: |
+      names = ['أحمد', 'فاطمة', 'عبدالله', 'مريم']
+      uppercase_names = @@INPUT@@
+      
+      for @@INPUT@@ in @@INPUT@@:
+          uppercase_names.append(name.@@INPUT@@())
+      
+      print(uppercase_names)
+    solution:
+      - "[]"
+      - "name"
+      - "names"
+      - "upper"
+    explanation: "نمر عبر كل اسم، نحوله إلى أحرف كبيرة، ونضيفه للقائمة الجديدة"
+
+  # --- STEP 10: Filtering while building ---
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ قائمة بالكلمات التي طولها أكبر من 4 أحرف"
+    code: |
+      words = ['قط', 'كلب', 'عصفور', 'فيل', 'زرافة']
+      long_words = []
+      
+      for word in words:
+          if @@INPUT@@(@@INPUT@@) > @@INPUT@@:
+              long_words.@@INPUT@@(@@INPUT@@)
+      
+      print(long_words)  # ['عصفور', 'زرافة']
+    solution:
+      - "len"
+      - "word"
+      - "4"
+      - "append"
+      - "word"
+    explanation: "نتحقق من طول كل كلمة قبل إضافتها للقائمة الجديدة"
+
+  # --- STEP 11: Building with calculations ---
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لإنشاء قائمة بمضاعفات الرقم 3 من 3 إلى 30"
+    code:
+      - "multiples_of_3 = []"
+      - "for i in range(1, 11):"
+      - "    multiple = i * 3"
+      - "    multiples_of_3.append(multiple)"
+      - "print(multiples_of_3)"
+    explanation: "نحسب مضاعفات الرقم 3 بضرب كل رقم من 1 إلى 10 في 3"
+
+  # --- STEP 12: Complex building scenario ---
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ قائمة بالأرقام من 1 إلى 20، لكن استبدل مضاعفات الـ3 بكلمة 'Fizz'"
+    code: |
+      fizz_list = []
+      
+      for i in range(@@INPUT@@, @@INPUT@@):
+          if i % @@INPUT@@ == 0:
+              fizz_list.append('@@INPUT@@')
+          else:
+              fizz_list.append(@@INPUT@@)
+      
+      print(fizz_list[:10])  # أول 10 عناصر
+    solution:
+      - "1"
+      - "21"
+      - "3"
+      - "Fizz"
+      - "i"
+    explanation: "هذا نموذج من لعبة FizzBuzz الشهيرة - نتحقق من مضاعفات الرقم 3"
+
+  # --- STEP 13: Building from multiple sources ---
+  - type: "markdown"
+    content: |
+      ## دمج قوائم متعددة أثناء البناء
+      
+      أحياناً تحتاج لبناء قائمة من مصادر متعددة. مثلاً:
+      - دمج قائمتين مع تطبيق شروط
+      - أخذ عناصر من قوائم مختلفة حسب موقعها
+      - بناء قائمة بناء على عدة مصادر بيانات
+
+  # --- STEP 14: Multi-source building ---
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ قائمة تحتوي على مجموع كل عنصرين في نفس الموقع من قائمتين مختلفتين"
+    code: |
+      list1 = [1, 3, 5, 7, 9]
+      list2 = [2, 4, 6, 8, 10]
+      sums = @@INPUT@@
+      
+      for i in range(len(@@INPUT@@)):
+          sum_value = list1[@@INPUT@@] + list2[@@INPUT@@]
+          sums.@@INPUT@@(@@INPUT@@)
+      
+      print(sums)  # [3, 7, 11, 15, 19]
+    solution:
+      - "[]"
+      - "list1"
+      - "i"
+      - "i"
+      - "append"
+      - "sum_value"
+    explanation: "نجمع العناصر في نفس المواقع من القائمتين ونضع النتيجة في قائمة جديدة"
+
+  # --- STEP 15: Advanced filtering bug ---
+  - type: "bug"
+    lang: "python"
+    question: "اعثر على الخطأ في إنشاء قائمة بالأرقام الموجبة فقط"
+    code: |
+      numbers = [-3, 5, -1, 8, 0, -7, 2]
+      positive_numbers = []
+      for num in numbers:
+          if num >= 0:
+              positive_numbers.append(num)
+      print(positive_numbers)
+    solution: 3
+    hint: "هل الرقم 0 يعتبر موجباً حقاً؟"
+    explanation: "المشكلة في >= 0. إذا كنا نريد الأرقام الموجبة فقط، يجب استخدام > 0"
+    expectedOutput: "[5, 8, 2]"
+    actualOutput: "[5, 8, 0, 2]"
+
+  # --- STEP 16: Building with string operations ---
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ قائمة بأول حرف من كل كلمة في الجملة"
+    code: |
+      sentence = "تعلم البرمجة ممتع ومفيد"
+      words = sentence.@@INPUT@@()
+      first_letters = @@INPUT@@
+      
+      for @@INPUT@@ in @@INPUT@@:
+          first_letters.append(word[@@INPUT@@])
+      
+      print(first_letters)
+    solution:
+      - "split"
+      - "[]"
+      - "word"
+      - "words"
+      - "0"
+    explanation: "نقسم الجملة إلى كلمات، ثم نأخذ أول حرف من كل كلمة"
+
+  # --- STEP 17: Complex integration challenge ---
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لبناء قائمة بالأرقام من 1-15، لكن اقلب الأرقام التي تقبل القسمة على 3"
+    code:
+      - "special_numbers = []"
+      - "for i in range(1, 16):"
+      - "    if i % 3 == 0:"
+      - "        reversed_num = int(str(i)[::-1])"
+      - "        special_numbers.append(reversed_num)"
+      - "    else:"
+      - "        special_numbers.append(i)"
+      - "print(special_numbers)"
+    explanation: "نتحقق من مضاعفات الـ3، نحولها لنص، نقلبها، ثم نحولها لرقم مرة أخرى"
+
+  # --- STEP 18: Final mastery challenge ---
+  - type: "fill"
+    lang: "python"
+    question: "التحدي النهائي: أنشئ قائمة من 1-50، استبدل مضاعفات 5 بـ'Buzz' ومضاعفات 7 بـ'Boom'"
+    code: |
+      final_list = []
+      
+      for i in range(1, 51):
+          if i % @@INPUT@@ == 0 and i % @@INPUT@@ == 0:
+              final_list.append('@@INPUT@@')
+          elif i % @@INPUT@@ == 0:
+              final_list.append('@@INPUT@@')
+          elif i % @@INPUT@@ == 0:
+              final_list.append('@@INPUT@@')
+          else:
+              final_list.append(i)
+      
+      print(final_list[@@INPUT@@:@@INPUT@@])  # العناصر من 30-40
+    solution:
+      - "5"
+      - "7"
+      - "BuzzBoom"
+      - "5"
+      - "Buzz"
+      - "7"
+      - "Boom"
+      - "29"
+      - "40"
+    explanation: "نتحقق من المضاعفات المشتركة أولاً (5 و 7 معاً)، ثم كل واحد على حدة"

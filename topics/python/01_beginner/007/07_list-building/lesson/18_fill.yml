@@ -1,0 +1,29 @@
+# --- STEP 18: Final mastery challenge ---
+type: "fill"
+lang: "python"
+question: "التحدي النهائي: أنشئ قائمة من 1-50، استبدل مضاعفات 5 بـ'Buzz' ومضاعفات 7 بـ'Boom'"
+code: |
+  final_list = []
+
+  for i in range(1, 51):
+      if i % @@INPUT@@ == 0 and i % @@INPUT@@ == 0:
+          final_list.append('@@INPUT@@')
+      elif i % @@INPUT@@ == 0:
+          final_list.append('@@INPUT@@')
+      elif i % @@INPUT@@ == 0:
+          final_list.append('@@INPUT@@')
+      else:
+          final_list.append(i)
+
+  print(final_list[@@INPUT@@:@@INPUT@@])  # العناصر من 30-40
+solution:
+  - "5"
+  - "7"
+  - "BuzzBoom"
+  - "5"
+  - "Buzz"
+  - "7"
+  - "Boom"
+  - "29"
+  - "40"
+explanation: "نتحقق من المضاعفات المشتركة أولاً (5 و 7 معاً)، ثم كل واحد على حدة"

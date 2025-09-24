@@ -155,8 +155,8 @@
 
 ### Items
 
-- [ ] [L] Introduction to Lists
-- [ ] [L] List Indexing Gym *(practice-heavy: 12+ indexing exercises)*
+- [x] [L] Introduction to Lists
+- [x] [L] List Indexing Gym *(practice-heavy: 12+ indexing exercises)*
 - [ ] [L] List Slicing Fundamentals
 - [ ] [L] Loops & Lists Workshop *(80% exercises combining both)*
 - [ ] [C] Shopping Cart Manager

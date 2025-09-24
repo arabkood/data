@@ -1,0 +1,16 @@
+# Step 8: Bug - Common Loop Error
+type: "bug"
+lang: "python"
+question: "اكتشف الخطأ الشائع في هذا الكود"
+code: |
+  prices = [100, 200, 150, 300]
+  total = 0
+
+  for price in prices:
+      total = price
+
+  print(f"المجموع: {total}")
+solution: 4
+explanation: "يجب استخدام += لإضافة كل سعر للمجموع، وليس = التي تستبدل القيمة!"
+expectedOutput: "المجموع: 750"
+actualOutput: "المجموع: 300"

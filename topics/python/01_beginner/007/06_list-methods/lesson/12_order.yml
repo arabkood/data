@@ -1,0 +1,11 @@
+type: "order"
+lang: "python"
+question: "رتب الكود لإنشاء قائمة مهام، إضافة مهمة، ثم حذف أول مهمة:"
+code:
+  - "tasks = []"
+  - 'tasks.append("قراءة الكتاب")'
+  - 'tasks.append("كتابة التقرير")'
+  - "completed_task = tasks.pop(0)"
+  - "print(f'تم إنجاز: {completed_task}')"
+  - "print(f'المهام المتبقية: {tasks}')"
+explanation: "نبدأ بقائمة فارغة، نضيف مهمتين، ثم نحذف المهمة الأولى ونحفظها في متغير."

@@ -1,0 +1,21 @@
+# --- STEP 12: Complex building scenario ---
+type: "fill"
+lang: "python"
+question: "أنشئ قائمة بالأرقام من 1 إلى 20، لكن استبدل مضاعفات الـ3 بكلمة 'Fizz'"
+code: |
+  fizz_list = []
+
+  for i in range(@@INPUT@@, @@INPUT@@):
+      if i % @@INPUT@@ == 0:
+          fizz_list.append('@@INPUT@@')
+      else:
+          fizz_list.append(@@INPUT@@)
+
+  print(fizz_list[:10])  # أول 10 عناصر
+solution:
+  - "1"
+  - "21"
+  - "3"
+  - "Fizz"
+  - "i"
+explanation: "هذا نموذج من لعبة FizzBuzz الشهيرة - نتحقق من مضاعفات الرقم 3"

@@ -1,0 +1,22 @@
+# Step 14: Complex Challenge
+type: "fill"
+lang: "python"
+question: |
+  تحدي شامل: أكمل الكود لإيجاد أكبر رقم في القائمة:
+code: |
+  numbers = [45, 23, 67, 89, 12, 56, 34]
+
+  # ابدأ بأول رقم
+  maximum = numbers[@@INPUT@@]
+
+  # قارن مع باقي الأرقام
+  for num in numbers:
+      if num @@INPUT@@ maximum:
+          maximum = @@INPUT@@
+
+  print(f"أكبر رقم هو: {maximum}")
+solution:
+  - "0"
+  - ">"
+  - "num"
+explanation: "نبدأ بافتراض أن أول رقم هو الأكبر، ثم نقارن مع كل رقم ونحدث القيمة إذا وجدنا أكبر."

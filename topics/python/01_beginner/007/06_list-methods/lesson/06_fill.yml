@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "احذف آخر عنصر من القائمة واحفظه في المتغير `removed_item`:"
+code: |
+  items = ["قلم", "كتاب", "مسطرة"]
+  @@INPUT@@ = items.@@INPUT@@()
+  print(f"تم حذف: {removed_item}")
+  print(f"العناصر المتبقية: {items}")
+solution:
+  - "removed_item"
+  - "pop"
+explanation: "`.pop()` حذف \"مسطرة\" من نهاية القائمة وأرجعها للمتغير `removed_item`."

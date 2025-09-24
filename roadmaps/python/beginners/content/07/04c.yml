@@ -1,0 +1,281 @@
+# Each item starts with a triple-dash separator
+---
+# The unique identifier for the item, provided in the roadmap
+item_id: "m7-loops-lists-workshop"
+
+# The type of the item. For now, always use 'lesson' or 'code'.
+type: "lesson"
+
+# The title of the lesson item.
+title: "ورشة الحلقات والقوائم معاً"
+
+# Base xp to award to user, between 200 and 2000
+base_xp: 1200
+
+# Difficulty of the lesson. Always use one of the following in english (easy, medium, hard)  
+difficulty: "medium"
+
+# Always include premium_only: true
+premium_only: true
+
+# A list of steps that make up this lesson.
+steps:
+  # --- STEP 1: Foundation Bridge ---
+  - type: "markdown"
+    content: |
+      مرحباً بك في ورشة الحلقات والقوائم! 🎯
+
+      لقد تعلمت **الحلقات** لتكرار العمليات، و**القوائم** لتخزين البيانات المتعددة. الآن حان الوقت لدمجهما معاً!
+
+      تخيل أن لديك قائمة بأسماء الطلاب، وتريد أن تطبع "مرحباً" لكل طالب. بدون الحلقات، ستحتاج لكتابة `print()` مئات المرات! 
+
+      **هذا هو السحر الحقيقي:** عندما تجمع الحلقات مع القوائم، يمكنك معالجة آلاف البيانات بسطور قليلة من الكود.
+
+  # --- STEP 2: First Pattern Practice ---
+  - type: "fill" 
+    lang: "python"
+    question: "لنبدأ بأبسط نمط: طباعة كل عنصر في القائمة. أكمل الكود:"
+    code: |
+      names = ["أحمد", "فاطمة", "محمد", "زينب"]
+      
+      @@INPUT@@ name @@INPUT@@ names:
+          print(f"مرحباً {@@INPUT@@}")
+    solution:
+      - "for"
+      - "in" 
+      - "name"
+    explanation: "النمط `for item in list:` هو الطريقة المُفضلة للتنقل عبر عناصر القائمة مباشرة."
+
+  # --- STEP 3: Index Pattern Introduction ---
+  - type: "markdown"
+    content: |
+      أحياناً تحتاج لمعرفة **موقع** العنصر أيضاً، ليس فقط قيمته.
+
+      لهذا نستخدم النمط الثاني: `for i in range(len(list)):`
+
+      - `len(names)` يعطي طول القائمة (عدد العناصر)
+      - `range(len(names))` ينشئ أرقام من 0 إلى آخر فهرس
+      - `names[i]` يعطي العنصر في الموقع i
+
+  # --- STEP 4: Index Pattern Practice ---
+  - type: "fill"
+    lang: "python" 
+    question: "أكمل الكود لطباعة كل عنصر مع رقم ترتيبه:"
+    code: |
+      colors = ["أحمر", "أزرق", "أخضر"]
+      
+      for @@INPUT@@ in @@INPUT@@(@@INPUT@@(colors)):
+          print(f"{i+1}. {@@INPUT@@[@@INPUT@@]}")
+    solution:
+      - "i"
+      - "range"
+      - "len"
+      - "colors"
+      - "i"
+    explanation: "نضيف 1 للفهرس لأن المستخدمين يفضلون العد من 1 وليس 0."
+
+  # --- STEP 5: Counting Elements ---
+  - type: "quiz"
+    question: "ما الناتج المتوقع لهذا الكود؟"
+    code: |
+      numbers = [10, 5, 8, 5, 12, 5]
+      count = 0
+      for num in numbers:
+          if num == 5:
+              count += 1
+      print(count)
+    options:
+      - "2"
+      - "3" 
+      - "5"
+      - "6"
+    solution: 1
+    explanation: "الرقم 5 يظهر ثلاث مرات في القائمة، لذلك المتغير count سيزيد ثلاث مرات."
+
+  # --- STEP 6: Counting Practice ---
+  - type: "fill"
+    lang: "python"
+    question: "اكتب كود لعدد كم مرة تظهر الكلمة 'python' في هذه القائمة:"
+    code: |
+      languages = ["java", "python", "javascript", "python", "c++", "python"]
+      @@INPUT@@ = 0
+      
+      for @@INPUT@@ in languages:
+          if @@INPUT@@ == "@@INPUT@@":
+              @@INPUT@@ += 1
+              
+      print(f"python تظهر {count} مرات")
+    solution:
+      - "count"
+      - "language"
+      - "language"
+      - "python"
+      - "count"
+    explanation: "نستخدم متغير عداد ونزيده كلما وجدنا العنصر المطلوب."
+
+  # --- STEP 7: Finding Elements ---
+  - type: "markdown"
+    content: |
+      نمط آخر مهم جداً: **البحث عن عنصر معين** في القائمة.
+
+      أحياناً نريد أن نعرف:
+      - هل يوجد هذا العنصر؟
+      - في أي موقع يوجد؟
+      - ما هو أول عنصر يحقق شرط معين؟
+
+      لنتدرب على هذه الأنماط!
+
+  # --- STEP 8: Finding Practice ---
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود للبحث عن أول رقم أكبر من 50:"
+    code: |
+      numbers = [20, 35, 60, 45, 80]
+      found = @@INPUT@@
+      
+      for num in numbers:
+          if num > @@INPUT@@:
+              print(f"أول رقم أكبر من 50 هو: {num}")
+              @@INPUT@@ = @@INPUT@@
+              @@INPUT@@
+    solution:
+      - "False"
+      - "50"
+      - "found"
+      - "True"
+      - "break"
+    explanation: "نستخدم متغير boolean لتتبع ما إذا وجدنا العنصر، ونستخدم break للخروج من الحلقة بمجرد العثور عليه."
+
+  # --- STEP 9: Building New Lists ---
+  - type: "markdown"
+    content: |
+      أحد أقوى الأنماط: **بناء قائمة جديدة** من قائمة موجودة!
+
+      مثال: لديك قائمة بالأرقام، وتريد قائمة جديدة بمربعات هذه الأرقام.
+
+      الطريقة:
+      1. أنشئ قائمة فارغة
+      2. استخدم حلقة للتنقل عبر القائمة الأصلية  
+      3. عدّل كل عنصر واضفه للقائمة الجديدة
+
+  # --- STEP 10: List Building Practice ---
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لإنشاء قائمة بأسماء الطلاب الناجحين فقط:"
+    code: |
+      students = ["أحمد", "فاطمة", "محمد", "زينب", "علي"]
+      grades = [85, 45, 92, 38, 76]
+      passed_students = @@INPUT@@
+      
+      for @@INPUT@@ in @@INPUT@@(@@INPUT@@(students)):
+          if @@INPUT@@[i] >= @@INPUT@@:
+              @@INPUT@@.@@INPUT@@(@@INPUT@@[i])
+              
+      print("الطلاب الناجحون:", passed_students)
+    solution:
+      - "[]"
+      - "i"
+      - "range"
+      - "len"
+      - "grades"
+      - "60"
+      - "passed_students"
+      - "append"
+      - "students"
+    explanation: "نستخدم نفس الفهرس للوصول لاسم الطالب ودرجته، ثم نضيف الاسم للقائمة الجديدة إذا كانت الدرجة ≥ 60."
+
+  # --- STEP 11: Debugging Challenge ---
+  - type: "bug"
+    lang: "python"
+    question: "هذا الكود يحاول حساب مجموع الأرقام الزوجية، لكن هناك خطأ. أيّ سطر خاطئ؟"
+    code: |
+      numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+      total = 0
+      for i in range(len(numbers)):
+          if numbers[i] % 2 = 0:
+              total += numbers[i]
+      print(f"مجموع الأرقام الزوجية: {total}")
+    solution: 3
+    explanation: "يجب استخدام `==` للمقارنة، وليس `=` للإسناد."
+    hint: "انظر لسطر الشرط، هل الرمز المستخدم صحيح للمقارنة؟"
+
+  # --- STEP 12: Pattern Recognition ---
+  - type: "order"
+    lang: "python" 
+    question: "رتب الأسطر لإنشاء برنامج يطبع أكبر رقم في القائمة:"
+    code:
+      - "numbers = [15, 3, 9, 21, 7]"
+      - "largest = numbers[0]"
+      - "for num in numbers:"
+      - "    if num > largest:"
+      - "        largest = num"
+      - "print(f'أكبر رقم هو: {largest}')"
+    explanation: "نبدأ بافتراض أن أول عنصر هو الأكبر، ثم نقارن باقي العناصر ونحديث المتغير عند إيجاد رقم أكبر."
+
+  # --- STEP 13: Complex Scenario ---
+  - type: "fill"
+    lang: "python"
+    question: "تحدي متقدم: أكمل كود لإيجاد الطالب صاحب أعلى درجة:"
+    code: |
+      students = ["سارة", "أحمد", "فاطمة", "محمد"]  
+      grades = [88, 95, 76, 91]
+      
+      top_student = @@INPUT@@
+      highest_grade = @@INPUT@@
+      
+      for @@INPUT@@ in @@INPUT@@(@@INPUT@@(students)):
+          if @@INPUT@@[i] > @@INPUT@@:
+              @@INPUT@@ = @@INPUT@@[i]
+              @@INPUT@@ = @@INPUT@@[i]
+              
+      print(f"أعلى درجة حصل عليها {top_student}: {highest_grade}")
+    solution:
+      - '""'
+      - "0"
+      - "i"
+      - "range"
+      - "len"
+      - "grades"
+      - "highest_grade"
+      - "highest_grade"
+      - "grades"
+      - "top_student"
+      - "students"
+    explanation: "نتتبع أعلى درجة واسم الطالب معاً، ونحديثهما عندما نجد درجة أعلى."
+
+  # --- STEP 14: Real-World Application ---
+  - type: "quiz"
+    question: "أيّ من هذه الأكواد يحسب متوسط الأرقام بشكل صحيح؟"
+    options:
+      - |
+        total = 0
+        for num in numbers:
+            total += num
+        average = total / len(numbers)
+      - |
+        total = 0
+        count = 0  
+        for num in numbers:
+            total += num
+            count += 1
+        average = total / count
+      - "كلاهما صحيح"
+    solution: 2
+    explanation: "كلا الحلين صحيحان! الأول يستخدم len() والثاني يعد العناصر يدوياً. لكن الأول أكثر كفاءة."
+
+  # --- STEP 15: Workshop Summary ---
+  - type: "markdown"
+    content: |
+      🎉 **أحسنت! أكملت ورشة الحلقات والقوائم بنجاح!**
+
+      **الأنماط التي أتقنتها:**
+      
+      ✅ **التنقل المباشر:** `for item in list:`  
+      ✅ **التنقل بالفهرس:** `for i in range(len(list)):`  
+      ✅ **العد والبحث:** عدّ العناصر والبحث عن قيم محددة  
+      ✅ **بناء قوائم جديدة:** إنشاء قوائم من قوائم موجودة  
+      ✅ **حل المشاكل المعقدة:** دمج عدة مفاهيم معاً
+
+      **التالي:** ستطبق هذه المهارات في تحدي "مدير عربة التسوق" - مشروع حقيقي يجمع كل ما تعلمته!
+
+      **نصيحة للاحتراف:** الأنماط التي تعلمتها اليوم هي أساس 80% من البرمجة الحقيقية. امرِن عليها كثيراً!

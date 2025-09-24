@@ -1,0 +1,24 @@
+type: "fill"
+lang: "python"
+question: "أكمل كود إدارة المكتبة الشخصية:"
+code: |
+  library = ["الأسود يليق بك", "مئة عام من العزلة"]
+
+  # أضف كتابين جديدين
+  library.@@INPUT@@("الخيميائي")
+  library.@@INPUT@@("أرض زيكولا")
+
+  # أقرض آخر كتاب (احذفه واحفظه)
+  borrowed_book = library.@@INPUT@@()
+
+  # أرجع كتاباً قديماً (احذفه)
+  library.@@INPUT@@("الأسود يليق بك")
+
+  print(f"الكتاب المُعار: {borrowed_book}")
+  print(f"الكتب المتبقية: {library}")
+solution:
+  - "append"
+  - "append"
+  - "pop"
+  - "remove"
+explanation: "استخدمنا الطرق المختلفة لإدارة مكتبة شخصية: إضافة كتب جديدة، إعارة آخر كتاب، وإرجاع كتاب قديم."

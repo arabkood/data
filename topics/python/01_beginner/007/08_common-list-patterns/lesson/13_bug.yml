@@ -1,0 +1,13 @@
+type: "bug"
+lang: "python"
+question: "اعثر على الخطأ في إيجاد أعلى راتب:"
+code: |
+  salaries = [5000, 7500, 6200, 8900, 5800]
+  highest_salary = 0
+  for salary in salaries:
+      if salary > highest_salary:
+          highest_salary = salary
+  print(f"أعلى راتب: {highest_salary}")
+solution: 1
+explanation: "يجب البدء بأول عنصر من القائمة، ليس بـ 0، لضمان الحصول على النتيجة الصحيحة حتى لو كانت كل القيم سالبة."
+hint: "ما الذي يحدث إذا كانت كل الرواتب أقل من 0؟"

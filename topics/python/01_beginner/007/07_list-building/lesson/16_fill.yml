@@ -1,0 +1,20 @@
+# --- STEP 16: Building with string operations ---
+type: "fill"
+lang: "python"
+question: "أنشئ قائمة بأول حرف من كل كلمة في الجملة"
+code: |
+  sentence = "تعلم البرمجة ممتع ومفيد"
+  words = sentence.@@INPUT@@()
+  first_letters = @@INPUT@@
+
+  for @@INPUT@@ in @@INPUT@@:
+      first_letters.append(word[@@INPUT@@])
+
+  print(first_letters)
+solution:
+  - "split"
+  - "[]"
+  - "word"
+  - "words"
+  - "0"
+explanation: "نقسم الجملة إلى كلمات، ثم نأخذ أول حرف من كل كلمة"

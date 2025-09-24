@@ -1,0 +1,15 @@
+# Step 10: Quiz - List Slicing
+type: "quiz"
+question: "ماذا سيكون ناتج هذا الكود؟"
+code: |
+  letters = ['a', 'b', 'c', 'd', 'e']
+  result = letters[1:4]
+  print(result)
+lang: "python"
+options:
+  - "['a', 'b', 'c']"
+  - "['b', 'c', 'd']"
+  - "['b', 'c', 'd', 'e']"
+  - "['a', 'b', 'c', 'd']"
+solution: 1
+explanation: "التقطيع [1:4] يعطينا العناصر من الفهرس 1 حتى 3 (لا يشمل 4)."

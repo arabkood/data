@@ -1,0 +1,11 @@
+# Step 2: Quick Quiz - List Creation
+type: "quiz"
+question: "أي من هذه الطرق ينشئ قائمة تحتوي على الأرقام من 1 إلى 5؟"
+lang: "python"
+options:
+  - "numbers = [1, 2, 3, 4, 5]"
+  - "numbers = (1, 2, 3, 4, 5)"
+  - "numbers = {1, 2, 3, 4, 5}"
+  - "numbers = 1, 2, 3, 4, 5"
+solution: 0
+explanation: "الأقواس المربعة [] تُستخدم لإنشاء القوائم. الأقواس العادية () للـ tuples، والأقواس المعقوفة {} للـ sets."

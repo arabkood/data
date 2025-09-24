@@ -1,0 +1,14 @@
+# --- STEP 11: Debugging Challenge ---
+type: "bug"
+lang: "python"
+question: "هذا الكود يحاول حساب مجموع الأرقام الزوجية، لكن هناك خطأ. أيّ سطر خاطئ؟"
+code: |
+  numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+  total = 0
+  for i in range(len(numbers)):
+      if numbers[i] % 2 = 0:
+          total += numbers[i]
+  print(f"مجموع الأرقام الزوجية: {total}")
+solution: 3
+explanation: "يجب استخدام `==` للمقارنة، وليس `=` للإسناد."
+hint: "انظر لسطر الشرط، هل الرمز المستخدم صحيح للمقارنة؟"

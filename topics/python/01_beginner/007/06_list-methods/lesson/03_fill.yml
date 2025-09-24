@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أضف \"كمثرى\" إلى قائمة الفواكه باستخدام `.append()`:"
+code: |
+  fruits = ["تفاح", "موز"]
+  fruits.@@INPUT@@(@@INPUT@@)
+  print(fruits)
+solution:
+  - "append"
+  - '"كمثرى"'
+explanation: "استخدمنا `.append()` لإضافة \"كمثرى\" في نهاية القائمة."

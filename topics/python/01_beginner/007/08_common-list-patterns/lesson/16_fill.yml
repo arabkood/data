@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "اجمع أسماء الطلاب الناجحين (درجة >= 60) واحسب عددهم:"
+code: "students = [(\"سارة\", 75), (\"خالد\", 45), (\"نور\", 88), (\"علي\", 52)]\npassed_students = []\n\nfor @@INPUT@@, @@INPUT@@ in students:\n    if @@INPUT@@ >= @@INPUT@@:\n        @@INPUT@@.append(@@INPUT@@)\n        \ncount = len(@@INPUT@@)\nprint(f\"الطلاب الناجحون: {passed_students}\")\nprint(f\"عددهم: {count}\")\n"
+solution:
+  - "name"
+  - "grade"
+  - "grade"
+  - "60"
+  - "passed_students"
+  - "name"
+  - "passed_students"
+explanation: "دمجنا نمط التصفية (الدرجة >= 60) مع نمط الحساب (عد العناصر)."

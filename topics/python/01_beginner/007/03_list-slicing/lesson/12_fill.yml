@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "احصل على كل عنصر ثالث من القائمة:"
+code: |
+  alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+  every_third = alphabet[@@INPUT@@]
+  print(every_third)
+solution:
+  - "::3"
+explanation: "نترك البداية والنهاية فارغتين، ونضع 3 كحجم الخطوة للحصول على كل عنصر ثالث."

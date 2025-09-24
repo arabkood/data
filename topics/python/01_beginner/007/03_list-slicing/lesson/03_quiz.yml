@@ -1,0 +1,8 @@
+type: "quiz"
+question: "إذا كان لدينا `colors = ['red', 'blue', 'green', 'yellow']`، فماذا ستطبع `colors[1:3]`؟"
+options:
+  - "['red', 'blue']"
+  - "['blue', 'green']"
+  - "['blue', 'green', 'yellow']"
+solution: 1
+explanation: "تقطيع [1:3] يأخذ العناصر في المواضع 1 و 2 (النهاية غير مشمولة)، وهي 'blue' و 'green'."

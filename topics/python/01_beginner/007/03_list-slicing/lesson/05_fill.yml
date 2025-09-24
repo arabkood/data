@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "احصل على العناصر من الموضع 2 حتى 4:"
+code: |
+  animals = ['cat', 'dog', 'bird', 'fish', 'rabbit', 'mouse']
+  middle = animals[@@INPUT@@]
+  print(middle)
+solution:
+  - "2:5"
+explanation: "للحصول على العناصر في المواضع 2 و 3 و 4، نستخدم [2:5] لأن النهاية غير مشمولة."

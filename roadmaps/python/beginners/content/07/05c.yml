@@ -1,0 +1,257 @@
+---
+item_id: "m7-essential-list-methods"
+
+type: "lesson"
+
+title: "الطرق الأساسية للقوائم"
+
+base_xp: 800
+
+difficulty: "medium"
+
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      الآن بعد أن تعلمت كيفية إنشاء القوائم والوصول إلى عناصرها، حان الوقت لتعلم كيفية **تعديلها وتغييرها**.
+
+      تخيل أن لديك قائمة تسوق مكتوبة على ورقة. أحياناً تحتاج إلى:
+      - إضافة عنصر جديد في النهاية
+      - حذف عنصر لم تعد تحتاجه
+      - إزالة آخر عنصر من القائمة
+
+      في Python، القوائم تأتي مع **طرق مدمجة** تساعدك على فعل هذا وأكثر!
+
+  - type: "markdown"
+    content: |
+      ## طريقة `.append()` - إضافة عنصر في النهاية
+
+      الطريقة الأكثر شيوعاً هي `.append()` - وهي تضيف عنصراً جديداً **في نهاية** القائمة.
+
+      ```python
+      fruits = ["تفاح", "موز"]
+      fruits.append("برتقال")
+      print(fruits)  # ['تفاح', 'موز', 'برتقال']
+      ```
+
+      فكر في `.append()` كأنك تلصق ملصقاً في نهاية قائمة التسوق!
+
+  - type: "fill"
+    lang: "python"
+    question: "أضف \"كمثرى\" إلى قائمة الفواكه باستخدام `.append()`:"
+    code: |
+      fruits = ["تفاح", "موز"]
+      fruits.@@INPUT@@(@@INPUT@@)
+      print(fruits)
+    solution:
+      - "append"
+      - '"كمثرى"'
+    explanation: "استخدمنا `.append()` لإضافة \"كمثرى\" في نهاية القائمة."
+
+  - type: "quiz"
+    question: "ماذا سيكون محتوى القائمة بعد تنفيذ هذا الكود؟"
+    code: |
+      numbers = [1, 2, 3]
+      numbers.append(4)
+      numbers.append(5)
+    lang: python
+    options:
+      - "[1, 2, 3]"
+      - "[1, 2, 3, 4]"
+      - "[1, 2, 3, 4, 5]"
+    solution: 2
+    explanation: "كل استدعاء لـ `.append()` يضيف عنصراً واحداً في نهاية القائمة."
+
+  - type: "markdown"
+    content: |
+      ## طريقة `.pop()` - إزالة وإرجاع عنصر
+
+      طريقة `.pop()` تفعل شيئين في نفس الوقت:
+      1. **تحذف** عنصراً من القائمة
+      2. **ترجع** ذلك العنصر لتتمكن من استخدامه
+
+      ```python
+      colors = ["أحمر", "أزرق", "أخضر"]
+      last_color = colors.pop()  # يحذف ويرجع "أخضر"
+      print(last_color)  # أخضر
+      print(colors)      # ['أحمر', 'أزرق']
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "احذف آخر عنصر من القائمة واحفظه في المتغير `removed_item`:"
+    code: |
+      items = ["قلم", "كتاب", "مسطرة"]
+      @@INPUT@@ = items.@@INPUT@@()
+      print(f"تم حذف: {removed_item}")
+      print(f"العناصر المتبقية: {items}")
+    solution:
+      - "removed_item"
+      - "pop"
+    explanation: "`.pop()` حذف \"مسطرة\" من نهاية القائمة وأرجعها للمتغير `removed_item`."
+
+  - type: "markdown"
+    content: |
+      ## طريقة `.pop()` مع الفهرس
+
+      يمكنك أيضاً استخدام `.pop()` مع **فهرس محدد** لحذف عنصر من أي موضع:
+
+      ```python
+      students = ["أحمد", "فاطمة", "محمد", "عائشة"]
+      removed = students.pop(1)  # يحذف "فاطمة" (الفهرس 1)
+      print(removed)   # فاطمة
+      print(students)  # ['أحمد', 'محمد', 'عائشة']
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "احذف العنصر الأول من القائمة (الفهرس 0):"
+    code: |
+      cities = ["الرياض", "جدة", "الدمام"]
+      first_city = cities.@@INPUT@@(@@INPUT@@)
+      print(f"المدينة المحذوفة: {first_city}")
+      print(f"المدن المتبقية: {cities}")
+    solution:
+      - "pop"
+      - "0"
+    explanation: "`.pop(0)` حذف العنصر في الفهرس 0، وهو \"الرياض\"."
+
+  - type: "markdown"
+    content: |
+      ## طريقة `.remove()` - حذف بالقيمة
+
+      أحياناً لا تعرف **فهرس** العنصر، لكن تعرف **قيمته**. هنا تأتي `.remove()`:
+
+      ```python
+      animals = ["قط", "كلب", "أرنب", "قط"]
+      animals.remove("كلب")  # يحذف أول "كلب" يجده
+      print(animals)  # ['قط', 'أرنب', 'قط']
+      ```
+
+      **مهم**: `.remove()` يحذف فقط **أول** تطابق يجده!
+
+  - type: "bug"
+    lang: "python"
+    question: "اعثر على السطر الذي يحتوي على خطأ:"
+    code: |
+      fruits = ["تفاح", "موز", "برتقال"]
+      fruits.remove("كمثرى")
+      print(fruits)
+    solution: 1
+    explanation: "لا يمكن حذف \"كمثرى\" لأنها غير موجودة في القائمة. سيؤدي هذا إلى خطأ ValueError."
+    hint: "تأكد من وجود العنصر في القائمة قبل محاولة حذفه."
+
+  - type: "quiz"
+    question: "ما الفرق بين `.pop()` و `.remove()`؟"
+    options:
+      - "لا يوجد فرق، كلاهما يحذف العناصر"
+      - ".pop() يحذف بالفهرس ويرجع العنصر، .remove() يحذف بالقيمة ولا يرجع شيئاً"
+      - ".remove() يحذف جميع التطابقات، .pop() يحذف واحداً فقط"
+    solution: 1
+    explanation: "`.pop()` يعمل بالفهرس ويرجع العنصر المحذوف، بينما `.remove()` يبحث عن القيمة ويحذف أول تطابق دون إرجاع شيء."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لإنشاء قائمة مهام، إضافة مهمة، ثم حذف أول مهمة:"
+    code:
+      - "tasks = []"
+      - 'tasks.append("قراءة الكتاب")'
+      - 'tasks.append("كتابة التقرير")'
+      - "completed_task = tasks.pop(0)"
+      - "print(f'تم إنجاز: {completed_task}')"
+      - "print(f'المهام المتبقية: {tasks}')"
+    explanation: "نبدأ بقائمة فارغة، نضيف مهمتين، ثم نحذف المهمة الأولى ونحفظها في متغير."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لإدارة قائمة الطلاب:"
+    code: |
+      students = ["سارة", "خالد"]
+      
+      # أضف طالب جديد
+      students.@@INPUT@@("نور")
+      
+      # احذف آخر طالب
+      last_student = students.@@INPUT@@()
+      
+      # احذف "سارة" من القائمة
+      students.@@INPUT@@("سارة")
+      
+      print(f"الطالب الذي غادر: {last_student}")
+      print(f"الطلاب المتبقون: {students}")
+    solution:
+      - "append"
+      - "pop"
+      - "remove"
+    explanation: "استخدمنا `.append()` للإضافة، `.pop()` لحذف آخر عنصر، و `.remove()` لحذف عنصر محدد بالقيمة."
+
+  - type: "markdown"
+    content: |
+      ## مثال عملي: إدارة سلة التسوق
+
+      دعنا نطبق ما تعلمناه في مثال عملي لسلة تسوق:
+
+      ```python
+      cart = ["خبز", "حليب"]
+      
+      # إضافة عناصر جديدة
+      cart.append("بيض")
+      cart.append("جبن")
+      
+      # تغيير الرأي - حذف آخر عنصر
+      removed = cart.pop()
+      print(f"قررت عدم شراء: {removed}")
+      
+      # حذف عنصر محدد
+      cart.remove("خبز")
+      
+      print(f"قائمة التسوق النهائية: {cart}")
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل كود إدارة المكتبة الشخصية:"
+    code: |
+      library = ["الأسود يليق بك", "مئة عام من العزلة"]
+      
+      # أضف كتابين جديدين
+      library.@@INPUT@@("الخيميائي")
+      library.@@INPUT@@("أرض زيكولا")
+      
+      # أقرض آخر كتاب (احذفه واحفظه)
+      borrowed_book = library.@@INPUT@@()
+      
+      # أرجع كتاباً قديماً (احذفه)
+      library.@@INPUT@@("الأسود يليق بك")
+      
+      print(f"الكتاب المُعار: {borrowed_book}")
+      print(f"الكتب المتبقية: {library}")
+    solution:
+      - "append"
+      - "append"
+      - "pop"
+      - "remove"
+    explanation: "استخدمنا الطرق المختلفة لإدارة مكتبة شخصية: إضافة كتب جديدة، إعارة آخر كتاب، وإرجاع كتاب قديم."
+
+  - type: "quiz"
+    question: "إذا كانت القائمة `numbers = [1, 2, 3, 2, 4]` وتم تنفيذ `numbers.remove(2)`، ماذا ستصبح القائمة؟"
+    options:
+      - "[1, 3, 4]"
+      - "[1, 3, 2, 4]"
+      - "[1, 2, 3, 4]"
+    solution: 1
+    explanation: "`.remove(2)` يحذف **أول** ظهور للرقم 2 فقط، لذلك يبقى الرقم 2 الثاني في مكانه."
+
+  - type: "markdown"
+    content: |
+      ## ملخص الطرق الأساسية
+
+      🎯 **تهانينا!** تعلمت الطرق الأساسية الثلاث لتعديل القوائم:
+
+      - **`.append(item)`** ← يضيف عنصراً في النهاية
+      - **`.pop()`** ← يحذف آخر عنصر ويرجعه
+      - **`.pop(index)`** ← يحذف عنصراً بالفهرس ويرجعه  
+      - **`.remove(item)`** ← يحذف أول تطابق للقيمة المعطاة
+
+      هذه الطرق ستكون رفاقك الدائمين في رحلة البرمجة! في الدرس القادم، سنتعلم كيفية **بناء قوائم باستخدام الحلقات**.

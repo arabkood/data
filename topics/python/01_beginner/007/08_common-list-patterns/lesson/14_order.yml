@@ -1,0 +1,12 @@
+type: "order"
+lang: "python"
+question: "رتب الكود لعد الكلمات التي تبدأ بحرف معين:"
+code:
+  - "words = ['كتاب', 'قلم', 'كمبيوتر', 'طاولة', 'كرسي']"
+  - "target_letter = 'ك'"
+  - "count = 0"
+  - "for word in words:"
+  - "    if word[0] == target_letter:"
+  - "        count += 1"
+  - "print(f'عدد الكلمات: {count}')"
+explanation: "نبدأ بالقائمة والمتغيرات، ثم نتكرر ونفحص أول حرف، ونعد المطابقات."

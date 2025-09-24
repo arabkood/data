@@ -1,0 +1,267 @@
+---
+item_id: "m7-final-review"
+type: "lesson"
+title: "مراجعة شاملة: القوائم والحلقات معًا"
+base_xp: 1200
+difficulty: "medium"
+premium_only: true
+
+
+
+
+steps:
+  # Step 1: Welcome and Overview
+  - type: "markdown"
+    content: |
+      🎯 **حان وقت المراجعة الشاملة!**
+      
+      لقد تعلمت في هذا الموديول مفاهيم قوية جدًا:
+      - إنشاء واستخدام القوائم (Lists)
+      - الوصول للعناصر بالفهرسة (Indexing)
+      - التقطيع (Slicing) للحصول على أجزاء من القائمة
+      - دمج الحلقات مع القوائم
+      - استخدام دوال القوائم المهمة
+      
+      دعنا نختبر فهمك ونتأكد أنك جاهز للمستوى التالي!
+
+  # Step 2: Quick Quiz - List Creation
+  - type: "quiz"
+    question: "أي من هذه الطرق ينشئ قائمة تحتوي على الأرقام من 1 إلى 5؟"
+    lang: "python"
+    options:
+      - "numbers = [1, 2, 3, 4, 5]"
+      - "numbers = (1, 2, 3, 4, 5)"
+      - "numbers = {1, 2, 3, 4, 5}"
+      - "numbers = 1, 2, 3, 4, 5"
+    solution: 0
+    explanation: "الأقواس المربعة [] تُستخدم لإنشاء القوائم. الأقواس العادية () للـ tuples، والأقواس المعقوفة {} للـ sets."
+
+  # Step 3: Fill - Indexing Practice
+  - type: "fill"
+    lang: "python"
+    question: |
+      أكمل الكود للحصول على أول عنصر وآخر عنصر من القائمة:
+    code: |
+      fruits = ["تفاح", "موز", "برتقال", "عنب", "كيوي"]
+      
+      # احصل على أول فاكهة
+      first = fruits[@@INPUT@@]
+      
+      # احصل على آخر فاكهة
+      last = fruits[@@INPUT@@]
+      
+      print(f"الأولى: {first}, الأخيرة: {last}")
+    solution:
+      - "0"
+      - "-1"
+    explanation: "الفهرس 0 يعطينا أول عنصر، والفهرس -1 يعطينا آخر عنصر في القائمة."
+
+  # Step 4: Bug - Slicing Error
+  - type: "bug"
+    lang: "python"
+    question: "اكتشف الخطأ في استخدام التقطيع (slicing)"
+    code: |
+      numbers = [10, 20, 30, 40, 50, 60, 70]
+      # نريد الحصول على العناصر من الثاني إلى الخامس
+      middle = numbers[2:5]
+      print(f"العناصر الوسطى: {middle}")
+    solution: 2
+    explanation: "للحصول على العناصر من الثاني إلى الخامس، نحتاج numbers[1:5]. تذكر أن الفهرسة تبدأ من 0!"
+    expectedOutput: "[20, 30, 40, 50]"
+    actualOutput: "[30, 40, 50]"
+
+  # Step 5: Fill - Loop with List
+  - type: "fill"
+    lang: "python"
+    question: |
+      أكمل الكود لطباعة كل عنصر في القائمة مع رقمه:
+    code: |
+      colors = ["أحمر", "أزرق", "أخضر", "أصفر"]
+      
+      for @@INPUT@@ in range(len(colors)):
+          print(f"{@@INPUT@@ + 1}. {colors[@@INPUT@@]}")
+    solution:
+      - "/^(i|index|idx|x|j)$/"
+      - "/^(i|index|idx|x|j)$/"
+      - "/^(i|index|idx|x|j)$/"
+    explanation: "نستخدم range(len(colors)) للحصول على أرقام الفهارس، ثم نستخدمها للوصول للعناصر."
+
+  # Step 6: Order - Building a List
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لبناء قائمة تحتوي على مربعات الأرقام من 1 إلى 5"
+    code:
+      - "squares = []"
+      - "for num in range(1, 6):"
+      - "    square = num * num"
+      - "    squares.append(square)"
+      - "print(squares)"
+    explanation: "نبدأ بقائمة فارغة، ثم نستخدم حلقة لحساب كل مربع وإضافته للقائمة."
+
+  # Step 7: Fill - List Methods
+  - type: "fill"
+    lang: "python"
+    question: |
+      استخدم الدوال المناسبة لتعديل القائمة:
+    code: |
+      tasks = ["قراءة", "رياضة", "برمجة"]
+      
+      # أضف "طبخ" في نهاية القائمة
+      tasks.@@INPUT@@("طبخ")
+      
+      # احذف "رياضة" من القائمة
+      tasks.@@INPUT@@("رياضة")
+      
+      # احذف وأرجع آخر عنصر
+      last_task = tasks.@@INPUT@@()
+      
+      print(f"المهام المتبقية: {tasks}")
+      print(f"المهمة المحذوفة: {last_task}")
+    solution:
+      - "append"
+      - "remove"
+      - "pop"
+    explanation: "append() للإضافة في النهاية، remove() لحذف عنصر محدد، pop() لحذف وإرجاع آخر عنصر."
+
+  # Step 8: Bug - Common Loop Error
+  - type: "bug"
+    lang: "python"
+    question: "اكتشف الخطأ الشائع في هذا الكود"
+    code: |
+      prices = [100, 200, 150, 300]
+      total = 0
+      
+      for price in prices:
+          total = price
+      
+      print(f"المجموع: {total}")
+    solution: 4
+    explanation: "يجب استخدام += لإضافة كل سعر للمجموع، وليس = التي تستبدل القيمة!"
+    expectedOutput: "المجموع: 750"
+    actualOutput: "المجموع: 300"
+
+  # Step 9: Fill - Complex Pattern
+  - type: "fill"
+    lang: "python"
+    question: |
+      أكمل الكود لإنشاء قائمة بالأرقام الزوجية فقط:
+    code: |
+      all_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      even_numbers = []
+      
+      for num in all_numbers:
+          if num % @@INPUT@@ == @@INPUT@@:
+              even_numbers.@@INPUT@@(num)
+      
+      print(f"الأرقام الزوجية: {even_numbers}")
+    solution:
+      - "2"
+      - "0"
+      - "append"
+    explanation: "نفحص إذا كان باقي القسمة على 2 يساوي 0، وإذا كان كذلك نضيف الرقم للقائمة الجديدة."
+
+  # Step 10: Quiz - List Slicing
+  - type: "quiz"
+    question: "ماذا سيكون ناتج هذا الكود؟"
+    code: |
+      letters = ['a', 'b', 'c', 'd', 'e']
+      result = letters[1:4]
+      print(result)
+    lang: "python"
+    options:
+      - "['a', 'b', 'c']"
+      - "['b', 'c', 'd']"
+      - "['b', 'c', 'd', 'e']"
+      - "['a', 'b', 'c', 'd']"
+    solution: 1
+    explanation: "التقطيع [1:4] يعطينا العناصر من الفهرس 1 حتى 3 (لا يشمل 4)."
+
+  # Step 11: Order - Nested List Access
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود للوصول لعنصر محدد في قائمة متداخلة"
+    code:
+      - "matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]"
+      - "# نريد الحصول على الرقم 5"
+      - "row = matrix[1]"
+      - "number = row[1]"
+      - "print(f\"الرقم هو: {number}\")"
+    explanation: "في القوائم المتداخلة، نصل أولاً للصف، ثم للعنصر داخل الصف."
+
+  - type: "fill"
+    lang: "python"
+    question: |
+      أكمل هذا النمط المتقدم (سنتعلمه بالتفصيل لاحقًا):
+    code: |
+      # طريقة عادية
+      doubles = []
+      for x in range(5):
+          doubles.append(x * 2)
+      
+      # نفس النتيجة بطريقة أقصر
+      doubles2 = [x * @@INPUT@@ for x in range(@@INPUT@@)]
+      
+      print(doubles == doubles2)  # True
+    solution:
+      - "2"
+      - "5"
+    explanation: "هذه طريقة مختصرة لبناء القوائم تُسمى List Comprehension - سنتعلمها بالتفصيل قريبًا!"
+
+  # Step 13: Bug - Index Out of Range
+  - type: "bug"
+    lang: "python"
+    question: "اكتشف السبب في رسالة الخطأ IndexError"
+    code: |
+      items = ["قلم", "دفتر", "ممحاة"]
+      
+      for i in range(4):
+          print(f"{i}: {items[i]}")
+    solution: 2
+    explanation: "القائمة تحتوي على 3 عناصر فقط، لكن الحلقة تحاول الوصول لـ 4 عناصر. استخدم range(len(items))!"
+    hint: "كم عنصر في القائمة؟ وكم مرة ستدور الحلقة؟"
+
+  # Step 14: Complex Challenge
+  - type: "fill"
+    lang: "python"
+    question: |
+      تحدي شامل: أكمل الكود لإيجاد أكبر رقم في القائمة:
+    code: |
+      numbers = [45, 23, 67, 89, 12, 56, 34]
+      
+      # ابدأ بأول رقم
+      maximum = numbers[@@INPUT@@]
+      
+      # قارن مع باقي الأرقام
+      for num in numbers:
+          if num @@INPUT@@ maximum:
+              maximum = @@INPUT@@
+      
+      print(f"أكبر رقم هو: {maximum}")
+    solution:
+      - "0"
+      - ">"
+      - "num"
+    explanation: "نبدأ بافتراض أن أول رقم هو الأكبر، ثم نقارن مع كل رقم ونحدث القيمة إذا وجدنا أكبر."
+
+  # Step 15: Summary
+  - type: "markdown"
+    content: |
+      🏆 **ممتاز! لقد أتممت المراجعة الشاملة!**
+      
+      لقد أثبتت إتقانك لـ:
+      ✅ إنشاء واستخدام القوائم
+      ✅ الفهرسة الإيجابية والسلبية
+      ✅ التقطيع (Slicing)
+      ✅ دمج الحلقات مع القوائم
+      ✅ استخدام دوال القوائم (append, remove, pop)
+      ✅ بناء قوائم جديدة من قوائم موجودة
+      ✅ التعامل مع الأخطاء الشائعة
+      
+      **🚀 التالي: الحلقات المتقدمة**
+      في الموديول القادم، ستتعلم:
+      - حلقات while والفرق بينها وبين for
+      - التحكم في سير الحلقات (break, continue)
+      - الحلقات المتداخلة (nested loops)
+      - حل مشاكل معقدة باستخدام الحلقات
+      
+      استعد لرفع مستوى مهاراتك في البرمجة!

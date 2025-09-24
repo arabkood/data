@@ -1,0 +1,18 @@
+# --- STEP 9: Transform while building ---
+type: "fill"
+lang: "python"
+question: "حول قائمة الأسماء إلى أحرف كبيرة وأنشئ قائمة جديدة"
+code: |
+  names = ['أحمد', 'فاطمة', 'عبدالله', 'مريم']
+  uppercase_names = @@INPUT@@
+
+  for @@INPUT@@ in @@INPUT@@:
+      uppercase_names.append(name.@@INPUT@@())
+
+  print(uppercase_names)
+solution:
+  - "[]"
+  - "name"
+  - "names"
+  - "upper"
+explanation: "نمر عبر كل اسم، نحوله إلى أحرف كبيرة، ونضيفه للقائمة الجديدة"

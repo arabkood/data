@@ -1,0 +1,12 @@
+# --- STEP 6: Counting Practice ---
+type: "fill"
+lang: "python"
+question: "اكتب كود لعدد كم مرة تظهر الكلمة 'python' في هذه القائمة:"
+code: "languages = [\"java\", \"python\", \"javascript\", \"python\", \"c++\", \"python\"]\n@@INPUT@@ = 0\n\nfor @@INPUT@@ in languages:\n    if @@INPUT@@ == \"@@INPUT@@\":\n        @@INPUT@@ += 1\n        \nprint(f\"python تظهر {count} مرات\")\n"
+solution:
+  - "count"
+  - "language"
+  - "language"
+  - "python"
+  - "count"
+explanation: "نستخدم متغير عداد ونزيده كلما وجدنا العنصر المطلوب."

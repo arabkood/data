@@ -1,0 +1,19 @@
+# Step 3: Fill - Indexing Practice
+type: "fill"
+lang: "python"
+question: |
+  أكمل الكود للحصول على أول عنصر وآخر عنصر من القائمة:
+code: |
+  fruits = ["تفاح", "موز", "برتقال", "عنب", "كيوي"]
+
+  # احصل على أول فاكهة
+  first = fruits[@@INPUT@@]
+
+  # احصل على آخر فاكهة
+  last = fruits[@@INPUT@@]
+
+  print(f"الأولى: {first}, الأخيرة: {last}")
+solution:
+  - "0"
+  - "-1"
+explanation: "الفهرس 0 يعطينا أول عنصر، والفهرس -1 يعطينا آخر عنصر في القائمة."

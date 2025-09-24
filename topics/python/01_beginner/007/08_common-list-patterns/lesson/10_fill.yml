@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "حوّل الأسماء إلى أحرف كبيرة:"
+code: "names = [\"أحمد\", \"فاطمة\", \"محمد\"]\nuppercase_names = []\n\nfor @@INPUT@@ in @@INPUT@@:\n    @@INPUT@@_name = @@INPUT@@.upper()\n    @@INPUT@@.append(@@INPUT@@_name)\n    \nprint(uppercase_names)\n"
+solution:
+  - "name"
+  - "names"
+  - "upper"
+  - "name"
+  - "uppercase_names"
+  - "upper"
+explanation: ".upper() تحول النص إلى أحرف كبيرة، ونضيف النتيجة للقائمة الجديدة."

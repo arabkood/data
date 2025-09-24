@@ -1,0 +1,18 @@
+# --- STEP 3: First practice - basic building ---
+type: "fill"
+lang: "python"
+question: "أنشئ قائمة تحتوي على الأرقام من 1 إلى 5"
+code: |
+  numbers = @@INPUT@@
+
+  for i in range(@@INPUT@@, @@INPUT@@):
+      numbers.@@INPUT@@(@@INPUT@@)
+
+  print(numbers)
+solution:
+  - "[]"
+  - "1"
+  - "6"
+  - "append"
+  - "i"
+explanation: "نبدأ بقائمة فارغة، ثم نضيف كل رقم من 1 إلى 5 باستخدام append()"

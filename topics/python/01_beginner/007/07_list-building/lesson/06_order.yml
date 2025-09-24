@@ -1,0 +1,13 @@
+# --- STEP 6: Building from user input ---
+type: "order"
+lang: "python"
+question: "رتب الكود لإنشاء قائمة بالأسماء من إدخال المستخدم (يدخل 'stop' للتوقف)"
+code:
+  - "names = []"
+  - "while True:"
+  - "    name = input('أدخل اسماً (أو stop للتوقف): ')"
+  - "    if name == 'stop':"
+  - "        break"
+  - "    names.append(name)"
+  - "print('الأسماء المدخلة:', names)"
+explanation: "نستخدم while True مع break للسماح للمستخدم بإدخال عدد غير محدد من الأسماء"

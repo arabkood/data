@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "احصل على أول 4 عناصر باستخدام الاختصار:"
+code: |
+  cities = ['Cairo', 'Dubai', 'Riyadh', 'Amman', 'Baghdad', 'Tunis']
+  first_four = cities[@@INPUT@@]
+  print(first_four)
+solution:
+  - ":4"
+explanation: "للحصول على أول 4 عناصر، نترك البداية فارغة ونضع :4."

@@ -1,0 +1,10 @@
+type: "bug"
+lang: "python"
+question: "اعثر على السطر الذي يحتوي على خطأ:"
+code: |
+  fruits = ["تفاح", "موز", "برتقال"]
+  fruits.remove("كمثرى")
+  print(fruits)
+solution: 1
+explanation: "لا يمكن حذف \"كمثرى\" لأنها غير موجودة في القائمة. سيؤدي هذا إلى خطأ ValueError."
+hint: "تأكد من وجود العنصر في القائمة قبل محاولة حذفه."

@@ -1,0 +1,16 @@
+# --- STEP 7: Bug hunting in list building ---
+type: "bug"
+lang: "python"
+question: "اعثر على الخطأ في بناء قائمة المربعات"
+code: |
+  squares = []
+  for i in range(1, 6):
+      square = i * i
+      squares.append(square)
+  squares = []
+  print(squares)
+solution: 4
+hint: "انظر بعناية إلى آخر سطرين..."
+explanation: "المشكلة في السطر الخامس: نحن نعيد تفريغ القائمة بعد ملئها!"
+expectedOutput: "[1, 4, 9, 16, 25]"
+actualOutput: "[]"

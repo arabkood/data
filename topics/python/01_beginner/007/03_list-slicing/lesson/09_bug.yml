@@ -1,0 +1,10 @@
+type: "bug"
+lang: "python"
+question: "اعثر على الخطأ في هذا الكود:"
+code: |
+  letters = ['a', 'b', 'c', 'd', 'e']
+  middle_part = letters[1,3]
+  print(middle_part)
+solution: 1
+explanation: "الخطأ هو استخدام الفاصلة (,) بدلاً من النقطتين (:). الصيغة الصحيحة هي letters[1:3]."
+hint: "انتبه لرمز التقطيع المستخدم"

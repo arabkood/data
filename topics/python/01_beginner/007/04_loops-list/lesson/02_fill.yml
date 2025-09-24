@@ -1,0 +1,14 @@
+# --- STEP 2: First Pattern Practice ---
+type: "fill"
+lang: "python"
+question: "لنبدأ بأبسط نمط: طباعة كل عنصر في القائمة. أكمل الكود:"
+code: |
+  names = ["أحمد", "فاطمة", "محمد", "زينب"]
+
+  @@INPUT@@ name @@INPUT@@ names:
+      print(f"مرحباً {@@INPUT@@}")
+solution:
+  - "for"
+  - "in"
+  - "name"
+explanation: "النمط `for item in list:` هو الطريقة المُفضلة للتنقل عبر عناصر القائمة مباشرة."

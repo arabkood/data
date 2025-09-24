@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "احسب متوسط الدرجات:"
+code: "grades = [85, 92, 78, 90, 88]\ntotal = @@INPUT@@\n\nfor @@INPUT@@ in @@INPUT@@:\n    @@INPUT@@ += @@INPUT@@\n    \naverage = @@INPUT@@ / len(@@INPUT@@)\nprint(f\"المتوسط: {average}\")\n"
+solution:
+  - "0"
+  - "grade"
+  - "grades"
+  - "total"
+  - "grade"
+  - "total"
+  - "grades"
+explanation: "نبدأ بـ 0، نجمع كل الدرجات، ثم نقسم على عدد العناصر للحصول على المتوسط."

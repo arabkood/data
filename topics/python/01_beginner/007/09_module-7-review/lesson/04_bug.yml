@@ -1,0 +1,13 @@
+# Step 4: Bug - Slicing Error
+type: "bug"
+lang: "python"
+question: "اكتشف الخطأ في استخدام التقطيع (slicing)"
+code: |
+  numbers = [10, 20, 30, 40, 50, 60, 70]
+  # نريد الحصول على العناصر من الثاني إلى الخامس
+  middle = numbers[2:5]
+  print(f"العناصر الوسطى: {middle}")
+solution: 2
+explanation: "للحصول على العناصر من الثاني إلى الخامس، نحتاج numbers[1:5]. تذكر أن الفهرسة تبدأ من 0!"
+expectedOutput: "[20, 30, 40, 50]"
+actualOutput: "[30, 40, 50]"

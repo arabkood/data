@@ -1,0 +1,15 @@
+# Step 5: Fill - Loop with List
+type: "fill"
+lang: "python"
+question: |
+  أكمل الكود لطباعة كل عنصر في القائمة مع رقمه:
+code: |
+  colors = ["أحمر", "أزرق", "أخضر", "أصفر"]
+
+  for @@INPUT@@ in range(len(colors)):
+      print(f"{@@INPUT@@ + 1}. {colors[@@INPUT@@]}")
+solution:
+  - "/^(i|index|idx|x|j)$/"
+  - "/^(i|index|idx|x|j)$/"
+  - "/^(i|index|idx|x|j)$/"
+explanation: "نستخدم range(len(colors)) للحصول على أرقام الفهارس، ثم نستخدمها للوصول للعناصر."

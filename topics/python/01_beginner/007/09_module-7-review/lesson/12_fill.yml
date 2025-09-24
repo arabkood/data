@@ -1,0 +1,18 @@
+type: "fill"
+lang: "python"
+question: |
+  أكمل هذا النمط المتقدم (سنتعلمه بالتفصيل لاحقًا):
+code: |
+  # طريقة عادية
+  doubles = []
+  for x in range(5):
+      doubles.append(x * 2)
+
+  # نفس النتيجة بطريقة أقصر
+  doubles2 = [x * @@INPUT@@ for x in range(@@INPUT@@)]
+
+  print(doubles == doubles2)  # True
+solution:
+  - "2"
+  - "5"
+explanation: "هذه طريقة مختصرة لبناء القوائم تُسمى List Comprehension - سنتعلمها بالتفصيل قريبًا!"

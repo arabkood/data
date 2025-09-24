@@ -1,0 +1,16 @@
+# --- STEP 4: Index Pattern Practice ---
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة كل عنصر مع رقم ترتيبه:"
+code: |
+  colors = ["أحمر", "أزرق", "أخضر"]
+
+  for @@INPUT@@ in @@INPUT@@(@@INPUT@@(colors)):
+      print(f"{i+1}. {@@INPUT@@[@@INPUT@@]}")
+solution:
+  - "i"
+  - "range"
+  - "len"
+  - "colors"
+  - "i"
+explanation: "نضيف 1 للفهرس لأن المستخدمين يفضلون العد من 1 وليس 0."

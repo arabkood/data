@@ -1,0 +1,18 @@
+# --- STEP 13: Complex Scenario ---
+type: "fill"
+lang: "python"
+question: "تحدي متقدم: أكمل كود لإيجاد الطالب صاحب أعلى درجة:"
+code: "students = [\"سارة\", \"أحمد\", \"فاطمة\", \"محمد\"]  \ngrades = [88, 95, 76, 91]\n\ntop_student = @@INPUT@@\nhighest_grade = @@INPUT@@\n\nfor @@INPUT@@ in @@INPUT@@(@@INPUT@@(students)):\n    if @@INPUT@@[i] > @@INPUT@@:\n        @@INPUT@@ = @@INPUT@@[i]\n        @@INPUT@@ = @@INPUT@@[i]\n        \nprint(f\"أعلى درجة حصل عليها {top_student}: {highest_grade}\")\n"
+solution:
+  - '""'
+  - "0"
+  - "i"
+  - "range"
+  - "len"
+  - "grades"
+  - "highest_grade"
+  - "highest_grade"
+  - "grades"
+  - "top_student"
+  - "students"
+explanation: "نتتبع أعلى درجة واسم الطالب معاً، ونحديثهما عندما نجد درجة أعلى."

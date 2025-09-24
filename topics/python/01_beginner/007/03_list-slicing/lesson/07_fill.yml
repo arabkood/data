@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "احصل على آخر 3 عناصر باستخدام الاختصار:"
+code: |
+  scores = [85, 90, 76, 88, 92, 94, 80]
+  last_three = scores[@@INPUT@@]
+  print(last_three)
+solution:
+  - "-3:"
+explanation: "للحصول على آخر 3 عناصر، نبدأ من -3 (العنصر الثالث من النهاية) ونذهب حتى النهاية."

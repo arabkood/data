@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "احذف العنصر الأول من القائمة (الفهرس 0):"
+code: |
+  cities = ["الرياض", "جدة", "الدمام"]
+  first_city = cities.@@INPUT@@(@@INPUT@@)
+  print(f"المدينة المحذوفة: {first_city}")
+  print(f"المدن المتبقية: {cities}")
+solution:
+  - "pop"
+  - "0"
+explanation: "`.pop(0)` حذف العنصر في الفهرس 0، وهو \"الرياض\"."

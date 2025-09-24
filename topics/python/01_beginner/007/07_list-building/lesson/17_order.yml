@@ -1,0 +1,14 @@
+# --- STEP 17: Complex integration challenge ---
+type: "order"
+lang: "python"
+question: "رتب الكود لبناء قائمة بالأرقام من 1-15، لكن اقلب الأرقام التي تقبل القسمة على 3"
+code:
+  - "special_numbers = []"
+  - "for i in range(1, 16):"
+  - "    if i % 3 == 0:"
+  - "        reversed_num = int(str(i)[::-1])"
+  - "        special_numbers.append(reversed_num)"
+  - "    else:"
+  - "        special_numbers.append(i)"
+  - "print(special_numbers)"
+explanation: "نتحقق من مضاعفات الـ3، نحولها لنص، نقلبها، ثم نحولها لرقم مرة أخرى"

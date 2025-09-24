@@ -1,0 +1,22 @@
+# --- STEP 14: Multi-source building ---
+type: "fill"
+lang: "python"
+question: "أنشئ قائمة تحتوي على مجموع كل عنصرين في نفس الموقع من قائمتين مختلفتين"
+code: |
+  list1 = [1, 3, 5, 7, 9]
+  list2 = [2, 4, 6, 8, 10]
+  sums = @@INPUT@@
+
+  for i in range(len(@@INPUT@@)):
+      sum_value = list1[@@INPUT@@] + list2[@@INPUT@@]
+      sums.@@INPUT@@(@@INPUT@@)
+
+  print(sums)  # [3, 7, 11, 15, 19]
+solution:
+  - "[]"
+  - "list1"
+  - "i"
+  - "i"
+  - "append"
+  - "sum_value"
+explanation: "نجمع العناصر في نفس المواقع من القائمتين ونضع النتيجة في قائمة جديدة"

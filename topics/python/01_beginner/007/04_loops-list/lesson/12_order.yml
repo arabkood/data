@@ -1,0 +1,12 @@
+# --- STEP 12: Pattern Recognition ---
+type: "order"
+lang: "python"
+question: "رتب الأسطر لإنشاء برنامج يطبع أكبر رقم في القائمة:"
+code:
+  - "numbers = [15, 3, 9, 21, 7]"
+  - "largest = numbers[0]"
+  - "for num in numbers:"
+  - "    if num > largest:"
+  - "        largest = num"
+  - "print(f'أكبر رقم هو: {largest}')"
+explanation: "نبدأ بافتراض أن أول عنصر هو الأكبر، ثم نقارن باقي العناصر ونحديث المتغير عند إيجاد رقم أكبر."

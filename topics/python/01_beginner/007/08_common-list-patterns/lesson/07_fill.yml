@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "اجمع الدرجات التي تزيد عن 80 في قائمة منفصلة:"
+code: "grades = [75, 85, 92, 68, 88, 95, 73]\nhigh_grades = []\n\nfor @@INPUT@@ in @@INPUT@@:\n    if @@INPUT@@ > @@INPUT@@:\n        @@INPUT@@.append(@@INPUT@@)\n        \nprint(\"الدرجات العالية:\", high_grades)\n"
+solution:
+  - "grade"
+  - "grades"
+  - "grade"
+  - "80"
+  - "high_grades"
+  - "grade"
+explanation: "نبدأ بقائمة فارغة، ثم نضيف العناصر التي تحقق الشرط واحداً تلو الآخر."

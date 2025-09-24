@@ -1,0 +1,12 @@
+# Step 13: Bug - Index Out of Range
+type: "bug"
+lang: "python"
+question: "اكتشف السبب في رسالة الخطأ IndexError"
+code: |
+  items = ["قلم", "دفتر", "ممحاة"]
+
+  for i in range(4):
+      print(f"{i}: {items[i]}")
+solution: 2
+explanation: "القائمة تحتوي على 3 عناصر فقط، لكن الحلقة تحاول الوصول لـ 4 عناصر. استخدم range(len(items))!"
+hint: "كم عنصر في القائمة؟ وكم مرة ستدور الحلقة؟"

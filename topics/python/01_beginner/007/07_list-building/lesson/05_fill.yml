@@ -1,0 +1,18 @@
+# --- STEP 5: Even numbers challenge ---
+type: "fill"
+lang: "python"
+question: "أنشئ قائمة بالأرقام الزوجية فقط من 1 إلى 10"
+code: |
+  even_numbers = []
+
+  for i in range(1, 11):
+      if i @@INPUT@@ 2 == @@INPUT@@:
+          even_numbers.@@INPUT@@(@@INPUT@@)
+
+  print(even_numbers)  # [2, 4, 6, 8, 10]
+solution:
+  - "%"
+  - "0"
+  - "append"
+  - "i"
+explanation: "نتحقق من أن باقي القسمة على 2 يساوي 0 (رقم زوجي) قبل الإضافة"

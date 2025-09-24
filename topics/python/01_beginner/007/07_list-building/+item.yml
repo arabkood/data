@@ -1,0 +1,12 @@
+id: b82f199f-1718-4973-9654-eb8d7e76735b
+module_id: 25f62daa-a846-4102-abe1-9c5afffdea66
+slug: list-building
+position: 7
+created_at: 2025-09-24T14:52:59.802Z
+updated_at: 2025-09-24T14:52:59.802Z
+type: lesson
+title: 'بناء القوائم: مارثون التطبيق العملي'
+difficulty: medium
+premium_only: true
+base_xp: 950
+s3_path: python/01_beginner/007/07_list-building

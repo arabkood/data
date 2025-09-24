@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "احصل على الأرقام الزوجية فقط (كل عنصر ثاني) من هذه القائمة:"
+code: |
+  numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  evens = numbers[@@INPUT@@]
+  print(evens)
+solution:
+  - "1::2"
+explanation: "نبدأ من الموضع 1 (الرقم 2) ونأخذ كل عنصر ثاني، فنحصل على الأرقام الزوجية."

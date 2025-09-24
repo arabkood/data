@@ -1,0 +1,19 @@
+type: "fill"
+lang: "python"
+question: "ابحث عن الطالب 'أحمد' واطبع موقعه في القائمة:"
+code: |
+  students = ["فاطمة", "محمد", "أحمد", "عائشة"]
+  target = "أحمد"
+
+  for @@INPUT@@, @@INPUT@@ in enumerate(students):
+      if @@INPUT@@ == @@INPUT@@:
+          print(f"أحمد موجود في الموقع {@@INPUT@@}")
+          @@INPUT@@
+solution:
+  - "i"
+  - "student"
+  - "student"
+  - "target"
+  - "i"
+  - "break"
+explanation: "break مهمة هنا لإيقاف البحث بمجرد العثور على المطلوب."

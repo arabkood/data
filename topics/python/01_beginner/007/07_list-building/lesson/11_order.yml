@@ -1,0 +1,11 @@
+# --- STEP 11: Building with calculations ---
+type: "order"
+lang: "python"
+question: "رتب الكود لإنشاء قائمة بمضاعفات الرقم 3 من 3 إلى 30"
+code:
+  - "multiples_of_3 = []"
+  - "for i in range(1, 11):"
+  - "    multiple = i * 3"
+  - "    multiples_of_3.append(multiple)"
+  - "print(multiples_of_3)"
+explanation: "نحسب مضاعفات الرقم 3 بضرب كل رقم من 1 إلى 10 في 3"

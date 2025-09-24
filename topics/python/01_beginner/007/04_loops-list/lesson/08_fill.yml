@@ -1,0 +1,20 @@
+# --- STEP 8: Finding Practice ---
+type: "fill"
+lang: "python"
+question: "أكمل الكود للبحث عن أول رقم أكبر من 50:"
+code: |
+  numbers = [20, 35, 60, 45, 80]
+  found = @@INPUT@@
+
+  for num in numbers:
+      if num > @@INPUT@@:
+          print(f"أول رقم أكبر من 50 هو: {num}")
+          @@INPUT@@ = @@INPUT@@
+          @@INPUT@@
+solution:
+  - "False"
+  - "50"
+  - "found"
+  - "True"
+  - "break"
+explanation: "نستخدم متغير boolean لتتبع ما إذا وجدنا العنصر، ونستخدم break للخروج من الحلقة بمجرد العثور عليه."

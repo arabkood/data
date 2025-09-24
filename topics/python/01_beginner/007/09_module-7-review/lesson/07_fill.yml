@@ -1,0 +1,24 @@
+# Step 7: Fill - List Methods
+type: "fill"
+lang: "python"
+question: |
+  استخدم الدوال المناسبة لتعديل القائمة:
+code: |
+  tasks = ["قراءة", "رياضة", "برمجة"]
+
+  # أضف "طبخ" في نهاية القائمة
+  tasks.@@INPUT@@("طبخ")
+
+  # احذف "رياضة" من القائمة
+  tasks.@@INPUT@@("رياضة")
+
+  # احذف وأرجع آخر عنصر
+  last_task = tasks.@@INPUT@@()
+
+  print(f"المهام المتبقية: {tasks}")
+  print(f"المهمة المحذوفة: {last_task}")
+solution:
+  - "append"
+  - "remove"
+  - "pop"
+explanation: "append() للإضافة في النهاية، remove() لحذف عنصر محدد، pop() لحذف وإرجاع آخر عنصر."

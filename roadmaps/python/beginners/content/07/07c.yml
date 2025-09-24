@@ -1,0 +1,346 @@
+# Each item starts with a triple-dash separator
+---
+# The unique identifier for the item, provided in the roadmap
+item_id: "m7-common-list-patterns"
+
+# The type of the item. For now, always use 'lesson' or 'code'.
+type: "lesson"
+
+# The title of the lesson item.
+title: "أنماط القوائم الشائعة"
+base_xp: 1000
+difficulty: "medium"
+
+# Always include premium_only: true
+premium_only: true
+
+# A list of steps that make up this lesson.
+steps:
+  - type: "markdown"
+    content: |
+      تهانينا! لقد استخدمت القوائم والحلقات معاً في تحديات مختلفة. 
+
+      الآن حان الوقت لتتعرف على **الأنماط الشائعة** (Common Patterns) التي تعلمتها بشكل عملي.
+
+      هذه الأنماط هي "وصفات" برمجية تستطيع استخدامها لحل مشاكل مختلفة. تماماً مثل وصفات الطبخ! 👨‍🍳
+
+      **ستتعلم اليوم 5 أنماط أساسية** يستخدمها المبرمجون يومياً.
+
+  - type: "markdown"
+    content: |
+      ## النمط الأول: التكرار والعرض 📺
+
+      **المشكلة:** تريد طباعة أو عرض كل عنصر في القائمة.
+
+      **الحل:**
+      ```python
+      # النمط الأساسي
+      for item in my_list:
+          print(item)
+      
+      # نمط محسّن مع ترقيم
+      for i, item in enumerate(my_list):
+          print(f"{i+1}. {item}")
+      ```
+
+      هذا هو أكثر الأنماط استخداماً! بسيط وفعال.
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع قائمة المهام مع ترقيم يبدأ من 1:"
+    code: |
+      tasks = ["قراءة كتاب", "تمارين رياضية", "مراجعة الكود"]
+      
+      for @@INPUT@@, @@INPUT@@ in enumerate(tasks):
+          print(f"{@@INPUT@@}. {@@INPUT@@}")
+    solution:
+      - "i"
+      - "task"  
+      - "i+1"
+      - "task"
+    explanation: "enumerate() تعطيك الفهرس والعنصر معاً، مما يسهل إضافة الترقيم."
+
+  - type: "markdown"
+    content: |
+      ## النمط الثاني: البحث والإيجاد 🔍
+
+      **المشكلة:** تريد معرفة إذا كان عنصر معين موجود في القائمة أو العثور على موقعه.
+
+      **الحل:**
+      ```python
+      # البحث البسيط
+      if item in my_list:
+          print("موجود!")
+      
+      # إيجاد الموقع
+      for i, current_item in enumerate(my_list):
+          if current_item == target:
+              print(f"موجود في الموقع {i}")
+              break
+      ```
+
+  - type: "fill"
+    lang: "python" 
+    question: "ابحث عن الطالب 'أحمد' واطبع موقعه في القائمة:"
+    code: |
+      students = ["فاطمة", "محمد", "أحمد", "عائشة"]
+      target = "أحمد"
+      
+      for @@INPUT@@, @@INPUT@@ in enumerate(students):
+          if @@INPUT@@ == @@INPUT@@:
+              print(f"أحمد موجود في الموقع {@@INPUT@@}")
+              @@INPUT@@
+    solution:
+      - "i"
+      - "student"
+      - "student" 
+      - "target"
+      - "i"
+      - "break"
+    explanation: "break مهمة هنا لإيقاف البحث بمجرد العثور على المطلوب."
+
+  - type: "markdown"
+    content: |
+      ## النمط الثالث: التصفية والفلترة 🎯
+
+      **المشكلة:** تريد الحصول على عناصر معينة فقط من القائمة (تلك التي تحقق شرط معين).
+
+      **الحل:**
+      ```python
+      # إنشاء قائمة جديدة للنتائج
+      filtered_list = []
+      
+      for item in original_list:
+          if condition:  # شرط معين
+              filtered_list.append(item)
+      ```
+
+      هذا النمط قوي جداً لتنظيم البيانات!
+
+  - type: "fill"
+    lang: "python"
+    question: "اجمع الدرجات التي تزيد عن 80 في قائمة منفصلة:"
+    code: |
+      grades = [75, 85, 92, 68, 88, 95, 73]
+      high_grades = []
+      
+      for @@INPUT@@ in @@INPUT@@:
+          if @@INPUT@@ > @@INPUT@@:
+              @@INPUT@@.append(@@INPUT@@)
+              
+      print("الدرجات العالية:", high_grades)
+    solution:
+      - "grade"
+      - "grades"
+      - "grade"
+      - "80"
+      - "high_grades"
+      - "grade"
+    explanation: "نبدأ بقائمة فارغة، ثم نضيف العناصر التي تحقق الشرط واحداً تلو الآخر."
+
+  - type: "quiz"
+    question: "ما الذي يميز نمط التصفية؟"
+    options:
+      - "يعدل القائمة الأصلية"
+      - "ينشئ قائمة جديدة تحتوي على عناصر محددة"
+      - "يحذف عناصر من القائمة الأصلية"
+    solution: 1
+    explanation: "نمط التصفية ينشئ قائمة جديدة ولا يعدل القائمة الأصلية، مما يحافظ على البيانات الأساسية."
+
+  - type: "markdown"
+    content: |
+      ## النمط الرابع: التحويل والتعديل 🔄
+
+      **المشكلة:** تريد تطبيق عملية على كل عنصر في القائمة وإنشاء قائمة جديدة بالنتائج.
+
+      **الحل:**
+      ```python
+      # تحويل كل عنصر
+      transformed_list = []
+      
+      for item in original_list:
+          new_item = transform(item)  # تطبيق التحويل
+          transformed_list.append(new_item)
+      ```
+
+      مثل تحويل درجات من 100 إلى 10، أو تحويل أسماء إلى أحرف كبيرة.
+
+  - type: "fill"
+    lang: "python"
+    question: "حوّل الأسماء إلى أحرف كبيرة:"
+    code: |
+      names = ["أحمد", "فاطمة", "محمد"]
+      uppercase_names = []
+      
+      for @@INPUT@@ in @@INPUT@@:
+          @@INPUT@@_name = @@INPUT@@.upper()
+          @@INPUT@@.append(@@INPUT@@_name)
+          
+      print(uppercase_names)
+    solution:
+      - "name"
+      - "names"
+      - "upper"
+      - "name"
+      - "uppercase_names"
+      - "upper"
+    explanation: ".upper() تحول النص إلى أحرف كبيرة، ونضيف النتيجة للقائمة الجديدة."
+
+  - type: "markdown"
+    content: |
+      ## النمط الخامس: الحساب والتجميع 🧮
+
+      **المشكلة:** تريد حساب قيمة واحدة من كل القائمة (مجموع، متوسط، أعلى قيمة، إلخ).
+
+      **الحل:**
+      ```python
+      # مثال: حساب المجموع
+      total = 0
+      
+      for number in numbers:
+          total += number
+      
+      # مثال: إيجاد الأعلى
+      highest = numbers[0]  # نبدأ بأول عنصر
+      
+      for number in numbers:
+          if number > highest:
+              highest = number
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "احسب متوسط الدرجات:"
+    code: |
+      grades = [85, 92, 78, 90, 88]
+      total = @@INPUT@@
+      
+      for @@INPUT@@ in @@INPUT@@:
+          @@INPUT@@ += @@INPUT@@
+          
+      average = @@INPUT@@ / len(@@INPUT@@)
+      print(f"المتوسط: {average}")
+    solution:
+      - "0"
+      - "grade"
+      - "grades"
+      - "total"
+      - "grade"
+      - "total"
+      - "grades"
+    explanation: "نبدأ بـ 0، نجمع كل الدرجات، ثم نقسم على عدد العناصر للحصول على المتوسط."
+
+  - type: "bug"
+    lang: "python"
+    question: "اعثر على الخطأ في إيجاد أعلى راتب:"
+    code: |
+      salaries = [5000, 7500, 6200, 8900, 5800]
+      highest_salary = 0
+      for salary in salaries:
+          if salary > highest_salary:
+              highest_salary = salary
+      print(f"أعلى راتب: {highest_salary}")
+    solution: 1
+    explanation: "يجب البدء بأول عنصر من القائمة، ليس بـ 0، لضمان الحصول على النتيجة الصحيحة حتى لو كانت كل القيم سالبة."
+    hint: "ما الذي يحدث إذا كانت كل الرواتب أقل من 0؟"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لعد الكلمات التي تبدأ بحرف معين:"
+    code:
+      - "words = ['كتاب', 'قلم', 'كمبيوتر', 'طاولة', 'كرسي']"
+      - "target_letter = 'ك'"
+      - "count = 0"
+      - "for word in words:"
+      - "    if word[0] == target_letter:"
+      - "        count += 1"
+      - "print(f'عدد الكلمات: {count}')"
+    explanation: "نبدأ بالقائمة والمتغيرات، ثم نتكرر ونفحص أول حرف، ونعد المطابقات."
+
+  - type: "markdown"
+    content: |
+      ## تطبيق شامل: دمج الأنماط 🚀
+
+      المبرمجون الماهرون يدمجون هذه الأنماط معاً لحل مشاكل معقدة.
+
+      مثال: **تحليل بيانات الطلاب**
+      ```python
+      students = [
+          ("أحمد", 85),
+          ("فاطمة", 92), 
+          ("محمد", 78),
+          ("عائشة", 95)
+      ]
+      
+      # نمط التصفية + التحويل
+      top_students = []
+      for name, grade in students:
+          if grade >= 90:  # تصفية
+              top_students.append(name.upper())  # تحويل
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "اجمع أسماء الطلاب الناجحين (درجة >= 60) واحسب عددهم:"
+    code: |
+      students = [("سارة", 75), ("خالد", 45), ("نور", 88), ("علي", 52)]
+      passed_students = []
+      
+      for @@INPUT@@, @@INPUT@@ in students:
+          if @@INPUT@@ >= @@INPUT@@:
+              @@INPUT@@.append(@@INPUT@@)
+              
+      count = len(@@INPUT@@)
+      print(f"الطلاب الناجحون: {passed_students}")
+      print(f"عددهم: {count}")
+    solution:
+      - "name"
+      - "grade"
+      - "grade"
+      - "60"
+      - "passed_students"
+      - "name"
+      - "passed_students"
+    explanation: "دمجنا نمط التصفية (الدرجة >= 60) مع نمط الحساب (عد العناصر)."
+
+  - type: "quiz"
+    question: "أي نمط تستخدم لإيجاد متوسط الأرقام الموجبة فقط في قائمة؟"
+    options:
+      - "التصفية فقط"
+      - "الحساب فقط"
+      - "التصفية + الحساب معاً"
+    solution: 2
+    explanation: "نحتاج التصفية لاختيار الأرقام الموجبة، ثم الحساب لإيجاد المتوسط."
+
+  - type: "markdown"
+    content: |
+      ## مرجعك السريع 📋
+
+      **الأنماط الخمسة الأساسية:**
+
+      🔄 **التكرار والعرض**: `for item in list: print(item)`
+
+      🔍 **البحث والإيجاد**: `if target in list` أو استخدام حلقة مع `break`
+
+      🎯 **التصفية**: قائمة فارغة + شرط + `append()`
+
+      🔄 **التحويل**: تطبيق عملية على كل عنصر → قائمة جديدة
+
+      🧮 **الحساب**: متغير مساعد + تجميع في حلقة
+
+      **نصيحة ذهبية:** اختر النمط حسب هدفك:
+      - تريد عرض؟ → التكرار والعرض
+      - تريد إيجاد؟ → البحث  
+      - تريد بعض العناصر؟ → التصفية
+      - تريد تغيير كل العناصر؟ → التحويل
+      - تريد رقم واحد؟ → الحساب
+
+  - type: "markdown"
+    content: |
+      ## ممتاز! أتقنت الأنماط الأساسية 🎉
+
+      هذه الأنماط هي **أدواتك السحرية** في البرمجة. كلما تدربت عليها أكثر، أصبحت أسرع في حل المشاكل.
+
+      **في الدرس القادم:** ستطبق هذه الأنماط في تحدي شامل يدمج كل ما تعلمته!
+
+      **تذكر:** المبرمج الماهر لا يحفظ الأكواد، بل يفهم الأنماط ويطبقها حسب الحاجة. 🧠✨

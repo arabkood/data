@@ -1,0 +1,13 @@
+type: "quiz"
+question: "ماذا سيكون محتوى القائمة بعد تنفيذ هذا الكود؟"
+code: |
+  numbers = [1, 2, 3]
+  numbers.append(4)
+  numbers.append(5)
+lang: python
+options:
+  - "[1, 2, 3]"
+  - "[1, 2, 3, 4]"
+  - "[1, 2, 3, 4, 5]"
+solution: 2
+explanation: "كل استدعاء لـ `.append()` يضيف عنصراً واحداً في نهاية القائمة."

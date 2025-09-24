@@ -1,0 +1,9 @@
+type: "order"
+lang: "python"
+question: "رتب هذا الكود للحصول على أول 3 عناصر من قائمة الدرجات وطباعة متوسطها:"
+code:
+  - "grades = [85, 90, 76, 88, 92, 94, 80]"
+  - "first_three = grades[:3]"
+  - "average = sum(first_three) / len(first_three)"
+  - "print(f'متوسط أول 3 درجات: {average}')"
+explanation: "نحصل أولاً على أول 3 عناصر، ثم نحسب متوسطها، وأخيراً نطبعه."

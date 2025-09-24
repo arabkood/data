@@ -1,0 +1,22 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لإدارة قائمة الطلاب:"
+code: |
+  students = ["سارة", "خالد"]
+
+  # أضف طالب جديد
+  students.@@INPUT@@("نور")
+
+  # احذف آخر طالب
+  last_student = students.@@INPUT@@()
+
+  # احذف "سارة" من القائمة
+  students.@@INPUT@@("سارة")
+
+  print(f"الطالب الذي غادر: {last_student}")
+  print(f"الطلاب المتبقون: {students}")
+solution:
+  - "append"
+  - "pop"
+  - "remove"
+explanation: "استخدمنا `.append()` للإضافة، `.pop()` لحذف آخر عنصر، و `.remove()` لحذف عنصر محدد بالقيمة."

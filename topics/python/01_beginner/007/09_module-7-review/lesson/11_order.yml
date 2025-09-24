@@ -1,0 +1,11 @@
+# Step 11: Order - Nested List Access
+type: "order"
+lang: "python"
+question: "رتب الكود للوصول لعنصر محدد في قائمة متداخلة"
+code:
+  - "matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]"
+  - "# نريد الحصول على الرقم 5"
+  - "row = matrix[1]"
+  - "number = row[1]"
+  - "print(f\"الرقم هو: {number}\")"
+explanation: "في القوائم المتداخلة، نصل أولاً للصف، ثم للعنصر داخل الصف."

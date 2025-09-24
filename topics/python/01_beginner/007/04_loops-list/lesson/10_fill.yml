@@ -1,0 +1,16 @@
+# --- STEP 10: List Building Practice ---
+type: "fill"
+lang: "python"
+question: "أكمل الكود لإنشاء قائمة بأسماء الطلاب الناجحين فقط:"
+code: "students = [\"أحمد\", \"فاطمة\", \"محمد\", \"زينب\", \"علي\"]\ngrades = [85, 45, 92, 38, 76]\npassed_students = @@INPUT@@\n\nfor @@INPUT@@ in @@INPUT@@(@@INPUT@@(students)):\n    if @@INPUT@@[i] >= @@INPUT@@:\n        @@INPUT@@.@@INPUT@@(@@INPUT@@[i])\n        \nprint(\"الطلاب الناجحون:\", passed_students)\n"
+solution:
+  - "[]"
+  - "i"
+  - "range"
+  - "len"
+  - "grades"
+  - "60"
+  - "passed_students"
+  - "append"
+  - "students"
+explanation: "نستخدم نفس الفهرس للوصول لاسم الطالب ودرجته، ثم نضيف الاسم للقائمة الجديدة إذا كانت الدرجة ≥ 60."

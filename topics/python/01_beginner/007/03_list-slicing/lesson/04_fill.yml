@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود للحصول على أول عنصرين من القائمة:"
+code: |
+  fruits = ['apple', 'banana', 'orange', 'grape', 'kiwi']
+  first_two = fruits[@@INPUT@@]
+  print(first_two)
+solution:
+  - "0:2"
+explanation: "للحصول على أول عنصرين، نبدأ من 0 وننتهي عند 2 (غير مشمول)."
