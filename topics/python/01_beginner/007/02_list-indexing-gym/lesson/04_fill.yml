@@ -12,12 +12,7 @@ code: |
   # احصل على ثاني آخر يوم
   before_last = days[@@INPUT@@]
 
-  # احصل على أول يوم باستخدام الفهرسة السالبة
-  first_day = days[@@INPUT@@]
-
   print(last_day, before_last, first_day)
 solution:
   - "-1"
   - "-2"
-  - "-7"
-explanation: "في قائمة من 7 عناصر، -7 يشير للعنصر الأول، و -1 للأخير"

@@ -4,10 +4,10 @@ lang: "python"
 question: "أي سطر سيسبب IndexError؟"
 code: |
   scores = [100, 85, 92, 78, 95]
-  print(scores[0])     # الأول
-  print(scores[4])     # الخامس
-  print(scores[5])     # خطأ! لا يوجد عنصر سادس
-  print(scores[-1])    # الأخير
+  print(scores[0])
+  print(scores[4])
+  print(scores[5])
+  print(scores[-1])
 solution: 3
 hint: "القائمة تحتوي 5 عناصر (فهارس 0-4)"
 expectedOutput: "طباعة العناصر"

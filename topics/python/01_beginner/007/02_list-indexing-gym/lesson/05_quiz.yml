@@ -1,15 +1,14 @@
-# Step 5: Mixed indexing challenge
 type: "quiz"
-question: "ما الناتج من هذا الكود؟"
+question: "ما قيمة المتغير result؟"
 code: |
-  grades = [85, 92, 78, 95, 88, 91]
-  result = grades[1] + grades[-2]
+  numbers = [10, 20, 30, 40, 50, 60]
+  result = numbers[1] == numbers[-2]
   print(result)
 lang: python
 options:
-  - "177"
-  - "180"
-  - "183"
-  - "186"
+  - "True"
+  - "False"
+  - "20"
+  - "50"
 solution: 2
-explanation: "grades[1] = 92 (العنصر الثاني) و grades[-2] = 88 (ثاني آخر عنصر). المجموع = 92 + 88 = 180"
+explanation: "numbers[1] = 20 و numbers[-2] = 50. المقارنة 20 == 50 تعطي False"

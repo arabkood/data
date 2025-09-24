@@ -4,7 +4,7 @@ lang: "python"
 question: |
   أكمل الكود للوصول للعناصر المطلوبة:
 code: |
-  colors = ["أحمر", "أزرق", "أخضر", "أصفر", "بنفسجي"]
+  colors = ["Red", "Blue", "Green", "Yellow", "Purple"]
 
   # احصل على اللون الأول
   first = colors[@@INPUT@@]

@@ -1,0 +1,193 @@
+---
+item_id: "m7-list-slicing"
+type: "lesson"
+title: "أساسيات تقطيع القوائم"
+base_xp: 850
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      تذكر كيف تعلمت الحصول على عنصر واحد من القائمة باستخدام الفهرسة:
+
+      ```python
+      numbers = [10, 20, 30, 40, 50]
+      print(numbers[0])  # 10
+      print(numbers[2])  # 30
+      ```
+
+      ولكن ماذا لو كنت تريد الحصول على **عدة عناصر** في نفس الوقت؟ 
+
+      على سبيل المثال، ماذا لو كنت تريد أول 3 أرقام فقط؟ أو آخر عنصرين؟
+
+  - type: "markdown"
+    content: |
+      ## الحل: تقطيع القوائم! 🔪
+
+      **تقطيع القوائم** (List Slicing) يسمح لك بالحصول على **جزء من القائمة** بدلاً من عنصر واحد فقط.
+
+      ```python
+      numbers = [10, 20, 30, 40, 50]
+      first_three = numbers[0:3]
+      print(first_three)  # [10, 20, 30]
+      ```
+
+      لاحظ الصيغة: `قائمة[البداية:النهاية]`
+      
+      **مهم:** النهاية **غير مشمولة**! `[0:3]` يأخذ العناصر في المواضع 0 و 1 و 2 (لا يشمل 3).
+
+  - type: "quiz"
+    question: "إذا كان لدينا `colors = ['red', 'blue', 'green', 'yellow']`، فماذا ستطبع `colors[1:3]`؟"
+    options:
+      - "['red', 'blue']"
+      - "['blue', 'green']"
+      - "['blue', 'green', 'yellow']"
+    solution: 1
+    explanation: "تقطيع [1:3] يأخذ العناصر في المواضع 1 و 2 (النهاية غير مشمولة)، وهي 'blue' و 'green'."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود للحصول على أول عنصرين من القائمة:"
+    code: |
+      fruits = ['apple', 'banana', 'orange', 'grape', 'kiwi']
+      first_two = fruits[@@INPUT@@]
+      print(first_two)
+    solution:
+      - "0:2"
+    explanation: "للحصول على أول عنصرين، نبدأ من 0 وننتهي عند 2 (غير مشمول)."
+
+  - type: "fill"
+    lang: "python"
+    question: "احصل على العناصر من الموضع 2 حتى 4:"
+    code: |
+      animals = ['cat', 'dog', 'bird', 'fish', 'rabbit', 'mouse']
+      middle = animals[@@INPUT@@]
+      print(middle)
+    solution:
+      - "2:5"
+    explanation: "للحصول على العناصر في المواضع 2 و 3 و 4، نستخدم [2:5] لأن النهاية غير مشمولة."
+
+  - type: "markdown"
+    content: |
+      ## الاختصارات المفيدة! ✨
+
+      Python يوفر اختصارات رائعة لحالات شائعة:
+
+      ```python
+      numbers = [10, 20, 30, 40, 50]
+      
+      # من البداية حتى موضع معين
+      first_three = numbers[:3]  # [10, 20, 30]
+      
+      # من موضع معين حتى النهاية
+      from_second = numbers[1:]  # [20, 30, 40, 50]
+      
+      # كامل القائمة (نسخة)
+      all_copy = numbers[:]  # [10, 20, 30, 40, 50]
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "احصل على آخر 3 عناصر باستخدام الاختصار:"
+    code: |
+      scores = [85, 90, 76, 88, 92, 94, 80]
+      last_three = scores[@@INPUT@@]
+      print(last_three)
+    solution:
+      - "-3:"
+    explanation: "للحصول على آخر 3 عناصر، نبدأ من -3 (العنصر الثالث من النهاية) ونذهب حتى النهاية."
+
+  - type: "fill"
+    lang: "python"
+    question: "احصل على أول 4 عناصر باستخدام الاختصار:"
+    code: |
+      cities = ['Cairo', 'Dubai', 'Riyadh', 'Amman', 'Baghdad', 'Tunis']
+      first_four = cities[@@INPUT@@]
+      print(first_four)
+    solution:
+      - ":4"
+    explanation: "للحصول على أول 4 عناصر، نترك البداية فارغة ونضع :4."
+
+  - type: "bug"
+    lang: "python"
+    question: "اعثر على الخطأ في هذا الكود:"
+    code: |
+      letters = ['a', 'b', 'c', 'd', 'e']
+      middle_part = letters[1,3]
+      print(middle_part)
+    solution: 1
+    explanation: "الخطأ هو استخدام الفاصلة (,) بدلاً من النقطتين (:). الصيغة الصحيحة هي letters[1:3]."
+    hint: "انتبه لرمز التقطيع المستخدم"
+
+  - type: "markdown"
+    content: |
+      ## الخطوة الثالثة: التقطيع بخطوات! 🏃‍♂️
+
+      يمكنك أيضاً تحديد **حجم الخطوة** عند التقطيع:
+
+      ```python
+      numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+      
+      # كل عنصر ثاني، بدءاً من الموضع 0
+      every_second = numbers[0:8:2]  # [0, 2, 4, 6]
+      
+      # كل عنصر ثالث
+      every_third = numbers[::3]     # [0, 3, 6, 9]
+      ```
+
+      الصيغة الكاملة: `قائمة[البداية:النهاية:الخطوة]`
+
+  - type: "fill"
+    lang: "python"
+    question: "احصل على الأرقام الزوجية فقط (كل عنصر ثاني) من هذه القائمة:"
+    code: |
+      numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      evens = numbers[@@INPUT@@]
+      print(evens)
+    solution:
+      - "1::2"
+    explanation: "نبدأ من الموضع 1 (الرقم 2) ونأخذ كل عنصر ثاني، فنحصل على الأرقام الزوجية."
+
+  - type: "fill"
+    lang: "python"
+    question: "احصل على كل عنصر ثالث من القائمة:"
+    code: |
+      alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+      every_third = alphabet[@@INPUT@@]
+      print(every_third)
+    solution:
+      - "::3"
+    explanation: "نترك البداية والنهاية فارغتين، ونضع 3 كحجم الخطوة للحصول على كل عنصر ثالث."
+
+  - type: "quiz"
+    question: "إذا كان `data = [10, 20, 30, 40, 50, 60]`، فماذا ستطبع `data[1:5:2]`؟"
+    options:
+      - "[20, 40]"
+      - "[20, 30, 40]"
+      - "[10, 30, 50]"
+    solution: 0
+    explanation: "نبدأ من الموضع 1 (20)، ننتهي قبل الموضع 5، ونأخذ كل عنصر ثاني، فنحصل على [20, 40]."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب هذا الكود للحصول على أول 3 عناصر من قائمة الدرجات وطباعة متوسطها:"
+    code:
+      - "grades = [85, 90, 76, 88, 92, 94, 80]"
+      - "first_three = grades[:3]"
+      - "average = sum(first_three) / len(first_three)"
+      - "print(f'متوسط أول 3 درجات: {average}')"
+    explanation: "نحصل أولاً على أول 3 عناصر، ثم نحسب متوسطها، وأخيراً نطبعه."
+
+  - type: "markdown"
+    content: |
+      ## 🎯 ممتاز! لقد تعلمت تقطيع القوائم
+
+      الآن تعرف كيفية:
+      
+      ✅ الحصول على جزء من القائمة باستخدام `[start:end]`
+      ✅ استخدام الاختصارات مثل `[:3]` و `[2:]`
+      ✅ التقطيع بخطوات محددة `[start:end:step]`
+      ✅ تجنب الأخطاء الشائعة في التقطيع
+      
+      **في الدرس القادم:** ستتعلم كيفية دمج التقطيع مع الحلقات لإنشاء برامج أكثر قوة! 🚀

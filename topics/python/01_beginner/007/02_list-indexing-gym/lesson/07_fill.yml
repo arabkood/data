@@ -4,13 +4,13 @@ lang: "python"
 question: |
   أكمل الكود لطباعة العناصر المطلوبة:
 code: |
-  temperatures = [22, 24, 19, 26, 28, 23, 21, 25]
+  temp = [22, 24, 19, 26, 28, 23, 21, 25]
 
   # احصل على أول 3 درجات حرارة
-  print(temperatures[@@INPUT@@], temperatures[@@INPUT@@], temperatures[@@INPUT@@])
+  print(temp[@@INPUT@@], temp[@@INPUT@@], temp[@@INPUT@@])
 
   # احصل على آخر 3 درجات حرارة
-  print(temperatures[@@INPUT@@], temperatures[@@INPUT@@], temperatures[@@INPUT@@])
+  print(temp[@@INPUT@@], temp[@@INPUT@@], temp[@@INPUT@@])
 solution:
   - "0"
   - "1"
