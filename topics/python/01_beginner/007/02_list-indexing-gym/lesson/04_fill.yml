@@ -12,7 +12,7 @@ code: |
   # احصل على ثاني آخر يوم
   before_last = days[@@INPUT@@]
 
-  print(last_day, before_last, first_day)
+  print(last_day, before_last)
 solution:
   - "-1"
   - "-2"
