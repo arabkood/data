@@ -8,19 +8,16 @@ code: |
 
   # احسب فهرس العنصر الأوسط
   middle_index = len(products) // @@INPUT@@
-
   # احصل على العنصر الأوسط
   middle_item = products[@@INPUT@@]
 
   # احصل على العنصر قبل الأخير باستخدام len()
-  before_last_index = len(products) - @@INPUT@@
-  before_last_item = products[@@INPUT@@]
+  last_index = @@INPUT@@
+  last_item = products[last_index]
 
-  print(f"العنصر الأوسط: {middle_item}")
-  print(f"قبل الأخير: {before_last_item}")
+  print(f"الأوسط: {middle_item}")
+  print(f"الأخير: {last_item}")
 solution:
   - "2"
   - "middle_index"
-  - "2"
-  - "before_last_index"
-explanation: "القسمة على 2 تعطينا الفهرس الأوسط، وطرح 2 من الطول يعطينا فهرس العنصر قبل الأخير"
+  - "len(products)"
