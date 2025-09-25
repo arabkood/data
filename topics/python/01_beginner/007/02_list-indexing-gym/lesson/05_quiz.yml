@@ -10,5 +10,5 @@ options:
   - "False"
   - "20"
   - "50"
-solution: 2
+solution: 1
 explanation: "numbers[1] = 20 و numbers[-2] = 50. المقارنة 20 == 50 تعطي False"
