@@ -1,7 +1,0 @@
-title: "المحقق console.log: كشف أسرار الكود"
-blurb: "تعلم كيف تستخدم `console.log` كأداة تحقيق قوية للعثور على الأخطاء وتتبع قيم المتغيرات في كودك."
-premium_only: false
-difficulty: "easy"
-base_xp: 600
-type: "lesson"
-slug: "js-detective-console-log"

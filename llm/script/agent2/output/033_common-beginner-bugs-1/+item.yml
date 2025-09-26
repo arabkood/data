@@ -1,7 +1,0 @@
-title: "صيد الأخطاء البرمجية: دليلك الأول"
-blurb: "تعلّم كيفية اكتشاف وتصحيح الأخطاء الشائعة في جافاسكريبت، مثل أخطاء الصيغة (Syntax Errors) وأخطاء الإسناد (Reference Errors)، لتصبح مبرمجًا أكثر ثقة."
-premium_only: false
-difficulty: "easy"
-base_xp: 1200
-type: "lesson"
-slug: "common-beginner-bugs"

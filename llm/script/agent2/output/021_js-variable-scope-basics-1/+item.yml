@@ -1,7 +1,0 @@
-title: "من يرى ماذا: مقدمة إلى نطاق المتغيرات (Scope)"
-blurb: "تعلم كيف تتحكم في رؤية المتغيرات في الكود الخاص بك، وتجنب الأخطاء الشائعة بفهم النطاق العام والمحلي."
-premium_only: false
-difficulty: "easy"
-base_xp: 1200
-type: "lesson"
-slug: "js-variable-scope-basics"

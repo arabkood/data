@@ -1,7 +1,0 @@
-title: "مصانع الدوال: بناء أدوات برمجية قابلة لإعادة الاستخدام"
-blurb: "تعلم كيف تنشئ دوالاً تقوم بإنتاج دوال أخرى (مصانع الدوال) لكتابة كود أكثر فعالية وتجنب التكرار باستخدام مفهوم الإغلاق (Closure)."
-premium_only: false
-difficulty: "medium"
-base_xp: 1800
-type: "lesson"
-slug: "function-factories-reusable-utilities"

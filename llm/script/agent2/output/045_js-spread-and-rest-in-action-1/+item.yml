@@ -1,7 +1,0 @@
-title: "قوة التفريق والراحة: Spread & Rest"
-blurb: "تعلم كيفية استخدام عاملي التفريق (...spread) والراحة (...rest) لدمج المصفوفات، وتمرير الوسائط، وتجميعها بمرونة وكفاءة في جافاسكريبت."
-premium_only: false
-difficulty: "medium"
-base_xp: 1500
-type: "lesson"
-slug: "js-spread-and-rest-in-action"

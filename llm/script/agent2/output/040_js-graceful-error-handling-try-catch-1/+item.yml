@@ -1,7 +1,0 @@
-title: "التعامل مع الأخطاء بأناقة: try/catch"
-blurb: "تعلم كيف تحمي برامجك من التوقف المفاجئ عند حدوث أخطاء، باستخدام كتلتي try و catch في جافاسكريبت للتعامل مع المشاكل بأمان."
-premium_only: false
-difficulty: "medium"
-base_xp: 1200
-type: "lesson"
-slug: "js-graceful-error-handling-try-catch"

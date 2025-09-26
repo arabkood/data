@@ -1,6 +1,0 @@
-title: "مفترق الطرق: التعامل مع سيناريوهات متعددة"
-blurb: "تجاوز خيارات نعم/لا البسيطة. تعلّم كيفية التعامل مع نتائج متعددة باستخدام `else if` لإنشاء قرارات أكثر تعقيدًا في شفرتك."
-difficulty: "easy"
-base_xp: 300
-type: "lesson"
-slug: "handling-multiple-scenarios-with-else-if"

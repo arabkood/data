@@ -1,7 +1,0 @@
-title: "محاكاة المهام المؤجلة: التحكم في توقيت الكود"
-blurb: "تعلم كيفية استخدام الدالة `:setTimeout` لتأخير تنفيذ أجزاء من الكود، وهي خطوتك الأولى نحو البرمجة غير المتزامنة في `:javascript`."
-premium_only: false
-difficulty: "easy"
-base_xp: 1200
-type: "lesson"
-slug: "simulating-delayed-tasks-in-js"

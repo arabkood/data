@@ -1,7 +1,0 @@
-title: "الكلوجر (Closures): ذاكرة الدوال الخفية"
-blurb: "اكتشف كيف تتذكر الدوال بيئتها الخارجية (lexical scope) حتى بعد انتهاء تنفيذها. تعلم أحد أقوى مفاهيم JavaScript لبناء دوال ذكية وآمنة."
-premium_only: false
-difficulty: "medium"
-base_xp: 1800
-type: "lesson"
-slug: "js-closures-deep-dive"
