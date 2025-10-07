@@ -1,0 +1,19 @@
+id: b9589257-3a26-42fd-ab9f-807f1aeea8d6
+topic_id: 230e5a6a-860f-4ff2-9a6b-57180923d12f
+slug: practice@python
+created_at: 2025-10-07T15:03:01.529Z
+updated_at: 2025-10-07T15:03:01.530Z
+title: تمارين بايثون
+blurb: >-
+  هربت من دوامة الشروحات؟ حان وقت التطبيق الحقيقي! 100 تحدي عملي مصمم خصيصاً
+  لتحويلك من 'أفهم الكود' إلى 'أكتب الكود بنفسي'. تدرج ذكي من السهل للصعب، بدون
+  محاضرات، فقط ممارسة مكثفة.
+logo: public://images/logos/practice@python.png
+premium_only: false
+coming_soon: false
+position: 2
+difficulty: intermediate
+tags:
+  - python
+  - practice
+  - problem-solving
