@@ -1,0 +1,12 @@
+id: eeafc5a0-4006-455d-97f8-41810b32f2b3
+module_id: 18282fb0-f960-4f75-943a-5b25850ee43d
+slug: make-negative
+position: 3
+created_at: 2025-10-09T23:53:17.321Z
+updated_at: 2025-10-09T23:53:17.321Z
+type: code
+title: إرجاع الرقم السالب
+difficulty: easy
+premium_only: false
+base_xp: 200
+s3_path: python/02_practice/001/03_make-negative

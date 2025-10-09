@@ -1,0 +1,25 @@
+meta: 
+  type: code # always code
+  slug: sum-of-numbers # unique short slug in english
+  title: مجموع الأرقام # arabic title
+  difficulty: easy # medium, medium, hard
+  base_xp: 200 # between 200 and 1500
+  premium_only: true
+
+docs: 
+  instructions: |
+    markdown instructions here in arabic, succint and no title
+
+  hint: |
+    markdown hints here in arabic, succint and no titles
+
+
+files:
+  starter_code: |
+    starter code here
+
+  solution: |
+    solution here
+
+  tests: |
+    python unit tests here, the file is located in same folder as solution, and you can import it from solution.py
