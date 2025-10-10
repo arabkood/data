@@ -9,3 +9,4 @@ difficulty: easy
 premium_only: true
 base_xp: 300
 s3_path: python/02_practice/001/06_find-maximum
+type: code
