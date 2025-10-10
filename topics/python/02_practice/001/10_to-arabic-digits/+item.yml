@@ -1,0 +1,12 @@
+id: 6a699735-5d60-4fc9-9c78-027fad6b355a
+module_id: 18282fb0-f960-4f75-943a-5b25850ee43d
+slug: to-arabic-digits
+position: 10
+created_at: 2025-10-10T13:12:01.278Z
+updated_at: 2025-10-10T13:12:01.278Z
+type: code
+title: تحويل الأرقام إلى عربية
+difficulty: medium
+premium_only: true
+base_xp: 404
+s3_path: python/02_practice/001/10_to-arabic-digits

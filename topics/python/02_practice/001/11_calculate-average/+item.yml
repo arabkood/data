@@ -1,0 +1,12 @@
+id: 86a5f323-2a24-4cb6-9767-1a7c51bee2fb
+module_id: 18282fb0-f960-4f75-943a-5b25850ee43d
+slug: calculate-average
+position: 11
+created_at: 2025-10-10T13:12:01.285Z
+updated_at: 2025-10-10T13:12:01.285Z
+type: code
+title: حساب المتوسط
+difficulty: medium
+premium_only: true
+base_xp: 300
+s3_path: python/02_practice/001/11_calculate-average

@@ -36,23 +36,21 @@
 2. Even or Odd ⭐
 3. Return Negative ⭐
 4. Sum of positive ⭐
-5. Count occurrences in list ⭐
+5. Does list have X ⭐
 6. Find maximum in list ⭐
-7. Find smallest int ⭐
-8. Reversed String ⭐
-9. Number to string ⭐
-10. String repeat ⭐
-11. Get list last item ⭐
-12. To arabic digits ⭐⭐
-13. Calculate average ⭐⭐
-14. Longest word ⭐⭐
-15. String to list (split by space) ⭐⭐
-16. List filter only numbers ⭐⭐
-17. Abbreviate ⭐⭐
-18. String to hacker language ⭐⭐
-19. Calculator (2 numbers + operation) ⭐⭐
-20. FizzBuzz ⭐⭐⭐
-21. Credit card mask (keep last 4) ⭐⭐⭐ **[CAPSTONE]**
+7. Count occurrences in list ⭐
+8. String repeat ⭐
+9. Reversed String ⭐
+10. To arabic digits ⭐⭐
+11. Calculate average ⭐⭐
+12. Longest word ⭐⭐
+13. List filter only numbers ⭐⭐
+
+14. Abbreviate ⭐⭐
+15. String to hacker language ⭐⭐
+16. Calculator (2 numbers + operation) ⭐⭐
+17. FizzBuzz ⭐⭐⭐
+18. Credit card mask (keep last 4) ⭐⭐⭐ **[CAPSTONE]**
 
 ---
 
