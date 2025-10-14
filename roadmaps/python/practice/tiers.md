@@ -32,8 +32,8 @@
 
 ### Challenges
 
-1. Hello, {user}! ⭐
-2. Even or Odd ⭐
+1. Hello, {user}! ⭐ ✅
+2. Even or Odd ⭐ ✅
 3. Return Negative ⭐
 4. Sum of positive ⭐
 5. Does list have X ⭐

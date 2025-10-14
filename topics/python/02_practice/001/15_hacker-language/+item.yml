@@ -1,0 +1,12 @@
+id: d4f0d041-700e-4227-a1cc-4d3ce9c93709
+module_id: 18282fb0-f960-4f75-943a-5b25850ee43d
+slug: hacker-language
+position: 15
+created_at: 2025-10-14T20:55:20.051Z
+updated_at: 2025-10-14T20:55:20.051Z
+type: code
+title: لغة الهاكرز
+difficulty: medium
+premium_only: true
+base_xp: 300
+s3_path: python/02_practice/001/15_hacker-language
