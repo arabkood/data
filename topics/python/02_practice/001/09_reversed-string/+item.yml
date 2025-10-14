@@ -7,6 +7,6 @@ updated_at: 2025-10-10T13:12:01.278Z
 type: code
 title: عكس النص
 difficulty: easy
-premium_only: true
+premium_only: false
 base_xp: 300
 s3_path: python/02_practice/001/09_reversed-string

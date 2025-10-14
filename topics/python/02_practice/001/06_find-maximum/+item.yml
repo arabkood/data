@@ -6,7 +6,7 @@ created_at: 2025-10-10T13:12:01.275Z
 updated_at: 2025-10-10T13:12:01.275Z
 title: إيجاد أكبر عنصر في القائمة
 difficulty: easy
-premium_only: true
+premium_only: false
 base_xp: 300
 s3_path: python/02_practice/001/06_find-maximum
 type: code

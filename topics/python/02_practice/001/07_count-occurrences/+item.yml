@@ -7,6 +7,6 @@ updated_at: 2025-10-10T13:12:01.278Z
 type: code
 title: عد التكرارات في القائمة
 difficulty: easy
-premium_only: true
+premium_only: false
 base_xp: 250
 s3_path: python/02_practice/001/07_count-occurrences
