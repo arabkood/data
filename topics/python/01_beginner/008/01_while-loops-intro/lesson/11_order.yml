@@ -1,0 +1,10 @@
+type: "order"
+lang: "python"
+question: "رتب الكود لطباعة 'العد التنازلي!' ثم الأرقام من 5 إلى 1:"
+code:
+  - "countdown = 5"
+  - "print('العد التنازلي!')"
+  - "while countdown > 0:"
+  - "    print(countdown)"
+  - "    countdown = countdown - 1"
+explanation: "نطبع الرسالة أولاً، ثم نبدأ الحلقة التي تطبع الأرقام وتنقصها حتى تصل إلى 0."

@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لعد الأرقام الموجبة:"
+code: |
+  numbers = [-5, 3, -2, 8, 0, 12]
+  @@INPUT@@ = 0
+
+  for num in numbers:
+      if num > 0:
+          count = count + 1
+
+  print(f"عدد الأرقام الموجبة: {count}")
+solution:
+  - "count"
+explanation: "يجب تهيئة count = 0 قبل الحلقة لنتمكن من زيادته."

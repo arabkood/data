@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة الحروف من قائمة مع تخطي الأرقام:"
+code: |
+  items = ['a', '1', 'b', '2', 'c', '3']
+
+  for item in items:
+      if item@@INPUT@@():
+          @@INPUT@@
+      print(item)
+solution:
+  - ".isdigit"
+  - "continue"
+explanation: "نستخدم .isdigit() للتحقق من الأرقام، ثم continue لتخطيها."

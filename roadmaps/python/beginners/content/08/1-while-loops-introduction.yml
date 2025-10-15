@@ -1,0 +1,214 @@
+---
+item_id: "m8-item-1"
+type: "lesson"
+title: "مقدمة إلى حلقات While"
+base_xp: 800
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      حتى الآن، استخدمنا حلقات `for` لتكرار العمليات. لكن ماذا لو لم نعرف بالضبط **كم مرة** نريد التكرار؟
+
+      تخيل أنك تلعب لعبة تخمين الأرقام. ستستمر في المحاولة حتى تخمن الرقم الصحيح، لكنك لا تعرف كم محاولة ستحتاج!
+
+      هنا تأتي حلقات `while` للإنقاذ!
+
+  - type: "markdown"
+    content: |
+      حلقة `while` تستمر في التنفيذ **طالما** الشرط صحيح.
+
+      إليك المفهوم الأساسي:
+
+      ```python
+      while condition:
+          # افعل شيئاً
+      ```
+
+      الحلقة ستستمر في تنفيذ الكود بداخلها حتى يصبح `condition` خاطئاً.
+
+  - type: "markdown"
+    content: |
+      لنرى مثالاً بسيطاً:
+
+      ```python
+      count = 1
+
+      while count <= 3:
+          print(f"العد: {count}")
+          count = count + 1
+
+      print("انتهى!")
+      ```
+
+      **ماذا يحدث؟**
+      1. نبدأ بـ `count = 1`
+      2. نتحقق: هل `count <= 3`؟ نعم! → ننفذ الكود
+      3. نطبع "العد: 1" ثم نزيد `count` إلى 2
+      4. نتحقق مجدداً: هل `2 <= 3`؟ نعم! → ننفذ مرة أخرى
+      5. نستمر حتى يصبح `count = 4`، عندها `4 <= 3` يصبح خاطئاً
+      6. نخرج من الحلقة ونطبع "انتهى!"
+
+  - type: "quiz"
+    question: "كم مرة ستطبع هذه الحلقة كلمة 'مرحبا'؟"
+    code: |
+      x = 5
+
+      while x > 2:
+          print("مرحبا")
+          x = x - 1
+    lang: "python"
+    options:
+      - "مرتين"
+      - "ثلاث مرات"
+      - "أربع مرات"
+      - "خمس مرات"
+    solution: 1
+    explanation: "تبدأ x بـ 5. الحلقة تعمل عندما x > 2، أي عندما x هي 5، 4، 3. بمجرد أن تصبح x = 2، الشرط يصبح خاطئاً وتتوقف الحلقة. إذن: 3 مرات."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لطباعة الأرقام من 1 إلى 5 باستخدام while:"
+    code: |
+      number = 1
+
+      @@INPUT@@ number <= 5:
+          print(number)
+          number = @@INPUT@@
+    solution:
+      - "while"
+      - "/^number\\s*\\+\\s*1$/"
+    explanation: "نستخدم while للتحقق من الشرط، ثم نزيد number بمقدار 1 في كل دورة."
+
+  - type: "markdown"
+    content: |
+      الآن دعنا نرى الفرق الرئيسي بين `for` و `while`:
+
+      **استخدم for عندما:**
+      - تعرف بالضبط كم مرة تريد التكرار
+      - تريد المرور عبر قائمة أو نطاق محدد
+
+      **استخدم while عندما:**
+      - لا تعرف عدد المرات بالضبط
+      - تريد الاستمرار حتى يتحقق شرط معين
+
+  - type: "fill"
+    lang: "python"
+    question: "اكتب حلقة while تستمر حتى يصبح المجموع أكبر من أو يساوي 100:"
+    code: |
+      total = 0
+
+      @@INPUT@@ total @@INPUT@@ 100:
+          total = total + 15
+
+      print(f"المجموع النهائي: {total}")
+    solution:
+      - "while"
+      - "<"
+    explanation: "نريد الاستمرار طالما total أصغر من 100، لذا نستخدم while total < 100."
+
+  - type: "markdown"
+    content: |
+      **تحذير مهم:** كن حذراً من الحلقات اللانهائية!
+
+      ```python
+      # ⚠️ لا تجرب هذا!
+      x = 1
+      while x < 10:
+          print(x)
+          # نسينا زيادة x!
+      ```
+
+      هذا الكود سيستمر للأبد لأن `x` لن تتغير أبداً، و `x < 10` سيظل صحيحاً دائماً!
+
+  - type: "quiz"
+    question: "أي من الحلقات التالية ستسبب حلقة لانهائية؟"
+    options:
+      - |
+        n = 5
+        while n > 0:
+            print(n)
+            n = n - 1
+      - |
+        n = 0
+        while n < 5:
+            print(n)
+            n = n + 1
+      - |
+        n = 10
+        while n > 5:
+            print(n)
+            n = n + 1
+      - |
+        n = 1
+        while n <= 3:
+            print(n)
+            n = n + 1
+    solution: 2
+    explanation: "الخيار الثالث سيستمر للأبد! n تبدأ بـ 10 وتزداد، لكن الشرط n > 5 سيظل صحيحاً دائماً لأن n تكبر وتكبر."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل حلقة while لطباعة كل الأرقام الزوجية من 2 إلى 10:"
+    code: |
+      num = 2
+
+      while num @@INPUT@@ 10:
+          print(num)
+          num = num @@INPUT@@
+    solution:
+      - "<="
+      - "/^\\+\\s*2$/"
+    explanation: "نريد تضمين 10، لذا نستخدم <=. ونزيد بمقدار 2 لنحصل على الأرقام الزوجية فقط."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لطباعة 'العد التنازلي!' ثم الأرقام من 5 إلى 1:"
+    code:
+      - "countdown = 5"
+      - "print('العد التنازلي!')"
+      - "while countdown > 0:"
+      - "    print(countdown)"
+      - "    countdown = countdown - 1"
+    explanation: "نطبع الرسالة أولاً، ثم نبدأ الحلقة التي تطبع الأرقام وتنقصها حتى تصل إلى 0."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لمضاعفة الرقم حتى يصبح أكبر من 1000:"
+    code: |
+      value = 1
+
+      while value @@INPUT@@:
+          value = value @@INPUT@@
+
+      print(f"القيمة النهائية: {value}")
+    solution:
+      - "/^<=?\\s*1000$/"
+      - "/^\\*\\s*2$/"
+    explanation: "نستمر طالما value أصغر من أو يساوي 1000، ونضاعف القيمة في كل دورة."
+
+  - type: "bug"
+    lang: "python"
+    question: "هذا الكود يجب أن يطبع الأرقام من 1 إلى 5، لكن هناك خطأ. أين المشكلة؟"
+    code: |
+      counter = 0
+      while counter < 5:
+          counter = counter + 1
+          print(counter)
+    solution: 0
+    hint: "انظر إلى القيمة الابتدائية لـ counter"
+    explanation: "counter يبدأ من 0، لكننا نزيده قبل الطباعة، لذا سيطبع 1-5 بدلاً من 0-4. إذا أردنا 1-5، يجب أن يبدأ من 1، أو نطبع قبل الزيادة."
+    expectedOutput: "1, 2, 3, 4, 5"
+    actualOutput: "1, 2, 3, 4, 5"
+
+  - type: "markdown"
+    content: |
+      رائع! الآن تفهم أساسيات حلقات `while`.
+
+      **تذكر:**
+      - `while` تعمل طالما الشرط صحيح
+      - تأكد دائماً أن الشرط سيصبح خاطئاً في نهاية المطاف
+      - استخدم `while` عندما لا تعرف عدد التكرارات مسبقاً
+
+      في الدروس القادمة، سنتعلم كيف نتحكم بشكل أفضل في سلوك الحلقات!

@@ -1,0 +1,14 @@
+type: "quiz"
+question: "ما قيمة x بعد هذا الكود؟"
+code: |
+  for x in range(3, 8):
+      pass
+  print(x)
+lang: "python"
+options:
+  - "3"
+  - "8"
+  - "7"
+  - "خطأ - x غير معرف"
+solution: 2
+explanation: "x تحتفظ بآخر قيمة من الحلقة، وهي 7 (آخر رقم في range(3, 8))."

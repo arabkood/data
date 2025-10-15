@@ -1,0 +1,333 @@
+---
+item_id: "m8-item-3"
+type: "lesson"
+title: "ورشة الحلقات المتداخلة"
+base_xp: 1000
+difficulty: "hard"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      تخيل أن لديك صندوق من الأدراج، وكل درج يحتوي على صناديق صغيرة.
+
+      للوصول لكل صندوق صغير، تحتاج إلى:
+      1. فتح كل درج (حلقة خارجية)
+      2. داخل كل درج، فتح كل صندوق صغير (حلقة داخلية)
+
+      هذا بالضبط ما تفعله **الحلقات المتداخلة** (Nested Loops)!
+
+  - type: "markdown"
+    content: |
+      إليك أبسط مثال لحلقات متداخلة:
+
+      ```python
+      for i in range(1, 4):
+          for j in range(1, 3):
+              print(f"i={i}, j={j}")
+      ```
+
+      **ماذا يحدث؟**
+      - الحلقة الخارجية: i تأخذ القيم 1, 2, 3
+      - لكل قيمة من i، الحلقة الداخلية تعمل كاملة!
+      - عندما i=1، j تأخذ 1, 2
+      - عندما i=2، j تأخذ 1, 2 مرة أخرى
+      - وهكذا...
+
+      **النتيجة:** 6 أسطر (3 × 2)
+
+  - type: "quiz"
+    question: "كم مرة سيطبع هذا الكود كلمة 'مرحبا'؟"
+    code: |
+      for i in range(3):
+          for j in range(4):
+              print("مرحبا")
+    lang: "python"
+    options:
+      - "7 مرات"
+      - "12 مرة"
+      - "3 مرات"
+      - "4 مرات"
+    solution: 1
+    explanation: "الحلقة الخارجية تعمل 3 مرات، والحلقة الداخلية تعمل 4 مرات لكل دورة خارجية. المجموع: 3 × 4 = 12"
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لطباعة جدول الضرب من 1 إلى 3:"
+    code: |
+      for i in range(1, @@INPUT@@):
+          for j in @@INPUT@@(1, 4):
+              result = i @@INPUT@@ j
+              print(f"{i} × {j} = {result}")
+    solution:
+      - "4"
+      - "range"
+      - "*"
+    explanation: "نستخدم حلقتين: واحدة للعدد الأول، والثانية للعدد الثاني، ثم نضربهما."
+
+  - type: "markdown"
+    content: |
+      الحلقات المتداخلة رائعة لإنشاء **الأنماط** (Patterns)!
+
+      لنصنع مربعاً من النجوم:
+
+      ```python
+      for row in range(3):
+          for col in range(3):
+              print("*", end="")
+          print()  # سطر جديد بعد كل صف
+      ```
+
+      **النتيجة:**
+      ```
+      ***
+      ***
+      ***
+      ```
+
+      الحلقة الخارجية للصفوف، والداخلية للأعمدة!
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لرسم مستطيل من # بعرض 5 وارتفاع 3:"
+    code: |
+      for row in range(@@INPUT@@):
+          for col in range(@@INPUT@@):
+              print("#", @@INPUT@@="")
+          print()
+    solution:
+      - "3"
+      - "5"
+      - "end"
+    explanation: "3 صفوف (ارتفاع)، 5 أعمدة (عرض)، ونستخدم end='' لطباعة النجوم في نفس السطر."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لرسم مثلث من النجوم (كل صف يزيد نجمة):"
+    code:
+      - "for i in range(1, 5):"
+      - "    for j in range(i):"
+      - "        print('*', end='')"
+      - "    print()"
+    explanation: "i يحدد رقم الصف، وعدد النجوم في كل صف يساوي i، لذا نستخدم range(i) في الحلقة الداخلية."
+
+  - type: "quiz"
+    question: "ماذا سيطبع هذا الكود؟"
+    code: |
+      for i in range(1, 4):
+          for j in range(i):
+              print('X', end='')
+          print()
+    lang: "python"
+    options:
+      - |
+        XXX
+        XXX
+        XXX
+      - |
+        X
+        XX
+        XXX
+      - |
+        XXX
+        XX
+        X
+      - |
+        X
+        X
+        X
+    solution: 1
+    explanation: "عندما i=1، نطبع X واحدة. عندما i=2، نطبع XX. عندما i=3، نطبع XXX. نحصل على مثلث متزايد!"
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لطباعة جدول من 1 إلى 3 صفوف و1 إلى 4 أعمدة بهذا الشكل: صف_عمود"
+    code: |
+      for row in range(1, @@INPUT@@):
+          for col in range(1, @@INPUT@@):
+              print(f"{row}_{col}", end=" ")
+          @@INPUT@@
+    solution:
+      - "4"
+      - "5"
+      - "print()"
+    explanation: "4 صفوف، 5 أعمدة، ونستخدم print() فارغة للانتقال لسطر جديد بعد كل صف."
+
+  - type: "markdown"
+    content: |
+      الحلقات المتداخلة تعمل أيضاً مع القوائم!
+
+      تخيل قائمة من القوائم (مثل جدول):
+
+      ```python
+      matrix = [
+          [1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]
+      ]
+
+      for row in matrix:
+          for num in row:
+              print(num, end=" ")
+          print()
+      ```
+
+      نمر على كل صف، ثم على كل عنصر في الصف!
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لحساب مجموع كل الأرقام في المصفوفة:"
+    code: |
+      matrix = [[1, 2], [3, 4], [5, 6]]
+      total = 0
+
+      for row @@INPUT@@ matrix:
+          for num in @@INPUT@@:
+              total = total @@INPUT@@ num
+
+      print(f"المجموع: {total}")
+    solution:
+      - "in"
+      - "row"
+      - "+"
+    explanation: "نمر على كل صف، ثم على كل رقم في الصف، ونضيفه للمجموع الكلي."
+
+  - type: "bug"
+    lang: "python"
+    question: "هذا الكود يجب أن يطبع أزواج الأرقام، لكن هناك خطأ. أين؟"
+    code: |
+      for i in range(1, 3):
+          for j in range(1, 3):
+          print(f"({i}, {j})")
+    solution: 2
+    hint: "انظر إلى المسافة البادئة"
+    explanation: "الحلقة الداخلية يجب أن تكون ذات مسافة بادئة (indentation) صحيحة داخل الحلقة الخارجية."
+    expectedOutput: "(1,1), (1,2), (2,1), (2,2)"
+    actualOutput: "SyntaxError"
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لطباعة مثلث مقلوب (يبدأ بأكثر عدد نجوم وينقص):"
+    code: |
+      for i in range(@@INPUT@@, 0, @@INPUT@@):
+          for j in range(i):
+              print('*', end='')
+          print()
+    solution:
+      - "5"
+      - "-1"
+    explanation: "نبدأ من 5 وننزل إلى 1 بخطوات -1، فنحصل على مثلث مقلوب."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لطباعة جدول ضرب من 1 إلى 5:"
+    code:
+      - "for i in range(1, 6):"
+      - "    for j in range(1, 6):"
+      - "        print(f'{i}x{j}={i*j}', end='  ')"
+      - "    print()"
+    explanation: "الحلقة الخارجية للصفوف، والداخلية للأعمدة، نطبع النتيجة مع مسافات، ثم سطر جديد."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لإيجاد كل أزواج الأرقام من قائمتين والتي مجموعها 10:"
+    code: |
+      list1 = [1, 2, 3, 4, 5, 6]
+      list2 = [4, 5, 6, 7, 8, 9]
+
+      for num1 @@INPUT@@ list1:
+          for num2 in @@INPUT@@:
+              if num1 @@INPUT@@ num2 == 10:
+                  print(f"{num1} + {num2} = 10")
+    solution:
+      - "in"
+      - "list2"
+      - "+"
+    explanation: "نمر على كل رقم في list1، ثم كل رقم في list2، ونطبع الأزواج التي مجموعها 10."
+
+  - type: "markdown"
+    content: |
+      يمكنك استخدام `break` و `continue` مع الحلقات المتداخلة!
+
+      **تحذير:** `break` يخرج فقط من الحلقة **الداخلية**، وليس الخارجية.
+
+      ```python
+      for i in range(3):
+          for j in range(3):
+              if j == 1:
+                  break  # يخرج من حلقة j فقط
+              print(f"i={i}, j={j}")
+      ```
+
+  - type: "quiz"
+    question: "ماذا سيطبع هذا الكود؟"
+    code: |
+      for i in range(1, 3):
+          for j in range(1, 4):
+              if j == 2:
+                  break
+              print(f"{i},{j}", end=" ")
+          print()
+    lang: "python"
+    options:
+      - "1,1 2,1"
+      - "1,1 1,2 2,1 2,2"
+      - "1,1 1,2 1,3 2,1 2,2 2,3"
+      - "1,1"
+    solution: 0
+    explanation: "لكل قيمة i، الحلقة الداخلية تبدأ ولكن تنكسر عند j=2. لذا تطبع فقط عندما j=1 لكل i."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لطباعة مصفوفة 3×3 من الأرقام من 1 إلى 9:"
+    code: |
+      counter = 1
+
+      for i in range(@@INPUT@@):
+          for j in range(3):
+              print(counter, end=" ")
+              counter = counter @@INPUT@@ 1
+          print()
+    solution:
+      - "3"
+      - "+"
+    explanation: "نستخدم عداد يزيد في كل خطوة، 3 صفوف و3 أعمدة تعطينا 9 أرقام."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لطباعة نمط سلم من الأرقام:"
+    code:
+      - "for i in range(1, 5):"
+      - "    for j in range(1, i + 1):"
+      - "        print(j, end='')"
+      - "    print()"
+    explanation: "لكل صف i، نطبع الأرقام من 1 إلى i، مما يعطينا شكل سلم متزايد."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لطباعة شكل صليب (+) باستخدام النجوم في مربع 5×5:"
+    code: |
+      size = 5
+
+      for i in range(size):
+          for j in range(size):
+              if i == 2 @@INPUT@@ j == 2:
+                  print('*', end='')
+              else:
+                  print(' ', end='')
+          print()
+    solution:
+      - "or"
+    explanation: "نطبع نجمة عندما نكون في الصف الأوسط (i=2) أو العمود الأوسط (j=2)."
+
+  - type: "markdown"
+    content: |
+      رائع! الآن أصبحت خبيراً في الحلقات المتداخلة!
+
+      **نصائح مهمة:**
+      - الحلقة الداخلية تنفذ **كاملة** في كل دورة من الحلقة الخارجية
+      - عدد التكرارات الكلي = دورات الخارجية × دورات الداخلية
+      - استخدمها للأنماط، الجداول، والمصفوفات
+      - `break` يخرج من الحلقة الحالية فقط
+
+      استعد للتحدي القادم!

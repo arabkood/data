@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة شكل صليب (+) باستخدام النجوم في مربع 5×5:"
+code: |
+  size = 5
+
+  for i in range(size):
+      for j in range(size):
+          if i == 2 @@INPUT@@ j == 2:
+              print('*', end='')
+          else:
+              print(' ', end='')
+      print()
+solution:
+  - "or"
+explanation: "نطبع نجمة عندما نكون في الصف الأوسط (i=2) أو العمود الأوسط (j=2)."

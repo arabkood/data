@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أكمل حلقة while لطباعة كل الأرقام الزوجية من 2 إلى 10:"
+code: |
+  num = 2
+
+  while num @@INPUT@@ 10:
+      print(num)
+      num = num @@INPUT@@
+solution:
+  - "<="
+  - "/^\\+\\s*2$/"
+explanation: "نريد تضمين 10، لذا نستخدم <=. ونزيد بمقدار 2 لنحصل على الأرقام الزوجية فقط."

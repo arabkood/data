@@ -1,0 +1,17 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لإيجاد أكبر رقم في قائمة باستخدام حلقة:"
+code: |
+  numbers = [34, 67, 23, 89, 12, 45]
+  max_num = numbers[@@INPUT@@]
+
+  for num in numbers:
+      if num @@INPUT@@ max_num:
+          max_num = @@INPUT@@
+
+  print(f"الأكبر: {max_num}")
+solution:
+  - "0"
+  - ">"
+  - "num"
+explanation: "نهيئ max_num بأول عنصر، ثم نقارن كل عنصر ونحدث max_num عند إيجاد أكبر."

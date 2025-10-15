@@ -1,0 +1,12 @@
+id: bb1da504-2f5b-496a-8674-0f4dec2ce5d5
+module_id: 8958d50f-b5a8-4cca-8a72-1a89db539963
+slug: loop-control-gym
+position: 2
+created_at: 2025-10-15T21:37:03.901Z
+updated_at: 2025-10-15T21:37:03.901Z
+type: lesson
+title: معمل التحكم في الحلقات
+difficulty: medium
+premium_only: true
+base_xp: 900
+s3_path: python/01_beginner/008/02_loop-control-gym

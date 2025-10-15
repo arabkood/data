@@ -1,0 +1,10 @@
+type: "order"
+lang: "python"
+question: "رتب الكود لإنشاء قائمة بمربعات الأرقام من 1 إلى 5:"
+code:
+  - "squares = []"
+  - "for i in range(1, 6):"
+  - "    square = i ** 2"
+  - "    squares.append(square)"
+  - "print(squares)"
+explanation: "نبدأ بقائمة فارغة، نحسب مربع كل رقم، ونضيفه للقائمة."

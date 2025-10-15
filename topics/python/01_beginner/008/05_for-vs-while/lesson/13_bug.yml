@@ -1,0 +1,14 @@
+type: "bug"
+lang: "python"
+question: "هذا الكود يستخدم while لطباعة قائمة، لكن for أفضل هنا. كيف نحسنه؟"
+code: |
+  colors = ["أحمر", "أخضر", "أزرق"]
+  i = 0
+  while i < len(colors):
+      print(colors[i])
+      i = i + 1
+solution: 1
+hint: "فكر في طريقة أبسط للمرور على قائمة"
+explanation: "استخدام while هنا معقد بلا داعي. for color in colors: أبسط وأوضح بكثير!"
+expectedOutput: "أحمر، أخضر، أزرق"
+actualOutput: "أحمر، أخضر، أزرق"

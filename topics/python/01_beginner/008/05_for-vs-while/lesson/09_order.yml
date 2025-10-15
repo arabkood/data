@@ -1,0 +1,7 @@
+type: "order"
+lang: "python"
+question: "رتب الكود لاستخدام for للمرور على الأرقام الزوجية من 0 إلى 10:"
+code:
+  - "for i in range(0, 11, 2):"
+  - "    print(i)"
+explanation: "for مثالية عندما نعرف النطاق والخطوة، range(0, 11, 2) تعطينا الأرقام الزوجية."

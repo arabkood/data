@@ -1,0 +1,11 @@
+type: "bug"
+lang: "python"
+question: "هذا الكود يجب أن يطبع الأرقام من 10 إلى 15، لكنه لا يشمل 15. ما الخطأ؟"
+code: |
+  for num in range(10, 15):
+      print(num)
+solution: 0
+hint: "range لا يشمل الحد العلوي"
+explanation: "range(10, 15) لا يشمل 15! يجب استخدام range(10, 16) لطباعة حتى 15."
+expectedOutput: "10, 11, 12, 13, 14, 15"
+actualOutput: "10, 11, 12, 13, 14"

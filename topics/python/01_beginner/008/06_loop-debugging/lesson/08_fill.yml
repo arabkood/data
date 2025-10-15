@@ -1,0 +1,17 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود بطريقة آمنة لإزالة الأرقام السالبة:"
+code: |
+  numbers = [-2, 5, -1, 8, -3]
+  positive = []
+
+  for num @@INPUT@@ numbers:
+      if num @@INPUT@@ 0:
+          positive@@INPUT@@(num)
+
+  print(positive)
+solution:
+  - "in"
+  - "/^>=?$/"
+  - ".append"
+explanation: "نبني قائمة جديدة بدلاً من تعديل القائمة الأصلية أثناء التكرار."

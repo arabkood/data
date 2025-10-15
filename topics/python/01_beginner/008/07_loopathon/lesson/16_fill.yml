@@ -1,0 +1,20 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لحساب تكرار كل حرف في نص:"
+code: |
+  text = "hello world"
+  frequency = {}
+
+  for char in text:
+      if char @@INPUT@@ " ":
+          continue
+      if char @@INPUT@@ frequency:
+          frequency[char] = frequency[char] + 1
+      else:
+          frequency[char] = 1
+
+  print(frequency)
+solution:
+  - "=="
+  - "in"
+explanation: "نتخطى المسافات، ونزيد العداد إذا كان الحرف موجوداً، أو نبدأ بـ 1 إذا كان جديداً."

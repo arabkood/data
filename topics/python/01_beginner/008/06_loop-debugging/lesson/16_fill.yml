@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود للبحث عن أول رقم زوجي والتوقف:"
+code: |
+  numbers = [1, 3, 5, 8, 9, 10]
+
+  for num in numbers:
+      @@INPUT@@ num % 2 == 0:
+          print(f"أول رقم زوجي: {num}")
+          @@INPUT@@
+solution:
+  - "if"
+  - "break"
+explanation: "نتحقق بـ if، ثم break للخروج عند إيجاد أول رقم زوجي."

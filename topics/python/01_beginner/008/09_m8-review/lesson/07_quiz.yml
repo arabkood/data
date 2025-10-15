@@ -1,0 +1,15 @@
+type: "quiz"
+question: "كم مرة ستطبع هذه الحلقة المتداخلة كلمة 'Python'؟"
+code: |
+  for i in range(2):
+      for j in range(3):
+          for k in range(2):
+              print("Python")
+lang: "python"
+options:
+  - "6 مرات"
+  - "7 مرات"
+  - "12 مرة"
+  - "8 مرات"
+solution: 2
+explanation: "2 × 3 × 2 = 12. كل حلقة داخلية تنفذ كاملة لكل دورة من الحلقة الخارجية."

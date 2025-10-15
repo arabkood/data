@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة جدول الضرب من 1 إلى 3:"
+code: |
+  for i in range(1, @@INPUT@@):
+      for j in @@INPUT@@(1, 4):
+          result = i @@INPUT@@ j
+          print(f"{i} × {j} = {result}")
+solution:
+  - "4"
+  - "range"
+  - "*"
+explanation: "نستخدم حلقتين: واحدة للعدد الأول، والثانية للعدد الثاني، ثم نضربهما."

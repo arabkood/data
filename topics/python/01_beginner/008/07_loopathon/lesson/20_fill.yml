@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لإيجاد كل مثلثات فيثاغورس حيث a, b, c أقل من 20:"
+code: |
+  for a in range(1, 20):
+      for b in range(@@INPUT@@, 20):
+          for c in range(b, 20):
+              if a**2 + b**2 @@INPUT@@ c**2:
+                  print(f"({a}, {b}, {c})")
+solution:
+  - "a"
+  - "=="
+explanation: "نجرب كل التوليفات الممكنة، ونطبع التي تحقق معادلة فيثاغورس."

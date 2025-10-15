@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود ليطبع فقط الأرقام السالبة، ويتخطى الموجبة دون خطأ:"
+code: |
+  numbers = [-5, 3, -2, 8, -1]
+
+  for num in numbers:
+      if num > 0:
+          @@INPUT@@
+      else:
+          print(num)
+solution:
+  - "/^(pass|continue)$/"
+explanation: "يمكن استخدام pass أو continue هنا. pass لا تفعل شيئاً، continue تتخطى وتكمل - كلاهما يعمل!"

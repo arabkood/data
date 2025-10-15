@@ -1,0 +1,12 @@
+id: 608c3aee-307b-4cc6-9509-caa2d55b8784
+module_id: 8958d50f-b5a8-4cca-8a72-1a89db539963
+slug: pattern-builder
+position: 4
+created_at: 2025-10-15T21:37:03.906Z
+updated_at: 2025-10-15T21:37:03.906Z
+type: code
+title: بناء أنماط المصفوفة
+difficulty: hard
+premium_only: true
+base_xp: 1300
+s3_path: python/01_beginner/008/04_pattern-builder

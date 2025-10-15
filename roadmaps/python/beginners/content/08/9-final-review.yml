@@ -1,0 +1,312 @@
+---
+item_id: "m8-item-9"
+type: "lesson"
+title: "المراجعة النهائية - الحلقات المتقدمة"
+base_xp: 900
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      مبروك! لقد أكملت وحدة **الحلقات المتقدمة**!
+
+      في هذه المراجعة النهائية، سنختبر كل ما تعلمته:
+      - حلقات While
+      - التحكم في الحلقات (break, continue, pass)
+      - الحلقات المتداخلة
+      - اختيار الحلقة المناسبة
+      - تصحيح أخطاء الحلقات
+
+      دعنا نبدأ!
+
+  - type: "quiz"
+    question: "متى يجب استخدام while بدلاً من for؟"
+    options:
+      - "دائماً، while أفضل من for"
+      - "عندما نعرف عدد التكرارات بالضبط"
+      - "عندما لا نعرف عدد التكرارات مسبقاً"
+      - "عندما نريد المرور على قائمة"
+    solution: 2
+    explanation: "while مثالية عندما لا نعرف عدد التكرارات، بينما for أفضل عندما نعرف العدد أو لدينا قائمة محددة."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل حلقة while لطباعة الأرقام الفردية من 1 إلى 9:"
+    code: |
+      num = 1
+
+      @@INPUT@@ num @@INPUT@@ 10:
+          print(num)
+          num = num + @@INPUT@@
+    solution:
+      - "while"
+      - "<"
+      - "2"
+    explanation: "نبدأ من 1، نستمر حتى num < 10، ونزيد بمقدار 2 للحصول على الأرقام الفردية."
+
+  - type: "quiz"
+    question: "ما الفرق الرئيسي بين break و continue؟"
+    options:
+      - "لا يوجد فرق، كلاهما متشابه"
+      - "break يخرج من الحلقة، continue يتخطى الدورة الحالية فقط"
+      - "continue أسرع من break"
+      - "break للحلقات الداخلية فقط"
+    solution: 1
+    explanation: "break يخرج من الحلقة كاملة، بينما continue يتخطى باقي الدورة الحالية ويذهب للدورة التالية."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لتخطي الأرقام من مضاعفات 3:"
+    code: |
+      for i in range(1, 11):
+          if i % 3 == @@INPUT@@:
+              @@INPUT@@
+          print(i)
+    solution:
+      - "0"
+      - "continue"
+    explanation: "نتحقق إذا كان الرقم من مضاعفات 3، ثم نتخطاه بـ continue."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لطباعة مثلث من الأرقام (كل صف يحتوي أرقاماً من 1 حتى رقم الصف):"
+    code:
+      - "for i in range(1, 5):"
+      - "    for j in range(1, i + 1):"
+      - "        print(j, end='')"
+      - "    print()"
+    explanation: "الحلقة الخارجية للصفوف، والداخلية تطبع الأرقام من 1 حتى i."
+
+  - type: "quiz"
+    question: "كم مرة ستطبع هذه الحلقة المتداخلة كلمة 'Python'؟"
+    code: |
+      for i in range(2):
+          for j in range(3):
+              for k in range(2):
+                  print("Python")
+    lang: "python"
+    options:
+      - "6 مرات"
+      - "7 مرات"
+      - "12 مرة"
+      - "8 مرات"
+    solution: 2
+    explanation: "2 × 3 × 2 = 12. كل حلقة داخلية تنفذ كاملة لكل دورة من الحلقة الخارجية."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود للبحث عن عنصر في مصفوفة والتوقف عند إيجاده:"
+    code: |
+      matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+      target = 6
+      found = False
+
+      for row @@INPUT@@ matrix:
+          for num in row:
+              if num == target:
+                  print(f"وجدنا {target}")
+                  found = True
+                  @@INPUT@@
+          if found:
+              break
+    solution:
+      - "in"
+      - "break"
+    explanation: "نستخدم متغير found لكسر الحلقتين معاً عند إيجاد العنصر."
+
+  - type: "bug"
+    lang: "python"
+    question: "هذا الكود يجب أن يجمع الأرقام من 1 إلى 5، لكن لا يعمل. ما الخطأ؟"
+    code: |
+      for i in range(1, 6):
+          total = total + i
+      print(total)
+    solution: 0
+    hint: "هل total معرف؟"
+    explanation: "total غير معرف قبل الحلقة! يجب إضافة total = 0 قبل الحلقة."
+    expectedOutput: "15"
+    actualOutput: "NameError"
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لطباعة الأرقام من 10 إلى 1 بالعكس باستخدام while:"
+    code: |
+      count = 10
+
+      while count @@INPUT@@ 0:
+          print(count)
+          count = count @@INPUT@@ 1
+    solution:
+      - ">"
+      - "-"
+    explanation: "نبدأ من 10، نستمر طالما count أكبر من 0، وننقص 1 في كل دورة."
+
+  - type: "quiz"
+    question: "ما الذي يسبب حلقة لانهائية؟"
+    options:
+      - "استخدام while بدلاً من for"
+      - "عدم تغيير شرط الحلقة ليصبح خاطئاً"
+      - "استخدام break"
+      - "الحلقات المتداخلة"
+    solution: 1
+    explanation: "الحلقة اللانهائية تحدث عندما لا يتغير شرط الحلقة ليصبح خاطئاً أبداً."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لحساب مجموع الأرقام الزوجية فقط من 1 إلى 10:"
+    code:
+      - "total = 0"
+      - "for i in range(1, 11):"
+      - "    if i % 2 == 0:"
+      - "        total = total + i"
+      - "print(f'المجموع: {total}')"
+    explanation: "نهيئ total، نمر على الأرقام، نتحقق من الأرقام الزوجية ونجمعها."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لإيجاد أكبر رقم في قائمة باستخدام حلقة:"
+    code: |
+      numbers = [34, 67, 23, 89, 12, 45]
+      max_num = numbers[@@INPUT@@]
+
+      for num in numbers:
+          if num @@INPUT@@ max_num:
+              max_num = @@INPUT@@
+
+      print(f"الأكبر: {max_num}")
+    solution:
+      - "0"
+      - ">"
+      - "num"
+    explanation: "نهيئ max_num بأول عنصر، ثم نقارن كل عنصر ونحدث max_num عند إيجاد أكبر."
+
+  - type: "bug"
+    lang: "python"
+    question: "هذا الكود يجب أن يطبع مربعاً 3×3 من النجوم، لكن هناك خطأ. أين؟"
+    code: |
+      for i in range(3):
+          for j in range(3):
+              print("*", end="")
+      print()
+    solution: 3
+    hint: "أين يجب أن يكون السطر الجديد؟"
+    explanation: "print() للسطر الجديد يجب أن يكون داخل الحلقة الخارجية (بعد الحلقة الداخلية)."
+    expectedOutput: "مربع 3x3"
+    actualOutput: "***********"
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لعد عدد الحروف المتحركة في نص:"
+    code: |
+      text = "Python Programming"
+      vowels = "aeiouAEIOU"
+      count = 0
+
+      for char @@INPUT@@ text:
+          if char in @@INPUT@@:
+              count = count @@INPUT@@ 1
+
+      print(f"عدد الحروف المتحركة: {count}")
+    solution:
+      - "in"
+      - "vowels"
+      - "+"
+    explanation: "نمر على كل حرف، نتحقق إذا كان في قائمة الحروف المتحركة، ونعد."
+
+  - type: "quiz"
+    question: "ما أفضل حلقة لقراءة إدخال المستخدم حتى يكتب 'خروج'؟"
+    options:
+      - "for مع range كبير جداً"
+      - "while True مع break"
+      - "for مع قائمة"
+      - "لا يمكن فعل ذلك بالحلقات"
+    solution: 1
+    explanation: "while True مع break عند كتابة 'خروج' هي الطريقة المثالية لهذا السيناريو."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لإنشاء قائمة بمربعات الأرقام من 1 إلى 5:"
+    code:
+      - "squares = []"
+      - "for i in range(1, 6):"
+      - "    square = i ** 2"
+      - "    squares.append(square)"
+      - "print(squares)"
+    explanation: "نبدأ بقائمة فارغة، نحسب مربع كل رقم، ونضيفه للقائمة."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لطباعة جدول ضرب الرقم 7 من 1 إلى 10:"
+    code: |
+      number = 7
+
+      for i in @@INPUT@@(1, @@INPUT@@):
+          result = number @@INPUT@@ i
+          print(f"{number} × {i} = {result}")
+    solution:
+      - "range"
+      - "11"
+      - "*"
+    explanation: "نستخدم range(1, 11) للحصول على 1-10، ونضرب 7 في كل رقم."
+
+  - type: "quiz"
+    question: "ماذا تفعل الكلمة المفتاحية pass؟"
+    options:
+      - "تخرج من الحلقة"
+      - "تتخطى الدورة الحالية"
+      - "لا تفعل شيئاً (عنصر نائب)"
+      - "توقف البرنامج"
+    solution: 2
+    explanation: "pass لا تفعل شيئاً على الإطلاق، تستخدم كعنصر نائب عندما تحتاج كوداً لكن لا تريد تنفيذ شيء."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لإيجاد مجموع كل العناصر في مصفوفة 2D:"
+    code: |
+      matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+      total = @@INPUT@@
+
+      for row in matrix:
+          for num @@INPUT@@ row:
+              total = total @@INPUT@@ num
+
+      print(f"المجموع: {total}")
+    solution:
+      - "0"
+      - "in"
+      - "+"
+    explanation: "نهيئ total بـ 0، نمر على كل صف ثم كل عنصر، ونجمع."
+
+  - type: "markdown"
+    content: |
+      رائع! لقد أكملت المراجعة النهائية بنجاح!
+
+      ## ملخص ما تعلمته في هذه الوحدة:
+
+      **1. حلقات While:**
+      - تستخدم عندما لا تعرف عدد التكرارات
+      - تستمر طالما الشرط صحيح
+      - احذر من الحلقات اللانهائية!
+
+      **2. التحكم في الحلقات:**
+      - `break`: للخروج من الحلقة فوراً
+      - `continue`: لتخطي الدورة الحالية
+      - `pass`: عنصر نائب لا يفعل شيئاً
+
+      **3. الحلقات المتداخلة:**
+      - حلقة داخل حلقة
+      - مثالية للأنماط والمصفوفات
+      - عدد التكرارات = الخارجية × الداخلية
+
+      **4. اختيار الحلقة المناسبة:**
+      - for: للعدد المحدد والقوائم
+      - while: للشروط الديناميكية
+
+      **5. تصحيح الأخطاء:**
+      - Off-by-One errors
+      - أخطاء المسافة البادئة
+      - نسيان تهيئة المتغيرات
+      - تعديل القوائم أثناء التكرار
+
+      **أنت الآن مستعد للانتقال إلى القواميس وهياكل البيانات المتقدمة!** 🎉

@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أكمل بأسماء متغيرات واضحة للحلقات المتداخلة:"
+code: |
+  for @@INPUT@@ in range(1, 4):
+      for @@INPUT@@ in range(1, 4):
+          print(f"{i} × {j} = {i*j}")
+solution:
+  - "i"
+  - "j"
+explanation: "i و j (أو أسماء أوضح مثل row و col) أفضل من استخدام نفس الاسم."

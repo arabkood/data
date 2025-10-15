@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لإيجاد كل الأزواج في قائمة التي مجموعها يساوي 10:"
+code: |
+  numbers = [2, 7, 4, 1, 8, 3, 6, 5]
+
+  for i in range(@@INPUT@@):
+      for j in range(@@INPUT@@, len(numbers)):
+          if numbers[i] @@INPUT@@ numbers[j] == 10:
+              print(f"({numbers[i]}, {numbers[j]})")
+solution:
+  - "len(numbers)"
+  - "i + 1"
+  - "+"
+explanation: "نتجنب تكرار الأزواج بالبدء من i+1 في الحلقة الداخلية."

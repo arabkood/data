@@ -1,0 +1,25 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لتحويل قائمة من الدرجات المئوية إلى حروف (A, B, C, D, F):"
+code: |
+  scores = [95, 82, 67, 55, 48, 91]
+  grades = []
+
+  for score in scores:
+      if score >= 90:
+          grade = @@INPUT@@
+      @@INPUT@@ score >= 80:
+          grade = "B"
+      elif score >= 70:
+          grade = "C"
+      elif score >= 60:
+          grade = "D"
+      else:
+          grade = "F"
+      grades.append(grade)
+
+  print(grades)
+solution:
+  - "/^(['\"])A\\1$/"
+  - "elif"
+explanation: "نستخدم if/elif لتحديد الدرجة بناءً على النقاط."

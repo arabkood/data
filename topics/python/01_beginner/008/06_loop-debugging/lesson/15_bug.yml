@@ -1,0 +1,15 @@
+type: "bug"
+lang: "python"
+question: "هذا الكود يجب أن يبحث عن 'توقف' ويتوقف، لكن يتوقف فوراً. ما الخطأ؟"
+code: |
+  words = ["مرحبا", "عالم", "توقف", "الآن"]
+  for word in words:
+      print(word)
+      break
+      if word == "توقف":
+          print("وجدناها!")
+solution: 2
+hint: "أين موقع break؟"
+explanation: "break موضوعة قبل if وخارجها، لذا تنفذ في أول دورة! يجب وضعها داخل if."
+expectedOutput: "مرحبا، عالم، توقف، وجدناها!"
+actualOutput: "مرحبا (ثم توقف)"

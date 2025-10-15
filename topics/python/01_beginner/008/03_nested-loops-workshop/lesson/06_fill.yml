@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لرسم مستطيل من # بعرض 5 وارتفاع 3:"
+code: |
+  for row in range(@@INPUT@@):
+      for col in range(@@INPUT@@):
+          print("#", @@INPUT@@="")
+      print()
+solution:
+  - "3"
+  - "5"
+  - "end"
+explanation: "3 صفوف (ارتفاع)، 5 أعمدة (عرض)، ونستخدم end='' لطباعة النجوم في نفس السطر."

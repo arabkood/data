@@ -1,0 +1,12 @@
+type: "bug"
+lang: "python"
+question: "هذا الكود يجب أن يطبع 1-5، لكنه حلقة لانهائية. أين المشكلة؟"
+code: |
+  count = 1
+  while count <= 5:
+      print(count)
+solution: 1
+hint: "ماذا ينقص داخل الحلقة؟"
+explanation: "نسينا زيادة count! يجب إضافة count = count + 1 داخل الحلقة."
+expectedOutput: "1, 2, 3, 4, 5"
+actualOutput: "1, 1, 1, 1, ... (لانهائي)"

@@ -1,0 +1,12 @@
+type: "order"
+lang: "python"
+question: "رتب الكود لحساب مجموع الأرقام حتى نصل لمجموع يتجاوز 100:"
+code:
+  - "numbers = [15, 30, 25, 40, 20, 35, 10]"
+  - "total = 0"
+  - "for num in numbers:"
+  - "    total = total + num"
+  - "    if total > 100:"
+  - "        break"
+  - "print(f'المجموع: {total}')"
+explanation: "نجمع الأرقام، ونتوقف فوراً عند تجاوز 100."

@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لإيجاد أول رقم أكبر من 100 والخروج من الحلقة:"
+code: |
+  numbers = [45, 23, 78, 150, 200, 12]
+
+  for num in numbers:
+      if num @@INPUT@@ 100:
+          print(f"وجدنا: {num}")
+          @@INPUT@@
+solution:
+  - ">"
+  - "break"
+explanation: "نبحث عن أول رقم أكبر من 100، ثم نخرج فوراً باستخدام break."

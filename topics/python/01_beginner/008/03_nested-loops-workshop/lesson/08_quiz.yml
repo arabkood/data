@@ -1,0 +1,27 @@
+type: "quiz"
+question: "ماذا سيطبع هذا الكود؟"
+code: |
+  for i in range(1, 4):
+      for j in range(i):
+          print('X', end='')
+      print()
+lang: "python"
+options:
+  - |
+    XXX
+    XXX
+    XXX
+  - |
+    X
+    XX
+    XXX
+  - |
+    XXX
+    XX
+    X
+  - |
+    X
+    X
+    X
+solution: 1
+explanation: "عندما i=1، نطبع X واحدة. عندما i=2، نطبع XX. عندما i=3، نطبع XXX. نحصل على مثلث متزايد!"

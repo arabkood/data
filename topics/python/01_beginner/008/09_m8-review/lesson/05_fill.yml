@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لتخطي الأرقام من مضاعفات 3:"
+code: |
+  for i in range(1, 11):
+      if i % 3 == @@INPUT@@:
+          @@INPUT@@
+      print(i)
+solution:
+  - "0"
+  - "continue"
+explanation: "نتحقق إذا كان الرقم من مضاعفات 3، ثم نتخطاه بـ continue."

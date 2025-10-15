@@ -1,0 +1,390 @@
+---
+item_id: "m8-item-6"
+type: "lesson"
+title: "عيادة تصحيح أخطاء الحلقات"
+base_xp: 850
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      الحلقات قوية، لكنها أيضاً مصدر شائع للأخطاء!
+
+      في هذه العيادة، ستتعلم أكثر الأخطاء شيوعاً في الحلقات وكيف تكتشفها وتصلحها.
+
+      استعد لتصبح خبيراً في تصحيح الأخطاء!
+
+  - type: "markdown"
+    content: |
+      ## الخطأ #1: الحلقة اللانهائية
+
+      **المشكلة:** الحلقة لا تتوقف أبداً!
+
+      ```python
+      # ⚠️ خطأ!
+      x = 0
+      while x < 5:
+          print(x)
+          # نسينا زيادة x!
+      ```
+
+      **الحل:** تأكد أن الشرط سيصبح خاطئاً في النهاية!
+      ```python
+      # ✅ صحيح
+      x = 0
+      while x < 5:
+          print(x)
+          x = x + 1  # الآن سيتوقف!
+      ```
+
+  - type: "bug"
+    lang: "python"
+    question: "هذا الكود يجب أن يطبع 1-5، لكنه حلقة لانهائية. أين المشكلة؟"
+    code: |
+      count = 1
+      while count <= 5:
+          print(count)
+    solution: 1
+    hint: "ماذا ينقص داخل الحلقة؟"
+    explanation: "نسينا زيادة count! يجب إضافة count = count + 1 داخل الحلقة."
+    expectedOutput: "1, 2, 3, 4, 5"
+    actualOutput: "1, 1, 1, 1, ... (لانهائي)"
+
+  - type: "markdown"
+    content: |
+      ## الخطأ #2: الخطأ بمقدار واحد (Off-by-One Error)
+
+      **المشكلة:** الحلقة تعمل مرة زيادة أو مرة ناقصة!
+
+      ```python
+      # ⚠️ يطبع 0-4 بدلاً من 1-5
+      for i in range(5):
+          print(i)
+      ```
+
+      **الحل:** تحقق من بداية ونهاية range!
+      ```python
+      # ✅ صحيح: 1-5
+      for i in range(1, 6):
+          print(i)
+      ```
+
+      **تذكر:** `range(1, 6)` تعني من 1 حتى 5 (لا تشمل 6)
+
+  - type: "quiz"
+    question: "ما النتيجة الصحيحة لهذا الكود؟"
+    code: |
+      for i in range(2, 5):
+          print(i)
+    lang: "python"
+    options:
+      - "2, 3, 4, 5"
+      - "2, 3, 4"
+      - "1, 2, 3, 4"
+      - "3, 4, 5"
+    solution: 1
+    explanation: "range(2, 5) يبدأ من 2 ولا يشمل 5، لذا النتيجة: 2, 3, 4"
+
+  - type: "bug"
+    lang: "python"
+    question: "هذا الكود يجب أن يطبع الأرقام من 10 إلى 15، لكنه لا يشمل 15. ما الخطأ؟"
+    code: |
+      for num in range(10, 15):
+          print(num)
+    solution: 0
+    hint: "range لا يشمل الحد العلوي"
+    explanation: "range(10, 15) لا يشمل 15! يجب استخدام range(10, 16) لطباعة حتى 15."
+    expectedOutput: "10, 11, 12, 13, 14, 15"
+    actualOutput: "10, 11, 12, 13, 14"
+
+  - type: "markdown"
+    content: |
+      ## الخطأ #3: تعديل القائمة أثناء التكرار
+
+      **المشكلة:** تعديل قائمة بينما نمر عليها يسبب سلوكاً غريباً!
+
+      ```python
+      # ⚠️ خطير!
+      numbers = [1, 2, 3, 4, 5]
+      for num in numbers:
+          if num % 2 == 0:
+              numbers.remove(num)  # يعدل القائمة!
+      ```
+
+      **الحل:** أنشئ قائمة جديدة أو استخدم نسخة!
+      ```python
+      # ✅ صحيح
+      numbers = [1, 2, 3, 4, 5]
+      odd_numbers = []
+      for num in numbers:
+          if num % 2 != 0:
+              odd_numbers.append(num)
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود بطريقة آمنة لإزالة الأرقام السالبة:"
+    code: |
+      numbers = [-2, 5, -1, 8, -3]
+      positive = []
+
+      for num @@INPUT@@ numbers:
+          if num @@INPUT@@ 0:
+              positive@@INPUT@@(num)
+
+      print(positive)
+    solution:
+      - "in"
+      - "/^>=?$/"
+      - ".append"
+    explanation: "نبني قائمة جديدة بدلاً من تعديل القائمة الأصلية أثناء التكرار."
+
+  - type: "markdown"
+    content: |
+      ## الخطأ #4: خطأ المسافة البادئة (Indentation)
+
+      **المشكلة:** الكود ليس في المكان الصحيح داخل/خارج الحلقة!
+
+      ```python
+      # ⚠️ خطأ: print خارج الحلقة!
+      for i in range(3):
+          total = total + i
+      print(total)  # سيطبع مرة واحدة فقط
+      ```
+
+      **الحل:** ضع الكود في المكان الصحيح!
+      ```python
+      # ✅ صحيح: لطباعة كل مرة
+      for i in range(3):
+          total = total + i
+          print(total)
+      ```
+
+  - type: "bug"
+    lang: "python"
+    question: "هذا الكود يجب أن يطبع كل رقم مع مربعه، لكن يطبع 'تم!' بعد كل رقم. ما المشكلة؟"
+    code: |
+      for i in range(1, 4):
+          print(f"{i} -> {i**2}")
+          print("تم!")
+    solution: 2
+    hint: "انظر إلى المسافة البادئة لـ print الثانية"
+    explanation: "print('تم!') داخل الحلقة، لذا يطبع 3 مرات. يجب إزالة المسافة البادئة لطباعتها مرة واحدة فقط."
+    expectedOutput: "1->1, 2->4, 3->9, ثم 'تم!' مرة واحدة"
+    actualOutput: "1->1, تم!, 2->4, تم!, 3->9, تم!"
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل بالمسافات البادئة الصحيحة لطباعة 'النتيجة' مرة واحدة فقط بعد الحلقة:"
+    code: |
+      total = 0
+      for i in range(5):
+          total = total + i
+      @@INPUT@@(f"النتيجة: {total}")
+    solution:
+      - "print"
+    explanation: "print بدون مسافة بادئة إضافية، فهي خارج الحلقة وستنفذ مرة واحدة."
+
+  - type: "markdown"
+    content: |
+      ## الخطأ #5: استخدام متغير الحلقة بعد انتهائها بشكل خاطئ
+
+      **المشكلة:** متغير الحلقة يحتفظ بآخر قيمة!
+
+      ```python
+      for i in range(5):
+          print(i)
+      print(f"آخر قيمة: {i}")  # سيطبع 4
+      ```
+
+      هذا ليس خطأً دائماً، لكن احذر من الاعتماد عليه بدون قصد!
+
+  - type: "quiz"
+    question: "ما قيمة x بعد هذا الكود؟"
+    code: |
+      for x in range(3, 8):
+          pass
+      print(x)
+    lang: "python"
+    options:
+      - "3"
+      - "8"
+      - "7"
+      - "خطأ - x غير معرف"
+    solution: 2
+    explanation: "x تحتفظ بآخر قيمة من الحلقة، وهي 7 (آخر رقم في range(3, 8))."
+
+  - type: "markdown"
+    content: |
+      ## الخطأ #6: استخدام break أو continue في المكان الخاطئ
+
+      **المشكلة:** break/continue خارج if أو في المكان الخاطئ!
+
+      ```python
+      # ⚠️ خطأ: break خارج if
+      for i in range(10):
+          break  # سيتوقف في أول دورة دائماً!
+          if i == 5:
+              print("وجدنا 5")
+      ```
+
+      **الحل:** ضعها في المكان المناسب!
+      ```python
+      # ✅ صحيح
+      for i in range(10):
+          if i == 5:
+              print("وجدنا 5")
+              break
+      ```
+
+  - type: "bug"
+    lang: "python"
+    question: "هذا الكود يجب أن يبحث عن 'توقف' ويتوقف، لكن يتوقف فوراً. ما الخطأ؟"
+    code: |
+      words = ["مرحبا", "عالم", "توقف", "الآن"]
+      for word in words:
+          print(word)
+          break
+          if word == "توقف":
+              print("وجدناها!")
+    solution: 2
+    hint: "أين موقع break؟"
+    explanation: "break موضوعة قبل if وخارجها، لذا تنفذ في أول دورة! يجب وضعها داخل if."
+    expectedOutput: "مرحبا، عالم، توقف، وجدناها!"
+    actualOutput: "مرحبا (ثم توقف)"
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود للبحث عن أول رقم زوجي والتوقف:"
+    code: |
+      numbers = [1, 3, 5, 8, 9, 10]
+
+      for num in numbers:
+          @@INPUT@@ num % 2 == 0:
+              print(f"أول رقم زوجي: {num}")
+              @@INPUT@@
+    solution:
+      - "if"
+      - "break"
+    explanation: "نتحقق بـ if، ثم break للخروج عند إيجاد أول رقم زوجي."
+
+  - type: "markdown"
+    content: |
+      ## الخطأ #7: نسيان تهيئة المتغيرات
+
+      **المشكلة:** استخدام متغير بدون إعطائه قيمة أولية!
+
+      ```python
+      # ⚠️ خطأ: total غير معرف!
+      for i in range(5):
+          total = total + i
+      ```
+
+      **الحل:** هيئ المتغيرات قبل الحلقة!
+      ```python
+      # ✅ صحيح
+      total = 0  # تهيئة!
+      for i in range(5):
+          total = total + i
+      ```
+
+  - type: "bug"
+    lang: "python"
+    question: "هذا الكود لحساب مجموع الأرقام لا يعمل. ما المشكلة؟"
+    code: |
+      numbers = [10, 20, 30]
+      for num in numbers:
+          sum = sum + num
+      print(sum)
+    solution: 1
+    hint: "هل sum معرف قبل استخدامه؟"
+    explanation: "sum غير معرف قبل الحلقة! يجب إضافة sum = 0 قبل الحلقة."
+    expectedOutput: "60"
+    actualOutput: "NameError: name 'sum' is not defined"
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لعد الأرقام الموجبة:"
+    code: |
+      numbers = [-5, 3, -2, 8, 0, 12]
+      @@INPUT@@ = 0
+
+      for num in numbers:
+          if num > 0:
+              count = count + 1
+
+      print(f"عدد الأرقام الموجبة: {count}")
+    solution:
+      - "count"
+    explanation: "يجب تهيئة count = 0 قبل الحلقة لنتمكن من زيادته."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود بشكل صحيح لإيجاد أكبر رقم في قائمة:"
+    code:
+      - "numbers = [23, 67, 12, 89, 45]"
+      - "max_num = numbers[0]"
+      - "for num in numbers:"
+      - "    if num > max_num:"
+      - "        max_num = num"
+      - "print(f'أكبر رقم: {max_num}')"
+    explanation: "نهيئ max_num بأول عنصر، ثم نقارن كل عنصر ونحدث max_num عند إيجاد أكبر."
+
+  - type: "markdown"
+    content: |
+      ## الخطأ #8: الحلقات المتداخلة المربكة
+
+      **المشكلة:** متغيرات الحلقات المتداخلة لها نفس الاسم!
+
+      ```python
+      # ⚠️ مربك!
+      for i in range(3):
+          for i in range(3):  # نفس الاسم!
+              print(i)
+      ```
+
+      **الحل:** استخدم أسماء مختلفة وواضحة!
+      ```python
+      # ✅ أفضل
+      for row in range(3):
+          for col in range(3):
+              print(f"{row},{col}")
+      ```
+
+  - type: "quiz"
+    question: "ما المشكلة في استخدام نفس اسم المتغير في حلقات متداخلة؟"
+    options:
+      - "لا توجد مشكلة"
+      - "سيسبب خطأ في البرنامج"
+      - "يجعل الكود مربكاً والحلقة الداخلية تطغى على الخارجية"
+      - "سيجعل البرنامج أبطأ"
+    solution: 2
+    explanation: "لن يسبب خطأاً تقنياً، لكنه مربك جداً! الحلقة الداخلية ستعيد تعريف المتغير."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل بأسماء متغيرات واضحة للحلقات المتداخلة:"
+    code: |
+      for @@INPUT@@ in range(1, 4):
+          for @@INPUT@@ in range(1, 4):
+              print(f"{i} × {j} = {i*j}")
+    solution:
+      - "i"
+      - "j"
+    explanation: "i و j (أو أسماء أوضح مثل row و col) أفضل من استخدام نفس الاسم."
+
+  - type: "markdown"
+    content: |
+      ممتاز! الآن تعرف أكثر الأخطاء شيوعاً في الحلقات!
+
+      **نصائح التصحيح:**
+      1. ✅ تحقق أن الحلقات ستتوقف (ليست لانهائية)
+      2. ✅ انتبه لحدود range (Off-by-One)
+      3. ✅ لا تعدل قوائم أثناء التكرار عليها
+      4. ✅ راجع المسافات البادئة بعناية
+      5. ✅ هيئ المتغيرات قبل استخدامها
+      6. ✅ ضع break/continue في الأماكن الصحيحة
+      7. ✅ استخدم أسماء واضحة ومختلفة للمتغيرات
+
+      هذه المهارات ستوفر لك ساعات من البحث عن الأخطاء!

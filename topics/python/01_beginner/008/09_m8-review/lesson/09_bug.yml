@@ -1,0 +1,12 @@
+type: "bug"
+lang: "python"
+question: "هذا الكود يجب أن يجمع الأرقام من 1 إلى 5، لكن لا يعمل. ما الخطأ؟"
+code: |
+  for i in range(1, 6):
+      total = total + i
+  print(total)
+solution: 0
+hint: "هل total معرف؟"
+explanation: "total غير معرف قبل الحلقة! يجب إضافة total = 0 قبل الحلقة."
+expectedOutput: "15"
+actualOutput: "NameError"

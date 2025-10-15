@@ -1,0 +1,9 @@
+type: "order"
+lang: "python"
+question: "رتب الكود لطباعة جدول ضرب من 1 إلى 5:"
+code:
+  - "for i in range(1, 6):"
+  - "    for j in range(1, 6):"
+  - "        print(f'{i}x{j}={i*j}', end='  ')"
+  - "    print()"
+explanation: "الحلقة الخارجية للصفوف، والداخلية للأعمدة، نطبع النتيجة مع مسافات، ثم سطر جديد."

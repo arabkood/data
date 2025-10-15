@@ -1,0 +1,12 @@
+type: "bug"
+lang: "python"
+question: "هذا الكود يجب أن يطبع أزواج الأرقام، لكن هناك خطأ. أين؟"
+code: |
+  for i in range(1, 3):
+      for j in range(1, 3):
+      print(f"({i}, {j})")
+solution: 2
+hint: "انظر إلى المسافة البادئة"
+explanation: "الحلقة الداخلية يجب أن تكون ذات مسافة بادئة (indentation) صحيحة داخل الحلقة الخارجية."
+expectedOutput: "(1,1), (1,2), (2,1), (2,2)"
+actualOutput: "SyntaxError"

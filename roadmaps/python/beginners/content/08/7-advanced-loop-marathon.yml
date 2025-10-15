@@ -1,0 +1,423 @@
+---
+item_id: "m8-item-7"
+type: "lesson"
+title: "ماراثون الحلقات المتقدمة"
+base_xp: 1200
+difficulty: "hard"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      مرحباً بك في **ماراثون الحلقات المتقدمة**!
+
+      هنا ستواجه تحديات حقيقية تجمع كل ما تعلمته:
+      - حلقات متداخلة معقدة
+      - التحكم في سير الحلقات
+      - حل مشاكل واقعية
+      - تحسين الأداء
+
+      استعد للتحدي!
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ جدول ضرب كامل من 1 إلى 5 بتنسيق جميل:"
+    code: |
+      for i in @@INPUT@@(1, 6):
+          for j in range(1, 6):
+              result = i @@INPUT@@ j
+              print(f"{result:3}", @@INPUT@@="")
+          print()
+    solution:
+      - "range"
+      - "*"
+      - "end"
+    explanation: "نستخدم حلقتين متداخلتين، و :3 لتنسيق الأرقام بعرض 3 خانات."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لإيجاد كل الأعداد الأولية من 2 إلى 20:"
+    code:
+      - "for num in range(2, 21):"
+      - "    is_prime = True"
+      - "    for i in range(2, num):"
+      - "        if num % i == 0:"
+      - "            is_prime = False"
+      - "            break"
+      - "    if is_prime:"
+      - "        print(num)"
+    explanation: "لكل رقم، نتحقق إذا كان له قاسم من 2 إلى num-1. إذا وجدنا قاسماً، ليس أولياً."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لطباعة نمط الماس باستخدام النجوم (حجم 5):"
+    code: |
+      n = 5
+
+      # النصف العلوي
+      for i in range(1, n + 1):
+          print(" " @@INPUT@@ (n - i), end="")
+          print("*" @@INPUT@@ (2 * i - 1))
+
+      # النصف السفلي
+      for i in range(n - 1, 0, @@INPUT@@):
+          print(" " * (n - i), end="")
+          print("*" * (2 * i - 1))
+    solution:
+      - "*"
+      - "*"
+      - "-1"
+    explanation: "نطبع مسافات ثم نجوم. النصف العلوي يزيد، والسفلي ينقص."
+
+  - type: "markdown"
+    content: |
+      **تحدي معالجة البيانات:**
+
+      في البرمجة الحقيقية، غالباً ما تستخدم الحلقات لمعالجة البيانات وتحليلها.
+
+      دعنا نحل بعض التحديات الواقعية!
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لحساب المتوسط والحد الأقصى من قائمة أرقام:"
+    code: |
+      numbers = [23, 67, 12, 89, 45, 34, 56]
+
+      total = 0
+      max_num = numbers[@@INPUT@@]
+
+      for num @@INPUT@@ numbers:
+          total = total + num
+          if num @@INPUT@@ max_num:
+              max_num = num
+
+      average = total @@INPUT@@ len(numbers)
+      print(f"المتوسط: {average}, الأقصى: {max_num}")
+    solution:
+      - "0"
+      - "in"
+      - ">"
+      - "/"
+    explanation: "نهيئ max_num بأول عنصر، نجمع ونقارن في حلقة واحدة، ثم نحسب المتوسط."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لإيجاد الأرقام المكررة في قائمة:"
+    code:
+      - "numbers = [1, 2, 3, 2, 4, 5, 3, 6]"
+      - "duplicates = []"
+      - "for i in range(len(numbers)):"
+      - "    for j in range(i + 1, len(numbers)):"
+      - "        if numbers[i] == numbers[j]:"
+      - "            if numbers[i] not in duplicates:"
+      - "                duplicates.append(numbers[i])"
+      - "print(f'الأرقام المكررة: {duplicates}')"
+    explanation: "نقارن كل عنصر مع العناصر التي بعده، ونضيف المكررات لقائمة بدون تكرار."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لعكس قائمة بدون استخدام الدوال المدمجة:"
+    code: |
+      original = [10, 20, 30, 40, 50]
+      reversed_list = []
+
+      for i in range(@@INPUT@@(original) - 1, @@INPUT@@, -1):
+          reversed_list@@INPUT@@(original[i])
+
+      print(reversed_list)
+    solution:
+      - "len"
+      - "-1"
+      - ".append"
+    explanation: "نبدأ من آخر فهرس ونتحرك للخلف، ونضيف كل عنصر للقائمة الجديدة."
+
+  - type: "markdown"
+    content: |
+      **تحدي البحث والتصفية:**
+
+      الحلقات ممتازة للبحث عن أنماط محددة في البيانات!
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لإيجاد كل الأزواج في قائمة التي مجموعها يساوي 10:"
+    code: |
+      numbers = [2, 7, 4, 1, 8, 3, 6, 5]
+
+      for i in range(@@INPUT@@):
+          for j in range(@@INPUT@@, len(numbers)):
+              if numbers[i] @@INPUT@@ numbers[j] == 10:
+                  print(f"({numbers[i]}, {numbers[j]})")
+    solution:
+      - "len(numbers)"
+      - "i + 1"
+      - "+"
+    explanation: "نتجنب تكرار الأزواج بالبدء من i+1 في الحلقة الداخلية."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لإيجاد أطول سلسلة من الأرقام المتزايدة في قائمة:"
+    code:
+      - "nums = [1, 2, 3, 2, 3, 4, 5, 6, 2, 3]"
+      - "max_length = 1"
+      - "current_length = 1"
+      - "for i in range(1, len(nums)):"
+      - "    if nums[i] > nums[i - 1]:"
+      - "        current_length = current_length + 1"
+      - "        max_length = max(max_length, current_length)"
+      - "    else:"
+      - "        current_length = 1"
+      - "print(f'أطول سلسلة: {max_length}')"
+    explanation: "نتتبع طول السلسلة الحالية، ونحدث الأطول عند إيجاد رقم أكبر."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لتصفية الأرقام الزوجية الأكبر من 10:"
+    code: |
+      numbers = [5, 12, 8, 23, 16, 3, 20, 7]
+      filtered = []
+
+      for num in numbers:
+          if num > 10 @@INPUT@@ num % 2 == 0:
+              filtered@@INPUT@@(num)
+
+      print(filtered)
+    solution:
+      - "and"
+      - ".append"
+    explanation: "نستخدم and للجمع بين شرطين: أكبر من 10 وزوجي."
+
+  - type: "markdown"
+    content: |
+      **تحدي التحويل والتنسيق:**
+
+      غالباً ما نحتاج لتحويل البيانات من شكل لآخر باستخدام الحلقات.
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لتحويل قائمة من الدرجات المئوية إلى حروف (A, B, C, D, F):"
+    code: |
+      scores = [95, 82, 67, 55, 48, 91]
+      grades = []
+
+      for score in scores:
+          if score >= 90:
+              grade = @@INPUT@@
+          @@INPUT@@ score >= 80:
+              grade = "B"
+          elif score >= 70:
+              grade = "C"
+          elif score >= 60:
+              grade = "D"
+          else:
+              grade = "F"
+          grades.append(grade)
+
+      print(grades)
+    solution:
+      - "/^(['\"])A\\1$/"
+      - "elif"
+    explanation: "نستخدم if/elif لتحديد الدرجة بناءً على النقاط."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لتحويل مصفوفة 2D إلى قائمة واحدة (flatten):"
+    code:
+      - "matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]"
+      - "flat_list = []"
+      - "for row in matrix:"
+      - "    for item in row:"
+      - "        flat_list.append(item)"
+      - "print(flat_list)"
+    explanation: "نمر على كل صف، ثم على كل عنصر في الصف، ونضيفه للقائمة المسطحة."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لحساب تكرار كل حرف في نص:"
+    code: |
+      text = "hello world"
+      frequency = {}
+
+      for char in text:
+          if char @@INPUT@@ " ":
+              continue
+          if char @@INPUT@@ frequency:
+              frequency[char] = frequency[char] + 1
+          else:
+              frequency[char] = 1
+
+      print(frequency)
+    solution:
+      - "=="
+      - "in"
+    explanation: "نتخطى المسافات، ونزيد العداد إذا كان الحرف موجوداً، أو نبدأ بـ 1 إذا كان جديداً."
+
+  - type: "markdown"
+    content: |
+      **تحدي الحلقات المتداخلة المعقدة:**
+
+      الآن دعنا نواجه أنماطاً أكثر تعقيداً!
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لطباعة نمط شجرة الكريسماس:"
+    code: |
+      height = 5
+
+      for i in range(@@INPUT@@):
+          # مسافات
+          for j in range(height - i - 1):
+              print(" ", end="")
+          # نجوم
+          for k in range(2 * i + 1):
+              print("*", @@INPUT@@="")
+          print()
+    solution:
+      - "height"
+      - "end"
+    explanation: "لكل صف: نطبع مسافات تنقص، ثم نجوم تزيد بشكل فردي (1, 3, 5, 7...)."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لطباعة جدول جمع من 1 إلى 5 مع عناوين:"
+    code:
+      - "print('  ', end='')"
+      - "for i in range(1, 6):"
+      - "    print(f'{i:3}', end='')"
+      - "print()"
+      - "for i in range(1, 6):"
+      - "    print(f'{i:2}', end='')"
+      - "    for j in range(1, 6):"
+      - "        print(f'{i+j:3}', end='')"
+      - "    print()"
+    explanation: "نطبع صف العناوين أولاً، ثم لكل صف نطبع رقم الصف والنتائج."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لإيجاد كل مثلثات فيثاغورس حيث a, b, c أقل من 20:"
+    code: |
+      for a in range(1, 20):
+          for b in range(@@INPUT@@, 20):
+              for c in range(b, 20):
+                  if a**2 + b**2 @@INPUT@@ c**2:
+                      print(f"({a}, {b}, {c})")
+    solution:
+      - "a"
+      - "=="
+    explanation: "نجرب كل التوليفات الممكنة، ونطبع التي تحقق معادلة فيثاغورس."
+
+  - type: "markdown"
+    content: |
+      **تحدي الأداء والتحسين:**
+
+      أحياناً نحتاج لإيقاف الحلقة مبكراً لتوفير الوقت!
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود للبحث عن رقم في مصفوفة والتوقف فور إيجاده:"
+    code: |
+      matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+      target = 5
+      found = False
+
+      for row in matrix:
+          for num in row:
+              if num == target:
+                  print(f"وجدنا {target}!")
+                  found = @@INPUT@@
+                  @@INPUT@@
+          if @@INPUT@@:
+              break
+
+      if not found:
+          print("لم نجده")
+    solution:
+      - "True"
+      - "break"
+      - "found"
+    explanation: "نستخدم متغير found لكسر الحلقتين معاً عند إيجاد الهدف."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لحساب مجموع الأرقام حتى نصل لمجموع يتجاوز 100:"
+    code:
+      - "numbers = [15, 30, 25, 40, 20, 35, 10]"
+      - "total = 0"
+      - "for num in numbers:"
+      - "    total = total + num"
+      - "    if total > 100:"
+      - "        break"
+      - "print(f'المجموع: {total}')"
+    explanation: "نجمع الأرقام، ونتوقف فوراً عند تجاوز 100."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لإنشاء قائمة بأول 10 أعداد فيبوناتشي:"
+    code: |
+      fib = [0, 1]
+
+      for i in range(@@INPUT@@):
+          next_num = fib[@@INPUT@@] + fib[-1]
+          fib@@INPUT@@(next_num)
+
+      print(fib)
+    solution:
+      - "8"
+      - "-2"
+      - ".append"
+    explanation: "نبدأ بـ [0, 1]، ثم نضيف 8 أرقام أخرى (كل رقم = مجموع آخر رقمين)."
+
+  - type: "markdown"
+    content: |
+      **تحدي نهائي متقدم:**
+
+      دعنا نجمع كل المهارات في تحدٍّ واحد!
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لإيجاد كل الكلمات التي تحتوي على حرف معين في قائمة جمل:"
+    code:
+      - "sentences = ['Python سهلة', 'البرمجة ممتعة', 'التعلم مستمر']"
+      - "target_letter = 'م'"
+      - "matching_words = []"
+      - "for sentence in sentences:"
+      - "    words = sentence.split()"
+      - "    for word in words:"
+      - "        if target_letter in word:"
+      - "            if word not in matching_words:"
+      - "                matching_words.append(word)"
+      - "print(matching_words)"
+    explanation: "نقسم كل جملة، نتحقق من كل كلمة، ونضيف الكلمات التي تحتوي الحرف المطلوب."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لحساب حاصل الضرب التراكمي لكل العناصر في مصفوفة 2D:"
+    code: |
+      matrix = [[2, 3], [4, 5], [6, 7]]
+      product = @@INPUT@@
+
+      for row @@INPUT@@ matrix:
+          for num in row:
+              product = product @@INPUT@@ num
+
+      print(f"حاصل الضرب: {product}")
+    solution:
+      - "1"
+      - "in"
+      - "*"
+    explanation: "نهيئ product بـ 1 (ليس 0!)، ثم نضرب كل الأرقام."
+
+  - type: "markdown"
+    content: |
+      رائع! لقد أكملت ماراثون الحلقات المتقدمة!
+
+      **ما أنجزته:**
+      ✅ حلقات متداخلة معقدة
+      ✅ معالجة وتحليل البيانات
+      ✅ البحث والتصفية المتقدمة
+      ✅ تحويل البيانات بين الأشكال
+      ✅ أنماط معقدة وخوارزميات
+      ✅ تحسين الأداء بـ break
+
+      أنت الآن **خبير في الحلقات**! 🎉
+
+      استعد للتحدي البرمجي القادم!

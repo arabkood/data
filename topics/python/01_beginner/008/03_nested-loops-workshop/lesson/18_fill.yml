@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة مصفوفة 3×3 من الأرقام من 1 إلى 9:"
+code: |
+  counter = 1
+
+  for i in range(@@INPUT@@):
+      for j in range(3):
+          print(counter, end=" ")
+          counter = counter @@INPUT@@ 1
+      print()
+solution:
+  - "3"
+  - "+"
+explanation: "نستخدم عداد يزيد في كل خطوة، 3 صفوف و3 أعمدة تعطينا 9 أرقام."

@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "اكتب حلقة while تستمر حتى يصبح المجموع أكبر من أو يساوي 100:"
+code: |
+  total = 0
+
+  @@INPUT@@ total @@INPUT@@ 100:
+      total = total + 15
+
+  print(f"المجموع النهائي: {total}")
+solution:
+  - "while"
+  - "<"
+explanation: "نريد الاستمرار طالما total أصغر من 100، لذا نستخدم while total < 100."

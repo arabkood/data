@@ -1,0 +1,9 @@
+type: "quiz"
+question: "ما الفرق الرئيسي بين break و continue؟"
+options:
+  - "لا يوجد فرق، كلاهما متشابه"
+  - "break يخرج من الحلقة، continue يتخطى الدورة الحالية فقط"
+  - "continue أسرع من break"
+  - "break للحلقات الداخلية فقط"
+solution: 1
+explanation: "break يخرج من الحلقة كاملة، بينما continue يتخطى باقي الدورة الحالية ويذهب للدورة التالية."

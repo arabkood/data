@@ -1,0 +1,13 @@
+type: "bug"
+lang: "python"
+question: "هذا الكود يجب أن يطبع الأرقام من 1 إلى 5، لكن هناك خطأ. أين المشكلة؟"
+code: |
+  counter = 0
+  while counter < 5:
+      counter = counter + 1
+      print(counter)
+solution: 0
+hint: "انظر إلى القيمة الابتدائية لـ counter"
+explanation: "counter يبدأ من 0، لكننا نزيده قبل الطباعة، لذا سيطبع 1-5 بدلاً من 0-4. إذا أردنا 1-5، يجب أن يبدأ من 1، أو نطبع قبل الزيادة."
+expectedOutput: "1, 2, 3, 4, 5"
+actualOutput: "1, 2, 3, 4, 5"

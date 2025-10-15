@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة الأرقام من 1 إلى 5 باستخدام while:"
+code: |
+  number = 1
+
+  @@INPUT@@ number <= 5:
+      print(number)
+      number = @@INPUT@@
+solution:
+  - "while"
+  - "/^number\\s*\\+\\s*1$/"
+explanation: "نستخدم while للتحقق من الشرط، ثم نزيد number بمقدار 1 في كل دورة."

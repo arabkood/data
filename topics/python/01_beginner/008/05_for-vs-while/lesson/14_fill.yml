@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "أكمل بالحلقة المناسبة لطباعة مربعات الأرقام من 1 إلى 10:"
+code: |
+  @@INPUT@@ i @@INPUT@@ range(1, 11):
+      print(i ** 2)
+solution:
+  - "for"
+  - "in"
+explanation: "نعرف بالضبط: من 1 إلى 10، for مع range هي الخيار الواضح."

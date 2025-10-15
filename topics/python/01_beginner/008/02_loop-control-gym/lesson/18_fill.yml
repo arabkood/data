@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة الأرقام من 1 إلى 20 مع تخطي المضاعفات الخمسة:"
+code: |
+  for i in @@INPUT@@(1, 21):
+      if i @@INPUT@@ 5 == 0:
+          continue
+      print(i)
+solution:
+  - "range"
+  - "%"
+explanation: "نستخدم range(1, 21) للحصول على 1-20، ونتخطى مضاعفات 5 بـ continue."

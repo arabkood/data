@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة الأرقام الفردية فقط من 1 إلى 10:"
+code: |
+  for number in range(1, 11):
+      if number % 2 == @@INPUT@@:
+          @@INPUT@@
+      print(number)
+solution:
+  - "0"
+  - "continue"
+explanation: "نتخطى الأرقام الزوجية (التي باقي قسمتها على 2 هو 0) باستخدام continue."

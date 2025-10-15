@@ -1,0 +1,9 @@
+type: "order"
+lang: "python"
+question: "رتب الكود لرسم مثلث من النجوم (كل صف يزيد نجمة):"
+code:
+  - "for i in range(1, 5):"
+  - "    for j in range(i):"
+  - "        print('*', end='')"
+  - "    print()"
+explanation: "i يحدد رقم الصف، وعدد النجوم في كل صف يساوي i، لذا نستخدم range(i) في الحلقة الداخلية."

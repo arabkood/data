@@ -1,0 +1,15 @@
+type: "bug"
+lang: "python"
+question: "هذا الكود يجب أن يتوقف عند إيجاد كلمة 'توقف'، لكن لا يعمل. أين الخطأ؟"
+code: |
+  words = ["مرحبا", "عالم", "توقف", "الآن"]
+  for word in words:
+      if word == "توقف":
+          print("وجدنا كلمة توقف!")
+      break
+      print(word)
+solution: 3
+hint: "انتبه للمسافة البادئة (indentation)"
+explanation: "break خارج الـ if، لذا ستتنفذ في أول دورة دائماً! يجب وضعها داخل الـ if block."
+expectedOutput: "مرحبا، عالم، وجدنا كلمة توقف!"
+actualOutput: "(لا شيء يطبع)"

@@ -1,0 +1,12 @@
+id: 45f8645c-0f2a-4b79-a949-4b74d18d46ec
+module_id: 8958d50f-b5a8-4cca-8a72-1a89db539963
+slug: loop-debugging
+position: 6
+created_at: 2025-10-15T21:37:03.903Z
+updated_at: 2025-10-15T21:37:03.903Z
+type: lesson
+title: عيادة تصحيح أخطاء الحلقات
+difficulty: medium
+premium_only: true
+base_xp: 850
+s3_path: python/01_beginner/008/06_loop-debugging

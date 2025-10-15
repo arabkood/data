@@ -1,0 +1,288 @@
+---
+item_id: "m8-item-2"
+type: "lesson"
+title: "معمل التحكم في الحلقات"
+base_xp: 900
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      أحياناً تحتاج إلى **التحكم** في سلوك الحلقات بطريقة أكثر دقة.
+
+      ماذا لو أردت:
+      - إيقاف الحلقة في منتصفها؟
+      - تخطي بعض الدورات؟
+      - وضع علامة مؤقتة دون فعل أي شيء؟
+
+      Python تمنحك ثلاث أدوات قوية: `break`، `continue`، و `pass`!
+
+  - type: "markdown"
+    content: |
+      ## أولاً: كلمة `break` - الإيقاف الفوري
+
+      `break` تخرج من الحلقة **فوراً**، حتى لو لم ينته الشرط.
+
+      ```python
+      count = 0
+
+      while count < 10:
+          if count == 5:
+              break  # توقف عندما نصل إلى 5
+          print(count)
+          count = count + 1
+
+      print("خرجنا من الحلقة!")
+      ```
+
+      **النتيجة:** سيطبع 0, 1, 2, 3, 4 ثم يتوقف!
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود للبحث عن أول رقم زوجي في القائمة والخروج من الحلقة:"
+    code: |
+      numbers = [1, 3, 7, 8, 9, 10]
+
+      for num in numbers:
+          if num @@INPUT@@ 2 == 0:
+              print(f"أول رقم زوجي: {num}")
+              @@INPUT@@
+    solution:
+      - "%"
+      - "break"
+    explanation: "نستخدم % للتحقق من الأرقام الزوجية، ثم break للخروج فور إيجاد أول رقم زوجي."
+
+  - type: "quiz"
+    question: "ماذا سيطبع هذا الكود؟"
+    code: |
+      for i in range(1, 6):
+          if i == 3:
+              break
+          print(i)
+    lang: "python"
+    options:
+      - "1, 2"
+      - "1, 2, 3"
+      - "1, 2, 4, 5"
+      - "1, 2, 3, 4, 5"
+    solution: 0
+    explanation: "عندما i = 3، نواجه break فنخرج من الحلقة فوراً. لذا نطبع فقط 1 و 2."
+
+  - type: "markdown"
+    content: |
+      ## ثانياً: كلمة `continue` - التخطي والمتابعة
+
+      `continue` تتخطى **باقي** الدورة الحالية وتذهب مباشرة للدورة التالية.
+
+      ```python
+      for i in range(1, 6):
+          if i == 3:
+              continue  # تخطى الرقم 3
+          print(i)
+      ```
+
+      **النتيجة:** سيطبع 1, 2, 4, 5 (يتخطى 3)
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لطباعة الأرقام الفردية فقط من 1 إلى 10:"
+    code: |
+      for number in range(1, 11):
+          if number % 2 == @@INPUT@@:
+              @@INPUT@@
+          print(number)
+    solution:
+      - "0"
+      - "continue"
+    explanation: "نتخطى الأرقام الزوجية (التي باقي قسمتها على 2 هو 0) باستخدام continue."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لطباعة الأرقام من 1 إلى 10 مع تخطي المضاعفات الثلاثة:"
+    code:
+      - "for i in range(1, 11):"
+      - "    if i % 3 == 0:"
+      - "        continue"
+      - "    print(i)"
+    explanation: "نتحقق في كل دورة: إذا كان الرقم من مضاعفات 3، نتخطاه بـ continue، وإلا نطبعه."
+
+  - type: "markdown"
+    content: |
+      ## الفرق بين `break` و `continue`:
+
+      - **break**: يخرج من الحلقة **كلها** ولا يعود
+      - **continue**: يتخطى **الدورة الحالية فقط** ويكمل الحلقة
+
+      فكر في break كـ "غادر المبنى"، و continue كـ "تخطى هذا الطابق واذهب للتالي"
+
+  - type: "quiz"
+    question: "ما الفرق بين هاتين الحلقتين؟"
+    code: |
+      # الكود أ:
+      for i in range(5):
+          if i == 2:
+              break
+          print(i)
+
+      # الكود ب:
+      for i in range(5):
+          if i == 2:
+              continue
+          print(i)
+    lang: "python"
+    options:
+      - "الكود أ يطبع: 0, 1 والكود ب يطبع: 0, 1, 3, 4"
+      - "كلاهما يطبع نفس الشيء"
+      - "الكود أ يطبع: 0, 1, 2 والكود ب يطبع: 0, 1, 3, 4"
+      - "الكود أ يتخطى 2 والكود ب يوقف عند 2"
+    solution: 0
+    explanation: "break يخرج من الحلقة عند i=2، بينما continue يتخطى فقط طباعة 2 ويكمل الحلقة."
+
+  - type: "markdown"
+    content: |
+      ## ثالثاً: كلمة `pass` - مكان حافظ فارغ
+
+      `pass` لا تفعل شيئاً على الإطلاق! تستخدم كـ "عنصر نائب" عندما تحتاج كوداً لكن لا تريد تنفيذ أي شيء بعد.
+
+      ```python
+      for i in range(5):
+          if i % 2 == 0:
+              pass  # سنضيف شيئاً لاحقاً
+          else:
+              print(i)
+      ```
+
+      مفيدة أثناء كتابة الكود أو في حالات خاصة!
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود ليطبع فقط الأرقام السالبة، ويتخطى الموجبة دون خطأ:"
+    code: |
+      numbers = [-5, 3, -2, 8, -1]
+
+      for num in numbers:
+          if num > 0:
+              @@INPUT@@
+          else:
+              print(num)
+    solution:
+      - "/^(pass|continue)$/"
+    explanation: "يمكن استخدام pass أو continue هنا. pass لا تفعل شيئاً، continue تتخطى وتكمل - كلاهما يعمل!"
+
+  - type: "bug"
+    lang: "python"
+    question: "هذا الكود يجب أن يتوقف عند إيجاد كلمة 'توقف'، لكن لا يعمل. أين الخطأ؟"
+    code: |
+      words = ["مرحبا", "عالم", "توقف", "الآن"]
+      for word in words:
+          if word == "توقف":
+              print("وجدنا كلمة توقف!")
+          break
+          print(word)
+    solution: 3
+    hint: "انتبه للمسافة البادئة (indentation)"
+    explanation: "break خارج الـ if، لذا ستتنفذ في أول دورة دائماً! يجب وضعها داخل الـ if block."
+    expectedOutput: "مرحبا، عالم، وجدنا كلمة توقف!"
+    actualOutput: "(لا شيء يطبع)"
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لإيجاد أول رقم أكبر من 100 والخروج من الحلقة:"
+    code: |
+      numbers = [45, 23, 78, 150, 200, 12]
+
+      for num in numbers:
+          if num @@INPUT@@ 100:
+              print(f"وجدنا: {num}")
+              @@INPUT@@
+    solution:
+      - ">"
+      - "break"
+    explanation: "نبحث عن أول رقم أكبر من 100، ثم نخرج فوراً باستخدام break."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لحساب مجموع الأرقام حتى نصل إلى رقم سالب:"
+    code:
+      - "numbers = [10, 20, 30, -5, 40, 50]"
+      - "total = 0"
+      - "for num in numbers:"
+      - "    if num < 0:"
+      - "        break"
+      - "    total = total + num"
+      - "print(f'المجموع: {total}')"
+    explanation: "نجمع الأرقام الموجبة، وبمجرد أن نصل لرقم سالب، نستخدم break للخروج."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل حلقة while تستمر حتى يدخل المستخدم 'خروج':"
+    code: |
+      while True:
+          user_input = input("اكتب شيئاً (أو 'خروج' للخروج): ")
+          if user_input == @@INPUT@@:
+              @@INPUT@@
+          print(f"كتبت: {user_input}")
+    solution:
+      - "/^(['\"])خروج\\1$/"
+      - "break"
+    explanation: "نستخدم while True لحلقة لانهائية، ثم break للخروج عند كتابة 'خروج'."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لطباعة الحروف من قائمة مع تخطي الأرقام:"
+    code: |
+      items = ['a', '1', 'b', '2', 'c', '3']
+
+      for item in items:
+          if item@@INPUT@@():
+              @@INPUT@@
+          print(item)
+    solution:
+      - ".isdigit"
+      - "continue"
+    explanation: "نستخدم .isdigit() للتحقق من الأرقام، ثم continue لتخطيها."
+
+  - type: "quiz"
+    question: "ماذا سيكون ناتج هذا الكود؟"
+    code: |
+      count = 0
+      while count < 5:
+          count = count + 1
+          if count == 3:
+              continue
+          if count == 4:
+              break
+          print(count)
+    lang: "python"
+    options:
+      - "1, 2"
+      - "1, 2, 3"
+      - "1, 2, 4"
+      - "1, 2, 3, 4"
+    solution: 0
+    explanation: "count=1 يطبع، count=2 يطبع، count=3 يتخطى بـ continue، count=4 يخرج بـ break. النتيجة: 1, 2"
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود لطباعة الأرقام من 1 إلى 20 مع تخطي المضاعفات الخمسة:"
+    code: |
+      for i in @@INPUT@@(1, 21):
+          if i @@INPUT@@ 5 == 0:
+              continue
+          print(i)
+    solution:
+      - "range"
+      - "%"
+    explanation: "نستخدم range(1, 21) للحصول على 1-20، ونتخطى مضاعفات 5 بـ continue."
+
+  - type: "markdown"
+    content: |
+      ممتاز! الآن تمتلك كل أدوات التحكم في الحلقات:
+
+      **ملخص سريع:**
+      - `break`: اخرج من الحلقة فوراً
+      - `continue`: تخطى هذه الدورة واذهب للتالية
+      - `pass`: لا تفعل شيئاً (مكان حافظ)
+
+      هذه الأدوات ستجعل حلقاتك أكثر مرونة وقوة!

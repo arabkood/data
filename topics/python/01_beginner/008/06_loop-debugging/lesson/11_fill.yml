@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أكمل بالمسافات البادئة الصحيحة لطباعة 'النتيجة' مرة واحدة فقط بعد الحلقة:"
+code: |
+  total = 0
+  for i in range(5):
+      total = total + i
+  @@INPUT@@(f"النتيجة: {total}")
+solution:
+  - "print"
+explanation: "print بدون مسافة بادئة إضافية، فهي خارج الحلقة وستنفذ مرة واحدة."

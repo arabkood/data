@@ -1,0 +1,12 @@
+type: "order"
+lang: "python"
+question: "رتب الكود لحساب مجموع الأرقام حتى نصل إلى رقم سالب:"
+code:
+  - "numbers = [10, 20, 30, -5, 40, 50]"
+  - "total = 0"
+  - "for num in numbers:"
+  - "    if num < 0:"
+  - "        break"
+  - "    total = total + num"
+  - "print(f'المجموع: {total}')"
+explanation: "نجمع الأرقام الموجبة، وبمجرد أن نصل لرقم سالب، نستخدم break للخروج."

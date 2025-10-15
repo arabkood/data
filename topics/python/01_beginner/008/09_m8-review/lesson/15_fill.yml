@@ -1,0 +1,18 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لعد عدد الحروف المتحركة في نص:"
+code: |
+  text = "Python Programming"
+  vowels = "aeiouAEIOU"
+  count = 0
+
+  for char @@INPUT@@ text:
+      if char in @@INPUT@@:
+          count = count @@INPUT@@ 1
+
+  print(f"عدد الحروف المتحركة: {count}")
+solution:
+  - "in"
+  - "vowels"
+  - "+"
+explanation: "نمر على كل حرف، نتحقق إذا كان في قائمة الحروف المتحركة، ونعد."

@@ -1,0 +1,19 @@
+type: "quiz"
+question: "ماذا سيكون ناتج هذا الكود؟"
+code: |
+  count = 0
+  while count < 5:
+      count = count + 1
+      if count == 3:
+          continue
+      if count == 4:
+          break
+      print(count)
+lang: "python"
+options:
+  - "1, 2"
+  - "1, 2, 3"
+  - "1, 2, 4"
+  - "1, 2, 3, 4"
+solution: 0
+explanation: "count=1 يطبع، count=2 يطبع، count=3 يتخطى بـ continue، count=4 يخرج بـ break. النتيجة: 1, 2"

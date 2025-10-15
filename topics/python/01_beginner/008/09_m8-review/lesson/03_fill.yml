@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أكمل حلقة while لطباعة الأرقام الفردية من 1 إلى 9:"
+code: |
+  num = 1
+
+  @@INPUT@@ num @@INPUT@@ 10:
+      print(num)
+      num = num + @@INPUT@@
+solution:
+  - "while"
+  - "<"
+  - "2"
+explanation: "نبدأ من 1، نستمر حتى num < 10، ونزيد بمقدار 2 للحصول على الأرقام الفردية."

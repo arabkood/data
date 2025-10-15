@@ -1,0 +1,244 @@
+---
+item_id: "m8-item-5"
+type: "lesson"
+title: "For مقابل While: اختيار الحلقة المناسبة"
+base_xp: 750
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      الآن تعرف كلاً من حلقات `for` و `while`، لكن متى تستخدم كل واحدة؟
+
+      هذا سؤال مهم! اختيار الحلقة الصحيحة يجعل كودك أوضح وأسهل في القراءة.
+
+      دعنا نتعلم كيف نختار!
+
+  - type: "markdown"
+    content: |
+      ## حلقة For: عندما تعرف العدد
+
+      استخدم `for` عندما تعرف **بالضبط** كم مرة تريد التكرار، أو عندما تمر على **قائمة محددة**.
+
+      **مثال 1: عدد محدد من التكرارات**
+      ```python
+      for i in range(5):
+          print(i)
+      ```
+
+      **مثال 2: المرور على قائمة**
+      ```python
+      fruits = ["تفاح", "موز", "برتقال"]
+      for fruit in fruits:
+          print(fruit)
+      ```
+
+      **لماذا for؟** لأننا نعرف مسبقاً: 5 مرات، أو 3 فواكه.
+
+  - type: "markdown"
+    content: |
+      ## حلقة While: عندما لا تعرف العدد
+
+      استخدم `while` عندما **لا تعرف** كم مرة ستتكرر، أو عندما تريد الاستمرار حتى يحدث شيء معين.
+
+      **مثال 1: حتى يتحقق شرط**
+      ```python
+      password = ""
+      while password != "سر123":
+          password = input("أدخل كلمة السر: ")
+      ```
+
+      **مثال 2: حتى يصل رقم لقيمة معينة**
+      ```python
+      balance = 100
+      while balance < 1000:
+          balance = balance * 1.1
+      ```
+
+      **لماذا while؟** لا نعرف كم محاولة للباسورد، أو كم مرة سنضاعف!
+
+  - type: "quiz"
+    question: "أي حلقة يجب استخدامها لطباعة الأرقام من 1 إلى 100؟"
+    options:
+      - "for لأننا نعرف بالضبط: 100 مرة"
+      - "while لأنها أسرع"
+      - "for لأنها أقصر"
+      - "while لأن 100 رقم كبير"
+    solution: 0
+    explanation: "نعرف بالضبط عدد التكرارات (100)، لذا for هي الخيار الأمثل والأوضح."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل باستخدام الحلقة المناسبة لطباعة أسماء من قائمة:"
+    code: |
+      names = ["أحمد", "فاطمة", "محمد"]
+
+      @@INPUT@@ name @@INPUT@@ names:
+          print(name)
+    solution:
+      - "for"
+      - "in"
+    explanation: "لدينا قائمة محددة، for مع in هي الطريقة المثالية للمرور على عناصرها."
+
+  - type: "markdown"
+    content: |
+      دعنا نرى نفس المهمة بالطريقتين!
+
+      **المهمة:** اجمع الأرقام من 1 إلى 5
+
+      **باستخدام for:**
+      ```python
+      total = 0
+      for i in range(1, 6):
+          total = total + i
+      print(total)  # 15
+      ```
+
+      **باستخدام while:**
+      ```python
+      total = 0
+      i = 1
+      while i <= 5:
+          total = total + i
+          i = i + 1
+      print(total)  # 15
+      ```
+
+      **أيهما أفضل؟** for أوضح وأقصر هنا!
+
+  - type: "quiz"
+    question: "أي حلقة أفضل لبرنامج يستمر حتى يدخل المستخدم 'خروج'؟"
+    options:
+      - "for لأنها أسهل"
+      - "while لأننا لا نعرف كم محاولة سيحتاج المستخدم"
+      - "for مع range كبير"
+      - "كلاهما متساوٍ"
+    solution: 1
+    explanation: "لا نعرف متى سيكتب المستخدم 'خروج'، لذا while هي الخيار الطبيعي."
+
+  - type: "fill"
+    lang: "python"
+    question: "اختر الحلقة المناسبة لمضاعفة رقم حتى يصبح أكبر من 1000:"
+    code: |
+      num = 1
+
+      @@INPUT@@ num @@INPUT@@ 1000:
+          num = num * 2
+
+      print(num)
+    solution:
+      - "while"
+      - "/^<=?$/"
+    explanation: "لا نعرف كم مرة سنضاعف، لذا while هي الأنسب."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لاستخدام for للمرور على الأرقام الزوجية من 0 إلى 10:"
+    code:
+      - "for i in range(0, 11, 2):"
+      - "    print(i)"
+    explanation: "for مثالية عندما نعرف النطاق والخطوة، range(0, 11, 2) تعطينا الأرقام الزوجية."
+
+  - type: "markdown"
+    content: |
+      ## متى يمكن استخدام كلاهما؟
+
+      أحياناً يمكن استخدام أي منهما، لكن واحدة تكون **أوضح**:
+
+      **مثال: طباعة 1 إلى 3**
+
+      ✅ **واضح مع for:**
+      ```python
+      for i in range(1, 4):
+          print(i)
+      ```
+
+      ⚠️ **ممكن لكن أطول مع while:**
+      ```python
+      i = 1
+      while i <= 3:
+          print(i)
+          i = i + 1
+      ```
+
+      **القاعدة:** اختر الحلقة التي تجعل الكود أبسط وأوضح!
+
+  - type: "quiz"
+    question: "ما أفضل حلقة لبرنامج يقرأ درجات الحرارة من قائمة ويحسب المتوسط؟"
+    options:
+      - "while لأنها أقوى"
+      - "for لأن لدينا قائمة محددة"
+      - "while لأن الحساب معقد"
+      - "for لأنها أسرع"
+    solution: 1
+    explanation: "لدينا قائمة محددة من الدرجات، for مثالية للمرور على قائمة معروفة."
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل بالحلقة المناسبة لبرنامج يطلب رقماً حتى يدخل المستخدم رقماً موجباً:"
+    code: |
+      number = -1
+
+      @@INPUT@@ number @@INPUT@@ 0:
+          number = int(input("أدخل رقماً موجباً: "))
+
+      print(f"شكراً! الرقم هو {number}")
+    solution:
+      - "while"
+      - "/^<=?$/"
+    explanation: "لا نعرف كم محاولة سيحتاج المستخدم، while مثالية للتكرار حتى يتحقق شرط."
+
+  - type: "bug"
+    lang: "python"
+    question: "هذا الكود يستخدم while لطباعة قائمة، لكن for أفضل هنا. كيف نحسنه؟"
+    code: |
+      colors = ["أحمر", "أخضر", "أزرق"]
+      i = 0
+      while i < len(colors):
+          print(colors[i])
+          i = i + 1
+    solution: 1
+    hint: "فكر في طريقة أبسط للمرور على قائمة"
+    explanation: "استخدام while هنا معقد بلا داعي. for color in colors: أبسط وأوضح بكثير!"
+    expectedOutput: "أحمر، أخضر، أزرق"
+    actualOutput: "أحمر، أخضر، أزرق"
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل بالحلقة المناسبة لطباعة مربعات الأرقام من 1 إلى 10:"
+    code: |
+      @@INPUT@@ i @@INPUT@@ range(1, 11):
+          print(i ** 2)
+    solution:
+      - "for"
+      - "in"
+    explanation: "نعرف بالضبط: من 1 إلى 10، for مع range هي الخيار الواضح."
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الكود لاستخدام while للعد التنازلي من 5 إلى 1:"
+    code:
+      - "count = 5"
+      - "while count > 0:"
+      - "    print(count)"
+      - "    count = count - 1"
+      - "print('انطلق!')"
+    explanation: "while مناسبة للعد التنازلي بشرط بسيط، نبدأ من 5 وننقص حتى نصل إلى 0."
+
+  - type: "markdown"
+    content: |
+      ## الخلاصة: متى تستخدم أيهما؟
+
+      **استخدم For عندما:**
+      - ✅ تعرف عدد التكرارات بالضبط
+      - ✅ تمر على قائمة أو range محدد
+      - ✅ تريد كوداً قصيراً وواضحاً للتكرار المحدد
+
+      **استخدم While عندما:**
+      - ✅ لا تعرف عدد التكرارات
+      - ✅ تريد الاستمرار حتى يتحقق شرط معين
+      - ✅ تنتظر إدخالاً معيناً من المستخدم
+      - ✅ تتعامل مع حالات ديناميكية
+
+      **القاعدة الذهبية:** اختر الحلقة التي تجعل نيتك أوضح للقارئ!

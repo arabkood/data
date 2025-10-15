@@ -1,0 +1,20 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود للبحث عن عنصر في مصفوفة والتوقف عند إيجاده:"
+code: |
+  matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+  target = 6
+  found = False
+
+  for row @@INPUT@@ matrix:
+      for num in row:
+          if num == target:
+              print(f"وجدنا {target}")
+              found = True
+              @@INPUT@@
+      if found:
+          break
+solution:
+  - "in"
+  - "break"
+explanation: "نستخدم متغير found لكسر الحلقتين معاً عند إيجاد العنصر."

@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لإنشاء قائمة بأول 10 أعداد فيبوناتشي:"
+code: |
+  fib = [0, 1]
+
+  for i in range(@@INPUT@@):
+      next_num = fib[@@INPUT@@] + fib[-1]
+      fib@@INPUT@@(next_num)
+
+  print(fib)
+solution:
+  - "8"
+  - "-2"
+  - ".append"
+explanation: "نبدأ بـ [0, 1]، ثم نضيف 8 أرقام أخرى (كل رقم = مجموع آخر رقمين)."

@@ -1,0 +1,9 @@
+type: "order"
+lang: "python"
+question: "رتب الكود لطباعة مثلث من الأرقام (كل صف يحتوي أرقاماً من 1 حتى رقم الصف):"
+code:
+  - "for i in range(1, 5):"
+  - "    for j in range(1, i + 1):"
+  - "        print(j, end='')"
+  - "    print()"
+explanation: "الحلقة الخارجية للصفوف، والداخلية تطبع الأرقام من 1 حتى i."

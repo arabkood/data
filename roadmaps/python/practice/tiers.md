@@ -45,7 +45,6 @@
 11. Calculate average ⭐⭐
 12. Longest word ⭐⭐
 13. List filter only numbers ⭐⭐
-
 14. Abbreviate ⭐⭐
 15. String to hacker language ⭐⭐
 16. Calculator (2 numbers + operation) ⭐⭐

@@ -1,0 +1,17 @@
+type: "quiz"
+question: "ماذا سيطبع هذا الكود؟"
+code: |
+  for i in range(1, 3):
+      for j in range(1, 4):
+          if j == 2:
+              break
+          print(f"{i},{j}", end=" ")
+      print()
+lang: "python"
+options:
+  - "1,1 2,1"
+  - "1,1 1,2 2,1 2,2"
+  - "1,1 1,2 1,3 2,1 2,2 2,3"
+  - "1,1"
+solution: 0
+explanation: "لكل قيمة i، الحلقة الداخلية تبدأ ولكن تنكسر عند j=2. لذا تطبع فقط عندما j=1 لكل i."

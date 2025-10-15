@@ -1,0 +1,25 @@
+type: "quiz"
+question: "أي من الحلقات التالية ستسبب حلقة لانهائية؟"
+options:
+  - |
+    n = 5
+    while n > 0:
+        print(n)
+        n = n - 1
+  - |
+    n = 0
+    while n < 5:
+        print(n)
+        n = n + 1
+  - |
+    n = 10
+    while n > 5:
+        print(n)
+        n = n + 1
+  - |
+    n = 1
+    while n <= 3:
+        print(n)
+        n = n + 1
+solution: 2
+explanation: "الخيار الثالث سيستمر للأبد! n تبدأ بـ 10 وتزداد، لكن الشرط n > 5 سيظل صحيحاً دائماً لأن n تكبر وتكبر."

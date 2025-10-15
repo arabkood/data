@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أنشئ جدول ضرب كامل من 1 إلى 5 بتنسيق جميل:"
+code: |
+  for i in @@INPUT@@(1, 6):
+      for j in range(1, 6):
+          result = i @@INPUT@@ j
+          print(f"{result:3}", @@INPUT@@="")
+      print()
+solution:
+  - "range"
+  - "*"
+  - "end"
+explanation: "نستخدم حلقتين متداخلتين، و :3 لتنسيق الأرقام بعرض 3 خانات."

@@ -1,0 +1,10 @@
+type: "order"
+lang: "python"
+question: "رتب الكود لاستخدام while للعد التنازلي من 5 إلى 1:"
+code:
+  - "count = 5"
+  - "while count > 0:"
+  - "    print(count)"
+  - "    count = count - 1"
+  - "print('انطلق!')"
+explanation: "while مناسبة للعد التنازلي بشرط بسيط، نبدأ من 5 وننقص حتى نصل إلى 0."

@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أكمل بالحلقة المناسبة لبرنامج يطلب رقماً حتى يدخل المستخدم رقماً موجباً:"
+code: |
+  number = -1
+
+  @@INPUT@@ number @@INPUT@@ 0:
+      number = int(input("أدخل رقماً موجباً: "))
+
+  print(f"شكراً! الرقم هو {number}")
+solution:
+  - "while"
+  - "/^<=?$/"
+explanation: "لا نعرف كم محاولة سيحتاج المستخدم، while مثالية للتكرار حتى يتحقق شرط."

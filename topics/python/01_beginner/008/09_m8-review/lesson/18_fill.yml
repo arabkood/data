@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة جدول ضرب الرقم 7 من 1 إلى 10:"
+code: |
+  number = 7
+
+  for i in @@INPUT@@(1, @@INPUT@@):
+      result = number @@INPUT@@ i
+      print(f"{number} × {i} = {result}")
+solution:
+  - "range"
+  - "11"
+  - "*"
+explanation: "نستخدم range(1, 11) للحصول على 1-10، ونضرب 7 في كل رقم."

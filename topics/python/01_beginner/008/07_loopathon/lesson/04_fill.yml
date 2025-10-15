@@ -1,0 +1,20 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة نمط الماس باستخدام النجوم (حجم 5):"
+code: |
+  n = 5
+
+  # النصف العلوي
+  for i in range(1, n + 1):
+      print(" " @@INPUT@@ (n - i), end="")
+      print("*" @@INPUT@@ (2 * i - 1))
+
+  # النصف السفلي
+  for i in range(n - 1, 0, @@INPUT@@):
+      print(" " * (n - i), end="")
+      print("*" * (2 * i - 1))
+solution:
+  - "*"
+  - "*"
+  - "-1"
+explanation: "نطبع مسافات ثم نجوم. النصف العلوي يزيد، والسفلي ينقص."

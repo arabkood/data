@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لعكس قائمة بدون استخدام الدوال المدمجة:"
+code: |
+  original = [10, 20, 30, 40, 50]
+  reversed_list = []
+
+  for i in range(@@INPUT@@(original) - 1, @@INPUT@@, -1):
+      reversed_list@@INPUT@@(original[i])
+
+  print(reversed_list)
+solution:
+  - "len"
+  - "-1"
+  - ".append"
+explanation: "نبدأ من آخر فهرس ونتحرك للخلف، ونضيف كل عنصر للقائمة الجديدة."

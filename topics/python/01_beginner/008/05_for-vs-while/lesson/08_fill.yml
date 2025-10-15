@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "اختر الحلقة المناسبة لمضاعفة رقم حتى يصبح أكبر من 1000:"
+code: |
+  num = 1
+
+  @@INPUT@@ num @@INPUT@@ 1000:
+      num = num * 2
+
+  print(num)
+solution:
+  - "while"
+  - "/^<=?$/"
+explanation: "لا نعرف كم مرة سنضاعف، لذا while هي الأنسب."

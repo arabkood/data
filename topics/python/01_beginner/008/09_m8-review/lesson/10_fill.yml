@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة الأرقام من 10 إلى 1 بالعكس باستخدام while:"
+code: |
+  count = 10
+
+  while count @@INPUT@@ 0:
+      print(count)
+      count = count @@INPUT@@ 1
+solution:
+  - ">"
+  - "-"
+explanation: "نبدأ من 10، نستمر طالما count أكبر من 0، وننقص 1 في كل دورة."

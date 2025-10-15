@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أكمل حلقة while تستمر حتى يدخل المستخدم 'خروج':"
+code: |
+  while True:
+      user_input = input("اكتب شيئاً (أو 'خروج' للخروج): ")
+      if user_input == @@INPUT@@:
+          @@INPUT@@
+      print(f"كتبت: {user_input}")
+solution:
+  - "/^(['\"])خروج\\1$/"
+  - "break"
+explanation: "نستخدم while True لحلقة لانهائية، ثم break للخروج عند كتابة 'خروج'."

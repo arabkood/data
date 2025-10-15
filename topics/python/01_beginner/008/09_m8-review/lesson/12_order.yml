@@ -1,0 +1,10 @@
+type: "order"
+lang: "python"
+question: "رتب الكود لحساب مجموع الأرقام الزوجية فقط من 1 إلى 10:"
+code:
+  - "total = 0"
+  - "for i in range(1, 11):"
+  - "    if i % 2 == 0:"
+  - "        total = total + i"
+  - "print(f'المجموع: {total}')"
+explanation: "نهيئ total، نمر على الأرقام، نتحقق من الأرقام الزوجية ونجمعها."

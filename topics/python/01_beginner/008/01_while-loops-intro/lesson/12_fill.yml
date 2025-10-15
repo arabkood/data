@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لمضاعفة الرقم حتى يصبح أكبر من 1000:"
+code: |
+  value = 1
+
+  while value @@INPUT@@:
+      value = value @@INPUT@@
+
+  print(f"القيمة النهائية: {value}")
+solution:
+  - "/^<=?\\s*1000$/"
+  - "/^\\*\\s*2$/"
+explanation: "نستمر طالما value أصغر من أو يساوي 1000، ونضاعف القيمة في كل دورة."

@@ -1,0 +1,13 @@
+type: "bug"
+lang: "python"
+question: "هذا الكود يجب أن يطبع مربعاً 3×3 من النجوم، لكن هناك خطأ. أين؟"
+code: |
+  for i in range(3):
+      for j in range(3):
+          print("*", end="")
+  print()
+solution: 3
+hint: "أين يجب أن يكون السطر الجديد؟"
+explanation: "print() للسطر الجديد يجب أن يكون داخل الحلقة الخارجية (بعد الحلقة الداخلية)."
+expectedOutput: "مربع 3x3"
+actualOutput: "***********"

@@ -1,0 +1,17 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لحساب مجموع كل الأرقام في المصفوفة:"
+code: |
+  matrix = [[1, 2], [3, 4], [5, 6]]
+  total = 0
+
+  for row @@INPUT@@ matrix:
+      for num in @@INPUT@@:
+          total = total @@INPUT@@ num
+
+  print(f"المجموع: {total}")
+solution:
+  - "in"
+  - "row"
+  - "+"
+explanation: "نمر على كل صف، ثم على كل رقم في الصف، ونضيفه للمجموع الكلي."

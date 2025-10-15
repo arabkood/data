@@ -1,0 +1,24 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود للبحث عن رقم في مصفوفة والتوقف فور إيجاده:"
+code: |
+  matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+  target = 5
+  found = False
+
+  for row in matrix:
+      for num in row:
+          if num == target:
+              print(f"وجدنا {target}!")
+              found = @@INPUT@@
+              @@INPUT@@
+      if @@INPUT@@:
+          break
+
+  if not found:
+      print("لم نجده")
+solution:
+  - "True"
+  - "break"
+  - "found"
+explanation: "نستخدم متغير found لكسر الحلقتين معاً عند إيجاد الهدف."

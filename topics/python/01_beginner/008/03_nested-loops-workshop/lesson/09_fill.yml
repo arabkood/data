@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة جدول من 1 إلى 3 صفوف و1 إلى 4 أعمدة بهذا الشكل: صف_عمود"
+code: |
+  for row in range(1, @@INPUT@@):
+      for col in range(1, @@INPUT@@):
+          print(f"{row}_{col}", end=" ")
+      @@INPUT@@
+solution:
+  - "4"
+  - "5"
+  - "print()"
+explanation: "4 صفوف، 5 أعمدة، ونستخدم print() فارغة للانتقال لسطر جديد بعد كل صف."

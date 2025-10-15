@@ -157,14 +157,14 @@
 
 - [x] [L] Introduction to Lists
 - [x] [L] List Indexing Gym *(practice-heavy: 12+ indexing exercises)*
-- [ ] [L] List Slicing Fundamentals
-- [ ] [L] Loops & Lists Workshop *(80% exercises combining both)*
-- [ ] [C] Shopping Cart Manager
-- [ ] [L] Essential List Methods
-- [ ] [L] List Building Bootcamp *(practice marathon: 15+ exercises)*
-- [ ] [L] Common List Patterns
-- [ ] [C] Grade Analyzer
-- [ ] [L] Final Review
+- [x] [L] List Slicing Fundamentals
+- [x] [L] Loops & Lists Workshop *(80% exercises combining both)*
+- [x] [C] Shopping Cart Manager
+- [x] [L] Essential List Methods
+- [x] [L] List Building Bootcamp *(practice marathon: 15+ exercises)*
+- [x] [L] Common List Patterns
+- [x] [C] Grade Analyzer
+- [x] [L] Final Review
 
 ## M8: Advanced Loops
 

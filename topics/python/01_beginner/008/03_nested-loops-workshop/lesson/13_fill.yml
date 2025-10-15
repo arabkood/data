@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لطباعة مثلث مقلوب (يبدأ بأكثر عدد نجوم وينقص):"
+code: |
+  for i in range(@@INPUT@@, 0, @@INPUT@@):
+      for j in range(i):
+          print('*', end='')
+      print()
+solution:
+  - "5"
+  - "-1"
+explanation: "نبدأ من 5 وننزل إلى 1 بخطوات -1، فنحصل على مثلث مقلوب."

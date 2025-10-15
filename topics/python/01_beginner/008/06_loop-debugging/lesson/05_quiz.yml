@@ -1,0 +1,13 @@
+type: "quiz"
+question: "ما النتيجة الصحيحة لهذا الكود؟"
+code: |
+  for i in range(2, 5):
+      print(i)
+lang: "python"
+options:
+  - "2, 3, 4, 5"
+  - "2, 3, 4"
+  - "1, 2, 3, 4"
+  - "3, 4, 5"
+solution: 1
+explanation: "range(2, 5) يبدأ من 2 ولا يشمل 5، لذا النتيجة: 2, 3, 4"

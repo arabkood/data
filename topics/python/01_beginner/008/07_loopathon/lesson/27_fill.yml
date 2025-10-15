@@ -1,0 +1,17 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لحساب حاصل الضرب التراكمي لكل العناصر في مصفوفة 2D:"
+code: |
+  matrix = [[2, 3], [4, 5], [6, 7]]
+  product = @@INPUT@@
+
+  for row @@INPUT@@ matrix:
+      for num in row:
+          product = product @@INPUT@@ num
+
+  print(f"حاصل الضرب: {product}")
+solution:
+  - "1"
+  - "in"
+  - "*"
+explanation: "نهيئ product بـ 1 (ليس 0!)، ثم نضرب كل الأرقام."

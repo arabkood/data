@@ -1,0 +1,12 @@
+id: a111dee1-74cd-4d12-af8b-f3a8ee230ff2
+module_id: 8958d50f-b5a8-4cca-8a72-1a89db539963
+slug: nested-loops-workshop
+position: 3
+created_at: 2025-10-15T21:37:03.902Z
+updated_at: 2025-10-15T21:37:03.902Z
+type: lesson
+title: ورشة الحلقات المتداخلة
+difficulty: hard
+premium_only: true
+base_xp: 1000
+s3_path: python/01_beginner/008/03_nested-loops-workshop

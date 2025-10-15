@@ -1,0 +1,13 @@
+type: "bug"
+lang: "python"
+question: "هذا الكود لحساب مجموع الأرقام لا يعمل. ما المشكلة؟"
+code: |
+  numbers = [10, 20, 30]
+  for num in numbers:
+      sum = sum + num
+  print(sum)
+solution: 1
+hint: "هل sum معرف قبل استخدامه؟"
+explanation: "sum غير معرف قبل الحلقة! يجب إضافة sum = 0 قبل الحلقة."
+expectedOutput: "60"
+actualOutput: "NameError: name 'sum' is not defined"

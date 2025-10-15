@@ -1,0 +1,9 @@
+type: "order"
+lang: "python"
+question: "رتب الكود لطباعة الأرقام من 1 إلى 10 مع تخطي المضاعفات الثلاثة:"
+code:
+  - "for i in range(1, 11):"
+  - "    if i % 3 == 0:"
+  - "        continue"
+  - "    print(i)"
+explanation: "نتحقق في كل دورة: إذا كان الرقم من مضاعفات 3، نتخطاه بـ continue، وإلا نطبعه."

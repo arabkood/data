@@ -1,0 +1,22 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود لحساب المتوسط والحد الأقصى من قائمة أرقام:"
+code: |
+  numbers = [23, 67, 12, 89, 45, 34, 56]
+
+  total = 0
+  max_num = numbers[@@INPUT@@]
+
+  for num @@INPUT@@ numbers:
+      total = total + num
+      if num @@INPUT@@ max_num:
+          max_num = num
+
+  average = total @@INPUT@@ len(numbers)
+  print(f"المتوسط: {average}, الأقصى: {max_num}")
+solution:
+  - "0"
+  - "in"
+  - ">"
+  - "/"
+explanation: "نهيئ max_num بأول عنصر، نجمع ونقارن في حلقة واحدة، ثم نحسب المتوسط."

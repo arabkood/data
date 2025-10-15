@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أكمل باستخدام الحلقة المناسبة لطباعة أسماء من قائمة:"
+code: |
+  names = ["أحمد", "فاطمة", "محمد"]
+
+  @@INPUT@@ name @@INPUT@@ names:
+      print(name)
+solution:
+  - "for"
+  - "in"
+explanation: "لدينا قائمة محددة، for مع in هي الطريقة المثالية للمرور على عناصرها."

@@ -1,0 +1,9 @@
+type: "quiz"
+question: "ما أفضل حلقة لقراءة إدخال المستخدم حتى يكتب 'خروج'؟"
+options:
+  - "for مع range كبير جداً"
+  - "while True مع break"
+  - "for مع قائمة"
+  - "لا يمكن فعل ذلك بالحلقات"
+solution: 1
+explanation: "while True مع break عند كتابة 'خروج' هي الطريقة المثالية لهذا السيناريو."
