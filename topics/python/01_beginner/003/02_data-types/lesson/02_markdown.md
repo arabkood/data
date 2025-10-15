@@ -6,4 +6,4 @@
 
 بناءً على الإجابة، يضع المعلومة في الفئة المناسبة. هذه الفئات تسمى **أنواع البيانات**.
 
-# media_idea: Simple diagram showing different data types like boxes labeled "Numbers", "Text", "True/False" with examples inside
+<!-- # media_idea: Simple diagram showing different data types like boxes labeled "Numbers", "Text", "True/False" with examples inside -->

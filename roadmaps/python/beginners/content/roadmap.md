@@ -180,15 +180,15 @@
 
 ### Items
 
-- [ ] [L] While Loops Introduction
-- [ ] [L] Loop Control Gym *(practice-heavy: break, continue, pass exercises)*
-- [ ] [L] Nested Loops Workshop *(12+ nested loop patterns)*
-- [ ] [C] Matrix Pattern Builder
-- [ ] [L] For vs While: Choosing the Right Loop
-- [ ] [L] Loop Debugging Clinic *(10 bug-finding exercises)*
-- [ ] [L] Advanced Loop Marathon *(15+ complex scenarios)*
-- [ ] [C] Number Guessing Game
-- [ ] [L] Final Review
+- [x] [L] While Loops Introduction
+- [x] [L] Loop Control Gym *(practice-heavy: break, continue, pass exercises)*
+- [x] [L] Nested Loops Workshop *(12+ nested loop patterns)*
+- [x] [C] Matrix Pattern Builder
+- [x] [L] For vs While: Choosing the Right Loop
+- [x] [L] Loop Debugging Clinic *(10 bug-finding exercises)*
+- [x] [L] Advanced Loop Marathon *(15+ complex scenarios)*
+- [x] [C] Number Guessing Game
+- [x] [L] Final Review
 
 ## M9: Dictionaries & Data
 
