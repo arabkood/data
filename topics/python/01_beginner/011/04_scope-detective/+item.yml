@@ -1,0 +1,12 @@
+id: c5330d5c-a09f-4302-bb5d-fd2436fa738f
+module_id: 92b341a6-e741-4ba8-b71d-a56b5a23a9e1
+slug: scope-detective
+position: 4
+created_at: 2025-10-17T14:06:32.843Z
+updated_at: 2025-10-17T14:06:32.843Z
+type: code
+title: محقق النطاق
+difficulty: hard
+premium_only: true
+base_xp: 1300
+s3_path: python/01_beginner/011/04_scope-detective

@@ -1,0 +1,12 @@
+id: 6d75051c-017a-4269-bc7c-f989331b0a18
+module_id: 79874944-2f38-45f3-bb4b-78b51015b294
+slug: safe-input-handler
+position: 4
+created_at: 2025-10-17T14:06:32.841Z
+updated_at: 2025-10-17T14:06:32.841Z
+type: code
+title: معالج الإدخال الآمن
+difficulty: hard
+premium_only: true
+base_xp: 1300
+s3_path: python/01_beginner/012/04_safe-input-handler

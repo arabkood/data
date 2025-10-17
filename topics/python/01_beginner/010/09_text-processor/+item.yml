@@ -1,0 +1,12 @@
+id: 5425eed0-90e2-4ae2-bce9-a32058479d46
+module_id: 86a27813-45e1-413c-ad2e-10088c631fbb
+slug: text-processor
+position: 9
+created_at: 2025-10-17T14:06:32.812Z
+updated_at: 2025-10-17T14:06:32.812Z
+type: code
+title: مكتبة معالجة النصوص
+difficulty: hard
+premium_only: true
+base_xp: 1300
+s3_path: python/01_beginner/010/09_text-processor

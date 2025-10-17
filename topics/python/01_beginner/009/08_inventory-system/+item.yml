@@ -1,0 +1,12 @@
+id: 8bf140c7-6c44-4d98-9617-52dec0ad6fb7
+module_id: bf638e40-e3a8-420c-b796-57b02424d85a
+slug: inventory-system
+position: 8
+created_at: 2025-10-17T14:06:32.815Z
+updated_at: 2025-10-17T14:06:32.815Z
+type: code
+title: نظام إدارة المخزون
+difficulty: hard
+premium_only: true
+base_xp: 1300
+s3_path: python/01_beginner/009/08_inventory-system

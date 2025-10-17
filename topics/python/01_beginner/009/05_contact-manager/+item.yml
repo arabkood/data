@@ -1,0 +1,12 @@
+id: c3f2b4e1-9217-43b1-86d2-296865a51207
+module_id: bf638e40-e3a8-420c-b796-57b02424d85a
+slug: contact-manager
+position: 5
+created_at: 2025-10-17T14:06:32.814Z
+updated_at: 2025-10-17T14:06:32.814Z
+type: code
+title: مدير جهات الاتصال
+difficulty: hard
+premium_only: true
+base_xp: 1300
+s3_path: python/01_beginner/009/05_contact-manager
