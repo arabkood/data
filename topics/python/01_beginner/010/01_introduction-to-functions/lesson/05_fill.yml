@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تطبع 'السلام عليكم'"
+code: |
+  @@INPUT@@ greet():
+      @@INPUT@@("السلام عليكم")
+
+  greet()
+solution:
+  - "def"
+  - "print"

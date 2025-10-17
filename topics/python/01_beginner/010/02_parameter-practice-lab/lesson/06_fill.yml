@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تطبع رسالة مخصصة"
+code: |
+  def print_message(msg):
+      print(@@INPUT@@)
+
+  print_message(@@INPUT@@)
+solution:
+  - "msg"
+  - "/^(\"|').+(\"|')$/"

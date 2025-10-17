@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "ابحث عن القيمة الأكبر في القاموس"
+code: |
+  nums = {"a": 15, "b": 30, "c": 20}
+  max_val = 0
+  for @@INPUT@@ in nums@@INPUT@@:
+      if @@INPUT@@ > max_val:
+          max_val = @@INPUT@@
+  print(max_val)
+solution:
+  - "/^(value|val|v|num)$/"
+  - ".values()"
+  - "/^(value|val|v|num)$/"
+  - "/^(value|val|v|num)$/"

@@ -1,0 +1,9 @@
+type: "fill"
+lang: "python"
+question: "احصل على جميع القيم واطبعها"
+code: |
+  prices = {"apple": 5, "banana": 3, "orange": 4}
+  all_prices = @@INPUT@@
+  print(all_prices)
+solution:
+  - "/^prices\\.values\\(\\)$/"

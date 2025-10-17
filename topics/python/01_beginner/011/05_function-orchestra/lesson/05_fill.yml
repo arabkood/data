@@ -1,0 +1,19 @@
+type: "fill"
+lang: "python"
+question: "بناء سلسلة دوال"
+code: |
+  def step1():
+      print("خطوة 1")
+      @@INPUT@@()
+
+  def step2():
+      print("خطوة 2")
+      @@INPUT@@()
+
+  def step3():
+      print("خطوة 3")
+
+  step1()
+solution:
+  - "step2"
+  - "step3"

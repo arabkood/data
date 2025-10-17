@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "عالج IndexError"
+code: |
+  numbers = [10, 20, 30]
+  try:
+      print(numbers[5])
+  except @@INPUT@@:
+      print("الفهرس خارج النطاق")
+solution:
+  - "IndexError"

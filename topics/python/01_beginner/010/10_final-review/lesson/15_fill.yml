@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تُرجع الأكبر من رقمين"
+code: |
+  def max_num(a, b):
+      @@INPUT@@ a > b:
+          @@INPUT@@ a
+      @@INPUT@@:
+          @@INPUT@@ b
+
+  print(max_num(10, 20))
+solution:
+  - "if"
+  - "return"
+  - "else"
+  - "return"

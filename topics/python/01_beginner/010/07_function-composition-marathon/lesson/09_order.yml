@@ -1,0 +1,10 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لدوال تحول درجة الحرارة"
+code:
+  - "def celsius_to_fahrenheit(c):"
+  - "    return (c * 9/5) + 32"
+  - "def kelvin_to_celsius(k):"
+  - "    return k - 273.15"
+  - "result = celsius_to_fahrenheit(kelvin_to_celsius(300))"
+  - "print(result)"

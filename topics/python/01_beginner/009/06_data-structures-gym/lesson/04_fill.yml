@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أضف درجة جديدة (95) لقائمة الدرجات"
+code: |
+  student = {"name": "سارة", "scores": [80, 85]}
+  student[@@INPUT@@].@@INPUT@@(@@INPUT@@)
+  print(student["scores"])
+solution:
+  - "/^(\"|')scores(\"|')$/"
+  - "append"
+  - "95"

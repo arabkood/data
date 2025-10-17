@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "احسب إجمالي المبيعات لكل منطقة"
+code: |
+  regions = {
+      "north": [500, 600, 550],
+      "south": [700, 800, 750]
+  }
+  for region, sales in @@INPUT@@:
+      total = @@INPUT@@(@@INPUT@@)
+      print(region, ":", total)
+solution:
+  - "/^regions\\.items\\(\\)$/"
+  - "sum"
+  - "sales"

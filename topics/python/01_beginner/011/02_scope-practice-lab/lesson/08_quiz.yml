@@ -1,0 +1,18 @@
+type: "quiz"
+question: "هل سيعمل هذا الكود؟"
+code: |
+  def func1():
+      x = 10
+
+  def func2():
+      print(x)
+
+  func1()
+  func2()
+lang: "python"
+options:
+  - "نعم، يطبع 10"
+  - "لا، خطأ - x محلي لـ func1"
+  - "نعم، يطبع None"
+solution: 1
+explanation: "x محلي لـ func1، لا يمكن لـ func2 الوصول إليه"

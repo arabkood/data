@@ -1,0 +1,10 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لحساب عدد الطلاب الناجحين"
+code:
+  - "students = [{\"name\": \"أحمد\", \"grade\": 75}, {\"name\": \"سارة\", \"grade\": 55}]"
+  - "passed = 0"
+  - "for student in students:"
+  - "    if student[\"grade\"] >= 60:"
+  - "        passed += 1"
+  - "print(passed)"

@@ -1,0 +1,24 @@
+type: "fill"
+lang: "python"
+question: "بناء خط إنتاج (pipeline)"
+code: |
+  def step_a(n):
+      return n + 10
+
+  def step_b(n):
+      return n * 2
+
+  def step_c(n):
+      return n - 5
+
+  def process(n):
+      result = @@INPUT@@(n)
+      result = @@INPUT@@(result)
+      result = @@INPUT@@(result)
+      return result
+
+  print(process(5))
+solution:
+  - "step_a"
+  - "step_b"
+  - "step_c"

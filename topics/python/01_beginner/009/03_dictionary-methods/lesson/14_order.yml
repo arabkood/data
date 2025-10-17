@@ -1,0 +1,7 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر للحصول على جميع المفاتيح وطباعتها"
+code:
+  - "store = {\"apples\": 50, \"oranges\": 30}"
+  - "all_keys = store.keys()"
+  - "print(list(all_keys))"

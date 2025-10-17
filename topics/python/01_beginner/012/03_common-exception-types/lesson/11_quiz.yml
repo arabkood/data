@@ -1,0 +1,11 @@
+type: "quiz"
+question: "أي استثناء سيحدث؟"
+code: |
+  x = "hello" * "world"
+lang: "python"
+options:
+  - "ValueError"
+  - "TypeError"
+  - "KeyError"
+solution: 1
+explanation: "لا يمكن ضرب نصين، هذا TypeError"

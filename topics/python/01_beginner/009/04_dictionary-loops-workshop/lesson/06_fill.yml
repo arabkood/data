@@ -1,0 +1,9 @@
+type: "fill"
+lang: "python"
+question: "اطبع كل درجة من القاموس"
+code: |
+  grades = {"math": 85, "science": 90, "english": 88}
+  for grade in grades@@INPUT@@:
+      print(grade)
+solution:
+  - ".values()"

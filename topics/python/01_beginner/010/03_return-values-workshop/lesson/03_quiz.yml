@@ -1,0 +1,8 @@
+type: "quiz"
+question: "ما الفرق بين print و return في الدالة؟"
+options:
+  - "لا يوجد فرق"
+  - "print تعرض فقط، return تُرجع قيمة يمكن استخدامها"
+  - "return تعرض، print تُرجع قيمة"
+solution: 1
+explanation: "print تعرض على الشاشة فقط، return تُرجع قيمة يمكن حفظها واستخدامها"

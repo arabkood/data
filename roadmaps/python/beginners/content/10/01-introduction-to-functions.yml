@@ -1,0 +1,202 @@
+---
+item_id: "module-10-item-1"
+type: "lesson"
+title: "مقدمة إلى الدوال"
+base_xp: 800
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      تخيل أنك تكتب نفس الكود مراراً وتكراراً:
+
+      ```python
+      print("مرحباً أحمد!")
+      print("مرحباً سارة!")
+      print("مرحباً علي!")
+      ```
+
+      هذا متعب ومكرر! 😓
+
+  - type: "markdown"
+    content: |
+      **الدوال** (Functions) هي الحل!
+
+      الدالة مثل **وصفة طبخ**: تكتبها مرة واحدة، ثم تستخدمها كلما احتجتها.
+
+      ```python
+      def greet():
+          print("مرحباً!")
+
+      greet()  # نستدعي الدالة
+      greet()  # يمكن استدعاؤها مراراً
+      ```
+
+      الكلمة `def` تعني "define" أي "عرّف الدالة"
+
+  - type: "quiz"
+    question: "لماذا نستخدم الدوال؟"
+    options:
+      - "لتجعل البرنامج أبطأ"
+      - "لتجنب تكرار نفس الكود"
+      - "لجعل الكود أطول"
+    solution: 1
+    explanation: "الدوال تساعدنا على عدم تكرار الكود وتجعله أكثر تنظيماً وسهولة في الصيانة"
+
+  - type: "markdown"
+    content: |
+      **تشريح الدالة:**
+
+      ```python
+      def say_hello():  # 1. تعريف الدالة (اسمها + أقواس)
+          print("Hello")  # 2. جسم الدالة (مسافة بادئة!)
+
+      say_hello()  # 3. استدعاء الدالة
+      ```
+
+      ⚠️ مهم: جسم الدالة يجب أن يكون مسافة بادئة (indented)!
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تطبع 'السلام عليكم'"
+    code: |
+      @@INPUT@@ greet():
+          @@INPUT@@("السلام عليكم")
+
+      greet()
+    solution:
+      - "def"
+      - "print"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تطبع رقمك المفضل"
+    code: |
+      def print_number():
+          print(@@INPUT@@)
+
+      @@INPUT@@()
+    solution:
+      - "/^\\d+$/"
+      - "print_number"
+
+  - type: "markdown"
+    content: |
+      الدالة لا تعمل إلا عند **استدعائها**:
+
+      ```python
+      def show_message():
+          print("رسالة")
+
+      # لا شيء يحدث هنا!
+      # يجب استدعاء الدالة:
+      show_message()  # الآن تعمل!
+      ```
+
+  - type: "quiz"
+    question: "ماذا يحدث عند تعريف دالة بدون استدعائها؟"
+    code: |
+      def test():
+          print("Test")
+    lang: "python"
+    options:
+      - "تطبع 'Test' مباشرة"
+      - "لا يحدث شيء"
+      - "يحدث خطأ"
+    solution: 1
+    explanation: "تعريف الدالة فقط لا يشغّلها، يجب استدعاؤها باستخدام اسمها()"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة واستدعها مرتين"
+    code: |
+      def say_hi():
+          print("Hi!")
+
+      @@INPUT@@
+      @@INPUT@@
+    solution:
+      - "say_hi()"
+      - "say_hi()"
+
+  - type: "bug"
+    lang: "python"
+    question: "هناك خطأ في تعريف الدالة، أين؟"
+    code: |
+      def welcome()
+      print("Welcome!")
+      welcome()
+    solution: 0
+    hint: "ماذا ينقص بعد اسم الدالة؟"
+    explanation: "ينقص النقطتان : بعد ()، الشكل الصحيح: def welcome():"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لإنشاء واستدعاء دالة"
+    code:
+      - "def show():"
+      - "    print('عرض')"
+      - "show()"
+
+  - type: "markdown"
+    content: |
+      يمكنك كتابة أي كود داخل الدالة:
+
+      ```python
+      def count_to_three():
+          print(1)
+          print(2)
+          print(3)
+
+      count_to_three()
+      ```
+
+      كل ما داخل الدالة ينفذ عند استدعائها!
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تطبع رقمين"
+    code: |
+      def print_numbers():
+          print(@@INPUT@@)
+          print(@@INPUT@@)
+
+      print_numbers()
+    solution:
+      - "/^\\d+$/"
+      - "/^\\d+$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تطبع اسمك 3 مرات"
+    code: |
+      def repeat_name():
+          @@INPUT@@ i in range(@@INPUT@@):
+              print("اسمك")
+
+      repeat_name()
+    solution:
+      - "for"
+      - "3"
+
+  - type: "bug"
+    lang: "python"
+    question: "الدالة لا تطبع شيئاً، لماذا؟"
+    code: |
+      def display():
+          print("عرض")
+    solution: 1
+    hint: "هل استدعينا الدالة؟"
+    explanation: "الدالة معرّفة لكن لم يتم استدعاؤها، يجب إضافة display() بعد التعريف"
+
+  - type: "markdown"
+    content: |
+      رائع! أنت الآن تعرف:
+
+      ✅ ما هي الدالة ولماذا نستخدمها
+      ✅ كيف تُنشئ دالة باستخدام `def`
+      ✅ كيف تستدعي دالة باستخدام `()`
+      ✅ أن جسم الدالة يحتاج مسافة بادئة
+
+      الدوال ستجعل كودك أنظف وأسهل! 🎯

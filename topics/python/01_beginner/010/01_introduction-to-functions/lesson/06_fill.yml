@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تطبع رقمك المفضل"
+code: |
+  def print_number():
+      print(@@INPUT@@)
+
+  @@INPUT@@()
+solution:
+  - "/^\\d+$/"
+  - "print_number"

@@ -1,0 +1,15 @@
+type: "quiz"
+question: "ماذا سيُطبع؟"
+code: |
+  try:
+      x = 10 + 20
+      print("نجح")
+  except:
+      print("فشل")
+lang: "python"
+options:
+  - "نجح"
+  - "فشل"
+  - "لا شيء"
+solution: 0
+explanation: "لا يوجد خطأ، فيُطبع 'نجح' ولا يُنفذ except"

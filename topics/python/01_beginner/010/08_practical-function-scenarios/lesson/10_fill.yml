@@ -1,0 +1,17 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تعيد الأرقام الزوجية من قائمة"
+code: |
+  def get_even_numbers(numbers):
+      result = []
+      for num in @@INPUT@@:
+          if num @@INPUT@@ 2 == 0:
+              result.@@INPUT@@(num)
+      return @@INPUT@@
+
+  print(get_even_numbers([1, 2, 3, 4, 5]))
+solution:
+  - "numbers"
+  - "%"
+  - "append"
+  - "result"

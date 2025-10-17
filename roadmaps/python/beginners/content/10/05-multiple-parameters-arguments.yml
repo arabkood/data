@@ -1,0 +1,210 @@
+---
+item_id: "module-10-item-5"
+type: "lesson"
+title: "معاملات ووسائط متعددة"
+base_xp: 850
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      الدوال يمكنها استقبال **أكثر من معامل**! 🎯
+
+      ```python
+      def greet(name, age):
+          print(f"مرحباً {name}، عمرك {age}")
+
+      greet("أحمد", 25)
+      ```
+
+      نفصل المعاملات بفاصلة `,`
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تأخذ اسمين وتطبعهما"
+    code: |
+      def print_names(@@INPUT@@, @@INPUT@@):
+          print(@@INPUT@@, @@INPUT@@)
+
+      print_names("أحمد", "سارة")
+    solution:
+      - "/^(name1|first|n1)$/"
+      - "/^(name2|second|n2)$/"
+      - "/^(name1|first|n1)$/"
+      - "/^(name2|second|n2)$/"
+
+  - type: "markdown"
+    content: |
+      **ترتيب المعاملات مهم جداً!**
+
+      ```python
+      def subtract(a, b):
+          return a - b
+
+      subtract(10, 3)  # 7
+      subtract(3, 10)  # -7 (مختلف!)
+      ```
+
+      الوسيط الأول يذهب للمعامل الأول، والثاني للثاني!
+
+  - type: "quiz"
+    question: "ما ناتج هذه الدالة؟"
+    code: |
+      def divide(x, y):
+          return x / y
+
+      result = divide(20, 4)
+    lang: "python"
+    options:
+      - "5.0"
+      - "0.2"
+      - "خطأ"
+    solution: 0
+    explanation: "20 / 4 = 5.0 (x=20, y=4)"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحسب مساحة المستطيل"
+    code: |
+      def rectangle_area(@@INPUT@@, @@INPUT@@):
+          return @@INPUT@@ * @@INPUT@@
+
+      area = rectangle_area(5, 10)
+      print(area)
+    solution:
+      - "/^(length|width|l|w)$/"
+      - "/^(width|height|length|w|h|l)$/"
+      - "/^(length|width|l|w)$/"
+      - "/^(width|height|length|w|h|l)$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "أرجع الأكبر من ثلاثة أرقام"
+    code: |
+      def max_three(a, b, c):
+          if a > b @@INPUT@@ a > c:
+              return @@INPUT@@
+          @@INPUT@@ b > c:
+              return @@INPUT@@
+          @@INPUT@@:
+              return @@INPUT@@
+
+      print(max_three(5, 10, 3))
+    solution:
+      - "and"
+      - "a"
+      - "elif"
+      - "b"
+      - "else"
+      - "c"
+
+  - type: "markdown"
+    content: |
+      يمكنك تسمية الوسائط عند الاستدعاء:
+
+      ```python
+      def info(name, age, city):
+          print(f"{name}, {age}, {city}")
+
+      # عادي (بالترتيب)
+      info("أحمد", 25, "جدة")
+
+      # بالاسم (أي ترتيب)
+      info(city="جدة", name="أحمد", age=25)
+      ```
+
+      هذا يُسمى **keyword arguments**!
+
+  - type: "fill"
+    lang: "python"
+    question: "استدع الدالة باستخدام أسماء المعاملات"
+    code: |
+      def create_user(username, email):
+          print(f"{username}: {email}")
+
+      create_user(@@INPUT@@="ali123", @@INPUT@@="ali@example.com")
+    solution:
+      - "username"
+      - "email"
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا يحدث خطأ؟"
+    code: |
+      def add_three(a, b, c):
+          return a + b + c
+
+      result = add_three(1, 2)
+      print(result)
+    solution: 3
+    hint: "كم معامل تحتاج الدالة؟"
+    explanation: "الدالة تحتاج 3 معاملات لكننا مررنا 2 فقط"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لدالة تحسب متوسط 3 أرقام"
+    code:
+      - "def average(a, b, c):"
+      - "    total = a + b + c"
+      - "    return total / 3"
+      - "result = average(10, 20, 30)"
+      - "print(result)"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تُنشئ اسم كامل من اسم أول وأخير"
+    code: |
+      def full_name(first, last):
+          return @@INPUT@@ + " " + @@INPUT@@
+
+      name = full_name("محمد", "أحمد")
+      print(name)
+    solution:
+      - "first"
+      - "last"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحسب السعر النهائي بعد الخصم"
+    code: |
+      def final_price(price, discount):
+          return price - (price * discount / @@INPUT@@)
+
+      result = final_price(100, 20)
+      print(result)
+    solution:
+      - "100"
+
+  - type: "quiz"
+    question: "ما الفائدة من استخدام keyword arguments؟"
+    options:
+      - "تجعل الكود أبطأ"
+      - "تسمح بتمرير الوسائط بأي ترتيب"
+      - "لا فائدة منها"
+    solution: 1
+    explanation: "keyword arguments تسمح بتمرير الوسائط بأي ترتيب وتجعل الكود أوضح"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحسب محيط المستطيل"
+    code: |
+      def perimeter(length, width):
+          return 2 * (@@INPUT@@ + @@INPUT@@)
+
+      result = perimeter(5, 3)
+      print(result)
+    solution:
+      - "length"
+      - "width"
+
+  - type: "markdown"
+    content: |
+      رائع! 🎉 الآن تتقن:
+
+      ✅ إنشاء دوال بمعاملات متعددة
+      ✅ فهم أهمية ترتيب المعاملات
+      ✅ استخدام keyword arguments
+      ✅ بناء دوال معقدة بوسائط متعددة
+
+      معاملات متعددة = دوال أقوى! 💪

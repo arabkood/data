@@ -1,0 +1,10 @@
+type: "bug"
+lang: "python"
+question: "لماذا لا تطبع الدالة شيئاً؟"
+code: |
+  def show(value):
+      print(value)
+  show()
+solution: 3
+hint: "الدالة تحتاج معامل!"
+explanation: "الدالة معرّفة بمعامل (value) لكننا لم نمرر أي وسيط عند استدعائها"

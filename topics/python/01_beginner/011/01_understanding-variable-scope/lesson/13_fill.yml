@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "المعامل محلي للدالة"
+code: |
+  def multiply(x):  # x @@INPUT@@
+      result = x * 2  # result @@INPUT@@
+      return result
+
+  answer = multiply(5)  # answer @@INPUT@@
+solution:
+  - "/^(local|محلي)$/"
+  - "/^(local|محلي)$/"
+  - "/^(global|عام)$/"

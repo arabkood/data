@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "احم الحلقة من الأخطاء"
+code: |
+  items = ["10", "20", "abc", "30"]
+  for item in items:
+      @@INPUT@@:
+          num = int(item)
+          print(num)
+      @@INPUT@@:
+          print(f"{item} غير صحيح")
+solution:
+  - "try"
+  - "except"

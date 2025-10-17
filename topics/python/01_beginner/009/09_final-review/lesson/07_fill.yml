@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "احسب مجموع كل القيم باستخدام .values()"
+code: |
+  numbers = {"a": 10, "b": 20, "c": 30}
+  total = @@INPUT@@(numbers@@INPUT@@)
+  print(total)
+solution:
+  - "sum"
+  - ".values()"

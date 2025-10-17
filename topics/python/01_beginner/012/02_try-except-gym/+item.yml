@@ -1,0 +1,12 @@
+id: 966eed3e-c844-4487-8299-1cf8739bd58d
+module_id: 79874944-2f38-45f3-bb4b-78b51015b294
+slug: try-except-gym
+position: 2
+created_at: 2025-10-17T13:52:47.054Z
+updated_at: 2025-10-17T13:52:47.054Z
+type: lesson
+title: صالة تمارين Try-Except
+difficulty: medium
+premium_only: true
+base_xp: 950
+s3_path: python/01_beginner/012/02_try-except-gym

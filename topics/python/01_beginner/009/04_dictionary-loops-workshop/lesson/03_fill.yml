@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "اطبع كل مفتاح في القاموس"
+code: |
+  ages = {"علي": 25, "فاطمة": 30, "محمد": 22}
+  @@INPUT@@ person @@INPUT@@ ages:
+      print(person)
+solution:
+  - "for"
+  - "in"

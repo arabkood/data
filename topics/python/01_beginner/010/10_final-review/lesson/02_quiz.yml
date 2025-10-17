@@ -1,0 +1,8 @@
+type: "quiz"
+question: "كيف نُعرّف دالة في Python؟"
+options:
+  - "function myFunc():"
+  - "def myFunc():"
+  - "create myFunc():"
+solution: 1
+explanation: "نستخدم الكلمة المفتاحية def لتعريف دالة"

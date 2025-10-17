@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "أكمل سلسلة معالجة النص"
+code: |
+  def remove_spaces(text):
+      return text.replace(" ", "")
+
+  def lowercase(text):
+      return text.lower()
+
+  result = @@INPUT@@(@@INPUT@@("HELLO WORLD"))
+  print(result)
+solution:
+  - "lowercase"
+  - "remove_spaces"

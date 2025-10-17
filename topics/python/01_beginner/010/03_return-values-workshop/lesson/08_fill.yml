@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أرجع مربع الرقم"
+code: |
+  def square(n):
+      return @@INPUT@@
+
+  result = square(6)
+  print(result)
+solution:
+  - "/^n\\s*\\*\\s*n$/"

@@ -1,0 +1,9 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لمعالجة خطأ القاموس"
+code:
+  - "data = {\"name\": \"أحمد\"}"
+  - "try:"
+  - "    print(data[\"age\"])"
+  - "except:"
+  - "    print(\"المفتاح غير موجود\")"

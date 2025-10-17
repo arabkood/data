@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "استخدم .get() مع قيمة افتراضية 'مجهول'"
+code: |
+  person = {"age": 30}
+  name = person.get(@@INPUT@@, @@INPUT@@)
+  print(name)
+solution:
+  - "/^(\"|')name(\"|')$/"
+  - "/^(\"|')مجهول(\"|')$/"

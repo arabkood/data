@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أنشئ قاموس يحتوي على قائمة وأضف عنصر للقائمة"
+code: |
+  team = {
+      "name": "الهلال",
+      "players": []
+  }
+  team[@@INPUT@@].@@INPUT@@(@@INPUT@@)
+  print(team["players"])
+solution:
+  - "/^(\"|')players(\"|')$/"
+  - "append"
+  - "/^(\"|').+(\"|')$/"

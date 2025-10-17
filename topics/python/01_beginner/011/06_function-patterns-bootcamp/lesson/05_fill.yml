@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تحول النص لأحرف كبيرة وتزيل المسافات"
+code: |
+  def process_text(text):
+      text = text@@INPUT@@()
+      text = text.replace(" ", "")
+      return @@INPUT@@
+
+  print(process_text("hello world"))
+solution:
+  - ".upper"
+  - "text"

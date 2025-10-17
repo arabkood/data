@@ -1,0 +1,8 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لدالة تحسب مساحة المربع"
+code:
+  - "def square_area(side):"
+  - "    area = side * side"
+  - "    print(f'المساحة: {area}')"
+  - "square_area(4)"

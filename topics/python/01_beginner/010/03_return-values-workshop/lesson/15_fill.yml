@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أرجع النص بأحرف كبيرة"
+code: |
+  def uppercase(text):
+      return text@@INPUT@@
+
+  result = uppercase("hello")
+  print(result)
+solution:
+  - ".upper()"

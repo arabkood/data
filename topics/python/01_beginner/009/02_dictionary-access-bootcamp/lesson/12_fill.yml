@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "اطبع الاسم الكامل (الاسم الأول + اسم العائلة)"
+code: |
+  person = {"first_name": "خالد", "last_name": "العتيبي"}
+  full_name = @@INPUT@@ + " " + @@INPUT@@
+  print(full_name)
+solution:
+  - "/^person\\[(\"|')first_name(\"|')\\]$/"
+  - "/^person\\[(\"|')last_name(\"|')\\]$/"

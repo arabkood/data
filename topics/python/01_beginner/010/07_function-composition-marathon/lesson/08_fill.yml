@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تحسب الخصم ثم الضريبة"
+code: |
+  def apply_discount(price, discount):
+      return price - (price * discount / 100)
+
+  def apply_tax(price, tax):
+      return price + (price * tax / 100)
+
+  final = apply_tax(@@INPUT@@(100, 20), 15)
+  print(final)
+solution:
+  - "apply_discount"

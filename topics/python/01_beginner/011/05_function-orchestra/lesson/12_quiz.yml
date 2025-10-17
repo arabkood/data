@@ -1,0 +1,19 @@
+type: "quiz"
+question: "كم مرة ستُطبع 'X'؟"
+code: |
+  def a():
+      print("X")
+      b()
+
+  def b():
+      print("X")
+
+  a()
+  b()
+lang: "python"
+options:
+  - "2"
+  - "3"
+  - "4"
+solution: 1
+explanation: "a() تطبع X وتستدعي b() (تطبع X)، ثم b() مباشرة تطبع X = 3 مرات"

@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أضف قاموس منتج جديد للقائمة"
+code: |
+  products = []
+  new_product = {"id": 1, "name": "laptop", "price": 5000}
+  products.@@INPUT@@(@@INPUT@@)
+  print(len(products))
+solution:
+  - "append"
+  - "new_product"

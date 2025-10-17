@@ -1,0 +1,303 @@
+---
+item_id: "module-10-item-7"
+type: "lesson"
+title: "ماراثون تركيب الدوال"
+base_xp: 950
+difficulty: "hard"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      الآن يبدأ السحر الحقيقي! ✨
+
+      **تركيب الدوال** = استخدام دالة داخل دالة أخرى
+
+      ```python
+      def double(n):
+          return n * 2
+
+      def add_ten(n):
+          return n + 10
+
+      result = add_ten(double(5))  # 5 * 2 = 10، ثم 10 + 10 = 20
+      ```
+
+  - type: "markdown"
+    content: |
+      فكر في الدوال كـ**مكعبات ليجو**: تبني أشياء معقدة من قطع بسيطة!
+
+      ```python
+      def square(n):
+          return n * n
+
+      def sum_of_squares(a, b):
+          return square(a) + square(b)
+
+      print(sum_of_squares(3, 4))  # 9 + 16 = 25
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "استخدم دالة داخل دالة أخرى"
+    code: |
+      def triple(n):
+          return n * 3
+
+      def add_five(n):
+          return n + 5
+
+      result = add_five(@@INPUT@@(10))
+      print(result)
+    solution:
+      - "triple"
+
+  - type: "quiz"
+    question: "ما ناتج هذا الكود؟"
+    code: |
+      def add(a, b):
+          return a + b
+
+      def multiply(a, b):
+          return a * b
+
+      result = multiply(add(2, 3), 4)
+    lang: "python"
+    options:
+      - "20"
+      - "14"
+      - "9"
+    solution: 0
+    explanation: "أولاً add(2, 3) = 5، ثم multiply(5, 4) = 20"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحسب محيط مربع بمعرفة مساحته"
+    code: |
+      def square_root(n):
+          return n ** 0.5
+
+      def perimeter(area):
+          side = @@INPUT@@(@@INPUT@@)
+          return side * 4
+
+      print(perimeter(16))
+    solution:
+      - "square_root"
+      - "area"
+
+  - type: "markdown"
+    content: |
+      يمكنك بناء سلسلة من الدوال:
+
+      ```python
+      def clean(text):
+          return text.strip()
+
+      def uppercase(text):
+          return text.upper()
+
+      def add_prefix(text):
+          return ">> " + text
+
+      # سلسلة
+      result = add_prefix(uppercase(clean("  hello  ")))
+      print(result)  # >> HELLO
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل سلسلة معالجة النص"
+    code: |
+      def remove_spaces(text):
+          return text.replace(" ", "")
+
+      def lowercase(text):
+          return text.lower()
+
+      result = @@INPUT@@(@@INPUT@@("HELLO WORLD"))
+      print(result)
+    solution:
+      - "lowercase"
+      - "remove_spaces"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحسب الخصم ثم الضريبة"
+    code: |
+      def apply_discount(price, discount):
+          return price - (price * discount / 100)
+
+      def apply_tax(price, tax):
+          return price + (price * tax / 100)
+
+      final = apply_tax(@@INPUT@@(100, 20), 15)
+      print(final)
+    solution:
+      - "apply_discount"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لدوال تحول درجة الحرارة"
+    code:
+      - "def celsius_to_fahrenheit(c):"
+      - "    return (c * 9/5) + 32"
+      - "def kelvin_to_celsius(k):"
+      - "    return k - 273.15"
+      - "result = celsius_to_fahrenheit(kelvin_to_celsius(300))"
+      - "print(result)"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحقق إن كان الرقم زوجي وموجب"
+    code: |
+      def is_even(n):
+          return n % 2 == 0
+
+      def is_positive(n):
+          return n > 0
+
+      def is_even_positive(n):
+          return @@INPUT@@(n) @@INPUT@@ @@INPUT@@(n)
+
+      print(is_even_positive(4))
+    solution:
+      - "is_even"
+      - "and"
+      - "is_positive"
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا يحدث خطأ؟"
+    code: |
+      def add(a, b):
+          return a + b
+
+      def multiply(n):
+          return n * 2
+
+      result = add(multiply(5, 3))
+      print(result)
+    solution: 6
+    hint: "كم معامل تحتاج multiply؟"
+    explanation: "multiply تحتاج معامل واحد لكننا مررنا 2، يجب multiply(5) أو تعديل الدالة"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحسب مساحة دائرة من القطر"
+    code: |
+      def diameter_to_radius(d):
+          return d / 2
+
+      def circle_area(radius):
+          return 3.14 * radius * radius
+
+      area = circle_area(@@INPUT@@(10))
+      print(area)
+    solution:
+      - "diameter_to_radius"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحسب مربع مجموع رقمين"
+    code: |
+      def add(a, b):
+          return a + b
+
+      def square(n):
+          return n * n
+
+      result = @@INPUT@@(@@INPUT@@(3, 4))
+      print(result)
+    solution:
+      - "square"
+      - "add"
+
+  - type: "markdown"
+    content: |
+      دوال مساعدة (Helper functions):
+
+      ```python
+      def is_valid_age(age):
+          return age >= 18 and age <= 100
+
+      def can_register(age, has_id):
+          return is_valid_age(age) and has_id
+
+      print(can_register(25, True))  # True
+      ```
+
+      نبني دوال صغيرة ونستخدمها لبناء دوال أكبر!
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحقق من صحة كلمة المرور"
+    code: |
+      def is_long_enough(password):
+          return len(password) >= 8
+
+      def has_number(password):
+          return any(c.isdigit() for c in password)
+
+      def is_valid_password(password):
+          return @@INPUT@@(password) and @@INPUT@@(password)
+
+      print(is_valid_password("pass123word"))
+    solution:
+      - "is_long_enough"
+      - "has_number"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لبناء آلة حاسبة معقدة"
+    code:
+      - "def add(a, b):"
+      - "    return a + b"
+      - "def multiply(a, b):"
+      - "    return a * b"
+      - "def calculate(a, b, c):"
+      - "    return multiply(add(a, b), c)"
+      - "result = calculate(2, 3, 4)"
+      - "print(result)"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تنسق وتطبع رسالة"
+    code: |
+      def format_message(msg):
+          return f"*** {msg} ***"
+
+      def print_formatted(msg):
+          print(@@INPUT@@(@@INPUT@@))
+
+      print_formatted("مرحباً")
+    solution:
+      - "format_message"
+      - "msg"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحول قائمة لنص ثم لأحرف كبيرة"
+    code: |
+      def list_to_string(items):
+          return ", ".join(items)
+
+      def to_upper(text):
+          return text.upper()
+
+      result = @@INPUT@@(@@INPUT@@(["apple", "banana"]))
+      print(result)
+    solution:
+      - "to_upper"
+      - "list_to_string"
+
+  - type: "markdown"
+    content: |
+      رائع جداً! 🎉 أنت الآن خبير في:
+
+      ✅ استدعاء دالة من داخل دالة أخرى
+      ✅ بناء سلاسل من الدوال
+      ✅ إنشاء دوال مساعدة صغيرة
+      ✅ تركيب دوال معقدة من دوال بسيطة
+
+      تركيب الدوال = كود قوي ومنظم! 💪

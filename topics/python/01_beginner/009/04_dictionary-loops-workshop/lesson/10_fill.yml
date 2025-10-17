@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "اطبع اسم كل طالب ودرجته"
+code: |
+  students = {"أحمد": 90, "سارة": 95, "علي": 88}
+  for @@INPUT@@, @@INPUT@@ in @@INPUT@@.items():
+      print(@@INPUT@@, "حصل على", @@INPUT@@)
+solution:
+  - "/^(name|student|n)$/"
+  - "/^(score|grade|s|g)$/"
+  - "students"
+  - "/^(name|student|n)$/"
+  - "/^(score|grade|s|g)$/"

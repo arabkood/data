@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "دالة تحقق - ترجع True/False"
+code: |
+  def is_valid(num):
+      @@INPUT@@ num > 0 @@INPUT@@ num < 100
+
+  print(is_valid(50))
+solution:
+  - "return"
+  - "and"

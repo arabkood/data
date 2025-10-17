@@ -1,0 +1,8 @@
+type: "fill"
+lang: "python"
+question: "اطبع سعر المنتج"
+code: |
+  product = {"id": 101, "price": 250.50, "stock": 15}
+  print(@@INPUT@@)
+solution:
+  - "/^product\\[(\"|')price(\"|')\\]$/"

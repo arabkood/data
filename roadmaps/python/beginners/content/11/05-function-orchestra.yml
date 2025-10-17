@@ -1,0 +1,347 @@
+---
+item_id: "module-11-item-5"
+type: "lesson"
+title: "أوركسترا الدوال"
+base_xp: 950
+difficulty: "hard"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      الدوال تعمل معاً كأوركسترا موسيقية! 🎵
+
+      دالة تستدعي دالة، التي تستدعي دالة أخرى...
+
+      ```python
+      def func_a():
+          print("A")
+          func_b()
+
+      def func_b():
+          print("B")
+          func_c()
+
+      def func_c():
+          print("C")
+
+      func_a()  # A, B, C
+      ```
+
+  - type: "markdown"
+    content: |
+      **تسلسل الاستدعاء** (Call Stack):
+
+      ```python
+      def first():
+          print("بداية first")
+          second()
+          print("نهاية first")
+
+      def second():
+          print("  بداية second")
+          third()
+          print("  نهاية second")
+
+      def third():
+          print("    داخل third")
+
+      first()
+      ```
+
+      كل دالة تنتهي قبل أن ترجع للتي استدعتها!
+
+  - type: "fill"
+    lang: "python"
+    question: "استدع دالة من داخل دالة أخرى"
+    code: |
+      def greet():
+          print("مرحباً")
+
+      def welcome():
+          print("أهلاً")
+          @@INPUT@@()
+
+      welcome()
+    solution:
+      - "greet"
+
+  - type: "quiz"
+    question: "ما ترتيب الطباعة؟"
+    code: |
+      def a():
+          print("1")
+          b()
+          print("3")
+
+      def b():
+          print("2")
+
+      a()
+    lang: "python"
+    options:
+      - "1, 2, 3"
+      - "1, 3, 2"
+      - "2, 1, 3"
+    solution: 0
+    explanation: "a تطبع 1، تستدعي b (تطبع 2)، ثم a تكمل وتطبع 3"
+
+  - type: "fill"
+    lang: "python"
+    question: "بناء سلسلة دوال"
+    code: |
+      def step1():
+          print("خطوة 1")
+          @@INPUT@@()
+
+      def step2():
+          print("خطوة 2")
+          @@INPUT@@()
+
+      def step3():
+          print("خطوة 3")
+
+      step1()
+    solution:
+      - "step2"
+      - "step3"
+
+  - type: "markdown"
+    content: |
+      **إرجاع القيم بين الدوال:**
+
+      ```python
+      def get_number():
+          return 10
+
+      def double_it():
+          num = get_number()
+          return num * 2
+
+      def add_five():
+          doubled = double_it()
+          return doubled + 5
+
+      result = add_five()  # 25
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "دالة تستخدم نتيجة دالة أخرى"
+    code: |
+      def get_base():
+          return 5
+
+      def calculate():
+          base = @@INPUT@@()
+          return base * base
+
+      result = @@INPUT@@()
+      print(result)
+    solution:
+      - "get_base"
+      - "calculate"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الدوال لبناء نظام حسابات"
+    code:
+      - "def get_price():"
+      - "    return 100"
+      - "def apply_discount():"
+      - "    price = get_price()"
+      - "    return price * 0.9"
+      - "def add_tax():"
+      - "    discounted = apply_discount()"
+      - "    return discounted * 1.15"
+      - "final = add_tax()"
+      - "print(final)"
+
+  - type: "fill"
+    lang: "python"
+    question: "دالة تستدعي دالتين وتجمع النتائج"
+    code: |
+      def get_x():
+          return 10
+
+      def get_y():
+          return 20
+
+      def sum_both():
+          return @@INPUT@@() + @@INPUT@@()
+
+      print(sum_both())
+    solution:
+      - "get_x"
+      - "get_y"
+
+  - type: "markdown"
+    content: |
+      **دوال مساعدة متداخلة:**
+
+      ```python
+      def validate_age(age):
+          return age >= 18
+
+      def validate_name(name):
+          return len(name) > 0
+
+      def can_register(name, age):
+          if not validate_name(name):
+              return False
+          if not validate_age(age):
+              return False
+          return True
+
+      print(can_register("أحمد", 25))  # True
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "بناء نظام تحقق متدرج"
+    code: |
+      def is_positive(n):
+          return n > 0
+
+      def is_even(n):
+          return n % 2 == 0
+
+      def is_valid(n):
+          return @@INPUT@@(n) and @@INPUT@@(n)
+
+      print(is_valid(4))
+      print(is_valid(-2))
+    solution:
+      - "is_positive"
+      - "is_even"
+
+  - type: "quiz"
+    question: "كم مرة ستُطبع 'X'؟"
+    code: |
+      def a():
+          print("X")
+          b()
+
+      def b():
+          print("X")
+
+      a()
+      b()
+    lang: "python"
+    options:
+      - "2"
+      - "3"
+      - "4"
+    solution: 1
+    explanation: "a() تطبع X وتستدعي b() (تطبع X)، ثم b() مباشرة تطبع X = 3 مرات"
+
+  - type: "fill"
+    lang: "python"
+    question: "دالة تعالج بيانات خطوة بخطوة"
+    code: |
+      def clean(text):
+          return text.strip()
+
+      def lowercase(text):
+          return text.lower()
+
+      def process(text):
+          cleaned = @@INPUT@@(text)
+          result = @@INPUT@@(cleaned)
+          return result
+
+      print(process("  HELLO  "))
+    solution:
+      - "clean"
+      - "lowercase"
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا يحدث خطأ؟"
+    code: |
+      def get_value():
+          return 10
+
+      def double():
+          return value * 2
+
+      result = double()
+    solution: 4
+    hint: "من أين value؟"
+    explanation: "double() تحتاج استدعاء get_value() للحصول على القيمة"
+
+  - type: "fill"
+    lang: "python"
+    question: "بناء خط إنتاج (pipeline)"
+    code: |
+      def step_a(n):
+          return n + 10
+
+      def step_b(n):
+          return n * 2
+
+      def step_c(n):
+          return n - 5
+
+      def process(n):
+          result = @@INPUT@@(n)
+          result = @@INPUT@@(result)
+          result = @@INPUT@@(result)
+          return result
+
+      print(process(5))
+    solution:
+      - "step_a"
+      - "step_b"
+      - "step_c"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الدوال لحساب الدرجة النهائية"
+    code:
+      - "def calculate_average(scores):"
+      - "    return sum(scores) / len(scores)"
+      - "def apply_curve(avg):"
+      - "    return min(avg + 5, 100)"
+      - "def get_final_grade(scores):"
+      - "    avg = calculate_average(scores)"
+      - "    return apply_curve(avg)"
+      - "grade = get_final_grade([75, 80, 70])"
+      - "print(grade)"
+
+  - type: "fill"
+    lang: "python"
+    question: "دالة رئيسية تنسق عدة دوال"
+    code: |
+      def fetch_data():
+          return [1, 2, 3, 4, 5]
+
+      def filter_even(data):
+          return [x for x in data if x % 2 == 0]
+
+      def sum_values(data):
+          return sum(data)
+
+      def main():
+          data = @@INPUT@@()
+          filtered = @@INPUT@@(data)
+          total = @@INPUT@@(filtered)
+          return total
+
+      print(main())
+    solution:
+      - "fetch_data"
+      - "filter_even"
+      - "sum_values"
+
+  - type: "markdown"
+    content: |
+      ممتاز! 🎵 أتقنت أوركسترا الدوال!
+
+      ✅ دوال تستدعي دوال
+      ✅ تسلسل الاستدعاء والرجوع
+      ✅ تمرير النتائج بين الدوال
+      ✅ بناء أنظمة معقدة من دوال بسيطة
+      ✅ دوال مساعدة ودوال رئيسية
+
+      الدوال المتعاونة = برامج قوية! 💪

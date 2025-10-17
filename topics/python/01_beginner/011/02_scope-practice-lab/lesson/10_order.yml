@@ -1,0 +1,10 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لتوضيح النطاق بشكل صحيح"
+code:
+  - "counter = 0"
+  - "def increment():"
+  - "    step = 1"
+  - "    print(counter + step)"
+  - "increment()"
+  - "print(counter)"

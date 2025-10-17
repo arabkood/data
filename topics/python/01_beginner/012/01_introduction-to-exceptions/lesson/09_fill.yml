@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "احم هذا الكود من الأخطاء"
+code: |
+  try:
+      age = @@INPUT@@(input("العمر: "))
+      print(age)
+  @@INPUT@@:
+      print("أدخل رقماً صحيحاً")
+solution:
+  - "int"
+  - "except"

@@ -1,0 +1,10 @@
+type: "bug"
+lang: "python"
+question: "هناك خطأ في طباعة القيم، أين؟"
+code: |
+  data = {"a": 1, "b": 2, "c": 3}
+  for value in data:
+      print(value)
+solution: 1
+hint: "المرور على القاموس مباشرة يعطي ماذا؟"
+explanation: "المرور على القاموس مباشرة يعطي المفاتيح، للحصول على القيم استخدم .values()"

@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تحقق من صحة العمر"
+code: |
+  def is_valid_age(age):
+      return age >= @@INPUT@@ @@INPUT@@ age <= @@INPUT@@
+
+  print(is_valid_age(25))
+  print(is_valid_age(150))
+solution:
+  - "/^(0|1)$/"
+  - "and"
+  - "/^(120|150|200)$/"

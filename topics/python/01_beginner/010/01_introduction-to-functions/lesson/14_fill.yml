@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تطبع اسمك 3 مرات"
+code: |
+  def repeat_name():
+      @@INPUT@@ i in range(@@INPUT@@):
+          print("اسمك")
+
+  repeat_name()
+solution:
+  - "for"
+  - "3"

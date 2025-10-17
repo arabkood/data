@@ -1,0 +1,20 @@
+type: "quiz"
+question: "أيهما أفضل؟"
+code: |
+  # خيار 1
+  total = 0
+  def add(n):
+      global total
+      total += n
+
+  # خيار 2
+  def add(total, n):
+      return total + n
+  total = add(total, 5)
+lang: "python"
+options:
+  - "خيار 1 (global)"
+  - "خيار 2 (return)"
+  - "كلاهما متساويان"
+solution: 1
+explanation: "الخيار 2 أفضل - أوضح وأسهل للفهم والاختبار"

@@ -1,0 +1,8 @@
+type: "quiz"
+question: "ما الفرق بين dict['key'] و dict.get('key')؟"
+options:
+  - "لا يوجد فرق"
+  - ".get() لا تسبب خطأ إذا لم يوجد المفتاح"
+  - "[] أسرع من .get()"
+solution: 1
+explanation: ".get() تُرجع None بدلاً من إحداث خطأ عند عدم وجود المفتاح"

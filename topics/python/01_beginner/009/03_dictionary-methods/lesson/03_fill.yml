@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "احصل على جميع المفاتيح من القاموس"
+code: |
+  product = {"name": "كتاب", "price": 50, "stock": 100}
+  keys = @@INPUT@@.@@INPUT@@
+  print(keys)
+solution:
+  - "product"
+  - "keys()"

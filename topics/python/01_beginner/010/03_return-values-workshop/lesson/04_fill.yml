@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أرجع مجموع رقمين"
+code: |
+  def sum_numbers(a, b):
+      @@INPUT@@ a + b
+
+  result = sum_numbers(10, 20)
+  print(result)
+solution:
+  - "return"

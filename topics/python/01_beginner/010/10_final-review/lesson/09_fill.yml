@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة بمعامل افتراضي"
+code: |
+  def greet(name, greeting=@@INPUT@@):
+      return f"{@@INPUT@@} {@@INPUT@@}"
+
+  print(greet("أحمد"))
+  print(greet("سارة", "أهلاً"))
+solution:
+  - "/^(\"|')مرحباً(\"|')$/"
+  - "greeting"
+  - "name"

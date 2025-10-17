@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تأخذ اسم وتطبعه"
+code: |
+  def say_name(@@INPUT@@):
+      print(@@INPUT@@)
+
+  say_name("محمد")
+solution:
+  - "/^(name|n)$/"
+  - "/^(name|n)$/"

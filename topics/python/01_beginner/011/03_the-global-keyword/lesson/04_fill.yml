@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "استخدم global لتعديل المتغير العام"
+code: |
+  score = 0
+
+  def add_points(points):
+      @@INPUT@@ score
+      score = score + @@INPUT@@
+
+  add_points(10)
+  print(score)
+solution:
+  - "global"
+  - "points"

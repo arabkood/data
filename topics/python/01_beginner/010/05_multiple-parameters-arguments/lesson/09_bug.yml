@@ -1,0 +1,12 @@
+type: "bug"
+lang: "python"
+question: "لماذا يحدث خطأ؟"
+code: |
+  def add_three(a, b, c):
+      return a + b + c
+
+  result = add_three(1, 2)
+  print(result)
+solution: 3
+hint: "كم معامل تحتاج الدالة؟"
+explanation: "الدالة تحتاج 3 معاملات لكننا مررنا 2 فقط"

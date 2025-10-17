@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تحقق إن كان الرقم موجب"
+code: |
+  def is_positive(n):
+      @@INPUT@@ n > 0:
+          print("موجب")
+      @@INPUT@@:
+          print("سالب أو صفر")
+
+  is_positive(5)
+solution:
+  - "if"
+  - "else"

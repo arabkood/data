@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "أضف عنصر جديد لقائمة داخل القاموس"
+code: |
+  data = {"items": [1, 2, 3]}
+  data[@@INPUT@@]@@INPUT@@(4)
+  print(data["items"])
+solution:
+  - "/^(\"|')items(\"|')$/"
+  - ".append"

@@ -1,0 +1,13 @@
+type: "bug"
+lang: "python"
+question: "لماذا يحدث خطأ؟"
+code: |
+  total = 100
+
+  def change():
+      total = total + 10
+
+  change()
+solution: 3
+hint: "هل استخدمنا global؟"
+explanation: "نحتاج global total لأننا نعدّل المتغير العام"

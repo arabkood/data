@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تحسب مساحة دائرة من القطر"
+code: |
+  def diameter_to_radius(d):
+      return d / 2
+
+  def circle_area(radius):
+      return 3.14 * radius * radius
+
+  area = circle_area(@@INPUT@@(10))
+  print(area)
+solution:
+  - "diameter_to_radius"

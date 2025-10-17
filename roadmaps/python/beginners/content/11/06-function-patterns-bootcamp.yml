@@ -1,0 +1,270 @@
+---
+item_id: "module-11-item-6"
+type: "lesson"
+title: "معسكر أنماط الدوال"
+base_xp: 900
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      أنماط الدوال الشائعة = أدوات احترافية! 🛠️
+
+      سنتعلم الأنماط التي تستخدمها كل يوم:
+      - دوال التحقق (Validators)
+      - دوال المعالجة (Processors)
+      - دوال البناء (Builders)
+      - دوال المساعدة (Helpers)
+
+  - type: "markdown"
+    content: |
+      **النمط 1: دوال التحقق**
+
+      تُرجع `True` أو `False`:
+
+      ```python
+      def is_valid_email(email):
+          return "@" in email and "." in email
+
+      def is_adult(age):
+          return age >= 18
+
+      def has_minimum_length(text, min_len=3):
+          return len(text) >= min_len
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحقق من أن الرقم في نطاق معين"
+    code: |
+      def is_in_range(num, min_val, max_val):
+          return num >= @@INPUT@@ @@INPUT@@ num <= @@INPUT@@
+
+      print(is_in_range(5, 1, 10))
+    solution:
+      - "min_val"
+      - "and"
+      - "max_val"
+
+  - type: "markdown"
+    content: |
+      **النمط 2: دوال المعالجة**
+
+      تأخذ بيانات، تعدلها، تُرجعها:
+
+      ```python
+      def clean_text(text):
+          text = text.strip()
+          text = text.lower()
+          return text
+
+      def format_price(price):
+          return f"{price:.2f} ريال"
+
+      def normalize_phone(phone):
+          return phone.replace("-", "").replace(" ", "")
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحول النص لأحرف كبيرة وتزيل المسافات"
+    code: |
+      def process_text(text):
+          text = text@@INPUT@@()
+          text = text.replace(" ", "")
+          return @@INPUT@@
+
+      print(process_text("hello world"))
+    solution:
+      - ".upper"
+      - "text"
+
+  - type: "markdown"
+    content: |
+      **النمط 3: دوال البناء**
+
+      تبني وتُرجع هياكل بيانات:
+
+      ```python
+      def create_user(name, age):
+          return {
+              "name": name,
+              "age": age,
+              "active": True
+          }
+
+      def build_message(title, body):
+          return f"=== {title} ===\n{body}"
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تبني قاموس منتج"
+    code: |
+      def create_product(name, price):
+          return @@INPUT@@
+              @@INPUT@@: name,
+              "price": @@INPUT@@
+          }
+
+      product = create_product("كتاب", 50)
+    solution:
+      - "{"
+      - "/^(\"|')name(\"|')$/"
+      - "price"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب دالة بناء بطاقة عرض"
+    code:
+      - "def create_card(title, description, price):"
+      - "    return {"
+      - "        \"title\": title,"
+      - "        \"description\": description,"
+      - "        \"price\": price"
+      - "    }"
+      - "card = create_card(\"منتج\", \"وصف\", 100)"
+      - "print(card)"
+
+  - type: "markdown"
+    content: |
+      **النمط 4: دوال المساعدة**
+
+      دوال صغيرة تُستخدم في دوال أكبر:
+
+      ```python
+      def _is_weekend(day):  # مساعدة خاصة
+          return day in ["السبت", "الأحد"]
+
+      def calculate_price(base_price, day):
+          if _is_weekend(day):
+              return base_price * 1.5
+          return base_price
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة مساعدة ودالة رئيسية"
+    code: |
+      def _double(n):
+          return n * 2
+
+      def calculate(x, y):
+          return @@INPUT@@(x) + @@INPUT@@(y)
+
+      print(calculate(5, 10))
+    solution:
+      - "_double"
+      - "_double"
+
+  - type: "markdown"
+    content: |
+      **النمط 5: دوال التحويل**
+
+      تحول من نوع لآخر:
+
+      ```python
+      def celsius_to_fahrenheit(c):
+          return (c * 9/5) + 32
+
+      def list_to_string(items):
+          return ", ".join(items)
+
+      def dict_to_list(data):
+          return list(data.items())
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "حول قائمة أرقام لمجموعها"
+    code: |
+      def list_to_sum(numbers):
+          return @@INPUT@@(@@INPUT@@)
+
+      result = list_to_sum([1, 2, 3, 4])
+      print(result)
+    solution:
+      - "sum"
+      - "numbers"
+
+  - type: "bug"
+    lang: "python"
+    question: "دالة التحقق لا تعمل بشكل صحيح"
+    code: |
+      def is_valid_password(password):
+          if len(password) >= 8:
+              print("كلمة مرور صحيحة")
+          else:
+              print("كلمة مرور ضعيفة")
+
+      if is_valid_password("123"):
+          print("مقبول")
+    solution: 2
+    hint: "ماذا يجب أن تُرجع دالة التحقق؟"
+    explanation: "دالة التحقق يجب أن تُرجع True/False وليس تطبع. استخدم return"
+
+  - type: "fill"
+    lang: "python"
+    question: "دالة تُرجع قائمة مصفاة"
+    code: |
+      def get_adults(people):
+          result = []
+          @@INPUT@@ person in people:
+              if person["age"] >= 18:
+                  result.@@INPUT@@(person)
+          return @@INPUT@@
+
+      adults = get_adults([{"age": 15}, {"age": 25}])
+    solution:
+      - "for"
+      - "append"
+      - "result"
+
+  - type: "markdown"
+    content: |
+      **النمط 6: دوال الحساب**
+
+      تحسب وتُرجع نتيجة:
+
+      ```python
+      def calculate_total(items):
+          total = 0
+          for item in items:
+              total += item["price"]
+          return total
+
+      def get_average(numbers):
+          return sum(numbers) / len(numbers)
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "احسب عدد العناصر الموجبة"
+    code: |
+      def count_positive(numbers):
+          count = @@INPUT@@
+          for num in numbers:
+              if num > @@INPUT@@:
+                  count @@INPUT@@ 1
+          return @@INPUT@@
+
+      print(count_positive([1, -2, 3, -4, 5]))
+    solution:
+      - "0"
+      - "0"
+      - "+="
+      - "count"
+
+  - type: "markdown"
+    content: |
+      ممتاز! 🏆 الآن تعرف:
+
+      ✅ دوال التحقق (تُرجع True/False)
+      ✅ دوال المعالجة (تعدل وتُرجع)
+      ✅ دوال البناء (تُنشئ هياكل)
+      ✅ دوال المساعدة (صغيرة ومفيدة)
+      ✅ دوال التحويل (من نوع لآخر)
+      ✅ دوال الحساب (تحسب وتُرجع)
+
+      هذه الأنماط ستراها في كل برنامج! 💼

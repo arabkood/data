@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تكرر نص بعدد مرات افتراضي"
+code: |
+  def repeat(text, count=@@INPUT@@):
+      @@INPUT@@ i in range(count):
+          print(text)
+
+  repeat("Hi")
+solution:
+  - "/^[1-9]$/"
+  - "for"

@@ -1,0 +1,277 @@
+---
+item_id: "module-9-item-7"
+type: "lesson"
+title: "سيناريوهات البيانات الواقعية"
+base_xp: 900
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      لنطبق ما تعلمناه على أمثلة واقعية! 🌍
+
+      سنحل مشاكل حقيقية تواجهك في البرمجة اليومية:
+      - إدارة بيانات الطلاب
+      - تحليل بيانات المبيعات
+      - معالجة معلومات المنتجات
+
+  - type: "markdown"
+    content: |
+      **السيناريو 1: نظام الطلاب**
+
+      لديك قائمة بطلاب وتريد البحث عن طالب معين:
+
+      ```python
+      students = [
+          {"id": 1, "name": "أحمد", "gpa": 3.8},
+          {"id": 2, "name": "سارة", "gpa": 3.9}
+      ]
+
+      # ابحث عن الطالب برقم 2
+      for student in students:
+          if student["id"] == 2:
+              print(student["name"])
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "ابحث عن الطالب الذي معدله أعلى من 3.5 واطبع اسمه"
+    code: |
+      students = [
+          {"name": "علي", "gpa": 3.2},
+          {"name": "فاطمة", "gpa": 3.7},
+          {"name": "محمد", "gpa": 3.9}
+      ]
+      for @@INPUT@@ in @@INPUT@@:
+          if @@INPUT@@[@@INPUT@@] > 3.5:
+              print(@@INPUT@@[@@INPUT@@])
+    solution:
+      - "/^(student|s)$/"
+      - "students"
+      - "/^(student|s)$/"
+      - "/^(\"|')gpa(\"|')$/"
+      - "/^(student|s)$/"
+      - "/^(\"|')name(\"|')$/"
+
+  - type: "markdown"
+    content: |
+      **السيناريو 2: إحصائيات المبيعات**
+
+      حساب إجمالي المبيعات لكل فرع:
+
+      ```python
+      sales = {
+          "riyadh": [1000, 1500, 1200],
+          "jeddah": [900, 1100, 1000]
+      }
+
+      for city, amounts in sales.items():
+          total = sum(amounts)
+          print(f"{city}: {total}")
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "احسب إجمالي المبيعات لكل منطقة"
+    code: |
+      regions = {
+          "north": [500, 600, 550],
+          "south": [700, 800, 750]
+      }
+      for region, sales in @@INPUT@@:
+          total = @@INPUT@@(@@INPUT@@)
+          print(region, ":", total)
+    solution:
+      - "/^regions\\.items\\(\\)$/"
+      - "sum"
+      - "sales"
+
+  - type: "fill"
+    lang: "python"
+    question: "أوجد المنطقة صاحبة أعلى مبيعات"
+    code: |
+      sales = {"east": 5000, "west": 7000, "north": 6000}
+      max_sales = 0
+      top_region = ""
+      for region, amount in sales@@INPUT@@:
+          if @@INPUT@@ > @@INPUT@@:
+              max_sales = @@INPUT@@
+              top_region = @@INPUT@@
+      print(top_region)
+    solution:
+      - ".items()"
+      - "amount"
+      - "max_sales"
+      - "amount"
+      - "region"
+
+  - type: "markdown"
+    content: |
+      **السيناريو 3: كتالوج المنتجات**
+
+      تصفية المنتجات حسب السعر:
+
+      ```python
+      products = [
+          {"name": "قلم", "price": 5, "stock": 100},
+          {"name": "كتاب", "price": 50, "stock": 50}
+      ]
+
+      # المنتجات أقل من 30 ريال
+      for product in products:
+          if product["price"] < 30:
+              print(product["name"])
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع المنتجات المتوفرة (stock > 0)"
+    code: |
+      inventory = [
+          {"item": "phone", "stock": 0},
+          {"item": "laptop", "stock": 5},
+          {"item": "tablet", "stock": 3}
+      ]
+      for product in @@INPUT@@:
+          if @@INPUT@@[@@INPUT@@] > 0:
+              print(@@INPUT@@[@@INPUT@@])
+    solution:
+      - "inventory"
+      - "product"
+      - "/^(\"|')stock(\"|')$/"
+      - "product"
+      - "/^(\"|')item(\"|')$/"
+
+  - type: "quiz"
+    question: "ما أفضل طريقة لإيجاد قيمة معينة في قاموس؟"
+    options:
+      - "استخدام حلقة for مع .items()"
+      - "استخدام [] مباشرة"
+      - "استخدام .get() للأمان"
+    solution: 2
+    explanation: ".get() آمنة ولا تسبب خطأ إذا لم يوجد المفتاح"
+
+  - type: "fill"
+    lang: "python"
+    question: "احسب عدد الطلاب الناجحين (الدرجة >= 60)"
+    code: |
+      students = [
+          {"name": "أحمد", "score": 75},
+          {"name": "سارة", "score": 55},
+          {"name": "علي", "score": 80}
+      ]
+      passed = 0
+      for student in students:
+          if @@INPUT@@ >= 60:
+              passed @@INPUT@@ 1
+      print(passed)
+    solution:
+      - "/^student\\[(\"|')score(\"|')\\]$/"
+      - "+="
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لحساب متوسط الأسعار"
+    code:
+      - "items = [{\"name\": \"a\", \"price\": 100}, {\"name\": \"b\", \"price\": 200}]"
+      - "total = 0"
+      - "for item in items:"
+      - "    total += item[\"price\"]"
+      - "average = total / len(items)"
+      - "print(average)"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ قاموس يحتوي عدد العناصر لكل فئة"
+    code: |
+      items = ["قلم", "كتاب", "قلم", "دفتر", "قلم"]
+      count = {}
+      for item in items:
+          if item @@INPUT@@ count:
+              count[item] @@INPUT@@ 1
+          @@INPUT@@:
+              count[item] = 1
+      print(count)
+    solution:
+      - "in"
+      - "+="
+      - "else"
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع أسماء الموظفين في قسم IT"
+    code: |
+      employees = [
+          {"name": "أحمد", "dept": "IT"},
+          {"name": "سارة", "dept": "HR"},
+          {"name": "علي", "dept": "IT"}
+      ]
+      for emp in @@INPUT@@:
+          if emp[@@INPUT@@] == @@INPUT@@:
+              print(emp[@@INPUT@@])
+    solution:
+      - "employees"
+      - "/^(\"|')dept(\"|')$/"
+      - "/^(\"|')IT(\"|')$/"
+      - "/^(\"|')name(\"|')$/"
+
+  - type: "bug"
+    lang: "python"
+    question: "الكود لا يحسب المجموع بشكل صحيح"
+    code: |
+      data = [{"val": 10}, {"val": 20}, {"val": 30}]
+      total = 0
+      for item in data:
+          total = item["val"]
+      print(total)
+    solution: 3
+    hint: "كيف نضيف القيمة للمجموع؟"
+    explanation: "يجب استخدام += لإضافة القيمة: total += item['val']"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ قائمة بأسماء المنتجات التي سعرها أكثر من 100"
+    code: |
+      products = [
+          {"name": "A", "price": 50},
+          {"name": "B", "price": 150},
+          {"name": "C", "price": 200}
+      ]
+      expensive = []
+      for p in products:
+          if @@INPUT@@:
+              expensive.@@INPUT@@(@@INPUT@@)
+      print(expensive)
+    solution:
+      - "/^p\\[(\"|')price(\"|')\\]\\s*>\\s*100$/"
+      - "append"
+      - "/^p\\[(\"|')name(\"|')\\]$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "حدّث أسعار جميع المنتجات بزيادة 10%"
+    code: |
+      items = [
+          {"item": "pen", "price": 10},
+          {"item": "book", "price": 50}
+      ]
+      for item in items:
+          item[@@INPUT@@] = item[@@INPUT@@] @@INPUT@@ 1.1
+      print(items)
+    solution:
+      - "/^(\"|')price(\"|')$/"
+      - "/^(\"|')price(\"|')$/"
+      - "*"
+
+  - type: "markdown"
+    content: |
+      ممتاز! 🎯 الآن تستطيع:
+
+      ✅ البحث في البيانات المعقدة
+      ✅ حساب الإحصائيات والمجاميع
+      ✅ تصفية البيانات حسب شروط
+      ✅ تحديث وتعديل البيانات
+      ✅ بناء هياكل بيانات جديدة
+
+      أصبحت جاهزاً لمعالجة البيانات الحقيقية! 💼

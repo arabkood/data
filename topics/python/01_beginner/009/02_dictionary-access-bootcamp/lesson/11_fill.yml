@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "احسب المجموع الكلي للفاتورة"
+code: |
+  bill = {"food": 150, "drinks": 50, "tax": 30}
+  total = @@INPUT@@ + @@INPUT@@ + @@INPUT@@
+  print(total)
+solution:
+  - "/^bill\\[(\"|')food(\"|')\\]$/"
+  - "/^bill\\[(\"|')drinks(\"|')\\]$/"
+  - "/^bill\\[(\"|')tax(\"|')\\]$/"

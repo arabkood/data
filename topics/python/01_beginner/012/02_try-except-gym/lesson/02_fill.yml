@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "احم هذا التحويل من الأخطاء"
+code: |
+  @@INPUT@@:
+      num = int("123abc")
+      print(num)
+  @@INPUT@@:
+      print("الإدخال غير صحيح!")
+solution:
+  - "try"
+  - "except"

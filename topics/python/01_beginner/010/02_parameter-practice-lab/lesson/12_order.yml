@@ -1,0 +1,8 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لإنشاء دالة تطبع مربع الرقم"
+code:
+  - "def square(num):"
+  - "    result = num * num"
+  - "    print(result)"
+  - "square(5)"

@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "أنشئ قائمة بكل المفاتيح التي قيمتها أكبر من 50"
+code: |
+  stock = {"apples": 100, "oranges": 30, "bananas": 60}
+  high_stock = []
+  for @@INPUT@@, @@INPUT@@ in stock.items():
+      if @@INPUT@@ > 50:
+          high_stock.append(@@INPUT@@)
+  print(high_stock)
+solution:
+  - "/^(item|name|key)$/"
+  - "/^(quantity|qty|value|amount)$/"
+  - "/^(quantity|qty|value|amount)$/"
+  - "/^(item|name|key)$/"

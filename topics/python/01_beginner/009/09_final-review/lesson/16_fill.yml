@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "حدّث كل الأسعار بزيادة 20%"
+code: |
+  products = [
+      {"name": "A", "price": 100},
+      {"name": "B", "price": 200}
+  ]
+  for product in @@INPUT@@:
+      product[@@INPUT@@] @@INPUT@@ 1.2
+  print(products)
+solution:
+  - "products"
+  - "/^(\"|')price(\"|')$/"
+  - "*="

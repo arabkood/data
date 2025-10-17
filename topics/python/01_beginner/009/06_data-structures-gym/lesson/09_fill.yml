@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "احسب مجموع كل الأسعار"
+code: |
+  items = [
+      {"name": "apple", "price": 5},
+      {"name": "banana", "price": 3}
+  ]
+  total = 0
+  for item in @@INPUT@@:
+      total += @@INPUT@@[@@INPUT@@]
+  print(total)
+solution:
+  - "items"
+  - "item"
+  - "/^(\"|')price(\"|')$/"

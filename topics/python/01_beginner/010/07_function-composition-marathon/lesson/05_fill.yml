@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تحسب محيط مربع بمعرفة مساحته"
+code: |
+  def square_root(n):
+      return n ** 0.5
+
+  def perimeter(area):
+      side = @@INPUT@@(@@INPUT@@)
+      return side * 4
+
+  print(perimeter(16))
+solution:
+  - "square_root"
+  - "area"

@@ -1,0 +1,10 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لمعالجة إدخال المستخدم"
+code:
+  - "user_input = input(\"أدخل رقم: \")"
+  - "try:"
+  - "    number = int(user_input)"
+  - "    print(f\"الرقم: {number}\")"
+  - "except:"
+  - "    print(\"إدخال غير صحيح\")"

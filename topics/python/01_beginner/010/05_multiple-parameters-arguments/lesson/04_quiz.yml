@@ -1,0 +1,14 @@
+type: "quiz"
+question: "ما ناتج هذه الدالة؟"
+code: |
+  def divide(x, y):
+      return x / y
+
+  result = divide(20, 4)
+lang: "python"
+options:
+  - "5.0"
+  - "0.2"
+  - "خطأ"
+solution: 0
+explanation: "20 / 4 = 5.0 (x=20, y=4)"

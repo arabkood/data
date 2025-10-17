@@ -1,0 +1,16 @@
+type: "quiz"
+question: "ماذا سيطبع هذا الكود؟"
+code: |
+  x = 10
+
+  def test():
+      print(x)
+
+  test()
+lang: "python"
+options:
+  - "10"
+  - "خطأ"
+  - "None"
+solution: 0
+explanation: "يمكن قراءة المتغير العام x من داخل الدالة"

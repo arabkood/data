@@ -1,0 +1,14 @@
+type: "bug"
+lang: "python"
+question: "الكود لا يُعدّل المتغير، لماذا؟"
+code: |
+  price = 100
+
+  def apply_discount():
+      price = price * 0.9
+
+  apply_discount()
+  print(price)
+solution: 3
+hint: "هل استخدمنا global؟"
+explanation: "نحتاج global price قبل السطر 'price = price * 0.9'"

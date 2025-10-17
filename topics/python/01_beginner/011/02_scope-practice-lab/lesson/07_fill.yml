@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أكمل لقراءة المتغير العام"
+code: |
+  price = 100
+
+  def show_price():
+      print(@@INPUT@@)  # قراءة العام
+
+  show_price()
+solution:
+  - "price"

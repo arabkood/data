@@ -1,0 +1,12 @@
+type: "quiz"
+question: "ماذا يحدث عند تعريف دالة بدون استدعائها؟"
+code: |
+  def test():
+      print("Test")
+lang: "python"
+options:
+  - "تطبع 'Test' مباشرة"
+  - "لا يحدث شيء"
+  - "يحدث خطأ"
+solution: 1
+explanation: "تعريف الدالة فقط لا يشغّلها، يجب استدعاؤها باستخدام اسمها()"

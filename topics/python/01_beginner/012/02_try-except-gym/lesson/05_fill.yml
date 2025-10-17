@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "احم الوصول للقائمة"
+code: |
+  numbers = [1, 2, 3]
+  try:
+      print(numbers[@@INPUT@@])
+  except:
+      print("الفهرس غير موجود")
+solution:
+  - "/^(10|100|5|[4-9])$/"

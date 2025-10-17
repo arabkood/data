@@ -1,0 +1,17 @@
+type: "quiz"
+question: "ما ناتج هذا الكود؟"
+code: |
+  def add(a, b):
+      return a + b
+
+  def multiply(a, b):
+      return a * b
+
+  result = multiply(add(2, 3), 4)
+lang: "python"
+options:
+  - "20"
+  - "14"
+  - "9"
+solution: 0
+explanation: "أولاً add(2, 3) = 5، ثم multiply(5, 4) = 20"

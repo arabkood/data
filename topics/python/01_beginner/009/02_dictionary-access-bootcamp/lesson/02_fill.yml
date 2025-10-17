@@ -1,0 +1,8 @@
+type: "fill"
+lang: "python"
+question: "اطبع اسم الطالب"
+code: |
+  student = {"name": "محمد", "grade": 88}
+  print(@@INPUT@@)
+solution:
+  - "/^student\\[(\"|')name(\"|')\\]$/"

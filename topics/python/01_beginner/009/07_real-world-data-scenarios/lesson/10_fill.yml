@@ -1,0 +1,17 @@
+type: "fill"
+lang: "python"
+question: "احسب عدد الطلاب الناجحين (الدرجة >= 60)"
+code: |
+  students = [
+      {"name": "أحمد", "score": 75},
+      {"name": "سارة", "score": 55},
+      {"name": "علي", "score": 80}
+  ]
+  passed = 0
+  for student in students:
+      if @@INPUT@@ >= 60:
+          passed @@INPUT@@ 1
+  print(passed)
+solution:
+  - "/^student\\[(\"|')score(\"|')\\]$/"
+  - "+="

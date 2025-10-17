@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "استدع الدالة باستخدام أسماء المعاملات"
+code: |
+  def create_user(username, email):
+      print(f"{username}: {email}")
+
+  create_user(@@INPUT@@="ali123", @@INPUT@@="ali@example.com")
+solution:
+  - "username"
+  - "email"

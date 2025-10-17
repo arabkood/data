@@ -1,0 +1,11 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لدالة تستدعي دالة أخرى"
+code:
+  - "def get_value():"
+  - "    return 10"
+  - "def process():"
+  - "    value = get_value()"
+  - "    return value * 2"
+  - "result = process()"
+  - "print(result)"

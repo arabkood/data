@@ -1,0 +1,14 @@
+type: "quiz"
+question: "متى ينفذ كود except؟"
+code: |
+  try:
+      result = 10 + 20
+  except:
+      print("خطأ")
+lang: "python"
+options:
+  - "دائماً"
+  - "فقط عند حدوث خطأ"
+  - "أبداً"
+solution: 1
+explanation: "except ينفذ فقط إذا حدث خطأ في كتلة try"

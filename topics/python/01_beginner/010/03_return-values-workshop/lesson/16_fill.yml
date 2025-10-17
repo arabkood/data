@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "أرجع مجموع قائمة أرقام"
+code: |
+  def sum_list(numbers):
+      total = 0
+      for num in @@INPUT@@:
+          total += @@INPUT@@
+      @@INPUT@@ total
+
+  result = sum_list([1, 2, 3, 4])
+  print(result)
+solution:
+  - "numbers"
+  - "num"
+  - "return"

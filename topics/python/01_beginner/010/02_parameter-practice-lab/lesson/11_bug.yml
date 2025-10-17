@@ -1,0 +1,10 @@
+type: "bug"
+lang: "python"
+question: "الدالة لا تعمل، ما المشكلة؟"
+code: |
+  def greet(name):
+      print(f"Hello {person}!")
+  greet("أحمد")
+solution: 1
+hint: "انظر لاسم المعامل واسم المتغير المستخدم"
+explanation: "المعامل اسمه name لكن استخدمنا person، يجب استخدام نفس الاسم"

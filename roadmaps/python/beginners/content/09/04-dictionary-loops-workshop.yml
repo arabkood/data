@@ -1,0 +1,287 @@
+---
+item_id: "module-9-item-4"
+type: "lesson"
+title: "ورشة الحلقات والقواميس"
+base_xp: 950
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      الحلقات + القواميس = قوة خارقة! 🔥
+
+      يمكننا المرور على كل عناصر القاموس باستخدام حلقات `for`.
+
+      هناك 3 طرق رئيسية:
+      - المرور على المفاتيح
+      - المرور على القيم
+      - المرور على الأزواج (مفتاح + قيمة)
+
+  - type: "markdown"
+    content: |
+      **الطريقة الأولى: المرور على المفاتيح**
+
+      ```python
+      scores = {"أحمد": 90, "سارة": 95, "خالد": 88}
+
+      for name in scores:
+          print(name)
+      # أحمد
+      # سارة
+      # خالد
+      ```
+
+      عندما تمر على القاموس مباشرة، تحصل على المفاتيح!
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع كل مفتاح في القاموس"
+    code: |
+      ages = {"علي": 25, "فاطمة": 30, "محمد": 22}
+      @@INPUT@@ person @@INPUT@@ ages:
+          print(person)
+    solution:
+      - "for"
+      - "in"
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع كل اسم منتج من القاموس"
+    code: |
+      products = {"laptop": 5000, "mouse": 50, "keyboard": 200}
+      for @@INPUT@@ in @@INPUT@@:
+          print(@@INPUT@@)
+    solution:
+      - "/^(item|product|key|name)$/"
+      - "products"
+      - "/^(item|product|key|name)$/"
+
+  - type: "markdown"
+    content: |
+      **الطريقة الثانية: المرور على القيم**
+
+      ```python
+      prices = {"apple": 5, "banana": 3}
+
+      for price in prices.values():
+          print(price)
+      # 5
+      # 3
+      ```
+
+      استخدم `.values()` للحصول على القيم فقط!
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع كل درجة من القاموس"
+    code: |
+      grades = {"math": 85, "science": 90, "english": 88}
+      for grade in grades@@INPUT@@:
+          print(grade)
+    solution:
+      - ".values()"
+
+  - type: "fill"
+    lang: "python"
+    question: "احسب مجموع كل الأسعار باستخدام حلقة"
+    code: |
+      items = {"pen": 5, "book": 25, "bag": 100}
+      total = 0
+      for @@INPUT@@ in items.@@INPUT@@:
+          total @@INPUT@@ @@INPUT@@
+      print(total)
+    solution:
+      - "/^(price|value|p)$/"
+      - "values()"
+      - "+="
+      - "/^(price|value|p)$/"
+
+  - type: "markdown"
+    content: |
+      **الطريقة الثالثة: المرور على الأزواج (مفتاح + قيمة)**
+
+      ```python
+      student = {"name": "أحمد", "age": 20}
+
+      for key, value in student.items():
+          print(key, ":", value)
+      # name : أحمد
+      # age : 20
+      ```
+
+      استخدم `.items()` للحصول على المفتاح والقيمة معاً!
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع كل مفتاح وقيمته"
+    code: |
+      car = {"brand": "تويوتا", "year": 2023, "color": "أبيض"}
+      for @@INPUT@@, @@INPUT@@ in car@@INPUT@@:
+          print(@@INPUT@@, "->", @@INPUT@@)
+    solution:
+      - "/^(key|k)$/"
+      - "/^(value|val|v)$/"
+      - ".items()"
+      - "/^(key|k)$/"
+      - "/^(value|val|v)$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع اسم كل طالب ودرجته"
+    code: |
+      students = {"أحمد": 90, "سارة": 95, "علي": 88}
+      for @@INPUT@@, @@INPUT@@ in @@INPUT@@.items():
+          print(@@INPUT@@, "حصل على", @@INPUT@@)
+    solution:
+      - "/^(name|student|n)$/"
+      - "/^(score|grade|s|g)$/"
+      - "students"
+      - "/^(name|student|n)$/"
+      - "/^(score|grade|s|g)$/"
+
+  - type: "quiz"
+    question: "متى نستخدم .items() في الحلقات؟"
+    options:
+      - "عندما نريد المفاتيح فقط"
+      - "عندما نريد القيم فقط"
+      - "عندما نريد المفاتيح والقيم معاً"
+    solution: 2
+
+  - type: "fill"
+    lang: "python"
+    question: "ابحث عن المنتج الأغلى (أعلى سعر)"
+    code: |
+      prices = {"laptop": 5000, "phone": 3000, "tablet": 2000}
+      max_price = 0
+      for item, price in prices@@INPUT@@:
+          if @@INPUT@@ > @@INPUT@@:
+              max_price = @@INPUT@@
+      print(max_price)
+    solution:
+      - ".items()"
+      - "price"
+      - "max_price"
+      - "price"
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع الأسماء التي درجتها أكبر من 85"
+    code: |
+      scores = {"أحمد": 90, "خالد": 80, "سارة": 92}
+      for name, score in @@INPUT@@:
+          if @@INPUT@@ > 85:
+              print(@@INPUT@@)
+    solution:
+      - "/^scores\\.items\\(\\)$/"
+      - "score"
+      - "name"
+
+  - type: "bug"
+    lang: "python"
+    question: "الحلقة لا تعمل بشكل صحيح، أين المشكلة؟"
+    code: |
+      data = {"a": 10, "b": 20, "c": 30}
+      for key, value in data:
+          print(key, value)
+    solution: 1
+    hint: "كيف نحصل على المفتاح والقيمة معاً؟"
+    explanation: "يجب استخدام .items() للحصول على المفتاح والقيمة: for key, value in data.items()"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ قاموس جديد بقيم مضاعفة"
+    code: |
+      original = {"a": 5, "b": 10, "c": 15}
+      doubled = {}
+      for key, value in @@INPUT@@:
+          doubled[@@INPUT@@] = @@INPUT@@ * 2
+      print(doubled)
+    solution:
+      - "/^original\\.items\\(\\)$/"
+      - "key"
+      - "value"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لعد عدد القيم الموجبة"
+    code:
+      - "numbers = {\"a\": 5, \"b\": -3, \"c\": 10, \"d\": -2}"
+      - "count = 0"
+      - "for value in numbers.values():"
+      - "    if value > 0:"
+      - "        count += 1"
+      - "print(count)"
+
+  - type: "fill"
+    lang: "python"
+    question: "احسب معدل الدرجات"
+    code: |
+      grades = {"math": 90, "science": 85, "english": 88}
+      total = 0
+      count = 0
+      for grade in grades@@INPUT@@:
+          total += @@INPUT@@
+          count += 1
+      average = total / count
+      print(average)
+    solution:
+      - ".values()"
+      - "grade"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ قائمة بكل المفاتيح التي قيمتها أكبر من 50"
+    code: |
+      stock = {"apples": 100, "oranges": 30, "bananas": 60}
+      high_stock = []
+      for @@INPUT@@, @@INPUT@@ in stock.items():
+          if @@INPUT@@ > 50:
+              high_stock.append(@@INPUT@@)
+      print(high_stock)
+    solution:
+      - "/^(item|name|key)$/"
+      - "/^(quantity|qty|value|amount)$/"
+      - "/^(quantity|qty|value|amount)$/"
+      - "/^(item|name|key)$/"
+
+  - type: "bug"
+    lang: "python"
+    question: "هناك خطأ في إضافة العناصر للقاموس الجديد"
+    code: |
+      old = {"x": 1, "y": 2}
+      new = {}
+      for k, v in old.items():
+          new[v] = k
+      print(new)
+    solution: 3
+    hint: "انظر لترتيب المفتاح والقيمة في السطر الرابع"
+    explanation: "المفروض new[k] = v وليس new[v] = k"
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع المدن التي درجة حرارتها أعلى من 30"
+    code: |
+      temps = {"الرياض": 35, "جدة": 28, "الدمام": 33}
+      for @@INPUT@@, @@INPUT@@ in temps.@@INPUT@@:
+          if @@INPUT@@ > 30:
+              print(@@INPUT@@, "درجة حرارتها", @@INPUT@@)
+    solution:
+      - "/^(city|c)$/"
+      - "/^(temp|temperature|t)$/"
+      - "items()"
+      - "/^(temp|temperature|t)$/"
+      - "/^(city|c)$/"
+      - "/^(temp|temperature|t)$/"
+
+  - type: "markdown"
+    content: |
+      رائع جداً! أصبحت محترفاً في:
+
+      ✅ المرور على مفاتيح القاموس
+      ✅ المرور على قيم القاموس
+      ✅ المرور على أزواج (مفتاح، قيمة)
+      ✅ معالجة وتحويل بيانات القواميس
+      ✅ البحث والتصفية داخل القواميس
+
+      الآن حان وقت التحدي! 💪

@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "اطبع سعر المنتج الأول"
+code: |
+  products = [
+      {"item": "قلم", "price": 5},
+      {"item": "كتاب", "price": 25}
+  ]
+  print(@@INPUT@@[@@INPUT@@][@@INPUT@@])
+solution:
+  - "products"
+  - "0"
+  - "/^(\"|')price(\"|')$/"

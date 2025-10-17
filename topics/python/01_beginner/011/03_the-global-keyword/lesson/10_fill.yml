@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تزيد عداد عام"
+code: |
+  visits = 0
+
+  def track_visit():
+      @@INPUT@@ visits
+      visits @@INPUT@@ 1
+
+  track_visit()
+  track_visit()
+  print(visits)
+solution:
+  - "global"
+  - "+="

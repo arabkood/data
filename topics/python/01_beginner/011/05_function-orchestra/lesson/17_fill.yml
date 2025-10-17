@@ -1,0 +1,24 @@
+type: "fill"
+lang: "python"
+question: "دالة رئيسية تنسق عدة دوال"
+code: |
+  def fetch_data():
+      return [1, 2, 3, 4, 5]
+
+  def filter_even(data):
+      return [x for x in data if x % 2 == 0]
+
+  def sum_values(data):
+      return sum(data)
+
+  def main():
+      data = @@INPUT@@()
+      filtered = @@INPUT@@(data)
+      total = @@INPUT@@(filtered)
+      return total
+
+  print(main())
+solution:
+  - "fetch_data"
+  - "filter_even"
+  - "sum_values"

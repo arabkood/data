@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أنشئ قاموس جديد من قائمة الأسماء"
+code: |
+  names = ["أحمد", "سارة", "علي"]
+  name_dict = {}
+  for i, name in @@INPUT@@(@@INPUT@@):
+      name_dict[@@INPUT@@] = @@INPUT@@
+  print(name_dict)
+solution:
+  - "enumerate"
+  - "names"
+  - "i"
+  - "name"

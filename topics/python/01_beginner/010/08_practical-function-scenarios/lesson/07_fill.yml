@@ -1,0 +1,17 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تحسب الخصم"
+code: |
+  def calculate_discount(price, percent):
+      return price * @@INPUT@@ / @@INPUT@@
+
+  def final_price(price, discount_percent):
+      discount = @@INPUT@@(price, discount_percent)
+      return price - @@INPUT@@
+
+  print(final_price(100, 20))
+solution:
+  - "percent"
+  - "100"
+  - "calculate_discount"
+  - "discount"

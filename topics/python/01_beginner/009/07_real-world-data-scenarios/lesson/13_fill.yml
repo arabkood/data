@@ -1,0 +1,17 @@
+type: "fill"
+lang: "python"
+question: "اطبع أسماء الموظفين في قسم IT"
+code: |
+  employees = [
+      {"name": "أحمد", "dept": "IT"},
+      {"name": "سارة", "dept": "HR"},
+      {"name": "علي", "dept": "IT"}
+  ]
+  for emp in @@INPUT@@:
+      if emp[@@INPUT@@] == @@INPUT@@:
+          print(emp[@@INPUT@@])
+solution:
+  - "employees"
+  - "/^(\"|')dept(\"|')$/"
+  - "/^(\"|')IT(\"|')$/"
+  - "/^(\"|')name(\"|')$/"

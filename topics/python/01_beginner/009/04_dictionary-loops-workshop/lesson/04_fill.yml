@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "اطبع كل اسم منتج من القاموس"
+code: |
+  products = {"laptop": 5000, "mouse": 50, "keyboard": 200}
+  for @@INPUT@@ in @@INPUT@@:
+      print(@@INPUT@@)
+solution:
+  - "/^(item|product|key|name)$/"
+  - "products"
+  - "/^(item|product|key|name)$/"

@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "اطبع أول مدينة من قائمة المدن"
+code: |
+  country = {
+      "name": "السعودية",
+      "cities": ["الرياض", "جدة", "الدمام"]
+  }
+  print(country@@INPUT@@)
+solution:
+  - "/^\\[(\"|')cities(\"|')\\]\\[0\\]$/"

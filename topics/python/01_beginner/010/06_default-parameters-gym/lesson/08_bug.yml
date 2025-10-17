@@ -1,0 +1,10 @@
+type: "bug"
+lang: "python"
+question: "هناك خطأ في ترتيب المعاملات، أين؟"
+code: |
+  def order(size="medium", item):
+      print(f"{item}: {size}")
+  order("pizza")
+solution: 0
+hint: "أين يجب أن تكون المعاملات الافتراضية؟"
+explanation: "المعاملات الافتراضية يجب أن تأتي بعد المعاملات الإجبارية"

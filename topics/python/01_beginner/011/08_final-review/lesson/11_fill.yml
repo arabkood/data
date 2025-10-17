@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "دالة بناء - تنشئ قاموس"
+code: |
+  def create_item(name, price):
+      @@INPUT@@ {
+          "name": @@INPUT@@,
+          "price": @@INPUT@@
+      }
+
+  item = create_item("قلم", 5)
+solution:
+  - "return"
+  - "name"
+  - "price"

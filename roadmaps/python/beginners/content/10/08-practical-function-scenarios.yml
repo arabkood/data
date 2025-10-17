@@ -1,0 +1,247 @@
+---
+item_id: "module-10-item-8"
+type: "lesson"
+title: "سيناريوهات دوال عملية"
+base_xp: 900
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      لننظر لأمثلة واقعية من البرمجة اليومية! 💼
+
+      الدوال تحل مشاكل حقيقية وتجعل الكود منظم وقابل لإعادة الاستخدام.
+
+  - type: "markdown"
+    content: |
+      **سيناريو 1: التحقق من البيانات**
+
+      ```python
+      def is_valid_email(email):
+          return "@" in email and "." in email
+
+      def is_valid_phone(phone):
+          return len(phone) == 10 and phone.isdigit()
+
+      # استخدام
+      if is_valid_email("user@example.com"):
+          print("بريد صحيح")
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تتحقق من صحة اسم المستخدم (طوله بين 3 و 20)"
+    code: |
+      def is_valid_username(username):
+          length = @@INPUT@@(username)
+          return length >= @@INPUT@@ and length <= @@INPUT@@
+
+      print(is_valid_username("ali"))
+    solution:
+      - "len"
+      - "3"
+      - "20"
+
+  - type: "markdown"
+    content: |
+      **سيناريو 2: معالجة النصوص**
+
+      ```python
+      def clean_text(text):
+          text = text.strip()
+          text = text.lower()
+          return text
+
+      def count_words(text):
+          cleaned = clean_text(text)
+          words = cleaned.split()
+          return len(words)
+
+      print(count_words("  Hello World  "))  # 2
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحول الاسم لصيغة Title Case"
+    code: |
+      def format_name(name):
+          return name@@INPUT@@().@@INPUT@@()
+
+      print(format_name("  AHMED ALI  "))
+    solution:
+      - ".strip"
+      - "title"
+
+  - type: "markdown"
+    content: |
+      **سيناريو 3: الحسابات المالية**
+
+      ```python
+      def calculate_vat(amount, rate=15):
+          return amount * rate / 100
+
+      def total_with_vat(amount, rate=15):
+          vat = calculate_vat(amount, rate)
+          return amount + vat
+
+      price = total_with_vat(100)
+      print(f"السعر النهائي: {price}")  # 115.0
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحسب الخصم"
+    code: |
+      def calculate_discount(price, percent):
+          return price * @@INPUT@@ / @@INPUT@@
+
+      def final_price(price, discount_percent):
+          discount = @@INPUT@@(price, discount_percent)
+          return price - @@INPUT@@
+
+      print(final_price(100, 20))
+    solution:
+      - "percent"
+      - "100"
+      - "calculate_discount"
+      - "discount"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لنظام تقييم الطلاب"
+    code:
+      - "def calculate_average(scores):"
+      - "    return sum(scores) / len(scores)"
+      - "def get_grade(average):"
+      - "    if average >= 90:"
+      - "        return \"A\""
+      - "    elif average >= 80:"
+      - "        return \"B\""
+      - "    else:"
+      - "        return \"C\""
+      - "student_scores = [85, 90, 88]"
+      - "avg = calculate_average(student_scores)"
+      - "grade = get_grade(avg)"
+      - "print(grade)"
+
+  - type: "markdown"
+    content: |
+      **سيناريو 4: معالجة القوائم**
+
+      ```python
+      def filter_positive(numbers):
+          result = []
+          for num in numbers:
+              if num > 0:
+                  result.append(num)
+          return result
+
+      def sum_positive(numbers):
+          positive = filter_positive(numbers)
+          return sum(positive)
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تعيد الأرقام الزوجية من قائمة"
+    code: |
+      def get_even_numbers(numbers):
+          result = []
+          for num in @@INPUT@@:
+              if num @@INPUT@@ 2 == 0:
+                  result.@@INPUT@@(num)
+          return @@INPUT@@
+
+      print(get_even_numbers([1, 2, 3, 4, 5]))
+    solution:
+      - "numbers"
+      - "%"
+      - "append"
+      - "result"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحسب عدد الطلاب الناجحين"
+    code: |
+      def count_passed(scores, passing_grade=60):
+          count = 0
+          for score in @@INPUT@@:
+              @@INPUT@@ score >= @@INPUT@@:
+                  count @@INPUT@@ 1
+          return @@INPUT@@
+
+      print(count_passed([75, 55, 80, 45, 90]))
+    solution:
+      - "scores"
+      - "if"
+      - "passing_grade"
+      - "+="
+      - "count"
+
+  - type: "bug"
+    lang: "python"
+    question: "الدالة لا تُرجع القائمة المصفاة، لماذا؟"
+    code: |
+      def filter_adults(ages):
+          adults = []
+          for age in ages:
+              if age >= 18:
+                  adults.append(age)
+      result = filter_adults([15, 20, 30, 12])
+      print(result)
+    solution: 5
+    hint: "هل أرجعنا القائمة؟"
+    explanation: "الدالة لا تُرجع القائمة adults، يجب إضافة return adults"
+
+  - type: "markdown"
+    content: |
+      **سيناريو 5: تنسيق البيانات**
+
+      ```python
+      def format_currency(amount):
+          return f"{amount:.2f} ريال"
+
+      def format_date(day, month, year):
+          return f"{day:02d}/{month:02d}/{year}"
+
+      print(format_currency(1234.5))  # 1234.50 ريال
+      print(format_date(5, 3, 2024))  # 05/03/2024
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تنسق رقم الهاتف"
+    code: |
+      def format_phone(number):
+          return f"({number[:3]}) {number[3:6]}-{number[6:]}"
+
+      print(format_phone(@@INPUT@@))
+    solution:
+      - "/^(\"|')\\d{10}(\"|')$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تُنشئ slug من عنوان"
+    code: |
+      def create_slug(title):
+          slug = title@@INPUT@@()
+          slug = slug.@@INPUT@@(" ", "-")
+          return slug
+
+      print(create_slug("My Blog Post"))
+    solution:
+      - ".lower"
+      - "replace"
+
+  - type: "markdown"
+    content: |
+      ممتاز! 🎯 الآن تستطيع:
+
+      ✅ كتابة دوال للتحقق من البيانات
+      ✅ معالجة وتنسيق النصوص
+      ✅ إجراء حسابات مالية
+      ✅ معالجة وتصفية القوائم
+      ✅ تنسيق البيانات للعرض
+
+      الدوال هي أساس أي برنامج احترافي! 💼

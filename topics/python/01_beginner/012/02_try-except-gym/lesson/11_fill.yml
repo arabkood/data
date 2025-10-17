@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "أضف معالجة ثانية"
+code: |
+  try:
+      a = int("10")
+  except:
+      print("خطأ في a")
+
+  @@INPUT@@:
+      b = int("abc")
+  @@INPUT@@:
+      print("خطأ في b")
+solution:
+  - "try"
+  - "except"

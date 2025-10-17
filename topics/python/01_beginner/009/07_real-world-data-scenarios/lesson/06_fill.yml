@@ -1,0 +1,18 @@
+type: "fill"
+lang: "python"
+question: "أوجد المنطقة صاحبة أعلى مبيعات"
+code: |
+  sales = {"east": 5000, "west": 7000, "north": 6000}
+  max_sales = 0
+  top_region = ""
+  for region, amount in sales@@INPUT@@:
+      if @@INPUT@@ > @@INPUT@@:
+          max_sales = @@INPUT@@
+          top_region = @@INPUT@@
+  print(top_region)
+solution:
+  - ".items()"
+  - "amount"
+  - "max_sales"
+  - "amount"
+  - "region"

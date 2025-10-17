@@ -1,0 +1,8 @@
+type: "quiz"
+question: "ما الفرق بين print و return؟"
+options:
+  - "لا يوجد فرق"
+  - "print تعرض، return تُرجع قيمة للاستخدام"
+  - "return تعرض، print تُرجع قيمة"
+solution: 1
+explanation: "print تعرض على الشاشة فقط، return تُرجع قيمة يمكن استخدامها في الكود"

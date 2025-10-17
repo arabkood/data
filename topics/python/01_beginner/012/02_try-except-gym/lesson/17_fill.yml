@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "معالجة متداخلة"
+code: |
+  try:
+      x = int(input("رقم: "))
+      try:
+          result = 100 / x
+          print(result)
+      @@INPUT@@:
+          print("لا يمكن القسمة على صفر")
+  @@INPUT@@:
+      print("إدخال غير صحيح")
+solution:
+  - "except"
+  - "except"

@@ -1,0 +1,15 @@
+type: "quiz"
+question: "ماذا تُرجع هذه الدالة؟"
+code: |
+  def test():
+      x = 5 + 3
+
+  result = test()
+  print(result)
+lang: "python"
+options:
+  - "8"
+  - "None"
+  - "يحدث خطأ"
+solution: 1
+explanation: "الدالة لا تحتوي على return، فتُرجع None تلقائياً"

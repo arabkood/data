@@ -1,0 +1,17 @@
+type: "quiz"
+question: "ما ناتج هذا الكود؟"
+code: |
+  def f1(x):
+      return x + 10
+
+  def f2(x):
+      return x * 2
+
+  result = f2(f1(5))
+lang: "python"
+options:
+  - "25"
+  - "30"
+  - "20"
+solution: 1
+explanation: "f1(5) = 15، ثم f2(15) = 30"

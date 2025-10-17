@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "حدد النطاق لكل متغير"
+code: |
+  x = 10  # @@INPUT@@
+
+  def func(y):  # y @@INPUT@@
+      z = 20  # z @@INPUT@@
+      print(x, y, z)
+solution:
+  - "/^(global|عام)$/"
+  - "/^(local|محلي)$/"
+  - "/^(local|محلي)$/"

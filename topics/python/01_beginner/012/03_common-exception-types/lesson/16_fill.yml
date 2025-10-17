@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "عالج KeyError و IndexError"
+code: |
+  data = {"items": [1, 2, 3]}
+  try:
+      print(data["name"][10])
+  except @@INPUT@@:
+      print("مفتاح غير موجود")
+  except @@INPUT@@:
+      print("فهرس غير موجود")
+solution:
+  - "KeyError"
+  - "IndexError"

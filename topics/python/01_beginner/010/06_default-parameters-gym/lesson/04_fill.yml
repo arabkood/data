@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة بمعامل افتراضي"
+code: |
+  def welcome(name, title@@INPUT@@"السيد"):
+      print(f"{title} {name}")
+
+  welcome("أحمد")
+solution:
+  - "="

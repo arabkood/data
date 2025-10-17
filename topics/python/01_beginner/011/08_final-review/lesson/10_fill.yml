@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "دالة معالجة - تعدل وترجع"
+code: |
+  def clean(text):
+      text = text@@INPUT@@()
+      text = text@@INPUT@@()
+      return @@INPUT@@
+
+  print(clean("  HELLO  "))
+solution:
+  - ".strip"
+  - ".lower"
+  - "text"

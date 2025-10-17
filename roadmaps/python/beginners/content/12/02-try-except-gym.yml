@@ -1,0 +1,252 @@
+---
+item_id: "module-12-item-2"
+type: "lesson"
+title: "صالة تمارين Try-Except"
+base_xp: 950
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      وقت التدريب المكثف على معالجة الأخطاء! 💪
+
+      سنحمي برامجنا من جميع أنواع الأخطاء المحتملة.
+
+  - type: "fill"
+    lang: "python"
+    question: "احم هذا التحويل من الأخطاء"
+    code: |
+      @@INPUT@@:
+          num = int("123abc")
+          print(num)
+      @@INPUT@@:
+          print("الإدخال غير صحيح!")
+    solution:
+      - "try"
+      - "except"
+
+  - type: "fill"
+    lang: "python"
+    question: "احم القسمة من القسمة على صفر"
+    code: |
+      try:
+          result = 100 / @@INPUT@@
+          print(result)
+      except:
+          print(@@INPUT@@)
+    solution:
+      - "0"
+      - "/^(\"|').+(\"|')$/"
+
+  - type: "markdown"
+    content: |
+      يمكنك وضع أي كود داخل try:
+
+      ```python
+      try:
+          x = int(input("رقم: "))
+          y = int(input("رقم آخر: "))
+          result = x / y
+          print(result)
+      except:
+          print("خطأ في العملية!")
+      ```
+
+      كل الأخطاء داخل try ستُعالج!
+
+  - type: "fill"
+    lang: "python"
+    question: "احم الوصول للقائمة"
+    code: |
+      numbers = [1, 2, 3]
+      try:
+          print(numbers[@@INPUT@@])
+      except:
+          print("الفهرس غير موجود")
+    solution:
+      - "/^(10|100|5|[4-9])$/"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لمعالجة خطأ القاموس"
+    code:
+      - "data = {\"name\": \"أحمد\"}"
+      - "try:"
+      - "    print(data[\"age\"])"
+      - "except:"
+      - "    print(\"المفتاح غير موجود\")"
+
+  - type: "markdown"
+    content: |
+      **الكود بعد except ينفذ دائماً:**
+
+      ```python
+      try:
+          x = int("abc")
+      except:
+          print("خطأ")
+
+      print("البرنامج مستمر")  # ينفذ دائماً!
+      ```
+
+      البرنامج لا يتوقف، يستمر بعد معالجة الخطأ!
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل الكود ليستمر البرنامج"
+    code: |
+      try:
+          result = 10 / 0
+      except:
+          print("خطأ في القسمة")
+
+      print(@@INPUT@@)  # ينفذ دائماً
+    solution:
+      - "/^(\"|').+(\"|')$/"
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا لا يُطبع 'مستمر'؟"
+    code: |
+      try:
+          x = 10 / 0
+      print("مستمر")
+    solution: 2
+    hint: "ماذا ينقص؟"
+    explanation: "ينقص except لمعالجة الخطأ، بدونها البرنامج يتوقف"
+
+  - type: "markdown"
+    content: |
+      **معالجات متعددة:**
+
+      يمكنك استخدام try-except عدة مرات:
+
+      ```python
+      try:
+          x = int(input("رقم: "))
+      except:
+          print("خطأ 1")
+
+      try:
+          y = int(input("رقم آخر: "))
+      except:
+          print("خطأ 2")
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أضف معالجة ثانية"
+    code: |
+      try:
+          a = int("10")
+      except:
+          print("خطأ في a")
+
+      @@INPUT@@:
+          b = int("abc")
+      @@INPUT@@:
+          print("خطأ في b")
+    solution:
+      - "try"
+      - "except"
+
+  - type: "fill"
+    lang: "python"
+    question: "احم دالة من الأخطاء"
+    code: |
+      def safe_divide(a, b):
+          @@INPUT@@:
+              return a / b
+          @@INPUT@@:
+              return @@INPUT@@
+
+      print(safe_divide(10, 0))
+    solution:
+      - "try"
+      - "except"
+      - "/^(0|None|\".*\")$/"
+
+  - type: "quiz"
+    question: "ماذا سيُطبع؟"
+    code: |
+      try:
+          x = 10 + 20
+          print("نجح")
+      except:
+          print("فشل")
+    lang: "python"
+    options:
+      - "نجح"
+      - "فشل"
+      - "لا شيء"
+    solution: 0
+    explanation: "لا يوجد خطأ، فيُطبع 'نجح' ولا يُنفذ except"
+
+  - type: "fill"
+    lang: "python"
+    question: "احم الحلقة من الأخطاء"
+    code: |
+      items = ["10", "20", "abc", "30"]
+      for item in items:
+          @@INPUT@@:
+              num = int(item)
+              print(num)
+          @@INPUT@@:
+              print(f"{item} غير صحيح")
+    solution:
+      - "try"
+      - "except"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لمعالجة إدخال المستخدم"
+    code:
+      - "user_input = input(\"أدخل رقم: \")"
+      - "try:"
+      - "    number = int(user_input)"
+      - "    print(f\"الرقم: {number}\")"
+      - "except:"
+      - "    print(\"إدخال غير صحيح\")"
+
+  - type: "bug"
+    lang: "python"
+    question: "المعالجة لا تعمل، لماذا؟"
+    code: |
+      try:
+          data = [1, 2, 3]
+      print(data[10])
+      except:
+          print("خطأ")
+    solution: 2
+    hint: "المسافة البادئة (indentation)؟"
+    explanation: "print(data[10]) يجب أن يكون داخل try (مسافة بادئة)"
+
+  - type: "fill"
+    lang: "python"
+    question: "معالجة متداخلة"
+    code: |
+      try:
+          x = int(input("رقم: "))
+          try:
+              result = 100 / x
+              print(result)
+          @@INPUT@@:
+              print("لا يمكن القسمة على صفر")
+      @@INPUT@@:
+          print("إدخال غير صحيح")
+    solution:
+      - "except"
+      - "except"
+
+  - type: "markdown"
+    content: |
+      ممتاز! 🎯 الآن تتقن:
+
+      ✅ استخدام try-except في أي موقف
+      ✅ حماية التحويلات والعمليات
+      ✅ معالجة أخطاء القوائم والقواميس
+      ✅ try-except في الحلقات والدوال
+      ✅ معالجات متعددة ومتداخلة
+
+      برامجك الآن أقوى وأكثر أماناً! 🛡️

@@ -1,0 +1,11 @@
+type: "bug"
+lang: "python"
+question: "لماذا لا تطبع شيئاً؟"
+code: |
+  def get_message():
+      return "مرحبا"
+
+  get_message()
+solution: 3
+hint: "ماذا فعلنا بالقيمة المُرجعة؟"
+explanation: "الدالة تُرجع القيمة لكننا لم نطبعها أو نحفظها، يجب print(get_message())"

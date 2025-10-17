@@ -1,0 +1,19 @@
+type: "fill"
+lang: "python"
+question: "ابحث عن الطالب الذي معدله أعلى من 3.5 واطبع اسمه"
+code: |
+  students = [
+      {"name": "علي", "gpa": 3.2},
+      {"name": "فاطمة", "gpa": 3.7},
+      {"name": "محمد", "gpa": 3.9}
+  ]
+  for @@INPUT@@ in @@INPUT@@:
+      if @@INPUT@@[@@INPUT@@] > 3.5:
+          print(@@INPUT@@[@@INPUT@@])
+solution:
+  - "/^(student|s)$/"
+  - "students"
+  - "/^(student|s)$/"
+  - "/^(\"|')gpa(\"|')$/"
+  - "/^(student|s)$/"
+  - "/^(\"|')name(\"|')$/"

@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تحسب مساحة المستطيل"
+code: |
+  def rectangle_area(@@INPUT@@, @@INPUT@@):
+      return @@INPUT@@ * @@INPUT@@
+
+  area = rectangle_area(5, 10)
+  print(area)
+solution:
+  - "/^(length|width|l|w)$/"
+  - "/^(width|height|length|w|h|l)$/"
+  - "/^(length|width|l|w)$/"
+  - "/^(width|height|length|w|h|l)$/"

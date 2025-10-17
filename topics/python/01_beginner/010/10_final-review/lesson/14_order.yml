@@ -1,0 +1,8 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لحساب محيط دائرة"
+code:
+  - "def circle_perimeter(radius, pi=3.14):"
+  - "    return 2 * pi * radius"
+  - "result = circle_perimeter(5)"
+  - "print(result)"

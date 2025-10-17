@@ -1,0 +1,11 @@
+type: "quiz"
+question: "كيف نصل لقيمة في قاموس داخل قائمة؟"
+code: |
+  data = [{"x": 10}]
+lang: "python"
+options:
+  - "data['x']"
+  - "data[0]['x']"
+  - "data.get('x')"
+solution: 1
+explanation: "أولاً [0] للوصول للقاموس، ثم ['x'] للوصول للقيمة"

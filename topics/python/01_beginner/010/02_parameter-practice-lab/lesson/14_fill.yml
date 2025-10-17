@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تطبع الأرقام من 1 إلى n"
+code: |
+  def count_to(n):
+      for i in range(@@INPUT@@, @@INPUT@@):
+          print(i)
+
+  count_to(5)
+solution:
+  - "1"
+  - "/^(n\\s*\\+\\s*1|n\\+1)$/"

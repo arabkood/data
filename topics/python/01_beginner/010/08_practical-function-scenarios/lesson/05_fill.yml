@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تحول الاسم لصيغة Title Case"
+code: |
+  def format_name(name):
+      return name@@INPUT@@().@@INPUT@@()
+
+  print(format_name("  AHMED ALI  "))
+solution:
+  - ".strip"
+  - "title"

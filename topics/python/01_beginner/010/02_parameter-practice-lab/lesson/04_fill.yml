@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تأخذ رقم وتطبعه"
+code: |
+  @@INPUT@@ show_number(@@INPUT@@):
+      print(@@INPUT@@)
+
+  show_number(42)
+solution:
+  - "def"
+  - "/^(num|number|n)$/"
+  - "/^(num|number|n)$/"

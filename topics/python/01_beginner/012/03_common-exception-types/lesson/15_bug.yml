@@ -1,0 +1,11 @@
+type: "bug"
+lang: "python"
+question: "لماذا لا يعالج الخطأ؟"
+code: |
+  try:
+      x = int("abc")
+  except ZeroDivisionError:
+      print("خطأ")
+solution: 2
+hint: "أي نوع خطأ سيحدث؟"
+explanation: "الخطأ ValueError وليس ZeroDivisionError، يجب تغيير النوع"

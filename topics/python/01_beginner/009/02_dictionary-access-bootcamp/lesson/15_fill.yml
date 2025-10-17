@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "طبّق خصم 20% على السعر (السعر * 0.8)"
+code: |
+  item = {"name": "كتاب", "price": 100}
+  item[@@INPUT@@] = item[@@INPUT@@] @@INPUT@@ 0.8
+  print(item["price"])
+solution:
+  - "/^(\"|')price(\"|')$/"
+  - "/^(\"|')price(\"|')$/"
+  - "*"

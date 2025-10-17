@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة واستدعها مرتين"
+code: |
+  def say_hi():
+      print("Hi!")
+
+  @@INPUT@@
+  @@INPUT@@
+solution:
+  - "say_hi()"
+  - "say_hi()"

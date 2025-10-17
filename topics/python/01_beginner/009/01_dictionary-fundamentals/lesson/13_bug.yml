@@ -1,0 +1,12 @@
+type: "bug"
+lang: "python"
+question: "هناك خطأ في إنشاء القاموس، أين المشكلة؟"
+code: |
+  user = {
+      "username": "ali123"
+      "password": "secret"
+  }
+  print(user)
+solution: 2
+hint: "انظر إلى نهاية السطر الأول داخل القاموس"
+explanation: "ينقص فاصلة (,) بعد \"ali123\" لفصل العناصر في القاموس"

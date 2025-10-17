@@ -1,0 +1,13 @@
+type: "order"
+lang: "python"
+question: "رتب معالجة أخطاء متعددة"
+code:
+  - "data = [\"10\", \"20\", \"abc\"]"
+  - "for item in data:"
+  - "    try:"
+  - "        num = int(item)"
+  - "        print(100 / num)"
+  - "    except ValueError:"
+  - "        print(f\"{item} ليس رقم\")"
+  - "    except ZeroDivisionError:"
+  - "        print(\"قسمة على صفر\")"

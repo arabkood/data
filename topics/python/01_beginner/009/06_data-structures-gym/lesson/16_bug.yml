@@ -1,0 +1,9 @@
+type: "bug"
+lang: "python"
+question: "هناك خطأ في الوصول للبيانات، أين؟"
+code: |
+  books = [{"title": "كتاب 1", "pages": 200}]
+  print(books["title"][0])
+solution: 1
+hint: "تذكر: أولاً الفهرس، ثم المفتاح"
+explanation: "يجب أن يكون books[0]['title'] وليس books['title'][0]"

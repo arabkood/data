@@ -1,0 +1,10 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لاستخدام global بشكل صحيح"
+code:
+  - "balance = 1000"
+  - "def withdraw(amount):"
+  - "    global balance"
+  - "    balance = balance - amount"
+  - "withdraw(100)"
+  - "print(balance)"

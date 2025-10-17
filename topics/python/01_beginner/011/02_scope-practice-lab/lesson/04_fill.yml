@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "حدد نوع كل متغير"
+code: |
+  total = 100  # @@INPUT@@
+
+  def calculate(n):  # n @@INPUT@@
+      result = n * 2  # result @@INPUT@@
+      return result
+solution:
+  - "/^(global|عام)$/"
+  - "/^(local|محلي)$/"
+  - "/^(local|محلي)$/"

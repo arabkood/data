@@ -1,0 +1,13 @@
+type: "bug"
+lang: "python"
+question: "لماذا لا يعمل؟"
+code: |
+  def calculate():
+      value = 50
+      return value
+
+  calculate()
+  print(value * 2)
+solution: 5
+hint: "أين value؟"
+explanation: "value محلي للدالة، لا يمكن استخدامه خارجها. استخدم القيمة المُرجعة"

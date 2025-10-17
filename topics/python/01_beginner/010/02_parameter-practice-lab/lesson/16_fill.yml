@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تطبع طول النص"
+code: |
+  def print_length(text):
+      length = @@INPUT@@(@@INPUT@@)
+      print(length)
+
+  print_length("مرحبا")
+solution:
+  - "len"
+  - "text"

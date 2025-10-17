@@ -1,0 +1,12 @@
+id: bcb8807c-8f47-4f5d-ac4c-4ba71c786302
+module_id: bf638e40-e3a8-420c-b796-57b02424d85a
+slug: real-world-data-scenarios
+position: 7
+created_at: 2025-10-17T13:52:47.034Z
+updated_at: 2025-10-17T13:52:47.034Z
+type: lesson
+title: سيناريوهات البيانات الواقعية
+difficulty: medium
+premium_only: true
+base_xp: 900
+s3_path: python/01_beginner/009/07_real-world-data-scenarios

@@ -1,0 +1,12 @@
+type: "bug"
+lang: "python"
+question: "الحلقة لا تطبع الدرجات بشكل صحيح"
+code: |
+  classes = {
+      "math": {"students": ["أحمد", "سارة"], "grades": [90, 95]}
+  }
+  for grade in classes["math"]["students"]:
+      print(grade)
+solution: 3
+hint: "نريد طباعة الدرجات وليس الأسماء"
+explanation: "يجب المرور على 'grades' وليس 'students'"

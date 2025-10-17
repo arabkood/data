@@ -1,0 +1,11 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لتوضيح النطاق"
+code:
+  - "count = 0  # عام"
+  - "def increment():"
+  - "    local_count = 1  # محلي"
+  - "    print(count)  # قراءة العام"
+  - "    print(local_count)"
+  - "increment()"
+  - "print(count)"

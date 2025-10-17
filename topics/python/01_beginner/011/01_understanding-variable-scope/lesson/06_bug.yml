@@ -1,0 +1,12 @@
+type: "bug"
+lang: "python"
+question: "لماذا يحدث خطأ؟"
+code: |
+  def test():
+      result = 100
+
+  test()
+  print(result)
+solution: 4
+hint: "أين تم تعريف result؟"
+explanation: "result متغير محلي داخل الدالة، لا يمكن الوصول إليه خارجها"

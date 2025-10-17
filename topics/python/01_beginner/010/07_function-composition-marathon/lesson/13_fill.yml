@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تحسب مربع مجموع رقمين"
+code: |
+  def add(a, b):
+      return a + b
+
+  def square(n):
+      return n * n
+
+  result = @@INPUT@@(@@INPUT@@(3, 4))
+  print(result)
+solution:
+  - "square"
+  - "add"

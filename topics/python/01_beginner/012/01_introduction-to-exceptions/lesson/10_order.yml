@@ -1,0 +1,9 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لمعالجة خطأ محتمل"
+code:
+  - "try:"
+  - "    numbers = [1, 2, 3]"
+  - "    print(numbers[10])"
+  - "except:"
+  - "    print(\"الفهرس غير موجود!\")"

@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "احسب مساحة المربع واستخدمها"
+code: |
+  def area(side):
+      return side @@INPUT@@ side
+
+  total = @@INPUT@@(5) + @@INPUT@@(3)
+  print(total)
+solution:
+  - "*"
+  - "area"
+  - "area"

@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "احم القسمة من القسمة على صفر"
+code: |
+  try:
+      result = 100 / @@INPUT@@
+      print(result)
+  except:
+      print(@@INPUT@@)
+solution:
+  - "0"
+  - "/^(\"|').+(\"|')$/"

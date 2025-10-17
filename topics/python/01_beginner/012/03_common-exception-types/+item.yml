@@ -1,0 +1,12 @@
+id: 15913ef4-4259-46da-bf48-87c56f50a6cc
+module_id: 79874944-2f38-45f3-bb4b-78b51015b294
+slug: common-exception-types
+position: 3
+created_at: 2025-10-17T13:52:47.054Z
+updated_at: 2025-10-17T13:52:47.054Z
+type: lesson
+title: أنواع الاستثناءات الشائعة
+difficulty: medium
+premium_only: true
+base_xp: 900
+s3_path: python/01_beginner/012/03_common-exception-types

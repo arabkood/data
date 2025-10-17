@@ -1,0 +1,316 @@
+---
+item_id: "module-9-item-6"
+type: "lesson"
+title: "صالة تمارين هياكل البيانات"
+base_xp: 1000
+difficulty: "hard"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      الآن سنجمع بين القوائم والقواميس معاً! 🔥
+
+      تخيل: قاموس يحتوي على قوائم، أو قائمة تحتوي على قواميس!
+
+      هذا التدريب سيجعلك خبيراً في التعامل مع البيانات المعقدة.
+
+  - type: "markdown"
+    content: |
+      **قاموس يحتوي على قوائم:**
+
+      ```python
+      student = {
+          "name": "أحمد",
+          "grades": [90, 85, 88]
+      }
+
+      print(student["grades"][0])  # 90
+      ```
+
+      نستخدم `[مفتاح][فهرس]` للوصول لعنصر في القائمة!
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع أول مدينة من قائمة المدن"
+    code: |
+      country = {
+          "name": "السعودية",
+          "cities": ["الرياض", "جدة", "الدمام"]
+      }
+      print(country@@INPUT@@)
+    solution:
+      - "/^\\[(\"|')cities(\"|')\\]\\[0\\]$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "أضف درجة جديدة (95) لقائمة الدرجات"
+    code: |
+      student = {"name": "سارة", "scores": [80, 85]}
+      student[@@INPUT@@].@@INPUT@@(@@INPUT@@)
+      print(student["scores"])
+    solution:
+      - "/^(\"|')scores(\"|')$/"
+      - "append"
+      - "95"
+
+  - type: "markdown"
+    content: |
+      **قائمة تحتوي على قواميس:**
+
+      ```python
+      students = [
+          {"name": "أحمد", "age": 20},
+          {"name": "سارة", "age": 22}
+      ]
+
+      print(students[0]["name"])  # أحمد
+      ```
+
+      نستخدم `[فهرس][مفتاح]` للوصول للقيمة!
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع اسم الطالب الثاني"
+    code: |
+      students = [
+          {"name": "علي", "grade": 90},
+          {"name": "فاطمة", "grade": 95}
+      ]
+      print(students@@INPUT@@)
+    solution:
+      - "/^\\[1\\]\\[(\"|')name(\"|')\\]$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع سعر المنتج الأول"
+    code: |
+      products = [
+          {"item": "قلم", "price": 5},
+          {"item": "كتاب", "price": 25}
+      ]
+      print(@@INPUT@@[@@INPUT@@][@@INPUT@@])
+    solution:
+      - "products"
+      - "0"
+      - "/^(\"|')price(\"|')$/"
+
+  - type: "quiz"
+    question: "كيف نصل لقيمة في قاموس موجود بقائمة؟"
+    code: |
+      data = [{"x": 10}]
+      # نريد قيمة x
+    lang: "python"
+    options:
+      - "data['x'][0]"
+      - "data[0]['x']"
+      - "data.x[0]"
+    solution: 1
+    explanation: "أولاً نصل للقاموس بالفهرس [0]، ثم نصل للقيمة بالمفتاح ['x']"
+
+  - type: "fill"
+    lang: "python"
+    question: "احسب مجموع كل الأسعار"
+    code: |
+      items = [
+          {"name": "apple", "price": 5},
+          {"name": "banana", "price": 3}
+      ]
+      total = 0
+      for item in @@INPUT@@:
+          total += @@INPUT@@[@@INPUT@@]
+      print(total)
+    solution:
+      - "items"
+      - "item"
+      - "/^(\"|')price(\"|')$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع أسماء كل الطلاب"
+    code: |
+      students = [
+          {"name": "أحمد", "age": 20},
+          {"name": "سارة", "age": 22},
+          {"name": "علي", "age": 21}
+      ]
+      for @@INPUT@@ in @@INPUT@@:
+          print(@@INPUT@@[@@INPUT@@])
+    solution:
+      - "/^(student|s)$/"
+      - "students"
+      - "/^(student|s)$/"
+      - "/^(\"|')name(\"|')$/"
+
+  - type: "markdown"
+    content: |
+      **قاموس من القواميس:**
+
+      ```python
+      users = {
+          "user1": {"name": "أحمد", "age": 25},
+          "user2": {"name": "سارة", "age": 30}
+      }
+
+      print(users["user1"]["name"])  # أحمد
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع عدد سكان مدينة الرياض"
+    code: |
+      cities = {
+          "riyadh": {"name": "الرياض", "population": 7000000},
+          "jeddah": {"name": "جدة", "population": 4000000}
+      }
+      print(cities@@INPUT@@[@@INPUT@@])
+    solution:
+      - "/^\\[(\"|')riyadh(\"|')\\]$/"
+      - "/^(\"|')population(\"|')$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "أضف قاموس منتج جديد للقائمة"
+    code: |
+      products = []
+      new_product = {"id": 1, "name": "laptop", "price": 5000}
+      products.@@INPUT@@(@@INPUT@@)
+      print(len(products))
+    solution:
+      - "append"
+      - "new_product"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لإنشاء قائمة من القواميس وطباعة مجموع الأعمار"
+    code:
+      - "people = ["
+      - "    {\"name\": \"أحمد\", \"age\": 25},"
+      - "    {\"name\": \"سارة\", \"age\": 30}"
+      - "]"
+      - "total_age = 0"
+      - "for person in people:"
+      - "    total_age += person[\"age\"]"
+      - "print(total_age)"
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع اسم كل مدينة من القاموس"
+    code: |
+      locations = {
+          "city1": {"name": "الرياض", "temp": 35},
+          "city2": {"name": "جدة", "temp": 30}
+      }
+      for key in @@INPUT@@:
+          print(@@INPUT@@[@@INPUT@@][@@INPUT@@])
+    solution:
+      - "locations"
+      - "locations"
+      - "key"
+      - "/^(\"|')name(\"|')$/"
+
+  - type: "bug"
+    lang: "python"
+    question: "هناك خطأ في الوصول للبيانات، أين؟"
+    code: |
+      books = [{"title": "كتاب 1", "pages": 200}]
+      print(books["title"][0])
+    solution: 1
+    hint: "تذكر: أولاً الفهرس، ثم المفتاح"
+    explanation: "يجب أن يكون books[0]['title'] وليس books['title'][0]"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ قاموس يحتوي على قائمة وأضف عنصر للقائمة"
+    code: |
+      team = {
+          "name": "الهلال",
+          "players": []
+      }
+      team[@@INPUT@@].@@INPUT@@(@@INPUT@@)
+      print(team["players"])
+    solution:
+      - "/^(\"|')players(\"|')$/"
+      - "append"
+      - "/^(\"|').+(\"|')$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "ابحث عن الطالب الذي درجته أكبر من 90"
+    code: |
+      students = [
+          {"name": "أحمد", "score": 85},
+          {"name": "سارة", "score": 95},
+          {"name": "علي", "score": 88}
+      ]
+      for student in @@INPUT@@:
+          if @@INPUT@@[@@INPUT@@] > 90:
+              print(@@INPUT@@[@@INPUT@@])
+    solution:
+      - "students"
+      - "student"
+      - "/^(\"|')score(\"|')$/"
+      - "student"
+      - "/^(\"|')name(\"|')$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "احسب معدل الأسعار لجميع المنتجات"
+    code: |
+      items = [
+          {"name": "item1", "price": 100},
+          {"name": "item2", "price": 200},
+          {"name": "item3", "price": 150}
+      ]
+      total = 0
+      for item in items:
+          total += @@INPUT@@
+      average = total / @@INPUT@@(@@INPUT@@)
+      print(average)
+    solution:
+      - "/^item\\[(\"|')price(\"|')\\]$/"
+      - "len"
+      - "items"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ قائمة بأسماء المدن من القاموس"
+    code: |
+      data = {
+          "c1": {"city": "الرياض", "code": 11},
+          "c2": {"city": "جدة", "code": 21}
+      }
+      cities = []
+      for key in data:
+          cities.@@INPUT@@(@@INPUT@@[@@INPUT@@][@@INPUT@@])
+      print(cities)
+    solution:
+      - "append"
+      - "data"
+      - "key"
+      - "/^(\"|')city(\"|')$/"
+
+  - type: "bug"
+    lang: "python"
+    question: "الحلقة لا تطبع الدرجات بشكل صحيح"
+    code: |
+      classes = {
+          "math": {"students": ["أحمد", "سارة"], "grades": [90, 95]}
+      }
+      for grade in classes["math"]["students"]:
+          print(grade)
+    solution: 3
+    hint: "نريد طباعة الدرجات وليس الأسماء"
+    explanation: "يجب المرور على 'grades' وليس 'students'"
+
+  - type: "markdown"
+    content: |
+      مذهل! 🎉 أنت الآن خبير في:
+
+      ✅ قواميس تحتوي على قوائم
+      ✅ قوائم تحتوي على قواميس
+      ✅ قواميس تحتوي على قواميس
+      ✅ المرور على البيانات المعقدة
+      ✅ البحث والمعالجة في هياكل بيانات متداخلة
+
+      هذه المهارات أساسية للتعامل مع البيانات الحقيقية! 💪

@@ -1,0 +1,10 @@
+type: "bug"
+lang: "python"
+question: "هناك خطأ في تعريف الدالة، أين؟"
+code: |
+  def welcome()
+  print("Welcome!")
+  welcome()
+solution: 0
+hint: "ماذا ينقص بعد اسم الدالة؟"
+explanation: "ينقص النقطتان : بعد ()، الشكل الصحيح: def welcome():"

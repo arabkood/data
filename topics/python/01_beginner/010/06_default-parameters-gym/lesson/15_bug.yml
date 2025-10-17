@@ -1,0 +1,11 @@
+type: "bug"
+lang: "python"
+question: "لماذا تطبع None؟"
+code: |
+  def greet(name, prefix="مرحباً"):
+      message = f"{prefix} {name}"
+  result = greet("أحمد")
+  print(result)
+solution: 2
+hint: "هل أرجعنا القيمة؟"
+explanation: "الدالة لا تُرجع القيمة، يجب إضافة return message"

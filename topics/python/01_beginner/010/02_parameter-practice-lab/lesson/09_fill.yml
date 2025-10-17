@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تطبع الرقم + 10"
+code: |
+  def add_ten(@@INPUT@@):
+      print(@@INPUT@@ + @@INPUT@@)
+
+  add_ten(5)
+solution:
+  - "/^(num|number|n|x)$/"
+  - "/^(num|number|n|x)$/"
+  - "10"

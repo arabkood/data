@@ -1,0 +1,15 @@
+type: "bug"
+lang: "python"
+question: "دالة التحقق لا تعمل بشكل صحيح"
+code: |
+  def is_valid_password(password):
+      if len(password) >= 8:
+          print("كلمة مرور صحيحة")
+      else:
+          print("كلمة مرور ضعيفة")
+
+  if is_valid_password("123"):
+      print("مقبول")
+solution: 2
+hint: "ماذا يجب أن تُرجع دالة التحقق؟"
+explanation: "دالة التحقق يجب أن تُرجع True/False وليس تطبع. استخدم return"

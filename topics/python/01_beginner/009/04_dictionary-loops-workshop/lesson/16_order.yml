@@ -1,0 +1,10 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لعد عدد القيم الموجبة"
+code:
+  - "numbers = {\"a\": 5, \"b\": -3, \"c\": 10, \"d\": -2}"
+  - "count = 0"
+  - "for value in numbers.values():"
+  - "    if value > 0:"
+  - "        count += 1"
+  - "print(count)"

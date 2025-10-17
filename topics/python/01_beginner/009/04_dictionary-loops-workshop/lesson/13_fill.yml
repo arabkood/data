@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "اطبع الأسماء التي درجتها أكبر من 85"
+code: |
+  scores = {"أحمد": 90, "خالد": 80, "سارة": 92}
+  for name, score in @@INPUT@@:
+      if @@INPUT@@ > 85:
+          print(@@INPUT@@)
+solution:
+  - "/^scores\\.items\\(\\)$/"
+  - "score"
+  - "name"

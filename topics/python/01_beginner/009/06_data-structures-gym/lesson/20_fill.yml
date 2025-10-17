@@ -1,0 +1,17 @@
+type: "fill"
+lang: "python"
+question: "أنشئ قائمة بأسماء المدن من القاموس"
+code: |
+  data = {
+      "c1": {"city": "الرياض", "code": 11},
+      "c2": {"city": "جدة", "code": 21}
+  }
+  cities = []
+  for key in data:
+      cities.@@INPUT@@(@@INPUT@@[@@INPUT@@][@@INPUT@@])
+  print(cities)
+solution:
+  - "append"
+  - "data"
+  - "key"
+  - "/^(\"|')city(\"|')$/"

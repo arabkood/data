@@ -1,0 +1,17 @@
+type: "fill"
+lang: "python"
+question: "دالة تستدعي دالتين وتجمع النتائج"
+code: |
+  def get_x():
+      return 10
+
+  def get_y():
+      return 20
+
+  def sum_both():
+      return @@INPUT@@() + @@INPUT@@()
+
+  print(sum_both())
+solution:
+  - "get_x"
+  - "get_y"

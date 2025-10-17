@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "استخدم دالة داخل دالة أخرى"
+code: |
+  def triple(n):
+      return n * 3
+
+  def add_five(n):
+      return n + 5
+
+  result = add_five(@@INPUT@@(10))
+  print(result)
+solution:
+  - "triple"

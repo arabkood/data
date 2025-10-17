@@ -1,0 +1,17 @@
+type: "quiz"
+question: "ماذا سيطبع؟"
+code: |
+  x = 5
+
+  def change():
+      x = 10
+
+  change()
+  print(x)
+lang: "python"
+options:
+  - "5"
+  - "10"
+  - "خطأ"
+solution: 0
+explanation: "x داخل الدالة محلي جديد، لا يؤثر على العام"

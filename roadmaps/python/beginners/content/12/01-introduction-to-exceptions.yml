@@ -1,0 +1,194 @@
+---
+item_id: "module-12-item-1"
+type: "lesson"
+title: "مقدمة إلى الاستثناءات"
+base_xp: 850
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      ماذا يحدث عندما يحدث خطأ في برنامجك؟ 💥
+
+      ```python
+      number = int("abc")  # خطأ!
+      # ValueError: invalid literal for int()
+      ```
+
+      البرنامج يتوقف! 😱 لكن هناك طريقة أفضل...
+
+  - type: "markdown"
+    content: |
+      **الاستثناءات** (Exceptions) = الأخطاء التي تحدث أثناء التشغيل
+
+      عندما يحدث خطأ، Python "ترمي" (throw) استثناء:
+
+      ```python
+      # أنواع شائعة من الأخطاء:
+      int("abc")          # ValueError
+      10 / 0              # ZeroDivisionError
+      [1, 2][5]           # IndexError
+      {"a": 1}["b"]       # KeyError
+      ```
+
+      كل خطأ له **نوع** محدد!
+
+  - type: "quiz"
+    question: "ما هو الاستثناء (Exception)؟"
+    options:
+      - "خطأ في كتابة الكود"
+      - "خطأ يحدث أثناء تشغيل البرنامج"
+      - "تحذير من Python"
+    solution: 1
+    explanation: "الاستثناء هو خطأ يحدث عند تشغيل البرنامج (runtime error)"
+
+  - type: "markdown"
+    content: |
+      **لماذا نهتم بالاستثناءات؟**
+
+      بدون معالجة:
+      ```python
+      age = int(input("عمرك: "))  # المستخدم يكتب "abc"
+      # البرنامج يتوقف! ❌
+      ```
+
+      مع معالجة:
+      ```python
+      try:
+          age = int(input("عمرك: "))
+      except:
+          print("أدخل رقماً صحيحاً!")
+      # البرنامج يستمر! ✅
+      ```
+
+  - type: "quiz"
+    question: "ماذا يحدث بدون معالجة الاستثناءات؟"
+    options:
+      - "البرنامج يستمر بشكل طبيعي"
+      - "البرنامج يتوقف عند الخطأ"
+      - "Python يصلح الخطأ تلقائياً"
+    solution: 1
+    explanation: "بدون معالجة، البرنامج يتوقف تماماً عند حدوث الخطأ"
+
+  - type: "markdown"
+    content: |
+      **البنية الأساسية: try-except**
+
+      ```python
+      try:
+          # كود قد يسبب خطأ
+          risky_code()
+      except:
+          # ماذا نفعل إذا حدث خطأ
+          print("حدث خطأ!")
+      ```
+
+      - `try`: حاول تنفيذ هذا الكود
+      - `except`: إن حدث خطأ، نفذ هذا
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل البنية الأساسية"
+    code: |
+      @@INPUT@@:
+          result = 10 / 0
+      @@INPUT@@:
+          print("لا يمكن القسمة على صفر!")
+    solution:
+      - "try"
+      - "except"
+
+  - type: "markdown"
+    content: |
+      **مثال عملي:**
+
+      ```python
+      try:
+          number = int(input("أدخل رقم: "))
+          result = 100 / number
+          print(f"النتيجة: {result}")
+      except:
+          print("خطأ! تحقق من إدخالك")
+
+      print("البرنامج مستمر!")
+      ```
+
+      حتى لو حدث خطأ، البرنامج لا يتوقف!
+
+  - type: "fill"
+    lang: "python"
+    question: "احم هذا الكود من الأخطاء"
+    code: |
+      try:
+          age = @@INPUT@@(input("العمر: "))
+          print(age)
+      @@INPUT@@:
+          print("أدخل رقماً صحيحاً")
+    solution:
+      - "int"
+      - "except"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لمعالجة خطأ محتمل"
+    code:
+      - "try:"
+      - "    numbers = [1, 2, 3]"
+      - "    print(numbers[10])"
+      - "except:"
+      - "    print(\"الفهرس غير موجود!\")"
+
+  - type: "markdown"
+    content: |
+      **ملاحظة مهمة:**
+
+      الكود داخل `try` ينفذ عادياً إذا لم يحدث خطأ:
+
+      ```python
+      try:
+          x = 5 + 5  # لا خطأ
+          print(x)   # يطبع 10
+      except:
+          print("خطأ")  # لن ينفذ!
+      ```
+
+      `except` تنفذ فقط عند حدوث خطأ!
+
+  - type: "quiz"
+    question: "متى ينفذ كود except؟"
+    code: |
+      try:
+          result = 10 + 20
+      except:
+          print("خطأ")
+    lang: "python"
+    options:
+      - "دائماً"
+      - "فقط عند حدوث خطأ"
+      - "أبداً"
+    solution: 1
+    explanation: "except ينفذ فقط إذا حدث خطأ في كتلة try"
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا لا يعمل؟"
+    code: |
+      try
+          num = int("abc")
+      except:
+          print("خطأ")
+    solution: 0
+    hint: "ماذا ينقص try؟"
+    explanation: "try يحتاج نقطتين : في النهاية"
+
+  - type: "markdown"
+    content: |
+      رائع! 🎯 الآن تعرف:
+
+      ✅ ما هي الاستثناءات ولماذا تحدث
+      ✅ لماذا نحتاج معالجة الأخطاء
+      ✅ البنية الأساسية try-except
+      ✅ كيف تحمي برنامجك من التوقف
+
+      في الدرس القادم: تمارين مكثفة على try-except! 💪

@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "اطبع العنصر الثاني من قائمة الطلاب"
+code: |
+  students = [
+      {"name": "أحمد", "age": 20},
+      {"name": "سارة", "age": 22}
+  ]
+  print(students@@INPUT@@[@@INPUT@@])
+solution:
+  - "[1]"
+  - "/^(\"|')name(\"|')$/"

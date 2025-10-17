@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "دالة تستخدم نتيجة دالة أخرى"
+code: |
+  def get_base():
+      return 5
+
+  def calculate():
+      base = @@INPUT@@()
+      return base * base
+
+  result = @@INPUT@@()
+  print(result)
+solution:
+  - "get_base"
+  - "calculate"

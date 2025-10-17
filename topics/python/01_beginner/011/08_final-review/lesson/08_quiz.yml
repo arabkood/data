@@ -1,0 +1,19 @@
+type: "quiz"
+question: "ما ترتيب التنفيذ؟"
+code: |
+  def a():
+      print("A1")
+      b()
+      print("A2")
+
+  def b():
+      print("B")
+
+  a()
+lang: "python"
+options:
+  - "A1, B, A2"
+  - "A1, A2, B"
+  - "B, A1, A2"
+solution: 0
+explanation: "a تطبع A1، تستدعي b (تطبع B)، ثم a تكمل وتطبع A2"

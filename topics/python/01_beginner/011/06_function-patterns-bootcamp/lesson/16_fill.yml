@@ -1,0 +1,17 @@
+type: "fill"
+lang: "python"
+question: "احسب عدد العناصر الموجبة"
+code: |
+  def count_positive(numbers):
+      count = @@INPUT@@
+      for num in numbers:
+          if num > @@INPUT@@:
+              count @@INPUT@@ 1
+      return @@INPUT@@
+
+  print(count_positive([1, -2, 3, -4, 5]))
+solution:
+  - "0"
+  - "0"
+  - "+="
+  - "count"

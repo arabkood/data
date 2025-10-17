@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "أنشئ قائمة من كل قيم القاموس"
+code: |
+  temps = {"morning": 20, "noon": 35, "night": 25}
+  temp_list = @@INPUT@@(temps@@INPUT@@)
+  print(temp_list)
+solution:
+  - "list"
+  - "/^\\.values\\(\\)$/"

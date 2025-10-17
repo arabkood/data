@@ -1,0 +1,10 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لدالة تُنشئ مستخدم بدور افتراضي"
+code:
+  - "def create_user(username, role=\"user\"):"
+  - "    return {\"username\": username, \"role\": role}"
+  - "admin = create_user(\"ali\", \"admin\")"
+  - "user = create_user(\"sara\")"
+  - "print(admin)"
+  - "print(user)"

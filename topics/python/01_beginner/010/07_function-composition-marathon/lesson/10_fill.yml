@@ -1,0 +1,18 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تحقق إن كان الرقم زوجي وموجب"
+code: |
+  def is_even(n):
+      return n % 2 == 0
+
+  def is_positive(n):
+      return n > 0
+
+  def is_even_positive(n):
+      return @@INPUT@@(n) @@INPUT@@ @@INPUT@@(n)
+
+  print(is_even_positive(4))
+solution:
+  - "is_even"
+  - "and"
+  - "is_positive"

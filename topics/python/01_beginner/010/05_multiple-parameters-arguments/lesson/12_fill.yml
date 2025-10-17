@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تحسب السعر النهائي بعد الخصم"
+code: |
+  def final_price(price, discount):
+      return price - (price * discount / @@INPUT@@)
+
+  result = final_price(100, 20)
+  print(result)
+solution:
+  - "100"

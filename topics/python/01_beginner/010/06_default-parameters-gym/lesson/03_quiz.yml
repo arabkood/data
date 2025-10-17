@@ -1,0 +1,15 @@
+type: "quiz"
+question: "ما ناتج هذا الاستدعاء؟"
+code: |
+  def say(msg, times=2):
+      for i in range(times):
+          print(msg)
+
+  say("Hi")
+lang: "python"
+options:
+  - "يطبع 'Hi' مرة واحدة"
+  - "يطبع 'Hi' مرتين"
+  - "خطأ"
+solution: 1
+explanation: "times له قيمة افتراضية 2، فيطبع 'Hi' مرتين"

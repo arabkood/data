@@ -1,0 +1,257 @@
+---
+item_id: "module-11-item-2"
+type: "lesson"
+title: "معمل تمارين النطاق"
+base_xp: 900
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      وقت التدريب على النطاق! 🎯
+
+      سنحل ألغاز النطاق ونفهم كيف تتفاعل المتغيرات المحلية والعامة.
+
+  - type: "quiz"
+    question: "ماذا سيطبع هذا الكود؟"
+    code: |
+      x = 10
+
+      def test():
+          print(x)
+
+      test()
+    lang: "python"
+    options:
+      - "10"
+      - "خطأ"
+      - "None"
+    solution: 0
+    explanation: "يمكن قراءة المتغير العام x من داخل الدالة"
+
+  - type: "quiz"
+    question: "ماذا سيطبع؟"
+    code: |
+      x = 5
+
+      def change():
+          x = 10
+
+      change()
+      print(x)
+    lang: "python"
+    options:
+      - "5"
+      - "10"
+      - "خطأ"
+    solution: 0
+    explanation: "x داخل الدالة محلي جديد، لا يؤثر على العام"
+
+  - type: "fill"
+    lang: "python"
+    question: "حدد نوع كل متغير"
+    code: |
+      total = 100  # @@INPUT@@
+
+      def calculate(n):  # n @@INPUT@@
+          result = n * 2  # result @@INPUT@@
+          return result
+    solution:
+      - "/^(global|عام)$/"
+      - "/^(local|محلي)$/"
+      - "/^(local|محلي)$/"
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا يحدث خطأ؟"
+    code: |
+      def create():
+          message = "Hello"
+
+      create()
+      print(message)
+    solution: 4
+    hint: "أين message؟"
+    explanation: "message محلي للدالة create، لا يمكن الوصول إليه خارجها"
+
+  - type: "quiz"
+    question: "ما المخرج؟"
+    code: |
+      name = "أحمد"
+
+      def greet():
+          name = "سارة"
+          print(name)
+
+      greet()
+      print(name)
+    lang: "python"
+    options:
+      - "سارة ثم أحمد"
+      - "أحمد ثم سارة"
+      - "سارة ثم سارة"
+    solution: 0
+    explanation: "داخل الدالة name محلي='سارة'، خارجها العام='أحمد'"
+
+  - type: "fill"
+    lang: "python"
+    question: "أكمل لقراءة المتغير العام"
+    code: |
+      price = 100
+
+      def show_price():
+          print(@@INPUT@@)  # قراءة العام
+
+      show_price()
+    solution:
+      - "price"
+
+  - type: "quiz"
+    question: "هل سيعمل هذا الكود؟"
+    code: |
+      def func1():
+          x = 10
+
+      def func2():
+          print(x)
+
+      func1()
+      func2()
+    lang: "python"
+    options:
+      - "نعم، يطبع 10"
+      - "لا، خطأ - x محلي لـ func1"
+      - "نعم، يطبع None"
+    solution: 1
+    explanation: "x محلي لـ func1، لا يمكن لـ func2 الوصول إليه"
+
+  - type: "fill"
+    lang: "python"
+    question: "أي قيمة ستُطبع؟"
+    code: |
+      num = 5
+
+      def test():
+          num = 10
+          print(@@INPUT@@)  # أي num؟
+
+      test()
+    solution:
+      - "/^(10|num)$/"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لتوضيح النطاق بشكل صحيح"
+    code:
+      - "counter = 0"
+      - "def increment():"
+      - "    step = 1"
+      - "    print(counter + step)"
+      - "increment()"
+      - "print(counter)"
+
+  - type: "bug"
+    lang: "python"
+    question: "ما المشكلة في هذا الكود؟"
+    code: |
+      def calculate():
+          total = 0
+          total = total + 10
+          return total
+
+      result = calculate()
+      total = total + 5
+    solution: 6
+    hint: "أين total خارج الدالة؟"
+    explanation: "total محلي للدالة، غير موجود خارجها. استخدم result بدلاً منه"
+
+  - type: "quiz"
+    question: "ماذا سيحدث؟"
+    code: |
+      def outer():
+          x = 10
+          print(x)
+
+      def inner():
+          print(x)
+
+      outer()
+      inner()
+    lang: "python"
+    options:
+      - "يطبع 10 مرتين"
+      - "outer تعمل، inner خطأ"
+      - "كلاهما خطأ"
+    solution: 1
+    explanation: "x محلي لـ outer، inner لا يمكنها الوصول إليه"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تستخدم متغير محلي"
+    code: |
+      def process():
+          @@INPUT@@ = 100  # محلي
+          print(@@INPUT@@)
+
+      process()
+    solution:
+      - "/^[a-z_][a-z0-9_]*$/"
+      - "/^[a-z_][a-z0-9_]*$/"
+
+  - type: "quiz"
+    question: "أي متغير سيُطبع؟"
+    code: |
+      value = "عام"
+
+      def test():
+          value = "محلي"
+          return value
+
+      result = test()
+      print(result)
+    lang: "python"
+    options:
+      - "عام"
+      - "محلي"
+      - "خطأ"
+    solution: 1
+    explanation: "الدالة تُرجع value المحلي، وهو 'محلي'"
+
+  - type: "fill"
+    lang: "python"
+    question: "المعاملات محلية دائماً"
+    code: |
+      def add(a, b):  # a, b @@INPUT@@
+          sum_val = a + b  # sum_val @@INPUT@@
+          return sum_val
+
+      result = add(5, 3)  # result @@INPUT@@
+    solution:
+      - "/^(local|محلي|محلية)$/"
+      - "/^(local|محلي)$/"
+      - "/^(global|عام)$/"
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا لا يعمل؟"
+    code: |
+      def set_name():
+          user_name = "أحمد"
+
+      set_name()
+      print(f"الاسم: {user_name}")
+    solution: 4
+    hint: "نطاق user_name؟"
+    explanation: "user_name محلي، لا يمكن الوصول إليه خارج الدالة"
+
+  - type: "markdown"
+    content: |
+      ممتاز! 🎯 الآن أتقنت:
+
+      ✅ التمييز بين المتغيرات المحلية والعامة
+      ✅ فهم أن المحلي لا يغير العام
+      ✅ معرفة أن المعاملات محلية
+      ✅ حل ألغاز النطاق المعقدة
+
+      في الدرس القادم: كيف نُعدّل المتغيرات العامة! 🔥

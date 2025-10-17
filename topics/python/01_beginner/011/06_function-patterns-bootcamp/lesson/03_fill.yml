@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تحقق من أن الرقم في نطاق معين"
+code: |
+  def is_in_range(num, min_val, max_val):
+      return num >= @@INPUT@@ @@INPUT@@ num <= @@INPUT@@
+
+  print(is_in_range(5, 1, 10))
+solution:
+  - "min_val"
+  - "and"
+  - "max_val"

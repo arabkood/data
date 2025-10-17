@@ -1,0 +1,12 @@
+type: "bug"
+lang: "python"
+question: "لماذا لا يعمل؟"
+code: |
+  def set_name():
+      user_name = "أحمد"
+
+  set_name()
+  print(f"الاسم: {user_name}")
+solution: 4
+hint: "نطاق user_name؟"
+explanation: "user_name محلي، لا يمكن الوصول إليه خارج الدالة"

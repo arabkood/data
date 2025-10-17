@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "أضف مفتاح 'email' بقيمة 'sara@example.com' للقاموس"
+code: |
+  user = {"username": "sara123", "age": 22}
+  @@INPUT@@[@@INPUT@@] = @@INPUT@@
+solution:
+  - "user"
+  - "/^(\"|')email(\"|')$/"
+  - "/^(\"|')sara@example\\.com(\"|')$/"

@@ -1,0 +1,15 @@
+type: "bug"
+lang: "python"
+question: "لماذا يحدث خطأ؟"
+code: |
+  def add(a, b):
+      return a + b
+
+  def multiply(n):
+      return n * 2
+
+  result = add(multiply(5, 3))
+  print(result)
+solution: 6
+hint: "كم معامل تحتاج multiply؟"
+explanation: "multiply تحتاج معامل واحد لكننا مررنا 2، يجب multiply(5) أو تعديل الدالة"

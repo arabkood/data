@@ -1,0 +1,207 @@
+---
+item_id: "module-9-item-2"
+type: "lesson"
+title: "تدريبات الوصول للقواميس"
+base_xp: 900
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      في الدرس السابق تعلمنا إنشاء القواميس. الآن وقت التدريب المكثف!
+
+      سنتدرب على كيفية الوصول لبيانات القاموس وتعديلها بطرق مختلفة.
+
+      تذكر: القواميس تستخدم **المفاتيح** للوصول للقيم، مثل البحث في قاموس لغوي!
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع اسم الطالب"
+    code: |
+      student = {"name": "محمد", "grade": 88}
+      print(@@INPUT@@)
+    solution:
+      - "/^student\\[(\"|')name(\"|')\\]$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع سعر المنتج"
+    code: |
+      product = {"id": 101, "price": 250.50, "stock": 15}
+      print(@@INPUT@@)
+    solution:
+      - "/^product\\[(\"|')price(\"|')\\]$/"
+
+  - type: "markdown"
+    content: |
+      يمكننا تعديل قيمة موجودة في القاموس:
+
+      ```python
+      car = {"brand": "تويوتا", "year": 2020}
+      car["year"] = 2024  # تحديث السنة
+      print(car)  # {'brand': 'تويوتا', 'year': 2024}
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "غير عمر الشخص إلى 30"
+    code: |
+      person = {"name": "علي", "age": 25}
+      @@INPUT@@ = 30
+      print(person["age"])
+    solution:
+      - "/^person\\[(\"|')age(\"|')\\]$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "حدّث المدينة إلى 'مكة'"
+    code: |
+      location = {"country": "السعودية", "city": "جدة"}
+      location@@INPUT@@ = @@INPUT@@
+    solution:
+      - "/^\\[(\"|')city(\"|')\\]$/"
+      - "/^(\"|')مكة(\"|')$/"
+
+  - type: "markdown"
+    content: |
+      يمكننا إضافة مفاتيح جديدة للقاموس ببساطة:
+
+      ```python
+      phone = {"brand": "سامسونج"}
+      phone["price"] = 3000  # إضافة مفتاح جديد
+      phone["color"] = "أسود"  # إضافة مفتاح آخر
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أضف مفتاح 'email' بقيمة 'sara@example.com' للقاموس"
+    code: |
+      user = {"username": "sara123", "age": 22}
+      @@INPUT@@[@@INPUT@@] = @@INPUT@@
+    solution:
+      - "user"
+      - "/^(\"|')email(\"|')$/"
+      - "/^(\"|')sara@example\\.com(\"|')$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "أضف مفتاح 'rating' بقيمة 4.5"
+    code: |
+      restaurant = {"name": "مطعم النخيل"}
+      restaurant[@@INPUT@@] = @@INPUT@@
+    solution:
+      - "/^(\"|')rating(\"|')$/"
+      - "4.5"
+
+  - type: "quiz"
+    question: "ماذا يحدث عند تعيين قيمة لمفتاح موجود بالفعل؟"
+    code: |
+      data = {"count": 5}
+      data["count"] = 10
+    lang: "python"
+    options:
+      - "يحدث خطأ لأن المفتاح موجود"
+      - "تُستبدل القيمة القديمة بالجديدة"
+      - "يُنشأ مفتاح آخر بنفس الاسم"
+    solution: 1
+    explanation: "عندما نعيّن قيمة لمفتاح موجود، يتم استبدال القيمة القديمة بالجديدة"
+
+  - type: "fill"
+    lang: "python"
+    question: "احسب المجموع الكلي للفاتورة"
+    code: |
+      bill = {"food": 150, "drinks": 50, "tax": 30}
+      total = @@INPUT@@ + @@INPUT@@ + @@INPUT@@
+      print(total)
+    solution:
+      - "/^bill\\[(\"|')food(\"|')\\]$/"
+      - "/^bill\\[(\"|')drinks(\"|')\\]$/"
+      - "/^bill\\[(\"|')tax(\"|')\\]$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع الاسم الكامل (الاسم الأول + اسم العائلة)"
+    code: |
+      person = {"first_name": "خالد", "last_name": "العتيبي"}
+      full_name = @@INPUT@@ + " " + @@INPUT@@
+      print(full_name)
+    solution:
+      - "/^person\\[(\"|')first_name(\"|')\\]$/"
+      - "/^person\\[(\"|')last_name(\"|')\\]$/"
+
+  - type: "bug"
+    lang: "python"
+    question: "الكود لا يعمل! أين الخطأ؟"
+    code: |
+      book = {"title": "الأيام", "author": "طه حسين"}
+      print(book[author])
+    solution: 1
+    hint: "المفتاح يجب أن يكون نص"
+    explanation: "المفتاح 'author' يجب أن يكون محاطاً بعلامات تنصيص: book[\"author\"]"
+
+  - type: "fill"
+    lang: "python"
+    question: "زِد الكمية بمقدار 10"
+    code: |
+      inventory = {"item": "قلم", "quantity": 50}
+      inventory["quantity"] = @@INPUT@@
+      print(inventory["quantity"])
+    solution:
+      - "/^(inventory\\[(\"|')quantity(\"|')\\]\\s*\\+\\s*10|50\\s*\\+\\s*10)$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "طبّق خصم 20% على السعر (السعر * 0.8)"
+    code: |
+      item = {"name": "كتاب", "price": 100}
+      item[@@INPUT@@] = item[@@INPUT@@] @@INPUT@@ 0.8
+      print(item["price"])
+    solution:
+      - "/^(\"|')price(\"|')$/"
+      - "/^(\"|')price(\"|')$/"
+      - "*"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لإنشاء قاموس وتحديث قيمه"
+    code:
+      - "game = {\"name\": \"الشطرنج\", \"players\": 2}"
+      - "game[\"time\"] = 60"
+      - "game[\"players\"] = 4"
+      - "print(game)"
+
+  - type: "bug"
+    lang: "python"
+    question: "هناك خطأ في الوصول للقيمة، أصلحه"
+    code: |
+      settings = {"language": "ar", "theme": "dark"}
+      current_theme = settings{"theme"}
+      print(current_theme)
+    solution: 1
+    hint: "كيف نصل للعناصر في القاموس؟"
+    explanation: "يجب استخدام الأقواس المربعة [] وليس المعقوفة {} للوصول للعناصر"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ قاموس درجات، ثم احسب المتوسط"
+    code: |
+      scores = {"math": 90, "science": 85, "english": 88}
+      average = (@@INPUT@@ + @@INPUT@@ + @@INPUT@@) / 3
+      print(average)
+    solution:
+      - "/^scores\\[(\"|')math(\"|')\\]$/"
+      - "/^scores\\[(\"|')science(\"|')\\]$/"
+      - "/^scores\\[(\"|')english(\"|')\\]$/"
+
+  - type: "markdown"
+    content: |
+      رائع! أنت الآن محترف في:
+
+      ✅ الوصول لقيم القاموس باستخدام المفاتيح
+      ✅ تعديل قيم موجودة
+      ✅ إضافة مفاتيح وقيم جديدة
+      ✅ استخدام قيم القاموس في العمليات الحسابية
+      ✅ تجنب الأخطاء الشائعة
+
+      في الدرس القادم سنتعلم دوال القواميس القوية! 💪

@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أنشئ قاموس لكتاب يحتوي على عنوان ومؤلف"
+code: |
+  book = @@INPUT@@
+      @@INPUT@@: "الأجنحة المتكسرة",
+      @@INPUT@@: "جبران خليل جبران"
+  }
+solution:
+  - "{"
+  - "/^(\"title\"|'title')$/"
+  - "/^(\"author\"|'author')$/"

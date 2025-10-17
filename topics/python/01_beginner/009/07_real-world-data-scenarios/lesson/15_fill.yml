@@ -1,0 +1,18 @@
+type: "fill"
+lang: "python"
+question: "أنشئ قائمة بأسماء المنتجات التي سعرها أكثر من 100"
+code: |
+  products = [
+      {"name": "A", "price": 50},
+      {"name": "B", "price": 150},
+      {"name": "C", "price": 200}
+  ]
+  expensive = []
+  for p in products:
+      if @@INPUT@@:
+          expensive.@@INPUT@@(@@INPUT@@)
+  print(expensive)
+solution:
+  - "/^p\\[(\"|')price(\"|')\\]\\s*>\\s*100$/"
+  - "append"
+  - "/^p\\[(\"|')name(\"|')\\]$/"

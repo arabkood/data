@@ -1,0 +1,14 @@
+type: "bug"
+lang: "python"
+question: "الدالة لا تُرجع القائمة المصفاة، لماذا؟"
+code: |
+  def filter_adults(ages):
+      adults = []
+      for age in ages:
+          if age >= 18:
+              adults.append(age)
+  result = filter_adults([15, 20, 30, 12])
+  print(result)
+solution: 5
+hint: "هل أرجعنا القائمة؟"
+explanation: "الدالة لا تُرجع القائمة adults، يجب إضافة return adults"

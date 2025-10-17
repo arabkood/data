@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "استدع دالة من داخل دالة أخرى"
+code: |
+  def greet():
+      print("مرحباً")
+
+  def welcome():
+      print("أهلاً")
+      @@INPUT@@()
+
+  welcome()
+solution:
+  - "greet"

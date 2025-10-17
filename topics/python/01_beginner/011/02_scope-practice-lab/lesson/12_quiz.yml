@@ -1,0 +1,19 @@
+type: "quiz"
+question: "ماذا سيحدث؟"
+code: |
+  def outer():
+      x = 10
+      print(x)
+
+  def inner():
+      print(x)
+
+  outer()
+  inner()
+lang: "python"
+options:
+  - "يطبع 10 مرتين"
+  - "outer تعمل، inner خطأ"
+  - "كلاهما خطأ"
+solution: 1
+explanation: "x محلي لـ outer، inner لا يمكنها الوصول إليه"

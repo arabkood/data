@@ -1,0 +1,12 @@
+type: "bug"
+lang: "python"
+question: "لماذا يحدث خطأ؟"
+code: |
+  def create():
+      message = "Hello"
+
+  create()
+  print(message)
+solution: 4
+hint: "أين message؟"
+explanation: "message محلي للدالة create، لا يمكن الوصول إليه خارجها"

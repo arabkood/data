@@ -1,0 +1,12 @@
+type: "order"
+lang: "python"
+question: "رتب دالة بناء بطاقة عرض"
+code:
+  - "def create_card(title, description, price):"
+  - "    return {"
+  - "        \"title\": title,"
+  - "        \"description\": description,"
+  - "        \"price\": price"
+  - "    }"
+  - "card = create_card(\"منتج\", \"وصف\", 100)"
+  - "print(card)"

@@ -1,0 +1,18 @@
+type: "fill"
+lang: "python"
+question: "اطبع المنتجات المتوفرة (stock > 0)"
+code: |
+  inventory = [
+      {"item": "phone", "stock": 0},
+      {"item": "laptop", "stock": 5},
+      {"item": "tablet", "stock": 3}
+  ]
+  for product in @@INPUT@@:
+      if @@INPUT@@[@@INPUT@@] > 0:
+          print(@@INPUT@@[@@INPUT@@])
+solution:
+  - "inventory"
+  - "product"
+  - "/^(\"|')stock(\"|')$/"
+  - "product"
+  - "/^(\"|')item(\"|')$/"

@@ -1,0 +1,208 @@
+---
+item_id: "module-10-item-6"
+type: "lesson"
+title: "صالة المعاملات الافتراضية"
+base_xp: 900
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      أحياناً نريد معامل **اختياري** بقيمة افتراضية:
+
+      ```python
+      def greet(name, greeting="مرحباً"):
+          print(f"{greeting} {name}!")
+
+      greet("أحمد")              # مرحباً أحمد!
+      greet("سارة", "أهلاً")     # أهلاً سارة!
+      ```
+
+      إذا لم نمرر الوسيط، يستخدم القيمة الافتراضية! 🎯
+
+  - type: "markdown"
+    content: |
+      **كيف تُعرّف معامل افتراضي:**
+
+      ```python
+      def function(param1, param2=default_value):
+          # ...
+      ```
+
+      المعاملات الافتراضية تأتي **بعد** المعاملات الإجبارية!
+
+  - type: "quiz"
+    question: "ما ناتج هذا الاستدعاء؟"
+    code: |
+      def say(msg, times=2):
+          for i in range(times):
+              print(msg)
+
+      say("Hi")
+    lang: "python"
+    options:
+      - "يطبع 'Hi' مرة واحدة"
+      - "يطبع 'Hi' مرتين"
+      - "خطأ"
+    solution: 1
+    explanation: "times له قيمة افتراضية 2، فيطبع 'Hi' مرتين"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة بمعامل افتراضي"
+    code: |
+      def welcome(name, title@@INPUT@@"السيد"):
+          print(f"{title} {name}")
+
+      welcome("أحمد")
+    solution:
+      - "="
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحسب القوة (الأس الافتراضي 2)"
+    code: |
+      def power(base, exponent=@@INPUT@@):
+          return base @@INPUT@@ exponent
+
+      print(power(5))
+      print(power(5, 3))
+    solution:
+      - "2"
+      - "**"
+
+  - type: "markdown"
+    content: |
+      مثال عملي: دالة لإنشاء قوائم HTML
+
+      ```python
+      def create_tag(content, tag="div"):
+          return f"<{tag}>{content}</{tag}>"
+
+      print(create_tag("Hello"))         # <div>Hello</div>
+      print(create_tag("Title", "h1"))   # <h1>Title</h1>
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تطبع رسالة بفاصل افتراضي"
+    code: |
+      def print_message(msg, separator="-"):
+          print(separator * 10)
+          print(@@INPUT@@)
+          print(@@INPUT@@ * 10)
+
+      print_message("مرحباً")
+    solution:
+      - "msg"
+      - "separator"
+
+  - type: "bug"
+    lang: "python"
+    question: "هناك خطأ في ترتيب المعاملات، أين؟"
+    code: |
+      def order(size="medium", item):
+          print(f"{item}: {size}")
+      order("pizza")
+    solution: 0
+    hint: "أين يجب أن تكون المعاملات الافتراضية؟"
+    explanation: "المعاملات الافتراضية يجب أن تأتي بعد المعاملات الإجبارية"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة حساب السعر مع خصم افتراضي 0"
+    code: |
+      def calculate_price(price, discount=@@INPUT@@):
+          return price - (price * discount / 100)
+
+      print(calculate_price(100))
+      print(calculate_price(100, 10))
+    solution:
+      - "0"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لدالة تُنشئ مستخدم بدور افتراضي"
+    code:
+      - "def create_user(username, role=\"user\"):"
+      - "    return {\"username\": username, \"role\": role}"
+      - "admin = create_user(\"ali\", \"admin\")"
+      - "user = create_user(\"sara\")"
+      - "print(admin)"
+      - "print(user)"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تكرر نص بعدد مرات افتراضي"
+    code: |
+      def repeat(text, count=@@INPUT@@):
+          @@INPUT@@ i in range(count):
+              print(text)
+
+      repeat("Hi")
+    solution:
+      - "/^[1-9]$/"
+      - "for"
+
+  - type: "quiz"
+    question: "هل يمكن أن يكون لدينا أكثر من معامل افتراضي؟"
+    code: |
+      def func(a, b=10, c=20):
+          return a + b + c
+    lang: "python"
+    options:
+      - "لا، معامل افتراضي واحد فقط"
+      - "نعم، يمكن عدة معاملات افتراضية"
+      - "هذا سيسبب خطأ"
+    solution: 1
+    explanation: "يمكن أن يكون لدينا عدة معاملات افتراضية، لكن يجب أن تكون في النهاية"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة لتنسيق رقم الهاتف مع رمز دولة افتراضي"
+    code: |
+      def format_phone(number, code="+966"):
+          return @@INPUT@@ + " " + @@INPUT@@
+
+      print(format_phone("501234567"))
+      print(format_phone("501234567", "+971"))
+    solution:
+      - "code"
+      - "number"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحسب محيط دائرة (pi افتراضي 3.14)"
+    code: |
+      def circle_perimeter(radius, pi=@@INPUT@@):
+          return 2 * @@INPUT@@ * @@INPUT@@
+
+      print(circle_perimeter(5))
+    solution:
+      - "3.14"
+      - "pi"
+      - "radius"
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا تطبع None؟"
+    code: |
+      def greet(name, prefix="مرحباً"):
+          message = f"{prefix} {name}"
+      result = greet("أحمد")
+      print(result)
+    solution: 2
+    hint: "هل أرجعنا القيمة؟"
+    explanation: "الدالة لا تُرجع القيمة، يجب إضافة return message"
+
+  - type: "markdown"
+    content: |
+      ممتاز! 🏆 الآن تتقن:
+
+      ✅ إنشاء معاملات بقيم افتراضية
+      ✅ ترتيب المعاملات (الإجبارية ثم الافتراضية)
+      ✅ استخدام المعاملات الافتراضية في دوال حقيقية
+      ✅ تجاوز القيم الافتراضية عند الحاجة
+
+      المعاملات الافتراضية تجعل دوالك أكثر مرونة! 🎯

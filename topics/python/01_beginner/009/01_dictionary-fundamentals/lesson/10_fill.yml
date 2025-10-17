@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أنشئ قاموس لمنتج يحتوي على: اسم (نص)، سعر (رقم عشري)، متوفر (قيمة منطقية)"
+code: |
+  product = {
+      @@INPUT@@: "هاتف",
+      @@INPUT@@: @@INPUT@@,
+      @@INPUT@@: True
+  }
+solution:
+  - "/^(\"name\"|'name')$/"
+  - "/^(\"price\"|'price')$/"
+  - "/^\\d+\\.\\d+$/"
+  - "/^(\"available\"|'available')$/"

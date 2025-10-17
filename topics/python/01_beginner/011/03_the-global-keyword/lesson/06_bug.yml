@@ -1,0 +1,13 @@
+type: "bug"
+lang: "python"
+question: "لماذا يحدث خطأ؟"
+code: |
+  value = 10
+
+  def double():
+      value = value * 2
+
+  double()
+solution: 3
+hint: "هل نعدّل value؟"
+explanation: "نحاول تعديل value العام، نحتاج global value قبل استخدامه"

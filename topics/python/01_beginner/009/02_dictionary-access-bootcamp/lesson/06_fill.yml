@@ -1,0 +1,9 @@
+type: "fill"
+lang: "python"
+question: "حدّث المدينة إلى 'مكة'"
+code: |
+  location = {"country": "السعودية", "city": "جدة"}
+  location@@INPUT@@ = @@INPUT@@
+solution:
+  - "/^\\[(\"|')city(\"|')\\]$/"
+  - "/^(\"|')مكة(\"|')$/"

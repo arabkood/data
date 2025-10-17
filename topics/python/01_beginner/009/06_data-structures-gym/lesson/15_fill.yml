@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "اطبع اسم كل مدينة من القاموس"
+code: |
+  locations = {
+      "city1": {"name": "الرياض", "temp": 35},
+      "city2": {"name": "جدة", "temp": 30}
+  }
+  for key in @@INPUT@@:
+      print(@@INPUT@@[@@INPUT@@][@@INPUT@@])
+solution:
+  - "locations"
+  - "locations"
+  - "key"
+  - "/^(\"|')name(\"|')$/"

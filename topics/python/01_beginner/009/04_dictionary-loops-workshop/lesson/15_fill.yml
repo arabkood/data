@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أنشئ قاموس جديد بقيم مضاعفة"
+code: |
+  original = {"a": 5, "b": 10, "c": 15}
+  doubled = {}
+  for key, value in @@INPUT@@:
+      doubled[@@INPUT@@] = @@INPUT@@ * 2
+  print(doubled)
+solution:
+  - "/^original\\.items\\(\\)$/"
+  - "key"
+  - "value"

@@ -1,0 +1,9 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لدالة تحسب متوسط 3 أرقام"
+code:
+  - "def average(a, b, c):"
+  - "    total = a + b + c"
+  - "    return total / 3"
+  - "result = average(10, 20, 30)"
+  - "print(result)"

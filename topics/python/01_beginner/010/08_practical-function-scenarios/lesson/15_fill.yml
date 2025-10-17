@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تُنشئ slug من عنوان"
+code: |
+  def create_slug(title):
+      slug = title@@INPUT@@()
+      slug = slug.@@INPUT@@(" ", "-")
+      return slug
+
+  print(create_slug("My Blog Post"))
+solution:
+  - ".lower"
+  - "replace"

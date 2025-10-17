@@ -1,0 +1,10 @@
+type: "bug"
+lang: "python"
+question: "الكود به خطأ في استخدام .values()"
+code: |
+  data = {"a": 10, "b": 20, "c": 30}
+  total = sum(data.values)
+  print(total)
+solution: 1
+hint: ".values هي دالة، كيف ننادي على الدوال؟"
+explanation: "يجب إضافة أقواس () بعد values لأنها دالة: data.values()"

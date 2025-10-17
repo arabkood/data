@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "اطبع كل مفتاح وقيمته باستخدام .items()"
+code: |
+  scores = {"math": 90, "science": 85}
+  for @@INPUT@@, @@INPUT@@ in scores@@INPUT@@:
+      print(@@INPUT@@, "=", @@INPUT@@)
+solution:
+  - "/^(key|subject|k)$/"
+  - "/^(value|score|val|v)$/"
+  - ".items()"
+  - "/^(key|subject|k)$/"
+  - "/^(value|score|val|v)$/"

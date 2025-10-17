@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "أنشئ متغير محلي بنفس اسم العام"
+code: |
+  name = "أحمد"
+
+  def test():
+      @@INPUT@@ = "سارة"  # محلي
+      print(@@INPUT@@)
+
+  test()
+  print(name)
+solution:
+  - "name"
+  - "name"

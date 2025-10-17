@@ -1,0 +1,217 @@
+---
+item_id: "module-9-item-9"
+type: "lesson"
+title: "المراجعة النهائية"
+base_xp: 850
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      مبروك! أنت على وشك إنهاء وحدة القواميس! 🎉
+
+      لنراجع كل ما تعلمناه من خلال تمارين شاملة.
+
+      سنغطي:
+      - إنشاء القواميس والوصول للبيانات
+      - دوال القواميس
+      - الحلقات مع القواميس
+      - القوائم والقواميس معاً
+
+  - type: "quiz"
+    question: "ما الطريقة الصحيحة لإنشاء قاموس؟"
+    options:
+      - "dict = ['name': 'أحمد', 'age': 25]"
+      - "dict = {'name': 'أحمد', 'age': 25}"
+      - "dict = ('name': 'أحمد', 'age': 25)"
+    solution: 1
+    explanation: "القواميس تُنشأ باستخدام الأقواس المعقوفة {} مع أزواج مفتاح:قيمة"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ قاموس وأضف عنصر جديد"
+    code: |
+      person = @@INPUT@@"name": "محمد", "age": 30@@INPUT@@
+      person[@@INPUT@@] = "جدة"
+      print(person)
+    solution:
+      - "{"
+      - "}"
+      - "/^(\"|')city(\"|')$/"
+
+  - type: "quiz"
+    question: "ما الفرق بين dict['key'] و dict.get('key')؟"
+    options:
+      - "لا يوجد فرق"
+      - ".get() لا تسبب خطأ إذا لم يوجد المفتاح"
+      - "[] أسرع من .get()"
+    solution: 1
+    explanation: ".get() تُرجع None بدلاً من إحداث خطأ عند عدم وجود المفتاح"
+
+  - type: "fill"
+    lang: "python"
+    question: "استخدم .get() مع قيمة افتراضية"
+    code: |
+      config = {"theme": "dark"}
+      lang = config@@INPUT@@(@@INPUT@@, @@INPUT@@)
+      print(lang)
+    solution:
+      - ".get"
+      - "/^(\"|')language(\"|')$/"
+      - "/^(\"|')ar(\"|')$/"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر للحصول على كل المفاتيح وطباعتها"
+    code:
+      - "data = {\"x\": 1, \"y\": 2, \"z\": 3}"
+      - "keys = data.keys()"
+      - "for key in keys:"
+      - "    print(key)"
+
+  - type: "fill"
+    lang: "python"
+    question: "احسب مجموع كل القيم باستخدام .values()"
+    code: |
+      numbers = {"a": 10, "b": 20, "c": 30}
+      total = @@INPUT@@(numbers@@INPUT@@)
+      print(total)
+    solution:
+      - "sum"
+      - ".values()"
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع كل مفتاح وقيمته باستخدام .items()"
+    code: |
+      scores = {"math": 90, "science": 85}
+      for @@INPUT@@, @@INPUT@@ in scores@@INPUT@@:
+          print(@@INPUT@@, "=", @@INPUT@@)
+    solution:
+      - "/^(key|subject|k)$/"
+      - "/^(value|score|val|v)$/"
+      - ".items()"
+      - "/^(key|subject|k)$/"
+      - "/^(value|score|val|v)$/"
+
+  - type: "bug"
+    lang: "python"
+    question: "هناك خطأ في طباعة القيم، أين؟"
+    code: |
+      data = {"a": 1, "b": 2, "c": 3}
+      for value in data:
+          print(value)
+    solution: 1
+    hint: "المرور على القاموس مباشرة يعطي ماذا؟"
+    explanation: "المرور على القاموس مباشرة يعطي المفاتيح، للحصول على القيم استخدم .values()"
+
+  - type: "fill"
+    lang: "python"
+    question: "اطبع العنصر الثاني من قائمة الطلاب"
+    code: |
+      students = [
+          {"name": "أحمد", "age": 20},
+          {"name": "سارة", "age": 22}
+      ]
+      print(students@@INPUT@@[@@INPUT@@])
+    solution:
+      - "[1]"
+      - "/^(\"|')name(\"|')$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "أضف عنصر جديد لقائمة داخل القاموس"
+    code: |
+      data = {"items": [1, 2, 3]}
+      data[@@INPUT@@]@@INPUT@@(4)
+      print(data["items"])
+    solution:
+      - "/^(\"|')items(\"|')$/"
+      - ".append"
+
+  - type: "quiz"
+    question: "كيف نصل لقيمة في قاموس داخل قائمة؟"
+    code: |
+      data = [{"x": 10}]
+    lang: "python"
+    options:
+      - "data['x']"
+      - "data[0]['x']"
+      - "data.get('x')"
+    solution: 1
+    explanation: "أولاً [0] للوصول للقاموس، ثم ['x'] للوصول للقيمة"
+
+  - type: "fill"
+    lang: "python"
+    question: "ابحث عن القيمة الأكبر في القاموس"
+    code: |
+      nums = {"a": 15, "b": 30, "c": 20}
+      max_val = 0
+      for @@INPUT@@ in nums@@INPUT@@:
+          if @@INPUT@@ > max_val:
+              max_val = @@INPUT@@
+      print(max_val)
+    solution:
+      - "/^(value|val|v|num)$/"
+      - ".values()"
+      - "/^(value|val|v|num)$/"
+      - "/^(value|val|v|num)$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ قاموس جديد من قائمة الأسماء"
+    code: |
+      names = ["أحمد", "سارة", "علي"]
+      name_dict = {}
+      for i, name in @@INPUT@@(@@INPUT@@):
+          name_dict[@@INPUT@@] = @@INPUT@@
+      print(name_dict)
+    solution:
+      - "enumerate"
+      - "names"
+      - "i"
+      - "name"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لحساب عدد الطلاب الناجحين"
+    code:
+      - "students = [{\"name\": \"أحمد\", \"grade\": 75}, {\"name\": \"سارة\", \"grade\": 55}]"
+      - "passed = 0"
+      - "for student in students:"
+      - "    if student[\"grade\"] >= 60:"
+      - "        passed += 1"
+      - "print(passed)"
+
+  - type: "fill"
+    lang: "python"
+    question: "حدّث كل الأسعار بزيادة 20%"
+    code: |
+      products = [
+          {"name": "A", "price": 100},
+          {"name": "B", "price": 200}
+      ]
+      for product in @@INPUT@@:
+          product[@@INPUT@@] @@INPUT@@ 1.2
+      print(products)
+    solution:
+      - "products"
+      - "/^(\"|')price(\"|')$/"
+      - "*="
+
+  - type: "markdown"
+    content: |
+      ممتاز! 🏆 أتممت وحدة القواميس بنجاح!
+
+      الآن أنت تتقن:
+      ✅ إنشاء القواميس والوصول للبيانات
+      ✅ استخدام دوال القواميس (.keys, .values, .items, .get)
+      ✅ المرور على القواميس بالحلقات
+      ✅ دمج القوائم والقواميس
+      ✅ معالجة البيانات الواقعية
+
+      القواميس هي أحد أهم هياكل البيانات في Python!
+      ستستخدمها في كل مشروع تقريباً 💪
+
+      استعد للوحدة التالية: الدوال! 🚀

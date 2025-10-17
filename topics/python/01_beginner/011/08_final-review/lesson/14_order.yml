@@ -1,0 +1,13 @@
+type: "order"
+lang: "python"
+question: "رتب خط إنتاج دوال"
+code:
+  - "def step1(n):"
+  - "    return n + 10"
+  - "def step2(n):"
+  - "    return n * 2"
+  - "def pipeline(n):"
+  - "    result = step1(n)"
+  - "    result = step2(result)"
+  - "    return result"
+  - "print(pipeline(5))"

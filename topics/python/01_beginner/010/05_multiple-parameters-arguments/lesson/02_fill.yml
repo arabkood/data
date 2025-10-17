@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تأخذ اسمين وتطبعهما"
+code: |
+  def print_names(@@INPUT@@, @@INPUT@@):
+      print(@@INPUT@@, @@INPUT@@)
+
+  print_names("أحمد", "سارة")
+solution:
+  - "/^(name1|first|n1)$/"
+  - "/^(name2|second|n2)$/"
+  - "/^(name1|first|n1)$/"
+  - "/^(name2|second|n2)$/"

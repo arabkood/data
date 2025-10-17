@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "اطبع عدد سكان مدينة الرياض"
+code: |
+  cities = {
+      "riyadh": {"name": "الرياض", "population": 7000000},
+      "jeddah": {"name": "جدة", "population": 4000000}
+  }
+  print(cities@@INPUT@@[@@INPUT@@])
+solution:
+  - "/^\\[(\"|')riyadh(\"|')\\]$/"
+  - "/^(\"|')population(\"|')$/"

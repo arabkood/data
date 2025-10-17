@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تطبع النص بأحرف كبيرة"
+code: |
+  def uppercase(text):
+      print(text@@INPUT@@)
+
+  uppercase("hello")
+solution:
+  - ".upper()"

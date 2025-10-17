@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تحول قائمة لنص ثم لأحرف كبيرة"
+code: |
+  def list_to_string(items):
+      return ", ".join(items)
+
+  def to_upper(text):
+      return text.upper()
+
+  result = @@INPUT@@(@@INPUT@@(["apple", "banana"]))
+  print(result)
+solution:
+  - "to_upper"
+  - "list_to_string"

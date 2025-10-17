@@ -1,0 +1,12 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لإنشاء قائمة من القواميس وطباعة مجموع الأعمار"
+code:
+  - "people = ["
+  - "    {\"name\": \"أحمد\", \"age\": 25},"
+  - "    {\"name\": \"سارة\", \"age\": 30}"
+  - "]"
+  - "total_age = 0"
+  - "for person in people:"
+  - "    total_age += person[\"age\"]"
+  - "print(total_age)"

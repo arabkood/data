@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "عالج KeyError"
+code: |
+  data = {"x": 10, "y": 20}
+  try:
+      print(data["z"])
+  except @@INPUT@@:
+      print("المفتاح غير موجود")
+solution:
+  - "KeyError"

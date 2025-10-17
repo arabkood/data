@@ -1,0 +1,9 @@
+type: "fill"
+lang: "python"
+question: "زِد الكمية بمقدار 10"
+code: |
+  inventory = {"item": "قلم", "quantity": 50}
+  inventory["quantity"] = @@INPUT@@
+  print(inventory["quantity"])
+solution:
+  - "/^(inventory\\[(\"|')quantity(\"|')\\]\\s*\\+\\s*10|50\\s*\\+\\s*10)$/"

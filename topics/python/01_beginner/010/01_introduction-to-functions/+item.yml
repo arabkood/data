@@ -1,0 +1,12 @@
+id: cc0a3f05-0bc8-454c-9bf4-e02b38731865
+module_id: 86a27813-45e1-413c-ad2e-10088c631fbb
+slug: introduction-to-functions
+position: 1
+created_at: 2025-10-17T13:52:47.028Z
+updated_at: 2025-10-17T13:52:47.029Z
+type: lesson
+title: مقدمة إلى الدوال
+difficulty: medium
+premium_only: true
+base_xp: 800
+s3_path: python/01_beginner/010/01_introduction-to-functions

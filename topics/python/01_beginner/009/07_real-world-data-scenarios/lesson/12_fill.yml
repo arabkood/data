@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "أنشئ قاموس يحتوي عدد العناصر لكل فئة"
+code: |
+  items = ["قلم", "كتاب", "قلم", "دفتر", "قلم"]
+  count = {}
+  for item in items:
+      if item @@INPUT@@ count:
+          count[item] @@INPUT@@ 1
+      @@INPUT@@:
+          count[item] = 1
+  print(count)
+solution:
+  - "in"
+  - "+="
+  - "else"

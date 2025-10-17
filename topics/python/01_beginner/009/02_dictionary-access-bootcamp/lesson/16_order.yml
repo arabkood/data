@@ -1,0 +1,8 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لإنشاء قاموس وتحديث قيمه"
+code:
+  - "game = {\"name\": \"الشطرنج\", \"players\": 2}"
+  - "game[\"time\"] = 60"
+  - "game[\"players\"] = 4"
+  - "print(game)"

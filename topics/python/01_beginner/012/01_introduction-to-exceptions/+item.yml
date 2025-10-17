@@ -1,0 +1,12 @@
+id: c8393f77-5585-4756-a06f-f213156d472f
+module_id: 79874944-2f38-45f3-bb4b-78b51015b294
+slug: introduction-to-exceptions
+position: 1
+created_at: 2025-10-17T13:52:47.055Z
+updated_at: 2025-10-17T13:52:47.055Z
+type: lesson
+title: مقدمة إلى الاستثناءات
+difficulty: medium
+premium_only: true
+base_xp: 850
+s3_path: python/01_beginner/012/01_introduction-to-exceptions

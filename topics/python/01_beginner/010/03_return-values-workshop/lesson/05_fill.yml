@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أرجع ضعف الرقم"
+code: |
+  def double(n):
+      @@INPUT@@ n @@INPUT@@ 2
+
+  x = double(5)
+  print(x)
+solution:
+  - "return"
+  - "*"

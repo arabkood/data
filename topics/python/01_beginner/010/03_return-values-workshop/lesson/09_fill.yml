@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أرجع طول النص"
+code: |
+  def get_length(text):
+      @@INPUT@@ @@INPUT@@(text)
+
+  length = get_length("Hello")
+  print(length)
+solution:
+  - "return"
+  - "len"

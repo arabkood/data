@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة بسيطة واستدعها"
+code: |
+  @@INPUT@@ say_hello():
+      print("Hello!")
+
+  @@INPUT@@()
+solution:
+  - "def"
+  - "say_hello"

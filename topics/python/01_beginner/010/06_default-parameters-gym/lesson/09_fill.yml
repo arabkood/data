@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة حساب السعر مع خصم افتراضي 0"
+code: |
+  def calculate_price(price, discount=@@INPUT@@):
+      return price - (price * discount / 100)
+
+  print(calculate_price(100))
+  print(calculate_price(100, 10))
+solution:
+  - "0"

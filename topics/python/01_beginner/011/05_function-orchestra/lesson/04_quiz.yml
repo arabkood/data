@@ -1,0 +1,19 @@
+type: "quiz"
+question: "ما ترتيب الطباعة؟"
+code: |
+  def a():
+      print("1")
+      b()
+      print("3")
+
+  def b():
+      print("2")
+
+  a()
+lang: "python"
+options:
+  - "1, 2, 3"
+  - "1, 3, 2"
+  - "2, 1, 3"
+solution: 0
+explanation: "a تطبع 1، تستدعي b (تطبع 2)، ثم a تكمل وتطبع 3"

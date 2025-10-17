@@ -1,0 +1,14 @@
+type: "bug"
+lang: "python"
+question: "لماذا يحدث خطأ؟"
+code: |
+  def get_value():
+      return 10
+
+  def double():
+      return value * 2
+
+  result = double()
+solution: 4
+hint: "من أين value؟"
+explanation: "double() تحتاج استدعاء get_value() للحصول على القيمة"

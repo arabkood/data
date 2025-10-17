@@ -1,0 +1,12 @@
+id: 0c234b56-be88-4028-b23a-b099b2d67a96
+module_id: 86a27813-45e1-413c-ad2e-10088c631fbb
+slug: return-values-workshop
+position: 3
+created_at: 2025-10-17T13:52:47.029Z
+updated_at: 2025-10-17T13:52:47.029Z
+type: lesson
+title: ورشة القيم المُرجعة
+difficulty: medium
+premium_only: true
+base_xp: 900
+s3_path: python/01_beginner/010/03_return-values-workshop

@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تحسب محيط المستطيل"
+code: |
+  def perimeter(length, width):
+      return 2 * (@@INPUT@@ + @@INPUT@@)
+
+  result = perimeter(5, 3)
+  print(result)
+solution:
+  - "length"
+  - "width"

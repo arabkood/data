@@ -1,0 +1,235 @@
+---
+item_id: "module-12-item-3"
+type: "lesson"
+title: "أنواع الاستثناءات الشائعة"
+base_xp: 900
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      ليست كل الأخطاء متشابهة! 🎯
+
+      Python تعطي كل خطأ **اسم** محدد يخبرك بالمشكلة:
+
+      ```python
+      int("abc")      # ValueError
+      10 / 0          # ZeroDivisionError
+      [1][5]          # IndexError
+      ```
+
+      لنتعرف على الأنواع الشائعة!
+
+  - type: "markdown"
+    content: |
+      **1. ValueError** - قيمة غير صحيحة
+
+      يحدث عند تحويل قيمة غير مناسبة:
+
+      ```python
+      try:
+          num = int("abc")  # ValueError!
+      except ValueError:
+          print("لا يمكن تحويل النص لرقم")
+      ```
+
+      لاحظ: `except ValueError` تعالج هذا النوع فقط!
+
+  - type: "fill"
+    lang: "python"
+    question: "عالج ValueError محدداً"
+    code: |
+      try:
+          age = int("عشرون")
+      except @@INPUT@@:
+          print("القيمة غير صحيحة")
+    solution:
+      - "ValueError"
+
+  - type: "markdown"
+    content: |
+      **2. ZeroDivisionError** - القسمة على صفر
+
+      يحدث عند محاولة القسمة على صفر:
+
+      ```python
+      try:
+          result = 10 / 0
+      except ZeroDivisionError:
+          print("لا يمكن القسمة على صفر!")
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "عالج ZeroDivisionError"
+    code: |
+      try:
+          x = 100 / 0
+      except @@INPUT@@:
+          print("القسمة على صفر!")
+    solution:
+      - "ZeroDivisionError"
+
+  - type: "markdown"
+    content: |
+      **3. IndexError** - فهرس خارج النطاق
+
+      يحدث عند محاولة الوصول لفهرس غير موجود:
+
+      ```python
+      try:
+          items = [1, 2, 3]
+          print(items[10])  # IndexError!
+      except IndexError:
+          print("الفهرس غير موجود")
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "عالج IndexError"
+    code: |
+      numbers = [10, 20, 30]
+      try:
+          print(numbers[5])
+      except @@INPUT@@:
+          print("الفهرس خارج النطاق")
+    solution:
+      - "IndexError"
+
+  - type: "markdown"
+    content: |
+      **4. KeyError** - مفتاح غير موجود
+
+      يحدث عند محاولة الوصول لمفتاح غير موجود في قاموس:
+
+      ```python
+      try:
+          person = {"name": "أحمد"}
+          print(person["age"])  # KeyError!
+      except KeyError:
+          print("المفتاح غير موجود")
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "عالج KeyError"
+    code: |
+      data = {"x": 10, "y": 20}
+      try:
+          print(data["z"])
+      except @@INPUT@@:
+          print("المفتاح غير موجود")
+    solution:
+      - "KeyError"
+
+  - type: "markdown"
+    content: |
+      **5. TypeError** - نوع خاطئ
+
+      يحدث عند استخدام عملية على نوع خاطئ:
+
+      ```python
+      try:
+          result = "5" + 10  # TypeError!
+      except TypeError:
+          print("لا يمكن جمع نص ورقم")
+      ```
+
+  - type: "quiz"
+    question: "أي استثناء سيحدث؟"
+    code: |
+      x = "hello" * "world"
+    lang: "python"
+    options:
+      - "ValueError"
+      - "TypeError"
+      - "KeyError"
+    solution: 1
+    explanation: "لا يمكن ضرب نصين، هذا TypeError"
+
+  - type: "markdown"
+    content: |
+      **معالجات متعددة:**
+
+      يمكنك معالجة أنواع مختلفة:
+
+      ```python
+      try:
+          # كود
+      except ValueError:
+          print("قيمة خاطئة")
+      except ZeroDivisionError:
+          print("قسمة على صفر")
+      except:
+          print("خطأ آخر")
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أضف معالجات متعددة"
+    code: |
+      try:
+          x = int(input("رقم: "))
+          result = 10 / x
+      except @@INPUT@@:
+          print("إدخال غير صحيح")
+      except @@INPUT@@:
+          print("لا يمكن القسمة على صفر")
+    solution:
+      - "ValueError"
+      - "ZeroDivisionError"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب معالجة أخطاء متعددة"
+    code:
+      - "data = [\"10\", \"20\", \"abc\"]"
+      - "for item in data:"
+      - "    try:"
+      - "        num = int(item)"
+      - "        print(100 / num)"
+      - "    except ValueError:"
+      - "        print(f\"{item} ليس رقم\")"
+      - "    except ZeroDivisionError:"
+      - "        print(\"قسمة على صفر\")"
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا لا يعالج الخطأ؟"
+    code: |
+      try:
+          x = int("abc")
+      except ZeroDivisionError:
+          print("خطأ")
+    solution: 2
+    hint: "أي نوع خطأ سيحدث؟"
+    explanation: "الخطأ ValueError وليس ZeroDivisionError، يجب تغيير النوع"
+
+  - type: "fill"
+    lang: "python"
+    question: "عالج KeyError و IndexError"
+    code: |
+      data = {"items": [1, 2, 3]}
+      try:
+          print(data["name"][10])
+      except @@INPUT@@:
+          print("مفتاح غير موجود")
+      except @@INPUT@@:
+          print("فهرس غير موجود")
+    solution:
+      - "KeyError"
+      - "IndexError"
+
+  - type: "markdown"
+    content: |
+      ممتاز! 🎯 الآن تعرف:
+
+      ✅ ValueError - قيم غير صحيحة
+      ✅ ZeroDivisionError - القسمة على صفر
+      ✅ IndexError - فهارس خارج النطاق
+      ✅ KeyError - مفاتيح غير موجودة
+      ✅ TypeError - أنواع غير متوافقة
+      ✅ معالجة أنواع مختلفة معاً
+
+      معرفة الأنواع تساعدك على معالجة أدق! 🎯

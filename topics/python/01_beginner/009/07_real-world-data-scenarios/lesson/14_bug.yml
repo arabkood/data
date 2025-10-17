@@ -1,0 +1,12 @@
+type: "bug"
+lang: "python"
+question: "الكود لا يحسب المجموع بشكل صحيح"
+code: |
+  data = [{"val": 10}, {"val": 20}, {"val": 30}]
+  total = 0
+  for item in data:
+      total = item["val"]
+  print(total)
+solution: 3
+hint: "كيف نضيف القيمة للمجموع؟"
+explanation: "يجب استخدام += لإضافة القيمة: total += item['val']"

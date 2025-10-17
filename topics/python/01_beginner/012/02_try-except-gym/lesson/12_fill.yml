@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "احم دالة من الأخطاء"
+code: |
+  def safe_divide(a, b):
+      @@INPUT@@:
+          return a / b
+      @@INPUT@@:
+          return @@INPUT@@
+
+  print(safe_divide(10, 0))
+solution:
+  - "try"
+  - "except"
+  - "/^(0|None|\".*\")$/"

@@ -1,0 +1,10 @@
+type: "bug"
+lang: "python"
+question: "هناك خطأ في الوصول للقيمة، أصلحه"
+code: |
+  settings = {"language": "ar", "theme": "dark"}
+  current_theme = settings{"theme"}
+  print(current_theme)
+solution: 1
+hint: "كيف نصل للعناصر في القاموس؟"
+explanation: "يجب استخدام الأقواس المربعة [] وليس المعقوفة {} للوصول للعناصر"

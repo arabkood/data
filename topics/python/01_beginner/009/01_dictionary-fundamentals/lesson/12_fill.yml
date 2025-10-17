@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أنشئ قاموس فارغ ثم أضف له عنصرين"
+code: |
+  temps = @@INPUT@@
+  temps[@@INPUT@@] = 30
+  temps[@@INPUT@@] = 25
+solution:
+  - "/^(\\{\\}|dict\\(\\))$/"
+  - "/^(\".*\"|'.*')$/"
+  - "/^(\".*\"|'.*')$/"

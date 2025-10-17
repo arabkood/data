@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تطبع رسالة بفاصل افتراضي"
+code: |
+  def print_message(msg, separator="-"):
+      print(separator * 10)
+      print(@@INPUT@@)
+      print(@@INPUT@@ * 10)
+
+  print_message("مرحباً")
+solution:
+  - "msg"
+  - "separator"

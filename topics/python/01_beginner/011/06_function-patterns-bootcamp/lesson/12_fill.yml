@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "حول قائمة أرقام لمجموعها"
+code: |
+  def list_to_sum(numbers):
+      return @@INPUT@@(@@INPUT@@)
+
+  result = list_to_sum([1, 2, 3, 4])
+  print(result)
+solution:
+  - "sum"
+  - "numbers"

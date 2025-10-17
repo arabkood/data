@@ -1,0 +1,8 @@
+type: "fill"
+lang: "python"
+question: "اطبع قيمة المدينة من القاموس"
+code: |
+  location = {"country": "السعودية", "city": "جدة"}
+  print(@@INPUT@@)
+solution:
+  - "/^location\\[(\"|')city(\"|')\\]$/"

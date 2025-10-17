@@ -1,0 +1,9 @@
+type: "bug"
+lang: "python"
+question: "الكود لا يعمل! أين الخطأ؟"
+code: |
+  book = {"title": "الأيام", "author": "طه حسين"}
+  print(book[author])
+solution: 1
+hint: "المفتاح يجب أن يكون نص"
+explanation: "المفتاح 'author' يجب أن يكون محاطاً بعلامات تنصيص: book[\"author\"]"

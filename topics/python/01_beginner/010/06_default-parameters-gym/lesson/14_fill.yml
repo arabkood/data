@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تحسب محيط دائرة (pi افتراضي 3.14)"
+code: |
+  def circle_perimeter(radius, pi=@@INPUT@@):
+      return 2 * @@INPUT@@ * @@INPUT@@
+
+  print(circle_perimeter(5))
+solution:
+  - "3.14"
+  - "pi"
+  - "radius"

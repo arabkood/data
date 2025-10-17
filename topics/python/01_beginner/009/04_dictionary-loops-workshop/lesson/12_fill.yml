@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "ابحث عن المنتج الأغلى (أعلى سعر)"
+code: |
+  prices = {"laptop": 5000, "phone": 3000, "tablet": 2000}
+  max_price = 0
+  for item, price in prices@@INPUT@@:
+      if @@INPUT@@ > @@INPUT@@:
+          max_price = @@INPUT@@
+  print(max_price)
+solution:
+  - ".items()"
+  - "price"
+  - "max_price"
+  - "price"

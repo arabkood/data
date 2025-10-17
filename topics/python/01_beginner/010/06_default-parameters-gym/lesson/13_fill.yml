@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة لتنسيق رقم الهاتف مع رمز دولة افتراضي"
+code: |
+  def format_phone(number, code="+966"):
+      return @@INPUT@@ + " " + @@INPUT@@
+
+  print(format_phone("501234567"))
+  print(format_phone("501234567", "+971"))
+solution:
+  - "code"
+  - "number"

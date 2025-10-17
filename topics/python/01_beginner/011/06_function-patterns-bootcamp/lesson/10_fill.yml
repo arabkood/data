@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة مساعدة ودالة رئيسية"
+code: |
+  def _double(n):
+      return n * 2
+
+  def calculate(x, y):
+      return @@INPUT@@(x) + @@INPUT@@(y)
+
+  print(calculate(5, 10))
+solution:
+  - "_double"
+  - "_double"

@@ -1,0 +1,237 @@
+---
+item_id: "module-10-item-2"
+type: "lesson"
+title: "معمل تمارين المعاملات"
+base_xp: 900
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      الدوال أصبحت أقوى الآن! 💪
+
+      **المعاملات** (Parameters) تسمح للدالة باستقبال بيانات:
+
+      ```python
+      def greet(name):  # name هو المعامل
+          print(f"مرحباً {name}!")
+
+      greet("أحمد")  # "أحمد" هو الوسيط (argument)
+      greet("سارة")  # نفس الدالة، بيانات مختلفة!
+      ```
+
+  - type: "markdown"
+    content: |
+      **المصطلحات المهمة:**
+
+      - **Parameter** (معامل): المتغير في تعريف الدالة `def greet(name)`
+      - **Argument** (وسيط): القيمة التي نمررها عند الاستدعاء `greet("أحمد")`
+
+      المعامل مثل صندوق فارغ، والوسيط هو ما نضعه فيه!
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تأخذ اسم وتطبعه"
+    code: |
+      def say_name(@@INPUT@@):
+          print(@@INPUT@@)
+
+      say_name("محمد")
+    solution:
+      - "/^(name|n)$/"
+      - "/^(name|n)$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تأخذ رقم وتطبعه"
+    code: |
+      @@INPUT@@ show_number(@@INPUT@@):
+          print(@@INPUT@@)
+
+      show_number(42)
+    solution:
+      - "def"
+      - "/^(num|number|n)$/"
+      - "/^(num|number|n)$/"
+
+  - type: "quiz"
+    question: "ما الفرق بين المعامل والوسيط؟"
+    code: |
+      def func(x):  # ←
+          print(x)
+      func(5)       # ←
+    lang: "python"
+    options:
+      - "لا يوجد فرق"
+      - "x في التعريف معامل، 5 عند الاستدعاء وسيط"
+      - "5 في التعريف معامل، x عند الاستدعاء وسيط"
+    solution: 1
+    explanation: "المعامل (parameter) في التعريف، الوسيط (argument) عند الاستدعاء"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تطبع رسالة مخصصة"
+    code: |
+      def print_message(msg):
+          print(@@INPUT@@)
+
+      print_message(@@INPUT@@)
+    solution:
+      - "msg"
+      - "/^(\"|').+(\"|')$/"
+
+  - type: "markdown"
+    content: |
+      يمكنك استخدام المعامل في أي عملية داخل الدالة:
+
+      ```python
+      def double(number):
+          result = number * 2
+          print(result)
+
+      double(5)   # 10
+      double(10)  # 20
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تضاعف الرقم 3 مرات"
+    code: |
+      def triple(n):
+          print(n @@INPUT@@ @@INPUT@@)
+
+      triple(4)
+    solution:
+      - "*"
+      - "3"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تطبع الرقم + 10"
+    code: |
+      def add_ten(@@INPUT@@):
+          print(@@INPUT@@ + @@INPUT@@)
+
+      add_ten(5)
+    solution:
+      - "/^(num|number|n|x)$/"
+      - "/^(num|number|n|x)$/"
+      - "10"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تطبع النص 3 مرات"
+    code: |
+      def repeat_three(text):
+          for i in @@INPUT@@(@@INPUT@@):
+              print(@@INPUT@@)
+
+      repeat_three("مرحبا")
+    solution:
+      - "range"
+      - "3"
+      - "text"
+
+  - type: "bug"
+    lang: "python"
+    question: "الدالة لا تعمل، ما المشكلة؟"
+    code: |
+      def greet(name):
+          print(f"Hello {person}!")
+      greet("أحمد")
+    solution: 1
+    hint: "انظر لاسم المعامل واسم المتغير المستخدم"
+    explanation: "المعامل اسمه name لكن استخدمنا person، يجب استخدام نفس الاسم"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لإنشاء دالة تطبع مربع الرقم"
+    code:
+      - "def square(num):"
+      - "    result = num * num"
+      - "    print(result)"
+      - "square(5)"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحقق إن كان الرقم موجب"
+    code: |
+      def is_positive(n):
+          @@INPUT@@ n > 0:
+              print("موجب")
+          @@INPUT@@:
+              print("سالب أو صفر")
+
+      is_positive(5)
+    solution:
+      - "if"
+      - "else"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تطبع الأرقام من 1 إلى n"
+    code: |
+      def count_to(n):
+          for i in range(@@INPUT@@, @@INPUT@@):
+              print(i)
+
+      count_to(5)
+    solution:
+      - "1"
+      - "/^(n\\s*\\+\\s*1|n\\+1)$/"
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا لا تطبع الدالة شيئاً؟"
+    code: |
+      def show(value):
+          print(value)
+      show()
+    solution: 3
+    hint: "الدالة تحتاج معامل!"
+    explanation: "الدالة معرّفة بمعامل (value) لكننا لم نمرر أي وسيط عند استدعائها"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تطبع طول النص"
+    code: |
+      def print_length(text):
+          length = @@INPUT@@(@@INPUT@@)
+          print(length)
+
+      print_length("مرحبا")
+    solution:
+      - "len"
+      - "text"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تطبع النص بأحرف كبيرة"
+    code: |
+      def uppercase(text):
+          print(text@@INPUT@@)
+
+      uppercase("hello")
+    solution:
+      - ".upper()"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لدالة تحسب مساحة المربع"
+    code:
+      - "def square_area(side):"
+      - "    area = side * side"
+      - "    print(f'المساحة: {area}')"
+      - "square_area(4)"
+
+  - type: "markdown"
+    content: |
+      ممتاز! 🎉 الآن تتقن:
+
+      ✅ إضافة معاملات للدوال
+      ✅ تمرير وسائط عند الاستدعاء
+      ✅ استخدام المعاملات في العمليات
+      ✅ الفرق بين المعامل والوسيط
+
+      الدوال بالمعاملات أقوى بكثير! 💪

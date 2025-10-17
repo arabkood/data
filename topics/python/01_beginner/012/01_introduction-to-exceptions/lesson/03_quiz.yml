@@ -1,0 +1,8 @@
+type: "quiz"
+question: "ما هو الاستثناء (Exception)؟"
+options:
+  - "خطأ في كتابة الكود"
+  - "خطأ يحدث أثناء تشغيل البرنامج"
+  - "تحذير من Python"
+solution: 1
+explanation: "الاستثناء هو خطأ يحدث عند تشغيل البرنامج (runtime error)"

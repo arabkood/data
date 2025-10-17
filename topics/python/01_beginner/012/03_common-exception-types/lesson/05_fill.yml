@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "عالج ZeroDivisionError"
+code: |
+  try:
+      x = 100 / 0
+  except @@INPUT@@:
+      print("القسمة على صفر!")
+solution:
+  - "ZeroDivisionError"

@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تنسق وتطبع رسالة"
+code: |
+  def format_message(msg):
+      return f"*** {msg} ***"
+
+  def print_formatted(msg):
+      print(@@INPUT@@(@@INPUT@@))
+
+  print_formatted("مرحباً")
+solution:
+  - "format_message"
+  - "msg"

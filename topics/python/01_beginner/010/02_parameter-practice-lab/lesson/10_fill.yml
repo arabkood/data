@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تطبع النص 3 مرات"
+code: |
+  def repeat_three(text):
+      for i in @@INPUT@@(@@INPUT@@):
+          print(@@INPUT@@)
+
+  repeat_three("مرحبا")
+solution:
+  - "range"
+  - "3"
+  - "text"

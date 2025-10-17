@@ -1,0 +1,227 @@
+---
+item_id: "module-11-item-3"
+type: "lesson"
+title: "الكلمة المفتاحية global"
+base_xp: 850
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      كيف نُعدّل متغير عام من داخل دالة؟ 🤔
+
+      ```python
+      count = 0
+
+      def increment():
+          count = count + 1  # خطأ! ❌
+
+      increment()
+      ```
+
+      Python تظن أن count محلي! نحتاج `global` 🔑
+
+  - type: "markdown"
+    content: |
+      **الكلمة المفتاحية `global`** تخبر Python:
+
+      "هذا المتغير عام، ليس محلي!"
+
+      ```python
+      count = 0
+
+      def increment():
+          global count  # الآن Python تعرف!
+          count = count + 1  # ✅
+
+      increment()
+      print(count)  # 1
+      ```
+
+  - type: "quiz"
+    question: "متى نستخدم global؟"
+    options:
+      - "عند قراءة متغير عام"
+      - "عند تعديل متغير عام من داخل دالة"
+      - "دائماً مع كل المتغيرات"
+    solution: 1
+    explanation: "نستخدم global فقط عند **تعديل** متغير عام من داخل دالة"
+
+  - type: "fill"
+    lang: "python"
+    question: "استخدم global لتعديل المتغير العام"
+    code: |
+      score = 0
+
+      def add_points(points):
+          @@INPUT@@ score
+          score = score + @@INPUT@@
+
+      add_points(10)
+      print(score)
+    solution:
+      - "global"
+      - "points"
+
+  - type: "markdown"
+    content: |
+      **مهم:** global للتعديل فقط، القراءة لا تحتاجها!
+
+      ```python
+      total = 100
+
+      def show():
+          print(total)  # قراءة - لا تحتاج global ✅
+
+      def change():
+          global total
+          total = 200  # تعديل - تحتاج global ✅
+      ```
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا يحدث خطأ؟"
+    code: |
+      value = 10
+
+      def double():
+          value = value * 2
+
+      double()
+    solution: 3
+    hint: "هل نعدّل value؟"
+    explanation: "نحاول تعديل value العام، نحتاج global value قبل استخدامه"
+
+  - type: "fill"
+    lang: "python"
+    question: "أصلح الكود باستخدام global"
+    code: |
+      counter = 0
+
+      def reset():
+          @@INPUT@@ @@INPUT@@
+          @@INPUT@@ = 0
+
+      reset()
+      print(counter)
+    solution:
+      - "global"
+      - "counter"
+      - "counter"
+
+  - type: "quiz"
+    question: "ماذا سيطبع؟"
+    code: |
+      x = 5
+
+      def change():
+          global x
+          x = 10
+
+      change()
+      print(x)
+    lang: "python"
+    options:
+      - "5"
+      - "10"
+      - "خطأ"
+    solution: 1
+    explanation: "global جعل x العام يتغير إلى 10"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لاستخدام global بشكل صحيح"
+    code:
+      - "balance = 1000"
+      - "def withdraw(amount):"
+      - "    global balance"
+      - "    balance = balance - amount"
+      - "withdraw(100)"
+      - "print(balance)"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تزيد عداد عام"
+    code: |
+      visits = 0
+
+      def track_visit():
+          @@INPUT@@ visits
+          visits @@INPUT@@ 1
+
+      track_visit()
+      track_visit()
+      print(visits)
+    solution:
+      - "global"
+      - "+="
+
+  - type: "markdown"
+    content: |
+      **تحذير:** استخدم global بحذر! ⚠️
+
+      ```python
+      # ❌ سيء - صعب التتبع
+      count = 0
+      def func1():
+          global count
+          count += 1
+      def func2():
+          global count
+          count += 10
+
+      # ✅ أفضل - استخدم return
+      def add_one(n):
+          return n + 1
+      count = add_one(count)
+      ```
+
+      استخدم `return` عندما يمكنك!
+
+  - type: "quiz"
+    question: "أيهما أفضل؟"
+    code: |
+      # خيار 1
+      total = 0
+      def add(n):
+          global total
+          total += n
+
+      # خيار 2
+      def add(total, n):
+          return total + n
+      total = add(total, 5)
+    lang: "python"
+    options:
+      - "خيار 1 (global)"
+      - "خيار 2 (return)"
+      - "كلاهما متساويان"
+    solution: 1
+    explanation: "الخيار 2 أفضل - أوضح وأسهل للفهم والاختبار"
+
+  - type: "bug"
+    lang: "python"
+    question: "الكود لا يُعدّل المتغير، لماذا؟"
+    code: |
+      price = 100
+
+      def apply_discount():
+          price = price * 0.9
+
+      apply_discount()
+      print(price)
+    solution: 3
+    hint: "هل استخدمنا global؟"
+    explanation: "نحتاج global price قبل السطر 'price = price * 0.9'"
+
+  - type: "markdown"
+    content: |
+      رائع! 🎯 الآن تعرف:
+
+      ✅ ما هي global ومتى تُستخدم
+      ✅ كيف تُعدّل متغير عام من دالة
+      ✅ أن القراءة لا تحتاج global
+      ✅ أن return غالباً أفضل من global
+
+      global سلاح قوي، لكن استخدمه بحكمة! 💪

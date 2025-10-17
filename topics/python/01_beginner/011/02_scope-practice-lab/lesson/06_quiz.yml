@@ -1,0 +1,18 @@
+type: "quiz"
+question: "ما المخرج؟"
+code: |
+  name = "أحمد"
+
+  def greet():
+      name = "سارة"
+      print(name)
+
+  greet()
+  print(name)
+lang: "python"
+options:
+  - "سارة ثم أحمد"
+  - "أحمد ثم سارة"
+  - "سارة ثم سارة"
+solution: 0
+explanation: "داخل الدالة name محلي='سارة'، خارجها العام='أحمد'"

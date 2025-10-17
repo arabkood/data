@@ -1,0 +1,12 @@
+type: "quiz"
+question: "كيف نصل لقيمة في قاموس موجود بقائمة؟"
+code: |
+  data = [{"x": 10}]
+  # نريد قيمة x
+lang: "python"
+options:
+  - "data['x'][0]"
+  - "data[0]['x']"
+  - "data.x[0]"
+solution: 1
+explanation: "أولاً نصل للقاموس بالفهرس [0]، ثم نصل للقيمة بالمفتاح ['x']"

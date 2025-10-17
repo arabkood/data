@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أكمل الكود ليستمر البرنامج"
+code: |
+  try:
+      result = 10 / 0
+  except:
+      print("خطأ في القسمة")
+
+  print(@@INPUT@@)  # ينفذ دائماً
+solution:
+  - "/^(\"|').+(\"|')$/"

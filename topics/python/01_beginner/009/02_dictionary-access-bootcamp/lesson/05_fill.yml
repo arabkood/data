@@ -1,0 +1,9 @@
+type: "fill"
+lang: "python"
+question: "غير عمر الشخص إلى 30"
+code: |
+  person = {"name": "علي", "age": 25}
+  @@INPUT@@ = 30
+  print(person["age"])
+solution:
+  - "/^person\\[(\"|')age(\"|')\\]$/"

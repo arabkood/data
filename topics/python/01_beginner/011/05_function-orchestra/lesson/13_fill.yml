@@ -1,0 +1,19 @@
+type: "fill"
+lang: "python"
+question: "دالة تعالج بيانات خطوة بخطوة"
+code: |
+  def clean(text):
+      return text.strip()
+
+  def lowercase(text):
+      return text.lower()
+
+  def process(text):
+      cleaned = @@INPUT@@(text)
+      result = @@INPUT@@(cleaned)
+      return result
+
+  print(process("  HELLO  "))
+solution:
+  - "clean"
+  - "lowercase"

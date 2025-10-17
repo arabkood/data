@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "احسب مجموع كل الأسعار باستخدام حلقة"
+code: |
+  items = {"pen": 5, "book": 25, "bag": 100}
+  total = 0
+  for @@INPUT@@ in items.@@INPUT@@:
+      total @@INPUT@@ @@INPUT@@
+  print(total)
+solution:
+  - "/^(price|value|p)$/"
+  - "values()"
+  - "+="
+  - "/^(price|value|p)$/"

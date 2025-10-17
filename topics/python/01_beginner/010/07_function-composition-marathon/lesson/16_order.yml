@@ -1,0 +1,12 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لبناء آلة حاسبة معقدة"
+code:
+  - "def add(a, b):"
+  - "    return a + b"
+  - "def multiply(a, b):"
+  - "    return a * b"
+  - "def calculate(a, b, c):"
+  - "    return multiply(add(a, b), c)"
+  - "result = calculate(2, 3, 4)"
+  - "print(result)"

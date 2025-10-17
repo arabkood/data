@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "استخدم .get() مع قيمة افتراضية"
+code: |
+  config = {"theme": "dark"}
+  lang = config@@INPUT@@(@@INPUT@@, @@INPUT@@)
+  print(lang)
+solution:
+  - ".get"
+  - "/^(\"|')language(\"|')$/"
+  - "/^(\"|')ar(\"|')$/"

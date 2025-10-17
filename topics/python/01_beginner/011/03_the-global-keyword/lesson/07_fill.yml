@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "أصلح الكود باستخدام global"
+code: |
+  counter = 0
+
+  def reset():
+      @@INPUT@@ @@INPUT@@
+      @@INPUT@@ = 0
+
+  reset()
+  print(counter)
+solution:
+  - "global"
+  - "counter"
+  - "counter"

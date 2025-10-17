@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تبني قاموس منتج"
+code: |
+  def create_product(name, price):
+      return @@INPUT@@
+          @@INPUT@@: name,
+          "price": @@INPUT@@
+      }
+
+  product = create_product("كتاب", 50)
+solution:
+  - "{"
+  - "/^(\"|')name(\"|')$/"
+  - "price"

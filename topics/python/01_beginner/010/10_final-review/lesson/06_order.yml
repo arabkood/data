@@ -1,0 +1,8 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لدالة تحسب مربع رقم"
+code:
+  - "def square(n):"
+  - "    return n * n"
+  - "result = square(4)"
+  - "print(result)"

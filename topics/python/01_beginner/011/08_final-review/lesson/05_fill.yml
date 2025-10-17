@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "أصلح الكود لتعديل المتغير العام"
+code: |
+  count = 0
+
+  def increment():
+      @@INPUT@@ @@INPUT@@
+      @@INPUT@@ += 1
+
+  increment()
+solution:
+  - "global"
+  - "count"
+  - "count"

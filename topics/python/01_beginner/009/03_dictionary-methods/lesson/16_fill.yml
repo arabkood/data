@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "احصل على عدد العناصر في القاموس باستخدام len() و .keys()"
+code: |
+  menu = {"burger": 25, "pizza": 40, "salad": 15}
+  count = @@INPUT@@(@@INPUT@@)
+  print(count)
+solution:
+  - "len"
+  - "/^(menu\\.keys\\(\\)|menu)$/"

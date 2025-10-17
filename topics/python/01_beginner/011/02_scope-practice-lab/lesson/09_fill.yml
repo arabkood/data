@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أي قيمة ستُطبع؟"
+code: |
+  num = 5
+
+  def test():
+      num = 10
+      print(@@INPUT@@)  # أي num؟
+
+  test()
+solution:
+  - "/^(10|num)$/"

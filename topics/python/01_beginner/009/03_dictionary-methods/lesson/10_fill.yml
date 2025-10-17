@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "استخدم .get() للوصول لمفتاح 'phone'"
+code: |
+  contact = {"name": "علي", "email": "ali@example.com"}
+  phone = contact@@INPUT@@(@@INPUT@@)
+  print(phone)
+solution:
+  - ".get"
+  - "/^(\"|')phone(\"|')$/"

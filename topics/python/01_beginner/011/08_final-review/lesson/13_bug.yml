@@ -1,0 +1,15 @@
+type: "bug"
+lang: "python"
+question: "لماذا لا تعمل الدالة؟"
+code: |
+  def helper():
+      value = 50
+
+  def main():
+      print(value)
+
+  helper()
+  main()
+solution: 5
+hint: "نطاق value؟"
+explanation: "value محلي لـ helper، main لا يمكنها الوصول إليه"

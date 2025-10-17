@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "احسب معدل الدرجات"
+code: |
+  grades = {"math": 90, "science": 85, "english": 88}
+  total = 0
+  count = 0
+  for grade in grades@@INPUT@@:
+      total += @@INPUT@@
+      count += 1
+  average = total / count
+  print(average)
+solution:
+  - ".values()"
+  - "grade"

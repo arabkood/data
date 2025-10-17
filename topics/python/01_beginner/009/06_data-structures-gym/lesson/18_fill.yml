@@ -1,0 +1,18 @@
+type: "fill"
+lang: "python"
+question: "ابحث عن الطالب الذي درجته أكبر من 90"
+code: |
+  students = [
+      {"name": "أحمد", "score": 85},
+      {"name": "سارة", "score": 95},
+      {"name": "علي", "score": 88}
+  ]
+  for student in @@INPUT@@:
+      if @@INPUT@@[@@INPUT@@] > 90:
+          print(@@INPUT@@[@@INPUT@@])
+solution:
+  - "students"
+  - "student"
+  - "/^(\"|')score(\"|')$/"
+  - "student"
+  - "/^(\"|')name(\"|')$/"

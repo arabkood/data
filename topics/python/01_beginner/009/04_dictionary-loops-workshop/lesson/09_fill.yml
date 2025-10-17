@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "اطبع كل مفتاح وقيمته"
+code: |
+  car = {"brand": "تويوتا", "year": 2023, "color": "أبيض"}
+  for @@INPUT@@, @@INPUT@@ in car@@INPUT@@:
+      print(@@INPUT@@, "->", @@INPUT@@)
+solution:
+  - "/^(key|k)$/"
+  - "/^(value|val|v)$/"
+  - ".items()"
+  - "/^(key|k)$/"
+  - "/^(value|val|v)$/"

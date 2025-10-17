@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تطبع رقمين"
+code: |
+  def print_numbers():
+      print(@@INPUT@@)
+      print(@@INPUT@@)
+
+  print_numbers()
+solution:
+  - "/^\\d+$/"
+  - "/^\\d+$/"

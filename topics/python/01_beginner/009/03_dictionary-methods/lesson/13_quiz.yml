@@ -1,0 +1,8 @@
+type: "quiz"
+question: "ما الفرق بين person['name'] و person.get('name')؟"
+options:
+  - "لا يوجد فرق"
+  - "get() أسرع من []"
+  - "get() لا تسبب خطأ إذا لم يوجد المفتاح"
+solution: 2
+explanation: ".get() تُرجع None بدلاً من إحداث خطأ عندما لا يوجد المفتاح"

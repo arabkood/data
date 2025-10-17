@@ -1,0 +1,11 @@
+type: "bug"
+lang: "python"
+question: "لماذا يحدث خطأ؟"
+code: |
+  def power(base, exp=2):
+      return base ** exp
+  result = power()
+  print(result)
+solution: 3
+hint: "كم معامل إجباري تحتاج الدالة؟"
+explanation: "base معامل إجباري، يجب تمرير قيمة له مثل power(5)"

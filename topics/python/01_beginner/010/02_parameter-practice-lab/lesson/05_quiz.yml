@@ -1,0 +1,13 @@
+type: "quiz"
+question: "ما الفرق بين المعامل والوسيط؟"
+code: |
+  def func(x):  # ←
+      print(x)
+  func(5)       # ←
+lang: "python"
+options:
+  - "لا يوجد فرق"
+  - "x في التعريف معامل، 5 عند الاستدعاء وسيط"
+  - "5 في التعريف معامل، x عند الاستدعاء وسيط"
+solution: 1
+explanation: "المعامل (parameter) في التعريف، الوسيط (argument) عند الاستدعاء"

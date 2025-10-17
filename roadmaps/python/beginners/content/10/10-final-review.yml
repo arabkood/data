@@ -1,0 +1,226 @@
+---
+item_id: "module-10-item-10"
+type: "lesson"
+title: "المراجعة النهائية"
+base_xp: 850
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      مبروك! أتممت وحدة الدوال! 🎉
+
+      لنراجع كل المفاهيم الأساسية من خلال تمارين شاملة.
+
+      سنغطي:
+      - تعريف واستدعاء الدوال
+      - المعاملات و return
+      - معاملات متعددة وافتراضية
+      - تركيب الدوال
+
+  - type: "quiz"
+    question: "كيف نُعرّف دالة في Python؟"
+    options:
+      - "function myFunc():"
+      - "def myFunc():"
+      - "create myFunc():"
+    solution: 1
+    explanation: "نستخدم الكلمة المفتاحية def لتعريف دالة"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة بسيطة واستدعها"
+    code: |
+      @@INPUT@@ say_hello():
+          print("Hello!")
+
+      @@INPUT@@()
+    solution:
+      - "def"
+      - "say_hello"
+
+  - type: "quiz"
+    question: "ما الفرق بين print و return؟"
+    options:
+      - "لا يوجد فرق"
+      - "print تعرض، return تُرجع قيمة للاستخدام"
+      - "return تعرض، print تُرجع قيمة"
+    solution: 1
+    explanation: "print تعرض على الشاشة فقط، return تُرجع قيمة يمكن استخدامها في الكود"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تُرجع مجموع رقمين"
+    code: |
+      def add(a, b):
+          @@INPUT@@ a @@INPUT@@ b
+
+      result = add(5, 3)
+      print(result)
+    solution:
+      - "return"
+      - "+"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لدالة تحسب مربع رقم"
+    code:
+      - "def square(n):"
+      - "    return n * n"
+      - "result = square(4)"
+      - "print(result)"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة بمعاملين"
+    code: |
+      def multiply(@@INPUT@@, @@INPUT@@):
+          return @@INPUT@@ * @@INPUT@@
+
+      print(multiply(3, 4))
+    solution:
+      - "/^(a|x|num1)$/"
+      - "/^(b|y|num2)$/"
+      - "/^(a|x|num1)$/"
+      - "/^(b|y|num2)$/"
+
+  - type: "quiz"
+    question: "أين يجب أن تكون المعاملات الافتراضية؟"
+    code: |
+      def func(a, b=10, c):  # صح أم خطأ؟
+          return a + b + c
+    lang: "python"
+    options:
+      - "صحيح"
+      - "خطأ - الافتراضية يجب أن تكون في النهاية"
+      - "صحيح لكن غير موصى به"
+    solution: 1
+    explanation: "المعاملات الافتراضية يجب أن تأتي بعد كل المعاملات الإجبارية"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة بمعامل افتراضي"
+    code: |
+      def greet(name, greeting=@@INPUT@@):
+          return f"{@@INPUT@@} {@@INPUT@@}"
+
+      print(greet("أحمد"))
+      print(greet("سارة", "أهلاً"))
+    solution:
+      - "/^(\"|')مرحباً(\"|')$/"
+      - "greeting"
+      - "name"
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا تطبع None؟"
+    code: |
+      def calculate(x, y):
+          result = x * y
+      answer = calculate(5, 3)
+      print(answer)
+    solution: 1
+    hint: "هل أرجعنا القيمة؟"
+    explanation: "الدالة تحسب لكن لا تُرجع، يجب إضافة return result"
+
+  - type: "fill"
+    lang: "python"
+    question: "استخدم دالة داخل دالة أخرى"
+    code: |
+      def double(n):
+          return n * 2
+
+      def add_five(n):
+          return n + 5
+
+      result = add_five(@@INPUT@@(10))
+      print(result)
+    solution:
+      - "double"
+
+  - type: "quiz"
+    question: "ما ناتج هذا الكود؟"
+    code: |
+      def f1(x):
+          return x + 10
+
+      def f2(x):
+          return x * 2
+
+      result = f2(f1(5))
+    lang: "python"
+    options:
+      - "25"
+      - "30"
+      - "20"
+    solution: 1
+    explanation: "f1(5) = 15، ثم f2(15) = 30"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تحقق من صحة العمر"
+    code: |
+      def is_valid_age(age):
+          return age >= @@INPUT@@ @@INPUT@@ age <= @@INPUT@@
+
+      print(is_valid_age(25))
+      print(is_valid_age(150))
+    solution:
+      - "/^(0|1)$/"
+      - "and"
+      - "/^(120|150|200)$/"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لحساب محيط دائرة"
+    code:
+      - "def circle_perimeter(radius, pi=3.14):"
+      - "    return 2 * pi * radius"
+      - "result = circle_perimeter(5)"
+      - "print(result)"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ دالة تُرجع الأكبر من رقمين"
+    code: |
+      def max_num(a, b):
+          @@INPUT@@ a > b:
+              @@INPUT@@ a
+          @@INPUT@@:
+              @@INPUT@@ b
+
+      print(max_num(10, 20))
+    solution:
+      - "if"
+      - "return"
+      - "else"
+      - "return"
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا يحدث خطأ؟"
+    code: |
+      def power(base, exp=2):
+          return base ** exp
+      result = power()
+      print(result)
+    solution: 3
+    hint: "كم معامل إجباري تحتاج الدالة؟"
+    explanation: "base معامل إجباري، يجب تمرير قيمة له مثل power(5)"
+
+  - type: "markdown"
+    content: |
+      ممتاز! 🏆 أكملت وحدة الدوال بنجاح!
+
+      الآن أنت تتقن:
+      ✅ إنشاء واستدعاء الدوال
+      ✅ استخدام المعاملات و return
+      ✅ معاملات متعددة وافتراضية
+      ✅ تركيب الدوال وبناء دوال معقدة
+      ✅ حل مشاكل واقعية بالدوال
+
+      الدوال هي حجر الأساس للبرمجة الاحترافية!
+      كل برنامج كبير مكون من دوال صغيرة متعاونة 🚀
+
+      استعد للوحدة التالية: Variable Scope & Advanced Functions! 💪

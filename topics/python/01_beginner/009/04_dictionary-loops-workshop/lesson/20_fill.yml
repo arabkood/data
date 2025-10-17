@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "اطبع المدن التي درجة حرارتها أعلى من 30"
+code: |
+  temps = {"الرياض": 35, "جدة": 28, "الدمام": 33}
+  for @@INPUT@@, @@INPUT@@ in temps.@@INPUT@@:
+      if @@INPUT@@ > 30:
+          print(@@INPUT@@, "درجة حرارتها", @@INPUT@@)
+solution:
+  - "/^(city|c)$/"
+  - "/^(temp|temperature|t)$/"
+  - "items()"
+  - "/^(temp|temperature|t)$/"
+  - "/^(city|c)$/"
+  - "/^(temp|temperature|t)$/"

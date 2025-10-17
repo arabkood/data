@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أنشئ قاموس درجات، ثم احسب المتوسط"
+code: |
+  scores = {"math": 90, "science": 85, "english": 88}
+  average = (@@INPUT@@ + @@INPUT@@ + @@INPUT@@) / 3
+  print(average)
+solution:
+  - "/^scores\\[(\"|')math(\"|')\\]$/"
+  - "/^scores\\[(\"|')science(\"|')\\]$/"
+  - "/^scores\\[(\"|')english(\"|')\\]$/"

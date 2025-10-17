@@ -1,0 +1,12 @@
+id: 598b9ed3-68cb-4ce1-a2f2-0cdb4744a486
+module_id: 86a27813-45e1-413c-ad2e-10088c631fbb
+slug: multiple-parameters-arguments
+position: 5
+created_at: 2025-10-17T13:52:47.030Z
+updated_at: 2025-10-17T13:52:47.030Z
+type: lesson
+title: معاملات ووسائط متعددة
+difficulty: medium
+premium_only: true
+base_xp: 850
+s3_path: python/01_beginner/010/05_multiple-parameters-arguments

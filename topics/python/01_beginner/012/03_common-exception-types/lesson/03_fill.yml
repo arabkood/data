@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "عالج ValueError محدداً"
+code: |
+  try:
+      age = int("عشرون")
+  except @@INPUT@@:
+      print("القيمة غير صحيحة")
+solution:
+  - "ValueError"

@@ -1,0 +1,203 @@
+---
+item_id: "module-9-item-3"
+type: "lesson"
+title: "دوال القواميس"
+base_xp: 850
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      القواميس في Python لديها دوال مفيدة جداً!
+
+      في هذا الدرس سنتعلم 4 دوال أساسية:
+      - `.keys()` للحصول على المفاتيح
+      - `.values()` للحصول على القيم
+      - `.items()` للحصول على الأزواج
+      - `.get()` للوصول الآمن
+
+  - type: "markdown"
+    content: |
+      **الدالة `.keys()`** تعطيك كل المفاتيح في القاموس:
+
+      ```python
+      person = {"name": "أحمد", "age": 25, "city": "جدة"}
+      print(person.keys())
+      # dict_keys(['name', 'age', 'city'])
+      ```
+
+      يمكنك تحويلها لقائمة: `list(person.keys())`
+
+  - type: "fill"
+    lang: "python"
+    question: "احصل على جميع المفاتيح من القاموس"
+    code: |
+      product = {"name": "كتاب", "price": 50, "stock": 100}
+      keys = @@INPUT@@.@@INPUT@@
+      print(keys)
+    solution:
+      - "product"
+      - "keys()"
+
+  - type: "markdown"
+    content: |
+      **الدالة `.values()`** تعطيك كل القيم في القاموس:
+
+      ```python
+      scores = {"math": 90, "science": 85}
+      print(scores.values())
+      # dict_values([90, 85])
+      ```
+
+      مفيدة لحساب المجموع أو المتوسط!
+
+  - type: "fill"
+    lang: "python"
+    question: "احصل على جميع القيم واطبعها"
+    code: |
+      prices = {"apple": 5, "banana": 3, "orange": 4}
+      all_prices = @@INPUT@@
+      print(all_prices)
+    solution:
+      - "/^prices\\.values\\(\\)$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "احسب مجموع كل القيم باستخدام sum() و .values()"
+    code: |
+      sales = {"jan": 1000, "feb": 1500, "mar": 1200}
+      total = @@INPUT@@(@@INPUT@@)
+      print(total)
+    solution:
+      - "sum"
+      - "/^sales\\.values\\(\\)$/"
+
+  - type: "markdown"
+    content: |
+      **الدالة `.items()`** تعطيك كل زوج (مفتاح، قيمة):
+
+      ```python
+      car = {"brand": "تويوتا", "year": 2023}
+      print(car.items())
+      # dict_items([('brand', 'تويوتا'), ('year', 2023)])
+      ```
+
+      مفيدة جداً مع الحلقات! (سنراها قريباً)
+
+  - type: "quiz"
+    question: "ماذا تُرجع الدالة `.items()`؟"
+    options:
+      - "قائمة بالمفاتيح فقط"
+      - "قائمة بالقيم فقط"
+      - "أزواج (مفتاح، قيمة) لكل عنصر"
+    solution: 2
+
+  - type: "markdown"
+    content: |
+      **الدالة `.get()`** - طريقة آمنة للوصول للقيم!
+
+      ```python
+      user = {"name": "سارة"}
+
+      # الطريقة العادية - تسبب خطأ إن لم يوجد المفتاح
+      # print(user["email"])  # خطأ!
+
+      # الطريقة الآمنة - تُرجع None إن لم يوجد
+      print(user.get("email"))  # None
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "استخدم .get() للوصول لمفتاح 'phone'"
+    code: |
+      contact = {"name": "علي", "email": "ali@example.com"}
+      phone = contact@@INPUT@@(@@INPUT@@)
+      print(phone)
+    solution:
+      - ".get"
+      - "/^(\"|')phone(\"|')$/"
+
+  - type: "markdown"
+    content: |
+      يمكن إضافة قيمة افتراضية مع `.get()`:
+
+      ```python
+      settings = {"theme": "dark"}
+
+      # إن لم يوجد المفتاح، أرجع القيمة الافتراضية
+      lang = settings.get("language", "ar")
+      print(lang)  # ar
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "استخدم .get() مع قيمة افتراضية 'مجهول'"
+    code: |
+      person = {"age": 30}
+      name = person.get(@@INPUT@@, @@INPUT@@)
+      print(name)
+    solution:
+      - "/^(\"|')name(\"|')$/"
+      - "/^(\"|')مجهول(\"|')$/"
+
+  - type: "quiz"
+    question: "ما الفرق بين person['name'] و person.get('name')؟"
+    options:
+      - "لا يوجد فرق"
+      - "get() أسرع من []"
+      - "get() لا تسبب خطأ إذا لم يوجد المفتاح"
+    solution: 2
+    explanation: ".get() تُرجع None بدلاً من إحداث خطأ عندما لا يوجد المفتاح"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر للحصول على جميع المفاتيح وطباعتها"
+    code:
+      - "store = {\"apples\": 50, \"oranges\": 30}"
+      - "all_keys = store.keys()"
+      - "print(list(all_keys))"
+
+  - type: "bug"
+    lang: "python"
+    question: "الكود به خطأ في استخدام .values()"
+    code: |
+      data = {"a": 10, "b": 20, "c": 30}
+      total = sum(data.values)
+      print(total)
+    solution: 1
+    hint: ".values هي دالة، كيف ننادي على الدوال؟"
+    explanation: "يجب إضافة أقواس () بعد values لأنها دالة: data.values()"
+
+  - type: "fill"
+    lang: "python"
+    question: "احصل على عدد العناصر في القاموس باستخدام len() و .keys()"
+    code: |
+      menu = {"burger": 25, "pizza": 40, "salad": 15}
+      count = @@INPUT@@(@@INPUT@@)
+      print(count)
+    solution:
+      - "len"
+      - "/^(menu\\.keys\\(\\)|menu)$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ قائمة من كل قيم القاموس"
+    code: |
+      temps = {"morning": 20, "noon": 35, "night": 25}
+      temp_list = @@INPUT@@(temps@@INPUT@@)
+      print(temp_list)
+    solution:
+      - "list"
+      - "/^\\.values\\(\\)$/"
+
+  - type: "markdown"
+    content: |
+      ممتاز! الآن أتقنت:
+
+      ✅ `.keys()` - الحصول على كل المفاتيح
+      ✅ `.values()` - الحصول على كل القيم
+      ✅ `.items()` - الحصول على أزواج (مفتاح، قيمة)
+      ✅ `.get()` - الوصول الآمن للقيم
+
+      هذه الدوال ستجعل عملك مع القواميس أسهل بكثير! 🚀

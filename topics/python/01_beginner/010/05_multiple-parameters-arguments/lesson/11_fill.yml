@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تُنشئ اسم كامل من اسم أول وأخير"
+code: |
+  def full_name(first, last):
+      return @@INPUT@@ + " " + @@INPUT@@
+
+  name = full_name("محمد", "أحمد")
+  print(name)
+solution:
+  - "first"
+  - "last"

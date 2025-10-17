@@ -1,0 +1,10 @@
+type: "bug"
+lang: "python"
+question: "الحلقة لا تعمل بشكل صحيح، أين المشكلة؟"
+code: |
+  data = {"a": 10, "b": 20, "c": 30}
+  for key, value in data:
+      print(key, value)
+solution: 1
+hint: "كيف نحصل على المفتاح والقيمة معاً؟"
+explanation: "يجب استخدام .items() للحصول على المفتاح والقيمة: for key, value in data.items()"

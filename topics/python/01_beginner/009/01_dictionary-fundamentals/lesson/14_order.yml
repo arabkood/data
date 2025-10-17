@@ -1,0 +1,9 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لإنشاء قاموس ثم طباعة قيمة منه"
+code:
+  - "restaurant = {"
+  - "    \"name\": \"البيت الشامي\","
+  - "    \"rating\": 4.5"
+  - "}"
+  - "print(restaurant[\"rating\"])"

@@ -1,0 +1,14 @@
+type: "bug"
+lang: "python"
+question: "ما المشكلة في هذا الكود؟"
+code: |
+  def calculate():
+      total = 0
+      total = total + 10
+      return total
+
+  result = calculate()
+  total = total + 5
+solution: 6
+hint: "أين total خارج الدالة؟"
+explanation: "total محلي للدالة، غير موجود خارجها. استخدم result بدلاً منه"

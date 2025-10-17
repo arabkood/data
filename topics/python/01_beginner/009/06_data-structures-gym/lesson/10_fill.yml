@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "اطبع أسماء كل الطلاب"
+code: |
+  students = [
+      {"name": "أحمد", "age": 20},
+      {"name": "سارة", "age": 22},
+      {"name": "علي", "age": 21}
+  ]
+  for @@INPUT@@ in @@INPUT@@:
+      print(@@INPUT@@[@@INPUT@@])
+solution:
+  - "/^(student|s)$/"
+  - "students"
+  - "/^(student|s)$/"
+  - "/^(\"|')name(\"|')$/"

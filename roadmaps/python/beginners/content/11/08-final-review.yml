@@ -1,0 +1,222 @@
+---
+item_id: "module-11-item-8"
+type: "lesson"
+title: "المراجعة النهائية"
+base_xp: 850
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      مبروك! أتممت وحدة النطاق والدوال المتقدمة! 🎉
+
+      لنراجع كل المفاهيم المهمة:
+      - النطاق المحلي والعام
+      - الكلمة المفتاحية global
+      - الدوال المتداخلة
+      - الأنماط الشائعة
+
+  - type: "quiz"
+    question: "ما الفرق بين النطاق المحلي والعام؟"
+    options:
+      - "لا يوجد فرق"
+      - "المحلي داخل الدالة، العام في كل البرنامج"
+      - "العام أسرع من المحلي"
+    solution: 1
+    explanation: "المتغيرات المحلية داخل الدالة فقط، العامة في كل البرنامج"
+
+  - type: "fill"
+    lang: "python"
+    question: "حدد النطاق لكل متغير"
+    code: |
+      x = 10  # @@INPUT@@
+
+      def func(y):  # y @@INPUT@@
+          z = 20  # z @@INPUT@@
+          print(x, y, z)
+    solution:
+      - "/^(global|عام)$/"
+      - "/^(local|محلي)$/"
+      - "/^(local|محلي)$/"
+
+  - type: "quiz"
+    question: "متى نحتاج global؟"
+    options:
+      - "دائماً مع كل المتغيرات"
+      - "عند تعديل متغير عام من داخل دالة"
+      - "عند قراءة متغير عام"
+    solution: 1
+    explanation: "global فقط عند تعديل متغير عام، القراءة لا تحتاجها"
+
+  - type: "fill"
+    lang: "python"
+    question: "أصلح الكود لتعديل المتغير العام"
+    code: |
+      count = 0
+
+      def increment():
+          @@INPUT@@ @@INPUT@@
+          @@INPUT@@ += 1
+
+      increment()
+    solution:
+      - "global"
+      - "count"
+      - "count"
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا يحدث خطأ؟"
+    code: |
+      total = 100
+
+      def change():
+          total = total + 10
+
+      change()
+    solution: 3
+    hint: "هل استخدمنا global؟"
+    explanation: "نحتاج global total لأننا نعدّل المتغير العام"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لدالة تستدعي دالة أخرى"
+    code:
+      - "def get_value():"
+      - "    return 10"
+      - "def process():"
+      - "    value = get_value()"
+      - "    return value * 2"
+      - "result = process()"
+      - "print(result)"
+
+  - type: "quiz"
+    question: "ما ترتيب التنفيذ؟"
+    code: |
+      def a():
+          print("A1")
+          b()
+          print("A2")
+
+      def b():
+          print("B")
+
+      a()
+    lang: "python"
+    options:
+      - "A1, B, A2"
+      - "A1, A2, B"
+      - "B, A1, A2"
+    solution: 0
+    explanation: "a تطبع A1، تستدعي b (تطبع B)، ثم a تكمل وتطبع A2"
+
+  - type: "fill"
+    lang: "python"
+    question: "دالة تحقق - ترجع True/False"
+    code: |
+      def is_valid(num):
+          @@INPUT@@ num > 0 @@INPUT@@ num < 100
+
+      print(is_valid(50))
+    solution:
+      - "return"
+      - "and"
+
+  - type: "fill"
+    lang: "python"
+    question: "دالة معالجة - تعدل وترجع"
+    code: |
+      def clean(text):
+          text = text@@INPUT@@()
+          text = text@@INPUT@@()
+          return @@INPUT@@
+
+      print(clean("  HELLO  "))
+    solution:
+      - ".strip"
+      - ".lower"
+      - "text"
+
+  - type: "fill"
+    lang: "python"
+    question: "دالة بناء - تنشئ قاموس"
+    code: |
+      def create_item(name, price):
+          @@INPUT@@ {
+              "name": @@INPUT@@,
+              "price": @@INPUT@@
+          }
+
+      item = create_item("قلم", 5)
+    solution:
+      - "return"
+      - "name"
+      - "price"
+
+  - type: "quiz"
+    question: "أيهما أفضل لتعديل متغير؟"
+    code: |
+      # خيار 1
+      count = 0
+      def add():
+          global count
+          count += 1
+
+      # خيار 2
+      def add(count):
+          return count + 1
+      count = add(count)
+    lang: "python"
+    options:
+      - "خيار 1 (global)"
+      - "خيار 2 (return)"
+      - "متساويان"
+    solution: 1
+    explanation: "الخيار 2 أفضل - أوضح وأسهل للفهم والاختبار"
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا لا تعمل الدالة؟"
+    code: |
+      def helper():
+          value = 50
+
+      def main():
+          print(value)
+
+      helper()
+      main()
+    solution: 5
+    hint: "نطاق value؟"
+    explanation: "value محلي لـ helper، main لا يمكنها الوصول إليه"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب خط إنتاج دوال"
+    code:
+      - "def step1(n):"
+      - "    return n + 10"
+      - "def step2(n):"
+      - "    return n * 2"
+      - "def pipeline(n):"
+      - "    result = step1(n)"
+      - "    result = step2(result)"
+      - "    return result"
+      - "print(pipeline(5))"
+
+  - type: "markdown"
+    content: |
+      ممتاز! 🏆 أتممت الوحدة بنجاح!
+
+      الآن تتقن:
+      ✅ فهم النطاق المحلي والعام
+      ✅ استخدام global بشكل صحيح
+      ✅ بناء دوال متداخلة ومتعاونة
+      ✅ أنماط الدوال الاحترافية
+      ✅ تنظيم الكود بدوال مساعدة
+
+      أنت الآن مبرمج محترف في الدوال!
+      كل ما تعلمته سيُستخدم في كل برنامج تكتبه 💪
+
+      استعد للوحدة التالية: Error Handling & Final Project! 🚀

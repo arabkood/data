@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "المعاملات محلية دائماً"
+code: |
+  def add(a, b):  # a, b @@INPUT@@
+      sum_val = a + b  # sum_val @@INPUT@@
+      return sum_val
+
+  result = add(5, 3)  # result @@INPUT@@
+solution:
+  - "/^(local|محلي|محلية)$/"
+  - "/^(local|محلي)$/"
+  - "/^(global|عام)$/"

@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تستخدم متغير محلي"
+code: |
+  def process():
+      @@INPUT@@ = 100  # محلي
+      print(@@INPUT@@)
+
+  process()
+solution:
+  - "/^[a-z_][a-z0-9_]*$/"
+  - "/^[a-z_][a-z0-9_]*$/"

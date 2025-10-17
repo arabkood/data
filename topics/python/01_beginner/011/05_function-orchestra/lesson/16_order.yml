@@ -1,0 +1,13 @@
+type: "order"
+lang: "python"
+question: "رتب الدوال لحساب الدرجة النهائية"
+code:
+  - "def calculate_average(scores):"
+  - "    return sum(scores) / len(scores)"
+  - "def apply_curve(avg):"
+  - "    return min(avg + 5, 100)"
+  - "def get_final_grade(scores):"
+  - "    avg = calculate_average(scores)"
+  - "    return apply_curve(avg)"
+  - "grade = get_final_grade([75, 80, 70])"
+  - "print(grade)"

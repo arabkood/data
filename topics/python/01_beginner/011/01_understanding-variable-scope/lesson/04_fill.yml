@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "حدد أي متغير محلي وأيهما عام"
+code: |
+  x = 10  # @@INPUT@@ scope
+
+  def func():
+      y = 20  # @@INPUT@@ scope
+      print(x, y)
+
+  func()
+solution:
+  - "/^(global|عام)$/"
+  - "/^(local|محلي)$/"

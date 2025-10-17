@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "هل يمكن قراءة المتغير العام؟"
+code: |
+  total = 0
+
+  def add(n):
+      print(@@INPUT@@)  # قراءة المتغير العام
+
+  add(5)
+solution:
+  - "total"

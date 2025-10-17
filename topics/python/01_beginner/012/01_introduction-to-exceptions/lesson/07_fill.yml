@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أكمل البنية الأساسية"
+code: |
+  @@INPUT@@:
+      result = 10 / 0
+  @@INPUT@@:
+      print("لا يمكن القسمة على صفر!")
+solution:
+  - "try"
+  - "except"

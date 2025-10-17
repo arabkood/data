@@ -1,0 +1,12 @@
+type: "bug"
+lang: "python"
+question: "هناك خطأ في إضافة العناصر للقاموس الجديد"
+code: |
+  old = {"x": 1, "y": 2}
+  new = {}
+  for k, v in old.items():
+      new[v] = k
+  print(new)
+solution: 3
+hint: "انظر لترتيب المفتاح والقيمة في السطر الرابع"
+explanation: "المفروض new[k] = v وليس new[v] = k"

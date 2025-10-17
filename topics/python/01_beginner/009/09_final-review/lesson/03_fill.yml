@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أنشئ قاموس وأضف عنصر جديد"
+code: |
+  person = @@INPUT@@"name": "محمد", "age": 30@@INPUT@@
+  person[@@INPUT@@] = "جدة"
+  print(person)
+solution:
+  - "{"
+  - "}"
+  - "/^(\"|')city(\"|')$/"

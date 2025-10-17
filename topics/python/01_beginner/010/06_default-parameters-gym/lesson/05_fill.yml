@@ -1,0 +1,12 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تحسب القوة (الأس الافتراضي 2)"
+code: |
+  def power(base, exponent=@@INPUT@@):
+      return base @@INPUT@@ exponent
+
+  print(power(5))
+  print(power(5, 3))
+solution:
+  - "2"
+  - "**"

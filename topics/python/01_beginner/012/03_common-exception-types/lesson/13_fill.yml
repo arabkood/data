@@ -1,0 +1,14 @@
+type: "fill"
+lang: "python"
+question: "أضف معالجات متعددة"
+code: |
+  try:
+      x = int(input("رقم: "))
+      result = 10 / x
+  except @@INPUT@@:
+      print("إدخال غير صحيح")
+  except @@INPUT@@:
+      print("لا يمكن القسمة على صفر")
+solution:
+  - "ValueError"
+  - "ZeroDivisionError"

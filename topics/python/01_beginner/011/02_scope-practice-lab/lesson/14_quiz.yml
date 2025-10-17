@@ -1,0 +1,18 @@
+type: "quiz"
+question: "أي متغير سيُطبع؟"
+code: |
+  value = "عام"
+
+  def test():
+      value = "محلي"
+      return value
+
+  result = test()
+  print(result)
+lang: "python"
+options:
+  - "عام"
+  - "محلي"
+  - "خطأ"
+solution: 1
+explanation: "الدالة تُرجع value المحلي، وهو 'محلي'"

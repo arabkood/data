@@ -1,0 +1,10 @@
+type: "bug"
+lang: "python"
+question: "لماذا لا يُطبع 'مستمر'؟"
+code: |
+  try:
+      x = 10 / 0
+  print("مستمر")
+solution: 2
+hint: "ماذا ينقص؟"
+explanation: "ينقص except لمعالجة الخطأ، بدونها البرنامج يتوقف"

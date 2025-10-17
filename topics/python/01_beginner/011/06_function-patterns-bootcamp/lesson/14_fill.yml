@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "دالة تُرجع قائمة مصفاة"
+code: |
+  def get_adults(people):
+      result = []
+      @@INPUT@@ person in people:
+          if person["age"] >= 18:
+              result.@@INPUT@@(person)
+      return @@INPUT@@
+
+  adults = get_adults([{"age": 15}, {"age": 25}])
+solution:
+  - "for"
+  - "append"
+  - "result"

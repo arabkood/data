@@ -1,0 +1,18 @@
+type: "quiz"
+question: "ماذا سيطبع؟"
+code: |
+  x = 5
+
+  def change():
+      global x
+      x = 10
+
+  change()
+  print(x)
+lang: "python"
+options:
+  - "5"
+  - "10"
+  - "خطأ"
+solution: 1
+explanation: "global جعل x العام يتغير إلى 10"

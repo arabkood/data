@@ -1,0 +1,9 @@
+type: "fill"
+lang: "python"
+question: "أضف مفتاح 'rating' بقيمة 4.5"
+code: |
+  restaurant = {"name": "مطعم النخيل"}
+  restaurant[@@INPUT@@] = @@INPUT@@
+solution:
+  - "/^(\"|')rating(\"|')$/"
+  - "4.5"

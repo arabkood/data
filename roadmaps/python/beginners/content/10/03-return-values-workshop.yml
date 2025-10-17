@@ -1,0 +1,244 @@
+---
+item_id: "module-10-item-3"
+type: "lesson"
+title: "ورشة القيم المُرجعة"
+base_xp: 900
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      حتى الآن دوالنا تطبع فقط. لكن ماذا لو أردنا **استخدام النتيجة**؟
+
+      ```python
+      def add(a, b):
+          print(a + b)  # تطبع فقط
+
+      result = add(3, 5)  # result = None ❌
+      ```
+
+      هنا يأتي دور `return`! 🎯
+
+  - type: "markdown"
+    content: |
+      **return** تُرجع قيمة من الدالة:
+
+      ```python
+      def add(a, b):
+          return a + b  # أرجع النتيجة
+
+      result = add(3, 5)  # result = 8 ✅
+      print(result)  # 8
+      ```
+
+      `return` تعطيك النتيجة لتستخدمها في أي مكان!
+
+  - type: "quiz"
+    question: "ما الفرق بين print و return في الدالة؟"
+    options:
+      - "لا يوجد فرق"
+      - "print تعرض فقط، return تُرجع قيمة يمكن استخدامها"
+      - "return تعرض، print تُرجع قيمة"
+    solution: 1
+    explanation: "print تعرض على الشاشة فقط، return تُرجع قيمة يمكن حفظها واستخدامها"
+
+  - type: "fill"
+    lang: "python"
+    question: "أرجع مجموع رقمين"
+    code: |
+      def sum_numbers(a, b):
+          @@INPUT@@ a + b
+
+      result = sum_numbers(10, 20)
+      print(result)
+    solution:
+      - "return"
+
+  - type: "fill"
+    lang: "python"
+    question: "أرجع ضعف الرقم"
+    code: |
+      def double(n):
+          @@INPUT@@ n @@INPUT@@ 2
+
+      x = double(5)
+      print(x)
+    solution:
+      - "return"
+      - "*"
+
+  - type: "markdown"
+    content: |
+      مهم! `return` تُنهي تنفيذ الدالة فوراً:
+
+      ```python
+      def test():
+          return 5
+          print("لن يُطبع!")  # لن ينفذ أبداً
+
+      result = test()  # 5
+      ```
+
+      أي كود بعد `return` لن يعمل!
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا result يساوي None؟"
+    code: |
+      def multiply(a, b):
+          result = a * b
+
+      answer = multiply(4, 5)
+      print(answer)
+    solution: 1
+    hint: "هل أرجعنا القيمة؟"
+    explanation: "الدالة تحسب لكن لا تُرجع النتيجة، يجب إضافة return result"
+
+  - type: "fill"
+    lang: "python"
+    question: "أرجع مربع الرقم"
+    code: |
+      def square(n):
+          return @@INPUT@@
+
+      result = square(6)
+      print(result)
+    solution:
+      - "/^n\\s*\\*\\s*n$/"
+
+  - type: "fill"
+    lang: "python"
+    question: "أرجع طول النص"
+    code: |
+      def get_length(text):
+          @@INPUT@@ @@INPUT@@(text)
+
+      length = get_length("Hello")
+      print(length)
+    solution:
+      - "return"
+      - "len"
+
+  - type: "markdown"
+    content: |
+      يمكنك استخدام القيمة المُرجعة في أي عملية:
+
+      ```python
+      def get_ten():
+          return 10
+
+      x = get_ten() + 5  # 15
+      y = get_ten() * 2  # 20
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "احسب مساحة المربع واستخدمها"
+    code: |
+      def area(side):
+          return side @@INPUT@@ side
+
+      total = @@INPUT@@(5) + @@INPUT@@(3)
+      print(total)
+    solution:
+      - "*"
+      - "area"
+      - "area"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لدالة تُرجع الأكبر من رقمين"
+    code:
+      - "def max_num(a, b):"
+      - "    if a > b:"
+      - "        return a"
+      - "    else:"
+      - "        return b"
+      - "result = max_num(10, 20)"
+      - "print(result)"
+
+  - type: "fill"
+    lang: "python"
+    question: "أرجع True إن كان الرقم زوجي، وإلا False"
+    code: |
+      def is_even(n):
+          @@INPUT@@ n % 2 == 0:
+              @@INPUT@@ True
+          @@INPUT@@:
+              @@INPUT@@ False
+
+      print(is_even(4))
+    solution:
+      - "if"
+      - "return"
+      - "else"
+      - "return"
+
+  - type: "quiz"
+    question: "ماذا تُرجع هذه الدالة؟"
+    code: |
+      def test():
+          x = 5 + 3
+
+      result = test()
+      print(result)
+    lang: "python"
+    options:
+      - "8"
+      - "None"
+      - "يحدث خطأ"
+    solution: 1
+    explanation: "الدالة لا تحتوي على return، فتُرجع None تلقائياً"
+
+  - type: "fill"
+    lang: "python"
+    question: "أرجع النص بأحرف كبيرة"
+    code: |
+      def uppercase(text):
+          return text@@INPUT@@
+
+      result = uppercase("hello")
+      print(result)
+    solution:
+      - ".upper()"
+
+  - type: "fill"
+    lang: "python"
+    question: "أرجع مجموع قائمة أرقام"
+    code: |
+      def sum_list(numbers):
+          total = 0
+          for num in @@INPUT@@:
+              total += @@INPUT@@
+          @@INPUT@@ total
+
+      result = sum_list([1, 2, 3, 4])
+      print(result)
+    solution:
+      - "numbers"
+      - "num"
+      - "return"
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا لا تطبع شيئاً؟"
+    code: |
+      def get_message():
+          return "مرحبا"
+
+      get_message()
+    solution: 3
+    hint: "ماذا فعلنا بالقيمة المُرجعة؟"
+    explanation: "الدالة تُرجع القيمة لكننا لم نطبعها أو نحفظها، يجب print(get_message())"
+
+  - type: "markdown"
+    content: |
+      رائع! 🎯 الآن تفهم:
+
+      ✅ ما هو return ولماذا نستخدمه
+      ✅ الفرق بين print و return
+      ✅ كيف تحفظ وتستخدم القيمة المُرجعة
+      ✅ أن return يُنهي تنفيذ الدالة
+
+      return يجعل الدوال أكثر مرونة! 💪

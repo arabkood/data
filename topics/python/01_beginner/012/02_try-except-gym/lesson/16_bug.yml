@@ -1,0 +1,12 @@
+type: "bug"
+lang: "python"
+question: "المعالجة لا تعمل، لماذا؟"
+code: |
+  try:
+      data = [1, 2, 3]
+  print(data[10])
+  except:
+      print("خطأ")
+solution: 2
+hint: "المسافة البادئة (indentation)؟"
+explanation: "print(data[10]) يجب أن يكون داخل try (مسافة بادئة)"

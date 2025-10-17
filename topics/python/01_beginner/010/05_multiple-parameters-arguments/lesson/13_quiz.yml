@@ -1,0 +1,8 @@
+type: "quiz"
+question: "ما الفائدة من استخدام keyword arguments؟"
+options:
+  - "تجعل الكود أبطأ"
+  - "تسمح بتمرير الوسائط بأي ترتيب"
+  - "لا فائدة منها"
+solution: 1
+explanation: "keyword arguments تسمح بتمرير الوسائط بأي ترتيب وتجعل الكود أوضح"

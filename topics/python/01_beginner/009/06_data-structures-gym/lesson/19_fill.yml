@@ -1,0 +1,18 @@
+type: "fill"
+lang: "python"
+question: "احسب معدل الأسعار لجميع المنتجات"
+code: |
+  items = [
+      {"name": "item1", "price": 100},
+      {"name": "item2", "price": 200},
+      {"name": "item3", "price": 150}
+  ]
+  total = 0
+  for item in items:
+      total += @@INPUT@@
+  average = total / @@INPUT@@(@@INPUT@@)
+  print(average)
+solution:
+  - "/^item\\[(\"|')price(\"|')\\]$/"
+  - "len"
+  - "items"

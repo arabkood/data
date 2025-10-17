@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تنسق رقم الهاتف"
+code: |
+  def format_phone(number):
+      return f"({number[:3]}) {number[3:6]}-{number[6:]}"
+
+  print(format_phone(@@INPUT@@))
+solution:
+  - "/^(\"|')\\d{10}(\"|')$/"

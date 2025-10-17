@@ -1,0 +1,8 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر للحصول على كل المفاتيح وطباعتها"
+code:
+  - "data = {\"x\": 1, \"y\": 2, \"z\": 3}"
+  - "keys = data.keys()"
+  - "for key in keys:"
+  - "    print(key)"

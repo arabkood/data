@@ -1,0 +1,12 @@
+type: "bug"
+lang: "python"
+question: "لماذا result يساوي None؟"
+code: |
+  def multiply(a, b):
+      result = a * b
+
+  answer = multiply(4, 5)
+  print(answer)
+solution: 1
+hint: "هل أرجعنا القيمة؟"
+explanation: "الدالة تحسب لكن لا تُرجع النتيجة، يجب إضافة return result"

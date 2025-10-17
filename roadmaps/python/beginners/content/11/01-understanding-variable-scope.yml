@@ -1,0 +1,221 @@
+---
+item_id: "module-11-item-1"
+type: "lesson"
+title: "فهم نطاق المتغيرات"
+base_xp: 850
+difficulty: "medium"
+premium_only: true
+
+steps:
+  - type: "markdown"
+    content: |
+      سؤال مهم: أين يمكن استخدام المتغير؟ 🤔
+
+      ```python
+      def test():
+          x = 10
+          print(x)  # يعمل ✅
+
+      test()
+      print(x)  # خطأ! ❌
+      ```
+
+      لماذا؟ بسبب **النطاق** (Scope)!
+
+  - type: "markdown"
+    content: |
+      **النطاق** (Scope) = المنطقة التي يمكن استخدام المتغير فيها
+
+      هناك نوعان رئيسيان:
+
+      1. **Local Scope** (محلي): داخل الدالة فقط
+      2. **Global Scope** (عام): في كل البرنامج
+
+      ```python
+      # Global
+      name = "أحمد"
+
+      def greet():
+          # Local
+          message = "مرحباً"
+          print(name)     # يمكن قراءة العام ✅
+          print(message)  # يمكن قراءة المحلي ✅
+
+      greet()
+      print(name)     # ✅
+      print(message)  # ❌ خطأ! محلي فقط
+      ```
+
+  - type: "quiz"
+    question: "ما هو النطاق المحلي (Local Scope)؟"
+    options:
+      - "المتغيرات في كل البرنامج"
+      - "المتغيرات داخل الدالة فقط"
+      - "المتغيرات خارج الدالة"
+    solution: 1
+    explanation: "النطاق المحلي هو المتغيرات المعرّفة داخل الدالة، ولا يمكن استخدامها خارجها"
+
+  - type: "fill"
+    lang: "python"
+    question: "حدد أي متغير محلي وأيهما عام"
+    code: |
+      x = 10  # @@INPUT@@ scope
+
+      def func():
+          y = 20  # @@INPUT@@ scope
+          print(x, y)
+
+      func()
+    solution:
+      - "/^(global|عام)$/"
+      - "/^(local|محلي)$/"
+
+  - type: "markdown"
+    content: |
+      **القاعدة الذهبية:**
+
+      - داخل الدالة → يمكن **قراءة** المتغيرات العامة ✅
+      - داخل الدالة → لا يمكن **تعديل** المتغيرات العامة ❌ (بدون global)
+      - خارج الدالة → لا يمكن الوصول للمحلية ❌
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا يحدث خطأ؟"
+    code: |
+      def test():
+          result = 100
+
+      test()
+      print(result)
+    solution: 4
+    hint: "أين تم تعريف result؟"
+    explanation: "result متغير محلي داخل الدالة، لا يمكن الوصول إليه خارجها"
+
+  - type: "fill"
+    lang: "python"
+    question: "هل يمكن قراءة المتغير العام؟"
+    code: |
+      total = 0
+
+      def add(n):
+          print(@@INPUT@@)  # قراءة المتغير العام
+
+      add(5)
+    solution:
+      - "total"
+
+  - type: "markdown"
+    content: |
+      **الأولوية:** المحلي أولاً!
+
+      ```python
+      x = 10  # عام
+
+      def test():
+          x = 20  # محلي (مختلف!)
+          print(x)  # 20
+
+      test()
+      print(x)  # 10
+      ```
+
+      المتغير المحلي "يخفي" العام داخل الدالة!
+
+  - type: "quiz"
+    question: "ماذا سيطبع؟"
+    code: |
+      num = 5
+
+      def change():
+          num = 10
+          print(num)
+
+      change()
+      print(num)
+    lang: "python"
+    options:
+      - "10 ثم 10"
+      - "10 ثم 5"
+      - "5 ثم 10"
+    solution: 1
+    explanation: "داخل الدالة num محلي = 10، خارجها num العام = 5"
+
+  - type: "fill"
+    lang: "python"
+    question: "أنشئ متغير محلي بنفس اسم العام"
+    code: |
+      name = "أحمد"
+
+      def test():
+          @@INPUT@@ = "سارة"  # محلي
+          print(@@INPUT@@)
+
+      test()
+      print(name)
+    solution:
+      - "name"
+      - "name"
+
+  - type: "order"
+    lang: "python"
+    question: "رتب الأسطر لتوضيح النطاق"
+    code:
+      - "count = 0  # عام"
+      - "def increment():"
+      - "    local_count = 1  # محلي"
+      - "    print(count)  # قراءة العام"
+      - "    print(local_count)"
+      - "increment()"
+      - "print(count)"
+
+  - type: "markdown"
+    content: |
+      **المعاملات محلية دائماً!**
+
+      ```python
+      def greet(name):  # name محلي
+          print(name)
+
+      greet("أحمد")
+      # print(name)  # خطأ!
+      ```
+
+  - type: "fill"
+    lang: "python"
+    question: "المعامل محلي للدالة"
+    code: |
+      def multiply(x):  # x @@INPUT@@
+          result = x * 2  # result @@INPUT@@
+          return result
+
+      answer = multiply(5)  # answer @@INPUT@@
+    solution:
+      - "/^(local|محلي)$/"
+      - "/^(local|محلي)$/"
+      - "/^(global|عام)$/"
+
+  - type: "bug"
+    lang: "python"
+    question: "لماذا لا يعمل؟"
+    code: |
+      def calculate():
+          value = 50
+          return value
+
+      calculate()
+      print(value * 2)
+    solution: 5
+    hint: "أين value؟"
+    explanation: "value محلي للدالة، لا يمكن استخدامه خارجها. استخدم القيمة المُرجعة"
+
+  - type: "markdown"
+    content: |
+      رائع! 🎯 الآن تفهم:
+
+      ✅ ما هو النطاق (Scope)
+      ✅ الفرق بين المحلي والعام
+      ✅ قراءة المتغيرات العامة من الدوال
+      ✅ أولوية المتغيرات المحلية
+      ✅ أن المعاملات دائماً محلية
+
+      النطاق يحمي كودك من الأخطاء! 🛡️

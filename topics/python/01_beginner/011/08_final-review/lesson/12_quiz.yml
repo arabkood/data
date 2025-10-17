@@ -1,0 +1,20 @@
+type: "quiz"
+question: "أيهما أفضل لتعديل متغير؟"
+code: |
+  # خيار 1
+  count = 0
+  def add():
+      global count
+      count += 1
+
+  # خيار 2
+  def add(count):
+      return count + 1
+  count = add(count)
+lang: "python"
+options:
+  - "خيار 1 (global)"
+  - "خيار 2 (return)"
+  - "متساويان"
+solution: 1
+explanation: "الخيار 2 أفضل - أوضح وأسهل للفهم والاختبار"

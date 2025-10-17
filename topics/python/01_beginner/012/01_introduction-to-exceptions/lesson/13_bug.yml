@@ -1,0 +1,11 @@
+type: "bug"
+lang: "python"
+question: "لماذا لا يعمل؟"
+code: |
+  try
+      num = int("abc")
+  except:
+      print("خطأ")
+solution: 0
+hint: "ماذا ينقص try؟"
+explanation: "try يحتاج نقطتين : في النهاية"

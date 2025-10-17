@@ -1,0 +1,11 @@
+type: "bug"
+lang: "python"
+question: "لماذا تطبع None؟"
+code: |
+  def calculate(x, y):
+      result = x * y
+  answer = calculate(5, 3)
+  print(answer)
+solution: 1
+hint: "هل أرجعنا القيمة؟"
+explanation: "الدالة تحسب لكن لا تُرجع، يجب إضافة return result"

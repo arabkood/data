@@ -1,0 +1,13 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة بمعاملين"
+code: |
+  def multiply(@@INPUT@@, @@INPUT@@):
+      return @@INPUT@@ * @@INPUT@@
+
+  print(multiply(3, 4))
+solution:
+  - "/^(a|x|num1)$/"
+  - "/^(b|y|num2)$/"
+  - "/^(a|x|num1)$/"
+  - "/^(b|y|num2)$/"

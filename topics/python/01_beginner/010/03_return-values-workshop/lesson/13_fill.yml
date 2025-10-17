@@ -1,0 +1,16 @@
+type: "fill"
+lang: "python"
+question: "أرجع True إن كان الرقم زوجي، وإلا False"
+code: |
+  def is_even(n):
+      @@INPUT@@ n % 2 == 0:
+          @@INPUT@@ True
+      @@INPUT@@:
+          @@INPUT@@ False
+
+  print(is_even(4))
+solution:
+  - "if"
+  - "return"
+  - "else"
+  - "return"

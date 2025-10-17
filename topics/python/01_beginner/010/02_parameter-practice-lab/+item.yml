@@ -1,0 +1,12 @@
+id: 895cfc87-3cd2-46bc-a32c-203f292c2abc
+module_id: 86a27813-45e1-413c-ad2e-10088c631fbb
+slug: parameter-practice-lab
+position: 2
+created_at: 2025-10-17T13:52:47.030Z
+updated_at: 2025-10-17T13:52:47.030Z
+type: lesson
+title: معمل تمارين المعاملات
+difficulty: medium
+premium_only: true
+base_xp: 900
+s3_path: python/01_beginner/010/02_parameter-practice-lab

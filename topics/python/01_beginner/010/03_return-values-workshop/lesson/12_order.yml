@@ -1,0 +1,11 @@
+type: "order"
+lang: "python"
+question: "رتب الأسطر لدالة تُرجع الأكبر من رقمين"
+code:
+  - "def max_num(a, b):"
+  - "    if a > b:"
+  - "        return a"
+  - "    else:"
+  - "        return b"
+  - "result = max_num(10, 20)"
+  - "print(result)"

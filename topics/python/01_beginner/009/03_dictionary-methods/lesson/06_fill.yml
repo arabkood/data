@@ -1,0 +1,10 @@
+type: "fill"
+lang: "python"
+question: "احسب مجموع كل القيم باستخدام sum() و .values()"
+code: |
+  sales = {"jan": 1000, "feb": 1500, "mar": 1200}
+  total = @@INPUT@@(@@INPUT@@)
+  print(total)
+solution:
+  - "sum"
+  - "/^sales\\.values\\(\\)$/"

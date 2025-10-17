@@ -1,0 +1,15 @@
+type: "fill"
+lang: "python"
+question: "حدّث أسعار جميع المنتجات بزيادة 10%"
+code: |
+  items = [
+      {"item": "pen", "price": 10},
+      {"item": "book", "price": 50}
+  ]
+  for item in items:
+      item[@@INPUT@@] = item[@@INPUT@@] @@INPUT@@ 1.1
+  print(items)
+solution:
+  - "/^(\"|')price(\"|')$/"
+  - "/^(\"|')price(\"|')$/"
+  - "*"

@@ -1,0 +1,18 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تحسب عدد الطلاب الناجحين"
+code: |
+  def count_passed(scores, passing_grade=60):
+      count = 0
+      for score in @@INPUT@@:
+          @@INPUT@@ score >= @@INPUT@@:
+              count @@INPUT@@ 1
+      return @@INPUT@@
+
+  print(count_passed([75, 55, 80, 45, 90]))
+solution:
+  - "scores"
+  - "if"
+  - "passing_grade"
+  - "+="
+  - "count"

@@ -1,0 +1,9 @@
+type: "bug"
+lang: "python"
+question: "الدالة لا تطبع شيئاً، لماذا؟"
+code: |
+  def display():
+      print("عرض")
+solution: 1
+hint: "هل استدعينا الدالة؟"
+explanation: "الدالة معرّفة لكن لم يتم استدعاؤها، يجب إضافة display() بعد التعريف"

@@ -1,0 +1,11 @@
+type: "fill"
+lang: "python"
+question: "أنشئ دالة تضاعف الرقم 3 مرات"
+code: |
+  def triple(n):
+      print(n @@INPUT@@ @@INPUT@@)
+
+  triple(4)
+solution:
+  - "*"
+  - "3"
