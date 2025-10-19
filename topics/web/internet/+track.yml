@@ -1,14 +1,16 @@
 id: a53178a3-da56-459e-8d5f-9da42187e6c0
 topic_id: c628daca-4ac6-4bc4-9b88-2ca47979514b
-slug: internet@web
+slug: web-internet
 created_at: 2025-07-09T18:45:45.063Z
-updated_at: 2025-07-09T18:45:45.063Z
+updated_at: 2025-10-19T13:03:18.756Z
 title: كيف يعمل الإنترنت؟
-blurb: "استكشف كيف تعمل الشبكة العالمية بدون أي كود: مسار مبسط لفهم الإنترنت وخلفية عمل المواقع."
+blurb: >-
+  استكشف كيف تعمل الشبكة العالمية بدون أي كود: مسار مبسط لفهم الإنترنت وخلفية
+  عمل المواقع.
 logo: public://images/logos/internet2.png
 premium_only: false
 coming_soon: false
 position: 0
-difficulty: "beginner"
-tags: ["internet"]
-
+difficulty: beginner
+tags:
+  - internet
