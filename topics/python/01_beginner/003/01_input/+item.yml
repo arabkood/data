@@ -8,5 +8,5 @@ type: lesson
 title: "استقبال مدخلات المستخدم `input()`"
 base_xp: 400
 difficulty: easy
-premium_only: true
+premium_only: false
 s3_path: python/01_beginner/003/01_input

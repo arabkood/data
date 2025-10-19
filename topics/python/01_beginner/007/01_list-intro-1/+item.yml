@@ -7,6 +7,6 @@ updated_at: 2025-09-19T08:24:00.218Z
 type: lesson
 title: مقدمة إلى القوائم
 difficulty: easy
-premium_only: true
+premium_only: false
 base_xp: 800
 s3_path: python/01_beginner/007/01_list-intro-1

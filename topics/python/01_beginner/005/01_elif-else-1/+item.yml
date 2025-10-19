@@ -7,6 +7,6 @@ updated_at: 2025-09-14T10:27:25.254Z
 type: lesson
 title: توسيع الشروط مع `elif` و `else`
 difficulty: easy
-premium_only: true
+premium_only: false
 base_xp: 500
 s3_path: python/01_beginner/005/01_elif-else-1

@@ -7,6 +7,6 @@ updated_at: 2025-09-19T08:24:00.220Z
 type: lesson
 title: صالة تدريب فهرسة القوائم
 difficulty: medium
-premium_only: true
+premium_only: false
 base_xp: 850
 s3_path: python/01_beginner/007/02_list-indexing-gym

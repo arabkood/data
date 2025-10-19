@@ -7,6 +7,6 @@ updated_at: 2025-10-15T21:37:03.899Z
 type: lesson
 title: مقدمة إلى حلقات While
 difficulty: medium
-premium_only: true
+premium_only: false
 base_xp: 800
 s3_path: python/01_beginner/008/01_while-loops-intro

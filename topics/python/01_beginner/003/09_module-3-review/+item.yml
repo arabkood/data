@@ -8,5 +8,5 @@ type: lesson
 title: "مراجعة نهائية"
 base_xp: 700
 difficulty: medium
-premium_only: true
+premium_only: false
 s3_path: python/01_beginner/003/09_module-3-review

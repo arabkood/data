@@ -7,6 +7,6 @@ updated_at: 2025-10-17T13:52:47.036Z
 type: lesson
 title: دوال القواميس
 difficulty: medium
-premium_only: true
+premium_only: false
 base_xp: 850
 s3_path: python/01_beginner/009/03_dictionary-methods

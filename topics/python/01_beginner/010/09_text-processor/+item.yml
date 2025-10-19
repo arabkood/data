@@ -7,6 +7,6 @@ updated_at: 2025-10-17T14:06:32.812Z
 type: code
 title: مكتبة معالجة النصوص
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 1300
 s3_path: python/01_beginner/010/09_text-processor

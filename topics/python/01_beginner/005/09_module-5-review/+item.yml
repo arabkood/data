@@ -7,6 +7,6 @@ updated_at: 2025-09-14T10:27:25.256Z
 type: lesson
 title: مراجعة نهائية
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 900
 s3_path: python/01_beginner/005/09_module-5-review

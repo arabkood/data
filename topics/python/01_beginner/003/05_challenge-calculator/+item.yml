@@ -8,5 +8,5 @@ type: code
 title: "تحدي: دمج المدخلات والتحويلات"
 base_xp: 1000
 difficulty: medium
-premium_only: true
+premium_only: false
 s3_path: python/01_beginner/003/05_challenge-calculator

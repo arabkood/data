@@ -7,6 +7,6 @@ updated_at: 2025-10-15T21:37:03.906Z
 type: code
 title: بناء أنماط المصفوفة
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 1300
 s3_path: python/01_beginner/008/04_pattern-builder

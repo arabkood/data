@@ -7,6 +7,6 @@ updated_at: 2025-09-18T18:13:46.621Z
 type: code
 title: 'تحدي: منشئ جدول الضرب'
 difficulty: medium
-premium_only: true
+premium_only: false
 base_xp: 1300
 s3_path: python/01_beginner/006/08_multiplication_table

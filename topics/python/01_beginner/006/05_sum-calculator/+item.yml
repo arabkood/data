@@ -7,6 +7,6 @@ updated_at: 2025-09-18T17:36:46.921Z
 type: code
 title: 'تحدي: حاسبة المجموع'
 difficulty: medium
-premium_only: true
+premium_only: false
 base_xp: 1000
 s3_path: python/01_beginner/006/05_sum-calculator

@@ -7,6 +7,6 @@ updated_at: 2025-10-17T14:06:32.841Z
 type: code
 title: معالج الإدخال الآمن
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 1300
 s3_path: python/01_beginner/012/04_safe-input-handler

@@ -7,6 +7,6 @@ updated_at: 2025-09-14T10:27:25.256Z
 type: code
 title: 'تحدي: محرك التوصيات الذكي'
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 1500
 s3_path: python/01_beginner/005/10_smart-recommendation-engine

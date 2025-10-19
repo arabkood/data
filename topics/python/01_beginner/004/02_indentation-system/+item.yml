@@ -7,6 +7,6 @@ updated_at: 2025-09-02T15:18:29.782Z
 type: lesson
 title: نظام المسافات البادئة - Python Indentation
 difficulty: easy
-premium_only: true
+premium_only: false
 base_xp: 400
 s3_path: python/01_beginner/004/02_indentation-system

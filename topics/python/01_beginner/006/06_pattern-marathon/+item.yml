@@ -7,6 +7,6 @@ updated_at: 2025-09-18T17:40:03.894Z
 type: lesson
 title: ماراثون بناء الأنماط
 difficulty: medium
-premium_only: true
+premium_only: false
 base_xp: 800
 s3_path: python/01_beginner/006/06_pattern-marathon

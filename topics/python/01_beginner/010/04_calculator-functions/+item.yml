@@ -7,6 +7,6 @@ updated_at: 2025-10-17T14:06:32.809Z
 type: code
 title: دوال الآلة الحاسبة
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 1300
 s3_path: python/01_beginner/010/04_calculator-functions

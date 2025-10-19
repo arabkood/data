@@ -7,6 +7,6 @@ updated_at: 2025-09-24T14:52:59.802Z
 type: lesson
 title: 'بناء القوائم: مارثون التطبيق العملي'
 difficulty: medium
-premium_only: true
+premium_only: false
 base_xp: 950
 s3_path: python/01_beginner/007/07_list-building

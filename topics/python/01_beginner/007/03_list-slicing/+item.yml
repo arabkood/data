@@ -7,6 +7,6 @@ updated_at: 2025-09-24T14:51:54.941Z
 type: lesson
 title: أساسيات تقطيع القوائم
 difficulty: medium
-premium_only: true
+premium_only: false
 base_xp: 850
 s3_path: python/01_beginner/007/03_list-slicing

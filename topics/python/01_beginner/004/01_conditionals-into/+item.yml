@@ -7,6 +7,6 @@ updated_at: 2025-09-02T15:18:29.782Z
 type: lesson
 title: مقدمة للمنطق الشرطي وجملة `if`
 difficulty: easy
-premium_only: true
+premium_only: false
 base_xp: 500
 s3_path: python/01_beginner/004/01_conditionals-into

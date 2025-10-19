@@ -7,6 +7,6 @@ updated_at: 2025-10-15T21:37:03.902Z
 type: lesson
 title: ورشة الحلقات المتداخلة
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 1000
 s3_path: python/01_beginner/008/03_nested-loops-workshop

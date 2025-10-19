@@ -7,6 +7,6 @@ updated_at: 2025-09-13T15:40:05.573Z
 type: code
 title: 'تحدي: مدقق كلمة المرور الذكي'
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 1400
 s3_path: python/01_beginner/004/11_smart-password-validator

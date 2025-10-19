@@ -7,6 +7,6 @@ updated_at: 2025-10-17T13:52:47.033Z
 type: lesson
 title: صالة تمارين هياكل البيانات
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 1000
 s3_path: python/01_beginner/009/06_data-structures-gym

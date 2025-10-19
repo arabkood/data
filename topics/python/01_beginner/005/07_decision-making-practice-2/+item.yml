@@ -7,6 +7,6 @@ updated_at: 2025-09-16T11:52:19.750Z
 type: lesson
 title: تدريبات اتخاذ القرار - جزء 2
 difficulty: medium
-premium_only: true
+premium_only: false
 base_xp: 600
 s3_path: python/01_beginner/005/07_decision-making-practice-2

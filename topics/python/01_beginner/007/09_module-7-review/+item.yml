@@ -7,6 +7,6 @@ updated_at: 2025-09-24T14:52:59.802Z
 type: lesson
 title: 'مراجعة شاملة: القوائم والحلقات معًا'
 difficulty: medium
-premium_only: true
+premium_only: false
 base_xp: 1200
 s3_path: python/01_beginner/007/09_module-7-review

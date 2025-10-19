@@ -7,6 +7,6 @@ updated_at: 2025-10-17T13:52:47.029Z
 type: lesson
 title: ورشة القيم المُرجعة
 difficulty: medium
-premium_only: true
+premium_only: false
 base_xp: 900
 s3_path: python/01_beginner/010/03_return-values-workshop

@@ -7,6 +7,6 @@ updated_at: 2025-09-13T17:12:09.368Z
 type: lesson
 title: مراجعة نهائية
 difficulty: medium
-premium_only: true
+premium_only: false
 base_xp: 800
 s3_path: python/01_beginner/004/10_module-4-review

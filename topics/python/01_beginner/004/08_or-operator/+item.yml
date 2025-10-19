@@ -7,6 +7,6 @@ updated_at: 2025-09-13T15:40:05.565Z
 type: lesson
 title: المعامل المنطقي `or`
 difficulty: easy
-premium_only: true
+premium_only: false
 base_xp: 400
 s3_path: python/01_beginner/004/08_or-operator

@@ -7,6 +7,6 @@ updated_at: 2025-09-18T16:21:18.576Z
 type: lesson
 title: ورشة تنسيق الطباعة - معامل end
 difficulty: easy
-premium_only: true
+premium_only: false
 base_xp: 850
 s3_path: python/01_beginner/006/03_print-end

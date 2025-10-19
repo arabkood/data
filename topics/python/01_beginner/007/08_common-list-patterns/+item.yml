@@ -7,6 +7,6 @@ updated_at: 2025-09-24T14:52:59.800Z
 type: lesson
 title: أنماط القوائم الشائعة
 difficulty: medium
-premium_only: true
+premium_only: false
 base_xp: 1000
 s3_path: python/01_beginner/007/08_common-list-patterns

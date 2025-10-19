@@ -7,6 +7,6 @@ updated_at: 2025-10-15T21:37:03.904Z
 type: lesson
 title: ماراثون الحلقات المتقدمة
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 1200
 s3_path: python/01_beginner/008/07_loopathon
