@@ -10,9 +10,9 @@
 **مثال:**
 
 ```python
-matrixRowSum([[1, 2, 3], [4, 5, 6]])           # يُرجع: [6, 15]
-matrixRowSum([[1, 2], [3, 4], [5, 6]])         # يُرجع: [3, 7, 11]
-matrixRowSum([[10]])                           # يُرجع: [10]
-matrixRowSum([])                               # يُرجع: []
-matrixRowSum([[1, 2, 3]])                      # يُرجع: [6]
+matrixRowSum([[1, 2, 3], [4, 5, 6]])           # [6, 15]
+matrixRowSum([[1, 2], [3, 4], [5, 6]])         # [3, 7, 11]
+matrixRowSum([[10]])                           # [10]
+matrixRowSum([])                               # []
+matrixRowSum([[1, 2, 3]])                      # [6]
 ```

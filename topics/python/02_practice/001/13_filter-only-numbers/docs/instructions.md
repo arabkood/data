@@ -10,8 +10,8 @@
 **مثال:**
 
 ```python
-filterNumbers([1, "hello", 3.5, True, 7])       # يُرجع: [1, 3.5, 7]
-filterNumbers(["a", "b", "c"])                  # يُرجع: []
-filterNumbers([10, 20, 30])                     # يُرجع: [10, 20, 30]
-filterNumbers([])                               # يُرجع: []
+filterNumbers([1, "hello", 3.5, True, 7])       # [1, 3.5, 7]
+filterNumbers(["a", "b", "c"])                  # []
+filterNumbers([10, 20, 30])                     # [10, 20, 30]
+filterNumbers([])                               # []
 ```

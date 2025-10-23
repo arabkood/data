@@ -9,6 +9,6 @@
 **مثال:**
 
 ```python
-charPositions("hello")        # يُرجع: {"h": [0], "e": [1], "l": [2, 3], "o": [4]}
-charPositions("abba")          # يُرجع: {"a": [0, 3], "b": [1, 2]}
+charPositions("hello")        # {"h": [0], "e": [1], "l": [2, 3], "o": [4]}
+charPositions("abba")          # {"a": [0, 3], "b": [1, 2]}
 ```

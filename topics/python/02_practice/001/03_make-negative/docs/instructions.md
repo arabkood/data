@@ -10,8 +10,8 @@
 **مثال:**
 
 ```python
-makeNegative(5)    # يُرجع: -5
-makeNegative(-3)   # يُرجع: -3
-makeNegative(0)    # يُرجع: 0
-makeNegative(42)   # يُرجع: -42
+makeNegative(5)    # -5
+makeNegative(-3)   # -3
+makeNegative(0)    # 0
+makeNegative(42)   # -42
 ```

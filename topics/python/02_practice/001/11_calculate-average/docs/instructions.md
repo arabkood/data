@@ -10,8 +10,8 @@
 **مثال:**
 
 ```python
-calculateAverage([1, 2, 3, 4, 5])       # يُرجع: 3.0
-calculateAverage([10, 20, 30])          # يُرجع: 20.0
-calculateAverage([5])                   # يُرجع: 5.0
-calculateAverage([])                    # يُرجع: 0
+calculateAverage([1, 2, 3, 4, 5])       # 3.0
+calculateAverage([10, 20, 30])          # 20.0
+calculateAverage([5])                   # 5.0
+calculateAverage([])                    # 0
 ```

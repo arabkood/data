@@ -9,8 +9,8 @@
 **مثال:**
 
 ```python
-longestStreak([1, 2, 3, 1, 2])       # يُرجع: 3
-longestStreak([1, 2, 5, 6, 7, 8])    # يُرجع: 4
-longestStreak([1, 3, 5, 7])          # يُرجع: 1
-longestStreak([5, 4, 3, 2, 1])       # يُرجع: 1
+longestStreak([1, 2, 3, 1, 2])       # 3
+longestStreak([1, 2, 5, 6, 7, 8])    # 4
+longestStreak([1, 3, 5, 7])          # 1
+longestStreak([5, 4, 3, 2, 1])       # 1
 ```

@@ -18,7 +18,7 @@ engine.add_document(2, "Java is also a programming language")
 engine.add_document(3, "Python is popular")
 
 engine.search("Python programming")
-# يُرجع: [1, 3] (المستند 1 يحتوي الكلمتين، 3 يحتوي Python فقط)
+# [1, 3] (المستند 1 يحتوي الكلمتين، 3 يحتوي Python فقط)
 ```
 
 **ملاحظات:**

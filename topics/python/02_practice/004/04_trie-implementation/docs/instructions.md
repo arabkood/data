@@ -14,11 +14,11 @@
 ```python
 trie = Trie()
 trie.insert("apple")
-trie.search("apple")       # يُرجع: True
-trie.search("app")         # يُرجع: False
-trie.starts_with("app")    # يُرجع: True
+trie.search("apple")       # True
+trie.search("app")         # False
+trie.starts_with("app")    # True
 trie.insert("app")
-trie.search("app")         # يُرجع: True
+trie.search("app")         # True
 ```
 
 **ملاحظات:**

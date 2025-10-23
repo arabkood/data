@@ -10,8 +10,8 @@
 **مثال:**
 
 ```python
-isBalanced("()")              # يُرجع: True
-isBalanced("([{}])")          # يُرجع: True
-isBalanced("([)]")            # يُرجع: False
-isBalanced("((")              # يُرجع: False
+isBalanced("()")              # True
+isBalanced("([{}])")          # True
+isBalanced("([)]")            # False
+isBalanced("((")              # False
 ```

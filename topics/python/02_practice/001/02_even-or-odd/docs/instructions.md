@@ -9,8 +9,8 @@
 **مثال:**
 
 ```python
-evenOrOdd(4)   # يُرجع: "Even"
-evenOrOdd(7)   # يُرجع: "Odd"
-evenOrOdd(0)   # يُرجع: "Even"
-evenOrOdd(-3)  # يُرجع: "Odd"
+evenOrOdd(4)   # "Even"
+evenOrOdd(7)   # "Odd"
+evenOrOdd(0)   # "Even"
+evenOrOdd(-3)  # "Odd"
 ```

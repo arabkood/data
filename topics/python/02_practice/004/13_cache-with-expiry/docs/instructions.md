@@ -14,8 +14,8 @@
 ```python
 cache = CacheWithExpiry()
 cache.set("key1", "value1", ttl=10, timestamp=0)
-cache.get("key1", timestamp=5)   # يُرجع: "value1"
-cache.get("key1", timestamp=11)  # يُرجع: None (expired)
+cache.get("key1", timestamp=5)   # "value1"
+cache.get("key1", timestamp=11)  # None (expired)
 ```
 
 **ملاحظات:**

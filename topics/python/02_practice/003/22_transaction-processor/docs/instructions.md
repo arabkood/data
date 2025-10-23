@@ -20,11 +20,11 @@ processTransactions([
     {"from": None, "to": "A", "amount": 100},
     {"from": "A", "to": "B", "amount": 50}
 ])
-# يُرجع: {"A": 50, "B": 50}
+# {"A": 50, "B": 50}
 
 processTransactions([
     {"from": None, "to": "A", "amount": 100},
     {"from": "A", "to": None, "amount": 30}
 ])
-# يُرجع: {"A": 70}
+# {"A": 70}
 ```

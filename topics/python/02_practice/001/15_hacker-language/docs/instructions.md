@@ -15,8 +15,8 @@
 **مثال:**
 
 ```python
-toHackerSpeak("hello")          # يُرجع: "h3ll0"
-toHackerSpeak("awesome")        # يُرجع: "4w350m3"
-toHackerSpeak("HACKER")         # يُرجع: "H4CK3R"
-toHackerSpeak("Python is fun")  # يُرجع: "Pyth0n 15 fun"
+toHackerSpeak("hello")          # "h3ll0"
+toHackerSpeak("awesome")        # "4w350m3"
+toHackerSpeak("HACKER")         # "H4CK3R"
+toHackerSpeak("Python is fun")  # "Pyth0n 15 fun"
 ```

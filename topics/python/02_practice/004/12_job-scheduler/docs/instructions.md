@@ -19,9 +19,9 @@ scheduler.add_job("job1", priority=2, execution_time=10)
 scheduler.add_job("job2", priority=1, execution_time=10)
 scheduler.add_job("job3", priority=1, execution_time=5)
 
-scheduler.get_next_job(5)   # يُرجع: "job3"
-scheduler.get_next_job(10)  # يُرجع: "job2"
-scheduler.get_next_job(10)  # يُرجع: "job1"
+scheduler.get_next_job(5)   # "job3"
+scheduler.get_next_job(10)  # "job2"
+scheduler.get_next_job(10)  # "job1"
 ```
 
 **ملاحظات:**

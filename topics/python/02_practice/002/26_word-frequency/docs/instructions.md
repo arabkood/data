@@ -9,7 +9,7 @@
 **مثال:**
 
 ```python
-wordFrequency("hello world hello")        # يُرجع: {"hello": 2, "world": 1}
-wordFrequency("Python is fun")            # يُرجع: {"python": 1, "is": 1, "fun": 1}
-wordFrequency("test TEST Test")           # يُرجع: {"test": 3}
+wordFrequency("hello world hello")        # {"hello": 2, "world": 1}
+wordFrequency("Python is fun")            # {"python": 1, "is": 1, "fun": 1}
+wordFrequency("test TEST Test")           # {"test": 3}
 ```

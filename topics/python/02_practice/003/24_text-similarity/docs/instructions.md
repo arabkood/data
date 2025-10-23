@@ -12,8 +12,8 @@
 **مثال:**
 
 ```python
-textSimilarity("hello world", "hello there")      # يُرجع: 50.0
-textSimilarity("hello world", "hello world")      # يُرجع: 100.0
-textSimilarity("abc def", "xyz")                  # يُرجع: 0.0
-textSimilarity("Hello World", "hello world")      # يُرجع: 100.0
+textSimilarity("hello world", "hello there")      # 50.0
+textSimilarity("hello world", "hello world")      # 100.0
+textSimilarity("abc def", "xyz")                  # 0.0
+textSimilarity("Hello World", "hello world")      # 100.0
 ```

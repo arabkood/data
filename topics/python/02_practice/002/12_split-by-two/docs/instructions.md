@@ -9,8 +9,8 @@
 **مثال:**
 
 ```python
-splitByTwo("abcdef")       # يُرجع: ["ab", "cd", "ef"]
-splitByTwo("abcde")        # يُرجع: ["ab", "cd", "e_"]
-splitByTwo("hello")        # يُرجع: ["he", "ll", "o_"]
-splitByTwo("")             # يُرجع: []
+splitByTwo("abcdef")       # ["ab", "cd", "ef"]
+splitByTwo("abcde")        # ["ab", "cd", "e_"]
+splitByTwo("hello")        # ["he", "ll", "o_"]
+splitByTwo("")             # []
 ```

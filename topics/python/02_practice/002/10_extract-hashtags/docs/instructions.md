@@ -10,8 +10,8 @@
 **مثال:**
 
 ```python
-extractHashtags("I love #python programming")      # يُرجع: ["python"]
-extractHashtags("#hello #world")                   # يُرجع: ["hello", "world"]
-extractHashtags("No hashtags here")                # يُرجع: []
-extractHashtags("#code #test123 #python3")         # يُرجع: ["code", "test123", "python3"]
+extractHashtags("I love #python programming")      # ["python"]
+extractHashtags("#hello #world")                   # ["hello", "world"]
+extractHashtags("No hashtags here")                # []
+extractHashtags("#code #test123 #python3")         # ["code", "test123", "python3"]
 ```

@@ -11,10 +11,10 @@
 **مثال:**
 
 ```python
-calculate(5, 3, "+")        # يُرجع: 8
-calculate(10, 4, "-")       # يُرجع: 6
-calculate(7, 6, "*")        # يُرجع: 42
-calculate(20, 5, "/")       # يُرجع: 4.0
-calculate(10, 0, "/")       # يُرجع: "ERROR"
-calculate(5, 3, "%")        # يُرجع: "ERROR"
+calculate(5, 3, "+")        # 8
+calculate(10, 4, "-")       # 6
+calculate(7, 6, "*")        # 42
+calculate(20, 5, "/")       # 4.0
+calculate(10, 0, "/")       # "ERROR"
+calculate(5, 3, "%")        # "ERROR"
 ```

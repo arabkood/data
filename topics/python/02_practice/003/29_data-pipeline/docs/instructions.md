@@ -11,14 +11,14 @@
 
 ```python
 pipeline([1, 2, 3], [lambda x: [i * 2 for i in x]])
-# يُرجع: [2, 4, 6]
+# [2, 4, 6]
 
 pipeline([1, 2, 3, 4], [
     lambda x: [i * 2 for i in x],
     lambda x: [i for i in x if i > 4]
 ])
-# يُرجع: [6, 8]
+# [6, 8]
 
 pipeline([1, 2, 3], [])
-# يُرجع: [1, 2, 3]
+# [1, 2, 3]
 ```

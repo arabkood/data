@@ -13,8 +13,8 @@
 
 ```python
 textStats("hello world")
-# يُرجع: {"chars": 10, "words": 2, "lines": 1, "spaces": 1}
+# {"chars": 10, "words": 2, "lines": 1, "spaces": 1}
 
 textStats("hello\nworld")
-# يُرجع: {"chars": 10, "words": 2, "lines": 2, "spaces": 0}
+# {"chars": 10, "words": 2, "lines": 2, "spaces": 0}
 ```

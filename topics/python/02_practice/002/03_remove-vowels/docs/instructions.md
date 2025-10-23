@@ -9,9 +9,9 @@
 **مثال:**
 
 ```python
-removeVowels("hello")          # يُرجع: "hll"
-removeVowels("world")          # يُرجع: "wrld"
-removeVowels("Python")         # يُرجع: "Pythn"
-removeVowels("AEIOU")          # يُرجع: ""
-removeVowels("xyz123")         # يُرجع: "xyz123"
+removeVowels("hello")          # "hll"
+removeVowels("world")          # "wrld"
+removeVowels("Python")         # "Pythn"
+removeVowels("AEIOU")          # ""
+removeVowels("xyz123")         # "xyz123"
 ```

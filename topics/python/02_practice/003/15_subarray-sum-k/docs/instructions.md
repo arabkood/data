@@ -10,9 +10,9 @@
 **مثال:**
 
 ```python
-subarraySum([1, 1, 1], 2)                          # يُرجع: 2
-subarraySum([1, 2, 3], 3)                          # يُرجع: 2
-subarraySum([1], 0)                                # يُرجع: 0
-subarraySum([1, -1, 0], 0)                         # يُرجع: 3
-subarraySum([1, 2, 1, 2, 1], 3)                    # يُرجع: 4
+subarraySum([1, 1, 1], 2)                          # 2
+subarraySum([1, 2, 3], 3)                          # 2
+subarraySum([1], 0)                                # 0
+subarraySum([1, -1, 0], 0)                         # 3
+subarraySum([1, 2, 1, 2, 1], 3)                    # 4
 ```

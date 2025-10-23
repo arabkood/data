@@ -20,10 +20,10 @@ g.add_vertex("C")
 g.add_edge("A", "B")
 g.add_edge("B", "C")
 
-g.get_neighbors("A")    # يُرجع: ["B"]
-g.get_neighbors("B")    # يُرجع: ["A", "C"]
-g.has_path("A", "C")    # يُرجع: True
-g.has_path("A", "D")    # يُرجع: False
+g.get_neighbors("A")    # ["B"]
+g.get_neighbors("B")    # ["A", "C"]
+g.has_path("A", "C")    # True
+g.has_path("A", "D")    # False
 ```
 
 **ملاحظات:**

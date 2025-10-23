@@ -10,9 +10,9 @@
 **مثال:**
 
 ```python
-transposeMatrix([[1, 2], [3, 4]])                  # يُرجع: [[1, 3], [2, 4]]
-transposeMatrix([[1, 2, 3], [4, 5, 6]])            # يُرجع: [[1, 4], [2, 5], [3, 6]]
-transposeMatrix([[1]])                             # يُرجع: [[1]]
-transposeMatrix([])                                # يُرجع: []
-transposeMatrix([[1, 2, 3]])                       # يُرجع: [[1], [2], [3]]
+transposeMatrix([[1, 2], [3, 4]])                  # [[1, 3], [2, 4]]
+transposeMatrix([[1, 2, 3], [4, 5, 6]])            # [[1, 4], [2, 5], [3, 6]]
+transposeMatrix([[1]])                             # [[1]]
+transposeMatrix([])                                # []
+transposeMatrix([[1, 2, 3]])                       # [[1], [2], [3]]
 ```

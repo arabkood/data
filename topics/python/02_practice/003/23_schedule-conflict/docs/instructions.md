@@ -13,14 +13,14 @@
 
 ```python
 hasConflict([{"start": 9, "end": 10}, {"start": 10, "end": 11}])
-# يُرجع: False
+# False
 
 hasConflict([{"start": 9, "end": 11}, {"start": 10, "end": 12}])
-# يُرجع: True
+# True
 
 hasConflict([{"start": 9, "end": 10}])
-# يُرجع: False
+# False
 
 hasConflict([])
-# يُرجع: False
+# False
 ```

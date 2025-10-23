@@ -11,9 +11,9 @@
 **مثال:**
 
 ```python
-longestConsecutive([100, 4, 200, 1, 3, 2])         # يُرجع: 4 (لأن 1,2,3,4)
-longestConsecutive([0, 3, 7, 2, 5, 8, 4, 6, 0, 1]) # يُرجع: 9 (لأن 0,1,2,3,4,5,6,7,8)
-longestConsecutive([])                             # يُرجع: 0
-longestConsecutive([1])                            # يُرجع: 1
-longestConsecutive([1, 3, 5, 7])                   # يُرجع: 1
+longestConsecutive([100, 4, 200, 1, 3, 2])         # 4 (لأن 1,2,3,4)
+longestConsecutive([0, 3, 7, 2, 5, 8, 4, 6, 0, 1]) # 9 (لأن 0,1,2,3,4,5,6,7,8)
+longestConsecutive([])                             # 0
+longestConsecutive([1])                            # 1
+longestConsecutive([1, 3, 5, 7])                   # 1
 ```

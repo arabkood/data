@@ -16,9 +16,9 @@
 **مثال:**
 
 ```python
-formatLikes([])                              # يُرجع: "no one likes this"
-formatLikes(["Peter"])                       # يُرجع: "Peter likes this"
-formatLikes(["Jacob", "Alex"])               # يُرجع: "Jacob and Alex like this"
-formatLikes(["Max", "John", "Mark"])         # يُرجع: "Max, John and Mark like this"
-formatLikes(["Alex", "Jacob", "Mark", "Max"]) # يُرجع: "Alex, Jacob and 2 others like this"
+formatLikes([])                              # "no one likes this"
+formatLikes(["Peter"])                       # "Peter likes this"
+formatLikes(["Jacob", "Alex"])               # "Jacob and Alex like this"
+formatLikes(["Max", "John", "Mark"])         # "Max, John and Mark like this"
+formatLikes(["Alex", "Jacob", "Mark", "Max"]) # "Alex, Jacob and 2 others like this"
 ```

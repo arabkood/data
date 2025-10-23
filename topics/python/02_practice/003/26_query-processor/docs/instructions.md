@@ -15,17 +15,17 @@ queryData(
     [{"name": "Ali", "age": 25}, {"name": "Sara", "age": 30}],
     {"age": 25}
 )
-# يُرجع: [{"name": "Ali", "age": 25}]
+# [{"name": "Ali", "age": 25}]
 
 queryData(
     [{"name": "Ali", "age": 25, "city": "Cairo"}],
     {"name": "Ali", "age": 25}
 )
-# يُرجع: [{"name": "Ali", "age": 25, "city": "Cairo"}]
+# [{"name": "Ali", "age": 25, "city": "Cairo"}]
 
 queryData(
     [{"x": 1}, {"x": 2}],
     {"x": 3}
 )
-# يُرجع: []
+# []
 ```

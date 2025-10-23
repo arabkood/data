@@ -9,8 +9,8 @@
 **مثال:**
 
 ```python
-secondLargest([1, 2, 3, 4, 5])         # يُرجع: 4
-secondLargest([10, 5, 8, 12, 3])       # يُرجع: 10
-secondLargest([7, 7, 7])               # يُرجع: None
-secondLargest([5, 1])                  # يُرجع: 1
+secondLargest([1, 2, 3, 4, 5])         # 4
+secondLargest([10, 5, 8, 12, 3])       # 10
+secondLargest([7, 7, 7])               # None
+secondLargest([5, 1])                  # 1
 ```

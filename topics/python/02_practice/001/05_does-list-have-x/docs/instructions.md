@@ -9,8 +9,8 @@
 **مثال:**
 
 ```python
-hasElement([1, 2, 3, 4, 5], 3)      # يُرجع: True
-hasElement([1, 2, 3, 4, 5], 6)      # يُرجع: False
-hasElement([], 1)                   # يُرجع: False
-hasElement(['a', 'b', 'c'], 'b')    # يُرجع: True
+hasElement([1, 2, 3, 4, 5], 3)      # True
+hasElement([1, 2, 3, 4, 5], 6)      # False
+hasElement([], 1)                   # False
+hasElement(['a', 'b', 'c'], 'b')    # True
 ```

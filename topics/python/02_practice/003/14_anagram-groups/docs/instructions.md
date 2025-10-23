@@ -11,14 +11,14 @@
 
 ```python
 groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
-# يُرجع: [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+# [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
 
 groupAnagrams([""])
-# يُرجع: [[""]]
+# [[""]]
 
 groupAnagrams(["a"])
-# يُرجع: [["a"]]
+# [["a"]]
 
 groupAnagrams(["abc", "bca", "cab", "xyz", "zyx"])
-# يُرجع: [["abc", "bca", "cab"], ["xyz", "zyx"]]
+# [["abc", "bca", "cab"], ["xyz", "zyx"]]
 ```

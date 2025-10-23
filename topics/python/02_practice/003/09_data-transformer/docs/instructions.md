@@ -11,14 +11,14 @@
 
 ```python
 transformData([{"id": 1, "name": "Ali"}])
-# يُرجع: {1: {"name": "Ali"}}
+# {1: {"name": "Ali"}}
 
 transformData([{"id": 1, "name": "Ali"}, {"id": 2, "name": "Sara"}])
-# يُرجع: {1: {"name": "Ali"}, 2: {"name": "Sara"}}
+# {1: {"name": "Ali"}, 2: {"name": "Sara"}}
 
 transformData([{"id": "a", "value": 10}, {"id": "b", "value": 20}])
-# يُرجع: {"a": {"value": 10}, "b": {"value": 20}}
+# {"a": {"value": 10}, "b": {"value": 20}}
 
 transformData([])
-# يُرجع: {}
+# {}
 ```

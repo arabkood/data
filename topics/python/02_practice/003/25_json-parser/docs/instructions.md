@@ -17,11 +17,11 @@
 
 ```python
 parseSimpleJSON('{"name": "Ali", "age": 25}')
-# يُرجع: {"name": "Ali", "age": 25}
+# {"name": "Ali", "age": 25}
 
 parseSimpleJSON('{"x": 10}')
-# يُرجع: {"x": 10}
+# {"x": 10}
 
 parseSimpleJSON('{}')
-# يُرجع: {}
+# {}
 ```

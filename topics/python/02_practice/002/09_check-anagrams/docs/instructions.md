@@ -10,8 +10,8 @@
 **مثال:**
 
 ```python
-areAnagrams("listen", "silent")      # يُرجع: True
-areAnagrams("hello", "world")        # يُرجع: False
-areAnagrams("Triangle", "Integral")  # يُرجع: True
-areAnagrams("apple", "pale")         # يُرجع: False
+areAnagrams("listen", "silent")      # True
+areAnagrams("hello", "world")        # False
+areAnagrams("Triangle", "Integral")  # True
+areAnagrams("apple", "pale")         # False
 ```

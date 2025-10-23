@@ -10,9 +10,9 @@
 **مثال:**
 
 ```python
-nestedFrequency([1, 2, 1])                      # يُرجع: {1: 2, 2: 1}
-nestedFrequency([1, [2, 1], 3])                 # يُرجع: {1: 2, 2: 1, 3: 1}
-nestedFrequency([[1, 2], [1, [2, 3]]])          # يُرجع: {1: 2, 2: 2, 3: 1}
-nestedFrequency([])                             # يُرجع: {}
-nestedFrequency(["a", ["b", "a"]])              # يُرجع: {"a": 2, "b": 1}
+nestedFrequency([1, 2, 1])                      # {1: 2, 2: 1}
+nestedFrequency([1, [2, 1], 3])                 # {1: 2, 2: 1, 3: 1}
+nestedFrequency([[1, 2], [1, [2, 3]]])          # {1: 2, 2: 2, 3: 1}
+nestedFrequency([])                             # {}
+nestedFrequency(["a", ["b", "a"]])              # {"a": 2, "b": 1}
 ```

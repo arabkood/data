@@ -14,15 +14,15 @@
 ```python
 editor = TextEditor()
 editor.write("hello")
-editor.get_text()      # يُرجع: "hello"
+editor.get_text()      # "hello"
 editor.write(" world")
-editor.get_text()      # يُرجع: "hello world"
+editor.get_text()      # "hello world"
 editor.delete(6)
-editor.get_text()      # يُرجع: "hello"
+editor.get_text()      # "hello"
 editor.undo()
-editor.get_text()      # يُرجع: "hello world"
+editor.get_text()      # "hello world"
 editor.redo()
-editor.get_text()      # يُرجع: "hello"
+editor.get_text()      # "hello"
 ```
 
 **ملاحظات:**

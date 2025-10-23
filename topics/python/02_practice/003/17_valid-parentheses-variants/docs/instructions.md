@@ -10,10 +10,10 @@
 **مثال:**
 
 ```python
-isValid("()")                                      # يُرجع: True
-isValid("()[]{}")                                  # يُرجع: True
-isValid("(]")                                      # يُرجع: False
-isValid("([)]")                                    # يُرجع: False
-isValid("{[]}")                                    # يُرجع: True
-isValid("")                                        # يُرجع: True
+isValid("()")                                      # True
+isValid("()[]{}")                                  # True
+isValid("(]")                                      # False
+isValid("([)]")                                    # False
+isValid("{[]}")                                    # True
+isValid("")                                        # True
 ```

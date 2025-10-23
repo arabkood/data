@@ -16,13 +16,13 @@
 cache = LRUCache(2)
 cache.put(1, 1)
 cache.put(2, 2)
-cache.get(1)       # يُرجع: 1
+cache.get(1)       # 1
 cache.put(3, 3)    # يحذف المفتاح 2 (الأقل استخدامًا)
-cache.get(2)       # يُرجع: -1 (غير موجود)
+cache.get(2)       # -1 (غير موجود)
 cache.put(4, 4)    # يحذف المفتاح 1
-cache.get(1)       # يُرجع: -1
-cache.get(3)       # يُرجع: 3
-cache.get(4)       # يُرجع: 4
+cache.get(1)       # -1
+cache.get(3)       # 3
+cache.get(4)       # 4
 ```
 
 **ملاحظات:**

@@ -17,11 +17,11 @@
 
 ```python
 analyzeData([1, 2, 3, 4, 5])
-# يُرجع: {"mean": 3.0, "median": 3, "mode": 1, "min": 1, "max": 5, "range": 4}
+# {"mean": 3.0, "median": 3, "mode": 1, "min": 1, "max": 5, "range": 4}
 
 analyzeData([1, 1, 2, 3])
-# يُرجع: {"mean": 1.75, "median": 1.5, "mode": 1, "min": 1, "max": 3, "range": 2}
+# {"mean": 1.75, "median": 1.5, "mode": 1, "min": 1, "max": 3, "range": 2}
 
 analyzeData([])
-# يُرجع: {"mean": None, "median": None, "mode": None, "min": None, "max": None, "range": None}
+# {"mean": None, "median": None, "mode": None, "min": None, "max": None, "range": None}
 ```

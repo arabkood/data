@@ -10,7 +10,7 @@
 **مثال:**
 
 ```python
-mostCommonWord("hello world hello")      # يُرجع: "hello"
-mostCommonWord("the cat and the dog")    # يُرجع: "the"
-mostCommonWord("one two three")          # يُرجع: "one"
+mostCommonWord("hello world hello")      # "hello"
+mostCommonWord("the cat and the dog")    # "the"
+mostCommonWord("one two three")          # "one"
 ```

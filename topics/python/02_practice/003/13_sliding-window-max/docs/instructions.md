@@ -10,9 +10,9 @@
 **مثال:**
 
 ```python
-maxSlidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3)    # يُرجع: [3, 3, 5, 5, 6, 7]
-maxSlidingWindow([1], 1)                           # يُرجع: [1]
-maxSlidingWindow([1, -1], 1)                       # يُرجع: [1, -1]
-maxSlidingWindow([9, 11], 2)                       # يُرجع: [11]
-maxSlidingWindow([4, -2], 2)                       # يُرجع: [4]
+maxSlidingWindow([1, 3, -1, -3, 5, 3, 6, 7], 3)    # [3, 3, 5, 5, 6, 7]
+maxSlidingWindow([1], 1)                           # [1]
+maxSlidingWindow([1, -1], 1)                       # [1, -1]
+maxSlidingWindow([9, 11], 2)                       # [11]
+maxSlidingWindow([4, -2], 2)                       # [4]
 ```

@@ -14,14 +14,14 @@
 
 ```python
 validateUser({"name": "Ali", "age": 25, "email": "ali@test.com"})
-# يُرجع: {"valid": True, "errors": []}
+# {"valid": True, "errors": []}
 
 validateUser({"name": "", "age": 25, "email": "ali@test.com"})
-# يُرجع: {"valid": False, "errors": ["name is empty"]}
+# {"valid": False, "errors": ["name is empty"]}
 
 validateUser({"name": "Ali", "age": 15, "email": "ali@test.com"})
-# يُرجع: {"valid": False, "errors": ["age must be between 18 and 100"]}
+# {"valid": False, "errors": ["age must be between 18 and 100"]}
 
 validateUser({"name": "Ali", "age": 25, "email": "invalid"})
-# يُرجع: {"valid": False, "errors": ["email must contain @ and ."]}
+# {"valid": False, "errors": ["email must contain @ and ."]}
 ```

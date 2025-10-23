@@ -9,8 +9,8 @@
 **مثال:**
 
 ```python
-flattenList([[1, 2], [3, 4]])           # يُرجع: [1, 2, 3, 4]
-flattenList([[1], [2], [3]])            # يُرجع: [1, 2, 3]
-flattenList([])                         # يُرجع: []
-flattenList([[1, 2, 3]])                # يُرجع: [1, 2, 3]
+flattenList([[1, 2], [3, 4]])           # [1, 2, 3, 4]
+flattenList([[1], [2], [3]])            # [1, 2, 3]
+flattenList([])                         # []
+flattenList([[1, 2, 3]])                # [1, 2, 3]
 ```

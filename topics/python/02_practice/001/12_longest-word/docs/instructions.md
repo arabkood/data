@@ -10,8 +10,8 @@
 **مثال:**
 
 ```python
-findLongestWord("hello world")                  # يُرجع: "hello"
-findLongestWord("Python is amazing")            # يُرجع: "amazing"
-findLongestWord("a bb ccc")                     # يُرجع: "ccc"
-findLongestWord("")                             # يُرجع: ""
+findLongestWord("hello world")                  # "hello"
+findLongestWord("Python is amazing")            # "amazing"
+findLongestWord("a bb ccc")                     # "ccc"
+findLongestWord("")                             # ""
 ```

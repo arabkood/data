@@ -9,8 +9,8 @@
 **مثال:**
 
 ```python
-reverseWords("hello world")        # يُرجع: "world hello"
-reverseWords("Python is fun")      # يُرجع: "fun is Python"
-reverseWords("a b c d")            # يُرجع: "d c b a"
-reverseWords("one")                # يُرجع: "one"
+reverseWords("hello world")        # "world hello"
+reverseWords("Python is fun")      # "fun is Python"
+reverseWords("a b c d")            # "d c b a"
+reverseWords("one")                # "one"
 ```

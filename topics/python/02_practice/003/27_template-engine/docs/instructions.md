@@ -12,14 +12,14 @@
 
 ```python
 renderTemplate("Hello {{name}}!", {"name": "Ali"})
-# يُرجع: "Hello Ali!"
+# "Hello Ali!"
 
 renderTemplate("{{x}} + {{y}} = {{z}}", {"x": 1, "y": 2, "z": 3})
-# يُرجع: "1 + 2 = 3"
+# "1 + 2 = 3"
 
 renderTemplate("Hello {{name}}!", {})
-# يُرجع: "Hello !"
+# "Hello !"
 
 renderTemplate("No variables", {"x": 1})
-# يُرجع: "No variables"
+# "No variables"
 ```

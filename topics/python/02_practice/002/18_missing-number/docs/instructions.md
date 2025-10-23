@@ -9,8 +9,8 @@
 **مثال:**
 
 ```python
-findMissing([1, 2, 4, 5])          # يُرجع: 3
-findMissing([3, 1, 2, 5, 6])       # يُرجع: 4
-findMissing([2, 3, 4, 5])          # يُرجع: 1
-findMissing([1, 2, 3, 4, 5, 7])    # يُرجع: 6
+findMissing([1, 2, 4, 5])          # 3
+findMissing([3, 1, 2, 5, 6])       # 4
+findMissing([2, 3, 4, 5])          # 1
+findMissing([1, 2, 3, 4, 5, 7])    # 6
 ```

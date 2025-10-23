@@ -10,8 +10,8 @@
 **مثال:**
 
 ```python
-mostCommonChar("hello")            # يُرجع: "l"
-mostCommonChar("aabbcc")           # يُرجع: "a"
-mostCommonChar("programming")      # يُرجع: "g"
-mostCommonChar("hello world")      # يُرجع: "l"
+mostCommonChar("hello")            # "l"
+mostCommonChar("aabbcc")           # "a"
+mostCommonChar("programming")      # "g"
+mostCommonChar("hello world")      # "l"
 ```

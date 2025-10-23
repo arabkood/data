@@ -10,9 +10,9 @@
 **مثال:**
 
 ```python
-wordPattern("abba", "dog cat cat dog")            # يُرجع: True
-wordPattern("abba", "dog cat cat fish")           # يُرجع: False
-wordPattern("aaaa", "dog cat cat dog")            # يُرجع: False
-wordPattern("abba", "dog dog dog dog")            # يُرجع: False
-wordPattern("abc", "dog cat fish")                # يُرجع: True
+wordPattern("abba", "dog cat cat dog")            # True
+wordPattern("abba", "dog cat cat fish")           # False
+wordPattern("aaaa", "dog cat cat dog")            # False
+wordPattern("abba", "dog dog dog dog")            # False
+wordPattern("abc", "dog cat fish")                # True
 ```

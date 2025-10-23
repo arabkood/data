@@ -11,10 +11,10 @@
 **مثال:**
 
 ```python
-findInNested([1, 2, 3], 2)                         # يُرجع: True
-findInNested([1, [2, 3], 4], 3)                    # يُرجع: True
-findInNested([[1, 2], [3, [4, 5]]], 5)             # يُرجع: True
-findInNested([1, 2, 3], 5)                         # يُرجع: False
-findInNested([1, [2, [3]]], 4)                     # يُرجع: False
-findInNested([], 1)                                # يُرجع: False
+findInNested([1, 2, 3], 2)                         # True
+findInNested([1, [2, 3], 4], 3)                    # True
+findInNested([[1, 2], [3, [4, 5]]], 5)             # True
+findInNested([1, 2, 3], 5)                         # False
+findInNested([1, [2, [3]]], 4)                     # False
+findInNested([], 1)                                # False
 ```

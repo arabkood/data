@@ -9,8 +9,8 @@
 **مثال:**
 
 ```python
-removeDuplicates([1, 2, 2, 3, 4, 4, 5])     # يُرجع: [1, 2, 3, 4, 5]
-removeDuplicates([1, 1, 1, 1])              # يُرجع: [1]
-removeDuplicates([5, 4, 3, 2, 1])           # يُرجع: [5, 4, 3, 2, 1]
-removeDuplicates([])                        # يُرجع: []
+removeDuplicates([1, 2, 2, 3, 4, 4, 5])     # [1, 2, 3, 4, 5]
+removeDuplicates([1, 1, 1, 1])              # [1]
+removeDuplicates([5, 4, 3, 2, 1])           # [5, 4, 3, 2, 1]
+removeDuplicates([])                        # []
 ```

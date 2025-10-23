@@ -13,10 +13,10 @@
 ```python
 shortener = URLShortener()
 short = shortener.encode("https://example.com/very/long/path")
-# يُرجع: "http://short.url/abc123"
+# "http://short.url/abc123"
 
 shortener.decode(short)
-# يُرجع: "https://example.com/very/long/path"
+# "https://example.com/very/long/path"
 ```
 
 **ملاحظات:**

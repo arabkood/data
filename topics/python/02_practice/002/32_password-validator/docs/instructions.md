@@ -12,8 +12,8 @@
 **مثال:**
 
 ```python
-checkPassword("Password1")        # يُرجع: True
-checkPassword("password")         # يُرجع: False
-checkPassword("PASS123")          # يُرجع: False
-checkPassword("Pass")             # يُرجع: False
+checkPassword("Password1")        # True
+checkPassword("password")         # False
+checkPassword("PASS123")          # False
+checkPassword("Pass")             # False
 ```

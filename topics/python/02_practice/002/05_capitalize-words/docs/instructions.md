@@ -9,8 +9,8 @@
 **مثال:**
 
 ```python
-capitalizeWords("hello world")         # يُرجع: "Hello World"
-capitalizeWords("python programming")  # يُرجع: "Python Programming"
-capitalizeWords("HELLO")               # يُرجع: "Hello"
-capitalizeWords("a b c")               # يُرجع: "A B C"
+capitalizeWords("hello world")         # "Hello World"
+capitalizeWords("python programming")  # "Python Programming"
+capitalizeWords("HELLO")               # "Hello"
+capitalizeWords("a b c")               # "A B C"
 ```

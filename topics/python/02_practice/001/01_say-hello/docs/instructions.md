@@ -8,6 +8,6 @@
 **مثال:**
 
 ```python
-sayHello("أحمد")  # يُرجع: "Hello, أحمد!"
-sayHello("Sara")  # يُرجع: "Hello, Sara!"
+sayHello("أحمد")  # "Hello, أحمد!"
+sayHello("Sara")  # "Hello, Sara!"
 ```

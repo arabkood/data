@@ -11,14 +11,14 @@
 
 ```python
 groupAndSum([{"category": "A", "value": 10}, {"category": "B", "value": 20}])
-# يُرجع: {"A": 10, "B": 20}
+# {"A": 10, "B": 20}
 
 groupAndSum([{"category": "A", "value": 10}, {"category": "A", "value": 5}])
-# يُرجع: {"A": 15}
+# {"A": 15}
 
 groupAndSum([{"category": "X", "value": 1}, {"category": "Y", "value": 2}, {"category": "X", "value": 3}])
-# يُرجع: {"X": 4, "Y": 2}
+# {"X": 4, "Y": 2}
 
 groupAndSum([])
-# يُرجع: {}
+# {}
 ```

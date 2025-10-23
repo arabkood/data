@@ -9,8 +9,8 @@
 **مثال:**
 
 ```python
-repeatString("abc", 3)      # يُرجع: "abcabcabc"
-repeatString("Hello", 2)    # يُرجع: "HelloHello"
-repeatString("x", 5)        # يُرجع: "xxxxx"
-repeatString("test", 0)     # يُرجع: ""
+repeatString("abc", 3)      # "abcabcabc"
+repeatString("Hello", 2)    # "HelloHello"
+repeatString("x", 5)        # "xxxxx"
+repeatString("test", 0)     # ""
 ```

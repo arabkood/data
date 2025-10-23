@@ -9,8 +9,8 @@
 **مثال:**
 
 ```python
-abbreviateName("Sam Harris")        # يُرجع: "S.H"
-abbreviateName("john doe")          # يُرجع: "J.D"
-abbreviateName("MARK SMITH")        # يُرجع: "M.S"
-abbreviateName("alice wonder")      # يُرجع: "A.W"
+abbreviateName("Sam Harris")        # "S.H"
+abbreviateName("john doe")          # "J.D"
+abbreviateName("MARK SMITH")        # "M.S"
+abbreviateName("alice wonder")      # "A.W"
 ```

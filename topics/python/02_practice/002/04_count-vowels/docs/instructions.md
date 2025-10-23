@@ -9,9 +9,9 @@
 **مثال:**
 
 ```python
-countVowels("hello")           # يُرجع: 2
-countVowels("world")           # يُرجع: 1
-countVowels("Python")          # يُرجع: 1
-countVowels("aeiou")           # يُرجع: 5
-countVowels("xyz")             # يُرجع: 0
+countVowels("hello")           # 2
+countVowels("world")           # 1
+countVowels("Python")          # 1
+countVowels("aeiou")           # 5
+countVowels("xyz")             # 0
 ```

@@ -9,8 +9,8 @@
 **مثال:**
 
 ```python
-toArabicDigits("rhc123")         # يُرجع: "rhc١٢٣"
-toArabicDigits("hello789")       # يُرجع: "hello٧٨٩"
-toArabicDigits("test0")          # يُرجع: "test٠"
-toArabicDigits("no numbers")     # يُرجع: "no numbers"
+toArabicDigits("rhc123")         # "rhc١٢٣"
+toArabicDigits("hello789")       # "hello٧٨٩"
+toArabicDigits("test0")          # "test٠"
+toArabicDigits("no numbers")     # "no numbers"
 ```

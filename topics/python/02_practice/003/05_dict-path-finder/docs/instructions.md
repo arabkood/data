@@ -11,9 +11,9 @@
 **مثال:**
 
 ```python
-findPath({"a": 1}, "a")                                    # يُرجع: ["a"]
-findPath({"a": {"b": 2}}, "b")                             # يُرجع: ["a", "b"]
-findPath({"a": {"b": {"c": 3}}}, "c")                      # يُرجع: ["a", "b", "c"]
-findPath({"a": 1}, "z")                                    # يُرجع: None
-findPath({"a": {"b": 1}, "c": {"d": 2}}, "d")              # يُرجع: ["c", "d"]
+findPath({"a": 1}, "a")                                    # ["a"]
+findPath({"a": {"b": 2}}, "b")                             # ["a", "b"]
+findPath({"a": {"b": {"c": 3}}}, "c")                      # ["a", "b", "c"]
+findPath({"a": 1}, "z")                                    # None
+findPath({"a": {"b": 1}, "c": {"d": 2}}, "d")              # ["c", "d"]
 ```

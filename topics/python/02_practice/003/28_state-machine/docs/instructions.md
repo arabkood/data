@@ -17,12 +17,12 @@ processStates(
     ["start", "stop"],
     {("idle", "start"): "running", ("running", "stop"): "idle"}
 )
-# يُرجع: "idle"
+# "idle"
 
 processStates(
     "off",
     ["turn_on"],
     {("off", "turn_on"): "on", ("on", "turn_off"): "off"}
 )
-# يُرجع: "on"
+# "on"
 ```

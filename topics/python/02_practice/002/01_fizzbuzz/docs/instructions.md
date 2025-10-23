@@ -16,9 +16,9 @@
 **مثال:**
 
 ```python
-fizzBuzz(3)         # يُرجع: "Fizz"
-fizzBuzz(5)         # يُرجع: "Buzz"
-fizzBuzz(15)        # يُرجع: "FizzBuzz"
-fizzBuzz(7)         # يُرجع: "7"
-fizzBuzz(30)        # يُرجع: "FizzBuzz"
+fizzBuzz(3)         # "Fizz"
+fizzBuzz(5)         # "Buzz"
+fizzBuzz(15)        # "FizzBuzz"
+fizzBuzz(7)         # "7"
+fizzBuzz(30)        # "FizzBuzz"
 ```

@@ -9,8 +9,8 @@
 **مثال:**
 
 ```python
-sumPositive([1, 2, 3, 4, 5])        # يُرجع: 15
-sumPositive([1, -2, 3, -4, 5])      # يُرجع: 9
-sumPositive([-1, -2, -3, -4, -5])   # يُرجع: 0
-sumPositive([])                     # يُرجع: 0
+sumPositive([1, 2, 3, 4, 5])        # 15
+sumPositive([1, -2, 3, -4, 5])      # 9
+sumPositive([-1, -2, -3, -4, -5])   # 0
+sumPositive([])                     # 0
 ```

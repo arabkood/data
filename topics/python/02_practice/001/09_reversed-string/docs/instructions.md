@@ -9,8 +9,8 @@
 **مثال:**
 
 ```python
-reverseString("hello")      # يُرجع: "olleh"
-reverseString("Python")     # يُرجع: "nohtyP"
-reverseString("a")          # يُرجع: "a"
-reverseString("")           # يُرجع: ""
+reverseString("hello")      # "olleh"
+reverseString("Python")     # "nohtyP"
+reverseString("a")          # "a"
+reverseString("")           # ""
 ```

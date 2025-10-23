@@ -10,10 +10,10 @@
 **مثال:**
 
 ```python
-getValue({"a": 1}, ["a"])                                  # يُرجع: 1
-getValue({"a": {"b": 2}}, ["a", "b"])                      # يُرجع: 2
-getValue({"a": {"b": {"c": 3}}}, ["a", "b", "c"])          # يُرجع: 3
-getValue({"a": 1}, ["z"])                                  # يُرجع: None
-getValue({"a": {"b": 2}}, ["a", "c"])                      # يُرجع: None
-getValue({"x": {"y": {"z": "hello"}}}, ["x", "y", "z"])    # يُرجع: "hello"
+getValue({"a": 1}, ["a"])                                  # 1
+getValue({"a": {"b": 2}}, ["a", "b"])                      # 2
+getValue({"a": {"b": {"c": 3}}}, ["a", "b", "c"])          # 3
+getValue({"a": 1}, ["z"])                                  # None
+getValue({"a": {"b": 2}}, ["a", "c"])                      # None
+getValue({"x": {"y": {"z": "hello"}}}, ["x", "y", "z"])    # "hello"
 ```

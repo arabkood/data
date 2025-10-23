@@ -13,5 +13,5 @@ students = [
     {"name": "Sara", "grade": "B"},
     {"name": "Omar", "grade": "A"}
 ]
-groupByGrade(students)  # يُرجع: {"A": ["Ali", "Omar"], "B": ["Sara"]}
+groupByGrade(students)  # {"A": ["Ali", "Omar"], "B": ["Sara"]}
 ```

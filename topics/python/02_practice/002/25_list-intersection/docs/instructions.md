@@ -9,7 +9,7 @@
 **مثال:**
 
 ```python
-listIntersection([1, 2, 3], [2, 3, 4])      # يُرجع: [2, 3]
-listIntersection([1, 2, 2, 3], [2, 3, 3])   # يُرجع: [2, 3]
-listIntersection([1, 2], [3, 4])            # يُرجع: []
+listIntersection([1, 2, 3], [2, 3, 4])      # [2, 3]
+listIntersection([1, 2, 2, 3], [2, 3, 3])   # [2, 3]
+listIntersection([1, 2], [3, 4])            # []
 ```

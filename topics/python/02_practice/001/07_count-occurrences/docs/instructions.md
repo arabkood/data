@@ -9,8 +9,8 @@
 **مثال:**
 
 ```python
-countOccurrences([1, 2, 3, 2, 4, 2], 2)      # يُرجع: 3
-countOccurrences([1, 1, 1, 1], 1)            # يُرجع: 4
-countOccurrences([1, 2, 3], 5)               # يُرجع: 0
-countOccurrences([], 1)                      # يُرجع: 0
+countOccurrences([1, 2, 3, 2, 4, 2], 2)      # 3
+countOccurrences([1, 1, 1, 1], 1)            # 4
+countOccurrences([1, 2, 3], 5)               # 0
+countOccurrences([], 1)                      # 0
 ```

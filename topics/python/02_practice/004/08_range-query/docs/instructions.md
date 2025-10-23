@@ -12,9 +12,9 @@
 
 ```python
 rq = RangeQuery([1, 3, 5, 7, 9])
-rq.sumRange(0, 2)  # يُرجع: 9 (1+3+5)
-rq.sumRange(1, 3)  # يُرجع: 15 (3+5+7)
-rq.sumRange(2, 4)  # يُرجع: 21 (5+7+9)
+rq.sumRange(0, 2)  # 9 (1+3+5)
+rq.sumRange(1, 3)  # 15 (3+5+7)
+rq.sumRange(2, 4)  # 21 (5+7+9)
 ```
 
 **ملاحظات:**

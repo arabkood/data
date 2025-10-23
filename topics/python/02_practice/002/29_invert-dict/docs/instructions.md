@@ -9,7 +9,7 @@
 **مثال:**
 
 ```python
-invertDict({"a": 1, "b": 2})         # يُرجع: {1: "a", 2: "b"}
-invertDict({"x": 10, "y": 20})       # يُرجع: {10: "x", 20: "y"}
-invertDict({})                       # يُرجع: {}
+invertDict({"a": 1, "b": 2})         # {1: "a", 2: "b"}
+invertDict({"x": 10, "y": 20})       # {10: "x", 20: "y"}
+invertDict({})                       # {}
 ```

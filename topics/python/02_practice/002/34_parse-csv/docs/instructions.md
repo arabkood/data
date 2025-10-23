@@ -9,6 +9,6 @@
 **مثال:**
 
 ```python
-parseCSV("name,age", "Ali,25")           # يُرجع: {"name": "Ali", "age": "25"}
-parseCSV("x,y,z", "1,2,3")               # يُرجع: {"x": "1", "y": "2", "z": "3"}
+parseCSV("name,age", "Ali,25")           # {"name": "Ali", "age": "25"}
+parseCSV("x,y,z", "1,2,3")               # {"x": "1", "y": "2", "z": "3"}
 ```

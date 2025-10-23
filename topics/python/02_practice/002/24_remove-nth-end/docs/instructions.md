@@ -9,7 +9,7 @@
 **مثال:**
 
 ```python
-removeNthFromEnd([1, 2, 3, 4, 5], 2)    # يُرجع: [1, 2, 3, 5]
-removeNthFromEnd([1, 2, 3], 1)          # يُرجع: [1, 2]
-removeNthFromEnd([1, 2], 2)             # يُرجع: [2]
+removeNthFromEnd([1, 2, 3, 4, 5], 2)    # [1, 2, 3, 5]
+removeNthFromEnd([1, 2, 3], 1)          # [1, 2]
+removeNthFromEnd([1, 2], 2)             # [2]
 ```
