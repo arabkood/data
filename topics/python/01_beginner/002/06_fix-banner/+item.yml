@@ -6,7 +6,7 @@ created_at: 2025-07-18T12:32:23.073Z
 updated_at: 2025-07-18T12:33:53.707Z
 type: code
 title: "تحدي: إصلاح لافتة الترحيب"
-base_xp: 900
+base_xp: 356
 difficulty: medium
 premium_only: false
 s3_path: python/01_beginner/002/06_fix-banner

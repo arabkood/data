@@ -8,5 +8,5 @@ type: lesson
 title: سيناريوهات دوال عملية
 difficulty: medium
 premium_only: false
-base_xp: 900
+base_xp: 390
 s3_path: python/01_beginner/010/08_practical-function-scenarios

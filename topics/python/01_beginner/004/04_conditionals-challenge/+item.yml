@@ -8,5 +8,5 @@ type: code
 title: 'تحدي: مصنف الأرقام'
 difficulty: medium
 premium_only: false
-base_xp: 1000
+base_xp: 385
 s3_path: python/01_beginner/004/04_conditionals-challenge

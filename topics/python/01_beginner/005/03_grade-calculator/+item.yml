@@ -8,5 +8,5 @@ type: code
 title: 'تحدي: حاسبة الدرجات'
 difficulty: medium
 premium_only: false
-base_xp: 1100
+base_xp: 361
 s3_path: python/01_beginner/005/03_grade-calculator

@@ -8,5 +8,5 @@ type: lesson
 title: معمل تمارين المعاملات
 difficulty: medium
 premium_only: false
-base_xp: 900
+base_xp: 355
 s3_path: python/01_beginner/010/02_parameter-practice-lab

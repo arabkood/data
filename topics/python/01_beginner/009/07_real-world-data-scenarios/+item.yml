@@ -8,5 +8,5 @@ type: lesson
 title: سيناريوهات البيانات الواقعية
 difficulty: medium
 premium_only: false
-base_xp: 900
+base_xp: 385
 s3_path: python/01_beginner/009/07_real-world-data-scenarios

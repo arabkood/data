@@ -8,5 +8,5 @@ type: lesson
 title: مقدمة لحلقات `for` و `range`
 difficulty: easy
 premium_only: false
-base_xp: 600
+base_xp: 210
 s3_path: python/01_beginner/006/01_intro-to-loops-range

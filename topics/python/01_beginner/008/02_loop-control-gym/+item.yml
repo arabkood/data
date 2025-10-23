@@ -8,5 +8,5 @@ type: lesson
 title: معمل التحكم في الحلقات
 difficulty: medium
 premium_only: false
-base_xp: 900
+base_xp: 386
 s3_path: python/01_beginner/008/02_loop-control-gym

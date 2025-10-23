@@ -8,5 +8,5 @@ type: lesson
 title: معمل تمارين النطاق
 difficulty: medium
 premium_only: false
-base_xp: 900
+base_xp: 302
 s3_path: python/01_beginner/011/02_scope-practice-lab

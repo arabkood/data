@@ -8,5 +8,5 @@ type: lesson
 title: ماراثون تركيب الدوال
 difficulty: hard
 premium_only: false
-base_xp: 950
+base_xp: 383
 s3_path: python/01_beginner/010/07_function-composition-marathon

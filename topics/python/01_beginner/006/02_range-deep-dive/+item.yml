@@ -8,5 +8,5 @@ type: lesson
 title: التحكم الكامل في range
 difficulty: medium
 premium_only: false
-base_xp: 850
+base_xp: 252
 s3_path: python/01_beginner/006/02_range-deep-dive

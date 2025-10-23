@@ -8,5 +8,5 @@ type: lesson
 title: معاملات ووسائط متعددة
 difficulty: medium
 premium_only: false
-base_xp: 850
+base_xp: 202
 s3_path: python/01_beginner/010/05_multiple-parameters-arguments

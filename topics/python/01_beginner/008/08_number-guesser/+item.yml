@@ -8,5 +8,5 @@ type: code
 title: لعبة تخمين الأرقام
 difficulty: hard
 premium_only: false
-base_xp: 1300
+base_xp: 483
 s3_path: python/01_beginner/008/08_number-guesser

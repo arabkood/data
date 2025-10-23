@@ -8,5 +8,5 @@ type: lesson
 title: مقدمة إلى الدوال
 difficulty: medium
 premium_only: false
-base_xp: 800
+base_xp: 224
 s3_path: python/01_beginner/010/01_introduction-to-functions

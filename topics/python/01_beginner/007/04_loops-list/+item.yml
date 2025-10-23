@@ -8,5 +8,5 @@ type: lesson
 title: ورشة الحلقات والقوائم معاً
 difficulty: medium
 premium_only: false
-base_xp: 1200
+base_xp: 492
 s3_path: python/01_beginner/007/04_loops-list

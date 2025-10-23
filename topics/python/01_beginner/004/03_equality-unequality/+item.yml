@@ -8,5 +8,5 @@ type: lesson
 title: مقارنات المساواة `==` و `!=`
 difficulty: easy
 premium_only: false
-base_xp: 450
+base_xp: 132
 s3_path: python/01_beginner/004/03_equality-unequality

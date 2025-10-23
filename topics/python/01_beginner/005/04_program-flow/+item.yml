@@ -8,5 +8,5 @@ type: lesson
 title: إتقان التحكم في مسار البرنامج
 difficulty: medium
 premium_only: false
-base_xp: 750
+base_xp: 286
 s3_path: python/01_beginner/005/04_program-flow

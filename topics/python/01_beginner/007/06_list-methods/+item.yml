@@ -8,5 +8,5 @@ type: lesson
 title: الطرق الأساسية للقوائم
 difficulty: medium
 premium_only: false
-base_xp: 800
+base_xp: 295
 s3_path: python/01_beginner/007/06_list-methods

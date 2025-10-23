@@ -8,5 +8,5 @@ type: lesson
 title: المعامل المنطقي `not`
 difficulty: easy
 premium_only: false
-base_xp: 350
+base_xp: 115
 s3_path: python/01_beginner/004/06_not-operator

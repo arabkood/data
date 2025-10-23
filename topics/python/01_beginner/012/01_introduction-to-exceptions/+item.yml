@@ -8,5 +8,5 @@ type: lesson
 title: مقدمة إلى الاستثناءات
 difficulty: medium
 premium_only: false
-base_xp: 850
+base_xp: 285
 s3_path: python/01_beginner/012/01_introduction-to-exceptions

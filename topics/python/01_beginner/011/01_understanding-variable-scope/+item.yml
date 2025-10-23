@@ -8,5 +8,5 @@ type: lesson
 title: فهم نطاق المتغيرات
 difficulty: medium
 premium_only: false
-base_xp: 850
+base_xp: 212
 s3_path: python/01_beginner/011/01_understanding-variable-scope

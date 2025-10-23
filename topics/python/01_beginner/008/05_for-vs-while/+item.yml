@@ -8,5 +8,5 @@ type: lesson
 title: 'For مقابل While: اختيار الحلقة المناسبة'
 difficulty: medium
 premium_only: false
-base_xp: 750
+base_xp: 238
 s3_path: python/01_beginner/008/05_for-vs-while

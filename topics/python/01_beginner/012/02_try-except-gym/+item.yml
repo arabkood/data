@@ -8,5 +8,5 @@ type: lesson
 title: صالة تمارين Try-Except
 difficulty: medium
 premium_only: false
-base_xp: 950
+base_xp: 345
 s3_path: python/01_beginner/012/02_try-except-gym

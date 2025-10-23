@@ -8,5 +8,5 @@ type: code
 title: 'تحدي: محلل الدرجات'
 difficulty: hard
 premium_only: false
-base_xp: 1300
+base_xp: 418
 s3_path: python/01_beginner/007/10_grade-analyzer

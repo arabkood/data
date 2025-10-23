@@ -8,5 +8,5 @@ type: lesson
 title: الكلمة المفتاحية global
 difficulty: medium
 premium_only: false
-base_xp: 850
+base_xp: 295
 s3_path: python/01_beginner/011/03_the-global-keyword

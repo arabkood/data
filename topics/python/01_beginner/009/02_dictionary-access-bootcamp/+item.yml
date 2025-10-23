@@ -8,5 +8,5 @@ type: lesson
 title: تدريبات الوصول للقواميس
 difficulty: medium
 premium_only: false
-base_xp: 900
+base_xp: 338
 s3_path: python/01_beginner/009/02_dictionary-access-bootcamp

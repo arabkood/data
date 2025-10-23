@@ -8,5 +8,5 @@ type: lesson
 title: ورشة الحلقات والقواميس
 difficulty: medium
 premium_only: false
-base_xp: 950
+base_xp: 330
 s3_path: python/01_beginner/009/04_dictionary-loops-workshop

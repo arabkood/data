@@ -8,5 +8,5 @@ type: lesson
 title: المقارنات الرقمية (`>`, `<`, `>=`)
 difficulty: easy
 premium_only: false
-base_xp: 450
+base_xp: 141
 s3_path: python/01_beginner/004/05_numerical_comparison

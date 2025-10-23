@@ -8,5 +8,5 @@ type: code
 title: 'تحدي: حاسبة المجموع'
 difficulty: medium
 premium_only: false
-base_xp: 1000
+base_xp: 311
 s3_path: python/01_beginner/006/05_sum-calculator

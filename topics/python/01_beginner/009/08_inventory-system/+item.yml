@@ -8,5 +8,5 @@ type: code
 title: نظام إدارة المخزون
 difficulty: hard
 premium_only: false
-base_xp: 1300
+base_xp: 439
 s3_path: python/01_beginner/009/08_inventory-system

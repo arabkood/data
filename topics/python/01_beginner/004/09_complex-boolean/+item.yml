@@ -8,5 +8,5 @@ type: lesson
 title: الشروط المنطقية المعقدة
 difficulty: medium
 premium_only: false
-base_xp: 700
+base_xp: 277
 s3_path: python/01_beginner/004/09_complex-boolean

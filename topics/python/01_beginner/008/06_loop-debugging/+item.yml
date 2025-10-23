@@ -8,5 +8,5 @@ type: lesson
 title: عيادة تصحيح أخطاء الحلقات
 difficulty: medium
 premium_only: false
-base_xp: 850
+base_xp: 282
 s3_path: python/01_beginner/008/06_loop-debugging

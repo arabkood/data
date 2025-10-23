@@ -8,5 +8,5 @@ type: lesson
 title: صالة المعاملات الافتراضية
 difficulty: medium
 premium_only: false
-base_xp: 900
+base_xp: 356
 s3_path: python/01_beginner/010/06_default-parameters-gym

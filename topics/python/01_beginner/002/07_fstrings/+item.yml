@@ -6,7 +6,7 @@ created_at: 2025-07-24T10:30:16.380Z
 updated_at: 2025-07-24T10:30:16.380Z
 type: lesson
 title: "تنسيق النصوص باستخدام f-strings"
-base_xp: 550
+base_xp: 178
 difficulty: easy
 premium_only: false
 s3_path: python/01_beginner/002/07_fstrings

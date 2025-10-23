@@ -8,5 +8,5 @@ type: lesson
 title: ورشة تنسيق الطباعة - معامل end
 difficulty: easy
 premium_only: false
-base_xp: 850
+base_xp: 286
 s3_path: python/01_beginner/006/03_print-end

@@ -8,5 +8,5 @@ type: lesson
 title: المعامل المنطقي `or`
 difficulty: easy
 premium_only: false
-base_xp: 400
+base_xp: 180
 s3_path: python/01_beginner/004/08_or-operator
