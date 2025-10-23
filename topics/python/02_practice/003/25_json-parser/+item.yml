@@ -7,6 +7,6 @@ updated_at: 2025-10-23T19:17:55.303Z
 type: code
 title: محلل JSON بسيط
 difficulty: expert
-premium_only: true
+premium_only: false
 base_xp: 924
 s3_path: python/02_practice/003/25_json-parser

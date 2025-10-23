@@ -7,6 +7,6 @@ updated_at: 2025-10-23T19:17:55.250Z
 type: code
 title: تبديل صفوف وأعمدة المصفوفة
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 656
 s3_path: python/02_practice/003/07_transpose-matrix

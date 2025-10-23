@@ -7,6 +7,6 @@ updated_at: 2025-10-23T19:17:55.283Z
 type: code
 title: التقاطع بين قوائم متعددة
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 664
 s3_path: python/02_practice/003/18_intersection-multiple-lists

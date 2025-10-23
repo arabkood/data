@@ -7,6 +7,6 @@ updated_at: 2025-10-23T19:17:55.249Z
 type: code
 title: عدد التكرارات المتداخلة
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 695
 s3_path: python/02_practice/003/03_nested-frequency

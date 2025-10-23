@@ -7,6 +7,6 @@ updated_at: 2025-10-23T19:17:55.256Z
 type: code
 title: نظام الاستعلام عن النطاقات
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 934
 s3_path: python/02_practice/004/08_range-query

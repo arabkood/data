@@ -7,6 +7,6 @@ updated_at: 2025-10-23T19:17:55.254Z
 type: code
 title: بنية بيانات الـ Trie
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 912
 s3_path: python/02_practice/004/04_trie-implementation

@@ -7,6 +7,6 @@ updated_at: 2025-10-23T19:17:55.305Z
 type: code
 title: محرك القوالب البسيط
 difficulty: expert
-premium_only: true
+premium_only: false
 base_xp: 912
 s3_path: python/02_practice/003/27_template-engine

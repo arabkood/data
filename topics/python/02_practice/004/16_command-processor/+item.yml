@@ -7,6 +7,6 @@ updated_at: 2025-10-23T19:17:55.287Z
 type: code
 title: معالج الأوامر
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 989
 s3_path: python/02_practice/004/16_command-processor

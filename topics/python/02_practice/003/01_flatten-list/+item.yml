@@ -7,6 +7,6 @@ updated_at: 2025-10-23T19:17:55.242Z
 type: code
 title: تسطيح القائمة المتداخلة
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 647
 s3_path: python/02_practice/003/01_flatten-list

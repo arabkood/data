@@ -7,6 +7,6 @@ updated_at: 2025-10-23T19:17:55.256Z
 type: code
 title: مسألة العملات
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 891
 s3_path: python/02_practice/004/06_coin-change

@@ -7,6 +7,6 @@ updated_at: 2025-10-23T19:17:55.253Z
 type: code
 title: محلل العمليات الحسابية
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 923
 s3_path: python/02_practice/004/02_expression-evaluator

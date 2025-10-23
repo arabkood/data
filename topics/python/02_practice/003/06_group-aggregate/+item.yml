@@ -7,6 +7,6 @@ updated_at: 2025-10-23T19:17:55.251Z
 type: code
 title: تجميع وتلخيص البيانات
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 728
 s3_path: python/02_practice/003/06_group-aggregate

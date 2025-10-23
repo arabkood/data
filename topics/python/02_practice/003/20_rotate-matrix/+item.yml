@@ -7,6 +7,6 @@ updated_at: 2025-10-23T19:17:55.283Z
 type: code
 title: تدوير المصفوفة 90 درجة
 difficulty: hard
-premium_only: true
+premium_only: false
 base_xp: 749
 s3_path: python/02_practice/003/20_rotate-matrix

@@ -7,6 +7,6 @@ updated_at: 2025-10-23T19:17:55.306Z
 type: code
 title: خط معالجة البيانات
 difficulty: expert
-premium_only: true
+premium_only: false
 base_xp: 953
 s3_path: python/02_practice/003/29_data-pipeline
