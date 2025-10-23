@@ -1,0 +1,12 @@
+id: 0ba4eff5-80f7-4dc4-872f-7d582bd76de3
+module_id: 05a3cd46-0220-42a8-a602-a6116d4f6ff3
+slug: group-by-grade
+position: 28
+created_at: 2025-10-23T18:40:39.809Z
+updated_at: 2025-10-23T18:40:39.809Z
+type: code
+title: تجميع الطلاب حسب الدرجة
+difficulty: medium
+premium_only: false
+base_xp: 450
+s3_path: python/02_practice/002/28_group-by-grade

@@ -1,0 +1,12 @@
+id: 6aeedf77-ca07-45b3-8d9a-7dc555d8af39
+module_id: 05a3cd46-0220-42a8-a602-a6116d4f6ff3
+slug: remove-vowels
+position: 3
+created_at: 2025-10-23T18:40:07.158Z
+updated_at: 2025-10-23T18:40:07.158Z
+type: code
+title: حذف حروف العلة
+difficulty: medium
+premium_only: false
+base_xp: 400
+s3_path: python/02_practice/002/03_remove-vowels

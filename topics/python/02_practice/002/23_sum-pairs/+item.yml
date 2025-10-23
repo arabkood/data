@@ -1,0 +1,12 @@
+id: 33bfa828-61d4-4a79-b372-65b22d3d4d00
+module_id: 05a3cd46-0220-42a8-a602-a6116d4f6ff3
+slug: sum-pairs
+position: 23
+created_at: 2025-10-23T18:40:39.807Z
+updated_at: 2025-10-23T18:40:39.807Z
+type: code
+title: إيجاد الأزواج التي مجموعها يساوي الهدف
+difficulty: medium
+premium_only: false
+base_xp: 450
+s3_path: python/02_practice/002/23_sum-pairs

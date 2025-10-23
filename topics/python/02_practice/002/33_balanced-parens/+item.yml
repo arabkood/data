@@ -1,0 +1,12 @@
+id: 29023f2c-e512-42aa-b166-d8081ec8190e
+module_id: 05a3cd46-0220-42a8-a602-a6116d4f6ff3
+slug: balanced-parens
+position: 33
+created_at: 2025-10-23T18:40:39.813Z
+updated_at: 2025-10-23T18:40:39.813Z
+type: code
+title: فاحص توازن الأقواس
+difficulty: hard
+premium_only: false
+base_xp: 600
+s3_path: python/02_practice/002/33_balanced-parens

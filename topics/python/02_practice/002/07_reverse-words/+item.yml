@@ -1,0 +1,12 @@
+id: e21a7940-afc8-4fff-bec9-1fc1e26273af
+module_id: 05a3cd46-0220-42a8-a602-a6116d4f6ff3
+slug: reverse-words
+position: 7
+created_at: 2025-10-23T18:40:07.159Z
+updated_at: 2025-10-23T18:40:07.159Z
+type: code
+title: عكس ترتيب الكلمات
+difficulty: medium
+premium_only: false
+base_xp: 450
+s3_path: python/02_practice/002/07_reverse-words

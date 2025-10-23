@@ -1,0 +1,12 @@
+id: 8755018c-7386-40c0-8de3-7152500f5212
+module_id: 05a3cd46-0220-42a8-a602-a6116d4f6ff3
+slug: list-intersection
+position: 25
+created_at: 2025-10-23T18:40:39.806Z
+updated_at: 2025-10-23T18:40:39.806Z
+type: code
+title: تقاطع القوائم
+difficulty: medium
+premium_only: false
+base_xp: 450
+s3_path: python/02_practice/002/25_list-intersection

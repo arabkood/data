@@ -1,0 +1,12 @@
+id: b7e8cd46-662b-4b19-91ad-edf791d715e6
+module_id: 05a3cd46-0220-42a8-a602-a6116d4f6ff3
+slug: most-common-word
+position: 30
+created_at: 2025-10-23T18:40:39.808Z
+updated_at: 2025-10-23T18:40:39.808Z
+type: code
+title: الكلمة الأكثر تكراراً
+difficulty: medium
+premium_only: false
+base_xp: 450
+s3_path: python/02_practice/002/30_most-common-word

@@ -1,0 +1,12 @@
+id: 5c3b92f9-f31f-44dc-b811-df4f9ff2b9e8
+module_id: 05a3cd46-0220-42a8-a602-a6116d4f6ff3
+slug: parse-csv
+position: 34
+created_at: 2025-10-23T18:40:39.812Z
+updated_at: 2025-10-23T18:40:39.812Z
+type: code
+title: تحليل سطر CSV إلى قاموس
+difficulty: medium
+premium_only: false
+base_xp: 450
+s3_path: python/02_practice/002/34_parse-csv
