@@ -1,0 +1,12 @@
+id: b177e509-f0b3-4dc1-a801-cbdb1abd6572
+module_id: c22af5c4-97fc-45f4-a1de-e5f6ed72b759
+slug: deep-dict-merge
+position: 2
+created_at: 2025-10-23T19:17:55.250Z
+updated_at: 2025-10-23T19:17:55.250Z
+type: code
+title: دمج القواميس المتداخلة
+difficulty: hard
+premium_only: true
+base_xp: 682
+s3_path: python/02_practice/003/02_deep-dict-merge

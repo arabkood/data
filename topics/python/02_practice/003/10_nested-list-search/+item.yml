@@ -1,0 +1,12 @@
+id: 459a1505-6788-4d9d-b862-2dce429411a4
+module_id: c22af5c4-97fc-45f4-a1de-e5f6ed72b759
+slug: nested-list-search
+position: 10
+created_at: 2025-10-23T19:17:55.250Z
+updated_at: 2025-10-23T19:17:55.250Z
+type: code
+title: البحث في القائمة المتداخلة
+difficulty: hard
+premium_only: true
+base_xp: 689
+s3_path: python/02_practice/003/10_nested-list-search

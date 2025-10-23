@@ -1,0 +1,12 @@
+id: 703214e1-e847-4b46-82b6-2ec9cc2052e5
+module_id: c22af5c4-97fc-45f4-a1de-e5f6ed72b759
+slug: data-validator
+position: 21
+created_at: 2025-10-23T19:17:55.304Z
+updated_at: 2025-10-23T19:17:55.304Z
+type: code
+title: محقق صحة البيانات
+difficulty: hard
+premium_only: true
+base_xp: 756
+s3_path: python/02_practice/003/21_data-validator

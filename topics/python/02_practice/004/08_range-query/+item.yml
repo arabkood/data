@@ -1,0 +1,12 @@
+id: eda1c7da-0c6d-4bad-8826-39f85f054f83
+module_id: f8f0e8b2-f802-4f3f-a8da-4be4c4a30622
+slug: range-query
+position: 8
+created_at: 2025-10-23T19:17:55.256Z
+updated_at: 2025-10-23T19:17:55.256Z
+type: code
+title: نظام الاستعلام عن النطاقات
+difficulty: hard
+premium_only: true
+base_xp: 934
+s3_path: python/02_practice/004/08_range-query

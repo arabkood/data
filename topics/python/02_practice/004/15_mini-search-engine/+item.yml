@@ -1,0 +1,12 @@
+id: 10ed747f-e253-48e1-9698-27c7a776918f
+module_id: f8f0e8b2-f802-4f3f-a8da-4be4c4a30622
+slug: mini-search-engine
+position: 15
+created_at: 2025-10-23T19:17:55.286Z
+updated_at: 2025-10-23T19:17:55.286Z
+type: code
+title: محرك بحث صغير
+difficulty: hard
+premium_only: true
+base_xp: 1015
+s3_path: python/02_practice/004/15_mini-search-engine

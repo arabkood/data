@@ -1,0 +1,12 @@
+id: 8ce6750d-f8a1-4abc-86d1-f1ed3a184088
+module_id: c22af5c4-97fc-45f4-a1de-e5f6ed72b759
+slug: valid-parentheses-variants
+position: 17
+created_at: 2025-10-23T19:17:55.282Z
+updated_at: 2025-10-23T19:17:55.282Z
+type: code
+title: الأقواس المتوازنة المتعددة
+difficulty: hard
+premium_only: true
+base_xp: 718
+s3_path: python/02_practice/003/17_valid-parentheses-variants

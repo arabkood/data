@@ -1,0 +1,12 @@
+id: 41b0fcfe-1eee-418e-8c14-2e5aa829d135
+module_id: f8f0e8b2-f802-4f3f-a8da-4be4c4a30622
+slug: expression-evaluator
+position: 2
+created_at: 2025-10-23T19:17:55.253Z
+updated_at: 2025-10-23T19:17:55.253Z
+type: code
+title: محلل العمليات الحسابية
+difficulty: hard
+premium_only: true
+base_xp: 923
+s3_path: python/02_practice/004/02_expression-evaluator

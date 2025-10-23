@@ -1,0 +1,12 @@
+id: 641d4104-cefe-4168-9de3-17d1edea9043
+module_id: f8f0e8b2-f802-4f3f-a8da-4be4c4a30622
+slug: coin-change
+position: 6
+created_at: 2025-10-23T19:17:55.256Z
+updated_at: 2025-10-23T19:17:55.256Z
+type: code
+title: مسألة العملات
+difficulty: hard
+premium_only: true
+base_xp: 891
+s3_path: python/02_practice/004/06_coin-change

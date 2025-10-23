@@ -1,0 +1,12 @@
+id: d4376541-d0a8-4c7b-862e-25275d0c67cf
+module_id: c22af5c4-97fc-45f4-a1de-e5f6ed72b759
+slug: data-analysis-tool
+position: 30
+created_at: 2025-10-23T19:17:55.305Z
+updated_at: 2025-10-23T19:17:55.305Z
+type: code
+title: أداة تحليل البيانات الشاملة
+difficulty: expert
+premium_only: true
+base_xp: 976
+s3_path: python/02_practice/003/30_data-analysis-tool

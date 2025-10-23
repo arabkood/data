@@ -1,0 +1,12 @@
+id: 338f5434-eb6c-4d69-ada5-78961c786bd5
+module_id: c22af5c4-97fc-45f4-a1de-e5f6ed72b759
+slug: query-processor
+position: 26
+created_at: 2025-10-23T19:17:55.304Z
+updated_at: 2025-10-23T19:17:55.304Z
+type: code
+title: معالج الاستعلامات
+difficulty: hard
+premium_only: true
+base_xp: 769
+s3_path: python/02_practice/003/26_query-processor

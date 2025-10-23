@@ -1,0 +1,12 @@
+id: 45b2ccab-a00f-41ee-b804-3e3a2ea0b746
+module_id: f8f0e8b2-f802-4f3f-a8da-4be4c4a30622
+slug: text-editor
+position: 11
+created_at: 2025-10-23T19:17:55.286Z
+updated_at: 2025-10-23T19:17:55.286Z
+type: code
+title: عمليات محرر النصوص
+difficulty: hard
+premium_only: true
+base_xp: 954
+s3_path: python/02_practice/004/11_text-editor

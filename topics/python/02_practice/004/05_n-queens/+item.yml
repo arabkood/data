@@ -1,0 +1,12 @@
+id: f3b0a9c1-c1cf-4f8e-8100-ad684f931c74
+module_id: f8f0e8b2-f802-4f3f-a8da-4be4c4a30622
+slug: n-queens
+position: 5
+created_at: 2025-10-23T19:17:55.254Z
+updated_at: 2025-10-23T19:17:55.254Z
+type: code
+title: مسألة الملكات الثمانية
+difficulty: hard
+premium_only: true
+base_xp: 945
+s3_path: python/02_practice/004/05_n-queens

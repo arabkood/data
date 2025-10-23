@@ -1,0 +1,12 @@
+id: 27b255e7-1476-44bc-a9e5-999bc4011a98
+module_id: c22af5c4-97fc-45f4-a1de-e5f6ed72b759
+slug: intersection-multiple-lists
+position: 18
+created_at: 2025-10-23T19:17:55.283Z
+updated_at: 2025-10-23T19:17:55.283Z
+type: code
+title: التقاطع بين قوائم متعددة
+difficulty: hard
+premium_only: true
+base_xp: 664
+s3_path: python/02_practice/003/18_intersection-multiple-lists

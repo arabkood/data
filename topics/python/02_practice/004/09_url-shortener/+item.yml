@@ -1,0 +1,12 @@
+id: f4774b1c-bcea-46ab-93f6-ffb50b78a61d
+module_id: f8f0e8b2-f802-4f3f-a8da-4be4c4a30622
+slug: url-shortener
+position: 9
+created_at: 2025-10-23T19:17:55.257Z
+updated_at: 2025-10-23T19:17:55.257Z
+type: code
+title: مختصر الروابط
+difficulty: hard
+premium_only: true
+base_xp: 967
+s3_path: python/02_practice/004/09_url-shortener

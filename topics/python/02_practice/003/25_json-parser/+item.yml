@@ -1,0 +1,12 @@
+id: 1e51ddd7-3866-4e6a-9901-d58e0234cf7c
+module_id: c22af5c4-97fc-45f4-a1de-e5f6ed72b759
+slug: json-parser
+position: 25
+created_at: 2025-10-23T19:17:55.303Z
+updated_at: 2025-10-23T19:17:55.303Z
+type: code
+title: محلل JSON بسيط
+difficulty: expert
+premium_only: true
+base_xp: 924
+s3_path: python/02_practice/003/25_json-parser

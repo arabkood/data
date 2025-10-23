@@ -7,6 +7,6 @@ updated_at: 2025-10-14T20:55:20.052Z
 type: code
 title: اختصار الاسم
 difficulty: medium
-premium_only: true
+premium_only: false
 base_xp: 300
 s3_path: python/02_practice/001/14_abbreviate

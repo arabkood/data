@@ -1,0 +1,12 @@
+id: 8fec5012-16af-4be0-982c-2fb896e3768e
+module_id: c22af5c4-97fc-45f4-a1de-e5f6ed72b759
+slug: matrix-row-sum
+position: 4
+created_at: 2025-10-23T19:17:55.248Z
+updated_at: 2025-10-23T19:17:55.248Z
+type: code
+title: مجموع صفوف المصفوفة
+difficulty: medium
+premium_only: true
+base_xp: 478
+s3_path: python/02_practice/003/04_matrix-row-sum

@@ -7,6 +7,6 @@ updated_at: 2025-10-10T13:12:01.285Z
 type: code
 title: تصفية الأرقام فقط
 difficulty: medium
-premium_only: true
+premium_only: false
 base_xp: 404
 s3_path: python/02_practice/001/13_filter-only-numbers

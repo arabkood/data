@@ -1,0 +1,12 @@
+id: 05f0921d-90d5-4eb6-8b3a-d4cf03d10b3d
+module_id: c22af5c4-97fc-45f4-a1de-e5f6ed72b759
+slug: subarray-sum-k
+position: 15
+created_at: 2025-10-23T19:17:55.284Z
+updated_at: 2025-10-23T19:17:55.284Z
+type: code
+title: مجموع المصفوفة الفرعية يساوي K
+difficulty: hard
+premium_only: true
+base_xp: 725
+s3_path: python/02_practice/003/15_subarray-sum-k
