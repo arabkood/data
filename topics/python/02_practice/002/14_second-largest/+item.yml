@@ -8,5 +8,5 @@ type: code
 title: إيجاد ثاني أكبر رقم
 difficulty: medium
 premium_only: false
-base_xp: 450
+base_xp: 448
 s3_path: python/02_practice/002/14_second-largest

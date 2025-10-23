@@ -8,5 +8,5 @@ type: code
 title: عد التكرارات في القائمة
 difficulty: easy
 premium_only: false
-base_xp: 250
+base_xp: 246
 s3_path: python/02_practice/001/07_count-occurrences

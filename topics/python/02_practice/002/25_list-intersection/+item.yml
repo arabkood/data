@@ -8,5 +8,5 @@ type: code
 title: تقاطع القوائم
 difficulty: medium
 premium_only: false
-base_xp: 450
+base_xp: 409
 s3_path: python/02_practice/002/25_list-intersection

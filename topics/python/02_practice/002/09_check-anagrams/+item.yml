@@ -8,5 +8,5 @@ type: code
 title: التحقق من الكلمات المتشابهة
 difficulty: medium
 premium_only: false
-base_xp: 450
+base_xp: 451
 s3_path: python/02_practice/002/09_check-anagrams

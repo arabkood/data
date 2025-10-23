@@ -8,5 +8,5 @@ type: code
 title: عكس النص
 difficulty: easy
 premium_only: false
-base_xp: 300
+base_xp: 305
 s3_path: python/02_practice/001/09_reversed-string

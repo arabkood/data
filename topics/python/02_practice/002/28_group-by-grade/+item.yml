@@ -8,5 +8,5 @@ type: code
 title: تجميع الطلاب حسب الدرجة
 difficulty: medium
 premium_only: false
-base_xp: 450
+base_xp: 406
 s3_path: python/02_practice/002/28_group-by-grade

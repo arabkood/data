@@ -8,5 +8,5 @@ type: code
 title: إخفاء رقم البطاقة
 difficulty: medium
 premium_only: false
-base_xp: 661
+base_xp: 633
 s3_path: python/02_practice/001/18_credit-card-mask

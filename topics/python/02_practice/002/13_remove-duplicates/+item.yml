@@ -8,5 +8,5 @@ type: code
 title: حذف المكررات مع حفظ الترتيب
 difficulty: medium
 premium_only: false
-base_xp: 400
+base_xp: 401
 s3_path: python/02_practice/002/13_remove-duplicates

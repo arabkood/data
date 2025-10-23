@@ -8,5 +8,5 @@ type: code
 title: لعبة FizzBuzz
 difficulty: medium
 premium_only: false
-base_xp: 500
+base_xp: 517
 s3_path: python/02_practice/002/01_fizzbuzz

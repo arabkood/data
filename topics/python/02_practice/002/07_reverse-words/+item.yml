@@ -8,5 +8,5 @@ type: code
 title: عكس ترتيب الكلمات
 difficulty: medium
 premium_only: false
-base_xp: 450
+base_xp: 491
 s3_path: python/02_practice/002/07_reverse-words

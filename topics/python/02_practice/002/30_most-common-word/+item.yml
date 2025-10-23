@@ -8,5 +8,5 @@ type: code
 title: الكلمة الأكثر تكراراً
 difficulty: medium
 premium_only: false
-base_xp: 450
+base_xp: 418
 s3_path: python/02_practice/002/30_most-common-word

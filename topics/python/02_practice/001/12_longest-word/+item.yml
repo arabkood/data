@@ -8,5 +8,5 @@ type: code
 title: أطول كلمة
 difficulty: medium
 premium_only: false
-base_xp: 500
+base_xp: 590
 s3_path: python/02_practice/001/12_longest-word
