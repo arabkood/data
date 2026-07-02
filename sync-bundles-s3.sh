@@ -10,12 +10,9 @@ fi
 
 echo ">> Syncing .bundles directory to s3://${S3_PV_BUCKET_NAME}..."
 
-# --- Run the s3cmd sync command ---
-s3cmd sync /app/.bundles/ s3://${S3_PV_BUCKET_NAME}/topics/ \
-  --delete-removed \
-  --add-header="Cache-Control:max-age=31536000,public" \
-  --exclude '*' \
-  --include '*bundle.zip' \
-  --include '*config.json'
+# --- Run the mc mirror command ---
+mc mirror /app/.bundles/ myminio/${S3_PV_BUCKET_NAME}/topics/ \
+  --overwrite --remove \
+  --attr "Cache-Control=max-age=31536000,public"
 
 echo "✅ S3 sync completed successfully."

@@ -10,10 +10,9 @@ fi
 
 echo ">> Syncing public-assets directory to s3://${S3_PV_BUCKET_NAME}..."
 
-# --- Run the s3cmd sync command ---
-s3cmd sync /app/public-assets/ s3://${S3_PV_BUCKET_NAME}/public/ \
-  --delete-removed \
-  --add-header="Cache-Control:max-age=31536000,public" \
-  --content-type auto
+# --- Run the mc mirror command ---
+mc mirror /app/public-assets/ myminio/${S3_PV_BUCKET_NAME}/public/ \
+  --overwrite --remove \
+  --attr "Cache-Control=max-age=31536000,public"
 
 echo "✅ S3 Public Assets Sync completed successfully."

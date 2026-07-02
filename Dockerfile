@@ -5,12 +5,10 @@ FROM node:20-slim
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     unzip \
-    s3cmd \
     bash \
     ca-certificates \
-  # Enable corepack for pnpm
+  && curl -fsSL https://dl.min.io/client/mc/release/linux-amd64/mc -o /usr/local/bin/mc && chmod +x /usr/local/bin/mc \
   && corepack enable && corepack prepare pnpm@latest --activate \
-  # Install bun using the explicitly set BUN_INSTALL path
   && curl -fsSL https://bun.sh/install | bash \
   # Clean up apt cache (it's safe to purge curl now)
   && apt-get purge -y curl && apt-get autoremove -y && apt-get clean \
@@ -33,4 +31,4 @@ WORKDIR /app
 COPY . .
 RUN chmod +x /app/entrypoint.sh
 
-CMD ["sh", "/app/entrypoint.sh"]
+CMD ["bash", "/app/entrypoint.sh"]
