@@ -13,17 +13,17 @@ function getSlugAndPosition(itemDir: string) {
   }
 
   const itemName = path.basename(itemDir);
-  const parts = itemName.split("_", 2);
-
   let cleanName: string;
   let position = 0;
 
-  if (parts.length > 1) {
-    const positionNum = parseInt(parts[0], 10);
+  const indexOfUnderscore = itemName.indexOf("_");
+
+  if (indexOfUnderscore !== -1) {
+    const positionNum = parseInt(itemName.substring(0, indexOfUnderscore), 10);
     position = isNaN(positionNum) ? 0 : positionNum;
-    cleanName = parts[1];
+    cleanName = itemName.substring(indexOfUnderscore + 1);
   } else {
-    cleanName = parts[0];
+    cleanName = itemName;
   }
 
   if (!cleanName || cleanName.trim() === "") {
