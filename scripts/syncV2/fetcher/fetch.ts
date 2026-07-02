@@ -1,6 +1,6 @@
 import type { PgTableWithColumns } from "drizzle-orm/pg-core";
 import { db } from "../db";
-import { items, modules, topics, tracks } from "../models";
+import { items, modules, topics, tracks } from "../types";
 
 export interface DbTree {
   topics: Map<string, string | null>;

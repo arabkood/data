@@ -11,7 +11,8 @@ import {
   type Module,
   type Topic,
   type Track,
-} from "../models";
+} from "../types";
+import { camelCaseKeys } from "../utils";
 import type { NodePgTransaction } from "drizzle-orm/node-postgres";
 
 export async function updateEntities(
@@ -82,7 +83,8 @@ async function getYaml<T>(
   hash: string,
 ): Promise<T> {
   const yamlPath = path.join(sourcePath, name);
-  const data = yaml.load(await Bun.file(yamlPath).text()) as any;
+  const rawData = yaml.load(await Bun.file(yamlPath).text());
+  const data = camelCaseKeys(rawData) as any;
   data.hash = hash;
   return data as T;
 }

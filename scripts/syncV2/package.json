@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "sync": "bun run bin/sync.ts",
-    "enrich": "bun run bin/enrich.ts"
+    "enrich": "bun run bin/enrich.ts",
+    "pull-schema": "cp ../../../sveltekit/src/lib/server/db/schema/class.ts ./schema.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",

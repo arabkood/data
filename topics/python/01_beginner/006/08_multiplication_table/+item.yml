@@ -1,10 +1,10 @@
-id: ba5ed7bc-1a9e-4e81-be29-8103558dd29c
 module_id: efaf01c7-f88b-4dde-89b3-3593d56230fa
-slug: multiplication
-position: 8
+id: ba5ed7bc-1a9e-4e81-be29-8103558dd29c
+slug: multiplication_table
 created_at: 2025-09-18T18:13:46.621Z
-updated_at: 2025-09-18T18:13:46.621Z
+updated_at: 2026-07-02T13:15:48.628Z
 type: code
+position: 8
 title: 'تحدي: منشئ جدول الضرب'
 difficulty: medium
 premium_only: false

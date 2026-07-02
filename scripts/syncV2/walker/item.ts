@@ -1,7 +1,8 @@
 import { v4 as uuidv4 } from "uuid";
 import yaml from "js-yaml";
 import path from "node:path";
-import { items, type Item, type ItemPartial } from "../models";
+import { items, type Item, type ItemPartial } from "../types";
+import { camelCaseKeys, snakeCaseKeys } from "../utils";
 import { createInsertSchema } from "drizzle-zod";
 import { ROOT } from "../config";
 
@@ -44,7 +45,8 @@ export async function enrichItem(
   sourcePath: string,
 ): Promise<Item> {
   const yamlPath = path.join(sourcePath, "+item.yml");
-  const fields = yaml.load(await Bun.file(yamlPath).text()) as ItemPartial;
+  const rawFields = yaml.load(await Bun.file(yamlPath).text());
+  const fields = camelCaseKeys(rawFields) as ItemPartial;
 
   const enriched = { ...fields };
   let changed = false;
@@ -56,12 +58,12 @@ export async function enrichItem(
     enriched.id = uuidv4();
     changed = true;
   }
-  if (!enriched.created_at) {
-    enriched.created_at = new Date();
+  if (!enriched.createdAt) {
+    enriched.createdAt = new Date();
     changed = true;
   }
-  if (enriched.module_id !== moduleId) {
-    enriched.module_id = moduleId;
+  if (enriched.moduleId !== moduleId) {
+    enriched.moduleId = moduleId;
     changed = true;
   }
   if (enriched.slug !== slug) {
@@ -72,15 +74,15 @@ export async function enrichItem(
     enriched.position = position;
     changed = true;
   }
-  if (enriched.s3_path !== s3Path) {
-    enriched.s3_path = s3Path;
+  if (enriched.s3Path !== s3Path) {
+    enriched.s3Path = s3Path;
     changed = true;
   }
-  if (!enriched.updated_at) {
+  if (!enriched.updatedAt) {
     changed = true;
   }
   if (changed) {
-    enriched.updated_at = new Date();
+    enriched.updatedAt = new Date();
   }
 
   const finalItem = (await schema.parseAsync(enriched).catch((error) => {
@@ -88,7 +90,7 @@ export async function enrichItem(
   })) as Item;
 
   if (changed) {
-    await Bun.write(yamlPath, yaml.dump(finalItem).trim());
+    await Bun.write(yamlPath, yaml.dump(snakeCaseKeys(finalItem)).trim());
   }
 
   return finalItem as Item;
@@ -96,7 +98,8 @@ export async function enrichItem(
 
 export async function hashItem(sourcePath: string): Promise<[string, string]> {
   const yamlPath = path.join(sourcePath, "+item.yml");
-  const partialItem = yaml.load(await Bun.file(yamlPath).text()) as ItemPartial;
+  const rawPartialItem = yaml.load(await Bun.file(yamlPath).text());
+  const partialItem = camelCaseKeys(rawPartialItem) as ItemPartial;
 
   const finalItem = (await schema.parseAsync(partialItem).catch((error) => {
     throw new Error(`Validation failed for ${yamlPath}:\n${error.message}`);

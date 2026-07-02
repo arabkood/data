@@ -1,6 +1,6 @@
 import { inArray } from "drizzle-orm";
 import type { CommonTree } from "../diff/diff";
-import { items, modules, topics, tracks } from "../models";
+import { items, modules, topics, tracks } from "../types";
 import type { NodePgTransaction } from "drizzle-orm/node-postgres";
 
 export async function deleteEntities(

@@ -1,7 +1,8 @@
 import { v4 as uuidv4 } from "uuid";
 import yaml from "js-yaml";
 import path from "node:path";
-import { tracks, type Track, type TrackPartial } from "../models";
+import { tracks, type Track, type TrackPartial } from "../types";
+import { camelCaseKeys, snakeCaseKeys } from "../utils";
 import { createInsertSchema } from "drizzle-zod";
 
 const schema = createInsertSchema(tracks);
@@ -54,7 +55,8 @@ export async function enrichTrack(
 	sourcePath: string,
 ): Promise<Track> {
 	const yamlPath = path.join(sourcePath, "+track.yml");
-	const fields = yaml.load(await Bun.file(yamlPath).text()) as TrackPartial;
+	const rawFields = yaml.load(await Bun.file(yamlPath).text());
+	const fields = camelCaseKeys(rawFields) as TrackPartial;
 
 	const enriched = { ...fields };
 	let changed = false;
@@ -65,12 +67,12 @@ export async function enrichTrack(
 		enriched.id = uuidv4();
 		changed = true;
 	}
-	if (!enriched.created_at) {
-		enriched.created_at = new Date();
+	if (!enriched.createdAt) {
+		enriched.createdAt = new Date();
 		changed = true;
 	}
-	if (enriched.topic_id !== topicId) {
-		enriched.topic_id = topicId;
+	if (enriched.topicId !== topicId) {
+		enriched.topicId = topicId;
 		changed = true;
 	}
 	if (enriched.slug !== slug) {
@@ -81,11 +83,11 @@ export async function enrichTrack(
 		enriched.position = position;
 		changed = true;
 	}
-	if (!enriched.updated_at) {
+	if (!enriched.updatedAt) {
 		changed = true;
 	}
 	if (changed) {
-		enriched.updated_at = new Date();
+		enriched.updatedAt = new Date();
 	}
 
 	const finalTrack = (await schema.parseAsync(enriched).catch((error) => {
@@ -93,7 +95,7 @@ export async function enrichTrack(
 	})) as Track;
 
 	if (changed) {
-		await Bun.write(yamlPath, yaml.dump(finalTrack).trim());
+		await Bun.write(yamlPath, yaml.dump(snakeCaseKeys(finalTrack)).trim());
 	}
 
 	return finalTrack as Track;
@@ -101,9 +103,8 @@ export async function enrichTrack(
 
 export async function hashTrack(sourcePath: string): Promise<[string, string]> {
 	const yamlPath = path.join(sourcePath, "+track.yml");
-	const partialTrack = yaml.load(
-		await Bun.file(yamlPath).text(),
-	) as TrackPartial;
+	const rawPartialTrack = yaml.load(await Bun.file(yamlPath).text());
+	const partialTrack = camelCaseKeys(rawPartialTrack) as TrackPartial;
 
 	const finalTrack = (await schema.parseAsync(partialTrack).catch((error) => {
 		throw new Error(`Validation failed for ${yamlPath}:\n${error.message}`);

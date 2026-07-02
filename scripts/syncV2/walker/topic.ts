@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import yaml from "js-yaml";
-import { topics, type Topic, type TopicPartial } from "../models";
+import { topics, type Topic, type TopicPartial } from "../types";
+import { camelCaseKeys, snakeCaseKeys } from "../utils";
 import { createInsertSchema } from "drizzle-zod";
 import path from "node:path";
 
@@ -9,7 +10,8 @@ const schema = createInsertSchema(topics);
 // we'll need this later
 export async function enrichTopic(sourcePath: string): Promise<Topic> {
   const yamlPath = path.join(sourcePath, "+topic.yml");
-  const fields = yaml.load(await Bun.file(yamlPath).text()) as TopicPartial;
+  const rawFields = yaml.load(await Bun.file(yamlPath).text());
+  const fields = camelCaseKeys(rawFields) as TopicPartial;
 
   const enriched = { ...fields };
   let changed = false;
@@ -18,12 +20,12 @@ export async function enrichTopic(sourcePath: string): Promise<Topic> {
     enriched.id = uuidv4();
     changed = true;
   }
-  if (!enriched.created_at) {
-    enriched.created_at = new Date();
+  if (!enriched.createdAt) {
+    enriched.createdAt = new Date();
     changed = true;
   }
-  if (!enriched.updated_at) {
-    enriched.updated_at = new Date();
+  if (!enriched.updatedAt) {
+    enriched.updatedAt = new Date();
     changed = true;
   }
 
@@ -32,7 +34,7 @@ export async function enrichTopic(sourcePath: string): Promise<Topic> {
   })) as Topic;
 
   if (changed) {
-    await Bun.write(yamlPath, yaml.dump(finalTopic).trim());
+    await Bun.write(yamlPath, yaml.dump(snakeCaseKeys(finalTopic)).trim());
   }
 
   return finalTopic;
@@ -40,9 +42,8 @@ export async function enrichTopic(sourcePath: string): Promise<Topic> {
 
 export async function hashTopic(sourcePath: string): Promise<[string, string]> {
   const yamlPath = path.join(sourcePath, "+topic.yml");
-  const partialTopic = yaml.load(
-    await Bun.file(yamlPath).text(),
-  ) as TopicPartial;
+  const rawPartialTopic = yaml.load(await Bun.file(yamlPath).text());
+  const partialTopic = camelCaseKeys(rawPartialTopic) as TopicPartial;
 
   const finalTopic = (await schema.parseAsync(partialTopic).catch((error) => {
     throw new Error(`Validation failed for ${yamlPath}:\n${error.message}`);

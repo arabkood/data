@@ -1,7 +1,8 @@
 import { v4 as uuidv4 } from "uuid";
 import yaml from "js-yaml";
 import path from "node:path";
-import { modules, type Module, type ModulePartial } from "../models";
+import { modules, type Module, type ModulePartial } from "../types";
+import { camelCaseKeys, snakeCaseKeys } from "../utils";
 import { createInsertSchema } from "drizzle-zod";
 
 const schema = createInsertSchema(modules);
@@ -25,7 +26,8 @@ export async function enrichModule(
   sourcePath: string,
 ): Promise<Module> {
   const yamlPath = path.join(sourcePath, "+module.yml");
-  const fields = yaml.load(await Bun.file(yamlPath).text()) as ModulePartial;
+  const rawFields = yaml.load(await Bun.file(yamlPath).text());
+  const fields = camelCaseKeys(rawFields) as ModulePartial;
 
   const enriched = { ...fields };
   let changed = false;
@@ -36,23 +38,23 @@ export async function enrichModule(
     enriched.id = uuidv4();
     changed = true;
   }
-  if (!enriched.created_at) {
-    enriched.created_at = new Date();
+  if (!enriched.createdAt) {
+    enriched.createdAt = new Date();
     changed = true;
   }
-  if (enriched.track_id !== trackId) {
-    enriched.track_id = trackId;
+  if (enriched.trackId !== trackId) {
+    enriched.trackId = trackId;
     changed = true;
   }
   if (enriched.position !== position) {
     enriched.position = position;
     changed = true;
   }
-  if (!enriched.updated_at) {
+  if (!enriched.updatedAt) {
     changed = true;
   }
   if (changed) {
-    enriched.updated_at = new Date();
+    enriched.updatedAt = new Date();
   }
 
   const finalModule = (await schema.parseAsync(enriched).catch((error) => {
@@ -60,7 +62,7 @@ export async function enrichModule(
   })) as Module;
 
   if (changed) {
-    await Bun.write(yamlPath, yaml.dump(finalModule).trim());
+    await Bun.write(yamlPath, yaml.dump(snakeCaseKeys(finalModule)).trim());
   }
 
   return finalModule as Module;
@@ -70,9 +72,8 @@ export async function hashModule(
   sourcePath: string,
 ): Promise<[string, string]> {
   const yamlPath = path.join(sourcePath, "+module.yml");
-  const partialModule = yaml.load(
-    await Bun.file(yamlPath).text(),
-  ) as ModulePartial;
+  const rawPartialModule = yaml.load(await Bun.file(yamlPath).text());
+  const partialModule = camelCaseKeys(rawPartialModule) as ModulePartial;
 
   const finalModule = (await schema.parseAsync(partialModule).catch((error) => {
     throw new Error(`Validation failed for ${yamlPath}:\n${error.message}`);
